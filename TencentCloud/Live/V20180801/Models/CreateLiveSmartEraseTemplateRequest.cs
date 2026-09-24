@@ -43,25 +43,25 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>关联的审核模板id, 表audio_conf 。</p>
+        /// <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
         /// </summary>
         [JsonProperty("AuditConfId")]
         public ulong? AuditConfId{ get; set; }
 
         /// <summary>
-        /// <p>天御图片审核策略BizType  Image 。</p>
+        /// <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
         /// </summary>
         [JsonProperty("ImageBizType")]
         public string ImageBizType{ get; set; }
 
         /// <summary>
-        /// <p>天御音频审核策略BizType  ShortAudio 。</p>
+        /// <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
         /// </summary>
         [JsonProperty("AudioBizType")]
         public string AudioBizType{ get; set; }
 
         /// <summary>
-        /// <p>天御音频文本审核策略BizType  ShortAudio 。</p>
+        /// <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
         /// </summary>
         [JsonProperty("AudioTextBizType")]
         public string AudioTextBizType{ get; set; }

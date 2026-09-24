@@ -55,6 +55,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
+        /// <p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// <p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
         /// <p>通道 ID，非 NVR 设备不填，NVR 设备必填</p>
         /// </summary>
         [JsonProperty("ChannelId")]
@@ -71,6 +83,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }

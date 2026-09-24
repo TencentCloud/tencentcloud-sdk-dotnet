@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1512</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,17 @@
     <Compile Include="V20250920\Models\CancelRegistryRecordRequest.cs" />
     <Compile Include="V20250920\Models\CancelRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\CfsStorageSource.cs" />
+    <Compile Include="V20250920\Models\CloudAgentSourceInput.cs" />
+    <Compile Include="V20250920\Models\CloudAuditLog.cs" />
+    <Compile Include="V20250920\Models\CloudFilter.cs" />
+    <Compile Include="V20250920\Models\CloudMCPSourceInput.cs" />
+    <Compile Include="V20250920\Models\CloudRecord.cs" />
+    <Compile Include="V20250920\Models\CloudRecordLabelMutation.cs" />
+    <Compile Include="V20250920\Models\CloudRecordVersion.cs" />
+    <Compile Include="V20250920\Models\CloudRegistry.cs" />
+    <Compile Include="V20250920\Models\CloudSkillSourceInput.cs" />
+    <Compile Include="V20250920\Models\CloudTag.cs" />
+    <Compile Include="V20250920\Models\CloudVersionApprovalAction.cs" />
     <Compile Include="V20250920\Models\ComputerConfiguration.cs" />
     <Compile Include="V20250920\Models\CosStorageSource.cs" />
     <Compile Include="V20250920\Models\CreateAPIKeyRequest.cs" />

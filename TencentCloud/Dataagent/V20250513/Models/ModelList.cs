@@ -36,6 +36,42 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("Vendor")]
         public string Vendor{ get; set; }
 
+        /// <summary>
+        /// <p>展示名称</p>
+        /// </summary>
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// <p>模型描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>上下文窗口大小，单位 token</p>
+        /// </summary>
+        [JsonProperty("ContextWindow")]
+        public long? ContextWindow{ get; set; }
+
+        /// <summary>
+        /// <p>模型图标 URL</p>
+        /// </summary>
+        [JsonProperty("IconUrl")]
+        public string IconUrl{ get; set; }
+
+        /// <summary>
+        /// <p>计费倍率</p>
+        /// </summary>
+        [JsonProperty("CreditMultiplier")]
+        public float? CreditMultiplier{ get; set; }
+
+        /// <summary>
+        /// <p>思考配置</p>
+        /// </summary>
+        [JsonProperty("Thinking")]
+        public Thinking Thinking{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +80,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         {
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "Vendor", this.Vendor);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ContextWindow", this.ContextWindow);
+            this.SetParamSimple(map, prefix + "IconUrl", this.IconUrl);
+            this.SetParamSimple(map, prefix + "CreditMultiplier", this.CreditMultiplier);
+            this.SetParamObj(map, prefix + "Thinking.", this.Thinking);
         }
     }
 }

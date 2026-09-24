@@ -24,12 +24,19 @@ namespace TencentCloud.Ags.V20250920.Models
     public class DeleteRegistryRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>Registry ID。</p>
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
         }
     }
 }

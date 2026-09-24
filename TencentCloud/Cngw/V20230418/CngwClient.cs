@@ -28,7 +28,7 @@ namespace TencentCloud.Cngw.V20230418
 
        private const string endpoint = "cngw.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -789,7 +789,7 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
-        /// 查询 AI 网关Token 消耗统计
+        /// 查询 AI 网关Token 消耗统计（消费者消费金额数据）
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageListResponse"/></returns>
@@ -799,7 +799,7 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
-        /// 查询 AI 网关Token 消耗统计
+        /// 查询 AI 网关Token 消耗统计（消费者消费金额数据）
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageListResponse"/></returns>
@@ -810,7 +810,7 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
-        /// 查询 AI 网关Token 消耗统计汇总
+        /// 查询 AI 网关Token 消耗统计汇总含（消费者消费金额数据）
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageStatisticsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageStatisticsResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
-        /// 查询 AI 网关Token 消耗统计汇总
+        /// 查询 AI 网关Token 消耗统计汇总含（消费者消费金额数据）
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageStatisticsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayLLMTokenUsageStatisticsResponse"/></returns>

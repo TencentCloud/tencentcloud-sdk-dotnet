@@ -25,13 +25,13 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 指标名
+        /// <p>指标名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 指标值
+        /// <p>指标值</p>
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }

@@ -174,6 +174,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("DeploymentFree")]
         public bool? DeploymentFree{ get; set; }
 
+        /// <summary>
+        /// <p>agent memory 服务详情</p>
+        /// </summary>
+        [JsonProperty("AgentMem")]
+        public AgentMemInfo AgentMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
             this.SetParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
+            this.SetParamObj(map, prefix + "AgentMem.", this.AgentMem);
         }
     }
 }

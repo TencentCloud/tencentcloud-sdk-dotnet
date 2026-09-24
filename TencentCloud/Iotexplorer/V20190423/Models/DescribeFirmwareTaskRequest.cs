@@ -25,19 +25,19 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// </summary>
         [JsonProperty("ProductID")]
         public string ProductID{ get; set; }
 
         /// <summary>
-        /// 固件版本号
+        /// <p>固件版本号</p>
         /// </summary>
         [JsonProperty("FirmwareVersion")]
         public string FirmwareVersion{ get; set; }
 
         /// <summary>
-        /// 固件任务ID
+        /// <p>固件任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

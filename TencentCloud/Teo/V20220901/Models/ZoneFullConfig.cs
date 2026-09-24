@@ -37,6 +37,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public ZoneConfig ZoneConfig{ get; set; }
 
         /// <summary>
+        /// <p>站点级自定义变量配置，包括变量定义和变量运算。</p>
+        /// </summary>
+        [JsonProperty("ZoneCustomVariables")]
+        public ZoneCustomVariables ZoneCustomVariables{ get; set; }
+
+        /// <summary>
         /// <p>规则级配置，包含「规则引擎」中所有规则，且数组可为空，表示不启用任何规则。</p>
         /// </summary>
         [JsonProperty("Rules")]
@@ -62,6 +68,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "FormatVersion", this.FormatVersion);
             this.SetParamObj(map, prefix + "ZoneConfig.", this.ZoneConfig);
+            this.SetParamObj(map, prefix + "ZoneCustomVariables.", this.ZoneCustomVariables);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamObj(map, prefix + "WebSecurity.", this.WebSecurity);
             this.SetParamArrayObj(map, prefix + "FunctionTriggers.", this.FunctionTriggers);

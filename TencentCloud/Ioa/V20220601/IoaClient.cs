@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1504";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ioa.V20220601
         public BindBusinessResourceConnectorGroupResponse BindBusinessResourceConnectorGroupSync(BindBusinessResourceConnectorGroupRequest req)
         {
             return InternalRequestAsync<BindBusinessResourceConnectorGroupResponse>(req, "BindBusinessResourceConnectorGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/BindVirtualAccount，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="BindVirtualAccountsRequest"/></param>
+        /// <returns><see cref="BindVirtualAccountsResponse"/></returns>
+        public Task<BindVirtualAccountsResponse> BindVirtualAccounts(BindVirtualAccountsRequest req)
+        {
+            return InternalRequestAsync<BindVirtualAccountsResponse>(req, "BindVirtualAccounts");
+        }
+
+        /// <summary>
+        /// 关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/BindVirtualAccount，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="BindVirtualAccountsRequest"/></param>
+        /// <returns><see cref="BindVirtualAccountsResponse"/></returns>
+        public BindVirtualAccountsResponse BindVirtualAccountsSync(BindVirtualAccountsRequest req)
+        {
+            return InternalRequestAsync<BindVirtualAccountsResponse>(req, "BindVirtualAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -583,6 +604,27 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 查询指定终端的病毒库版本、漏洞库版本、系统修复引擎版本、防火墙状态和实时防护状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceSecurityInfoRequest"/></param>
+        /// <returns><see cref="DescribeDeviceSecurityInfoResponse"/></returns>
+        public Task<DescribeDeviceSecurityInfoResponse> DescribeDeviceSecurityInfo(DescribeDeviceSecurityInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceSecurityInfoResponse>(req, "DescribeDeviceSecurityInfo");
+        }
+
+        /// <summary>
+        /// 查询指定终端的病毒库版本、漏洞库版本、系统修复引擎版本、防火墙状态和实时防护状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceSecurityInfoRequest"/></param>
+        /// <returns><see cref="DescribeDeviceSecurityInfoResponse"/></returns>
+        public DescribeDeviceSecurityInfoResponse DescribeDeviceSecurityInfoSync(DescribeDeviceSecurityInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceSecurityInfoResponse>(req, "DescribeDeviceSecurityInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceVirtualGroupsRequest"/></param>
@@ -663,6 +705,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeLocalAccountsResponse DescribeLocalAccountsSync(DescribeLocalAccountsRequest req)
         {
             return InternalRequestAsync<DescribeLocalAccountsResponse>(req, "DescribeLocalAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询终端描述字段数据,私有化调用path为：capi/Assets/Device/DescribeProfileFieldsMenu
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProfileFieldsMenuRequest"/></param>
+        /// <returns><see cref="DescribeProfileFieldsMenuResponse"/></returns>
+        public Task<DescribeProfileFieldsMenuResponse> DescribeProfileFieldsMenu(DescribeProfileFieldsMenuRequest req)
+        {
+            return InternalRequestAsync<DescribeProfileFieldsMenuResponse>(req, "DescribeProfileFieldsMenu");
+        }
+
+        /// <summary>
+        /// 查询终端描述字段数据,私有化调用path为：capi/Assets/Device/DescribeProfileFieldsMenu
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProfileFieldsMenuRequest"/></param>
+        /// <returns><see cref="DescribeProfileFieldsMenuResponse"/></returns>
+        public DescribeProfileFieldsMenuResponse DescribeProfileFieldsMenuSync(DescribeProfileFieldsMenuRequest req)
+        {
+            return InternalRequestAsync<DescribeProfileFieldsMenuResponse>(req, "DescribeProfileFieldsMenu")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -789,6 +852,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeSoftwareInformationResponse DescribeSoftwareInformationSync(DescribeSoftwareInformationRequest req)
         {
             return InternalRequestAsync<DescribeSoftwareInformationResponse>(req, "DescribeSoftwareInformation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列表虚拟组的账户，私有化调用path为：/capi/Assets/AccountVirtualGroup/DescribeVirtualAccounts，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirtualAccountsRequest"/></param>
+        /// <returns><see cref="DescribeVirtualAccountsResponse"/></returns>
+        public Task<DescribeVirtualAccountsResponse> DescribeVirtualAccounts(DescribeVirtualAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeVirtualAccountsResponse>(req, "DescribeVirtualAccounts");
+        }
+
+        /// <summary>
+        /// 列表虚拟组的账户，私有化调用path为：/capi/Assets/AccountVirtualGroup/DescribeVirtualAccounts，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirtualAccountsRequest"/></param>
+        /// <returns><see cref="DescribeVirtualAccountsResponse"/></returns>
+        public DescribeVirtualAccountsResponse DescribeVirtualAccountsSync(DescribeVirtualAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeVirtualAccountsResponse>(req, "DescribeVirtualAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -999,6 +1083,27 @@ namespace TencentCloud.Ioa.V20220601
         public ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroupsSync(ModifyVirtualDeviceGroupsRequest req)
         {
             return InternalRequestAsync<ModifyVirtualDeviceGroupsResponse>(req, "ModifyVirtualDeviceGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/UnbindVirtualAccount，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="UnbindVirtualAccountsRequest"/></param>
+        /// <returns><see cref="UnbindVirtualAccountsResponse"/></returns>
+        public Task<UnbindVirtualAccountsResponse> UnbindVirtualAccounts(UnbindVirtualAccountsRequest req)
+        {
+            return InternalRequestAsync<UnbindVirtualAccountsResponse>(req, "UnbindVirtualAccounts");
+        }
+
+        /// <summary>
+        /// 取消关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/UnbindVirtualAccount，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="UnbindVirtualAccountsRequest"/></param>
+        /// <returns><see cref="UnbindVirtualAccountsResponse"/></returns>
+        public UnbindVirtualAccountsResponse UnbindVirtualAccountsSync(UnbindVirtualAccountsRequest req)
+        {
+            return InternalRequestAsync<UnbindVirtualAccountsResponse>(req, "UnbindVirtualAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

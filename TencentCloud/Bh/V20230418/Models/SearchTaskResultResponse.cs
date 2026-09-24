@@ -25,13 +25,13 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 记录数
+        /// <p>记录数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 运维任务执行结果
+        /// <p>运维任务执行结果</p>
         /// </summary>
         [JsonProperty("TaskResult")]
         public TaskResult[] TaskResult{ get; set; }

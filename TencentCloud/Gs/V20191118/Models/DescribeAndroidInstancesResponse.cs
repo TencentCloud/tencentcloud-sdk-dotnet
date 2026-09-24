@@ -25,13 +25,13 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 实例总数量
+        /// <p>实例总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例列表
+        /// <p>实例列表</p>
         /// </summary>
         [JsonProperty("AndroidInstances")]
         public AndroidInstance[] AndroidInstances{ get; set; }

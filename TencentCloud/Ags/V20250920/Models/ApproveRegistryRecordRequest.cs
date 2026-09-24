@@ -24,12 +24,40 @@ namespace TencentCloud.Ags.V20250920.Models
     public class ApproveRegistryRecordRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>父 Registry ID。</p>
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
+        /// <p>Record ID。</p>
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
+        /// <p>Version ID。</p>
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
+        /// <summary>
+        /// <p>动作留言；非空。</p>
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// <p>每页大小，默认10，最小10，最大200</p>
+        /// <p>每页大小，默认10，最小10，最大100</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

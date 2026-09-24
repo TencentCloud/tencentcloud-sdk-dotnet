@@ -25,40 +25,46 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 子用户 UIN
+        /// <p>子用户 UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
 
         /// <summary>
-        /// 子用户用户名
+        /// <p>子用户用户名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 如果输入参数组合为自动生成随机密码，则返回生成的密码
+        /// <p>如果输入参数组合为自动生成随机密码，则返回生成的密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 子用户密钥 ID
+        /// <p>子用户密钥 ID</p>
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
-        /// 子用户密钥 Key
+        /// <p>子用户密钥 Key</p>
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// 子用户 UID
+        /// <p>子用户 UID</p>
         /// </summary>
         [JsonProperty("Uid")]
         public ulong? Uid{ get; set; }
+
+        /// <summary>
+        /// <p>手机号验证地址。</p>
+        /// </summary>
+        [JsonProperty("PhoneNumVerifyLink")]
+        public string PhoneNumVerifyLink{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -78,6 +84,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
             this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "PhoneNumVerifyLink", this.PhoneNumVerifyLink);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

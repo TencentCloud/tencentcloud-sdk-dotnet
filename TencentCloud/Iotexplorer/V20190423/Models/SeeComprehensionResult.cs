@@ -60,6 +60,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
+        /// <summary>
+        /// <p>模型输出的扩展字段文本</p>
+        /// </summary>
+        [JsonProperty("ExtendedOutput")]
+        public SeeExtendedOutput[] ExtendedOutput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamArrayObj(map, prefix + "ExtendedOutput.", this.ExtendedOutput);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{38CD7696-3B38-3CEA-932D-D1E86BA7D17A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1511</VersionPrefix>
+    <VersionPrefix>3.0.1512</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,6 +95,8 @@
     <Compile Include="V20260709\Models\DescribeMessageEventListResponse.cs" />
     <Compile Include="V20260709\Models\DescribeSkillListRequest.cs" />
     <Compile Include="V20260709\Models\DescribeSkillListResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeUserAccessTokenRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeUserAccessTokenResponse.cs" />
     <Compile Include="V20260709\Models\ExpertCounts.cs" />
     <Compile Include="V20260709\Models\ExpertItem.cs" />
     <Compile Include="V20260709\Models\ExternalAgentInfo.cs" />

@@ -25,46 +25,43 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
+        /// <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+        /// <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+        /// <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// Proxy节点ID。
+        /// <p>Proxy节点ID。</p>
         /// </summary>
         [JsonProperty("InstanceProxyId")]
         public string InstanceProxyId{ get; set; }
 
         /// <summary>
-        /// 实例节点ID。
+        /// <p>实例节点ID。</p>
         /// </summary>
         [JsonProperty("InstanceNodeId")]
         public string InstanceNodeId{ get; set; }
 
         /// <summary>
-        /// 查询类型，目前支持值：mongod，mongos。
-        /// 其中：
-        /// mongod - MongoDB的数据存储节点
-        /// mongos - MongoDB的路由节点
+        /// <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

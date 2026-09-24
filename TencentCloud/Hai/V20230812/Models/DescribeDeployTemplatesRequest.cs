@@ -30,6 +30,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
+        /// <summary>
+        /// 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
         }
     }
 }

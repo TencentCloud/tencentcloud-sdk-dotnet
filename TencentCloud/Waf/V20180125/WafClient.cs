@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1511";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -3903,6 +3903,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 接口无用，没有人调用
+        /// 
         /// 修改实例的QPS弹性计费开关
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceElasticModeRequest"/></param>
@@ -3913,6 +3915,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 接口无用，没有人调用
+        /// 
         /// 修改实例的QPS弹性计费开关
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceElasticModeRequest"/></param>

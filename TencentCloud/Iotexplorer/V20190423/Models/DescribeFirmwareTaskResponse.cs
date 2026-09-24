@@ -25,118 +25,130 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 固件任务ID
+        /// <p>固件任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 固件任务状态
+        /// <p>固件任务状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 固件任务创建时间，单位：秒
+        /// <p>固件任务创建时间，单位：秒</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 固件任务升级类型
+        /// <p>固件任务升级类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// <p>产品名称</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
+        /// <p>固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）</p>
         /// </summary>
         [JsonProperty("UpgradeMode")]
         public string UpgradeMode{ get; set; }
 
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
+        /// <p>原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回</p>
         /// </summary>
         [JsonProperty("OriginalVersion")]
         public string OriginalVersion{ get; set; }
 
         /// <summary>
-        /// 创建账号ID
+        /// <p>创建账号ID</p>
         /// </summary>
         [JsonProperty("CreateUserId")]
         public ulong? CreateUserId{ get; set; }
 
         /// <summary>
-        /// 创建账号ID昵称
+        /// <p>创建账号ID昵称</p>
         /// </summary>
         [JsonProperty("CreatorNickName")]
         public string CreatorNickName{ get; set; }
 
         /// <summary>
-        /// 延迟时间
+        /// <p>延迟时间</p>
         /// </summary>
         [JsonProperty("DelayTime")]
         public ulong? DelayTime{ get; set; }
 
         /// <summary>
-        /// 超时时间
+        /// <p>超时时间</p>
         /// </summary>
         [JsonProperty("TimeoutInterval")]
         public ulong? TimeoutInterval{ get; set; }
 
         /// <summary>
-        /// 静默升级or用户确认升级
+        /// <p>静默升级or用户确认升级</p>
         /// </summary>
         [JsonProperty("UpgradeMethod")]
         public ulong? UpgradeMethod{ get; set; }
 
         /// <summary>
-        /// 最大重试次数
+        /// <p>最大重试次数</p>
         /// </summary>
         [JsonProperty("MaxRetryNum")]
         public ulong? MaxRetryNum{ get; set; }
 
         /// <summary>
-        /// 固件类型
+        /// <p>固件类型</p>
         /// </summary>
         [JsonProperty("FwType")]
         public string FwType{ get; set; }
 
         /// <summary>
-        /// 重试间隔时间单位min
+        /// <p>重试间隔时间单位min</p>
         /// </summary>
         [JsonProperty("RetryInterval")]
         public ulong? RetryInterval{ get; set; }
 
         /// <summary>
-        /// 是否覆盖任务
+        /// <p>是否覆盖任务</p>
         /// </summary>
         [JsonProperty("OverrideMode")]
         public ulong? OverrideMode{ get; set; }
 
         /// <summary>
-        /// 用户自定义消息
+        /// <p>用户自定义消息</p>
         /// </summary>
         [JsonProperty("TaskUserDefine")]
         public string TaskUserDefine{ get; set; }
 
         /// <summary>
-        /// 每分钟发送设备量
+        /// <p>每分钟发送设备量</p>
         /// </summary>
         [JsonProperty("RateLimit")]
         public long? RateLimit{ get; set; }
+
+        /// <summary>
+        /// <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。 </p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。 </p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -169,6 +181,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "OverrideMode", this.OverrideMode);
             this.SetParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
             this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

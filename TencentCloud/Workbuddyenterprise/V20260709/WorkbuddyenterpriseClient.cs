@@ -28,7 +28,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
 
        private const string endpoint = "workbuddyenterprise.tencentcloudapi.com";
        private const string version = "2026-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1511";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -449,6 +449,27 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         public DescribeSkillListResponse DescribeSkillListSync(DescribeSkillListRequest req)
         {
             return InternalRequestAsync<DescribeSkillListResponse>(req, "DescribeSkillList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据调用者的 Uin / SubAccountUin 调用 OneID 换取用户级 access_token。换取到的 token 是 OneID 用户身份的短期凭证，供调用方以用户身份访问 OneID 开平接口。默认开启 JIT，SubAccountUin 不存在时自动在目标企业下创建影子用户。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAccessTokenRequest"/></param>
+        /// <returns><see cref="DescribeUserAccessTokenResponse"/></returns>
+        public Task<DescribeUserAccessTokenResponse> DescribeUserAccessToken(DescribeUserAccessTokenRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAccessTokenResponse>(req, "DescribeUserAccessToken");
+        }
+
+        /// <summary>
+        /// 根据调用者的 Uin / SubAccountUin 调用 OneID 换取用户级 access_token。换取到的 token 是 OneID 用户身份的短期凭证，供调用方以用户身份访问 OneID 开平接口。默认开启 JIT，SubAccountUin 不存在时自动在目标企业下创建影子用户。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAccessTokenRequest"/></param>
+        /// <returns><see cref="DescribeUserAccessTokenResponse"/></returns>
+        public DescribeUserAccessTokenResponse DescribeUserAccessTokenSync(DescribeUserAccessTokenRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAccessTokenResponse>(req, "DescribeUserAccessToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

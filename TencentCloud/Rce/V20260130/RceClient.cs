@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20260130
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2026-01-30";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 设备风险评估-高级版
+        /// 基于设备端SDK 采集设备指纹 token和IP进行风险识别，提供设备、环境、行为等维度给出的综合风险评估（包含决策结果、风险评分、风险标签）和设备以及 IP 的基础信息。
         /// </summary>
         /// <param name="req"><see cref="AssessDeviceRiskPremiumProRequest"/></param>
         /// <returns><see cref="AssessDeviceRiskPremiumProResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 设备风险评估-高级版
+        /// 基于设备端SDK 采集设备指纹 token和IP进行风险识别，提供设备、环境、行为等维度给出的综合风险评估（包含决策结果、风险评分、风险标签）和设备以及 IP 的基础信息。
         /// </summary>
         /// <param name="req"><see cref="AssessDeviceRiskPremiumProRequest"/></param>
         /// <returns><see cref="AssessDeviceRiskPremiumProResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 设备风险评估-基础版
+        /// 基于设备端SDK 采集设备指纹 token和IP进行风险识别，提供设备维度的风险标签和设备基础信息，以及 IP 的地理位置和网络信息。
         /// </summary>
         /// <param name="req"><see cref="AssessDeviceRiskProRequest"/></param>
         /// <returns><see cref="AssessDeviceRiskProResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 设备风险评估-基础版
+        /// 基于设备端SDK 采集设备指纹 token和IP进行风险识别，提供设备维度的风险标签和设备基础信息，以及 IP 的地理位置和网络信息。
         /// </summary>
         /// <param name="req"><see cref="AssessDeviceRiskProRequest"/></param>
         /// <returns><see cref="AssessDeviceRiskProResponse"/></returns>
@@ -96,7 +96,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 环境风险评估
+        /// 基于传入的客户端IP进行风险识别，提供环境的风险评估（包含风险等级、风险标签）以及IP的地理位置和网络信息。
         /// </summary>
         /// <param name="req"><see cref="AssessEnvironmentRiskRequest"/></param>
         /// <returns><see cref="AssessEnvironmentRiskResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// 环境风险评估
+        /// 基于传入的客户端IP进行风险识别，提供环境的风险评估（包含风险等级、风险标签）以及IP的地理位置和网络信息。
         /// </summary>
         /// <param name="req"><see cref="AssessEnvironmentRiskRequest"/></param>
         /// <returns><see cref="AssessEnvironmentRiskResponse"/></returns>

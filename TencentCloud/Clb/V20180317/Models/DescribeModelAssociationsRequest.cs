@@ -43,10 +43,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// <p>模型输出模态</p>
+        /// <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
         /// </summary>
         [JsonProperty("Capability")]
         public string Capability{ get; set; }
+
+        /// <summary>
+        /// <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+        /// </summary>
+        [JsonProperty("Capabilities")]
+        public string[] Capabilities{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Capability", this.Capability);
+            this.SetParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
         }
     }
 }

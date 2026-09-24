@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1510";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -1079,6 +1079,69 @@ namespace TencentCloud.Dlc.V20210125
         public CreateInternalTableResponse CreateInternalTableSync(CreateInternalTableRequest req)
         {
             return InternalRequestAsync<CreateInternalTableResponse>(req, "CreateInternalTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建并提交作业 Action。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobRequest"/></param>
+        /// <returns><see cref="CreateJobResponse"/></returns>
+        public Task<CreateJobResponse> CreateJob(CreateJobRequest req)
+        {
+            return InternalRequestAsync<CreateJobResponse>(req, "CreateJob");
+        }
+
+        /// <summary>
+        /// 创建并提交作业 Action。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobRequest"/></param>
+        /// <returns><see cref="CreateJobResponse"/></returns>
+        public CreateJobResponse CreateJobSync(CreateJobRequest req)
+        {
+            return InternalRequestAsync<CreateJobResponse>(req, "CreateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建作业定义。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobDefinitionRequest"/></param>
+        /// <returns><see cref="CreateJobDefinitionResponse"/></returns>
+        public Task<CreateJobDefinitionResponse> CreateJobDefinition(CreateJobDefinitionRequest req)
+        {
+            return InternalRequestAsync<CreateJobDefinitionResponse>(req, "CreateJobDefinition");
+        }
+
+        /// <summary>
+        /// 创建作业定义。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobDefinitionRequest"/></param>
+        /// <returns><see cref="CreateJobDefinitionResponse"/></returns>
+        public CreateJobDefinitionResponse CreateJobDefinitionSync(CreateJobDefinitionRequest req)
+        {
+            return InternalRequestAsync<CreateJobDefinitionResponse>(req, "CreateJobDefinition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按作业定义创建作业。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobFromDefinitionRequest"/></param>
+        /// <returns><see cref="CreateJobFromDefinitionResponse"/></returns>
+        public Task<CreateJobFromDefinitionResponse> CreateJobFromDefinition(CreateJobFromDefinitionRequest req)
+        {
+            return InternalRequestAsync<CreateJobFromDefinitionResponse>(req, "CreateJobFromDefinition");
+        }
+
+        /// <summary>
+        /// 按作业定义创建作业。
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobFromDefinitionRequest"/></param>
+        /// <returns><see cref="CreateJobFromDefinitionResponse"/></returns>
+        public CreateJobFromDefinitionResponse CreateJobFromDefinitionSync(CreateJobFromDefinitionRequest req)
+        {
+            return InternalRequestAsync<CreateJobFromDefinitionResponse>(req, "CreateJobFromDefinition")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2431,6 +2494,90 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取 Table 详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogTableInfoRequest"/></param>
+        /// <returns><see cref="DescribeCatalogTableInfoResponse"/></returns>
+        public Task<DescribeCatalogTableInfoResponse> DescribeCatalogTableInfo(DescribeCatalogTableInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogTableInfoResponse>(req, "DescribeCatalogTableInfo");
+        }
+
+        /// <summary>
+        /// 获取 Table 详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogTableInfoRequest"/></param>
+        /// <returns><see cref="DescribeCatalogTableInfoResponse"/></returns>
+        public DescribeCatalogTableInfoResponse DescribeCatalogTableInfoSync(DescribeCatalogTableInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogTableInfoResponse>(req, "DescribeCatalogTableInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 Schema 下所有 Table
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogTableNamesRequest"/></param>
+        /// <returns><see cref="DescribeCatalogTableNamesResponse"/></returns>
+        public Task<DescribeCatalogTableNamesResponse> DescribeCatalogTableNames(DescribeCatalogTableNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogTableNamesResponse>(req, "DescribeCatalogTableNames");
+        }
+
+        /// <summary>
+        /// 获取 Schema 下所有 Table
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogTableNamesRequest"/></param>
+        /// <returns><see cref="DescribeCatalogTableNamesResponse"/></returns>
+        public DescribeCatalogTableNamesResponse DescribeCatalogTableNamesSync(DescribeCatalogTableNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogTableNamesResponse>(req, "DescribeCatalogTableNames")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询表名
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogTableNamesPageRequest"/></param>
+        /// <returns><see cref="DescribeCatalogTableNamesPageResponse"/></returns>
+        public Task<DescribeCatalogTableNamesPageResponse> DescribeCatalogTableNamesPage(DescribeCatalogTableNamesPageRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogTableNamesPageResponse>(req, "DescribeCatalogTableNamesPage");
+        }
+
+        /// <summary>
+        /// 分页查询表名
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogTableNamesPageRequest"/></param>
+        /// <returns><see cref="DescribeCatalogTableNamesPageResponse"/></returns>
+        public DescribeCatalogTableNamesPageResponse DescribeCatalogTableNamesPageSync(DescribeCatalogTableNamesPageRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogTableNamesPageResponse>(req, "DescribeCatalogTableNamesPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据目录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogsRequest"/></param>
+        /// <returns><see cref="DescribeCatalogsResponse"/></returns>
+        public Task<DescribeCatalogsResponse> DescribeCatalogs(DescribeCatalogsRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogsResponse>(req, "DescribeCatalogs");
+        }
+
+        /// <summary>
+        /// 查询数据目录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCatalogsRequest"/></param>
+        /// <returns><see cref="DescribeCatalogsResponse"/></returns>
+        public DescribeCatalogsResponse DescribeCatalogsSync(DescribeCatalogsRequest req)
+        {
+            return InternalRequestAsync<DescribeCatalogsResponse>(req, "DescribeCatalogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 CLS 日志主题列表：TopicName 走模糊匹配，TopicId 走精确匹配，两者均可为空；分页返回。
         /// </summary>
         /// <param name="req"><see cref="DescribeClsTopicsRequest"/></param>
@@ -3015,6 +3162,132 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeForbiddenTableProResponse DescribeForbiddenTableProSync(DescribeForbiddenTableProRequest req)
         {
             return InternalRequestAsync<DescribeForbiddenTableProResponse>(req, "DescribeForbiddenTablePro")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询作业定义详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDefinitionDetailRequest"/></param>
+        /// <returns><see cref="DescribeJobDefinitionDetailResponse"/></returns>
+        public Task<DescribeJobDefinitionDetailResponse> DescribeJobDefinitionDetail(DescribeJobDefinitionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDefinitionDetailResponse>(req, "DescribeJobDefinitionDetail");
+        }
+
+        /// <summary>
+        /// 查询作业定义详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDefinitionDetailRequest"/></param>
+        /// <returns><see cref="DescribeJobDefinitionDetailResponse"/></returns>
+        public DescribeJobDefinitionDetailResponse DescribeJobDefinitionDetailSync(DescribeJobDefinitionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDefinitionDetailResponse>(req, "DescribeJobDefinitionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询作业定义列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDefinitionsRequest"/></param>
+        /// <returns><see cref="DescribeJobDefinitionsResponse"/></returns>
+        public Task<DescribeJobDefinitionsResponse> DescribeJobDefinitions(DescribeJobDefinitionsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDefinitionsResponse>(req, "DescribeJobDefinitions");
+        }
+
+        /// <summary>
+        /// 查询作业定义列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDefinitionsRequest"/></param>
+        /// <returns><see cref="DescribeJobDefinitionsResponse"/></returns>
+        public DescribeJobDefinitionsResponse DescribeJobDefinitionsSync(DescribeJobDefinitionsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDefinitionsResponse>(req, "DescribeJobDefinitions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询作业完整详情 Action。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDetailRequest"/></param>
+        /// <returns><see cref="DescribeJobDetailResponse"/></returns>
+        public Task<DescribeJobDetailResponse> DescribeJobDetail(DescribeJobDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDetailResponse>(req, "DescribeJobDetail");
+        }
+
+        /// <summary>
+        /// 查询作业完整详情 Action。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDetailRequest"/></param>
+        /// <returns><see cref="DescribeJobDetailResponse"/></returns>
+        public DescribeJobDetailResponse DescribeJobDetailSync(DescribeJobDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDetailResponse>(req, "DescribeJobDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询作业列表 Action. PageSize 上限 200；QueueName 必须配合 PartitionCode。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobListRequest"/></param>
+        /// <returns><see cref="DescribeJobListResponse"/></returns>
+        public Task<DescribeJobListResponse> DescribeJobList(DescribeJobListRequest req)
+        {
+            return InternalRequestAsync<DescribeJobListResponse>(req, "DescribeJobList");
+        }
+
+        /// <summary>
+        /// 分页查询作业列表 Action. PageSize 上限 200；QueueName 必须配合 PartitionCode。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobListRequest"/></param>
+        /// <returns><see cref="DescribeJobListResponse"/></returns>
+        public DescribeJobListResponse DescribeJobListSync(DescribeJobListRequest req)
+        {
+            return InternalRequestAsync<DescribeJobListResponse>(req, "DescribeJobList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 统一作业日志查询 Action。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobLogRequest"/></param>
+        /// <returns><see cref="DescribeJobLogResponse"/></returns>
+        public Task<DescribeJobLogResponse> DescribeJobLog(DescribeJobLogRequest req)
+        {
+            return InternalRequestAsync<DescribeJobLogResponse>(req, "DescribeJobLog");
+        }
+
+        /// <summary>
+        /// 统一作业日志查询 Action。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobLogRequest"/></param>
+        /// <returns><see cref="DescribeJobLogResponse"/></returns>
+        public DescribeJobLogResponse DescribeJobLogSync(DescribeJobLogRequest req)
+        {
+            return InternalRequestAsync<DescribeJobLogResponse>(req, "DescribeJobLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 SQL 作业结果集 Action. 仅 MinorType=SPARK_SQL 有效（Batch 固定返回 State=NOT_SUPPORTED）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobResultRequest"/></param>
+        /// <returns><see cref="DescribeJobResultResponse"/></returns>
+        public Task<DescribeJobResultResponse> DescribeJobResult(DescribeJobResultRequest req)
+        {
+            return InternalRequestAsync<DescribeJobResultResponse>(req, "DescribeJobResult");
+        }
+
+        /// <summary>
+        /// 获取 SQL 作业结果集 Action. 仅 MinorType=SPARK_SQL 有效（Batch 固定返回 State=NOT_SUPPORTED）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobResultRequest"/></param>
+        /// <returns><see cref="DescribeJobResultResponse"/></returns>
+        public DescribeJobResultResponse DescribeJobResultSync(DescribeJobResultRequest req)
+        {
+            return InternalRequestAsync<DescribeJobResultResponse>(req, "DescribeJobResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3651,6 +3924,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeSaleResourceInfoResponse DescribeSaleResourceInfoSync(DescribeSaleResourceInfoRequest req)
         {
             return InternalRequestAsync<DescribeSaleResourceInfoResponse>(req, "DescribeSaleResourceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询 Catalog 下 Schema 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchemaNamesPageRequest"/></param>
+        /// <returns><see cref="DescribeSchemaNamesPageResponse"/></returns>
+        public Task<DescribeSchemaNamesPageResponse> DescribeSchemaNamesPage(DescribeSchemaNamesPageRequest req)
+        {
+            return InternalRequestAsync<DescribeSchemaNamesPageResponse>(req, "DescribeSchemaNamesPage");
+        }
+
+        /// <summary>
+        /// 分页查询 Catalog 下 Schema 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchemaNamesPageRequest"/></param>
+        /// <returns><see cref="DescribeSchemaNamesPageResponse"/></returns>
+        public DescribeSchemaNamesPageResponse DescribeSchemaNamesPageSync(DescribeSchemaNamesPageRequest req)
+        {
+            return InternalRequestAsync<DescribeSchemaNamesPageResponse>(req, "DescribeSchemaNamesPage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4533,6 +4827,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeViewsResponse DescribeViewsSync(DescribeViewsRequest req)
         {
             return InternalRequestAsync<DescribeViewsResponse>(req, "DescribeViews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询计算仓库列表 Action。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWarehousesRequest"/></param>
+        /// <returns><see cref="DescribeWarehousesResponse"/></returns>
+        public Task<DescribeWarehousesResponse> DescribeWarehouses(DescribeWarehousesRequest req)
+        {
+            return InternalRequestAsync<DescribeWarehousesResponse>(req, "DescribeWarehouses");
+        }
+
+        /// <summary>
+        /// 查询计算仓库列表 Action。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWarehousesRequest"/></param>
+        /// <returns><see cref="DescribeWarehousesResponse"/></returns>
+        public DescribeWarehousesResponse DescribeWarehousesSync(DescribeWarehousesRequest req)
+        {
+            return InternalRequestAsync<DescribeWarehousesResponse>(req, "DescribeWarehouses")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6192,6 +6507,27 @@ namespace TencentCloud.Dlc.V20210125
         public ModifyGovernEventRuleResponse ModifyGovernEventRuleSync(ModifyGovernEventRuleRequest req)
         {
             return InternalRequestAsync<ModifyGovernEventRuleResponse>(req, "ModifyGovernEventRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改作业定义。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyJobDefinitionRequest"/></param>
+        /// <returns><see cref="ModifyJobDefinitionResponse"/></returns>
+        public Task<ModifyJobDefinitionResponse> ModifyJobDefinition(ModifyJobDefinitionRequest req)
+        {
+            return InternalRequestAsync<ModifyJobDefinitionResponse>(req, "ModifyJobDefinition");
+        }
+
+        /// <summary>
+        /// 修改作业定义。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyJobDefinitionRequest"/></param>
+        /// <returns><see cref="ModifyJobDefinitionResponse"/></returns>
+        public ModifyJobDefinitionResponse ModifyJobDefinitionSync(ModifyJobDefinitionRequest req)
+        {
+            return InternalRequestAsync<ModifyJobDefinitionResponse>(req, "ModifyJobDefinition")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

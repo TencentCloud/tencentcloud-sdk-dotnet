@@ -24,12 +24,40 @@ namespace TencentCloud.Ags.V20250920.Models
     public class PreviewRegistryRecordRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>父 Registry ID。</p>
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
+        /// <p>Record ID。</p>
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
+        /// <p>可选。指定要预览的目标 Version；与 Label 互斥；均省略时使用 Stable。</p>
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
+        /// <summary>
+        /// <p>可选。指定要预览的目标 Label；与 VersionId 互斥；均省略时使用 Stable。</p>
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

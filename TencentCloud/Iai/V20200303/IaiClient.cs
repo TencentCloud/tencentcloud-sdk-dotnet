@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -472,6 +472,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// - 注：对比[人脸比对](https://cloud.tencent.com/document/product/867/44987)接口，该版本算法版本更新，功能一样。
         /// </summary>
         /// <param name="req"><see cref="DetectFaceSimilarityRequest"/></param>
         /// <returns><see cref="DetectFaceSimilarityResponse"/></returns>
@@ -487,6 +488,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// - 注：对比[人脸比对](https://cloud.tencent.com/document/product/867/44987)接口，该版本算法版本更新，功能一样。
         /// </summary>
         /// <param name="req"><see cref="DetectFaceSimilarityRequest"/></param>
         /// <returns><see cref="DetectFaceSimilarityResponse"/></returns>

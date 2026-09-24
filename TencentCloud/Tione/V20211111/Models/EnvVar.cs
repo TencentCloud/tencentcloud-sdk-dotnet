@@ -38,6 +38,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
+        /// </summary>
+        [JsonProperty("IsPrivate")]
+        public bool? IsPrivate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "IsPrivate", this.IsPrivate);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1510</VersionPrefix>
+    <VersionPrefix>3.0.1512</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,7 @@
     <Compile Include="V20210125\Models\AttachUserPolicyResponse.cs" />
     <Compile Include="V20210125\Models\AttachWorkGroupPolicyRequest.cs" />
     <Compile Include="V20210125\Models\AttachWorkGroupPolicyResponse.cs" />
+    <Compile Include="V20210125\Models\Audit.cs" />
     <Compile Include="V20210125\Models\BatchSQLCostInfo.cs" />
     <Compile Include="V20210125\Models\BatchSqlTask.cs" />
     <Compile Include="V20210125\Models\BenchmarkResourceInfo.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="V20210125\Models\BindApiKeyResponse.cs" />
     <Compile Include="V20210125\Models\BindWorkGroupsToUserRequest.cs" />
     <Compile Include="V20210125\Models\BindWorkGroupsToUserResponse.cs" />
+    <Compile Include="V20210125\Models\BucketPartitioning.cs" />
     <Compile Include="V20210125\Models\CHDFSProductVpcInfo.cs" />
     <Compile Include="V20210125\Models\CSV.cs" />
     <Compile Include="V20210125\Models\CSVSerde.cs" />
@@ -105,6 +107,8 @@
     <Compile Include="V20210125\Models\CancelTasksResponse.cs" />
     <Compile Include="V20210125\Models\CancelTrainingJobInstanceRequest.cs" />
     <Compile Include="V20210125\Models\CancelTrainingJobInstanceResponse.cs" />
+    <Compile Include="V20210125\Models\CatalogConfig.cs" />
+    <Compile Include="V20210125\Models\CatalogTaleInfo.cs" />
     <Compile Include="V20210125\Models\CheckApiKeyNameRequest.cs" />
     <Compile Include="V20210125\Models\CheckApiKeyNameResponse.cs" />
     <Compile Include="V20210125\Models\CheckDataEngineConfigPairsValidityRequest.cs" />
@@ -131,11 +135,14 @@
     <Compile Include="V20210125\Models\CheckpointMetrics.cs" />
     <Compile Include="V20210125\Models\CheckpointMountInfo.cs" />
     <Compile Include="V20210125\Models\CloudTag.cs" />
+    <Compile Include="V20210125\Models\ClsLogEntry.cs" />
     <Compile Include="V20210125\Models\ClsTopicItem.cs" />
     <Compile Include="V20210125\Models\ClusterGroup.cs" />
     <Compile Include="V20210125\Models\ClusterPod.cs" />
     <Compile Include="V20210125\Models\Column.cs" />
+    <Compile Include="V20210125\Models\ColumnInfo.cs" />
     <Compile Include="V20210125\Models\CommonMetrics.cs" />
+    <Compile Include="V20210125\Models\ConnectionConfig.cs" />
     <Compile Include="V20210125\Models\CopyJobSpecRequest.cs" />
     <Compile Include="V20210125\Models\CopyJobSpecResponse.cs" />
     <Compile Include="V20210125\Models\CoreInfo.cs" />
@@ -171,6 +178,12 @@
     <Compile Include="V20210125\Models\CreateInferenceServiceResponse.cs" />
     <Compile Include="V20210125\Models\CreateInternalTableRequest.cs" />
     <Compile Include="V20210125\Models\CreateInternalTableResponse.cs" />
+    <Compile Include="V20210125\Models\CreateJobDefinitionRequest.cs" />
+    <Compile Include="V20210125\Models\CreateJobDefinitionResponse.cs" />
+    <Compile Include="V20210125\Models\CreateJobFromDefinitionRequest.cs" />
+    <Compile Include="V20210125\Models\CreateJobFromDefinitionResponse.cs" />
+    <Compile Include="V20210125\Models\CreateJobRequest.cs" />
+    <Compile Include="V20210125\Models\CreateJobResponse.cs" />
     <Compile Include="V20210125\Models\CreateJobSpecRequest.cs" />
     <Compile Include="V20210125\Models\CreateJobSpecResponse.cs" />
     <Compile Include="V20210125\Models\CreateLabRequest.cs" />
@@ -332,6 +345,14 @@
     <Compile Include="V20210125\Models\DescribeAdvancedStoreLocationResponse.cs" />
     <Compile Include="V20210125\Models\DescribeBindablePrometheusRequest.cs" />
     <Compile Include="V20210125\Models\DescribeBindablePrometheusResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogTableInfoRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogTableInfoResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogTableNamesPageRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogTableNamesPageResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogTableNamesRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogTableNamesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeCatalogsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeClsTopicsRequest.cs" />
     <Compile Include="V20210125\Models\DescribeClsTopicsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeClusterEventLogSwitchRequest.cs" />
@@ -388,6 +409,18 @@
     <Compile Include="V20210125\Models\DescribeFlowListResponse.cs" />
     <Compile Include="V20210125\Models\DescribeForbiddenTableProRequest.cs" />
     <Compile Include="V20210125\Models\DescribeForbiddenTableProResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobDefinitionDetailRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobDefinitionDetailResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobDefinitionsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobDefinitionsResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobDetailRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobDetailResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobListRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobListResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobLogRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobLogResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobResultRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobResultResponse.cs" />
     <Compile Include="V20210125\Models\DescribeLakeFsDirSummaryRequest.cs" />
     <Compile Include="V20210125\Models\DescribeLakeFsDirSummaryResponse.cs" />
     <Compile Include="V20210125\Models\DescribeLakeFsInfoRequest.cs" />
@@ -448,6 +481,8 @@
     <Compile Include="V20210125\Models\DescribeSaleRegionsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeSaleResourceInfoRequest.cs" />
     <Compile Include="V20210125\Models\DescribeSaleResourceInfoResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeSchemaNamesPageRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeSchemaNamesPageResponse.cs" />
     <Compile Include="V20210125\Models\DescribeScriptsRequest.cs" />
     <Compile Include="V20210125\Models\DescribeScriptsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeSessionImageVersionRequest.cs" />
@@ -532,6 +567,8 @@
     <Compile Include="V20210125\Models\DescribeUsersResponse.cs" />
     <Compile Include="V20210125\Models\DescribeViewsRequest.cs" />
     <Compile Include="V20210125\Models\DescribeViewsResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeWarehousesRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeWarehousesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeWorkGroupInfoRequest.cs" />
     <Compile Include="V20210125\Models\DescribeWorkGroupInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeWorkGroupsRequest.cs" />
@@ -540,6 +577,8 @@
     <Compile Include="V20210125\Models\DetachUserPolicyResponse.cs" />
     <Compile Include="V20210125\Models\DetachWorkGroupPolicyRequest.cs" />
     <Compile Include="V20210125\Models\DetachWorkGroupPolicyResponse.cs" />
+    <Compile Include="V20210125\Models\DlcConnection.cs" />
+    <Compile Include="V20210125\Models\DorisConnection.cs" />
     <Compile Include="V20210125\Models\DropDMSDatabaseRequest.cs" />
     <Compile Include="V20210125\Models\DropDMSDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\DropDMSPartitionsRequest.cs" />
@@ -636,6 +675,7 @@
     <Compile Include="V20210125\Models\GrantDLCCatalogAccessResponse.cs" />
     <Compile Include="V20210125\Models\GroupInfo.cs" />
     <Compile Include="V20210125\Models\HeadSpecDTO.cs" />
+    <Compile Include="V20210125\Models\HiveConnection.cs" />
     <Compile Include="V20210125\Models\HiveInfo.cs" />
     <Compile Include="V20210125\Models\HiveTablePartition.cs" />
     <Compile Include="V20210125\Models\HouseEventsInfo.cs" />
@@ -645,12 +685,15 @@
     <Compile Include="V20210125\Models\ImportExternalClusterResponse.cs" />
     <Compile Include="V20210125\Models\ImportTkeClusterRequest.cs" />
     <Compile Include="V20210125\Models\ImportTkeClusterResponse.cs" />
+    <Compile Include="V20210125\Models\IndexInfo.cs" />
     <Compile Include="V20210125\Models\InferenceEngineInfo.cs" />
     <Compile Include="V20210125\Models\InferenceModelInfo.cs" />
     <Compile Include="V20210125\Models\InferenceServiceInfo.cs" />
     <Compile Include="V20210125\Models\InitializeTCLakeRequest.cs" />
     <Compile Include="V20210125\Models\InitializeTCLakeResponse.cs" />
     <Compile Include="V20210125\Models\IpPortPair.cs" />
+    <Compile Include="V20210125\Models\JobBriefInfo.cs" />
+    <Compile Include="V20210125\Models\JobDefinitionItemInfo.cs" />
     <Compile Include="V20210125\Models\JobLogResult.cs" />
     <Compile Include="V20210125\Models\JobPodEntity.cs" />
     <Compile Include="V20210125\Models\JobSpec.cs" />
@@ -662,6 +705,7 @@
     <Compile Include="V20210125\Models\Label.cs" />
     <Compile Include="V20210125\Models\LakeFileSystemToken.cs" />
     <Compile Include="V20210125\Models\LakeFsInfo.cs" />
+    <Compile Include="V20210125\Models\LakeHouseConnection.cs" />
     <Compile Include="V20210125\Models\LaunchStandardEngineResourceGroupsRequest.cs" />
     <Compile Include="V20210125\Models\LaunchStandardEngineResourceGroupsResponse.cs" />
     <Compile Include="V20210125\Models\LbItem.cs" />
@@ -708,6 +752,8 @@
     <Compile Include="V20210125\Models\ListMlflowServersResponse.cs" />
     <Compile Include="V20210125\Models\ListModelVersionsRequest.cs" />
     <Compile Include="V20210125\Models\ListModelVersionsResponse.cs" />
+    <Compile Include="V20210125\Models\ListPartition.cs" />
+    <Compile Include="V20210125\Models\ListPartitioning.cs" />
     <Compile Include="V20210125\Models\ListRayClusterJobsRequest.cs" />
     <Compile Include="V20210125\Models\ListRayClusterJobsResponse.cs" />
     <Compile Include="V20210125\Models\ListRayClustersRequest.cs" />
@@ -730,6 +776,7 @@
     <Compile Include="V20210125\Models\ListTrainingJobInstanceResponse.cs" />
     <Compile Include="V20210125\Models\ListTrainingJobSpecRequest.cs" />
     <Compile Include="V20210125\Models\ListTrainingJobSpecResponse.cs" />
+    <Compile Include="V20210125\Models\Literal.cs" />
     <Compile Include="V20210125\Models\LocationInfo.cs" />
     <Compile Include="V20210125\Models\LockComponentInfo.cs" />
     <Compile Include="V20210125\Models\LockMetaDataRequest.cs" />
@@ -753,6 +800,8 @@
     <Compile Include="V20210125\Models\ModifyDataEngineDescriptionResponse.cs" />
     <Compile Include="V20210125\Models\ModifyGovernEventRuleRequest.cs" />
     <Compile Include="V20210125\Models\ModifyGovernEventRuleResponse.cs" />
+    <Compile Include="V20210125\Models\ModifyJobDefinitionRequest.cs" />
+    <Compile Include="V20210125\Models\ModifyJobDefinitionResponse.cs" />
     <Compile Include="V20210125\Models\ModifyLabPriorityRequest.cs" />
     <Compile Include="V20210125\Models\ModifyLabPriorityResponse.cs" />
     <Compile Include="V20210125\Models\ModifyPartitionDescriptionRequest.cs" />
@@ -774,7 +823,9 @@
     <Compile Include="V20210125\Models\ModifyWorkGroupRequest.cs" />
     <Compile Include="V20210125\Models\ModifyWorkGroupResponse.cs" />
     <Compile Include="V20210125\Models\MountPointAssociates.cs" />
+    <Compile Include="V20210125\Models\MysqlConnection.cs" />
     <Compile Include="V20210125\Models\MysqlInfo.cs" />
+    <Compile Include="V20210125\Models\NameIdentifier.cs" />
     <Compile Include="V20210125\Models\NetWork.cs" />
     <Compile Include="V20210125\Models\NetworkConnection.cs" />
     <Compile Include="V20210125\Models\NotebookSessionInfo.cs" />
@@ -793,6 +844,7 @@
     <Compile Include="V20210125\Models\Partition.cs" />
     <Compile Include="V20210125\Models\PartitionDetail.cs" />
     <Compile Include="V20210125\Models\PartitionInfo.cs" />
+    <Compile Include="V20210125\Models\Partitioning.cs" />
     <Compile Include="V20210125\Models\PauseStandardEngineResourceGroupsRequest.cs" />
     <Compile Include="V20210125\Models\PauseStandardEngineResourceGroupsResponse.cs" />
     <Compile Include="V20210125\Models\PersistentWorkDir.cs" />
@@ -800,6 +852,7 @@
     <Compile Include="V20210125\Models\Policy.cs" />
     <Compile Include="V20210125\Models\Policys.cs" />
     <Compile Include="V20210125\Models\PostTrainingResources.cs" />
+    <Compile Include="V20210125\Models\PostgreSQLConnection.cs" />
     <Compile Include="V20210125\Models\PrestoMonitorMetrics.cs" />
     <Compile Include="V20210125\Models\PrometheusInstanceItem.cs" />
     <Compile Include="V20210125\Models\Property.cs" />
@@ -818,6 +871,9 @@
     <Compile Include="V20210125\Models\QueryTaskCostDetailResponse.cs" />
     <Compile Include="V20210125\Models\QueueInfo.cs" />
     <Compile Include="V20210125\Models\QueueResourceQuota.cs" />
+    <Compile Include="V20210125\Models\RangePartition.cs" />
+    <Compile Include="V20210125\Models\RangePartitioning.cs" />
+    <Compile Include="V20210125\Models\RangerConnection.cs" />
     <Compile Include="V20210125\Models\RayClusterEntity.cs" />
     <Compile Include="V20210125\Models\RayClusterHistory.cs" />
     <Compile Include="V20210125\Models\RayJobEventItem.cs" />
@@ -847,6 +903,8 @@
     <Compile Include="V20210125\Models\RestartDeploymentResponse.cs" />
     <Compile Include="V20210125\Models\RestartInferenceServiceRequest.cs" />
     <Compile Include="V20210125\Models\RestartInferenceServiceResponse.cs" />
+    <Compile Include="V20210125\Models\ResultColumn.cs" />
+    <Compile Include="V20210125\Models\ResultRow.cs" />
     <Compile Include="V20210125\Models\ResumeTrainingJobInstanceRequest.cs" />
     <Compile Include="V20210125\Models\ResumeTrainingJobInstanceResponse.cs" />
     <Compile Include="V20210125\Models\RevokeDLCCatalogAccessRequest.cs" />
@@ -864,6 +922,7 @@
     <Compile Include="V20210125\Models\SetOptimizerPolicyRequest.cs" />
     <Compile Include="V20210125\Models\SetOptimizerPolicyResponse.cs" />
     <Compile Include="V20210125\Models\SharedMountFileItem.cs" />
+    <Compile Include="V20210125\Models\SingleFieldPartitioning.cs" />
     <Compile Include="V20210125\Models\SmartOptimizerChangeTablePolicy.cs" />
     <Compile Include="V20210125\Models\SmartOptimizerIndexPolicy.cs" />
     <Compile Include="V20210125\Models\SmartOptimizerLifecyclePolicy.cs" />
@@ -935,6 +994,7 @@
     <Compile Include="V20210125\Models\TrainingJobSpec.cs" />
     <Compile Include="V20210125\Models\TrainingParams.cs" />
     <Compile Include="V20210125\Models\TrainingTuningParams.cs" />
+    <Compile Include="V20210125\Models\TruncatePartitioning.cs" />
     <Compile Include="V20210125\Models\TypeKVPair.cs" />
     <Compile Include="V20210125\Models\UDFPolicyInfo.cs" />
     <Compile Include="V20210125\Models\UnbindWorkGroupsFromUserRequest.cs" />
@@ -999,8 +1059,10 @@
     <Compile Include="V20210125\Models\Users.cs" />
     <Compile Include="V20210125\Models\ViewBaseInfo.cs" />
     <Compile Include="V20210125\Models\ViewResponseInfo.cs" />
+    <Compile Include="V20210125\Models\VolumeConnection.cs" />
     <Compile Include="V20210125\Models\VpcCidrBlock.cs" />
     <Compile Include="V20210125\Models\VpcInfo.cs" />
+    <Compile Include="V20210125\Models\WarehouseInfo.cs" />
     <Compile Include="V20210125\Models\WorkGroupDetailInfo.cs" />
     <Compile Include="V20210125\Models\WorkGroupIdSetOfUserId.cs" />
     <Compile Include="V20210125\Models\WorkGroupInfo.cs" />

@@ -25,25 +25,25 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 来源地址数目。
+        /// <p>来源地址数目。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 各来源地址的慢日志占比详情列表。
+        /// <p>各来源地址的慢日志占比详情列表。</p>
         /// </summary>
         [JsonProperty("Items")]
         public SlowLogHost[] Items{ get; set; }
 
         /// <summary>
-        /// 各来源用户名的慢日志占比详情列表。
+        /// <p>各来源用户名的慢日志占比详情列表。</p>
         /// </summary>
         [JsonProperty("UserNameItems")]
         public SlowLogUser[] UserNameItems{ get; set; }
 
         /// <summary>
-        /// 来源用户数目。
+        /// <p>来源用户数目。</p>
         /// </summary>
         [JsonProperty("UserTotalCount")]
         public long? UserTotalCount{ get; set; }

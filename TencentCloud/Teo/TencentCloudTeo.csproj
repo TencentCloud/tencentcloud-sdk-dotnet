@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1511</VersionPrefix>
+    <VersionPrefix>3.0.1512</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -190,6 +190,8 @@
     <Compile Include="V20220901\Models\CreateFunctionRuleResponse.cs" />
     <Compile Include="V20220901\Models\CreateInferenceAPITokenRequest.cs" />
     <Compile Include="V20220901\Models\CreateInferenceAPITokenResponse.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceDomainRequest.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceDomainResponse.cs" />
     <Compile Include="V20220901\Models\CreateInferenceServiceRequest.cs" />
     <Compile Include="V20220901\Models\CreateInferenceServiceResponse.cs" />
     <Compile Include="V20220901\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
@@ -392,6 +394,8 @@
     <Compile Include="V20220901\Models\DescribeIdentificationsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceAPITokensRequest.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceAPITokensResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceDomainsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceDomainsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceHardwareSpecificationsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceHardwareSpecificationsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceServiceDeploymentLogsRequest.cs" />
@@ -573,9 +577,11 @@
     <Compile Include="V20220901\Models\Header.cs" />
     <Compile Include="V20220901\Models\HeaderAction.cs" />
     <Compile Include="V20220901\Models\HealthChecker.cs" />
+    <Compile Include="V20220901\Models\HostCertInfo.cs" />
     <Compile Include="V20220901\Models\HostHeaderParameters.cs" />
     <Compile Include="V20220901\Models\HostName.cs" />
     <Compile Include="V20220901\Models\HostPolicy.cs" />
+    <Compile Include="V20220901\Models\HostsCertificate.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
     <Compile Include="V20220901\Models\HttpDDoSProtection.cs" />
     <Compile Include="V20220901\Models\Https.cs" />
@@ -602,6 +608,7 @@
     <Compile Include="V20220901\Models\InferenceAutoScalingConfig.cs" />
     <Compile Include="V20220901\Models\InferenceContainerConfig.cs" />
     <Compile Include="V20220901\Models\InferenceContainerConfigForModify.cs" />
+    <Compile Include="V20220901\Models\InferenceDomain.cs" />
     <Compile Include="V20220901\Models\InferenceEnvironmentVariable.cs" />
     <Compile Include="V20220901\Models\InferenceHardwareConfig.cs" />
     <Compile Include="V20220901\Models\InferenceHardwareConfigForModify.cs" />
@@ -774,6 +781,8 @@
     <Compile Include="V20220901\Models\OCSPStaplingParameters.cs" />
     <Compile Include="V20220901\Models\OfflineCache.cs" />
     <Compile Include="V20220901\Models\OfflineCacheParameters.cs" />
+    <Compile Include="V20220901\Models\OperateInferenceDomainRequest.cs" />
+    <Compile Include="V20220901\Models\OperateInferenceDomainResponse.cs" />
     <Compile Include="V20220901\Models\OperateInferenceServiceRequest.cs" />
     <Compile Include="V20220901\Models\OperateInferenceServiceResponse.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
@@ -927,6 +936,7 @@
     <Compile Include="V20220901\Models\Zone.cs" />
     <Compile Include="V20220901\Models\ZoneConfig.cs" />
     <Compile Include="V20220901\Models\ZoneConfigParameters.cs" />
+    <Compile Include="V20220901\Models\ZoneCustomVariables.cs" />
     <Compile Include="V20220901\Models\ZoneFullConfig.cs" />
     <Compile Include="V20220901\Models\ZoneInfo.cs" />
     <Compile Include="V20220901\Models\ZoneSetting.cs" />

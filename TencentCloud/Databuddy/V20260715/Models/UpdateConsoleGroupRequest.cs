@@ -55,7 +55,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
+        /// <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
         /// </summary>
         [JsonProperty("UserUins")]
         public string[] UserUins{ get; set; }

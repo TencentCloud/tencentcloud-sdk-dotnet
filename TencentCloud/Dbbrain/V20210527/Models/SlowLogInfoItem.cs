@@ -84,6 +84,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ClientAppName")]
+        public string ClientAppName{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ClientHostName")]
+        public string ClientHostName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "RowsExamined", this.RowsExamined);
             this.SetParamSimple(map, prefix + "RowsSent", this.RowsSent);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ClientAppName", this.ClientAppName);
+            this.SetParamSimple(map, prefix + "ClientHostName", this.ClientHostName);
         }
     }
 }

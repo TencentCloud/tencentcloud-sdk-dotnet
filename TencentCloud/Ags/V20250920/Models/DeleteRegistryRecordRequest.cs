@@ -24,12 +24,40 @@ namespace TencentCloud.Ags.V20250920.Models
     public class DeleteRegistryRecordRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>父 Registry ID。</p>
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
+        /// <p>Record ID。</p>
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
+        /// <p>可选。传入时只删除 Record 下指定 Version（软删除）；省略时删除整个 Record。显式传入空字符串或 null 返回 InvalidParameter.VersionId，不得回退为删除整个 Record。</p>
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
+        /// <summary>
+        /// <p>删除原因，最大 1024 字符。删除单个 Version 时必填；删除整个 Record 时可选。</p>
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

@@ -25,54 +25,49 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 偏移量，默认为 0
+        /// <p>偏移量，默认为 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 限制量，默认为20，最大值为100
+        /// <p>限制量，默认为20，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 实例ID。每次请求的实例的上限为100。
+        /// <p>实例ID。每次请求的实例的上限为100。</p>
         /// </summary>
         [JsonProperty("AndroidInstanceIds")]
         public string[] AndroidInstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例地域。目前还不支持按地域进行聚合查询
+        /// <p>实例地域。目前还不支持按地域进行聚合查询</p>
         /// </summary>
         [JsonProperty("AndroidInstanceRegion")]
         public string AndroidInstanceRegion{ get; set; }
 
         /// <summary>
-        /// 实例可用区
+        /// <p>实例可用区</p>
         /// </summary>
         [JsonProperty("AndroidInstanceZone")]
         public string AndroidInstanceZone{ get; set; }
 
         /// <summary>
-        /// 实例分组 ID 列表
+        /// <p>实例分组 ID 列表</p>
         /// </summary>
         [JsonProperty("AndroidInstanceGroupIds")]
         public string[] AndroidInstanceGroupIds{ get; set; }
 
         /// <summary>
-        /// 实例标签选择器
+        /// <p>实例标签选择器</p>
         /// </summary>
         [JsonProperty("LabelSelector")]
         public LabelRequirement[] LabelSelector{ get; set; }
 
         /// <summary>
-        /// 字段过滤器。Filter 的 Name 有以下值：
-        /// Name：实例名称
-        /// UserId：实例用户ID
-        /// HostSerialNumber：宿主机序列号
-        /// HostServerSerialNumber：机箱序列号
-        /// AndroidInstanceModel：实例型号
+        /// <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

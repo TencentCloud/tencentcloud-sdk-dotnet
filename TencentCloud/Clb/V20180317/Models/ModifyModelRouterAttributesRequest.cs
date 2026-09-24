@@ -61,16 +61,34 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// <p>模型输出模态</p>
+        /// <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
         /// </summary>
         [JsonProperty("Capability")]
         public string Capability{ get; set; }
 
         /// <summary>
-        /// <p>embedding 模态配置</p>
+        /// <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
         /// </summary>
         [JsonProperty("EmbeddingConfig")]
         public EmbeddingConfig EmbeddingConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Video 调度配置</p>
+        /// </summary>
+        [JsonProperty("VideoConfig")]
+        public VideoConfig VideoConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+        /// </summary>
+        [JsonProperty("RerankConfig")]
+        public RerankConfig RerankConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Decisions 调度配置</p>
+        /// </summary>
+        [JsonProperty("DecisionsConfig")]
+        public DecisionsConfig DecisionsConfig{ get; set; }
 
 
         /// <summary>
@@ -86,6 +104,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Capability", this.Capability);
             this.SetParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
+            this.SetParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
+            this.SetParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
+            this.SetParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
         }
     }
 }

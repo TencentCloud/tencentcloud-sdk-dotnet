@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// HTTP 应答超时时间，单位为秒，取值：5～600。
+        /// <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
         /// </summary>
         [JsonProperty("ResponseTimeout")]
         public long? ResponseTimeout{ get; set; }

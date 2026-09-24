@@ -97,7 +97,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CMRPrivateNetworkTunnelId{ get; set; }
 
         /// <summary>
-        /// <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+        /// <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
         /// </summary>
         [JsonProperty("Capability")]
         public string Capability{ get; set; }

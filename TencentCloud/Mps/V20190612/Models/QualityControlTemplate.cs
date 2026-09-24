@@ -25,57 +25,55 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体质检模板唯一标识。
+        /// <p>媒体质检模板唯一标识。</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 媒体质检模板名称。
+        /// <p>媒体质检模板名称。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模板描述信息。
+        /// <p>模板描述信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 模板类型，取值：
-        /// <li>Preset：系统预置模板；</li>
-        /// <li>Custom：用户自定义模板。</li>
+        /// <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 媒体质检配置参数。
+        /// <p>媒体质检配置参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityControlItemSet")]
         public QualityControlItemConfig[] QualityControlItemSet{ get; set; }
 
         /// <summary>
-        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        /// <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+        /// <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 媒体质检的抽检策略。
+        /// <p>媒体质检的抽检策略。</p>
         /// </summary>
         [JsonProperty("Strategy")]
         public QualityControlStrategy Strategy{ get; set; }

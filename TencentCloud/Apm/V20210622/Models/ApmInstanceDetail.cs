@@ -384,6 +384,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("CrossAccountPeerId")]
         public string CrossAccountPeerId{ get; set; }
 
+        /// <summary>
+        /// <p>开启Token展示安全保护</p><p>单位：是、否</p>
+        /// </summary>
+        [JsonProperty("TokenDisplayProtection")]
+        public long? TokenDisplayProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -450,6 +456,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "DisableAiAbility", this.DisableAiAbility);
             this.SetParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
             this.SetParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
+            this.SetParamSimple(map, prefix + "TokenDisplayProtection", this.TokenDisplayProtection);
         }
     }
 }

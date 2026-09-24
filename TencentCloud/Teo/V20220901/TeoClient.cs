@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1511";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -544,6 +544,35 @@ namespace TencentCloud.Teo.V20220901
         public CreateInferenceAPITokenResponse CreateInferenceAPITokenSync(CreateInferenceAPITokenRequest req)
         {
             return InternalRequestAsync<CreateInferenceAPITokenResponse>(req, "CreateInferenceAPIToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建推理服务域名，用于通过自定义域名访问推理服务，一个推理服务下最多支持创建 5 个自定义域名。
+        /// 创建成功后，还需完成以下步骤，域名才能正常对外提供访问：
+        /// 1. 校验域名 CNAME 配置状态，请参考 [CheckCnameStatus](https://cloud.tencent.com/document/api/1552/94491) 接口；
+        /// 2. 验证归属权，请参考 [VerifyOwnership](https://cloud.tencent.com/document/api/1552/98879) 接口；
+        /// 3. 配置域名证书，请参考 [ModifyHostsCertificate](https://cloud.tencent.com/document/api/1552/80764) 接口。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceDomainRequest"/></param>
+        /// <returns><see cref="CreateInferenceDomainResponse"/></returns>
+        public Task<CreateInferenceDomainResponse> CreateInferenceDomain(CreateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceDomainResponse>(req, "CreateInferenceDomain");
+        }
+
+        /// <summary>
+        /// 创建推理服务域名，用于通过自定义域名访问推理服务，一个推理服务下最多支持创建 5 个自定义域名。
+        /// 创建成功后，还需完成以下步骤，域名才能正常对外提供访问：
+        /// 1. 校验域名 CNAME 配置状态，请参考 [CheckCnameStatus](https://cloud.tencent.com/document/api/1552/94491) 接口；
+        /// 2. 验证归属权，请参考 [VerifyOwnership](https://cloud.tencent.com/document/api/1552/98879) 接口；
+        /// 3. 配置域名证书，请参考 [ModifyHostsCertificate](https://cloud.tencent.com/document/api/1552/80764) 接口。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceDomainRequest"/></param>
+        /// <returns><see cref="CreateInferenceDomainResponse"/></returns>
+        public CreateInferenceDomainResponse CreateInferenceDomainSync(CreateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceDomainResponse>(req, "CreateInferenceDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2451,6 +2480,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeInferenceAPITokensResponse DescribeInferenceAPITokensSync(DescribeInferenceAPITokensRequest req)
         {
             return InternalRequestAsync<DescribeInferenceAPITokensResponse>(req, "DescribeInferenceAPITokens")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询推理服务域名列表，返回域名的Cname地址、归属权验证和证书等相关信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceDomainsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceDomainsResponse"/></returns>
+        public Task<DescribeInferenceDomainsResponse> DescribeInferenceDomains(DescribeInferenceDomainsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceDomainsResponse>(req, "DescribeInferenceDomains");
+        }
+
+        /// <summary>
+        /// 查询推理服务域名列表，返回域名的Cname地址、归属权验证和证书等相关信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceDomainsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceDomainsResponse"/></returns>
+        public DescribeInferenceDomainsResponse DescribeInferenceDomainsSync(DescribeInferenceDomainsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceDomainsResponse>(req, "DescribeInferenceDomains")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5053,6 +5103,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneWorkModeResponse ModifyZoneWorkModeSync(ModifyZoneWorkModeRequest req)
         {
             return InternalRequestAsync<ModifyZoneWorkModeResponse>(req, "ModifyZoneWorkMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 操作推理服务域名，支持停止、启用和删除推理服务域名，删除后的资源不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceDomainRequest"/></param>
+        /// <returns><see cref="OperateInferenceDomainResponse"/></returns>
+        public Task<OperateInferenceDomainResponse> OperateInferenceDomain(OperateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceDomainResponse>(req, "OperateInferenceDomain");
+        }
+
+        /// <summary>
+        /// 操作推理服务域名，支持停止、启用和删除推理服务域名，删除后的资源不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceDomainRequest"/></param>
+        /// <returns><see cref="OperateInferenceDomainResponse"/></returns>
+        public OperateInferenceDomainResponse OperateInferenceDomainSync(OperateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceDomainResponse>(req, "OperateInferenceDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

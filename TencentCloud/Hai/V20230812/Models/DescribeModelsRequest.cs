@@ -48,6 +48,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
         }
     }
 }

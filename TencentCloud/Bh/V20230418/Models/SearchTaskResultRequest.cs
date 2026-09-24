@@ -25,58 +25,55 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 搜索区间的开始时间
+        /// <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 搜索区间的结束时间
+        /// <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 运维任务ID
+        /// <p>运维任务ID</p>
         /// </summary>
         [JsonProperty("OperationId")]
         public string OperationId{ get; set; }
 
         /// <summary>
-        /// 运维任务名称
+        /// <p>运维任务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户名，长度不超过20
+        /// <p>用户名，长度不超过20</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 姓名，长度不超过20
+        /// <p>姓名，长度不超过20</p>
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 任务类型
-        /// 1 手工运维任务
-        /// 2 定时任务
-        /// 3 账号推送任务
+        /// <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong?[] TaskType{ get; set; }
 
         /// <summary>
-        /// 查询偏移
+        /// <p>查询偏移</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页的页内记录数，默认为20，最大200
+        /// <p>分页的页内记录数，默认为20，最大200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

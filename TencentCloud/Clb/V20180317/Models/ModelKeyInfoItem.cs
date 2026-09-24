@@ -166,7 +166,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ServiceProviderHealthCheckConfigItemOutput[] HealthCheckConfigs{ get; set; }
 
         /// <summary>
-        /// <p>模型输出模态</p>
+        /// <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Capability")]

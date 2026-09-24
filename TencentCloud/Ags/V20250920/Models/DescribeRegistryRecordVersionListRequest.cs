@@ -24,12 +24,47 @@ namespace TencentCloud.Ags.V20250920.Models
     public class DescribeRegistryRecordVersionListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>父 Registry ID。</p>
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
+        /// <p>Record ID。</p>
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
+        /// <p>分页起始偏移，默认 0。</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>分页条数，默认 20，最大 100。</p>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>过滤条件。支持：status（按 Version 状态：PREPARING/PENDING_APPROVAL/APPROVED/REJECTED/CANCELED，多值 OR）、source_type（按内容来源：MANUAL/URL_IMPORT/TAR_PACKAGE，多值 OR）。</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public CloudFilter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

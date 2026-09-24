@@ -25,6 +25,39 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
+        /// <p>更新后的 Record。</p>
+        /// </summary>
+        [JsonProperty("Record")]
+        public CloudRecord Record{ get; set; }
+
+        /// <summary>
+        /// <p>Version 创建模式返回：本次创建的新 Version。</p>
+        /// </summary>
+        [JsonProperty("Version")]
+        public CloudRecordVersion Version{ get; set; }
+
+        /// <summary>
+        /// <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UploadURL")]
+        public string UploadURL{ get; set; }
+
+        /// <summary>
+        /// <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContentStatus")]
+        public string ContentStatus{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +69,11 @@ namespace TencentCloud.Ags.V20250920.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Record.", this.Record);
+            this.SetParamObj(map, prefix + "Version.", this.Version);
+            this.SetParamSimple(map, prefix + "UploadURL", this.UploadURL);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "ContentStatus", this.ContentStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

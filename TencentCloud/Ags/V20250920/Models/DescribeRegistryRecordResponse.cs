@@ -25,6 +25,33 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
+        /// <p>Record 元数据和全部 Label。</p>
+        /// </summary>
+        [JsonProperty("Record")]
+        public CloudRecord Record{ get; set; }
+
+        /// <summary>
+        /// <p>根据 VersionId / Label 解析得到的完整 Version。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public CloudRecordVersion Version{ get; set; }
+
+        /// <summary>
+        /// <p>解析方式：DEFAULT_STABLE / LABEL / VERSION_ID。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResolvedBy")]
+        public string ResolvedBy{ get; set; }
+
+        /// <summary>
+        /// <p>通过 Label 解析（ResolvedBy=LABEL 或 DEFAULT_STABLE）时返回该 Label 名称，例如 stable。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResolvedLabel")]
+        public string ResolvedLabel{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +63,10 @@ namespace TencentCloud.Ags.V20250920.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Record.", this.Record);
+            this.SetParamObj(map, prefix + "Version.", this.Version);
+            this.SetParamSimple(map, prefix + "ResolvedBy", this.ResolvedBy);
+            this.SetParamSimple(map, prefix + "ResolvedLabel", this.ResolvedLabel);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

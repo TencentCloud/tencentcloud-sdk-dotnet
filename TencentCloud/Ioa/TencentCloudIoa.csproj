@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1504</VersionPrefix>
+    <VersionPrefix>3.0.1512</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,10 +48,15 @@
 
   <ItemGroup>
     <Compile Include="V20220601\IoaClient.cs" />
+    <Compile Include="V20220601\Models\AccountUserIdItem.cs" />
     <Compile Include="V20220601\Models\AggrCategorySoftDetailRow.cs" />
     <Compile Include="V20220601\Models\AggrSoftDeviceRow.cs" />
     <Compile Include="V20220601\Models\BindBusinessResourceConnectorGroupRequest.cs" />
     <Compile Include="V20220601\Models\BindBusinessResourceConnectorGroupResponse.cs" />
+    <Compile Include="V20220601\Models\BindVirtualAccountData.cs" />
+    <Compile Include="V20220601\Models\BindVirtualAccountResultData.cs" />
+    <Compile Include="V20220601\Models\BindVirtualAccountsRequest.cs" />
+    <Compile Include="V20220601\Models\BindVirtualAccountsResponse.cs" />
     <Compile Include="V20220601\Models\ComplexRule.cs" />
     <Compile Include="V20220601\Models\Condition.cs" />
     <Compile Include="V20220601\Models\CreateBusinessResourceData.cs" />
@@ -80,6 +85,7 @@
     <Compile Include="V20220601\Models\DeleteDeviceVirtualGroupRequest.cs" />
     <Compile Include="V20220601\Models\DeleteDeviceVirtualGroupResponse.cs" />
     <Compile Include="V20220601\Models\DeleteResourceData.cs" />
+    <Compile Include="V20220601\Models\DescribeAccountAccountGroupsData.cs" />
     <Compile Include="V20220601\Models\DescribeAccountGroupsData.cs" />
     <Compile Include="V20220601\Models\DescribeAccountGroupsPageResp.cs" />
     <Compile Include="V20220601\Models\DescribeAccountGroupsRequest.cs" />
@@ -129,6 +135,9 @@
     <Compile Include="V20220601\Models\DescribeDeviceInfoRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceInfoResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceInfoRspData.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceSecurityInfoData.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceSecurityInfoRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDeviceSecurityInfoResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceVirtualGroupsPageRsp.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceVirtualGroupsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceVirtualGroupsResponse.cs" />
@@ -142,6 +151,9 @@
     <Compile Include="V20220601\Models\DescribeLocalAccountsPage.cs" />
     <Compile Include="V20220601\Models\DescribeLocalAccountsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeLocalAccountsResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeProfileFieldsMenuRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeProfileFieldsMenuResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeProfileFieldsRspData.cs" />
     <Compile Include="V20220601\Models\DescribeResourceGrantedAccountGroupsData.cs" />
     <Compile Include="V20220601\Models\DescribeResourceGrantedAccountGroupsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeResourceGrantedAccountGroupsResponse.cs" />
@@ -160,6 +172,10 @@
     <Compile Include="V20220601\Models\DescribeSoftwareInformationPageData.cs" />
     <Compile Include="V20220601\Models\DescribeSoftwareInformationRequest.cs" />
     <Compile Include="V20220601\Models\DescribeSoftwareInformationResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeVirtualAccountsData.cs" />
+    <Compile Include="V20220601\Models\DescribeVirtualAccountsPageData.cs" />
+    <Compile Include="V20220601\Models\DescribeVirtualAccountsRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeVirtualAccountsResponse.cs" />
     <Compile Include="V20220601\Models\DescribeVirtualDevicesPageRsp.cs" />
     <Compile Include="V20220601\Models\DescribeVirtualDevicesRequest.cs" />
     <Compile Include="V20220601\Models\DescribeVirtualDevicesResponse.cs" />
@@ -169,6 +185,7 @@
     <Compile Include="V20220601\Models\DeviceNetworkCardBrief.cs" />
     <Compile Include="V20220601\Models\DeviceNetworkInfo.cs" />
     <Compile Include="V20220601\Models\DeviceProcessInfo.cs" />
+    <Compile Include="V20220601\Models\DeviceProfile.cs" />
     <Compile Include="V20220601\Models\DeviceServiceInfo.cs" />
     <Compile Include="V20220601\Models\DeviceVideoCardBrief.cs" />
     <Compile Include="V20220601\Models\DeviceVirtualDeviceGroupsDetail.cs" />
@@ -204,7 +221,10 @@
     <Compile Include="V20220601\Models\ModifyVirtualDeviceGroupsReqItem.cs" />
     <Compile Include="V20220601\Models\ModifyVirtualDeviceGroupsRequest.cs" />
     <Compile Include="V20220601\Models\ModifyVirtualDeviceGroupsResponse.cs" />
+    <Compile Include="V20220601\Models\OptionsItem.cs" />
     <Compile Include="V20220601\Models\Paging.cs" />
+    <Compile Include="V20220601\Models\ProfileFieldItem.cs" />
+    <Compile Include="V20220601\Models\ProfileTips.cs" />
     <Compile Include="V20220601\Models\RuleExpression.cs" />
     <Compile Include="V20220601\Models\RuleItem.cs" />
     <Compile Include="V20220601\Models\RulePayload.cs" />
@@ -213,5 +233,8 @@
     <Compile Include="V20220601\Models\SoftVersionAndNum.cs" />
     <Compile Include="V20220601\Models\SoftwareInformationData.cs" />
     <Compile Include="V20220601\Models\Sort.cs" />
+    <Compile Include="V20220601\Models\UnbindVirtualAccountData.cs" />
+    <Compile Include="V20220601\Models\UnbindVirtualAccountsRequest.cs" />
+    <Compile Include="V20220601\Models\UnbindVirtualAccountsResponse.cs" />
   </ItemGroup>
 </Project>

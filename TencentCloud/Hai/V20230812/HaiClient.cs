@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1511";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -180,7 +180,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
+        /// 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板。传入 ServiceId 时按当前服务占用过滤重装候选模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeployTemplatesRequest"/></param>
         /// <returns><see cref="DescribeDeployTemplatesResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
+        /// 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板。传入 ServiceId 时按当前服务占用过滤重装候选模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeDeployTemplatesRequest"/></param>
         /// <returns><see cref="DescribeDeployTemplatesResponse"/></returns>
@@ -243,7 +243,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口(DescribeModels)用于查询模型
+        /// 本接口(DescribeModels)用于查询模型。传入 ServiceId 时按当前服务占用过滤重装候选模型。
         /// </summary>
         /// <param name="req"><see cref="DescribeModelsRequest"/></param>
         /// <returns><see cref="DescribeModelsResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Hai.V20230812
         }
 
         /// <summary>
-        /// 本接口(DescribeModels)用于查询模型
+        /// 本接口(DescribeModels)用于查询模型。传入 ServiceId 时按当前服务占用过滤重装候选模型。
         /// </summary>
         /// <param name="req"><see cref="DescribeModelsRequest"/></param>
         /// <returns><see cref="DescribeModelsResponse"/></returns>

@@ -271,6 +271,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string HostName{ get; set; }
 
         /// <summary>
+        /// <p>信息登记数据</p>
+        /// </summary>
+        [JsonProperty("Profiles")]
+        public DeviceProfile[] Profiles{ get; set; }
+
+        /// <summary>
         /// <p>主板序列号</p>
         /// </summary>
         [JsonProperty("BaseBoardSn")]
@@ -323,6 +329,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         [JsonProperty("DiskAccessPermission")]
         public long? DiskAccessPermission{ get; set; }
+
+        /// <summary>
+        /// <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
+        /// </summary>
+        [JsonProperty("InstallationStatus")]
+        public long? InstallationStatus{ get; set; }
 
         /// <summary>
         /// <p>终端备注名</p>
@@ -383,6 +395,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "DeviceNewStrategyVer", this.DeviceNewStrategyVer);
             this.SetParamSimple(map, prefix + "NGNNewStrategyVer", this.NGNNewStrategyVer);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamArrayObj(map, prefix + "Profiles.", this.Profiles);
             this.SetParamSimple(map, prefix + "BaseBoardSn", this.BaseBoardSn);
             this.SetParamSimple(map, prefix + "AccountUsers", this.AccountUsers);
             this.SetParamSimple(map, prefix + "IdentityStrategyVer", this.IdentityStrategyVer);
@@ -392,6 +405,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
             this.SetParamSimple(map, prefix + "ScreenRecordingPermission", this.ScreenRecordingPermission);
             this.SetParamSimple(map, prefix + "DiskAccessPermission", this.DiskAccessPermission);
+            this.SetParamSimple(map, prefix + "InstallationStatus", this.InstallationStatus);
             this.SetParamSimple(map, prefix + "RemarkName", this.RemarkName);
             this.SetParamSimple(map, prefix + "BiosUuid", this.BiosUuid);
         }

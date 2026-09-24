@@ -25,31 +25,31 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 消息接收人的用户名
+        /// <p>消息接收人的用户名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 手机号国际区号，国内为86
+        /// <p>手机号国际区号，国内为86</p>
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }
 
         /// <summary>
-        /// 手机号码, 例如：132****2492
-        /// </summary>
-        [JsonProperty("PhoneNumber")]
-        public string PhoneNumber{ get; set; }
-
-        /// <summary>
-        /// 邮箱，例如：57*****@qq.com
+        /// <p>邮箱，例如：57<strong>*</strong>@qq.com</p>
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 消息接收人的备注，选填
+        /// <p>手机号码, 例如：132****2492</p>
+        /// </summary>
+        [JsonProperty("PhoneNumber")]
+        public string PhoneNumber{ get; set; }
+
+        /// <summary>
+        /// <p>消息接收人的备注，选填</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -62,8 +62,8 @@ namespace TencentCloud.Cam.V20190116.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
-            this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }

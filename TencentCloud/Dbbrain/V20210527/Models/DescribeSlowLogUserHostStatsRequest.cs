@@ -25,43 +25,43 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+        /// <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+        /// <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+        /// <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// SQL模板的MD5值
+        /// <p>SQL模板的MD5值</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 仅Redis产品使用；实例Proxy ID。
+        /// <p>仅Redis产品使用；实例Proxy ID。</p>
         /// </summary>
         [JsonProperty("InstanceProxyId")]
         public string InstanceProxyId{ get; set; }
 
         /// <summary>
-        /// 仅Redis产品使用；命令。
+        /// <p>仅Redis产品使用；命令。</p>
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1512";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public BatchInvokeTWeSeeRecognitionTaskResponse BatchInvokeTWeSeeRecognitionTaskSync(BatchInvokeTWeSeeRecognitionTaskRequest req)
         {
             return InternalRequestAsync<BatchInvokeTWeSeeRecognitionTaskResponse>(req, "BatchInvokeTWeSeeRecognitionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量设备透传指令控制
+        /// </summary>
+        /// <param name="req"><see cref="BatchPublishMessageRequest"/></param>
+        /// <returns><see cref="BatchPublishMessageResponse"/></returns>
+        public Task<BatchPublishMessageResponse> BatchPublishMessage(BatchPublishMessageRequest req)
+        {
+            return InternalRequestAsync<BatchPublishMessageResponse>(req, "BatchPublishMessage");
+        }
+
+        /// <summary>
+        /// 批量设备透传指令控制
+        /// </summary>
+        /// <param name="req"><see cref="BatchPublishMessageRequest"/></param>
+        /// <returns><see cref="BatchPublishMessageResponse"/></returns>
+        public BatchPublishMessageResponse BatchPublishMessageSync(BatchPublishMessageRequest req)
+        {
+            return InternalRequestAsync<BatchPublishMessageResponse>(req, "BatchPublishMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

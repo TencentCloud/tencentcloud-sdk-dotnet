@@ -43,7 +43,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string[] UserUins{ get; set; }
 
         /// <summary>
-        /// <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
+        /// <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
         /// </summary>
         [JsonProperty("OrderBys")]
         public OrderBy[] OrderBys{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// <p>每页大小，默认10，最小10，最大200</p>
+        /// <p>每页大小，默认10，最小10，最大100</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

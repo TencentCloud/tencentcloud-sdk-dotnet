@@ -127,10 +127,28 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// <p>Embedding 配置</p>
+        /// <p>Embedding 调度配置</p>
         /// </summary>
         [JsonProperty("EmbeddingConfig")]
         public EmbeddingConfig EmbeddingConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Video 配置</p>
+        /// </summary>
+        [JsonProperty("VideoConfig")]
+        public VideoConfig VideoConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Rerank 调度配置</p>
+        /// </summary>
+        [JsonProperty("RerankConfig")]
+        public RerankConfig RerankConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Decisions 调度配置</p>
+        /// </summary>
+        [JsonProperty("DecisionsConfig")]
+        public DecisionsConfig DecisionsConfig{ get; set; }
 
 
         /// <summary>
@@ -156,6 +174,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
+            this.SetParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
+            this.SetParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
+            this.SetParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
         }
     }
 }

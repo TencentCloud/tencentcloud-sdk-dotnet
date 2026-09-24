@@ -25,6 +25,12 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
+        /// <p>更新后的 Registry 详情。</p>
+        /// </summary>
+        [JsonProperty("Registry")]
+        public CloudRegistry Registry{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Ags.V20250920.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Registry.", this.Registry);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

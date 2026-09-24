@@ -24,12 +24,33 @@ namespace TencentCloud.Ags.V20250920.Models
     public class GetSkillPackageUploadURLRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>父 Registry ID。</p>
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
+        /// <p>Record ID。</p>
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
+        /// <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
         }
     }
 }

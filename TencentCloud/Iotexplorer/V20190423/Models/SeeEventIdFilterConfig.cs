@@ -25,16 +25,22 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 包含的云存事件 ID 集合
+        /// <p>包含的云存事件 ID 集合</p>
         /// </summary>
         [JsonProperty("IncludeOnly")]
         public string[] IncludeOnly{ get; set; }
 
         /// <summary>
-        /// 排除的云存事件 ID 集合
+        /// <p>排除的云存事件 ID 集合</p>
         /// </summary>
         [JsonProperty("Exclude")]
         public string[] Exclude{ get; set; }
+
+        /// <summary>
+        /// <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
+        /// </summary>
+        [JsonProperty("TriggerAt")]
+        public string TriggerAt{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         {
             this.SetParamArraySimple(map, prefix + "IncludeOnly.", this.IncludeOnly);
             this.SetParamArraySimple(map, prefix + "Exclude.", this.Exclude);
+            this.SetParamSimple(map, prefix + "TriggerAt", this.TriggerAt);
         }
     }
 }

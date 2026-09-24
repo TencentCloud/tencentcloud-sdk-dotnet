@@ -24,12 +24,47 @@ namespace TencentCloud.Ags.V20250920.Models
     public class SyncRegistryRecordRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>父 Registry ID。</p>
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
+        /// <p>Record ID。</p>
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
+        /// <summary>
+        /// <p>可选。指定要同步的目标 Version；与 Label 互斥；均省略时使用 Stable。</p>
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
+        /// <summary>
+        /// <p>可选。指定要同步的目标 Label；与 VersionId 互斥；均省略时使用 Stable。Label 在请求开始时只解析一次。</p>
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
+        /// <summary>
+        /// <p>可选，最大 4096 字符。若同步创建新 Version，将写入新 Version 的 ChangeLog；省略时保存为空。</p>
+        /// </summary>
+        [JsonProperty("ChangeLog")]
+        public string ChangeLog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "ChangeLog", this.ChangeLog);
         }
     }
 }

@@ -179,10 +179,36 @@ namespace TencentCloud.Clb.V20180317.Models
         public ModelRouterBillingConfigOutput BillingConfig{ get; set; }
 
         /// <summary>
-        /// <p>Embedding配置</p>
+        /// <p>Embedding调度配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmbeddingConfig")]
         public EmbeddingConfig EmbeddingConfig{ get; set; }
+
+        /// <summary>
+        /// <p>CMR关联的负载均衡实例id</p>
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// <p>视频模型设置</p>
+        /// </summary>
+        [JsonProperty("VideoConfig")]
+        public VideoConfig VideoConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Rerank调度配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RerankConfig")]
+        public RerankConfig RerankConfig{ get; set; }
+
+        /// <summary>
+        /// <p>决策模型设置</p>
+        /// </summary>
+        [JsonProperty("DecisionsConfig")]
+        public DecisionsConfig DecisionsConfig{ get; set; }
 
 
         /// <summary>
@@ -216,6 +242,10 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
             this.SetParamObj(map, prefix + "BillingConfig.", this.BillingConfig);
             this.SetParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
+            this.SetParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
+            this.SetParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
         }
     }
 }

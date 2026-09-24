@@ -55,6 +55,18 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? HasServicesLog{ get; set; }
 
         /// <summary>
+        /// <p>外网消费开关。</p>
+        /// </summary>
+        [JsonProperty("EnableInternetConsume")]
+        public bool? EnableInternetConsume{ get; set; }
+
+        /// <summary>
+        /// <p>内网消费开关。</p>
+        /// </summary>
+        [JsonProperty("EnableIntranetConsume")]
+        public bool? EnableIntranetConsume{ get; set; }
+
+        /// <summary>
         /// <p>消费范围类型，0:最新，1:历史+最新</p>
         /// </summary>
         [JsonProperty("ScopeType")]
@@ -77,6 +89,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
             this.SetParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
             this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "EnableInternetConsume", this.EnableInternetConsume);
+            this.SetParamSimple(map, prefix + "EnableIntranetConsume", this.EnableIntranetConsume);
             this.SetParamSimple(map, prefix + "ScopeType", this.ScopeType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

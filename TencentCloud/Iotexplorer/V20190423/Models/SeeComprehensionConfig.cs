@@ -90,6 +90,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("InputRotateDegree")]
         public long? InputRotateDegree{ get; set; }
 
+        /// <summary>
+        /// <p>开启扩展字段输出</p><p>枚举值：</p><ul><li>true： 开启</li><li>false： 关闭</li></ul><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("EnableExtendedOutput")]
+        public bool? EnableExtendedOutput{ get; set; }
+
+        /// <summary>
+        /// <p>自定义扩展输出的提示词（目前仅支持覆盖 custom）</p>
+        /// </summary>
+        [JsonProperty("ExtendedOutputPrompts")]
+        public SeeExtendedOutputPrompt[] ExtendedOutputPrompts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "SummaryPrompt", this.SummaryPrompt);
             this.SetParamSimple(map, prefix + "EnableFaceDetection", this.EnableFaceDetection);
             this.SetParamSimple(map, prefix + "InputRotateDegree", this.InputRotateDegree);
+            this.SetParamSimple(map, prefix + "EnableExtendedOutput", this.EnableExtendedOutput);
+            this.SetParamArrayObj(map, prefix + "ExtendedOutputPrompts.", this.ExtendedOutputPrompts);
         }
     }
 }

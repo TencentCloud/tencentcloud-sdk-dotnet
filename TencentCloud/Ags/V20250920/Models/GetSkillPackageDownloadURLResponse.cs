@@ -25,6 +25,30 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
+        /// <p>COS GET 预签名 URL；带 response-content-disposition；默认 TTL 5 分钟；bearer 凭证禁止持久化。</p>
+        /// </summary>
+        [JsonProperty("DownloadURL")]
+        public string DownloadURL{ get; set; }
+
+        /// <summary>
+        /// <p>URL 过期时间。</p>
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>服务端记录的 SHA-256；下载后应本地自检。</p>
+        /// </summary>
+        [JsonProperty("SHA256")]
+        public string SHA256{ get; set; }
+
+        /// <summary>
+        /// <p>解析出的 Version ID（Stable Version）。</p>
+        /// </summary>
+        [JsonProperty("ResolvedVersionId")]
+        public string ResolvedVersionId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Ags.V20250920.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DownloadURL", this.DownloadURL);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "SHA256", this.SHA256);
+            this.SetParamSimple(map, prefix + "ResolvedVersionId", this.ResolvedVersionId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
