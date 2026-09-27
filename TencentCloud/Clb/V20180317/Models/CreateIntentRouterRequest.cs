@@ -48,6 +48,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("RouterDescribe")]
         public string RouterDescribe{ get; set; }
 
+        /// <summary>
+        /// <p>意图路由使用决策模型配置</p>
+        /// </summary>
+        [JsonProperty("DecisionModelConfig")]
+        public IntentRouterDecisionModelConfig DecisionModelConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RouteName", this.RouteName);
             this.SetParamArrayObj(map, prefix + "Tiers.", this.Tiers);
             this.SetParamSimple(map, prefix + "RouterDescribe", this.RouterDescribe);
+            this.SetParamObj(map, prefix + "DecisionModelConfig.", this.DecisionModelConfig);
         }
     }
 }

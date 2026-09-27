@@ -61,6 +61,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public IntentRouterTierItem[] Tiers{ get; set; }
 
         /// <summary>
+        /// <p>意图路由使用决策模型配置</p>
+        /// </summary>
+        [JsonProperty("DecisionModelConfig")]
+        public IntentRouterDecisionModelConfig DecisionModelConfig{ get; set; }
+
+        /// <summary>
         /// <p>更新时间（ISO 8601格式）。</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RouterDescribe", this.RouterDescribe);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Tiers.", this.Tiers);
+            this.SetParamObj(map, prefix + "DecisionModelConfig.", this.DecisionModelConfig);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         }
     }

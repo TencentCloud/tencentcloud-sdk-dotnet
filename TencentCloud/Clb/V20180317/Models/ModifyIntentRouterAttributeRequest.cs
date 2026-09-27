@@ -49,10 +49,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string RouterDescribe{ get; set; }
 
         /// <summary>
-        /// <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
+        /// <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
         /// </summary>
         [JsonProperty("Tiers")]
         public TierItem[] Tiers{ get; set; }
+
+        /// <summary>
+        /// <p>意图路由使用决策模型配置</p>
+        /// </summary>
+        [JsonProperty("DecisionModelConfig")]
+        public IntentRouterDecisionModelConfig DecisionModelConfig{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RouteName", this.RouteName);
             this.SetParamSimple(map, prefix + "RouterDescribe", this.RouterDescribe);
             this.SetParamArrayObj(map, prefix + "Tiers.", this.Tiers);
+            this.SetParamObj(map, prefix + "DecisionModelConfig.", this.DecisionModelConfig);
         }
     }
 }
