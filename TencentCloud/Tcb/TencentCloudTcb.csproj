@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1511</VersionPrefix>
+    <VersionPrefix>3.0.1514</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,15 +66,23 @@
     <Compile Include="V20180608\Models\BindClsResponse.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceRequest.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceResponse.cs" />
+    <Compile Include="V20180608\Models\BuildArtifactInfo.cs" />
     <Compile Include="V20180608\Models\BuildCommands.cs" />
+    <Compile Include="V20180608\Models\BuildContext.cs" />
     <Compile Include="V20180608\Models\BuildSecret.cs" />
     <Compile Include="V20180608\Models\BuildSource.cs" />
     <Compile Include="V20180608\Models\BuildStep.cs" />
     <Compile Include="V20180608\Models\BuildStepStatus.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
+    <Compile Include="V20180608\Models\CloudAppFilter.cs" />
+    <Compile Include="V20180608\Models\CloudAppLinkService.cs" />
+    <Compile Include="V20180608\Models\CloudAppResourceItem.cs" />
+    <Compile Include="V20180608\Models\CloudAppRoute.cs" />
     <Compile Include="V20180608\Models\CloudAppServiceItem.cs" />
+    <Compile Include="V20180608\Models\CloudAppTrigger.cs" />
     <Compile Include="V20180608\Models\CloudAppVersionItem.cs" />
+    <Compile Include="V20180608\Models\CloudAppWebHook.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunBuildLog.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
     <Compile Include="V20180608\Models\ClusterDetail.cs" />
@@ -107,6 +115,8 @@
     <Compile Include="V20180608\Models\CreateMySQLResult.cs" />
     <Compile Include="V20180608\Models\CreatePlatformEnvRequest.cs" />
     <Compile Include="V20180608\Models\CreatePlatformEnvResponse.cs" />
+    <Compile Include="V20180608\Models\CreatePlatformHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\CreatePlatformHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\CreateStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\CreateStaticStoreResponse.cs" />
     <Compile Include="V20180608\Models\CreateTableRequest.cs" />
@@ -132,6 +142,8 @@
     <Compile Include="V20180608\Models\DeleteFunctionResponse.cs" />
     <Compile Include="V20180608\Models\DeleteHTTPServiceRouteRequest.cs" />
     <Compile Include="V20180608\Models\DeleteHTTPServiceRouteResponse.cs" />
+    <Compile Include="V20180608\Models\DeletePlatformHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\DeletePlatformHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\DeleteProviderRequest.cs" />
     <Compile Include="V20180608\Models\DeleteProviderResponse.cs" />
     <Compile Include="V20180608\Models\DeleteTableRequest.cs" />
@@ -212,6 +224,8 @@
     <Compile Include="V20180608\Models\DescribePlatformCreditsUsageResponse.cs" />
     <Compile Include="V20180608\Models\DescribePlatformEnvUsageRequest.cs" />
     <Compile Include="V20180608\Models\DescribePlatformEnvUsageResponse.cs" />
+    <Compile Include="V20180608\Models\DescribePlatformHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\DescribePlatformHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\DescribePlatformsRequest.cs" />
     <Compile Include="V20180608\Models\DescribePlatformsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeQuotaDataRequest.cs" />
@@ -335,6 +349,8 @@
     <Compile Include="V20180608\Models\ModifyPGInstanceSpecResponse.cs" />
     <Compile Include="V20180608\Models\ModifyPlatformEnvRequest.cs" />
     <Compile Include="V20180608\Models\ModifyPlatformEnvResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyPlatformHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyPlatformHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\ModifyProviderRequest.cs" />
     <Compile Include="V20180608\Models\ModifyProviderResponse.cs" />
     <Compile Include="V20180608\Models\ModifyResourcePermissionRequest.cs" />
@@ -425,6 +441,8 @@
     <Compile Include="V20180608\Models\VerifyHTTPServiceRouteCheckItem.cs" />
     <Compile Include="V20180608\Models\VerifyHTTPServiceRouteRequest.cs" />
     <Compile Include="V20180608\Models\VerifyHTTPServiceRouteResponse.cs" />
+    <Compile Include="V20180608\Models\VerifyPlatformHTTPServiceRouteRequest.cs" />
+    <Compile Include="V20180608\Models\VerifyPlatformHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\WxGatewayCustomConfig.cs" />
   </ItemGroup>
 </Project>

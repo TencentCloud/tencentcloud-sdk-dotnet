@@ -73,6 +73,36 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Steps")]
         public BuildStepStatus[] Steps{ get; set; }
 
+        /// <summary>
+        /// <p>服务版本部署快照</p>
+        /// </summary>
+        [JsonProperty("Snapshot")]
+        public string Snapshot{ get; set; }
+
+        /// <summary>
+        /// <p>服务版本域名</p>
+        /// </summary>
+        [JsonProperty("VersionDomain")]
+        public string VersionDomain{ get; set; }
+
+        /// <summary>
+        /// <p>服务版本流量</p>
+        /// </summary>
+        [JsonProperty("TrafficPercent")]
+        public ulong? TrafficPercent{ get; set; }
+
+        /// <summary>
+        /// <p>服务资源</p>
+        /// </summary>
+        [JsonProperty("Resources")]
+        public CloudAppResourceItem[] Resources{ get; set; }
+
+        /// <summary>
+        /// <p>服务产物列表</p>
+        /// </summary>
+        [JsonProperty("Artifacts")]
+        public BuildArtifactInfo[] Artifacts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +117,11 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamObj(map, prefix + "StaticConfig.", this.StaticConfig);
             this.SetParamSimple(map, prefix + "BuildTime", this.BuildTime);
             this.SetParamArrayObj(map, prefix + "Steps.", this.Steps);
+            this.SetParamSimple(map, prefix + "Snapshot", this.Snapshot);
+            this.SetParamSimple(map, prefix + "VersionDomain", this.VersionDomain);
+            this.SetParamSimple(map, prefix + "TrafficPercent", this.TrafficPercent);
+            this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamArrayObj(map, prefix + "Artifacts.", this.Artifacts);
         }
     }
 }

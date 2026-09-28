@@ -72,6 +72,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
+        /// <summary>
+        /// <p>项目ID</p>
+        /// </summary>
+        [JsonProperty("ProjectIds")]
+        public ulong?[] ProjectIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "TagIds.", this.TagIds);
             this.SetParamArraySimple(map, prefix + "CloudTags.", this.CloudTags);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         }
     }
 }

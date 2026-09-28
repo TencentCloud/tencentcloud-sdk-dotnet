@@ -174,6 +174,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("LogStoreID")]
         public string LogStoreID{ get; set; }
 
+        /// <summary>
+        /// <p>airflow目录源</p>
+        /// </summary>
+        [JsonProperty("AirflowDagSource")]
+        public AirflowDagSourceInput AirflowDagSource{ get; set; }
+
+        /// <summary>
+        /// <p>airflow源凭证</p>
+        /// </summary>
+        [JsonProperty("AirflowGitCredential")]
+        public AirflowGitCredentialInput AirflowGitCredential{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +217,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TerminateProtection", this.TerminateProtection);
             this.SetParamSimple(map, prefix + "EnableEmrProxy", this.EnableEmrProxy);
             this.SetParamSimple(map, prefix + "LogStoreID", this.LogStoreID);
+            this.SetParamObj(map, prefix + "AirflowDagSource.", this.AirflowDagSource);
+            this.SetParamObj(map, prefix + "AirflowGitCredential.", this.AirflowGitCredential);
         }
     }
 }

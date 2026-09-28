@@ -54,6 +54,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
+        /// <summary>
+        /// <p>服务过滤</p>
+        /// </summary>
+        [JsonProperty("Filter")]
+        public CloudAppFilter Filter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamObj(map, prefix + "Filter.", this.Filter);
         }
     }
 }

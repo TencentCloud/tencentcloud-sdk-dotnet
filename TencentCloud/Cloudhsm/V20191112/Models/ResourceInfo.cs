@@ -180,6 +180,24 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("DeployEnv")]
         public string DeployEnv{ get; set; }
 
+        /// <summary>
+        /// <p>vsm版本号</p>
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// <p>集群id</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>集群角色，0-未加入集群 1-主 2-从</p>
+        /// </summary>
+        [JsonProperty("ClusterRole")]
+        public long? ClusterRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +230,9 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "PqcStatus", this.PqcStatus);
             this.SetParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
             this.SetParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterRole", this.ClusterRole);
         }
     }
 }

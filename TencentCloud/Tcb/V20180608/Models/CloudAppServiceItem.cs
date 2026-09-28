@@ -25,58 +25,70 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 服务名
+        /// <p>服务名</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 框架名
+        /// <p>框架名</p>
         /// </summary>
         [JsonProperty("Framework")]
         public string Framework{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 应用路径
+        /// <p>应用路径</p>
         /// </summary>
         [JsonProperty("AppPath")]
         public string AppPath{ get; set; }
 
         /// <summary>
-        /// 服务创建时间
+        /// <p>服务创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 最新版本名
+        /// <p>最新版本名</p>
         /// </summary>
         [JsonProperty("LatestVersionName")]
         public string LatestVersionName{ get; set; }
 
         /// <summary>
-        /// 最新版本状态
+        /// <p>最新版本状态</p>
         /// </summary>
         [JsonProperty("LatestStatus")]
         public string LatestStatus{ get; set; }
 
         /// <summary>
-        /// 最新版本构建时间
+        /// <p>最新版本构建时间</p>
         /// </summary>
         [JsonProperty("LatestBuildTime")]
         public string LatestBuildTime{ get; set; }
 
         /// <summary>
-        /// 部署类型
+        /// <p>部署类型</p>
         /// </summary>
         [JsonProperty("DeployType")]
         public string DeployType{ get; set; }
+
+        /// <summary>
+        /// <p>构建配置</p>
+        /// </summary>
+        [JsonProperty("BuildConfig")]
+        public string BuildConfig{ get; set; }
+
+        /// <summary>
+        /// <p>当前流量版本</p>
+        /// </summary>
+        [JsonProperty("CurrentVersion")]
+        public string CurrentVersion{ get; set; }
 
 
         /// <summary>
@@ -93,6 +105,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "LatestStatus", this.LatestStatus);
             this.SetParamSimple(map, prefix + "LatestBuildTime", this.LatestBuildTime);
             this.SetParamSimple(map, prefix + "DeployType", this.DeployType);
+            this.SetParamSimple(map, prefix + "BuildConfig", this.BuildConfig);
+            this.SetParamSimple(map, prefix + "CurrentVersion", this.CurrentVersion);
         }
     }
 }

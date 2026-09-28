@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1512</VersionPrefix>
+    <VersionPrefix>3.0.1514</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -102,6 +102,11 @@
     <Compile Include="V20210527\Models\CreateSqlFilterResponse.cs" />
     <Compile Include="V20210527\Models\CreateUserAutonomyProfileRequest.cs" />
     <Compile Include="V20210527\Models\CreateUserAutonomyProfileResponse.cs" />
+    <Compile Include="V20210527\Models\DeadLockLogItem.cs" />
+    <Compile Include="V20210527\Models\DeadlockFrame.cs" />
+    <Compile Include="V20210527\Models\DeadlockResource.cs" />
+    <Compile Include="V20210527\Models\DeadlockSession.cs" />
+    <Compile Include="V20210527\Models\DeadlockTransaction.cs" />
     <Compile Include="V20210527\Models\DeleteAuditLogFileRequest.cs" />
     <Compile Include="V20210527\Models\DeleteAuditLogFileResponse.cs" />
     <Compile Include="V20210527\Models\DeleteDBDiagReportTasksRequest.cs" />
@@ -148,6 +153,8 @@
     <Compile Include="V20210527\Models\DescribeDBSpaceStatusResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDatabaseAutonomyStatusRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDatabaseAutonomyStatusResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDeadLockLogsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDeadLockLogsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDiagDBInstancesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDiagDBInstancesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeHealthScoreRequest.cs" />
@@ -269,6 +276,7 @@
     <Compile Include="V20210527\Models\MysqlSpaceObjectItem.cs" />
     <Compile Include="V20210527\Models\OpenAuditServiceRequest.cs" />
     <Compile Include="V20210527\Models\OpenAuditServiceResponse.cs" />
+    <Compile Include="V20210527\Models\OwnerItem.cs" />
     <Compile Include="V20210527\Models\PostgresSpaceObjectItem.cs" />
     <Compile Include="V20210527\Models\Process.cs" />
     <Compile Include="V20210527\Models\ProcessStatistic.cs" />
@@ -320,6 +328,7 @@
     <Compile Include="V20210527\Models\UserProfile.cs" />
     <Compile Include="V20210527\Models\VerifyUserAccountRequest.cs" />
     <Compile Include="V20210527\Models\VerifyUserAccountResponse.cs" />
+    <Compile Include="V20210527\Models\WaiterItem.cs" />
     <Compile Include="V20191016\DbbrainClient.cs" />
     <Compile Include="V20191016\Models\AddUserContactRequest.cs" />
     <Compile Include="V20191016\Models\AddUserContactResponse.cs" />

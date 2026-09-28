@@ -25,10 +25,10 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 盘类型
+        /// 个数
         /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
+        [JsonProperty("DiskCount")]
+        public long? DiskCount{ get; set; }
 
         /// <summary>
         /// 大小
@@ -37,10 +37,10 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 个数
+        /// 盘类型
         /// </summary>
-        [JsonProperty("DiskCount")]
-        public long? DiskCount{ get; set; }
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
-            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

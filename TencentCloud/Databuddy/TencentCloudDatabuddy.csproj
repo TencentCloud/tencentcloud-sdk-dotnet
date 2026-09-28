@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1512</VersionPrefix>
+    <VersionPrefix>3.0.1514</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,25 +67,43 @@
     <Compile Include="V20260715\Models\CreateConsoleGroupRsp.cs" />
     <Compile Include="V20260715\Models\CreateFileRequest.cs" />
     <Compile Include="V20260715\Models\CreateFileResponse.cs" />
+    <Compile Include="V20260715\Models\CreateFolderRequest.cs" />
+    <Compile Include="V20260715\Models\CreateFolderResponse.cs" />
+    <Compile Include="V20260715\Models\CreateFolderRsp.cs" />
     <Compile Include="V20260715\Models\CreateWorkflowRequest.cs" />
     <Compile Include="V20260715\Models\CreateWorkflowResponse.cs" />
     <Compile Include="V20260715\Models\CreateWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceRsp.cs" />
     <Compile Include="V20260715\Models\DeleteConsoleGroupsRequest.cs" />
     <Compile Include="V20260715\Models\DeleteConsoleGroupsResponse.cs" />
     <Compile Include="V20260715\Models\DeleteConsoleGroupsRsp.cs" />
     <Compile Include="V20260715\Models\DeleteFileRequest.cs" />
     <Compile Include="V20260715\Models\DeleteFileResponse.cs" />
     <Compile Include="V20260715\Models\DeleteFileResult.cs" />
+    <Compile Include="V20260715\Models\DeleteFolderRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteFolderResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteFolderRsp.cs" />
     <Compile Include="V20260715\Models\DeleteWorkflowRequest.cs" />
     <Compile Include="V20260715\Models\DeleteWorkflowResponse.cs" />
     <Compile Include="V20260715\Models\DeleteWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceRsp.cs" />
     <Compile Include="V20260715\Models\DependOnBrief.cs" />
     <Compile Include="V20260715\Models\FileConfig.cs" />
     <Compile Include="V20260715\Models\FileInfo.cs" />
+    <Compile Include="V20260715\Models\FileMeta.cs" />
+    <Compile Include="V20260715\Models\FileNode.cs" />
     <Compile Include="V20260715\Models\FileOutputConf.cs" />
     <Compile Include="V20260715\Models\FileStorage.cs" />
+    <Compile Include="V20260715\Models\FolderLocator.cs" />
     <Compile Include="V20260715\Models\GetFileRequest.cs" />
     <Compile Include="V20260715\Models\GetFileResponse.cs" />
+    <Compile Include="V20260715\Models\GetFolderRequest.cs" />
+    <Compile Include="V20260715\Models\GetFolderResponse.cs" />
+    <Compile Include="V20260715\Models\GetFolderRsp.cs" />
     <Compile Include="V20260715\Models\GetWorkflowRequest.cs" />
     <Compile Include="V20260715\Models\GetWorkflowResponse.cs" />
     <Compile Include="V20260715\Models\GetWorkflowRsp.cs" />
@@ -95,6 +113,10 @@
     <Compile Include="V20260715\Models\GetWorkflowTaskRunRequest.cs" />
     <Compile Include="V20260715\Models\GetWorkflowTaskRunResponse.cs" />
     <Compile Include="V20260715\Models\GetWorkflowTaskRunRsp.cs" />
+    <Compile Include="V20260715\Models\GetWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkspaceRsp.cs" />
+    <Compile Include="V20260715\Models\GitRepoConfig.cs" />
     <Compile Include="V20260715\Models\InnerWorkflowTaskBrief.cs" />
     <Compile Include="V20260715\Models\InnerWorkflowTaskRun.cs" />
     <Compile Include="V20260715\Models\InnerWorkflowTaskRunIteration.cs" />
@@ -115,6 +137,9 @@
     <Compile Include="V20260715\Models\ListConsoleUsersRequest.cs" />
     <Compile Include="V20260715\Models\ListConsoleUsersResponse.cs" />
     <Compile Include="V20260715\Models\ListConsoleUsersRsp.cs" />
+    <Compile Include="V20260715\Models\ListFilesRequest.cs" />
+    <Compile Include="V20260715\Models\ListFilesResponse.cs" />
+    <Compile Include="V20260715\Models\ListFilesRsp.cs" />
     <Compile Include="V20260715\Models\ListWorkflowRunsRequest.cs" />
     <Compile Include="V20260715\Models\ListWorkflowRunsResponse.cs" />
     <Compile Include="V20260715\Models\ListWorkflowRunsRsp.cs" />
@@ -142,6 +167,8 @@
     <Compile Include="V20260715\Models\RunWorkflowResponse.cs" />
     <Compile Include="V20260715\Models\ScheduleBizEnumBrief.cs" />
     <Compile Include="V20260715\Models\ScheduledTimeConfig.cs" />
+    <Compile Include="V20260715\Models\SparseCheckoutConfig.cs" />
+    <Compile Include="V20260715\Models\StandardUserInfo.cs" />
     <Compile Include="V20260715\Models\TaskRetryStrategy.cs" />
     <Compile Include="V20260715\Models\TaskRunConditionRule.cs" />
     <Compile Include="V20260715\Models\TaskSchedulingParameterBrief.cs" />
@@ -159,9 +186,16 @@
     <Compile Include="V20260715\Models\UpdateConsoleUsersRsp.cs" />
     <Compile Include="V20260715\Models\UpdateFileRequest.cs" />
     <Compile Include="V20260715\Models\UpdateFileResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateFolderRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateFolderResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateFolderRsp.cs" />
     <Compile Include="V20260715\Models\UpdateWorkflowRequest.cs" />
     <Compile Include="V20260715\Models\UpdateWorkflowResponse.cs" />
     <Compile Include="V20260715\Models\UpdateWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceRsp.cs" />
+    <Compile Include="V20260715\Models\UserInfo.cs" />
     <Compile Include="V20260715\Models\Workflow.cs" />
     <Compile Include="V20260715\Models\WorkflowAdvanceConfig.cs" />
     <Compile Include="V20260715\Models\WorkflowBaseInfo.cs" />
@@ -174,5 +208,6 @@
     <Compile Include="V20260715\Models\WorkflowTaskRun.cs" />
     <Compile Include="V20260715\Models\WorkflowTriggerAdvancedConfiguration.cs" />
     <Compile Include="V20260715\Models\WorkflowTriggerConfiguration.cs" />
+    <Compile Include="V20260715\Models\WorkspaceInfo.cs" />
   </ItemGroup>
 </Project>

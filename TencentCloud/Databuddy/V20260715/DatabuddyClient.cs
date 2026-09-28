@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1514";
 
         /// <summary>
         /// Client constructor.
@@ -131,6 +131,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 创建文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateFolderRequest"/></param>
+        /// <returns><see cref="CreateFolderResponse"/></returns>
+        public Task<CreateFolderResponse> CreateFolder(CreateFolderRequest req)
+        {
+            return InternalRequestAsync<CreateFolderResponse>(req, "CreateFolder");
+        }
+
+        /// <summary>
+        /// 创建文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateFolderRequest"/></param>
+        /// <returns><see cref="CreateFolderResponse"/></returns>
+        public CreateFolderResponse CreateFolderSync(CreateFolderRequest req)
+        {
+            return InternalRequestAsync<CreateFolderResponse>(req, "CreateFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建工作流
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRequest"/></param>
@@ -148,6 +169,27 @@ namespace TencentCloud.Databuddy.V20260715
         public CreateWorkflowResponse CreateWorkflowSync(CreateWorkflowRequest req)
         {
             return InternalRequestAsync<CreateWorkflowResponse>(req, "CreateWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建工作空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspaceRequest"/></param>
+        /// <returns><see cref="CreateWorkspaceResponse"/></returns>
+        public Task<CreateWorkspaceResponse> CreateWorkspace(CreateWorkspaceRequest req)
+        {
+            return InternalRequestAsync<CreateWorkspaceResponse>(req, "CreateWorkspace");
+        }
+
+        /// <summary>
+        /// 创建工作空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspaceRequest"/></param>
+        /// <returns><see cref="CreateWorkspaceResponse"/></returns>
+        public CreateWorkspaceResponse CreateWorkspaceSync(CreateWorkspaceRequest req)
+        {
+            return InternalRequestAsync<CreateWorkspaceResponse>(req, "CreateWorkspace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -228,6 +270,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 删除文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFolderRequest"/></param>
+        /// <returns><see cref="DeleteFolderResponse"/></returns>
+        public Task<DeleteFolderResponse> DeleteFolder(DeleteFolderRequest req)
+        {
+            return InternalRequestAsync<DeleteFolderResponse>(req, "DeleteFolder");
+        }
+
+        /// <summary>
+        /// 删除文件夹
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFolderRequest"/></param>
+        /// <returns><see cref="DeleteFolderResponse"/></returns>
+        public DeleteFolderResponse DeleteFolderSync(DeleteFolderRequest req)
+        {
+            return InternalRequestAsync<DeleteFolderResponse>(req, "DeleteFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除工作流
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowRequest"/></param>
@@ -245,6 +308,27 @@ namespace TencentCloud.Databuddy.V20260715
         public DeleteWorkflowResponse DeleteWorkflowSync(DeleteWorkflowRequest req)
         {
             return InternalRequestAsync<DeleteWorkflowResponse>(req, "DeleteWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除工作空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkspaceRequest"/></param>
+        /// <returns><see cref="DeleteWorkspaceResponse"/></returns>
+        public Task<DeleteWorkspaceResponse> DeleteWorkspace(DeleteWorkspaceRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkspaceResponse>(req, "DeleteWorkspace");
+        }
+
+        /// <summary>
+        /// 删除工作空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkspaceRequest"/></param>
+        /// <returns><see cref="DeleteWorkspaceResponse"/></returns>
+        public DeleteWorkspaceResponse DeleteWorkspaceSync(DeleteWorkspaceRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkspaceResponse>(req, "DeleteWorkspace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -300,6 +384,27 @@ namespace TencentCloud.Databuddy.V20260715
         public GetFileResponse GetFileSync(GetFileRequest req)
         {
             return InternalRequestAsync<GetFileResponse>(req, "GetFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetFolderRequest"/></param>
+        /// <returns><see cref="GetFolderResponse"/></returns>
+        public Task<GetFolderResponse> GetFolder(GetFolderRequest req)
+        {
+            return InternalRequestAsync<GetFolderResponse>(req, "GetFolder");
+        }
+
+        /// <summary>
+        /// 获取文件夹详情
+        /// </summary>
+        /// <param name="req"><see cref="GetFolderRequest"/></param>
+        /// <returns><see cref="GetFolderResponse"/></returns>
+        public GetFolderResponse GetFolderSync(GetFolderRequest req)
+        {
+            return InternalRequestAsync<GetFolderResponse>(req, "GetFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -363,6 +468,27 @@ namespace TencentCloud.Databuddy.V20260715
         public GetWorkflowTaskRunResponse GetWorkflowTaskRunSync(GetWorkflowTaskRunRequest req)
         {
             return InternalRequestAsync<GetWorkflowTaskRunResponse>(req, "GetWorkflowTaskRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作空间详情
+        /// </summary>
+        /// <param name="req"><see cref="GetWorkspaceRequest"/></param>
+        /// <returns><see cref="GetWorkspaceResponse"/></returns>
+        public Task<GetWorkspaceResponse> GetWorkspace(GetWorkspaceRequest req)
+        {
+            return InternalRequestAsync<GetWorkspaceResponse>(req, "GetWorkspace");
+        }
+
+        /// <summary>
+        /// 查询工作空间详情
+        /// </summary>
+        /// <param name="req"><see cref="GetWorkspaceRequest"/></param>
+        /// <returns><see cref="GetWorkspaceResponse"/></returns>
+        public GetWorkspaceResponse GetWorkspaceSync(GetWorkspaceRequest req)
+        {
+            return InternalRequestAsync<GetWorkspaceResponse>(req, "GetWorkspace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -468,6 +594,27 @@ namespace TencentCloud.Databuddy.V20260715
         public ListConsoleUsersResponse ListConsoleUsersSync(ListConsoleUsersRequest req)
         {
             return InternalRequestAsync<ListConsoleUsersResponse>(req, "ListConsoleUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取文件夹和文件列表
+        /// </summary>
+        /// <param name="req"><see cref="ListFilesRequest"/></param>
+        /// <returns><see cref="ListFilesResponse"/></returns>
+        public Task<ListFilesResponse> ListFiles(ListFilesRequest req)
+        {
+            return InternalRequestAsync<ListFilesResponse>(req, "ListFiles");
+        }
+
+        /// <summary>
+        /// 获取文件夹和文件列表
+        /// </summary>
+        /// <param name="req"><see cref="ListFilesRequest"/></param>
+        /// <returns><see cref="ListFilesResponse"/></returns>
+        public ListFilesResponse ListFilesSync(ListFilesRequest req)
+        {
+            return InternalRequestAsync<ListFilesResponse>(req, "ListFiles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -722,6 +869,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 更新文件夹（支持重命名+移动）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFolderRequest"/></param>
+        /// <returns><see cref="UpdateFolderResponse"/></returns>
+        public Task<UpdateFolderResponse> UpdateFolder(UpdateFolderRequest req)
+        {
+            return InternalRequestAsync<UpdateFolderResponse>(req, "UpdateFolder");
+        }
+
+        /// <summary>
+        /// 更新文件夹（支持重命名+移动）
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFolderRequest"/></param>
+        /// <returns><see cref="UpdateFolderResponse"/></returns>
+        public UpdateFolderResponse UpdateFolderSync(UpdateFolderRequest req)
+        {
+            return InternalRequestAsync<UpdateFolderResponse>(req, "UpdateFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新工作流
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowRequest"/></param>
@@ -739,6 +907,27 @@ namespace TencentCloud.Databuddy.V20260715
         public UpdateWorkflowResponse UpdateWorkflowSync(UpdateWorkflowRequest req)
         {
             return InternalRequestAsync<UpdateWorkflowResponse>(req, "UpdateWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改工作空间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceResponse"/></returns>
+        public Task<UpdateWorkspaceResponse> UpdateWorkspace(UpdateWorkspaceRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceResponse>(req, "UpdateWorkspace");
+        }
+
+        /// <summary>
+        /// 修改工作空间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceResponse"/></returns>
+        public UpdateWorkspaceResponse UpdateWorkspaceSync(UpdateWorkspaceRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceResponse>(req, "UpdateWorkspace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

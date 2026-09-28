@@ -134,6 +134,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? CardCount{ get; set; }
 
         /// <summary>
+        /// <p>泰文姓名</p>
+        /// </summary>
+        [JsonProperty("ThaiFirstName")]
+        public string ThaiFirstName{ get; set; }
+
+        /// <summary>
+        /// <p>泰文姓名</p>
+        /// </summary>
+        [JsonProperty("ThaiLastName")]
+        public string ThaiLastName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -163,6 +175,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "CardCount", this.CardCount);
+            this.SetParamSimple(map, prefix + "ThaiFirstName", this.ThaiFirstName);
+            this.SetParamSimple(map, prefix + "ThaiLastName", this.ThaiLastName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

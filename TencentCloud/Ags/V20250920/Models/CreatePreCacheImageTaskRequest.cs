@@ -25,7 +25,7 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// <p>镜像地址</p>
+        /// <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }

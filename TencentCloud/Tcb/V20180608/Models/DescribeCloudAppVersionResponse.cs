@@ -67,6 +67,36 @@ namespace TencentCloud.Tcb.V20180608.Models
         public BuildStepStatus[] Steps{ get; set; }
 
         /// <summary>
+        /// <p>服务版本快照</p>
+        /// </summary>
+        [JsonProperty("Snapshot")]
+        public string Snapshot{ get; set; }
+
+        /// <summary>
+        /// <p>服务版本流量比例</p>
+        /// </summary>
+        [JsonProperty("TrafficPercent")]
+        public ulong? TrafficPercent{ get; set; }
+
+        /// <summary>
+        /// <p>服务版本域名</p>
+        /// </summary>
+        [JsonProperty("VersionDomain")]
+        public string VersionDomain{ get; set; }
+
+        /// <summary>
+        /// <p>服务管理资源列表</p>
+        /// </summary>
+        [JsonProperty("Resources")]
+        public CloudAppResourceItem[] Resources{ get; set; }
+
+        /// <summary>
+        /// <p>[]ArtifactInfo 的 JSON 序列化</p>
+        /// </summary>
+        [JsonProperty("Artifacts")]
+        public BuildArtifactInfo[] Artifacts{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +115,11 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamObj(map, prefix + "StaticConfig.", this.StaticConfig);
             this.SetParamSimple(map, prefix + "BuildTime", this.BuildTime);
             this.SetParamArrayObj(map, prefix + "Steps.", this.Steps);
+            this.SetParamSimple(map, prefix + "Snapshot", this.Snapshot);
+            this.SetParamSimple(map, prefix + "TrafficPercent", this.TrafficPercent);
+            this.SetParamSimple(map, prefix + "VersionDomain", this.VersionDomain);
+            this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamArrayObj(map, prefix + "Artifacts.", this.Artifacts);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

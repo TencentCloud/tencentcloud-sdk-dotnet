@@ -25,10 +25,22 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// VSM监控信息
+        /// <p>VSM监控信息</p>
         /// </summary>
         [JsonProperty("MonitorInfo")]
         public string[] MonitorInfo{ get; set; }
+
+        /// <summary>
+        /// <p>vsm摘要列表</p>
+        /// </summary>
+        [JsonProperty("DigestList")]
+        public VsmDigestItem[] DigestList{ get; set; }
+
+        /// <summary>
+        /// <p>初始化状态</p>
+        /// </summary>
+        [JsonProperty("InitStatus")]
+        public long? InitStatus{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +55,8 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "MonitorInfo.", this.MonitorInfo);
+            this.SetParamArrayObj(map, prefix + "DigestList.", this.DigestList);
+            this.SetParamSimple(map, prefix + "InitStatus", this.InitStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

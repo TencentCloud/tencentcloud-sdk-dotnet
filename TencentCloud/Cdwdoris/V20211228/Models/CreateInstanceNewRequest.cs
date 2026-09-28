@@ -25,129 +25,132 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// <p>可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// FE规格
+        /// <p>FE规格</p>
         /// </summary>
         [JsonProperty("FeSpec")]
         public CreateInstanceSpec FeSpec{ get; set; }
 
         /// <summary>
-        /// BE规格
+        /// <p>BE规格</p>
         /// </summary>
         [JsonProperty("BeSpec")]
         public CreateInstanceSpec BeSpec{ get; set; }
 
         /// <summary>
-        /// 是否高可用
+        /// <p>是否高可用</p>
         /// </summary>
         [JsonProperty("HaFlag")]
         public bool? HaFlag{ get; set; }
 
         /// <summary>
-        /// 用户VPCID
+        /// <p>用户VPCID</p>
         /// </summary>
         [JsonProperty("UserVPCId")]
         public string UserVPCId{ get; set; }
 
         /// <summary>
-        /// 用户子网ID
+        /// <p>用户子网ID</p>
         /// </summary>
         [JsonProperty("UserSubnetId")]
         public string UserSubnetId{ get; set; }
 
         /// <summary>
-        /// 产品版本号
+        /// <p>产品版本号</p>
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
 
         /// <summary>
-        /// 付费类型
+        /// <p>付费类型</p>
         /// </summary>
         [JsonProperty("ChargeProperties")]
         public ChargeProperties ChargeProperties{ get; set; }
 
         /// <summary>
-        /// 实例名字
+        /// <p>实例名字</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 数据库密码
+        /// <p>数据库密码</p>
         /// </summary>
         [JsonProperty("DorisUserPwd")]
         public string DorisUserPwd{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 高可用类型：
-        /// 0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-        /// 1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-        /// 2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
+        /// <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
         /// </summary>
         [JsonProperty("HaType")]
         public long? HaType{ get; set; }
 
         /// <summary>
-        /// 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+        /// <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
         /// </summary>
         [JsonProperty("CaseSensitive")]
         public long? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// 是否开启多可用区
+        /// <p>是否开启多可用区</p>
         /// </summary>
         [JsonProperty("EnableMultiZones")]
         public bool? EnableMultiZones{ get; set; }
 
         /// <summary>
-        /// 开启多可用区后，用户的所有可用区和子网信息
+        /// <p>开启多可用区后，用户的所有可用区和子网信息</p>
         /// </summary>
         [JsonProperty("UserMultiZoneInfos")]
         [System.Obsolete]
         public NetworkInfo UserMultiZoneInfos{ get; set; }
 
         /// <summary>
-        /// 开启多可用区后，用户的所有可用区和子网信息
+        /// <p>开启多可用区后，用户的所有可用区和子网信息</p>
         /// </summary>
         [JsonProperty("UserMultiZoneInfoArr")]
         public NetworkInfo[] UserMultiZoneInfoArr{ get; set; }
 
         /// <summary>
-        /// 是否存算分离
+        /// <p>是否存算分离</p>
         /// </summary>
         [JsonProperty("IsSSC")]
         public bool? IsSSC{ get; set; }
 
         /// <summary>
-        /// CU数
+        /// <p>CU数</p>
         /// </summary>
         [JsonProperty("SSCCU")]
         public long? SSCCU{ get; set; }
 
         /// <summary>
-        /// 缓存盘大小
+        /// <p>缓存盘大小</p>
         /// </summary>
         [JsonProperty("CacheDiskSize")]
         [System.Obsolete]
         public string CacheDiskSize{ get; set; }
 
         /// <summary>
-        /// 缓存盘大小
+        /// <p>缓存盘大小</p>
         /// </summary>
         [JsonProperty("CacheDataDiskSize")]
         public long? CacheDataDiskSize{ get; set; }
+
+        /// <summary>
+        /// <p>磁盘加密</p>
+        /// </summary>
+        [JsonProperty("DiskEncrypt")]
+        public long? DiskEncrypt{ get; set; }
 
 
         /// <summary>
@@ -175,6 +178,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "SSCCU", this.SSCCU);
             this.SetParamSimple(map, prefix + "CacheDiskSize", this.CacheDiskSize);
             this.SetParamSimple(map, prefix + "CacheDataDiskSize", this.CacheDataDiskSize);
+            this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
         }
     }
 }

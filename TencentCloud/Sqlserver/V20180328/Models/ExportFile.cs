@@ -87,6 +87,27 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("AsyncRequestId")]
         public long? AsyncRequestId{ get; set; }
 
+        /// <summary>
+        /// <p>日志开始时间</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogStartTime")]
+        public string LogStartTime{ get; set; }
+
+        /// <summary>
+        /// <p>日志结束时间</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogEndTime")]
+        public string LogEndTime{ get; set; }
+
+        /// <summary>
+        /// <p>日志过滤条件</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogFilter")]
+        public string LogFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +123,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamSimple(map, prefix + "LogStartTime", this.LogStartTime);
+            this.SetParamSimple(map, prefix + "LogEndTime", this.LogEndTime);
+            this.SetParamSimple(map, prefix + "LogFilter", this.LogFilter);
         }
     }
 }

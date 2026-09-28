@@ -72,6 +72,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("CosSuffix")]
         public string CosSuffix{ get; set; }
 
+        /// <summary>
+        /// <p>zip 包名称</p>
+        /// </summary>
+        [JsonProperty("PackageFileName")]
+        public string PackageFileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "CodeUrlWithAuth", this.CodeUrlWithAuth);
             this.SetParamSimple(map, prefix + "CosTimestamp", this.CosTimestamp);
             this.SetParamSimple(map, prefix + "CosSuffix", this.CosSuffix);
+            this.SetParamSimple(map, prefix + "PackageFileName", this.PackageFileName);
         }
     }
 }

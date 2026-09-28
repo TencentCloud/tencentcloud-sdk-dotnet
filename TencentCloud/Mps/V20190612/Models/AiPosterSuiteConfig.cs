@@ -67,7 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public CustomVariable[] CustomVariables{ get; set; }
 
         /// <summary>
-        /// <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
+        /// <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

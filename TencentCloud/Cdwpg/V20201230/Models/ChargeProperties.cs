@@ -43,16 +43,16 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 计费类型0-按量计费，1-包年包月
-        /// </summary>
-        [JsonProperty("PayMode")]
-        public long? PayMode{ get; set; }
-
-        /// <summary>
         /// PREPAID、POSTPAID_BY_HOUR
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
+
+        /// <summary>
+        /// 计费类型0-按量计费，1-包年包月
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
 
 
         /// <summary>
@@ -63,8 +63,8 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
-            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

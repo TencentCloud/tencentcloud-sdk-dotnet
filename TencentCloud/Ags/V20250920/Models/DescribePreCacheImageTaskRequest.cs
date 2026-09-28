@@ -31,16 +31,22 @@ namespace TencentCloud.Ags.V20250920.Models
         public string Image{ get; set; }
 
         /// <summary>
+        /// <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+        /// </summary>
+        [JsonProperty("ImageRegistryType")]
+        public string ImageRegistryType{ get; set; }
+
+        /// <summary>
         /// <p>镜像 Digest</p>
         /// </summary>
         [JsonProperty("ImageDigest")]
         public string ImageDigest{ get; set; }
 
         /// <summary>
-        /// <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+        /// <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
         /// </summary>
-        [JsonProperty("ImageRegistryType")]
-        public string ImageRegistryType{ get; set; }
+        [JsonProperty("PreCacheImageId")]
+        public string PreCacheImageId{ get; set; }
 
 
         /// <summary>
@@ -49,8 +55,9 @@ namespace TencentCloud.Ags.V20250920.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Image", this.Image);
-            this.SetParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
             this.SetParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+            this.SetParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
+            this.SetParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
         }
     }
 }

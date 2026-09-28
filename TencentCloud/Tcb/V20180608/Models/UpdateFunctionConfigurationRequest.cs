@@ -91,13 +91,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string InstallDependency{ get; set; }
 
         /// <summary>
-        /// <p>日志投递到的cls日志集ID</p>
+        /// <p>日志投递到的cls Topic ID</p>
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// <p>日志投递到的cls Topic ID</p>
+        /// <p>日志投递到的cls日志集ID</p>
         /// </summary>
         [JsonProperty("ClsLogsetId")]
         public string ClsLogsetId{ get; set; }

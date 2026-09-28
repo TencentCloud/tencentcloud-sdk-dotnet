@@ -25,18 +25,6 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// 节点类型
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// 机型
-        /// </summary>
-        [JsonProperty("SpecName")]
-        public string SpecName{ get; set; }
-
-        /// <summary>
         /// 节点个数
         /// </summary>
         [JsonProperty("Count")]
@@ -48,16 +36,28 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         [JsonProperty("DiskSpec")]
         public CBSSpec DiskSpec{ get; set; }
 
+        /// <summary>
+        /// 机型
+        /// </summary>
+        [JsonProperty("SpecName")]
+        public string SpecName{ get; set; }
+
+        /// <summary>
+        /// 节点类型
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamObj(map, prefix + "DiskSpec.", this.DiskSpec);
+            this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

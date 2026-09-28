@@ -175,6 +175,18 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string DeployEnv{ get; set; }
 
         /// <summary>
+        /// <p>集群id</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>集群角色</p>
+        /// </summary>
+        [JsonProperty("ClusterRole")]
+        public long? ClusterRole{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -211,6 +223,8 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
             this.SetParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
             this.SetParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterRole", this.ClusterRole);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

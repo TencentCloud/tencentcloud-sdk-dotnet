@@ -25,40 +25,46 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 偏移
+        /// <p>偏移</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 最大数量
+        /// <p>最大数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 资源ID或者资源名字模糊查询的关键字
+        /// <p>资源ID或者资源名字模糊查询的关键字</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 标签过滤条件
+        /// <p>标签过滤条件</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 设备所属的厂商名称，根据厂商来进行筛选
+        /// <p>设备所属的厂商名称，根据厂商来进行筛选</p>
         /// </summary>
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
         /// <summary>
-        /// Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+        /// <p>Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all</p>
         /// </summary>
         [JsonProperty("HsmType")]
         public string HsmType{ get; set; }
+
+        /// <summary>
+        /// <p>集群id</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
             this.SetParamSimple(map, prefix + "HsmType", this.HsmType);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

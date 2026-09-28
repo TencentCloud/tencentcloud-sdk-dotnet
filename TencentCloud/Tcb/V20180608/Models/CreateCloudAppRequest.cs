@@ -90,6 +90,54 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("NodeJsVersion")]
         public string NodeJsVersion{ get; set; }
 
+        /// <summary>
+        /// <p>暂不支持：Webhook 触发器功能尚未对外开放，客户端传入的 Trigger 字段会被平台静默忽略（仅日志告警，不拒绝请求）</p>
+        /// </summary>
+        [JsonProperty("Trigger")]
+        public CloudAppTrigger Trigger{ get; set; }
+
+        /// <summary>
+        /// <p>服务列表</p>
+        /// </summary>
+        [JsonProperty("ServiceList")]
+        public CloudAppLinkService[] ServiceList{ get; set; }
+
+        /// <summary>
+        /// <p>全局工作目录</p>
+        /// </summary>
+        [JsonProperty("WorkingDir")]
+        public string WorkingDir{ get; set; }
+
+        /// <summary>
+        /// <p>路由列表</p>
+        /// </summary>
+        [JsonProperty("Routes")]
+        public CloudAppRoute[] Routes{ get; set; }
+
+        /// <summary>
+        /// <p>部署类型</p>
+        /// </summary>
+        [JsonProperty("PromoteType")]
+        public string PromoteType{ get; set; }
+
+        /// <summary>
+        /// <p>发布 Token 校验</p>
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
+        /// <summary>
+        /// <p>前置执行命令</p>
+        /// </summary>
+        [JsonProperty("PreDeployCommand")]
+        public string PreDeployCommand{ get; set; }
+
+        /// <summary>
+        /// <p>后置执行命令</p>
+        /// </summary>
+        [JsonProperty("PostDeployCommand")]
+        public string PostDeployCommand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +155,14 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "CustomSteps.", this.CustomSteps);
             this.SetParamArrayObj(map, prefix + "Secrets.", this.Secrets);
             this.SetParamSimple(map, prefix + "NodeJsVersion", this.NodeJsVersion);
+            this.SetParamObj(map, prefix + "Trigger.", this.Trigger);
+            this.SetParamArrayObj(map, prefix + "ServiceList.", this.ServiceList);
+            this.SetParamSimple(map, prefix + "WorkingDir", this.WorkingDir);
+            this.SetParamArrayObj(map, prefix + "Routes.", this.Routes);
+            this.SetParamSimple(map, prefix + "PromoteType", this.PromoteType);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "PreDeployCommand", this.PreDeployCommand);
+            this.SetParamSimple(map, prefix + "PostDeployCommand", this.PostDeployCommand);
         }
     }
 }

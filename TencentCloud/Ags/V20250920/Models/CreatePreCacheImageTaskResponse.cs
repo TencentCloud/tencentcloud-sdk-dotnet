@@ -43,6 +43,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public string ImageRegistryType{ get; set; }
 
         /// <summary>
+        /// <p>镜像预热ID</p>
+        /// </summary>
+        [JsonProperty("PreCacheImageId")]
+        public string PreCacheImageId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
             this.SetParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+            this.SetParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

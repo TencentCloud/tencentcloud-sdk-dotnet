@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1514";
 
         /// <summary>
         /// Client constructor.
@@ -953,6 +953,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatusSync(DescribeDatabaseAutonomyStatusRequest req)
         {
             return InternalRequestAsync<DescribeDatabaseAutonomyStatusResponse>(req, "DescribeDatabaseAutonomyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例的死锁事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeadLockLogsRequest"/></param>
+        /// <returns><see cref="DescribeDeadLockLogsResponse"/></returns>
+        public Task<DescribeDeadLockLogsResponse> DescribeDeadLockLogs(DescribeDeadLockLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDeadLockLogsResponse>(req, "DescribeDeadLockLogs");
+        }
+
+        /// <summary>
+        /// 查询实例的死锁事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeadLockLogsRequest"/></param>
+        /// <returns><see cref="DescribeDeadLockLogsResponse"/></returns>
+        public DescribeDeadLockLogsResponse DescribeDeadLockLogsSync(DescribeDeadLockLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDeadLockLogsResponse>(req, "DescribeDeadLockLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

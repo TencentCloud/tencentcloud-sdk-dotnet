@@ -25,13 +25,13 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 获取实例的总个数
+        /// <p>获取实例的总个数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 资源信息
+        /// <p>资源信息</p>
         /// </summary>
         [JsonProperty("VsmList")]
         public ResourceInfo[] VsmList{ get; set; }

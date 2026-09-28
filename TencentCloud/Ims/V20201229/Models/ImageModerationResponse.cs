@@ -104,6 +104,18 @@ namespace TencentCloud.Ims.V20201229.Models
         public RecognitionResult[] RecognitionResults{ get; set; }
 
         /// <summary>
+        /// <p>转存地址，开启转存能力返回转存地址</p>
+        /// </summary>
+        [JsonProperty("StoreUrl")]
+        public string StoreUrl{ get; set; }
+
+        /// <summary>
+        /// <p>命中原因，大模型提召回输出原因内容</p>
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -128,6 +140,8 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
             this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+            this.SetParamSimple(map, prefix + "StoreUrl", this.StoreUrl);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

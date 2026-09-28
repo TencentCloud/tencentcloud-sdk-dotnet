@@ -55,6 +55,36 @@ namespace TencentCloud.Ags.V20250920.Models
         public string Message{ get; set; }
 
         /// <summary>
+        /// <p>镜像预热创建时间</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>镜像预热ID</p>
+        /// </summary>
+        [JsonProperty("PreCacheImageId")]
+        public string PreCacheImageId{ get; set; }
+
+        /// <summary>
+        /// <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>镜像预热存储大小</p><p>单位：Byte</p>
+        /// </summary>
+        [JsonProperty("CachedImageSizeBytes")]
+        public long? CachedImageSizeBytes{ get; set; }
+
+        /// <summary>
+        /// <p>该预热镜像最近一次被沙箱实例使用时间</p>
+        /// </summary>
+        [JsonProperty("LastUsedTime")]
+        public string LastUsedTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +101,11 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "CachedImageSizeBytes", this.CachedImageSizeBytes);
+            this.SetParamSimple(map, prefix + "LastUsedTime", this.LastUsedTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
