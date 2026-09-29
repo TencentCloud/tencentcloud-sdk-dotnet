@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1515";
 
         /// <summary>
         /// Client constructor.
@@ -876,6 +876,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 创建直播智能擦除规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveSmartEraseRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveSmartEraseRuleResponse"/></returns>
+        public Task<CreateLiveSmartEraseRuleResponse> CreateLiveSmartEraseRule(CreateLiveSmartEraseRuleRequest req)
+        {
+            return InternalRequestAsync<CreateLiveSmartEraseRuleResponse>(req, "CreateLiveSmartEraseRule");
+        }
+
+        /// <summary>
+        /// 创建直播智能擦除规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveSmartEraseRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveSmartEraseRuleResponse"/></returns>
+        public CreateLiveSmartEraseRuleResponse CreateLiveSmartEraseRuleSync(CreateLiveSmartEraseRuleRequest req)
+        {
+            return InternalRequestAsync<CreateLiveSmartEraseRuleResponse>(req, "CreateLiveSmartEraseRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建直播智能擦除模板。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSmartEraseTemplateRequest"/></param>
@@ -1713,6 +1734,48 @@ namespace TencentCloud.Live.V20180801
         public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplateSync(DeleteLiveRecordTemplateRequest req)
         {
             return InternalRequestAsync<DeleteLiveRecordTemplateResponse>(req, "DeleteLiveRecordTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除直播智能擦除规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveSmartEraseRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveSmartEraseRuleResponse"/></returns>
+        public Task<DeleteLiveSmartEraseRuleResponse> DeleteLiveSmartEraseRule(DeleteLiveSmartEraseRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveSmartEraseRuleResponse>(req, "DeleteLiveSmartEraseRule");
+        }
+
+        /// <summary>
+        /// 删除直播智能擦除规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveSmartEraseRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveSmartEraseRuleResponse"/></returns>
+        public DeleteLiveSmartEraseRuleResponse DeleteLiveSmartEraseRuleSync(DeleteLiveSmartEraseRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveSmartEraseRuleResponse>(req, "DeleteLiveSmartEraseRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveSmartEraseTemplateResponse"/></returns>
+        public Task<DeleteLiveSmartEraseTemplateResponse> DeleteLiveSmartEraseTemplate(DeleteLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveSmartEraseTemplateResponse>(req, "DeleteLiveSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// 删除直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveSmartEraseTemplateResponse"/></returns>
+        public DeleteLiveSmartEraseTemplateResponse DeleteLiveSmartEraseTemplateSync(DeleteLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveSmartEraseTemplateResponse>(req, "DeleteLiveSmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3335,6 +3398,69 @@ namespace TencentCloud.Live.V20180801
         public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplatesSync(DescribeLiveRecordTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeLiveRecordTemplatesResponse>(req, "DescribeLiveRecordTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取直播智能擦除规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSmartEraseRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveSmartEraseRulesResponse"/></returns>
+        public Task<DescribeLiveSmartEraseRulesResponse> DescribeLiveSmartEraseRules(DescribeLiveSmartEraseRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveSmartEraseRulesResponse>(req, "DescribeLiveSmartEraseRules");
+        }
+
+        /// <summary>
+        /// 获取直播智能擦除规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSmartEraseRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveSmartEraseRulesResponse"/></returns>
+        public DescribeLiveSmartEraseRulesResponse DescribeLiveSmartEraseRulesSync(DescribeLiveSmartEraseRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveSmartEraseRulesResponse>(req, "DescribeLiveSmartEraseRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取单个直播智能擦除模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DescribeLiveSmartEraseTemplateResponse"/></returns>
+        public Task<DescribeLiveSmartEraseTemplateResponse> DescribeLiveSmartEraseTemplate(DescribeLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveSmartEraseTemplateResponse>(req, "DescribeLiveSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// 获取单个直播智能擦除模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DescribeLiveSmartEraseTemplateResponse"/></returns>
+        public DescribeLiveSmartEraseTemplateResponse DescribeLiveSmartEraseTemplateSync(DescribeLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveSmartEraseTemplateResponse>(req, "DescribeLiveSmartEraseTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSmartEraseTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveSmartEraseTemplatesResponse"/></returns>
+        public Task<DescribeLiveSmartEraseTemplatesResponse> DescribeLiveSmartEraseTemplates(DescribeLiveSmartEraseTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveSmartEraseTemplatesResponse>(req, "DescribeLiveSmartEraseTemplates");
+        }
+
+        /// <summary>
+        /// 获取直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSmartEraseTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveSmartEraseTemplatesResponse"/></returns>
+        public DescribeLiveSmartEraseTemplatesResponse DescribeLiveSmartEraseTemplatesSync(DescribeLiveSmartEraseTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveSmartEraseTemplatesResponse>(req, "DescribeLiveSmartEraseTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4978,6 +5104,27 @@ namespace TencentCloud.Live.V20180801
         public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplateSync(ModifyLiveRecordTemplateRequest req)
         {
             return InternalRequestAsync<ModifyLiveRecordTemplateResponse>(req, "ModifyLiveRecordTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveSmartEraseTemplateResponse"/></returns>
+        public Task<ModifyLiveSmartEraseTemplateResponse> ModifyLiveSmartEraseTemplate(ModifyLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveSmartEraseTemplateResponse>(req, "ModifyLiveSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// 修改直播智能擦除模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveSmartEraseTemplateResponse"/></returns>
+        public ModifyLiveSmartEraseTemplateResponse ModifyLiveSmartEraseTemplateSync(ModifyLiveSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveSmartEraseTemplateResponse>(req, "ModifyLiveSmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

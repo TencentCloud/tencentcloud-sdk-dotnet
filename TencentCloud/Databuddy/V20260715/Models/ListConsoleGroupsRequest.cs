@@ -37,7 +37,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// <p>通过用户组 ID 批量查询</p>
+        /// <p>通过用户组ID批量查询；用户组ID可通过 ListConsoleGroups 接口获取</p>
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }

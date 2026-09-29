@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Databuddy.V20260715.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RolePermission : AbstractModel
+    public class DescribeLiveSmartEraseTemplatesRequest : AbstractModel
     {
         
-        /// <summary>
-        /// <p>模块ID，须为当前租户已开通的功能模块（叶子节点）的模块ID（层级编码字符串，如 101=快速开始、109=工作流、116101103=工作空间管理_角色权限），非法值返回 InvalidParameterValue；模块清单可通过控制台「工作空间设置-角色权限」页面查看</p>
-        /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
-
-        /// <summary>
-        /// <p>模块访问权限，单值：R=只读，RW=读写，RWD=读写删除，N=无权限</p>
-        /// </summary>
-        [JsonProperty("Permissions")]
-        public string Permissions{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "Permissions", this.Permissions);
         }
     }
 }

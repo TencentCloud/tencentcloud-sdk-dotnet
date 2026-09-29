@@ -25,7 +25,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// <p>用户组 ID</p>
+        /// <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

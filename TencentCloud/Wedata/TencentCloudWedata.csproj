@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1515</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1288,6 +1288,8 @@
     <Compile Include="V20250806\Models\GetResourcePrivilegeDetailRsp.cs" />
     <Compile Include="V20250806\Models\GetSQLFolderRequest.cs" />
     <Compile Include="V20250806\Models\GetSQLFolderResponse.cs" />
+    <Compile Include="V20250806\Models\GetSQLRunResultRequest.cs" />
+    <Compile Include="V20250806\Models\GetSQLRunResultResponse.cs" />
     <Compile Include="V20250806\Models\GetSQLScriptRequest.cs" />
     <Compile Include="V20250806\Models\GetSQLScriptResponse.cs" />
     <Compile Include="V20250806\Models\GetTableColumnsRequest.cs" />
@@ -1551,6 +1553,7 @@
     <Compile Include="V20250806\Models\ResourceResult.cs" />
     <Compile Include="V20250806\Models\ResourceStatus.cs" />
     <Compile Include="V20250806\Models\ResourceType.cs" />
+    <Compile Include="V20250806\Models\ResultColumnInfo.cs" />
     <Compile Include="V20250806\Models\RevokeDataSourceAuthorizationRequest.cs" />
     <Compile Include="V20250806\Models\RevokeDataSourceAuthorizationResponse.cs" />
     <Compile Include="V20250806\Models\RevokePrivilegesRequest.cs" />
@@ -1569,6 +1572,9 @@
     <Compile Include="V20250806\Models\SetSuccessTaskInstancesAsyncRequest.cs" />
     <Compile Include="V20250806\Models\SetSuccessTaskInstancesAsyncResponse.cs" />
     <Compile Include="V20250806\Models\SqlCreateResult.cs" />
+    <Compile Include="V20250806\Models\SqlRunExecutionResult.cs" />
+    <Compile Include="V20250806\Models\SqlRunResult.cs" />
+    <Compile Include="V20250806\Models\SqlRunResultRow.cs" />
     <Compile Include="V20250806\Models\StartOpsTasksRequest.cs" />
     <Compile Include="V20250806\Models\StartOpsTasksResponse.cs" />
     <Compile Include="V20250806\Models\StartTasks.cs" />

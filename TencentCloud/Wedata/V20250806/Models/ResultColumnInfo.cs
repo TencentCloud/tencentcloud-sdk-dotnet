@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Databuddy.V20260715.Models
+namespace TencentCloud.Wedata.V20250806.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RolePermission : AbstractModel
+    public class ResultColumnInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>模块ID，须为当前租户已开通的功能模块（叶子节点）的模块ID（层级编码字符串，如 101=快速开始、109=工作流、116101103=工作空间管理_角色权限），非法值返回 InvalidParameterValue；模块清单可通过控制台「工作空间设置-角色权限」页面查看</p>
+        /// 字段名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("ColumnName")]
+        public string ColumnName{ get; set; }
 
         /// <summary>
-        /// <p>模块访问权限，单值：R=只读，RW=读写，RWD=读写删除，N=无权限</p>
+        /// 字段类型，如 int、string、bigint 等
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Permissions")]
-        public string Permissions{ get; set; }
+        [JsonProperty("ColumnType")]
+        public string ColumnType{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "Permissions", this.Permissions);
+            this.SetParamSimple(map, prefix + "ColumnName", this.ColumnName);
+            this.SetParamSimple(map, prefix + "ColumnType", this.ColumnType);
         }
     }
 }

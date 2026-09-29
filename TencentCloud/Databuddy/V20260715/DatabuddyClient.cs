@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1514";
+       private const string sdkVersion = "SDK_NET_3.0.1515";
 
         /// <summary>
         /// Client constructor.
@@ -514,7 +514,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台用户组成员列表
+        /// 查询控制台用户组成员列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleGroupUsersRequest"/></param>
         /// <returns><see cref="ListConsoleGroupUsersResponse"/></returns>
@@ -524,7 +524,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台用户组成员列表
+        /// 查询控制台用户组成员列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleGroupUsersRequest"/></param>
         /// <returns><see cref="ListConsoleGroupUsersResponse"/></returns>
@@ -535,7 +535,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台用户组列表
+        /// 查询控制台用户组列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleGroupsRequest"/></param>
         /// <returns><see cref="ListConsoleGroupsResponse"/></returns>
@@ -545,7 +545,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台用户组列表
+        /// 查询控制台用户组列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleGroupsRequest"/></param>
         /// <returns><see cref="ListConsoleGroupsResponse"/></returns>
@@ -556,7 +556,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台角色列表
+        /// 查询控制台角色列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleRolesRequest"/></param>
         /// <returns><see cref="ListConsoleRolesResponse"/></returns>
@@ -566,7 +566,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台角色列表
+        /// 查询控制台角色列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleRolesRequest"/></param>
         /// <returns><see cref="ListConsoleRolesResponse"/></returns>
@@ -577,7 +577,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台用户列表
+        /// 查询控制台用户列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleUsersRequest"/></param>
         /// <returns><see cref="ListConsoleUsersResponse"/></returns>
@@ -587,7 +587,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询控制台用户列表
+        /// 查询控制台用户列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListConsoleUsersRequest"/></param>
         /// <returns><see cref="ListConsoleUsersResponse"/></returns>

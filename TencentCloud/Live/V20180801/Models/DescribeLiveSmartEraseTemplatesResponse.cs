@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Databuddy.V20260715.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RolePermission : AbstractModel
+    public class DescribeLiveSmartEraseTemplatesResponse : AbstractModel
     {
         
         /// <summary>
-        /// <p>模块ID，须为当前租户已开通的功能模块（叶子节点）的模块ID（层级编码字符串，如 101=快速开始、109=工作流、116101103=工作空间管理_角色权限），非法值返回 InvalidParameterValue；模块清单可通过控制台「工作空间设置-角色权限」页面查看</p>
+        /// <p>直播智能擦除模板信息。</p>
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("Templates")]
+        public SmartEraseTemplate[] Templates{ get; set; }
 
         /// <summary>
-        /// <p>模块访问权限，单值：R=只读，RW=读写，RWD=读写删除，N=无权限</p>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Permissions")]
-        public string Permissions{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "Permissions", this.Permissions);
+            this.SetParamArrayObj(map, prefix + "Templates.", this.Templates);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

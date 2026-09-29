@@ -31,6 +31,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Scene{ get; set; }
 
         /// <summary>
+        /// <p>鉴伪模式，目前支持以下模式，对应支持不同的入参、出参。<br>Image：图像鉴伪模式，根据图像分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按1次调用计费。<br>Video：视频鉴伪模式，根据视频分析输出告警提示，不支持推理，支持屏幕翻拍提示。每次调用按1次调用计费。<br>Hybrid：混合鉴伪模式，综合图像、视频分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按2次调用计费。</p>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// <p>视频的 Url 地址。格式支持：xxxxxx。要求视频不超过 100M。建议视频时长不小于1s。</p>
+        /// </summary>
+        [JsonProperty("VideoUrl")]
+        public string VideoUrl{ get; set; }
+
+        /// <summary>
         /// <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M。</p>
         /// </summary>
         [JsonProperty("ImageUrl")]
@@ -54,6 +66,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ReasoningConfig")]
         public ReasoningConfig ReasoningConfig{ get; set; }
 
+        /// <summary>
+        /// <p>水印提示排除类型，选择出参“水印提示”排除掉的水印类型，不传的话即代表任意水印都会提示。<br>PhoneCam：手机相机水印<br>WatermarkCam：水印相机水印</p>
+        /// </summary>
+        [JsonProperty("IgnoreWatermarkCategories")]
+        public string[] IgnoreWatermarkCategories{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +79,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ReasoningPrompt", this.ReasoningPrompt);
             this.SetParamObj(map, prefix + "ReasoningConfig.", this.ReasoningConfig);
+            this.SetParamArraySimple(map, prefix + "IgnoreWatermarkCategories.", this.IgnoreWatermarkCategories);
         }
     }
 }

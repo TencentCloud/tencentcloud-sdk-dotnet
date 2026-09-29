@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1515";
 
         /// <summary>
         /// Client constructor.
@@ -1583,6 +1583,27 @@ namespace TencentCloud.Wedata.V20250806
         public GetSQLFolderResponse GetSQLFolderSync(GetSQLFolderRequest req)
         {
             return InternalRequestAsync<GetSQLFolderResponse>(req, "GetSQLFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取SQL查询任务的数据结果。直接返回预览数据结果，而非预览结果文件路径。不传 JobExecutionId 时返回该任务下全部子查询的结果数组。返回数据总大小不超过 10MB。任务处于非终态（QUEUED/RUNNING）时不报错，返回当前 Status 与空的 Results 数组，并通过 StatusMessage 说明原因，调用方应采用指数退避策略轮询直至进入终态。
+        /// </summary>
+        /// <param name="req"><see cref="GetSQLRunResultRequest"/></param>
+        /// <returns><see cref="GetSQLRunResultResponse"/></returns>
+        public Task<GetSQLRunResultResponse> GetSQLRunResult(GetSQLRunResultRequest req)
+        {
+            return InternalRequestAsync<GetSQLRunResultResponse>(req, "GetSQLRunResult");
+        }
+
+        /// <summary>
+        /// 获取SQL查询任务的数据结果。直接返回预览数据结果，而非预览结果文件路径。不传 JobExecutionId 时返回该任务下全部子查询的结果数组。返回数据总大小不超过 10MB。任务处于非终态（QUEUED/RUNNING）时不报错，返回当前 Status 与空的 Results 数组，并通过 StatusMessage 说明原因，调用方应采用指数退避策略轮询直至进入终态。
+        /// </summary>
+        /// <param name="req"><see cref="GetSQLRunResultRequest"/></param>
+        /// <returns><see cref="GetSQLRunResultResponse"/></returns>
+        public GetSQLRunResultResponse GetSQLRunResultSync(GetSQLRunResultRequest req)
+        {
+            return InternalRequestAsync<GetSQLRunResultResponse>(req, "GetSQLRunResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

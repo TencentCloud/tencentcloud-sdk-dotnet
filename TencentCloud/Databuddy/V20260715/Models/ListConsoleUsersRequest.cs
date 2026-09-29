@@ -43,7 +43,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string UserKeyword{ get; set; }
 
         /// <summary>
-        /// <p>用于过滤角色关联的用户</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul>
+        /// <p>用于过滤角色关联的用户</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul><p>可通过 ListConsoleRoles 接口获取</p>
         /// </summary>
         [JsonProperty("RoleIds")]
         public string[] RoleIds{ get; set; }
