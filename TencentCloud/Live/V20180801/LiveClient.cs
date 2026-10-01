@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1515";
+       private const string sdkVersion = "SDK_NET_3.0.1516";
 
         /// <summary>
         /// Client constructor.
@@ -4055,6 +4055,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeOriginStreamInfoResponse DescribeOriginStreamInfoSync(DescribeOriginStreamInfoRequest req)
         {
             return InternalRequestAsync<DescribeOriginStreamInfoResponse>(req, "DescribeOriginStreamInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取直播源站的拉流IP白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeOriginWhiteIpListResponse"/></returns>
+        public Task<DescribeOriginWhiteIpListResponse> DescribeOriginWhiteIpList(DescribeOriginWhiteIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginWhiteIpListResponse>(req, "DescribeOriginWhiteIpList");
+        }
+
+        /// <summary>
+        /// 获取直播源站的拉流IP白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeOriginWhiteIpListResponse"/></returns>
+        public DescribeOriginWhiteIpListResponse DescribeOriginWhiteIpListSync(DescribeOriginWhiteIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginWhiteIpListResponse>(req, "DescribeOriginWhiteIpList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
