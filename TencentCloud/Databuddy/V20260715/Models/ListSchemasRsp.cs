@@ -15,20 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Databuddy.V20260715.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOriginWhiteIpListRequest : AbstractModel
+    public class ListSchemasRsp : AbstractModel
     {
         
         /// <summary>
-        /// <p>播放域名</p>
+        /// schema列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("Items")]
+        public Schema[] Items{ get; set; }
+
+        /// <summary>
+        /// 下页分页token
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextPageToken")]
+        public string NextPageToken{ get; set; }
 
 
         /// <summary>
@@ -36,7 +44,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "NextPageToken", this.NextPageToken);
         }
     }
 }

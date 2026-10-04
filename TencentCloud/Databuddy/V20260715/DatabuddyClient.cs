@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1515";
+       private const string sdkVersion = "SDK_NET_3.0.1517";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Databuddy.V20260715
         public AddConsoleUsersResponse AddConsoleUsersSync(AddConsoleUsersRequest req)
         {
             return InternalRequestAsync<AddConsoleUsersResponse>(req, "AddConsoleUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建数据目录接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCatalogRequest"/></param>
+        /// <returns><see cref="CreateCatalogResponse"/></returns>
+        public Task<CreateCatalogResponse> CreateCatalog(CreateCatalogRequest req)
+        {
+            return InternalRequestAsync<CreateCatalogResponse>(req, "CreateCatalog");
+        }
+
+        /// <summary>
+        /// 创建数据目录接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCatalogRequest"/></param>
+        /// <returns><see cref="CreateCatalogResponse"/></returns>
+        public CreateCatalogResponse CreateCatalogSync(CreateCatalogRequest req)
+        {
+            return InternalRequestAsync<CreateCatalogResponse>(req, "CreateCatalog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -152,6 +173,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 创建schema
+        /// </summary>
+        /// <param name="req"><see cref="CreateSchemaRequest"/></param>
+        /// <returns><see cref="CreateSchemaResponse"/></returns>
+        public Task<CreateSchemaResponse> CreateSchema(CreateSchemaRequest req)
+        {
+            return InternalRequestAsync<CreateSchemaResponse>(req, "CreateSchema");
+        }
+
+        /// <summary>
+        /// 创建schema
+        /// </summary>
+        /// <param name="req"><see cref="CreateSchemaRequest"/></param>
+        /// <returns><see cref="CreateSchemaResponse"/></returns>
+        public CreateSchemaResponse CreateSchemaSync(CreateSchemaRequest req)
+        {
+            return InternalRequestAsync<CreateSchemaResponse>(req, "CreateSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建工作流
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRequest"/></param>
@@ -190,6 +232,48 @@ namespace TencentCloud.Databuddy.V20260715
         public CreateWorkspaceResponse CreateWorkspaceSync(CreateWorkspaceRequest req)
         {
             return InternalRequestAsync<CreateWorkspaceResponse>(req, "CreateWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建工作空间角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspaceRoleRequest"/></param>
+        /// <returns><see cref="CreateWorkspaceRoleResponse"/></returns>
+        public Task<CreateWorkspaceRoleResponse> CreateWorkspaceRole(CreateWorkspaceRoleRequest req)
+        {
+            return InternalRequestAsync<CreateWorkspaceRoleResponse>(req, "CreateWorkspaceRole");
+        }
+
+        /// <summary>
+        /// 创建工作空间角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspaceRoleRequest"/></param>
+        /// <returns><see cref="CreateWorkspaceRoleResponse"/></returns>
+        public CreateWorkspaceRoleResponse CreateWorkspaceRoleSync(CreateWorkspaceRoleRequest req)
+        {
+            return InternalRequestAsync<CreateWorkspaceRoleResponse>(req, "CreateWorkspaceRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除catalog
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCatalogRequest"/></param>
+        /// <returns><see cref="DeleteCatalogResponse"/></returns>
+        public Task<DeleteCatalogResponse> DeleteCatalog(DeleteCatalogRequest req)
+        {
+            return InternalRequestAsync<DeleteCatalogResponse>(req, "DeleteCatalog");
+        }
+
+        /// <summary>
+        /// 删除catalog
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCatalogRequest"/></param>
+        /// <returns><see cref="DeleteCatalogResponse"/></returns>
+        public DeleteCatalogResponse DeleteCatalogSync(DeleteCatalogRequest req)
+        {
+            return InternalRequestAsync<DeleteCatalogResponse>(req, "DeleteCatalog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -291,6 +375,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 删除schema
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSchemaRequest"/></param>
+        /// <returns><see cref="DeleteSchemaResponse"/></returns>
+        public Task<DeleteSchemaResponse> DeleteSchema(DeleteSchemaRequest req)
+        {
+            return InternalRequestAsync<DeleteSchemaResponse>(req, "DeleteSchema");
+        }
+
+        /// <summary>
+        /// 删除schema
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSchemaRequest"/></param>
+        /// <returns><see cref="DeleteSchemaResponse"/></returns>
+        public DeleteSchemaResponse DeleteSchemaSync(DeleteSchemaRequest req)
+        {
+            return InternalRequestAsync<DeleteSchemaResponse>(req, "DeleteSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除工作流
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowRequest"/></param>
@@ -329,6 +434,27 @@ namespace TencentCloud.Databuddy.V20260715
         public DeleteWorkspaceResponse DeleteWorkspaceSync(DeleteWorkspaceRequest req)
         {
             return InternalRequestAsync<DeleteWorkspaceResponse>(req, "DeleteWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除工作空间角色
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkspaceRoleRequest"/></param>
+        /// <returns><see cref="DeleteWorkspaceRoleResponse"/></returns>
+        public Task<DeleteWorkspaceRoleResponse> DeleteWorkspaceRole(DeleteWorkspaceRoleRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkspaceRoleResponse>(req, "DeleteWorkspaceRole");
+        }
+
+        /// <summary>
+        /// 删除工作空间角色
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkspaceRoleRequest"/></param>
+        /// <returns><see cref="DeleteWorkspaceRoleResponse"/></returns>
+        public DeleteWorkspaceRoleResponse DeleteWorkspaceRoleSync(DeleteWorkspaceRoleRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkspaceRoleResponse>(req, "DeleteWorkspaceRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -619,6 +745,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 获取schema列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSchemasRequest"/></param>
+        /// <returns><see cref="ListSchemasResponse"/></returns>
+        public Task<ListSchemasResponse> ListSchemas(ListSchemasRequest req)
+        {
+            return InternalRequestAsync<ListSchemasResponse>(req, "ListSchemas");
+        }
+
+        /// <summary>
+        /// 获取schema列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSchemasRequest"/></param>
+        /// <returns><see cref="ListSchemasResponse"/></returns>
+        public ListSchemasResponse ListSchemasSync(ListSchemasRequest req)
+        {
+            return InternalRequestAsync<ListSchemasResponse>(req, "ListSchemas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 工作流运行列表
         /// </summary>
         /// <param name="req"><see cref="ListWorkflowRunsRequest"/></param>
@@ -682,6 +829,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 查询工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkspacesRequest"/></param>
+        /// <returns><see cref="ListWorkspacesResponse"/></returns>
+        public Task<ListWorkspacesResponse> ListWorkspaces(ListWorkspacesRequest req)
+        {
+            return InternalRequestAsync<ListWorkspacesResponse>(req, "ListWorkspaces");
+        }
+
+        /// <summary>
+        /// 查询工作空间列表
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkspacesRequest"/></param>
+        /// <returns><see cref="ListWorkspacesResponse"/></returns>
+        public ListWorkspacesResponse ListWorkspacesSync(ListWorkspacesRequest req)
+        {
+            return InternalRequestAsync<ListWorkspacesResponse>(req, "ListWorkspaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
         /// </summary>
         /// <param name="req"><see cref="RemoveConsoleUsersRequest"/></param>
@@ -741,6 +909,48 @@ namespace TencentCloud.Databuddy.V20260715
         public RunWorkflowResponse RunWorkflowSync(RunWorkflowRequest req)
         {
             return InternalRequestAsync<RunWorkflowResponse>(req, "RunWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启动计算资源
+        /// </summary>
+        /// <param name="req"><see cref="StartComputeRequest"/></param>
+        /// <returns><see cref="StartComputeResponse"/></returns>
+        public Task<StartComputeResponse> StartCompute(StartComputeRequest req)
+        {
+            return InternalRequestAsync<StartComputeResponse>(req, "StartCompute");
+        }
+
+        /// <summary>
+        /// 启动计算资源
+        /// </summary>
+        /// <param name="req"><see cref="StartComputeRequest"/></param>
+        /// <returns><see cref="StartComputeResponse"/></returns>
+        public StartComputeResponse StartComputeSync(StartComputeRequest req)
+        {
+            return InternalRequestAsync<StartComputeResponse>(req, "StartCompute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止计算资源
+        /// </summary>
+        /// <param name="req"><see cref="StopComputeRequest"/></param>
+        /// <returns><see cref="StopComputeResponse"/></returns>
+        public Task<StopComputeResponse> StopCompute(StopComputeRequest req)
+        {
+            return InternalRequestAsync<StopComputeResponse>(req, "StopCompute");
+        }
+
+        /// <summary>
+        /// 停止计算资源
+        /// </summary>
+        /// <param name="req"><see cref="StopComputeRequest"/></param>
+        /// <returns><see cref="StopComputeResponse"/></returns>
+        public StopComputeResponse StopComputeSync(StopComputeRequest req)
+        {
+            return InternalRequestAsync<StopComputeResponse>(req, "StopCompute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -928,6 +1138,27 @@ namespace TencentCloud.Databuddy.V20260715
         public UpdateWorkspaceResponse UpdateWorkspaceSync(UpdateWorkspaceRequest req)
         {
             return InternalRequestAsync<UpdateWorkspaceResponse>(req, "UpdateWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新工作空间角色
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceRoleRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceRoleResponse"/></returns>
+        public Task<UpdateWorkspaceRoleResponse> UpdateWorkspaceRole(UpdateWorkspaceRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceRoleResponse>(req, "UpdateWorkspaceRole");
+        }
+
+        /// <summary>
+        /// 更新工作空间角色
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceRoleRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceRoleResponse"/></returns>
+        public UpdateWorkspaceRoleResponse UpdateWorkspaceRoleSync(UpdateWorkspaceRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceRoleResponse>(req, "UpdateWorkspaceRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

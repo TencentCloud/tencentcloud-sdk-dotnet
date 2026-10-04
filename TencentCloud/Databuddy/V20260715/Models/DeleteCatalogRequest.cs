@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Databuddy.V20260715.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOriginWhiteIpListRequest : AbstractModel
+    public class DeleteCatalogRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>播放域名</p>
+        /// 数据目录名
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// 调用时所在workspace唯一id
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public string WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
+        /// </summary>
+        [JsonProperty("ConnectionId")]
+        public string ConnectionId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
         }
     }
 }
