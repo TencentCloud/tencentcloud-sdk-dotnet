@@ -162,5 +162,112 @@ namespace TencentCloud.Tests
             return new TencentCloud.Common.CommonClient(
                 "cvm", "2017-03-12", cred, "ap-guangzhou", clientProfile);
         }
+
+        [JsonConverter(typeof(Converter))]
+        public class CustomSSEResponse : AbstractSSEModel
+        {
+            public string Response;
+
+            private class Converter : JsonConverter
+            {
+                public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+                {
+                    serializer.Serialize(writer, value);
+                }
+
+                public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
+                    JsonSerializer serializer)
+                {
+                    var resp = new CustomSSEResponse();
+                    var jObject = JObject.Load(reader);
+                    resp.Response = jObject.ToString();
+                    return resp;
+                }
+
+                public override bool CanConvert(Type objectType)
+                {
+                    return objectType == typeof(CustomSSEResponse);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void TestSSEStream()
+        {
+            var mod = "hunyuan";
+            var ver = "2023-09-01";
+            var act = "ChatCompletions";
+            var region = "";
+            var endpoint = "hunyuan.tencentcloudapi.com";
+
+            var cred = new Credential
+            {
+                SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
+                SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY"),
+            };
+
+            var hpf = new HttpProfile
+            {
+                ReqMethod = "POST",
+                Endpoint = endpoint,
+            };
+            var cpf = new ClientProfile(ClientProfile.SIGN_TC3SHA256, hpf);
+
+            var client = new TencentCloud.Common.CommonClient(mod, ver, cred, region, cpf);
+            var param = new Dictionary<string, object>
+            {
+                { "Model", "hunyuan-standard" },
+                {
+                    "Messages",
+                    new object[] { new Dictionary<string, string> { { "Role", "user" }, { "Content", "hi" } } }
+                },
+                { "Stream", true },
+            };
+
+            var req = new CommonRequest(param);
+            var resp = client.CallAsync<CustomSSEResponse>(req, act).Result;
+            Assert.IsTrue(resp.IsStream);
+            foreach (var e in resp)
+                Console.WriteLine(e.Data);
+        }
+
+        [TestMethod]
+        public void TestSSENonStream()
+        {
+            var mod = "hunyuan";
+            var ver = "2023-09-01";
+            var act = "ChatCompletions";
+            var region = "";
+            var endpoint = "hunyuan.tencentcloudapi.com";
+
+            var cred = new Credential
+            {
+                SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
+                SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY"),
+            };
+
+            var hpf = new HttpProfile
+            {
+                ReqMethod = "POST",
+                Endpoint = endpoint,
+            };
+            var cpf = new ClientProfile(ClientProfile.SIGN_TC3SHA256, hpf);
+
+            var client = new TencentCloud.Common.CommonClient(mod, ver, cred, region, cpf);
+            var param = new Dictionary<string, object>
+            {
+                { "Model", "hunyuan-standard" },
+                {
+                    "Messages",
+                    new object[] { new Dictionary<string, string> { { "Role", "user" }, { "Content", "hi" } } }
+                },
+                { "Stream", false },
+            };
+
+            var req = new CommonRequest(param);
+            var resp = client.CallAsync<CustomSSEResponse>(req, act).Result;
+            Assert.IsFalse(resp.IsStream);
+            Console.WriteLine(resp.Response);
+        }
     }
 }
