@@ -25,37 +25,37 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 订单 ID
+        /// <p>订单 ID</p>
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 订单状态
+        /// <p>订单状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 资源 ID
+        /// <p>资源 ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 原价
+        /// <p>原价</p>
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public string OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 折后价
+        /// <p>折后价</p>
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public string DiscountPrice{ get; set; }
 
         /// <summary>
-        /// 币种
+        /// <p>币种</p>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

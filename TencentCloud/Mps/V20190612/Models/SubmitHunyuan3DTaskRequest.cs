@@ -90,6 +90,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Style")]
         public string Style{ get; set; }
 
+        /// <summary>
+        /// <p>客户自己申请创建的COS存储桶</p>
+        /// </summary>
+        [JsonProperty("StoreCosParam")]
+        public AigcStoreCosParam StoreCosParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "Style", this.Style);
+            this.SetParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
         }
     }
 }

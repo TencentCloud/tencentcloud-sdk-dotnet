@@ -25,28 +25,34 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 时间
+        /// <p>时间</p>
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 任务数量
+        /// <p>任务数量</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 基础能力用量
+        /// <p>基础能力后付费用量</p>
         /// </summary>
         [JsonProperty("CostBasic")]
         public long? CostBasic{ get; set; }
 
         /// <summary>
-        /// 高级能力用量
+        /// <p>高级能力后付费用量</p>
         /// </summary>
         [JsonProperty("CostAdvanced")]
         public long? CostAdvanced{ get; set; }
+
+        /// <summary>
+        /// <p>预付费额度用量</p>
+        /// </summary>
+        [JsonProperty("CostCredits")]
+        public float? CostCredits{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "CostBasic", this.CostBasic);
             this.SetParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
+            this.SetParamSimple(map, prefix + "CostCredits", this.CostCredits);
         }
     }
 }

@@ -55,6 +55,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? WaitResultTimeout{ get; set; }
 
         /// <summary>
+        /// <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
+        /// </summary>
+        [JsonProperty("WaitResultFields")]
+        public string[] WaitResultFields{ get; set; }
+
+        /// <summary>
         /// <p>回调目标 ID</p>
         /// </summary>
         [JsonProperty("CallbackId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
             this.SetParamSimple(map, prefix + "WaitResultTimeout", this.WaitResultTimeout);
+            this.SetParamArraySimple(map, prefix + "WaitResultFields.", this.WaitResultFields);
             this.SetParamSimple(map, prefix + "CallbackId", this.CallbackId);
         }
     }

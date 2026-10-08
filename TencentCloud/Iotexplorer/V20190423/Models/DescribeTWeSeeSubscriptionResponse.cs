@@ -31,7 +31,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+        /// <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
         /// </summary>
         [JsonProperty("ServiceTier")]
         public string ServiceTier{ get; set; }
@@ -79,34 +79,46 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public SeeSummarizeConfig SummarizeConfig{ get; set; }
 
         /// <summary>
-        /// <p>当前周期基础能力总额度</p>
+        /// <p>当前周期内的额度总量</p>
         /// </summary>
-        [JsonProperty("QuotaBasic")]
-        public long? QuotaBasic{ get; set; }
+        [JsonProperty("CreditsQuota")]
+        public float? CreditsQuota{ get; set; }
 
         /// <summary>
-        /// <p>当前周期基础能力已用额度</p>
+        /// <p>当前周期内的已使用额度</p>
         /// </summary>
-        [JsonProperty("QuotaUsedBasic")]
-        public long? QuotaUsedBasic{ get; set; }
-
-        /// <summary>
-        /// <p>当前周期高级能力总额度</p>
-        /// </summary>
-        [JsonProperty("QuotaAdvanced")]
-        public long? QuotaAdvanced{ get; set; }
-
-        /// <summary>
-        /// <p>当前周期高级能力已用额度</p>
-        /// </summary>
-        [JsonProperty("QuotaUsedAdvanced")]
-        public long? QuotaUsedAdvanced{ get; set; }
+        [JsonProperty("CreditsUsed")]
+        public float? CreditsUsed{ get; set; }
 
         /// <summary>
         /// <p>额度刷新时间</p>
         /// </summary>
         [JsonProperty("QuotaRefreshTime")]
         public long? QuotaRefreshTime{ get; set; }
+
+        /// <summary>
+        /// <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+        /// </summary>
+        [JsonProperty("QuotaBasic")]
+        public long? QuotaBasic{ get; set; }
+
+        /// <summary>
+        /// <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+        /// </summary>
+        [JsonProperty("QuotaUsedBasic")]
+        public long? QuotaUsedBasic{ get; set; }
+
+        /// <summary>
+        /// <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+        /// </summary>
+        [JsonProperty("QuotaAdvanced")]
+        public long? QuotaAdvanced{ get; set; }
+
+        /// <summary>
+        /// <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
+        /// </summary>
+        [JsonProperty("QuotaUsedAdvanced")]
+        public long? QuotaUsedAdvanced{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -129,11 +141,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
             this.SetParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
             this.SetParamObj(map, prefix + "SummarizeConfig.", this.SummarizeConfig);
+            this.SetParamSimple(map, prefix + "CreditsQuota", this.CreditsQuota);
+            this.SetParamSimple(map, prefix + "CreditsUsed", this.CreditsUsed);
+            this.SetParamSimple(map, prefix + "QuotaRefreshTime", this.QuotaRefreshTime);
             this.SetParamSimple(map, prefix + "QuotaBasic", this.QuotaBasic);
             this.SetParamSimple(map, prefix + "QuotaUsedBasic", this.QuotaUsedBasic);
             this.SetParamSimple(map, prefix + "QuotaAdvanced", this.QuotaAdvanced);
             this.SetParamSimple(map, prefix + "QuotaUsedAdvanced", this.QuotaUsedAdvanced);
-            this.SetParamSimple(map, prefix + "QuotaRefreshTime", this.QuotaRefreshTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

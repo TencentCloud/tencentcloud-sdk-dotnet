@@ -43,16 +43,22 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public SeeComprehensionResult ComprehensionResult{ get; set; }
 
         /// <summary>
-        /// <p>完成该任务所消耗的基础能力额度</p>
+        /// <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
         /// </summary>
         [JsonProperty("CostBasic")]
         public long? CostBasic{ get; set; }
 
         /// <summary>
-        /// <p>完成该任务所消耗的高级能力额度</p>
+        /// <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
         /// </summary>
         [JsonProperty("CostAdvanced")]
         public long? CostAdvanced{ get; set; }
+
+        /// <summary>
+        /// <p>完成该任务所消耗的视觉理解预付费额度</p>
+        /// </summary>
+        [JsonProperty("CostCredits")]
+        public float? CostCredits{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +77,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "ComprehensionResult.", this.ComprehensionResult);
             this.SetParamSimple(map, prefix + "CostBasic", this.CostBasic);
             this.SetParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
+            this.SetParamSimple(map, prefix + "CostCredits", this.CostCredits);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

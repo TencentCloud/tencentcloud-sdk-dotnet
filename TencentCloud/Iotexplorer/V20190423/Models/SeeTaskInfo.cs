@@ -91,16 +91,22 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public SeeSummarizeResult SummarizeResult{ get; set; }
 
         /// <summary>
-        /// <p>完成该任务所消耗的基础能力额度</p>
+        /// <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
         /// </summary>
         [JsonProperty("CostBasic")]
         public long? CostBasic{ get; set; }
 
         /// <summary>
-        /// <p>完成该任务所消耗的高级能力额度</p>
+        /// <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
         /// </summary>
         [JsonProperty("CostAdvanced")]
         public long? CostAdvanced{ get; set; }
+
+        /// <summary>
+        /// <p>完成该任务所消耗的视觉理解预付费额度</p>
+        /// </summary>
+        [JsonProperty("CostCredits")]
+        public float? CostCredits{ get; set; }
 
         /// <summary>
         /// <p>输出文件名列表</p>
@@ -157,6 +163,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamObj(map, prefix + "SummarizeResult.", this.SummarizeResult);
             this.SetParamSimple(map, prefix + "CostBasic", this.CostBasic);
             this.SetParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
+            this.SetParamSimple(map, prefix + "CostCredits", this.CostCredits);
             this.SetParamArraySimple(map, prefix + "Files.", this.Files);
             this.SetParamArrayObj(map, prefix + "FilesInfo.", this.FilesInfo);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
