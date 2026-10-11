@@ -29,6 +29,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
+        [System.Obsolete]
         public string Source{ get; set; }
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayPath")]
+        [System.Obsolete]
         public string DisplayPath{ get; set; }
 
         /// <summary>
@@ -43,6 +45,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotebookPath")]
+        [System.Obsolete]
         public string NotebookPath{ get; set; }
 
         /// <summary>
@@ -50,6 +53,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotebookAbsolutePath")]
+        [System.Obsolete]
         public string NotebookAbsolutePath{ get; set; }
 
 

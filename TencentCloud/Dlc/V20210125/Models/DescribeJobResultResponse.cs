@@ -67,7 +67,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ResultRow[] Rows{ get; set; }
 
         /// <summary>
-        /// <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
+        /// <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+        /// </summary>
+        [JsonProperty("Download")]
+        public DownloadInfo Download{ get; set; }
+
+        /// <summary>
+        /// <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
         /// </summary>
         [JsonProperty("Truncated")]
         public bool? Truncated{ get; set; }
@@ -91,6 +97,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
             this.SetParamSimple(map, prefix + "TotalRows", this.TotalRows);
             this.SetParamArrayObj(map, prefix + "Rows.", this.Rows);
+            this.SetParamObj(map, prefix + "Download.", this.Download);
             this.SetParamSimple(map, prefix + "Truncated", this.Truncated);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1519";
 
         /// <summary>
         /// Client constructor.
@@ -1320,6 +1320,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeWorkspacesResponse DescribeWorkspacesSync(DescribeWorkspacesRequest req)
         {
             return InternalRequestAsync<DescribeWorkspacesResponse>(req, "DescribeWorkspaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启CLS日志投递
+        /// </summary>
+        /// <param name="req"><see cref="EnableTrainingTaskClsConfigRequest"/></param>
+        /// <returns><see cref="EnableTrainingTaskClsConfigResponse"/></returns>
+        public Task<EnableTrainingTaskClsConfigResponse> EnableTrainingTaskClsConfig(EnableTrainingTaskClsConfigRequest req)
+        {
+            return InternalRequestAsync<EnableTrainingTaskClsConfigResponse>(req, "EnableTrainingTaskClsConfig");
+        }
+
+        /// <summary>
+        /// 开启CLS日志投递
+        /// </summary>
+        /// <param name="req"><see cref="EnableTrainingTaskClsConfigRequest"/></param>
+        /// <returns><see cref="EnableTrainingTaskClsConfigResponse"/></returns>
+        public EnableTrainingTaskClsConfigResponse EnableTrainingTaskClsConfigSync(EnableTrainingTaskClsConfigRequest req)
+        {
+            return InternalRequestAsync<EnableTrainingTaskClsConfigResponse>(req, "EnableTrainingTaskClsConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

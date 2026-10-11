@@ -25,46 +25,46 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// ServiceMonitors配置
+        /// <p>ServiceMonitors配置</p>
         /// </summary>
         [JsonProperty("ServiceMonitors")]
         public PrometheusConfigItem[] ServiceMonitors{ get; set; }
 
         /// <summary>
-        /// PodMonitors配置
+        /// <p>PodMonitors配置</p>
         /// </summary>
         [JsonProperty("PodMonitors")]
         public PrometheusConfigItem[] PodMonitors{ get; set; }
 
         /// <summary>
-        /// prometheus原生Job配置
+        /// <p>prometheus原生Job配置</p>
         /// </summary>
         [JsonProperty("RawJobs")]
         public PrometheusConfigItem[] RawJobs{ get; set; }
 
         /// <summary>
-        /// 0: 更新实例组件镜像版本；
-        /// 1: 不更新实例组件镜像版本
+        /// <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
         /// </summary>
         [JsonProperty("UpdateImage")]
+        [System.Obsolete]
         public long? UpdateImage{ get; set; }
 
 

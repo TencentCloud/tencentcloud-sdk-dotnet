@@ -36,6 +36,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("IsExclusiveInstance")]
         public long? IsExclusiveInstance{ get; set; }
 
+        /// <summary>
+        /// <p>可用区组合列表</p>
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         {
             this.SetParamSimple(map, prefix + "FullReplications", this.FullReplications);
             this.SetParamSimple(map, prefix + "IsExclusiveInstance", this.IsExclusiveInstance);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

@@ -37,6 +37,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public string ToolName{ get; set; }
 
         /// <summary>
+        /// <p>待克隆的源沙箱 ID</p>
+        /// </summary>
+        [JsonProperty("SourceInstanceId")]
+        public string SourceInstanceId{ get; set; }
+
+        /// <summary>
         /// <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
         /// </summary>
         [JsonProperty("Timeout")]
@@ -80,6 +86,7 @@ namespace TencentCloud.Ags.V20250920.Models
         {
             this.SetParamSimple(map, prefix + "ToolId", this.ToolId);
             this.SetParamSimple(map, prefix + "ToolName", this.ToolName);
+            this.SetParamSimple(map, prefix + "SourceInstanceId", this.SourceInstanceId);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);

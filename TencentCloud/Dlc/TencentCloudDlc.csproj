@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1512</VersionPrefix>
+    <VersionPrefix>3.0.1519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -579,6 +579,7 @@
     <Compile Include="V20210125\Models\DetachWorkGroupPolicyResponse.cs" />
     <Compile Include="V20210125\Models\DlcConnection.cs" />
     <Compile Include="V20210125\Models\DorisConnection.cs" />
+    <Compile Include="V20210125\Models\DownloadInfo.cs" />
     <Compile Include="V20210125\Models\DropDMSDatabaseRequest.cs" />
     <Compile Include="V20210125\Models\DropDMSDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\DropDMSPartitionsRequest.cs" />
@@ -589,9 +590,11 @@
     <Compile Include="V20210125\Models\ElasticsearchInfo.cs" />
     <Compile Include="V20210125\Models\EmrResourceUsage.cs" />
     <Compile Include="V20210125\Models\EngineCapabilities.cs" />
+    <Compile Include="V20210125\Models\EngineConfigDependencies.cs" />
     <Compile Include="V20210125\Models\EngineNetworkInfo.cs" />
     <Compile Include="V20210125\Models\EngineResourceGroupConfigPair.cs" />
     <Compile Include="V20210125\Models\EngineSessionImage.cs" />
+    <Compile Include="V20210125\Models\EntrypointInfo.cs" />
     <Compile Include="V20210125\Models\Env.cs" />
     <Compile Include="V20210125\Models\EvalDatasetConfig.cs" />
     <Compile Include="V20210125\Models\EventItem.cs" />
@@ -694,6 +697,7 @@
     <Compile Include="V20210125\Models\IpPortPair.cs" />
     <Compile Include="V20210125\Models\JobBriefInfo.cs" />
     <Compile Include="V20210125\Models\JobDefinitionItemInfo.cs" />
+    <Compile Include="V20210125\Models\JobDetailInfo.cs" />
     <Compile Include="V20210125\Models\JobLogResult.cs" />
     <Compile Include="V20210125\Models\JobPodEntity.cs" />
     <Compile Include="V20210125\Models\JobSpec.cs" />
@@ -934,10 +938,12 @@
     <Compile Include="V20210125\Models\SortField.cs" />
     <Compile Include="V20210125\Models\SortOrder.cs" />
     <Compile Include="V20210125\Models\SparkJobInfo.cs" />
+    <Compile Include="V20210125\Models\SparkJobSpec.cs" />
     <Compile Include="V20210125\Models\SparkMonitorMetrics.cs" />
     <Compile Include="V20210125\Models\SparkSessionBatchLog.cs" />
     <Compile Include="V20210125\Models\SparkSessionBatchLogOperate.cs" />
     <Compile Include="V20210125\Models\SparkSessionInfo.cs" />
+    <Compile Include="V20210125\Models\Spec.cs" />
     <Compile Include="V20210125\Models\SpecInfo.cs" />
     <Compile Include="V20210125\Models\StandardEngineResourceGroupConfigInfo.cs" />
     <Compile Include="V20210125\Models\StandardEngineResourceGroupInfo.cs" />

@@ -25,19 +25,19 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 指标名
+        /// <p>指标名</p>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+        /// <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
         /// </summary>
         [JsonProperty("Compares")]
         public string[] Compares{ get; set; }
 
         /// <summary>
-        /// 同比，已弃用，不建议使用
+        /// <p>同比，已弃用，不建议使用</p>
         /// </summary>
         [JsonProperty("Compare")]
         public string Compare{ get; set; }

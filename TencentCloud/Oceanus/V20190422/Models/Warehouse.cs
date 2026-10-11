@@ -93,6 +93,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("HiveCatalogType")]
         public ulong? HiveCatalogType{ get; set; }
 
+        /// <summary>
+        /// <p>流湖托管通serialId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageSerialId")]
+        public string StorageSerialId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "HiveUri", this.HiveUri);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
             this.SetParamSimple(map, prefix + "HiveCatalogType", this.HiveCatalogType);
+            this.SetParamSimple(map, prefix + "StorageSerialId", this.StorageSerialId);
         }
     }
 }

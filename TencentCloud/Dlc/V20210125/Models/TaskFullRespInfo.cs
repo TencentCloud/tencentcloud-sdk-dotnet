@@ -484,6 +484,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceGroupType")]
         public string ResourceGroupType{ get; set; }
 
+        /// <summary>
+        /// <p>任务标签</p><p>参数格式：任意字符串</p>
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -562,6 +568,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ActiveCore", this.ActiveCore);
             this.SetParamSimple(map, prefix + "QueueTime", this.QueueTime);
             this.SetParamSimple(map, prefix + "ResourceGroupType", this.ResourceGroupType);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("ConnectionId")]
         public string ConnectionId{ get; set; }
 
+        /// <summary>
+        /// 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+        /// </summary>
+        [JsonProperty("CatalogSource")]
+        public string CatalogSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
             this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
             this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
+            this.SetParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
         }
     }
 }

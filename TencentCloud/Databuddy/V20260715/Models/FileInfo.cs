@@ -156,11 +156,18 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public long? ResourceMode{ get; set; }
 
         /// <summary>
-        /// ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+        /// <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncOperation")]
         public AsyncOperation AsyncOperation{ get; set; }
+
+        /// <summary>
+        /// <p>脚本版本ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
 
 
         /// <summary>
@@ -188,6 +195,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "ReleaseStatus", this.ReleaseStatus);
             this.SetParamSimple(map, prefix + "ResourceMode", this.ResourceMode);
             this.SetParamObj(map, prefix + "AsyncOperation.", this.AsyncOperation);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
         }
     }
 }

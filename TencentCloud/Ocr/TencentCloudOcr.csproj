@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1518</VersionPrefix>
+    <VersionPrefix>3.0.1519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,6 +92,8 @@
     <Compile Include="V20181119\Models\DescribeExtractDocAgentJobResponse.cs" />
     <Compile Include="V20181119\Models\DescribeMarkEssayAgentJobRequest.cs" />
     <Compile Include="V20181119\Models\DescribeMarkEssayAgentJobResponse.cs" />
+    <Compile Include="V20181119\Models\DescribeMultimodalDocParseJobRequest.cs" />
+    <Compile Include="V20181119\Models\DescribeMultimodalDocParseJobResponse.cs" />
     <Compile Include="V20181119\Models\DescribeQuestionMarkAgentJobRequest.cs" />
     <Compile Include="V20181119\Models\DescribeQuestionMarkAgentJobResponse.cs" />
     <Compile Include="V20181119\Models\DescribeQuestionSplitJobRequest.cs" />
@@ -254,10 +256,12 @@
     <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeValidIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeValidIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ReconstructDocumentFailedPage.cs" />
     <Compile Include="V20181119\Models\Rect.cs" />
     <Compile Include="V20181119\Models\RedLetterInvoiceItem.cs" />
     <Compile Include="V20181119\Models\ReflectDetailInfo.cs" />
     <Compile Include="V20181119\Models\RequestIdInfo.cs" />
+    <Compile Include="V20181119\Models\RerankResult.cs" />
     <Compile Include="V20181119\Models\ResidenceBookletOCRRequest.cs" />
     <Compile Include="V20181119\Models\ResidenceBookletOCRResponse.cs" />
     <Compile Include="V20181119\Models\ResidencePermitInfo.cs" />
@@ -266,6 +270,8 @@
     <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RunRerankRequest.cs" />
+    <Compile Include="V20181119\Models\RunRerankResponse.cs" />
     <Compile Include="V20181119\Models\SaleInventory.cs" />
     <Compile Include="V20181119\Models\SceneWarnInfo.cs" />
     <Compile Include="V20181119\Models\SchemaList.cs" />
@@ -285,6 +291,8 @@
     <Compile Include="V20181119\Models\SubmitExtractDocAgentJobResponse.cs" />
     <Compile Include="V20181119\Models\SubmitMarkEssayAgentJobRequest.cs" />
     <Compile Include="V20181119\Models\SubmitMarkEssayAgentJobResponse.cs" />
+    <Compile Include="V20181119\Models\SubmitMultimodalDocParseJobRequest.cs" />
+    <Compile Include="V20181119\Models\SubmitMultimodalDocParseJobResponse.cs" />
     <Compile Include="V20181119\Models\SubmitQuestionMarkAgentJobRequest.cs" />
     <Compile Include="V20181119\Models\SubmitQuestionMarkAgentJobResponse.cs" />
     <Compile Include="V20181119\Models\SubmitQuestionSplitJobRequest.cs" />

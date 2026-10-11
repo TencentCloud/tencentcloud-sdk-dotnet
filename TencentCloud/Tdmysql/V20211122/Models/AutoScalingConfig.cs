@@ -25,24 +25,53 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// <p>ccu最小值</p>
+        /// <p>最小值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RangeMin")]
         public float? RangeMin{ get; set; }
 
         /// <summary>
-        /// <p>ccu最大值</p>
+        /// <p>最大值</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RangeMax")]
         public float? RangeMax{ get; set; }
 
         /// <summary>
-        /// <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li></ul>
+        /// <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li><li>datadisk： 返回的是磁盘扩容的容量限制范围</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>是否允许升配</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScaleUpEnabled")]
+        public bool? ScaleUpEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>是否允许降配</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScaleDownEnabled")]
+        public bool? ScaleDownEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>触发阈值（%）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThresholdPercent")]
+        public long? ThresholdPercent{ get; set; }
+
+        /// <summary>
+        /// <p>变配步长</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Step")]
+        public float? Step{ get; set; }
 
 
         /// <summary>
@@ -53,6 +82,10 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "RangeMin", this.RangeMin);
             this.SetParamSimple(map, prefix + "RangeMax", this.RangeMax);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ScaleUpEnabled", this.ScaleUpEnabled);
+            this.SetParamSimple(map, prefix + "ScaleDownEnabled", this.ScaleDownEnabled);
+            this.SetParamSimple(map, prefix + "ThresholdPercent", this.ThresholdPercent);
+            this.SetParamSimple(map, prefix + "Step", this.Step);
         }
     }
 }

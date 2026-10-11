@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FB4519A5-C29F-3021-9DF3-791DE27C2D8D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,10 @@
     <Compile Include="V20190725\Models\CreateDBInstanceParamTplResponse.cs" />
     <Compile Include="V20190725\Models\CreateDBInstanceRequest.cs" />
     <Compile Include="V20190725\Models\CreateDBInstanceResponse.cs" />
+    <Compile Include="V20190725\Models\CreateInstanceRoleRequest.cs" />
+    <Compile Include="V20190725\Models\CreateInstanceRoleResponse.cs" />
+    <Compile Include="V20190725\Models\CreateInstanceUserRequest.cs" />
+    <Compile Include="V20190725\Models\CreateInstanceUserResponse.cs" />
     <Compile Include="V20190725\Models\CreateLogDownloadTaskRequest.cs" />
     <Compile Include="V20190725\Models\CreateLogDownloadTaskResponse.cs" />
     <Compile Include="V20190725\Models\CreateSlowLogPatternDownloadTaskRequest.cs" />
@@ -93,6 +97,10 @@
     <Compile Include="V20190725\Models\DeleteAuditLogFileResponse.cs" />
     <Compile Include="V20190725\Models\DeleteDBBackupsRequest.cs" />
     <Compile Include="V20190725\Models\DeleteDBBackupsResponse.cs" />
+    <Compile Include="V20190725\Models\DeleteInstanceRoleRequest.cs" />
+    <Compile Include="V20190725\Models\DeleteInstanceRoleResponse.cs" />
+    <Compile Include="V20190725\Models\DeleteInstanceUserRequest.cs" />
+    <Compile Include="V20190725\Models\DeleteInstanceUserResponse.cs" />
     <Compile Include="V20190725\Models\DeleteLogDownloadTaskRequest.cs" />
     <Compile Include="V20190725\Models\DeleteLogDownloadTaskResponse.cs" />
     <Compile Include="V20190725\Models\DeliverSummary.cs" />
@@ -138,8 +146,12 @@
     <Compile Include="V20190725\Models\DescribeDetailedSlowLogsResponse.cs" />
     <Compile Include="V20190725\Models\DescribeInstanceParamsRequest.cs" />
     <Compile Include="V20190725\Models\DescribeInstanceParamsResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceRolesRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceRolesResponse.cs" />
     <Compile Include="V20190725\Models\DescribeInstanceSSLRequest.cs" />
     <Compile Include="V20190725\Models\DescribeInstanceSSLResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceUsersRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceUsersResponse.cs" />
     <Compile Include="V20190725\Models\DescribeLogDownloadTasksRequest.cs" />
     <Compile Include="V20190725\Models\DescribeLogDownloadTasksResponse.cs" />
     <Compile Include="V20190725\Models\DescribeMongodbLogsRequest.cs" />
@@ -195,6 +207,7 @@
     <Compile Include="V20190725\Models\InstanceIntegerParam.cs" />
     <Compile Include="V20190725\Models\InstanceMultiParam.cs" />
     <Compile Include="V20190725\Models\InstanceTextParam.cs" />
+    <Compile Include="V20190725\Models\InstanceUserInfo.cs" />
     <Compile Include="V20190725\Models\IsolateDBInstanceRequest.cs" />
     <Compile Include="V20190725\Models\IsolateDBInstanceResponse.cs" />
     <Compile Include="V20190725\Models\KMSInfoDetail.cs" />
@@ -252,6 +265,10 @@
     <Compile Include="V20190725\Models\RestoreDBInstanceRequest.cs" />
     <Compile Include="V20190725\Models\RestoreDBInstanceResponse.cs" />
     <Compile Include="V20190725\Models\RestoreDatabases.cs" />
+    <Compile Include="V20190725\Models\Role.cs" />
+    <Compile Include="V20190725\Models\RoleInfo.cs" />
+    <Compile Include="V20190725\Models\RolePrivilege.cs" />
+    <Compile Include="V20190725\Models\RoleResource.cs" />
     <Compile Include="V20190725\Models\ScaleDownDBInstanceCpuRequest.cs" />
     <Compile Include="V20190725\Models\ScaleDownDBInstanceCpuResponse.cs" />
     <Compile Include="V20190725\Models\ScaleUpDBInstanceCpuRequest.cs" />
@@ -275,6 +292,10 @@
     <Compile Include="V20190725\Models\Task.cs" />
     <Compile Include="V20190725\Models\TerminateDBInstancesRequest.cs" />
     <Compile Include="V20190725\Models\TerminateDBInstancesResponse.cs" />
+    <Compile Include="V20190725\Models\UpdateInstanceRoleRequest.cs" />
+    <Compile Include="V20190725\Models\UpdateInstanceRoleResponse.cs" />
+    <Compile Include="V20190725\Models\UpdateInstanceUserRequest.cs" />
+    <Compile Include="V20190725\Models\UpdateInstanceUserResponse.cs" />
     <Compile Include="V20190725\Models\UpgradeDBInstanceKernelVersionRequest.cs" />
     <Compile Include="V20190725\Models\UpgradeDBInstanceKernelVersionResponse.cs" />
     <Compile Include="V20190725\Models\UpgradeDbInstanceVersionRequest.cs" />

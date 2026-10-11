@@ -25,7 +25,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// <p>要删除的用户组 ID 列表，单次最多100个</p>
+        /// 要删除的用户组 ID 列表，单次最多100个；可通过 ListConsoleGroups 接口获取
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }

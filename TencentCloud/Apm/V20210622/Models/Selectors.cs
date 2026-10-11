@@ -25,7 +25,7 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 组件勾选情况
+        /// <p>组件勾选情况</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Component")]

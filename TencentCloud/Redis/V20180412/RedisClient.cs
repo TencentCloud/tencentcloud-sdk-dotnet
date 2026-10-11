@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1502";
+       private const string sdkVersion = "SDK_NET_3.0.1519";
 
         /// <summary>
         /// Client constructor.
@@ -2511,6 +2511,27 @@ namespace TencentCloud.Redis.V20180412
         public UpgradeInstanceResponse UpgradeInstanceSync(UpgradeInstanceRequest req)
         {
             return InternalRequestAsync<UpgradeInstanceResponse>(req, "UpgradeInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeInstanceProductVersion）用于升级实例类型，可从通用 I 型升级到通用 II 型。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceProductVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceProductVersionResponse"/></returns>
+        public Task<UpgradeInstanceProductVersionResponse> UpgradeInstanceProductVersion(UpgradeInstanceProductVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceProductVersionResponse>(req, "UpgradeInstanceProductVersion");
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeInstanceProductVersion）用于升级实例类型，可从通用 I 型升级到通用 II 型。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceProductVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceProductVersionResponse"/></returns>
+        public UpgradeInstanceProductVersionResponse UpgradeInstanceProductVersionSync(UpgradeInstanceProductVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceProductVersionResponse>(req, "UpgradeInstanceProductVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Ags.V20250920
 
        private const string endpoint = "ags.tencentcloudapi.com";
        private const string version = "2025-09-20";
-       private const string sdkVersion = "SDK_NET_3.0.1514";
+       private const string sdkVersion = "SDK_NET_3.0.1519";
 
         /// <summary>
         /// Client constructor.
@@ -270,6 +270,29 @@ namespace TencentCloud.Ags.V20250920
         }
 
         /// <summary>
+        /// 创建沙箱快照
+        /// 该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxSnapshotRequest"/></param>
+        /// <returns><see cref="CreateSandboxSnapshotResponse"/></returns>
+        public Task<CreateSandboxSnapshotResponse> CreateSandboxSnapshot(CreateSandboxSnapshotRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxSnapshotResponse>(req, "CreateSandboxSnapshot");
+        }
+
+        /// <summary>
+        /// 创建沙箱快照
+        /// 该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSandboxSnapshotRequest"/></param>
+        /// <returns><see cref="CreateSandboxSnapshotResponse"/></returns>
+        public CreateSandboxSnapshotResponse CreateSandboxSnapshotSync(CreateSandboxSnapshotRequest req)
+        {
+            return InternalRequestAsync<CreateSandboxSnapshotResponse>(req, "CreateSandboxSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建沙箱工具
         /// </summary>
         /// <param name="req"><see cref="CreateSandboxToolRequest"/></param>
@@ -419,6 +442,29 @@ namespace TencentCloud.Ags.V20250920
         public DeleteRegistryRecordResponse DeleteRegistryRecordSync(DeleteRegistryRecordRequest req)
         {
             return InternalRequestAsync<DeleteRegistryRecordResponse>(req, "DeleteRegistryRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除沙箱快照
+        /// 该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteSandboxSnapshotResponse"/></returns>
+        public Task<DeleteSandboxSnapshotResponse> DeleteSandboxSnapshot(DeleteSandboxSnapshotRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxSnapshotResponse>(req, "DeleteSandboxSnapshot");
+        }
+
+        /// <summary>
+        /// 删除沙箱快照
+        /// 该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSandboxSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteSandboxSnapshotResponse"/></returns>
+        public DeleteSandboxSnapshotResponse DeleteSandboxSnapshotSync(DeleteSandboxSnapshotRequest req)
+        {
+            return InternalRequestAsync<DeleteSandboxSnapshotResponse>(req, "DeleteSandboxSnapshot")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -761,6 +807,29 @@ namespace TencentCloud.Ags.V20250920
         public DescribeSandboxInstanceListResponse DescribeSandboxInstanceListSync(DescribeSandboxInstanceListRequest req)
         {
             return InternalRequestAsync<DescribeSandboxInstanceListResponse>(req, "DescribeSandboxInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询沙箱快照
+        /// 该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。请关注后续版本及变更说明，并根据需要调整调用代码。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxSnapshotListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxSnapshotListResponse"/></returns>
+        public Task<DescribeSandboxSnapshotListResponse> DescribeSandboxSnapshotList(DescribeSandboxSnapshotListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxSnapshotListResponse>(req, "DescribeSandboxSnapshotList");
+        }
+
+        /// <summary>
+        /// 查询沙箱快照
+        /// 该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。请关注后续版本及变更说明，并根据需要调整调用代码。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxSnapshotListRequest"/></param>
+        /// <returns><see cref="DescribeSandboxSnapshotListResponse"/></returns>
+        public DescribeSandboxSnapshotListResponse DescribeSandboxSnapshotListSync(DescribeSandboxSnapshotListRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxSnapshotListResponse>(req, "DescribeSandboxSnapshotList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

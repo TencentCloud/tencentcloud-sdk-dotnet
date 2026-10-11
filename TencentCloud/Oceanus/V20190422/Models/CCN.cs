@@ -25,19 +25,19 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 私有网络 ID
+        /// <p>私有网络 ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID
+        /// <p>子网 ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 云联网 ID，如 ccn-rahigzjd
+        /// <p>云联网 ID，如 ccn-rahigzjd</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }

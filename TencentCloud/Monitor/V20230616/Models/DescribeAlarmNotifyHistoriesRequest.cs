@@ -25,46 +25,52 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 监控类型
+        /// <p>监控类型</p>
         /// </summary>
         [JsonProperty("MonitorType")]
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 起始时间点，unix秒级时间戳
+        /// <p>起始时间点，unix秒级时间戳</p>
         /// </summary>
         [JsonProperty("QueryBaseTime")]
         public long? QueryBaseTime{ get; set; }
 
         /// <summary>
-        /// 从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒
+        /// <p>从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒</p>
         /// </summary>
         [JsonProperty("QueryBeforeSeconds")]
         public long? QueryBeforeSeconds{ get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// <p>分页参数</p>
         /// </summary>
         [JsonProperty("PageParams")]
         public PageByNoParams PageParams{ get; set; }
 
         /// <summary>
-        /// 当监控类型为 MT_QCE 时候需要填写，归属的命名空间
+        /// <p>当监控类型为 MT_QCE 时候需要填写，归属的命名空间</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 当监控类型为 MT_QCE 时候需要填写， 告警策略类型
+        /// <p>当监控类型为 MT_QCE 时候需要填写， 告警策略类型</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 查询某个策略的通知历史
+        /// <p>查询某个策略的通知历史</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
+
+        /// <summary>
+        /// <p>详情页展示所需id</p>
+        /// </summary>
+        [JsonProperty("NotifyId")]
+        public string NotifyId{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "NotifyId", this.NotifyId);
         }
     }
 }

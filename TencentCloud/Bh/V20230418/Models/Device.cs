@@ -25,199 +25,199 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 资产ID
+        /// <p>资产ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 实例ID，对应CVM、CDB等实例ID
+        /// <p>实例ID，对应CVM、CDB等实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 资产名
+        /// <p>资产名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 公网IP
+        /// <p>公网IP</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 内网IP
+        /// <p>内网IP</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 地域编码
+        /// <p>地域编码</p>
         /// </summary>
         [JsonProperty("ApCode")]
         public string ApCode{ get; set; }
 
         /// <summary>
-        /// 地域名称
+        /// <p>地域名称</p>
         /// </summary>
         [JsonProperty("ApName")]
         public string ApName{ get; set; }
 
         /// <summary>
-        /// 操作系统名称
+        /// <p>操作系统名称</p>
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
-        /// 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+        /// <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
         /// </summary>
         [JsonProperty("Kind")]
         public ulong? Kind{ get; set; }
 
         /// <summary>
-        /// 管理端口
+        /// <p>管理端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 所属资产组列表
+        /// <p>所属资产组列表</p>
         /// </summary>
         [JsonProperty("GroupSet")]
         public Group[] GroupSet{ get; set; }
 
         /// <summary>
-        /// 资产绑定的账号数
+        /// <p>资产绑定的账号数</p>
         /// </summary>
         [JsonProperty("AccountCount")]
         public ulong? AccountCount{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 堡垒机服务信息，注意没有绑定服务时为null
+        /// <p>堡垒机服务信息，注意没有绑定服务时为null</p>
         /// </summary>
         [JsonProperty("Resource")]
         public Resource Resource{ get; set; }
 
         /// <summary>
-        /// 资产所属部门
+        /// <p>资产所属部门</p>
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
         /// <summary>
-        /// 数据库资产的多节点
+        /// <p>数据库资产的多节点</p>
         /// </summary>
         [JsonProperty("IpPortSet")]
         public string[] IpPortSet{ get; set; }
 
         /// <summary>
-        /// 网络域Id
+        /// <p>网络域Id</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 网络域名称
+        /// <p>网络域名称</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+        /// <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
         /// </summary>
         [JsonProperty("EnableSSL")]
         public long? EnableSSL{ get; set; }
 
         /// <summary>
-        /// 已上传的SSL证书名称
+        /// <p>已上传的SSL证书名称</p>
         /// </summary>
         [JsonProperty("SSLCertName")]
         public string SSLCertName{ get; set; }
 
         /// <summary>
-        /// IOA侧的资源ID
+        /// <p>IOA侧的资源ID</p>
         /// </summary>
         [JsonProperty("IOAId")]
         public long? IOAId{ get; set; }
 
         /// <summary>
-        /// K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+        /// <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
         /// </summary>
         [JsonProperty("ManageDimension")]
         public ulong? ManageDimension{ get; set; }
 
         /// <summary>
-        /// K8S集群托管账号id	
+        /// <p>K8S集群托管账号id</p>
         /// </summary>
         [JsonProperty("ManageAccountId")]
         public ulong? ManageAccountId{ get; set; }
 
         /// <summary>
-        /// K8S集群命名空间	
+        /// <p>K8S集群命名空间</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// K8S集群工作负载	
+        /// <p>K8S集群工作负载</p>
         /// </summary>
         [JsonProperty("Workload")]
         public string Workload{ get; set; }
 
         /// <summary>
-        /// K8S集群pod已同步数量
+        /// <p>K8S集群pod已同步数量</p>
         /// </summary>
         [JsonProperty("SyncPodCount")]
         public ulong? SyncPodCount{ get; set; }
 
         /// <summary>
-        /// K8S集群pod总数量	
+        /// <p>K8S集群pod总数量</p>
         /// </summary>
         [JsonProperty("TotalPodCount")]
         public ulong? TotalPodCount{ get; set; }
 
         /// <summary>
-        /// 云账号id
+        /// <p>云账号id</p>
         /// </summary>
         [JsonProperty("CloudAccountId")]
         public ulong? CloudAccountId{ get; set; }
 
         /// <summary>
-        /// 云账号名称
+        /// <p>云账号名称</p>
         /// </summary>
         [JsonProperty("CloudAccountName")]
         public string CloudAccountName{ get; set; }
 
         /// <summary>
-        /// 云厂商类型1-腾讯云，2-阿里云
+        /// <p>云厂商类型1-腾讯云，2-阿里云</p>
         /// </summary>
         [JsonProperty("ProviderType")]
         public ulong? ProviderType{ get; set; }
 
         /// <summary>
-        /// 云厂商名称
+        /// <p>云厂商名称</p>
         /// </summary>
         [JsonProperty("ProviderName")]
         public string ProviderName{ get; set; }
 
         /// <summary>
-        /// 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+        /// <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
         /// </summary>
         [JsonProperty("SyncCloudDeviceStatus")]
         public ulong? SyncCloudDeviceStatus{ get; set; }

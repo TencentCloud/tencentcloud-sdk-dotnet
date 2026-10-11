@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 告警历史
+        /// <p>告警历史</p>
         /// </summary>
         [JsonProperty("AlarmNotifyHistoryList")]
         public AlarmNotifyHistory[] AlarmNotifyHistoryList{ get; set; }
 
         /// <summary>
-        /// 分页情况
+        /// <p>分页情况</p>
         /// </summary>
         [JsonProperty("PageResult")]
         public PageByNoResult PageResult{ get; set; }

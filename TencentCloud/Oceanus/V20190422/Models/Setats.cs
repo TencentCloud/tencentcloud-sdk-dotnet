@@ -156,6 +156,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("IsolationPolicyVersion")]
         public long? IsolationPolicyVersion{ get; set; }
 
+        /// <summary>
+        /// <p>安全组信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// <p>网络信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CCNs")]
+        public CCN[] CCNs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +196,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArrayObj(map, prefix + "CCNs.", this.CCNs);
         }
     }
 }

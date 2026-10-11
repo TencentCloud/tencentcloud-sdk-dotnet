@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 关键词，数组长度限制：100 个词。
+        /// <p>关键词，数组长度限制：100 个词。</p>
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }

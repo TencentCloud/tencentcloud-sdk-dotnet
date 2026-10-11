@@ -36,6 +36,18 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
+        /// <summary>
+        /// <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertificateType")]
+        public string CertificateType{ get; set; }
+
+        /// <summary>
+        /// <p>腾讯云SSL证书服务的证书ID</p>
+        /// </summary>
+        [JsonProperty("CertificateId")]
+        public string CertificateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "CertificateType", this.CertificateType);
+            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
         }
     }
 }

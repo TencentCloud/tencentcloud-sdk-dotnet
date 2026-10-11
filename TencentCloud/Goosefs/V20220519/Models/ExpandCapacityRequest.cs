@@ -31,7 +31,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 新增扩容的系统容量
+        /// 新增扩容的系统容量(单位 GiB)
         /// </summary>
         [JsonProperty("ExpandedCapacity")]
         public ulong? ExpandedCapacity{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("ModifyType")]
         public string ModifyType{ get; set; }
 
+        /// <summary>
+        /// 是否是快速扩容,只针对部分model有效
+        /// </summary>
+        [JsonProperty("RapidExpansion")]
+        public bool? RapidExpansion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "ExpandedCapacity", this.ExpandedCapacity);
             this.SetParamSimple(map, prefix + "ModifyType", this.ModifyType);
+            this.SetParamSimple(map, prefix + "RapidExpansion", this.RapidExpansion);
         }
     }
 }

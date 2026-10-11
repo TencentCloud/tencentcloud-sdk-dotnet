@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1519";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeAccountGroupsResponse DescribeAccountGroupsSync(DescribeAccountGroupsRequest req)
         {
             return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列表账户虚拟组，支持分页，名称搜索，私有化调用path为：capi/Assets/DescribeAccountVirtualGroups，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountVirtualGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountVirtualGroupsResponse"/></returns>
+        public Task<DescribeAccountVirtualGroupsResponse> DescribeAccountVirtualGroups(DescribeAccountVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountVirtualGroupsResponse>(req, "DescribeAccountVirtualGroups");
+        }
+
+        /// <summary>
+        /// 列表账户虚拟组，支持分页，名称搜索，私有化调用path为：capi/Assets/DescribeAccountVirtualGroups，从7.x版本开始支持
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountVirtualGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountVirtualGroupsResponse"/></returns>
+        public DescribeAccountVirtualGroupsResponse DescribeAccountVirtualGroupsSync(DescribeAccountVirtualGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountVirtualGroupsResponse>(req, "DescribeAccountVirtualGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

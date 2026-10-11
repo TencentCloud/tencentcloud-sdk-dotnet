@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1514</VersionPrefix>
+    <VersionPrefix>3.0.1519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,8 @@
     <Compile Include="V20250920\Models\CreateRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\CreateRegistryRequest.cs" />
     <Compile Include="V20250920\Models\CreateRegistryResponse.cs" />
+    <Compile Include="V20250920\Models\CreateSandboxSnapshotRequest.cs" />
+    <Compile Include="V20250920\Models\CreateSandboxSnapshotResponse.cs" />
     <Compile Include="V20250920\Models\CreateSandboxToolRequest.cs" />
     <Compile Include="V20250920\Models\CreateSandboxToolResponse.cs" />
     <Compile Include="V20250920\Models\CreateSessionRequest.cs" />
@@ -104,6 +106,8 @@
     <Compile Include="V20250920\Models\DeleteRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\DeleteRegistryRequest.cs" />
     <Compile Include="V20250920\Models\DeleteRegistryResponse.cs" />
+    <Compile Include="V20250920\Models\DeleteSandboxSnapshotRequest.cs" />
+    <Compile Include="V20250920\Models\DeleteSandboxSnapshotResponse.cs" />
     <Compile Include="V20250920\Models\DeleteSandboxToolRequest.cs" />
     <Compile Include="V20250920\Models\DeleteSandboxToolResponse.cs" />
     <Compile Include="V20250920\Models\DeleteSessionRequest.cs" />
@@ -137,6 +141,8 @@
     <Compile Include="V20250920\Models\DescribeRegistryResponse.cs" />
     <Compile Include="V20250920\Models\DescribeSandboxInstanceListRequest.cs" />
     <Compile Include="V20250920\Models\DescribeSandboxInstanceListResponse.cs" />
+    <Compile Include="V20250920\Models\DescribeSandboxSnapshotListRequest.cs" />
+    <Compile Include="V20250920\Models\DescribeSandboxSnapshotListResponse.cs" />
     <Compile Include="V20250920\Models\DescribeSandboxToolListRequest.cs" />
     <Compile Include="V20250920\Models\DescribeSandboxToolListResponse.cs" />
     <Compile Include="V20250920\Models\DescribeSessionRequest.cs" />
@@ -187,6 +193,7 @@
     <Compile Include="V20250920\Models\ResumeSandboxInstanceRequest.cs" />
     <Compile Include="V20250920\Models\ResumeSandboxInstanceResponse.cs" />
     <Compile Include="V20250920\Models\SandboxInstance.cs" />
+    <Compile Include="V20250920\Models\SandboxSnapshot.cs" />
     <Compile Include="V20250920\Models\SandboxTool.cs" />
     <Compile Include="V20250920\Models\ScalingConfiguration.cs" />
     <Compile Include="V20250920\Models\SessionInfo.cs" />

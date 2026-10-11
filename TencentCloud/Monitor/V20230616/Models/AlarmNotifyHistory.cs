@@ -25,107 +25,114 @@ namespace TencentCloud.Monitor.V20230616.Models
     {
         
         /// <summary>
-        /// 通知的唯一ID
+        /// <p>通知的唯一ID</p>
         /// </summary>
         [JsonProperty("NotifyId")]
         public string NotifyId{ get; set; }
 
         /// <summary>
-        /// 告警策略ID
+        /// <p>告警策略ID</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 告警周期iD
+        /// <p>告警周期iD</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 通知时间 unix秒级时间戳
+        /// <p>通知时间 unix秒级时间戳</p>
         /// </summary>
         [JsonProperty("NotifyTime")]
         public long? NotifyTime{ get; set; }
 
         /// <summary>
-        /// 触发时间 unix秒级时间戳
+        /// <p>触发时间 unix秒级时间戳</p>
         /// </summary>
         [JsonProperty("TriggerTime")]
         public long? TriggerTime{ get; set; }
 
         /// <summary>
-        /// 告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别
+        /// <p>告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别</p>
         /// </summary>
         [JsonProperty("TriggerLevel")]
         public string TriggerLevel{ get; set; }
 
         /// <summary>
-        /// 告警内容
+        /// <p>告警内容</p>
         /// </summary>
         [JsonProperty("AlarmContent")]
         public string AlarmContent{ get; set; }
 
         /// <summary>
-        /// 告警对象
+        /// <p>告警对象</p>
         /// </summary>
         [JsonProperty("AlarmObject")]
         public string AlarmObject{ get; set; }
 
         /// <summary>
-        /// 本次告警通知涉及到的渠道合集
+        /// <p>本次告警通知涉及到的渠道合集</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChannelSet")]
         public string[] ChannelSet{ get; set; }
 
         /// <summary>
-        /// 渠道的接收人信息
+        /// <p>渠道的接收人信息</p>
         /// </summary>
         [JsonProperty("ChannelsReceivers")]
         public ChannelsReceivers[] ChannelsReceivers{ get; set; }
 
         /// <summary>
-        /// 告警策略名称
+        /// <p>告警策略名称</p>
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// Prometheus实例ID, 仅当 MT_PROME 时有效
+        /// <p>Prometheus实例ID, 仅当 MT_PROME 时有效</p>
         /// </summary>
         [JsonProperty("PromeInstanceID")]
         public string PromeInstanceID{ get; set; }
 
         /// <summary>
-        /// Prometheus实例所在的地域, 仅当 MT_PROME 时有效
+        /// <p>Prometheus实例所在的地域, 仅当 MT_PROME 时有效</p>
         /// </summary>
         [JsonProperty("PromeInstanceRegion")]
         public string PromeInstanceRegion{ get; set; }
 
         /// <summary>
-        /// 通知模板相关的配置信息
+        /// <p>通知模板相关的配置信息</p>
         /// </summary>
         [JsonProperty("Notices")]
         public NotifyRelatedNotice[] Notices{ get; set; }
 
         /// <summary>
-        /// 告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复
+        /// <p>告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复</p>
         /// </summary>
         [JsonProperty("TriggerStatus")]
         public string TriggerStatus{ get; set; }
 
         /// <summary>
-        /// 与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效
+        /// <p>与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效</p>
         /// </summary>
         [JsonProperty("PromeConsoleURL")]
         public string PromeConsoleURL{ get; set; }
 
         /// <summary>
-        /// 告警的lable
+        /// <p>告警的lable</p>
         /// </summary>
         [JsonProperty("Labels")]
         public AlarmLable[] Labels{ get; set; }
+
+        /// <summary>
+        /// <p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReceiverGroups")]
+        public ReceiverGroup[] ReceiverGroups{ get; set; }
 
 
         /// <summary>
@@ -150,6 +157,7 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamSimple(map, prefix + "TriggerStatus", this.TriggerStatus);
             this.SetParamSimple(map, prefix + "PromeConsoleURL", this.PromeConsoleURL);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamArrayObj(map, prefix + "ReceiverGroups.", this.ReceiverGroups);
         }
     }
 }

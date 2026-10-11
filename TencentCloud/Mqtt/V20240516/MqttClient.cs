@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1503";
+       private const string sdkVersion = "SDK_NET_3.0.1519";
 
         /// <summary>
         /// Client constructor.
@@ -764,6 +764,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeCaCertificatesResponse DescribeCaCertificatesSync(DescribeCaCertificatesRequest req)
         {
             return InternalRequestAsync<DescribeCaCertificatesResponse>(req, "DescribeCaCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientEventsRequest"/></param>
+        /// <returns><see cref="DescribeClientEventsResponse"/></returns>
+        public Task<DescribeClientEventsResponse> DescribeClientEvents(DescribeClientEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeClientEventsResponse>(req, "DescribeClientEvents");
+        }
+
+        /// <summary>
+        /// 查询轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientEventsRequest"/></param>
+        /// <returns><see cref="DescribeClientEventsResponse"/></returns>
+        public DescribeClientEventsResponse DescribeClientEventsSync(DescribeClientEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeClientEventsResponse>(req, "DescribeClientEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

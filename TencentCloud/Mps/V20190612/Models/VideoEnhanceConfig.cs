@@ -115,6 +115,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AiRestoration")]
         public AiRestorationConfig AiRestoration{ get; set; }
 
+        /// <summary>
+        /// <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiffusionEnhanceV2")]
+        public DiffusionEnhanceV2Config DiffusionEnhanceV2{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "DiffusionEnhance.", this.DiffusionEnhance);
             this.SetParamObj(map, prefix + "FrameRateWithDen.", this.FrameRateWithDen);
             this.SetParamObj(map, prefix + "AiRestoration.", this.AiRestoration);
+            this.SetParamObj(map, prefix + "DiffusionEnhanceV2.", this.DiffusionEnhanceV2);
         }
     }
 }

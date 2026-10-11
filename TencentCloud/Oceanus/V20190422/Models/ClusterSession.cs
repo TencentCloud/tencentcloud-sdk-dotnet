@@ -25,138 +25,215 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 集群SerialId
+        /// <p>集群SerialId</p>
         /// </summary>
         [JsonProperty("ClusterGroupSerialId")]
         public string ClusterGroupSerialId{ get; set; }
 
         /// <summary>
-        /// 创建者appId
+        /// <p>创建者appId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 创建者主账号
+        /// <p>创建者主账号</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 创建者账号
+        /// <p>创建者账号</p>
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 区域
+        /// <p>区域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// zone
+        /// <p>zone</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Session集群状态
+        /// <p>Session集群状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Session集群消耗的cu数量
+        /// <p>Session集群消耗的cu数量</p>
         /// </summary>
         [JsonProperty("CuNum")]
         public float? CuNum{ get; set; }
 
         /// <summary>
-        /// Session集群的Flink版本
+        /// <p>Session集群的Flink版本</p>
         /// </summary>
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
         /// <summary>
-        /// session集群FlinkUi地址
+        /// <p>session集群FlinkUi地址</p>
         /// </summary>
         [JsonProperty("WebUIUrl")]
         public string WebUIUrl{ get; set; }
 
         /// <summary>
-        /// session集群高级参数
+        /// <p>session集群高级参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
         /// <summary>
-        /// 引用资源
+        /// <p>引用资源</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRefs")]
         public SessionClusterRefItem[] ResourceRefs{ get; set; }
 
         /// <summary>
-        /// JobManager的规格
+        /// <p>JobManager的规格</p>
         /// </summary>
         [JsonProperty("JobManagerCuSpec")]
         public float? JobManagerCuSpec{ get; set; }
 
         /// <summary>
-        /// TaskManager的规格
+        /// <p>TaskManager的规格</p>
         /// </summary>
         [JsonProperty("TaskManagerCuSpec")]
         public float? TaskManagerCuSpec{ get; set; }
 
         /// <summary>
-        /// TaskManager启动的数量
+        /// <p>TaskManager启动的数量</p>
         /// </summary>
         [JsonProperty("TaskManagerNum")]
         public long? TaskManagerNum{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// JobManagerCpu
+        /// <p>JobManagerCpu</p>
         /// </summary>
         [JsonProperty("JobManagerCpu")]
         public float? JobManagerCpu{ get; set; }
 
         /// <summary>
-        /// JobManagerMem
+        /// <p>JobManagerMem</p>
         /// </summary>
         [JsonProperty("JobManagerMem")]
         public float? JobManagerMem{ get; set; }
 
         /// <summary>
-        /// TaskManagerCpu
+        /// <p>TaskManagerCpu</p>
         /// </summary>
         [JsonProperty("TaskManagerCpu")]
         public float? TaskManagerCpu{ get; set; }
 
         /// <summary>
-        /// TaskManagerMem
+        /// <p>TaskManagerMem</p>
         /// </summary>
         [JsonProperty("TaskManagerMem")]
         public float? TaskManagerMem{ get; set; }
 
         /// <summary>
-        /// jdk版本
+        /// <p>jdk版本</p>
         /// </summary>
         [JsonProperty("JdkVersion")]
         public string JdkVersion{ get; set; }
+
+        /// <summary>
+        /// <p>描述</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>session集群SerialId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SerialId")]
+        public string SerialId{ get; set; }
+
+        /// <summary>
+        /// <p>集群名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterGroupName")]
+        public string ClusterGroupName{ get; set; }
+
+        /// <summary>
+        /// <p>cu</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCpu")]
+        public float? TotalCpu{ get; set; }
+
+        /// <summary>
+        /// <p>使用Mem</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalMem")]
+        public float? TotalMem{ get; set; }
+
+        /// <summary>
+        /// <p>空间Id</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
+        /// <summary>
+        /// <p>空间名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkSpaceName")]
+        public string WorkSpaceName{ get; set; }
+
+        /// <summary>
+        /// <p>标签列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>采集日志配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogConfig")]
+        public string LogConfig{ get; set; }
+
+        /// <summary>
+        /// <p>更新用户</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateUin")]
+        public string UpdateUin{ get; set; }
 
 
         /// <summary>
@@ -186,6 +263,17 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
             this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
             this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SerialId", this.SerialId);
+            this.SetParamSimple(map, prefix + "ClusterGroupName", this.ClusterGroupName);
+            this.SetParamSimple(map, prefix + "TotalCpu", this.TotalCpu);
+            this.SetParamSimple(map, prefix + "TotalMem", this.TotalMem);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "LogConfig", this.LogConfig);
+            this.SetParamSimple(map, prefix + "UpdateUin", this.UpdateUin);
         }
     }
 }

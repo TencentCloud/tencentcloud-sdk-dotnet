@@ -118,6 +118,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AiComposeConfig")]
         public AiComposeConfig AiComposeConfig{ get; set; }
 
+        /// <summary>
+        /// <p>图层分离配置。</p>
+        /// </summary>
+        [JsonProperty("AiDecomposeConfig")]
+        public AiDecomposeConfig AiDecomposeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +145,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
             this.SetParamObj(map, prefix + "ImageQualityConfig.", this.ImageQualityConfig);
             this.SetParamObj(map, prefix + "AiComposeConfig.", this.AiComposeConfig);
+            this.SetParamObj(map, prefix + "AiDecomposeConfig.", this.AiDecomposeConfig);
         }
     }
 }

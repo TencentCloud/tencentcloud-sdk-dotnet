@@ -72,6 +72,18 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("AggregationCount")]
         public long? AggregationCount{ get; set; }
 
+        /// <summary>
+        /// <p>状态</p>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>最近检测时间</p>
+        /// </summary>
+        [JsonProperty("LastCheckTime")]
+        public string LastCheckTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
             this.SetParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
             this.SetParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
         }
     }
 }

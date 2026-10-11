@@ -31,7 +31,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string WorkspaceId{ get; set; }
 
         /// <summary>
-        /// 角色ID
+        /// 角色ID，可通过 ListWorkspaceRoles 接口获取
         /// </summary>
         [JsonProperty("RoleId")]
         public string RoleId{ get; set; }

@@ -25,32 +25,39 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 音频降噪配置。
+        /// <p>音频降噪配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Denoise")]
         public AudioDenoiseConfig Denoise{ get; set; }
 
         /// <summary>
-        /// 音频分离配置。
+        /// <p>音频分离配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Separate")]
         public AudioSeparateConfig Separate{ get; set; }
 
         /// <summary>
-        /// 音量均衡配置。
+        /// <p>音量均衡配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeBalance")]
         public VolumeBalanceConfig VolumeBalance{ get; set; }
 
         /// <summary>
-        /// 音频美化配置。
+        /// <p>音频美化配置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Beautify")]
         public AudioBeautifyConfig Beautify{ get; set; }
+
+        /// <summary>
+        /// <p>音频增强编辑。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioEnhanceEdit")]
+        public AudioEnhanceEditConfig AudioEnhanceEdit{ get; set; }
 
 
         /// <summary>
@@ -62,6 +69,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "Separate.", this.Separate);
             this.SetParamObj(map, prefix + "VolumeBalance.", this.VolumeBalance);
             this.SetParamObj(map, prefix + "Beautify.", this.Beautify);
+            this.SetParamObj(map, prefix + "AudioEnhanceEdit.", this.AudioEnhanceEdit);
         }
     }
 }

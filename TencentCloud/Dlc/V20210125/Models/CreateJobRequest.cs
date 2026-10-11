@@ -97,16 +97,34 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string QueueName{ get; set; }
 
         /// <summary>
+        /// <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
+        /// </summary>
+        [JsonProperty("Spec")]
+        public Spec Spec{ get; set; }
+
+        /// <summary>
         /// <p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p>
         /// </summary>
         [JsonProperty("CustomProperties")]
         public string CustomProperties{ get; set; }
 
         /// <summary>
+        /// <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+        /// </summary>
+        [JsonProperty("Dependencies")]
+        public EngineConfigDependencies Dependencies{ get; set; }
+
+        /// <summary>
         /// <p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
         /// </summary>
         [JsonProperty("EnvVars")]
         public KVPair[] EnvVars{ get; set; }
+
+        /// <summary>
+        /// <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
+        /// </summary>
+        [JsonProperty("Entrypoint")]
+        public EntrypointInfo Entrypoint{ get; set; }
 
 
         /// <summary>
@@ -126,8 +144,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SysCatalogVersion", this.SysCatalogVersion);
             this.SetParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamObj(map, prefix + "Spec.", this.Spec);
             this.SetParamSimple(map, prefix + "CustomProperties", this.CustomProperties);
+            this.SetParamObj(map, prefix + "Dependencies.", this.Dependencies);
             this.SetParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
+            this.SetParamObj(map, prefix + "Entrypoint.", this.Entrypoint);
         }
     }
 }

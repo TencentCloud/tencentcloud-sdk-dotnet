@@ -60,6 +60,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("CatalogSource")]
         public string CatalogSource{ get; set; }
 
+        /// <summary>
+        /// 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+        /// </summary>
+        [JsonProperty("ConnectionCatalogName")]
+        public string ConnectionCatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
             this.SetParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
+            this.SetParamSimple(map, prefix + "ConnectionCatalogName", this.ConnectionCatalogName);
         }
     }
 }

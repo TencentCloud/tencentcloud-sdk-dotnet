@@ -25,43 +25,43 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// pod name
+        /// <p>pod name</p>
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// 命名空间
+        /// <p>命名空间</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 工作负载
+        /// <p>工作负载</p>
         /// </summary>
         [JsonProperty("Deployment")]
         public string Deployment{ get; set; }
 
         /// <summary>
-        /// pod ip
+        /// <p>pod ip</p>
         /// </summary>
         [JsonProperty("PodIP")]
         public string PodIP{ get; set; }
 
         /// <summary>
-        /// node ip
+        /// <p>node ip</p>
         /// </summary>
         [JsonProperty("NodeIP")]
         public string NodeIP{ get; set; }

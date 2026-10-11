@@ -93,6 +93,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultCatalogSource")]
+        public string DefaultCatalogSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamArrayObj(map, prefix + "OutputConf.", this.OutputConf);
             this.SetParamSimple(map, prefix + "SqlSyntax", this.SqlSyntax);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "DefaultCatalogSource", this.DefaultCatalogSource);
         }
     }
 }

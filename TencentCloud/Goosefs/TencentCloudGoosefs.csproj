@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C8FAE73A-C1CE-3D50-805A-4FB5B32F597E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1500</VersionPrefix>
+    <VersionPrefix>3.0.1519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20220519\Models\BuildCustomerClusterResponse.cs" />
     <Compile Include="V20220519\Models\CancelLoadTaskRequest.cs" />
     <Compile Include="V20220519\Models\CancelLoadTaskResponse.cs" />
+    <Compile Include="V20220519\Models\CancelPolicyRuleExecuteRecordRequest.cs" />
+    <Compile Include="V20220519\Models\CancelPolicyRuleExecuteRecordResponse.cs" />
     <Compile Include="V20220519\Models\ChargeAttribute.cs" />
     <Compile Include="V20220519\Models\ClientClusterManagerNodeInfo.cs" />
     <Compile Include="V20220519\Models\ClientNodeAttribute.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="V20220519\Models\CreateFilesetResponse.cs" />
     <Compile Include="V20220519\Models\CreateLoadTaskRequest.cs" />
     <Compile Include="V20220519\Models\CreateLoadTaskResponse.cs" />
+    <Compile Include="V20220519\Models\CreatePolicyRuleRequest.cs" />
+    <Compile Include="V20220519\Models\CreatePolicyRuleResponse.cs" />
     <Compile Include="V20220519\Models\CustomerClusterAttr.cs" />
     <Compile Include="V20220519\Models\DeleteCrossVpcSubnetSupportForClientNodeRequest.cs" />
     <Compile Include="V20220519\Models\DeleteCrossVpcSubnetSupportForClientNodeResponse.cs" />
@@ -84,6 +88,8 @@
     <Compile Include="V20220519\Models\DeleteFileSystemResponse.cs" />
     <Compile Include="V20220519\Models\DeleteFilesetRequest.cs" />
     <Compile Include="V20220519\Models\DeleteFilesetResponse.cs" />
+    <Compile Include="V20220519\Models\DeletePolicyRuleRequest.cs" />
+    <Compile Include="V20220519\Models\DeletePolicyRuleResponse.cs" />
     <Compile Include="V20220519\Models\DescribeClientNodesRequest.cs" />
     <Compile Include="V20220519\Models\DescribeClientNodesResponse.cs" />
     <Compile Include="V20220519\Models\DescribeClusterClientTokenRequest.cs" />
@@ -104,9 +110,19 @@
     <Compile Include="V20220519\Models\DescribeFilesetsResponse.cs" />
     <Compile Include="V20220519\Models\DescribeLoadTaskRequest.cs" />
     <Compile Include="V20220519\Models\DescribeLoadTaskResponse.cs" />
+    <Compile Include="V20220519\Models\DescribePolicyRuleExecuteRecordRequest.cs" />
+    <Compile Include="V20220519\Models\DescribePolicyRuleExecuteRecordResponse.cs" />
+    <Compile Include="V20220519\Models\DescribePolicyRuleRequest.cs" />
+    <Compile Include="V20220519\Models\DescribePolicyRuleResponse.cs" />
     <Compile Include="V20220519\Models\DetachFileSystemBucketRequest.cs" />
     <Compile Include="V20220519\Models\DetachFileSystemBucketResponse.cs" />
+    <Compile Include="V20220519\Models\DisablePolicyRuleRequest.cs" />
+    <Compile Include="V20220519\Models\DisablePolicyRuleResponse.cs" />
     <Compile Include="V20220519\Models\DistributedLoadAttrs.cs" />
+    <Compile Include="V20220519\Models\EnablePolicyRuleRequest.cs" />
+    <Compile Include="V20220519\Models\EnablePolicyRuleResponse.cs" />
+    <Compile Include="V20220519\Models\ExecutePeriodAttribute.cs" />
+    <Compile Include="V20220519\Models\ExecutionPlan.cs" />
     <Compile Include="V20220519\Models\ExpandCapacityRequest.cs" />
     <Compile Include="V20220519\Models\ExpandCapacityResponse.cs" />
     <Compile Include="V20220519\Models\FSAttribute.cs" />
@@ -119,6 +135,7 @@
     <Compile Include="V20220519\Models\LoadDataAttrs.cs" />
     <Compile Include="V20220519\Models\LoadTaskAttrs.cs" />
     <Compile Include="V20220519\Models\LoadTaskCreationAttrs.cs" />
+    <Compile Include="V20220519\Models\ManifestAttr.cs" />
     <Compile Include="V20220519\Models\MappedBucket.cs" />
     <Compile Include="V20220519\Models\MetadataLoadAttrs.cs" />
     <Compile Include="V20220519\Models\ModifyDataRepositoryBandwidthRequest.cs" />
@@ -128,6 +145,8 @@
     <Compile Include="V20220519\Models\MountMultipleStorageFileSystemRequest.cs" />
     <Compile Include="V20220519\Models\MountMultipleStorageFileSystemResponse.cs" />
     <Compile Include="V20220519\Models\MountPointEntry.cs" />
+    <Compile Include="V20220519\Models\PolicyRuleOperator.cs" />
+    <Compile Include="V20220519\Models\PolicyRuleTaskAttribute.cs" />
     <Compile Include="V20220519\Models\QueryClientNodeMountCommandRequest.cs" />
     <Compile Include="V20220519\Models\QueryClientNodeMountCommandResponse.cs" />
     <Compile Include="V20220519\Models\QueryCrossVpcSubnetSupportForClientNodeRequest.cs" />
@@ -135,6 +154,7 @@
     <Compile Include="V20220519\Models\QueryDataRepositoryBandwidthRequest.cs" />
     <Compile Include="V20220519\Models\QueryDataRepositoryBandwidthResponse.cs" />
     <Compile Include="V20220519\Models\RoleToken.cs" />
+    <Compile Include="V20220519\Models\RuleExecuteAttribute.cs" />
     <Compile Include="V20220519\Models\SubnetInfo.cs" />
     <Compile Include="V20220519\Models\Tag.cs" />
     <Compile Include="V20220519\Models\UpdateFilesetGeneralConfigRequest.cs" />

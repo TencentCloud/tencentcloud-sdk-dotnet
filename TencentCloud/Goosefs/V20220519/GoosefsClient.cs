@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1519";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 取消正在执行的扫描任务，正在扫描的任务取消后没有结果
+        /// </summary>
+        /// <param name="req"><see cref="CancelPolicyRuleExecuteRecordRequest"/></param>
+        /// <returns><see cref="CancelPolicyRuleExecuteRecordResponse"/></returns>
+        public Task<CancelPolicyRuleExecuteRecordResponse> CancelPolicyRuleExecuteRecord(CancelPolicyRuleExecuteRecordRequest req)
+        {
+            return InternalRequestAsync<CancelPolicyRuleExecuteRecordResponse>(req, "CancelPolicyRuleExecuteRecord");
+        }
+
+        /// <summary>
+        /// 取消正在执行的扫描任务，正在扫描的任务取消后没有结果
+        /// </summary>
+        /// <param name="req"><see cref="CancelPolicyRuleExecuteRecordRequest"/></param>
+        /// <returns><see cref="CancelPolicyRuleExecuteRecordResponse"/></returns>
+        public CancelPolicyRuleExecuteRecordResponse CancelPolicyRuleExecuteRecordSync(CancelPolicyRuleExecuteRecordRequest req)
+        {
+            return InternalRequestAsync<CancelPolicyRuleExecuteRecordResponse>(req, "CancelPolicyRuleExecuteRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
         /// </summary>
         /// <param name="req"><see cref="CreateDataRepositoryTaskRequest"/></param>
@@ -285,6 +306,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 创建数据洞察任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyRuleRequest"/></param>
+        /// <returns><see cref="CreatePolicyRuleResponse"/></returns>
+        public Task<CreatePolicyRuleResponse> CreatePolicyRule(CreatePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePolicyRuleResponse>(req, "CreatePolicyRule");
+        }
+
+        /// <summary>
+        /// 创建数据洞察任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyRuleRequest"/></param>
+        /// <returns><see cref="CreatePolicyRuleResponse"/></returns>
+        public CreatePolicyRuleResponse CreatePolicyRuleSync(CreatePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePolicyRuleResponse>(req, "CreatePolicyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 为客户端节点删除跨vpc子网访问能力
         /// </summary>
         /// <param name="req"><see cref="DeleteCrossVpcSubnetSupportForClientNodeRequest"/></param>
@@ -365,6 +407,27 @@ namespace TencentCloud.Goosefs.V20220519
         public DeleteFilesetResponse DeleteFilesetSync(DeleteFilesetRequest req)
         {
             return InternalRequestAsync<DeleteFilesetResponse>(req, "DeleteFileset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除扫描规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyRuleRequest"/></param>
+        /// <returns><see cref="DeletePolicyRuleResponse"/></returns>
+        public Task<DeletePolicyRuleResponse> DeletePolicyRule(DeletePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePolicyRuleResponse>(req, "DeletePolicyRule");
+        }
+
+        /// <summary>
+        /// 删除扫描规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyRuleRequest"/></param>
+        /// <returns><see cref="DeletePolicyRuleResponse"/></returns>
+        public DeletePolicyRuleResponse DeletePolicyRuleSync(DeletePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePolicyRuleResponse>(req, "DeletePolicyRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -579,6 +642,48 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 列出所有的扫描规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRuleRequest"/></param>
+        /// <returns><see cref="DescribePolicyRuleResponse"/></returns>
+        public Task<DescribePolicyRuleResponse> DescribePolicyRule(DescribePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyRuleResponse>(req, "DescribePolicyRule");
+        }
+
+        /// <summary>
+        /// 列出所有的扫描规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRuleRequest"/></param>
+        /// <returns><see cref="DescribePolicyRuleResponse"/></returns>
+        public DescribePolicyRuleResponse DescribePolicyRuleSync(DescribePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyRuleResponse>(req, "DescribePolicyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出指定扫描规则的执行记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRuleExecuteRecordRequest"/></param>
+        /// <returns><see cref="DescribePolicyRuleExecuteRecordResponse"/></returns>
+        public Task<DescribePolicyRuleExecuteRecordResponse> DescribePolicyRuleExecuteRecord(DescribePolicyRuleExecuteRecordRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyRuleExecuteRecordResponse>(req, "DescribePolicyRuleExecuteRecord");
+        }
+
+        /// <summary>
+        /// 列出指定扫描规则的执行记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRuleExecuteRecordRequest"/></param>
+        /// <returns><see cref="DescribePolicyRuleExecuteRecordResponse"/></returns>
+        public DescribePolicyRuleExecuteRecordResponse DescribePolicyRuleExecuteRecordSync(DescribePolicyRuleExecuteRecordRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyRuleExecuteRecordResponse>(req, "DescribePolicyRuleExecuteRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 解绑文件系统与Bucket的映射
         /// </summary>
         /// <param name="req"><see cref="DetachFileSystemBucketRequest"/></param>
@@ -596,6 +701,48 @@ namespace TencentCloud.Goosefs.V20220519
         public DetachFileSystemBucketResponse DetachFileSystemBucketSync(DetachFileSystemBucketRequest req)
         {
             return InternalRequestAsync<DetachFileSystemBucketResponse>(req, "DetachFileSystemBucket")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 禁用扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DisablePolicyRuleRequest"/></param>
+        /// <returns><see cref="DisablePolicyRuleResponse"/></returns>
+        public Task<DisablePolicyRuleResponse> DisablePolicyRule(DisablePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<DisablePolicyRuleResponse>(req, "DisablePolicyRule");
+        }
+
+        /// <summary>
+        /// 禁用扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="DisablePolicyRuleRequest"/></param>
+        /// <returns><see cref="DisablePolicyRuleResponse"/></returns>
+        public DisablePolicyRuleResponse DisablePolicyRuleSync(DisablePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<DisablePolicyRuleResponse>(req, "DisablePolicyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="EnablePolicyRuleRequest"/></param>
+        /// <returns><see cref="EnablePolicyRuleResponse"/></returns>
+        public Task<EnablePolicyRuleResponse> EnablePolicyRule(EnablePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<EnablePolicyRuleResponse>(req, "EnablePolicyRule");
+        }
+
+        /// <summary>
+        /// 启用扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="EnablePolicyRuleRequest"/></param>
+        /// <returns><see cref="EnablePolicyRuleResponse"/></returns>
+        public EnablePolicyRuleResponse EnablePolicyRuleSync(EnablePolicyRuleRequest req)
+        {
+            return InternalRequestAsync<EnablePolicyRuleResponse>(req, "EnablePolicyRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

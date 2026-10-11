@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1519";
 
         /// <summary>
         /// Client constructor.
@@ -596,6 +596,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeServiceOverviewResponse DescribeServiceOverviewSync(DescribeServiceOverviewRequest req)
         {
             return InternalRequestAsync<DescribeServiceOverviewResponse>(req, "DescribeServiceOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询trace详情接口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpanTreeByIDRequest"/></param>
+        /// <returns><see cref="DescribeSpanTreeByIDResponse"/></returns>
+        public Task<DescribeSpanTreeByIDResponse> DescribeSpanTreeByID(DescribeSpanTreeByIDRequest req)
+        {
+            return InternalRequestAsync<DescribeSpanTreeByIDResponse>(req, "DescribeSpanTreeByID");
+        }
+
+        /// <summary>
+        /// 查询trace详情接口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpanTreeByIDRequest"/></param>
+        /// <returns><see cref="DescribeSpanTreeByIDResponse"/></returns>
+        public DescribeSpanTreeByIDResponse DescribeSpanTreeByIDSync(DescribeSpanTreeByIDRequest req)
+        {
+            return InternalRequestAsync<DescribeSpanTreeByIDResponse>(req, "DescribeSpanTreeByID")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
