@@ -25,19 +25,19 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 文件类型描述(如"文本文档")
+        /// <p>描述信息</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 文件类型(如 txt、pdf、jpg, 建议用扩展名)
+        /// <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
         /// </summary>
         [JsonProperty("FileExt")]
         public string FileExt{ get; set; }
 
         /// <summary>
-        /// 文件大小限制(单位: 字节)
+        /// <p>文件大小限制（单位：字节）</p>
         /// </summary>
         [JsonProperty("MaxSizeBytes")]
         public string MaxSizeBytes{ get; set; }

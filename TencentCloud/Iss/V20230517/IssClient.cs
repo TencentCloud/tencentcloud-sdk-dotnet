@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1510";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -228,6 +228,48 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 批量添加截图配置的通道
+        /// </summary>
+        /// <param name="req"><see cref="BatchAddVideoSnapshotConfigChannelRequest"/></param>
+        /// <returns><see cref="BatchAddVideoSnapshotConfigChannelResponse"/></returns>
+        public Task<BatchAddVideoSnapshotConfigChannelResponse> BatchAddVideoSnapshotConfigChannel(BatchAddVideoSnapshotConfigChannelRequest req)
+        {
+            return InternalRequestAsync<BatchAddVideoSnapshotConfigChannelResponse>(req, "BatchAddVideoSnapshotConfigChannel");
+        }
+
+        /// <summary>
+        /// 批量添加截图配置的通道
+        /// </summary>
+        /// <param name="req"><see cref="BatchAddVideoSnapshotConfigChannelRequest"/></param>
+        /// <returns><see cref="BatchAddVideoSnapshotConfigChannelResponse"/></returns>
+        public BatchAddVideoSnapshotConfigChannelResponse BatchAddVideoSnapshotConfigChannelSync(BatchAddVideoSnapshotConfigChannelRequest req)
+        {
+            return InternalRequestAsync<BatchAddVideoSnapshotConfigChannelResponse>(req, "BatchAddVideoSnapshotConfigChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量关联视觉理解计划通道
+        /// </summary>
+        /// <param name="req"><see cref="BatchAssignVLPlanChannelsRequest"/></param>
+        /// <returns><see cref="BatchAssignVLPlanChannelsResponse"/></returns>
+        public Task<BatchAssignVLPlanChannelsResponse> BatchAssignVLPlanChannels(BatchAssignVLPlanChannelsRequest req)
+        {
+            return InternalRequestAsync<BatchAssignVLPlanChannelsResponse>(req, "BatchAssignVLPlanChannels");
+        }
+
+        /// <summary>
+        /// 批量关联视觉理解计划通道
+        /// </summary>
+        /// <param name="req"><see cref="BatchAssignVLPlanChannelsRequest"/></param>
+        /// <returns><see cref="BatchAssignVLPlanChannelsResponse"/></returns>
+        public BatchAssignVLPlanChannelsResponse BatchAssignVLPlanChannelsSync(BatchAssignVLPlanChannelsRequest req)
+        {
+            return InternalRequestAsync<BatchAssignVLPlanChannelsResponse>(req, "BatchAssignVLPlanChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于批量删除本地录像下载失败的任务
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteVideoDownloadTaskRequest"/></param>
@@ -245,6 +287,48 @@ namespace TencentCloud.Iss.V20230517
         public BatchDeleteVideoDownloadTaskResponse BatchDeleteVideoDownloadTaskSync(BatchDeleteVideoDownloadTaskRequest req)
         {
             return InternalRequestAsync<BatchDeleteVideoDownloadTaskResponse>(req, "BatchDeleteVideoDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量获取视觉理解计划源素材 URL
+        /// </summary>
+        /// <param name="req"><see cref="BatchGetVLPlanSourceFileURLRequest"/></param>
+        /// <returns><see cref="BatchGetVLPlanSourceFileURLResponse"/></returns>
+        public Task<BatchGetVLPlanSourceFileURLResponse> BatchGetVLPlanSourceFileURL(BatchGetVLPlanSourceFileURLRequest req)
+        {
+            return InternalRequestAsync<BatchGetVLPlanSourceFileURLResponse>(req, "BatchGetVLPlanSourceFileURL");
+        }
+
+        /// <summary>
+        /// 批量获取视觉理解计划源素材 URL
+        /// </summary>
+        /// <param name="req"><see cref="BatchGetVLPlanSourceFileURLRequest"/></param>
+        /// <returns><see cref="BatchGetVLPlanSourceFileURLResponse"/></returns>
+        public BatchGetVLPlanSourceFileURLResponse BatchGetVLPlanSourceFileURLSync(BatchGetVLPlanSourceFileURLRequest req)
+        {
+            return InternalRequestAsync<BatchGetVLPlanSourceFileURLResponse>(req, "BatchGetVLPlanSourceFileURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量获取截图图片URL
+        /// </summary>
+        /// <param name="req"><see cref="BatchGetVideoSnapshotImageUrlRequest"/></param>
+        /// <returns><see cref="BatchGetVideoSnapshotImageUrlResponse"/></returns>
+        public Task<BatchGetVideoSnapshotImageUrlResponse> BatchGetVideoSnapshotImageUrl(BatchGetVideoSnapshotImageUrlRequest req)
+        {
+            return InternalRequestAsync<BatchGetVideoSnapshotImageUrlResponse>(req, "BatchGetVideoSnapshotImageUrl");
+        }
+
+        /// <summary>
+        /// 批量获取截图图片URL
+        /// </summary>
+        /// <param name="req"><see cref="BatchGetVideoSnapshotImageUrlRequest"/></param>
+        /// <returns><see cref="BatchGetVideoSnapshotImageUrlResponse"/></returns>
+        public BatchGetVideoSnapshotImageUrlResponse BatchGetVideoSnapshotImageUrlSync(BatchGetVideoSnapshotImageUrlRequest req)
+        {
+            return InternalRequestAsync<BatchGetVideoSnapshotImageUrlResponse>(req, "BatchGetVideoSnapshotImageUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -417,6 +501,48 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 创建视觉理解计划
+        /// </summary>
+        /// <param name="req"><see cref="CreateVLPlanRequest"/></param>
+        /// <returns><see cref="CreateVLPlanResponse"/></returns>
+        public Task<CreateVLPlanResponse> CreateVLPlan(CreateVLPlanRequest req)
+        {
+            return InternalRequestAsync<CreateVLPlanResponse>(req, "CreateVLPlan");
+        }
+
+        /// <summary>
+        /// 创建视觉理解计划
+        /// </summary>
+        /// <param name="req"><see cref="CreateVLPlanRequest"/></param>
+        /// <returns><see cref="CreateVLPlanResponse"/></returns>
+        public CreateVLPlanResponse CreateVLPlanSync(CreateVLPlanRequest req)
+        {
+            return InternalRequestAsync<CreateVLPlanResponse>(req, "CreateVLPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建视觉理解模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateVLTemplateRequest"/></param>
+        /// <returns><see cref="CreateVLTemplateResponse"/></returns>
+        public Task<CreateVLTemplateResponse> CreateVLTemplate(CreateVLTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateVLTemplateResponse>(req, "CreateVLTemplate");
+        }
+
+        /// <summary>
+        /// 创建视觉理解模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateVLTemplateRequest"/></param>
+        /// <returns><see cref="CreateVLTemplateResponse"/></returns>
+        public CreateVLTemplateResponse CreateVLTemplateSync(CreateVLTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateVLTemplateResponse>(req, "CreateVLTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建本地录像下载任务
         /// </summary>
         /// <param name="req"><see cref="CreateVideoDownloadTaskRequest"/></param>
@@ -434,6 +560,48 @@ namespace TencentCloud.Iss.V20230517
         public CreateVideoDownloadTaskResponse CreateVideoDownloadTaskSync(CreateVideoDownloadTaskRequest req)
         {
             return InternalRequestAsync<CreateVideoDownloadTaskResponse>(req, "CreateVideoDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建截图配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="CreateVideoSnapshotConfigResponse"/></returns>
+        public Task<CreateVideoSnapshotConfigResponse> CreateVideoSnapshotConfig(CreateVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSnapshotConfigResponse>(req, "CreateVideoSnapshotConfig");
+        }
+
+        /// <summary>
+        /// 创建截图配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="CreateVideoSnapshotConfigResponse"/></returns>
+        public CreateVideoSnapshotConfigResponse CreateVideoSnapshotConfigSync(CreateVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSnapshotConfigResponse>(req, "CreateVideoSnapshotConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建截图模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="CreateVideoSnapshotTemplateResponse"/></returns>
+        public Task<CreateVideoSnapshotTemplateResponse> CreateVideoSnapshotTemplate(CreateVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSnapshotTemplateResponse>(req, "CreateVideoSnapshotTemplate");
+        }
+
+        /// <summary>
+        /// 创建截图模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="CreateVideoSnapshotTemplateResponse"/></returns>
+        public CreateVideoSnapshotTemplateResponse CreateVideoSnapshotTemplateSync(CreateVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSnapshotTemplateResponse>(req, "CreateVideoSnapshotTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -623,6 +791,90 @@ namespace TencentCloud.Iss.V20230517
         public DeleteUserDeviceResponse DeleteUserDeviceSync(DeleteUserDeviceRequest req)
         {
             return InternalRequestAsync<DeleteUserDeviceResponse>(req, "DeleteUserDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除视觉理解计划
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVLPlanRequest"/></param>
+        /// <returns><see cref="DeleteVLPlanResponse"/></returns>
+        public Task<DeleteVLPlanResponse> DeleteVLPlan(DeleteVLPlanRequest req)
+        {
+            return InternalRequestAsync<DeleteVLPlanResponse>(req, "DeleteVLPlan");
+        }
+
+        /// <summary>
+        /// 删除视觉理解计划
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVLPlanRequest"/></param>
+        /// <returns><see cref="DeleteVLPlanResponse"/></returns>
+        public DeleteVLPlanResponse DeleteVLPlanSync(DeleteVLPlanRequest req)
+        {
+            return InternalRequestAsync<DeleteVLPlanResponse>(req, "DeleteVLPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除视觉理解模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVLTemplateRequest"/></param>
+        /// <returns><see cref="DeleteVLTemplateResponse"/></returns>
+        public Task<DeleteVLTemplateResponse> DeleteVLTemplate(DeleteVLTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteVLTemplateResponse>(req, "DeleteVLTemplate");
+        }
+
+        /// <summary>
+        /// 删除视觉理解模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVLTemplateRequest"/></param>
+        /// <returns><see cref="DeleteVLTemplateResponse"/></returns>
+        public DeleteVLTemplateResponse DeleteVLTemplateSync(DeleteVLTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteVLTemplateResponse>(req, "DeleteVLTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除截图配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="DeleteVideoSnapshotConfigResponse"/></returns>
+        public Task<DeleteVideoSnapshotConfigResponse> DeleteVideoSnapshotConfig(DeleteVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteVideoSnapshotConfigResponse>(req, "DeleteVideoSnapshotConfig");
+        }
+
+        /// <summary>
+        /// 删除截图配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="DeleteVideoSnapshotConfigResponse"/></returns>
+        public DeleteVideoSnapshotConfigResponse DeleteVideoSnapshotConfigSync(DeleteVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteVideoSnapshotConfigResponse>(req, "DeleteVideoSnapshotConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除截图模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="DeleteVideoSnapshotTemplateResponse"/></returns>
+        public Task<DeleteVideoSnapshotTemplateResponse> DeleteVideoSnapshotTemplate(DeleteVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteVideoSnapshotTemplateResponse>(req, "DeleteVideoSnapshotTemplate");
+        }
+
+        /// <summary>
+        /// 删除截图模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="DeleteVideoSnapshotTemplateResponse"/></returns>
+        public DeleteVideoSnapshotTemplateResponse DeleteVideoSnapshotTemplateSync(DeleteVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteVideoSnapshotTemplateResponse>(req, "DeleteVideoSnapshotTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1049,6 +1301,69 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 查询视觉理解计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVLPlanRequest"/></param>
+        /// <returns><see cref="DescribeVLPlanResponse"/></returns>
+        public Task<DescribeVLPlanResponse> DescribeVLPlan(DescribeVLPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeVLPlanResponse>(req, "DescribeVLPlan");
+        }
+
+        /// <summary>
+        /// 查询视觉理解计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVLPlanRequest"/></param>
+        /// <returns><see cref="DescribeVLPlanResponse"/></returns>
+        public DescribeVLPlanResponse DescribeVLPlanSync(DescribeVLPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeVLPlanResponse>(req, "DescribeVLPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询视觉理解计划结果详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVLPlanResultRequest"/></param>
+        /// <returns><see cref="DescribeVLPlanResultResponse"/></returns>
+        public Task<DescribeVLPlanResultResponse> DescribeVLPlanResult(DescribeVLPlanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeVLPlanResultResponse>(req, "DescribeVLPlanResult");
+        }
+
+        /// <summary>
+        /// 查询视觉理解计划结果详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVLPlanResultRequest"/></param>
+        /// <returns><see cref="DescribeVLPlanResultResponse"/></returns>
+        public DescribeVLPlanResultResponse DescribeVLPlanResultSync(DescribeVLPlanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeVLPlanResultResponse>(req, "DescribeVLPlanResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询视觉理解模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVLTemplateRequest"/></param>
+        /// <returns><see cref="DescribeVLTemplateResponse"/></returns>
+        public Task<DescribeVLTemplateResponse> DescribeVLTemplate(DescribeVLTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeVLTemplateResponse>(req, "DescribeVLTemplate");
+        }
+
+        /// <summary>
+        /// 查询视觉理解模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVLTemplateRequest"/></param>
+        /// <returns><see cref="DescribeVLTemplateResponse"/></returns>
+        public DescribeVLTemplateResponse DescribeVLTemplateSync(DescribeVLTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeVLTemplateResponse>(req, "DescribeVLTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于获取视频通道的码率信息
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoBitRateRequest"/></param>
@@ -1087,6 +1402,48 @@ namespace TencentCloud.Iss.V20230517
         public DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrlSync(DescribeVideoDownloadUrlRequest req)
         {
             return InternalRequestAsync<DescribeVideoDownloadUrlResponse>(req, "DescribeVideoDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取截图配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="DescribeVideoSnapshotConfigResponse"/></returns>
+        public Task<DescribeVideoSnapshotConfigResponse> DescribeVideoSnapshotConfig(DescribeVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSnapshotConfigResponse>(req, "DescribeVideoSnapshotConfig");
+        }
+
+        /// <summary>
+        /// 获取截图配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="DescribeVideoSnapshotConfigResponse"/></returns>
+        public DescribeVideoSnapshotConfigResponse DescribeVideoSnapshotConfigSync(DescribeVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSnapshotConfigResponse>(req, "DescribeVideoSnapshotConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取截图模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="DescribeVideoSnapshotTemplateResponse"/></returns>
+        public Task<DescribeVideoSnapshotTemplateResponse> DescribeVideoSnapshotTemplate(DescribeVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSnapshotTemplateResponse>(req, "DescribeVideoSnapshotTemplate");
+        }
+
+        /// <summary>
+        /// 获取截图模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="DescribeVideoSnapshotTemplateResponse"/></returns>
+        public DescribeVideoSnapshotTemplateResponse DescribeVideoSnapshotTemplateSync(DescribeVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSnapshotTemplateResponse>(req, "DescribeVideoSnapshotTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1385,6 +1742,48 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 获取视觉理解计划列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVLPlansRequest"/></param>
+        /// <returns><see cref="ListVLPlansResponse"/></returns>
+        public Task<ListVLPlansResponse> ListVLPlans(ListVLPlansRequest req)
+        {
+            return InternalRequestAsync<ListVLPlansResponse>(req, "ListVLPlans");
+        }
+
+        /// <summary>
+        /// 获取视觉理解计划列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVLPlansRequest"/></param>
+        /// <returns><see cref="ListVLPlansResponse"/></returns>
+        public ListVLPlansResponse ListVLPlansSync(ListVLPlansRequest req)
+        {
+            return InternalRequestAsync<ListVLPlansResponse>(req, "ListVLPlans")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取视觉理解模板列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVLTemplatesRequest"/></param>
+        /// <returns><see cref="ListVLTemplatesResponse"/></returns>
+        public Task<ListVLTemplatesResponse> ListVLTemplates(ListVLTemplatesRequest req)
+        {
+            return InternalRequestAsync<ListVLTemplatesResponse>(req, "ListVLTemplates");
+        }
+
+        /// <summary>
+        /// 获取视觉理解模板列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVLTemplatesRequest"/></param>
+        /// <returns><see cref="ListVLTemplatesResponse"/></returns>
+        public ListVLTemplatesResponse ListVLTemplatesSync(ListVLTemplatesRequest req)
+        {
+            return InternalRequestAsync<ListVLTemplatesResponse>(req, "ListVLTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询本店里录像下载任务列表
         /// </summary>
         /// <param name="req"><see cref="ListVideoDownloadTaskRequest"/></param>
@@ -1402,6 +1801,69 @@ namespace TencentCloud.Iss.V20230517
         public ListVideoDownloadTaskResponse ListVideoDownloadTaskSync(ListVideoDownloadTaskRequest req)
         {
             return InternalRequestAsync<ListVideoDownloadTaskResponse>(req, "ListVideoDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取截图模板详情列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="ListVideoSnapshotTemplateResponse"/></returns>
+        public Task<ListVideoSnapshotTemplateResponse> ListVideoSnapshotTemplate(ListVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<ListVideoSnapshotTemplateResponse>(req, "ListVideoSnapshotTemplate");
+        }
+
+        /// <summary>
+        /// 获取截图模板详情列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVideoSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="ListVideoSnapshotTemplateResponse"/></returns>
+        public ListVideoSnapshotTemplateResponse ListVideoSnapshotTemplateSync(ListVideoSnapshotTemplateRequest req)
+        {
+            return InternalRequestAsync<ListVideoSnapshotTemplateResponse>(req, "ListVideoSnapshotTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改视觉理解计划
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVLPlanRequest"/></param>
+        /// <returns><see cref="ModifyVLPlanResponse"/></returns>
+        public Task<ModifyVLPlanResponse> ModifyVLPlan(ModifyVLPlanRequest req)
+        {
+            return InternalRequestAsync<ModifyVLPlanResponse>(req, "ModifyVLPlan");
+        }
+
+        /// <summary>
+        /// 修改视觉理解计划
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVLPlanRequest"/></param>
+        /// <returns><see cref="ModifyVLPlanResponse"/></returns>
+        public ModifyVLPlanResponse ModifyVLPlanSync(ModifyVLPlanRequest req)
+        {
+            return InternalRequestAsync<ModifyVLPlanResponse>(req, "ModifyVLPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新截图配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="ModifyVideoSnapshotConfigResponse"/></returns>
+        public Task<ModifyVideoSnapshotConfigResponse> ModifyVideoSnapshotConfig(ModifyVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyVideoSnapshotConfigResponse>(req, "ModifyVideoSnapshotConfig");
+        }
+
+        /// <summary>
+        /// 更新截图配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVideoSnapshotConfigRequest"/></param>
+        /// <returns><see cref="ModifyVideoSnapshotConfigResponse"/></returns>
+        public ModifyVideoSnapshotConfigResponse ModifyVideoSnapshotConfigSync(ModifyVideoSnapshotConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyVideoSnapshotConfigResponse>(req, "ModifyVideoSnapshotConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

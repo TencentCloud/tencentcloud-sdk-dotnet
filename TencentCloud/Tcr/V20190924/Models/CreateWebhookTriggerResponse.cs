@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 新建的触发器
+        /// <p>新建的触发器</p>
         /// </summary>
         [JsonProperty("Trigger")]
         public WebhookTrigger Trigger{ get; set; }

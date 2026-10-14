@@ -31,18 +31,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PolicyBasedRoutingNextHopId{ get; set; }
 
         /// <summary>
-        /// <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
-        /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
-
-        /// <summary>
-        /// <p>实例ID</p>
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
         /// <p>源地址CIDR</p>
         /// </summary>
         [JsonProperty("SourceCidrBlock")]
@@ -59,6 +47,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
+
+        /// <summary>
+        /// <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>实例所在地域</p>
+        /// </summary>
+        [JsonProperty("InstanceRegion")]
+        public string InstanceRegion{ get; set; }
 
         /// <summary>
         /// <p>描述</p>
@@ -91,11 +97,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PolicyBasedRoutingNextHopId", this.PolicyBasedRoutingNextHopId);
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SourceCidrBlock", this.SourceCidrBlock);
             this.SetParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "PolicyBasedRoutingRuleId", this.PolicyBasedRoutingRuleId);
             this.SetParamSimple(map, prefix + "DestinationInstanceType", this.DestinationInstanceType);

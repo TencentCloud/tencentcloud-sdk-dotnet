@@ -25,79 +25,85 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 集群实例所属可用区，不传则默认所有可用区
+        /// <p>集群实例所属可用区，不传则默认所有可用区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 集群实例ID列表
+        /// <p>集群实例ID列表</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 集群实例名称列表
+        /// <p>集群实例名称列表</p>
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// 分页起始值, 默认值0
+        /// <p>分页起始值, 默认值0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页大小，默认值20
+        /// <p>分页大小，默认值20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
+        /// <p>排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序</p>
         /// </summary>
         [JsonProperty("OrderByKey")]
         public ulong? OrderByKey{ get; set; }
 
         /// <summary>
-        /// 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+        /// <p>排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序</p>
         /// </summary>
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }
 
         /// <summary>
-        /// 节点标签信息列表
+        /// <p>节点标签信息列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfo[] TagList{ get; set; }
 
         /// <summary>
-        /// 私有网络vip列表
+        /// <p>私有网络vip列表</p>
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
 
         /// <summary>
-        /// 可用区列表
+        /// <p>集群节点IP列表</p>
+        /// </summary>
+        [JsonProperty("NodeIps")]
+        public string[] NodeIps{ get; set; }
+
+        /// <summary>
+        /// <p>可用区列表</p>
         /// </summary>
         [JsonProperty("ZoneList")]
         public string[] ZoneList{ get; set; }
 
         /// <summary>
-        /// 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
+        /// <p>健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知</p>
         /// </summary>
         [JsonProperty("HealthStatus")]
         public long?[] HealthStatus{ get; set; }
 
         /// <summary>
-        /// Vpc列表 筛选项
+        /// <p>Vpc列表 筛选项</p>
         /// </summary>
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }
 
         /// <summary>
-        /// cdc集群id
+        /// <p>cdc集群id</p>
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
@@ -117,6 +123,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
+            this.SetParamArraySimple(map, prefix + "NodeIps.", this.NodeIps);
             this.SetParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamArraySimple(map, prefix + "HealthStatus.", this.HealthStatus);
             this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);

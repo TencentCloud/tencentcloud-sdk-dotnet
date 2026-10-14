@@ -74,6 +74,13 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("CorpShareConfig")]
         public CorpShareConfig CorpShareConfig{ get; set; }
 
+        /// <summary>
+        /// <p>portal配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PortalShareConfig")]
+        public PortalShareConfig PortalShareConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +95,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "AppShareAccessControl.", this.AppShareAccessControl);
             this.SetParamArraySimple(map, prefix + "ChannelIdList.", this.ChannelIdList);
             this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
+            this.SetParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
         }
     }
 }

@@ -25,12 +25,6 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 访问日志配置结构。
-        /// </summary>
-        [JsonProperty("AccessLogConfig")]
-        public AccessLogConfig AccessLogConfig{ get; set; }
-
-        /// <summary>
         /// IP 地址版本，取值 IPv4 或 IPv6。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -137,7 +131,6 @@ namespace TencentCloud.Alb.V20251030.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "AccessLogConfig.", this.AccessLogConfig);
             this.SetParamSimple(map, prefix + "AddressIpVersion", this.AddressIpVersion);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

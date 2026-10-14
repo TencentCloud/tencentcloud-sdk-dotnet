@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 当前页数，默认1。
+        /// <p>当前页数，默认1。</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认10。
+        /// <p>每页大小，默认10。</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

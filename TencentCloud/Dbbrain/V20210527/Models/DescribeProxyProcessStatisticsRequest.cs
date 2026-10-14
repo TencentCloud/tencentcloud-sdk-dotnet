@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID 。
+        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -56,12 +56,21 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+        /// 其中：
+        /// 
+        /// - AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+        /// - ActiveConn：表示活跃连接数
+        /// - Ip：表示 IP 地址
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
         /// 排序方向。支持值包括："DESC"，"ASC"。
+        /// 其中：
+        /// 
+        /// - DESC：降序
+        /// - ASC：升序
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

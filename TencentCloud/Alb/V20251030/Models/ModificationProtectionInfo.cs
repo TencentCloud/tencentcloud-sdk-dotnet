@@ -25,22 +25,19 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-        /// - true：开启修改保护
-        /// - false：关闭修改保护
+        /// <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
         /// </summary>
         [JsonProperty("ModificationProtectionEnabled")]
         public bool? ModificationProtectionEnabled{ get; set; }
 
         /// <summary>
-        /// 1238716123
+        /// <p>1238716123</p>
         /// </summary>
         [JsonProperty("OperatorUin")]
         public string OperatorUin{ get; set; }
 
         /// <summary>
-        /// 开启修改保护的原因说明。
-        /// 长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+        /// <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

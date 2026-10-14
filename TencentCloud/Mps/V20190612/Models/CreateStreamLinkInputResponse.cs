@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 创建的Flow信息。
+        /// <p>创建的Flow信息。</p>
         /// </summary>
         [JsonProperty("Info")]
         public DescribeFlow Info{ get; set; }

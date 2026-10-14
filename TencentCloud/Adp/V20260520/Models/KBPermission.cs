@@ -37,6 +37,12 @@ namespace TencentCloud.Adp.V20260520.Models
         public bool? CanEdit{ get; set; }
 
         /// <summary>
+        /// <p>能否被共享</p>
+        /// </summary>
+        [JsonProperty("CanShare")]
+        public bool? CanShare{ get; set; }
+
+        /// <summary>
         /// <p>是否可查看</p>
         /// </summary>
         [JsonProperty("CanView")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamSimple(map, prefix + "CanDelete", this.CanDelete);
             this.SetParamSimple(map, prefix + "CanEdit", this.CanEdit);
+            this.SetParamSimple(map, prefix + "CanShare", this.CanShare);
             this.SetParamSimple(map, prefix + "CanView", this.CanView);
         }
     }

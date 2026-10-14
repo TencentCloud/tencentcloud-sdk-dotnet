@@ -28,7 +28,7 @@ namespace TencentCloud.Ags.V20250920
 
        private const string endpoint = "ags.tencentcloudapi.com";
        private const string version = "2025-09-20";
-       private const string sdkVersion = "SDK_NET_3.0.1519";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -404,6 +404,27 @@ namespace TencentCloud.Ags.V20250920
         }
 
         /// <summary>
+        /// 删除预热镜像
+        /// </summary>
+        /// <param name="req"><see cref="DeletePreCacheImageRequest"/></param>
+        /// <returns><see cref="DeletePreCacheImageResponse"/></returns>
+        public Task<DeletePreCacheImageResponse> DeletePreCacheImage(DeletePreCacheImageRequest req)
+        {
+            return InternalRequestAsync<DeletePreCacheImageResponse>(req, "DeletePreCacheImage");
+        }
+
+        /// <summary>
+        /// 删除预热镜像
+        /// </summary>
+        /// <param name="req"><see cref="DeletePreCacheImageRequest"/></param>
+        /// <returns><see cref="DeletePreCacheImageResponse"/></returns>
+        public DeletePreCacheImageResponse DeletePreCacheImageSync(DeletePreCacheImageRequest req)
+        {
+            return InternalRequestAsync<DeletePreCacheImageResponse>(req, "DeletePreCacheImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除 Registry。
         /// </summary>
         /// <param name="req"><see cref="DeleteRegistryRequest"/></param>
@@ -618,6 +639,27 @@ namespace TencentCloud.Ags.V20250920
         public DescribeEventsResponse DescribeEventsSync(DescribeEventsRequest req)
         {
             return InternalRequestAsync<DescribeEventsResponse>(req, "DescribeEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像预热列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreCacheImageListRequest"/></param>
+        /// <returns><see cref="DescribePreCacheImageListResponse"/></returns>
+        public Task<DescribePreCacheImageListResponse> DescribePreCacheImageList(DescribePreCacheImageListRequest req)
+        {
+            return InternalRequestAsync<DescribePreCacheImageListResponse>(req, "DescribePreCacheImageList");
+        }
+
+        /// <summary>
+        /// 查询镜像预热列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreCacheImageListRequest"/></param>
+        /// <returns><see cref="DescribePreCacheImageListResponse"/></returns>
+        public DescribePreCacheImageListResponse DescribePreCacheImageListSync(DescribePreCacheImageListRequest req)
+        {
+            return InternalRequestAsync<DescribePreCacheImageListResponse>(req, "DescribePreCacheImageList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

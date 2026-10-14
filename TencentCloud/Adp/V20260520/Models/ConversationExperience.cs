@@ -25,58 +25,58 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// AI通话配置
+        /// <p>AI通话配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiCall")]
         public AICallConfig AiCall{ get; set; }
 
         /// <summary>
-        /// 背景图片配置
+        /// <p>背景图片配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackgroundImage")]
         public BackgroundImage BackgroundImage{ get; set; }
 
         /// <summary>
-        /// 兜底回复开关
+        /// <p>兜底回复开关</p>
         /// </summary>
         [JsonProperty("EnableFallbackReply")]
         public bool? EnableFallbackReply{ get; set; }
 
         /// <summary>
-        /// 是否使用推荐问
+        /// <p>是否使用推荐问</p>
         /// </summary>
         [JsonProperty("EnableRecommended")]
         public bool? EnableRecommended{ get; set; }
 
         /// <summary>
-        /// 是否使用联网搜索
+        /// <p>是否使用联网搜索</p>
         /// </summary>
         [JsonProperty("EnableWebSearch")]
         public bool? EnableWebSearch{ get; set; }
 
         /// <summary>
-        /// 兜底回复语
+        /// <p>兜底回复语</p>
         /// </summary>
         [JsonProperty("FallbackReply")]
         public string FallbackReply{ get; set; }
 
         /// <summary>
-        /// 输入框配置
+        /// <p>输入框配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputBoxConfig")]
         public InputBoxConfig InputBoxConfig{ get; set; }
 
         /// <summary>
-        /// 输出方式。枚举值: 1:流式, 2:非流式
+        /// <p>输出方式。枚举值: 1:流式, 2:非流式</p>
         /// </summary>
         [JsonProperty("Method")]
         public long? Method{ get; set; }
 
         /// <summary>
-        /// 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
+        /// <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
         /// </summary>
         [JsonProperty("RecommendPromptMode")]
         public long? RecommendPromptMode{ get; set; }

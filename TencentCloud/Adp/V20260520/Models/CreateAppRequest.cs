@@ -25,31 +25,31 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 空间ID
+        /// <p>空间ID</p>
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
 
         /// <summary>
-        /// 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+        /// <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
         /// </summary>
         [JsonProperty("AppMode")]
         public long? AppMode{ get; set; }
 
         /// <summary>
-        /// 应用头像
+        /// <p>应用头像</p>
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
         /// <summary>
-        /// 应用描述
+        /// <p>应用描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 应用名称
+        /// <p>应用名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

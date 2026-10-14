@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 属性名称
+        /// <p>属性名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 属性值
+        /// <p>属性值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

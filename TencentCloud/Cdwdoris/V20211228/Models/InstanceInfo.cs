@@ -25,231 +25,223 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 集群实例ID, "cdwdoris-xxxx" 字符串类型
+        /// <p>集群实例ID, &quot;cdwdoris-xxxx&quot; 字符串类型</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集群实例名称
+        /// <p>集群实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 状态,
-        /// Init  创建中
-        /// Serving   运行中
-        /// Isolated   已隔离
-        /// Changing  变更中
+        /// <p>状态,<br>Init  创建中<br>Serving   运行中<br>Isolated   已隔离<br>Changing  变更中</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 版本
+        /// <p>版本</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 地域, ap-guangzhou
+        /// <p>地域, ap-guangzhou</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 可用区， ap-guangzhou-3
+        /// <p>可用区， ap-guangzhou-3</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 私有网络名称
+        /// <p>私有网络名称</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网名称
+        /// <p>子网名称</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 付费类型，"hour", "prepay"
+        /// <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// <p>过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 数据节点描述信息
+        /// <p>数据节点描述信息</p>
         /// </summary>
         [JsonProperty("MasterSummary")]
         public NodesSummary MasterSummary{ get; set; }
 
         /// <summary>
-        /// zookeeper节点描述信息
+        /// <p>zookeeper节点描述信息</p>
         /// </summary>
         [JsonProperty("CoreSummary")]
         public NodesSummary CoreSummary{ get; set; }
 
         /// <summary>
-        /// 高可用，"true" "false"
+        /// <p>高可用，&quot;true&quot; &quot;false&quot;</p>
         /// </summary>
         [JsonProperty("HA")]
         public string HA{ get; set; }
 
         /// <summary>
-        /// 高可用类型：
-        /// 0：非高可用
-        /// 1：读高可用
-        /// 2：读写高可用。
+        /// <p>高可用类型：<br>0：非高可用<br>1：读高可用<br>2：读写高可用。</p>
         /// </summary>
         [JsonProperty("HaType")]
         public long? HaType{ get; set; }
 
         /// <summary>
-        /// 访问地址，例如 "10.0.0.1:9000"
+        /// <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
         /// </summary>
         [JsonProperty("AccessInfo")]
         public string AccessInfo{ get; set; }
 
         /// <summary>
-        /// 记录ID，数值型
+        /// <p>记录ID，数值型</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// regionId, 表示地域
+        /// <p>regionId, 表示地域</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 可用区说明，例如 "广州三区"
+        /// <p>可用区说明，例如 &quot;广州三区&quot;</p>
         /// </summary>
         [JsonProperty("ZoneDesc")]
         public string ZoneDesc{ get; set; }
 
         /// <summary>
-        /// 错误流程说明信息
+        /// <p>错误流程说明信息</p>
         /// </summary>
         [JsonProperty("FlowMsg")]
         public string FlowMsg{ get; set; }
 
         /// <summary>
-        /// 状态描述，例如“运行中”等
+        /// <p>状态描述，例如“运行中”等</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 自动续费标记
+        /// <p>自动续费标记</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public bool? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 监控信息
+        /// <p>监控信息</p>
         /// </summary>
         [JsonProperty("Monitor")]
         public string Monitor{ get; set; }
 
         /// <summary>
-        /// 是否开通日志
+        /// <p>是否开通日志</p>
         /// </summary>
         [JsonProperty("HasClsTopic")]
         public bool? HasClsTopic{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// 日志集ID
+        /// <p>日志集ID</p>
         /// </summary>
         [JsonProperty("ClsLogSetId")]
         public string ClsLogSetId{ get; set; }
 
         /// <summary>
-        /// 是否支持xml配置管理
+        /// <p>是否支持xml配置管理</p>
         /// </summary>
         [JsonProperty("EnableXMLConfig")]
         public long? EnableXMLConfig{ get; set; }
 
         /// <summary>
-        /// 区域
+        /// <p>区域</p>
         /// </summary>
         [JsonProperty("RegionDesc")]
         public string RegionDesc{ get; set; }
 
         /// <summary>
-        /// 弹性网卡地址
+        /// <p>弹性网卡地址</p>
         /// </summary>
         [JsonProperty("Eip")]
         public string Eip{ get; set; }
 
         /// <summary>
-        /// 冷热分层系数
+        /// <p>冷热分层系数</p>
         /// </summary>
         [JsonProperty("CosMoveFactor")]
         public long? CosMoveFactor{ get; set; }
 
         /// <summary>
-        /// external/local/yunti
+        /// <p>external/local/yunti</p>
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
-        /// cos桶
+        /// <p>cos桶</p>
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// cbs
+        /// <p>cbs</p>
         /// </summary>
         [JsonProperty("CanAttachCbs")]
         public bool? CanAttachCbs{ get; set; }
 
         /// <summary>
-        /// 小版本
+        /// <p>小版本</p>
         /// </summary>
         [JsonProperty("BuildVersion")]
         public string BuildVersion{ get; set; }
 
         /// <summary>
-        /// 组件信息
-        /// 注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
+        /// <p>组件信息<br>注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。</p>
         /// </summary>
         [JsonProperty("Components")]
         public string Components{ get; set; }
 
         /// <summary>
-        /// 判断审计日志表是否有catalog字段
+        /// <p>判断审计日志表是否有catalog字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IfExistCatalog")]
@@ -257,160 +249,166 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? IfExistCatalog{ get; set; }
 
         /// <summary>
-        /// 页面特性，用于前端屏蔽一些页面入口
+        /// <p>页面特性，用于前端屏蔽一些页面入口</p>
         /// </summary>
         [JsonProperty("Characteristic")]
         public string[] Characteristic{ get; set; }
 
         /// <summary>
-        /// 超时时间 单位s
+        /// <p>超时时间 单位s</p>
         /// </summary>
         [JsonProperty("RestartTimeout")]
         public string RestartTimeout{ get; set; }
 
         /// <summary>
-        /// 内核优雅重启超时时间，如果为-1说明未设置
+        /// <p>内核优雅重启超时时间，如果为-1说明未设置</p>
         /// </summary>
         [JsonProperty("GraceShutdownWaitSeconds")]
         public string GraceShutdownWaitSeconds{ get; set; }
 
         /// <summary>
-        /// 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+        /// <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
         /// </summary>
         [JsonProperty("CaseSensitive")]
         public long? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// 用户是否可以绑定安全组
+        /// <p>用户是否可以绑定安全组</p>
         /// </summary>
         [JsonProperty("IsWhiteSGs")]
         public bool? IsWhiteSGs{ get; set; }
 
         /// <summary>
-        /// 已绑定的安全组信息
+        /// <p>已绑定的安全组信息</p>
         /// </summary>
         [JsonProperty("BindSGs")]
         public string[] BindSGs{ get; set; }
 
         /// <summary>
-        /// 是否为多可用区
+        /// <p>是否为多可用区</p>
         /// </summary>
         [JsonProperty("EnableMultiZones")]
         public bool? EnableMultiZones{ get; set; }
 
         /// <summary>
-        /// 用户可用区和子网信息
+        /// <p>用户可用区和子网信息</p>
         /// </summary>
         [JsonProperty("UserNetworkInfos")]
         public string UserNetworkInfos{ get; set; }
 
         /// <summary>
-        /// 是否启用冷热分层。0：未开启 1：已开启
+        /// <p>是否启用冷热分层。0：未开启 1：已开启</p>
         /// </summary>
         [JsonProperty("EnableCoolDown")]
         public long? EnableCoolDown{ get; set; }
 
         /// <summary>
-        /// 冷热分层使用COS桶
+        /// <p>冷热分层使用COS桶</p>
         /// </summary>
         [JsonProperty("CoolDownBucket")]
         public string CoolDownBucket{ get; set; }
 
         /// <summary>
-        /// 实例扩展信息
+        /// <p>实例扩展信息</p>
         /// </summary>
         [JsonProperty("Details")]
         public InstanceDetail Details{ get; set; }
 
         /// <summary>
-        /// 是否启用DLC 0:关闭 1:开启
+        /// <p>是否启用DLC 0:关闭 1:开启</p>
         /// </summary>
         [JsonProperty("EnableDlc")]
         public long? EnableDlc{ get; set; }
 
         /// <summary>
-        /// 账户类型 0:普通用户 1:CAM用户
+        /// <p>账户类型 0:普通用户 1:CAM用户</p>
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
-        /// 监控模式 0: 老监控 1：新监控
+        /// <p>监控模式 0: 老监控 1：新监控</p>
         /// </summary>
         [JsonProperty("MonitorMode")]
         public long? MonitorMode{ get; set; }
 
         /// <summary>
-        /// cn节点信息
+        /// <p>cn节点信息</p>
         /// </summary>
         [JsonProperty("CNSummary")]
         public NodesSummary CNSummary{ get; set; }
 
         /// <summary>
-        /// 计算组个数
+        /// <p>计算组个数</p>
         /// </summary>
         [JsonProperty("ComputeGroupCount")]
         public long? ComputeGroupCount{ get; set; }
 
         /// <summary>
-        /// 存算分离cos存储数据
+        /// <p>存算分离cos存储数据</p>
         /// </summary>
         [JsonProperty("CosStorageSize")]
         public float? CosStorageSize{ get; set; }
 
         /// <summary>
-        /// 存算分离的指标 当是true 不支持新建计算组
+        /// <p>存算分离的指标 当是true 不支持新建计算组</p>
         /// </summary>
         [JsonProperty("IsMasterNonVM")]
         public bool? IsMasterNonVM{ get; set; }
 
         /// <summary>
-        /// Cos容量包大小
+        /// <p>Cos容量包大小</p>
         /// </summary>
         [JsonProperty("CosPkgCapacity")]
         public long? CosPkgCapacity{ get; set; }
 
         /// <summary>
-        /// 集群是否使用托管桶
+        /// <p>集群是否使用托管桶</p>
         /// </summary>
         [JsonProperty("UseManagedBucket")]
         public bool? UseManagedBucket{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 对应主集群
+        /// <p>对应主集群</p>
         /// </summary>
         [JsonProperty("MasterInstance")]
         public string MasterInstance{ get; set; }
 
         /// <summary>
-        /// 对应备集群
+        /// <p>对应备集群</p>
         /// </summary>
         [JsonProperty("SlaveInstances")]
         public string[] SlaveInstances{ get; set; }
 
         /// <summary>
-        /// ccr服务部署节点ip
+        /// <p>ccr服务部署节点ip</p>
         /// </summary>
         [JsonProperty("SyncerIp")]
         public string SyncerIp{ get; set; }
 
         /// <summary>
-        /// 是否支持sql convertor
+        /// <p>是否支持sql convertor</p>
         /// </summary>
         [JsonProperty("EnableSqlConv")]
         public long? EnableSqlConv{ get; set; }
 
         /// <summary>
-        /// 集群时区，默认+08:00
+        /// <p>集群时区，默认+08:00</p>
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// <p>缓存盘介质：任一计算组为单副本SSD即ELASTIC_REMOTE_SSD（不支持变配多可用区部署等），否则为默认计算组介质；非存算分离为空</p>
+        /// </summary>
+        [JsonProperty("CacheDiskType")]
+        public string CacheDiskType{ get; set; }
 
 
         /// <summary>
@@ -481,6 +479,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "SyncerIp", this.SyncerIp);
             this.SetParamSimple(map, prefix + "EnableSqlConv", this.EnableSqlConv);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "CacheDiskType", this.CacheDiskType);
         }
     }
 }

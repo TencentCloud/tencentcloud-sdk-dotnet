@@ -42,6 +42,18 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
+        /// <summary>
+        /// <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+        /// </summary>
+        [JsonProperty("PreheatRegion")]
+        public string PreheatRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamObj(map, prefix + "Trigger.", this.Trigger);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "PreheatRegion", this.PreheatRegion);
         }
     }
 }

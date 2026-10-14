@@ -31,6 +31,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string CatalogName{ get; set; }
 
         /// <summary>
+        /// <p>调用时所在workspace唯一id</p>
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public string WorkspaceId{ get; set; }
+
+        /// <summary>
         /// <p>最大结果条数</p>
         /// </summary>
         [JsonProperty("MaxResults")]
@@ -41,12 +47,6 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// </summary>
         [JsonProperty("PageToken")]
         public string PageToken{ get; set; }
-
-        /// <summary>
-        /// <p>调用时所在workspace唯一id</p>
-        /// </summary>
-        [JsonProperty("WorkspaceId")]
-        public string WorkspaceId{ get; set; }
 
         /// <summary>
         /// <p>数据获取选项，可选，控制是否返回权限信息及按权限过滤</p>
@@ -73,9 +73,9 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
             this.SetParamSimple(map, prefix + "PageToken", this.PageToken);
-            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
             this.SetParamObj(map, prefix + "FetchOption.", this.FetchOption);
             this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
             this.SetParamSimple(map, prefix + "CatalogSource", this.CatalogSource);

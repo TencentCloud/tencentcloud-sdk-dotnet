@@ -25,31 +25,31 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 模型描述
+        /// <p>模型描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 模型图标地址
+        /// <p>模型图标地址</p>
         /// </summary>
         [JsonProperty("IconUrl")]
         public string IconUrl{ get; set; }
 
         /// <summary>
-        /// 模型ID
+        /// <p>模型ID</p>
         /// </summary>
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
         /// <summary>
-        /// 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
+        /// <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
         /// </summary>
         [JsonProperty("ModelType")]
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// 模型名称
+        /// <p>模型名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

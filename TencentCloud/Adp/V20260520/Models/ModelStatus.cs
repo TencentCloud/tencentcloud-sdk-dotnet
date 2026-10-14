@@ -25,22 +25,40 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 专属并发数
+        /// <p>专属并发数</p>
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }
 
         /// <summary>
-        /// 是否专属并发
+        /// <p>是否专属并发</p>
         /// </summary>
         [JsonProperty("IsExclusive")]
         public bool? IsExclusive{ get; set; }
 
         /// <summary>
-        /// 资源状态。1-资源可用, 2-资源已用尽
+        /// <p>是否支持在智能工作台直接体验（模型广场详情页：依赖 space_id 动态判定；false 时前端置灰「立即体验」按钮）</p>
+        /// </summary>
+        [JsonProperty("IsExperienceSupported")]
+        public bool? IsExperienceSupported{ get; set; }
+
+        /// <summary>
+        /// <p>资源状态</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_STATUS_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>RESOURCE_STATUS_AVAILABLE</td><td>1</td><td>资源可用</td></tr><tr><td>RESOURCE_STATUS_EXHAUSTED</td><td>2</td><td>资源已用尽</td></tr></table>
         /// </summary>
         [JsonProperty("ResourceStatus")]
         public long? ResourceStatus{ get; set; }
+
+        /// <summary>
+        /// <p>调用 RPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+        /// </summary>
+        [JsonProperty("RpmLimit")]
+        public string RpmLimit{ get; set; }
+
+        /// <summary>
+        /// <p>调用 TPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+        /// </summary>
+        [JsonProperty("TpmLimit")]
+        public string TpmLimit{ get; set; }
 
 
         /// <summary>
@@ -50,7 +68,10 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamSimple(map, prefix + "Concurrency", this.Concurrency);
             this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
+            this.SetParamSimple(map, prefix + "IsExperienceSupported", this.IsExperienceSupported);
             this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+            this.SetParamSimple(map, prefix + "RpmLimit", this.RpmLimit);
+            this.SetParamSimple(map, prefix + "TpmLimit", this.TpmLimit);
         }
     }
 }

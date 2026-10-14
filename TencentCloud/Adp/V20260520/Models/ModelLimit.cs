@@ -25,19 +25,31 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 模型上下文长度展示文案（如 "128K"、"1000K"）
+        /// <p>模型上下文长度展示文案（如 128K、1000K）</p>
         /// </summary>
         [JsonProperty("ContextLengthDescription")]
         public string ContextLengthDescription{ get; set; }
 
         /// <summary>
-        /// 模型对话框输入长度字符数限制
+        /// <p>模型对话框输入长度字符数限制</p>
         /// </summary>
         [JsonProperty("InputLengthLimit")]
         public long? InputLengthLimit{ get; set; }
 
         /// <summary>
-        /// 模型提示词长度字符数限制
+        /// <p>最大输入 Tokens 展示文案（如 960k，服务端格式化，未配置为空串）</p>
+        /// </summary>
+        [JsonProperty("MaxInputTokensDescription")]
+        public string MaxInputTokensDescription{ get; set; }
+
+        /// <summary>
+        /// <p>最大输出 Tokens 展示文案（如 64k，服务端格式化，未配置为空串）</p>
+        /// </summary>
+        [JsonProperty("MaxOutputTokensDescription")]
+        public string MaxOutputTokensDescription{ get; set; }
+
+        /// <summary>
+        /// <p>模型提示词长度字符数限制</p>
         /// </summary>
         [JsonProperty("PromptLengthLimit")]
         public long? PromptLengthLimit{ get; set; }
@@ -50,6 +62,8 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamSimple(map, prefix + "ContextLengthDescription", this.ContextLengthDescription);
             this.SetParamSimple(map, prefix + "InputLengthLimit", this.InputLengthLimit);
+            this.SetParamSimple(map, prefix + "MaxInputTokensDescription", this.MaxInputTokensDescription);
+            this.SetParamSimple(map, prefix + "MaxOutputTokensDescription", this.MaxOutputTokensDescription);
             this.SetParamSimple(map, prefix + "PromptLengthLimit", this.PromptLengthLimit);
         }
     }

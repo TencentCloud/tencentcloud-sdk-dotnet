@@ -94,6 +94,27 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("StoragePath")]
         public string StoragePath{ get; set; }
 
+        /// <summary>
+        /// <p>来源类型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>来源名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceName")]
+        public string SourceName{ get; set; }
+
+        /// <summary>
+        /// <p>预览摘要</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionSummary")]
+        public string ExecutionSummary{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +131,9 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
             this.SetParamSimple(map, prefix + "SkillId", this.SkillId);
             this.SetParamSimple(map, prefix + "StoragePath", this.StoragePath);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
+            this.SetParamSimple(map, prefix + "ExecutionSummary", this.ExecutionSummary);
         }
     }
 }

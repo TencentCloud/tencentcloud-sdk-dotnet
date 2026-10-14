@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体传输事件ID。
+        /// <p>媒体传输事件ID。</p>
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }

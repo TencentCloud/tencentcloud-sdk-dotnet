@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体传输流ID。
+        /// <p>媒体传输流ID。</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 流的输入组。
+        /// <p>流的输入组。</p>
         /// </summary>
         [JsonProperty("InputGroup")]
         public CreateInput[] InputGroup{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Organization.V20210331
         public AttachPolicyResponse AttachPolicySync(AttachPolicyRequest req)
         {
             return InternalRequestAsync<AttachPolicyResponse>(req, "AttachPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 审批用户权限申请
+        /// </summary>
+        /// <param name="req"><see cref="AuditPermissionApplyOrderRequest"/></param>
+        /// <returns><see cref="AuditPermissionApplyOrderResponse"/></returns>
+        public Task<AuditPermissionApplyOrderResponse> AuditPermissionApplyOrder(AuditPermissionApplyOrderRequest req)
+        {
+            return InternalRequestAsync<AuditPermissionApplyOrderResponse>(req, "AuditPermissionApplyOrder");
+        }
+
+        /// <summary>
+        /// 审批用户权限申请
+        /// </summary>
+        /// <param name="req"><see cref="AuditPermissionApplyOrderRequest"/></param>
+        /// <returns><see cref="AuditPermissionApplyOrderResponse"/></returns>
+        public AuditPermissionApplyOrderResponse AuditPermissionApplyOrderSync(AuditPermissionApplyOrderRequest req)
+        {
+            return InternalRequestAsync<AuditPermissionApplyOrderResponse>(req, "AuditPermissionApplyOrder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 符合过滤条件的记录总数。
+        /// <p>符合过滤条件的记录总数。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 工作流信息数组。
+        /// <p>工作流信息数组。</p>
         /// </summary>
         [JsonProperty("WorkflowInfoSet")]
         public WorkflowInfo[] WorkflowInfoSet{ get; set; }

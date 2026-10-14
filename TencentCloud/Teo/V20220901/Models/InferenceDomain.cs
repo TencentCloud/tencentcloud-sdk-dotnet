@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <p>域名状态。</p><p>枚举值：</p><ul><li>Online： 已生效；</li><li>Process： 部署中；</li><li>Offline： 已停用；</li><li>Init： 未生效，待激活站点。</li></ul>
+        /// <p>域名状态。</p><p>枚举值：</p><ul><li>Online： 已生效；</li><li>Process： 部署中；</li><li>Offline： 已停用；</li><li>Init： 未生效，待激活站点；</li><li>Forbidden： 域名被禁用。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

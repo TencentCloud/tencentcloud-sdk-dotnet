@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1519</VersionPrefix>
+    <VersionPrefix>3.0.1520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -102,6 +102,8 @@
     <Compile Include="V20250920\Models\DeleteAPIKeyResponse.cs" />
     <Compile Include="V20250920\Models\DeleteDeploymentRequest.cs" />
     <Compile Include="V20250920\Models\DeleteDeploymentResponse.cs" />
+    <Compile Include="V20250920\Models\DeletePreCacheImageRequest.cs" />
+    <Compile Include="V20250920\Models\DeletePreCacheImageResponse.cs" />
     <Compile Include="V20250920\Models\DeleteRegistryRecordRequest.cs" />
     <Compile Include="V20250920\Models\DeleteRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\DeleteRegistryRequest.cs" />
@@ -123,6 +125,8 @@
     <Compile Include="V20250920\Models\DescribeDeploymentResponse.cs" />
     <Compile Include="V20250920\Models\DescribeEventsRequest.cs" />
     <Compile Include="V20250920\Models\DescribeEventsResponse.cs" />
+    <Compile Include="V20250920\Models\DescribePreCacheImageListRequest.cs" />
+    <Compile Include="V20250920\Models\DescribePreCacheImageListResponse.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageTaskRequest.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageTaskResponse.cs" />
     <Compile Include="V20250920\Models\DescribeQuotaOverviewRequest.cs" />
@@ -182,6 +186,7 @@
     <Compile Include="V20250920\Models\PauseSandboxInstanceRequest.cs" />
     <Compile Include="V20250920\Models\PauseSandboxInstanceResponse.cs" />
     <Compile Include="V20250920\Models\PortConfiguration.cs" />
+    <Compile Include="V20250920\Models\PreCacheImage.cs" />
     <Compile Include="V20250920\Models\PreviewRegistryRecordRequest.cs" />
     <Compile Include="V20250920\Models\PreviewRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\ProbeConfiguration.cs" />

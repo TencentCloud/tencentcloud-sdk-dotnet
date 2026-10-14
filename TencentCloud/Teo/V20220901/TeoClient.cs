@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -1312,7 +1312,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
+        /// 删除边缘函数，删除后函数无法恢复，关联的触发规则，环境变量和副本会一并删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
         /// <returns><see cref="DeleteFunctionResponse"/></returns>
@@ -1322,7 +1322,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
+        /// 删除边缘函数，删除后函数无法恢复，关联的触发规则，环境变量和副本会一并删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
         /// <returns><see cref="DeleteFunctionResponse"/></returns>
@@ -3906,7 +3906,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 操作边缘函数运行环境，支持环境变量的相关设置。
-        /// 设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
+        /// 设置环境变量后，可在函数代码和函数副本代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
         /// </summary>
         /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
         /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>
@@ -3917,7 +3917,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 操作边缘函数运行环境，支持环境变量的相关设置。
-        /// 设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
+        /// 设置环境变量后，可在函数代码和函数副本代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
         /// </summary>
         /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
         /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>

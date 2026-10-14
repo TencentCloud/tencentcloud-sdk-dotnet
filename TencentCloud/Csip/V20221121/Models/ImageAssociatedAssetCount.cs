@@ -60,6 +60,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
+        /// <summary>
+        /// <p>镜像关联超级节点数</p>
+        /// </summary>
+        [JsonProperty("SuperNodeHostCount")]
+        public ulong? SuperNodeHostCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "OwnerAccountName", this.OwnerAccountName);
             this.SetParamSimple(map, prefix + "OwnerAppId", this.OwnerAppId);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+            this.SetParamSimple(map, prefix + "SuperNodeHostCount", this.SuperNodeHostCount);
         }
     }
 }

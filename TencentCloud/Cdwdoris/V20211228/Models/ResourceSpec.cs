@@ -25,64 +25,70 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 规格名称，例如“SCH1"
+        /// <p>规格名称，例如“SCH1&quot;</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// cpu核数
+        /// <p>cpu核数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存大小，单位G
+        /// <p>内存大小，单位G</p>
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
+        /// <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 系统盘描述信息
+        /// <p>系统盘描述信息</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public DiskSpec SystemDisk{ get; set; }
 
         /// <summary>
-        /// 数据盘描述信息
+        /// <p>数据盘描述信息</p>
         /// </summary>
         [JsonProperty("DataDisk")]
         public DiskSpec DataDisk{ get; set; }
 
         /// <summary>
-        /// 最大节点数目限制
+        /// <p>最大节点数目限制</p>
         /// </summary>
         [JsonProperty("MaxNodeSize")]
         public long? MaxNodeSize{ get; set; }
 
         /// <summary>
-        /// 是否可用，false代表售罄
+        /// <p>是否可用，false代表售罄</p>
         /// </summary>
         [JsonProperty("Available")]
         public bool? Available{ get; set; }
 
         /// <summary>
-        /// 规格描述信息
+        /// <p>规格描述信息</p>
         /// </summary>
         [JsonProperty("ComputeSpecDesc")]
         public string ComputeSpecDesc{ get; set; }
 
         /// <summary>
-        /// cvm库存
+        /// <p>cvm库存</p>
         /// </summary>
         [JsonProperty("InstanceQuota")]
         public long? InstanceQuota{ get; set; }
+
+        /// <summary>
+        /// <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
+        /// </summary>
+        [JsonProperty("ComputeGroupSuffix")]
+        public string ComputeGroupSuffix{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Available", this.Available);
             this.SetParamSimple(map, prefix + "ComputeSpecDesc", this.ComputeSpecDesc);
             this.SetParamSimple(map, prefix + "InstanceQuota", this.InstanceQuota);
+            this.SetParamSimple(map, prefix + "ComputeGroupSuffix", this.ComputeGroupSuffix);
         }
     }
 }

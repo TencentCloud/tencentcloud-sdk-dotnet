@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体传输事件的配置信息列表。
+        /// <p>媒体传输事件的配置信息列表。</p>
         /// </summary>
         [JsonProperty("Infos")]
         public DescribeEvent[] Infos{ get; set; }
 
         /// <summary>
-        /// 当前页数。
+        /// <p>当前页数。</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页大小。
+        /// <p>每页大小。</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 总数量。
+        /// <p>总数量。</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public long? TotalNum{ get; set; }
 
         /// <summary>
-        /// 总页数。
+        /// <p>总页数。</p>
         /// </summary>
         [JsonProperty("TotalPage")]
         public long? TotalPage{ get; set; }

@@ -25,28 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 工作流 ID 过滤条件，数组长度限制：100。
+        /// <p>工作流 ID 过滤条件，数组长度限制：100。</p>
         /// </summary>
         [JsonProperty("WorkflowIds")]
         public long?[] WorkflowIds{ get; set; }
 
         /// <summary>
-        /// 工作流状态，取值范围：
-        /// <li>Enabled：已启用，</li>
-        /// <li>Disabled：已禁用。</li>
-        /// 不填此参数，则不区分工作流状态。
+        /// <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，默认值：0。
+        /// <p>分页偏移量，默认值：0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，默认值：10，最大值：100。
+        /// <p>返回记录条数，默认值：10，最大值：100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

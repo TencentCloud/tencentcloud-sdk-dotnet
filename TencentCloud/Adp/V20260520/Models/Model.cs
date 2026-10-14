@@ -26,9 +26,17 @@ namespace TencentCloud.Adp.V20260520.Models
         
         /// <summary>
         /// <p>模型徽章列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BadgeList")]
         public ModelBadge[] BadgeList{ get; set; }
+
+        /// <summary>
+        /// <p>模型作者信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeveloperInfo")]
+        public ModelDeveloperBasic DeveloperInfo{ get; set; }
 
         /// <summary>
         /// <p>模型限制信息</p>
@@ -46,12 +54,14 @@ namespace TencentCloud.Adp.V20260520.Models
 
         /// <summary>
         /// <p>模型超参配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterList")]
         public ModelParameter[] ParameterList{ get; set; }
 
         /// <summary>
         /// <p>模型属性配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PropertyList")]
         public ModelProperty[] PropertyList{ get; set; }
@@ -76,12 +86,6 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("TagList")]
         public string[] TagList{ get; set; }
 
-        /// <summary>
-        /// <p>模型作者信息</p>
-        /// </summary>
-        [JsonProperty("DeveloperInfo")]
-        public ModelDeveloperBasic DeveloperInfo{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +93,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "BadgeList.", this.BadgeList);
+            this.SetParamObj(map, prefix + "DeveloperInfo.", this.DeveloperInfo);
             this.SetParamObj(map, prefix + "LimitInfo.", this.LimitInfo);
             this.SetParamObj(map, prefix + "ModelBasic.", this.ModelBasic);
             this.SetParamArrayObj(map, prefix + "ParameterList.", this.ParameterList);
@@ -96,7 +101,6 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "ProviderInfo.", this.ProviderInfo);
             this.SetParamObj(map, prefix + "StatusInfo.", this.StatusInfo);
             this.SetParamArraySimple(map, prefix + "TagList.", this.TagList);
-            this.SetParamObj(map, prefix + "DeveloperInfo.", this.DeveloperInfo);
         }
     }
 }

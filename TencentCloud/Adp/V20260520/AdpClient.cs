@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1509";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -512,6 +512,29 @@ namespace TencentCloud.Adp.V20260520
         public CreateWebSocketTokenResponse CreateWebSocketTokenSync(CreateWebSocketTokenRequest req)
         {
             return InternalRequestAsync<CreateWebSocketTokenResponse>(req, "CreateWebSocketToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，才能创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowRunRequest"/></param>
+        /// <returns><see cref="CreateWorkflowRunResponse"/></returns>
+        public Task<CreateWorkflowRunResponse> CreateWorkflowRun(CreateWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowRunResponse>(req, "CreateWorkflowRun");
+        }
+
+        /// <summary>
+        /// 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+        /// 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，才能创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowRunRequest"/></param>
+        /// <returns><see cref="CreateWorkflowRunResponse"/></returns>
+        public CreateWorkflowRunResponse CreateWorkflowRunSync(CreateWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowRunResponse>(req, "CreateWorkflowRun")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1587,6 +1610,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// DescribeNodeBatchRun
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeBatchRunRequest"/></param>
+        /// <returns><see cref="DescribeNodeBatchRunResponse"/></returns>
+        public Task<DescribeNodeBatchRunResponse> DescribeNodeBatchRun(DescribeNodeBatchRunRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeBatchRunResponse>(req, "DescribeNodeBatchRun");
+        }
+
+        /// <summary>
+        /// DescribeNodeBatchRun
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeBatchRunRequest"/></param>
+        /// <returns><see cref="DescribeNodeBatchRunResponse"/></returns>
+        public DescribeNodeBatchRunResponse DescribeNodeBatchRunSync(DescribeNodeBatchRunRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeBatchRunResponse>(req, "DescribeNodeBatchRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看工作流节点运行详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeRunDetailRequest"/></param>
+        /// <returns><see cref="DescribeNodeRunDetailResponse"/></returns>
+        public Task<DescribeNodeRunDetailResponse> DescribeNodeRunDetail(DescribeNodeRunDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeRunDetailResponse>(req, "DescribeNodeRunDetail");
+        }
+
+        /// <summary>
+        /// 查看工作流节点运行详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeRunDetailRequest"/></param>
+        /// <returns><see cref="DescribeNodeRunDetailResponse"/></returns>
+        public DescribeNodeRunDetailResponse DescribeNodeRunDetailSync(DescribeNodeRunDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeRunDetailResponse>(req, "DescribeNodeRunDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取插件详情
         /// </summary>
         /// <param name="req"><see cref="DescribePluginRequest"/></param>
@@ -1940,6 +2005,48 @@ namespace TencentCloud.Adp.V20260520
         public DescribeVariableListResponse DescribeVariableListSync(DescribeVariableListRequest req)
         {
             return InternalRequestAsync<DescribeVariableListResponse>(req, "DescribeVariableList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作流运行详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunResponse"/></returns>
+        public Task<DescribeWorkflowRunResponse> DescribeWorkflowRun(DescribeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunResponse>(req, "DescribeWorkflowRun");
+        }
+
+        /// <summary>
+        /// 查询工作流运行详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunResponse"/></returns>
+        public DescribeWorkflowRunResponse DescribeWorkflowRunSync(DescribeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunResponse>(req, "DescribeWorkflowRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作流运行实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunSummaryListResponse"/></returns>
+        public Task<DescribeWorkflowRunSummaryListResponse> DescribeWorkflowRunSummaryList(DescribeWorkflowRunSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunSummaryListResponse>(req, "DescribeWorkflowRunSummaryList");
+        }
+
+        /// <summary>
+        /// 查询工作流运行实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunSummaryListResponse"/></returns>
+        public DescribeWorkflowRunSummaryListResponse DescribeWorkflowRunSummaryListSync(DescribeWorkflowRunSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunSummaryListResponse>(req, "DescribeWorkflowRunSummaryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2492,6 +2599,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 继续运行等待输入的工作流异步运行实例
+        /// </summary>
+        /// <param name="req"><see cref="ResumeWorkflowRunRequest"/></param>
+        /// <returns><see cref="ResumeWorkflowRunResponse"/></returns>
+        public Task<ResumeWorkflowRunResponse> ResumeWorkflowRun(ResumeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<ResumeWorkflowRunResponse>(req, "ResumeWorkflowRun");
+        }
+
+        /// <summary>
+        /// 继续运行等待输入的工作流异步运行实例
+        /// </summary>
+        /// <param name="req"><see cref="ResumeWorkflowRunRequest"/></param>
+        /// <returns><see cref="ResumeWorkflowRunResponse"/></returns>
+        public ResumeWorkflowRunResponse ResumeWorkflowRunSync(ResumeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<ResumeWorkflowRunResponse>(req, "ResumeWorkflowRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重试发布(发布暂停之后再次重新发布)
         /// </summary>
         /// <param name="req"><see cref="RetryReleaseRequest"/></param>
@@ -2555,6 +2683,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// SaveWorkflowDebugContext
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowDebugContextRequest"/></param>
+        /// <returns><see cref="SaveWorkflowDebugContextResponse"/></returns>
+        public Task<SaveWorkflowDebugContextResponse> SaveWorkflowDebugContext(SaveWorkflowDebugContextRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowDebugContextResponse>(req, "SaveWorkflowDebugContext");
+        }
+
+        /// <summary>
+        /// SaveWorkflowDebugContext
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowDebugContextRequest"/></param>
+        /// <returns><see cref="SaveWorkflowDebugContextResponse"/></returns>
+        public SaveWorkflowDebugContextResponse SaveWorkflowDebugContextSync(SaveWorkflowDebugContextRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowDebugContextResponse>(req, "SaveWorkflowDebugContext")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// SaveWorkflowToolNodeOutput
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowToolNodeOutputRequest"/></param>
+        /// <returns><see cref="SaveWorkflowToolNodeOutputResponse"/></returns>
+        public Task<SaveWorkflowToolNodeOutputResponse> SaveWorkflowToolNodeOutput(SaveWorkflowToolNodeOutputRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowToolNodeOutputResponse>(req, "SaveWorkflowToolNodeOutput");
+        }
+
+        /// <summary>
+        /// SaveWorkflowToolNodeOutput
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowToolNodeOutputRequest"/></param>
+        /// <returns><see cref="SaveWorkflowToolNodeOutputResponse"/></returns>
+        public SaveWorkflowToolNodeOutputResponse SaveWorkflowToolNodeOutputSync(SaveWorkflowToolNodeOutputRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowToolNodeOutputResponse>(req, "SaveWorkflowToolNodeOutput")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 知识检索
         /// </summary>
         /// <param name="req"><see cref="SearchKnowledgeRequest"/></param>
@@ -2572,6 +2742,27 @@ namespace TencentCloud.Adp.V20260520
         public SearchKnowledgeResponse SearchKnowledgeSync(SearchKnowledgeRequest req)
         {
             return InternalRequestAsync<SearchKnowledgeResponse>(req, "SearchKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量停止正在进行的工作流运行实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopWorkflowRunListRequest"/></param>
+        /// <returns><see cref="StopWorkflowRunListResponse"/></returns>
+        public Task<StopWorkflowRunListResponse> StopWorkflowRunList(StopWorkflowRunListRequest req)
+        {
+            return InternalRequestAsync<StopWorkflowRunListResponse>(req, "StopWorkflowRunList");
+        }
+
+        /// <summary>
+        /// 批量停止正在进行的工作流运行实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopWorkflowRunListRequest"/></param>
+        /// <returns><see cref="StopWorkflowRunListResponse"/></returns>
+        public StopWorkflowRunListResponse StopWorkflowRunListSync(StopWorkflowRunListRequest req)
+        {
+            return InternalRequestAsync<StopWorkflowRunListResponse>(req, "StopWorkflowRunList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

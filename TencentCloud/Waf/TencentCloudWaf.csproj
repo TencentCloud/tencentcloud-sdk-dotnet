@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1512</VersionPrefix>
+    <VersionPrefix>3.0.1520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -138,6 +138,7 @@
     <Compile Include="V20180125\Models\CCRuleItems.cs" />
     <Compile Include="V20180125\Models\CCRuleLists.cs" />
     <Compile Include="V20180125\Models\CacheUrlItems.cs" />
+    <Compile Include="V20180125\Models\CategoryGroup.cs" />
     <Compile Include="V20180125\Models\CdcCluster.cs" />
     <Compile Include="V20180125\Models\CdcRegion.cs" />
     <Compile Include="V20180125\Models\ClawRiskItem.cs" />
@@ -212,6 +213,10 @@
     <Compile Include="V20180125\Models\DeleteIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlV2Request.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlV2Response.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMContentRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMContentRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMKeywordLibraryRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMKeywordLibraryResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleRequest.cs" />
@@ -331,8 +336,18 @@
     <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentRuleListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentRuleListResponse.cs" />
     <Compile Include="V20180125\Models\DescribeLLMContentSecCheckRequest.cs" />
     <Compile Include="V20180125\Models\DescribeLLMContentSecCheckResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMKeywordLibraryRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMKeywordLibraryResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMSdkAccessRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMSdkAccessResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafDLPRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafDLPRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafProtectRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafProtectRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeLogHistogramRequest.cs" />
     <Compile Include="V20180125\Models\DescribeLogHistogramResponse.cs" />
     <Compile Include="V20180125\Models\DescribeModuleStatusRequest.cs" />
@@ -422,6 +437,8 @@
     <Compile Include="V20180125\Models\EnableRateLimitsV2Response.cs" />
     <Compile Include="V20180125\Models\ExportAccessInfo.cs" />
     <Compile Include="V20180125\Models\ExportInfo.cs" />
+    <Compile Include="V20180125\Models\ExportLLMKeywordLibRequest.cs" />
+    <Compile Include="V20180125\Models\ExportLLMKeywordLibResponse.cs" />
     <Compile Include="V20180125\Models\FieldWriteConfig.cs" />
     <Compile Include="V20180125\Models\FilterCls.cs" />
     <Compile Include="V20180125\Models\FiltersItemNew.cs" />
@@ -472,9 +489,12 @@
     <Compile Include="V20180125\Models\KVInt.cs" />
     <Compile Include="V20180125\Models\KeyWordInfo.cs" />
     <Compile Include="V20180125\Models\LLMDetectResult.cs" />
+    <Compile Include="V20180125\Models\LLMKeywordLibrary.cs" />
     <Compile Include="V20180125\Models\LLMMonPkg.cs" />
+    <Compile Include="V20180125\Models\LLMOptionsItem.cs" />
     <Compile Include="V20180125\Models\LLMPkg.cs" />
     <Compile Include="V20180125\Models\LLMRisks.cs" />
+    <Compile Include="V20180125\Models\LLMSdkAccessItem.cs" />
     <Compile Include="V20180125\Models\LLMSensitiveValueLevel.cs" />
     <Compile Include="V20180125\Models\LimitHeader.cs" />
     <Compile Include="V20180125\Models\LimitHeaderName.cs" />
@@ -571,6 +591,18 @@
     <Compile Include="V20180125\Models\ModifyInstanceRenewFlagResponse.cs" />
     <Compile Include="V20180125\Models\ModifyIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\ModifyIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMKeywordLibraryRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMKeywordLibraryResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafDLPRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafDLPRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafProtectRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafProtectRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyObjectRequest.cs" />
@@ -648,6 +680,8 @@
     <Compile Include="V20180125\Models\ReqUserRule.cs" />
     <Compile Include="V20180125\Models\ResponseCode.cs" />
     <Compile Include="V20180125\Models\Rule.cs" />
+    <Compile Include="V20180125\Models\RuleDetail.cs" />
+    <Compile Include="V20180125\Models\RuleItem.cs" />
     <Compile Include="V20180125\Models\RuleList.cs" />
     <Compile Include="V20180125\Models\RuleType.cs" />
     <Compile Include="V20180125\Models\SSEClientMessage.cs" />
@@ -711,6 +745,7 @@
     <Compile Include="V20180125\Models\UserSignatureRule.cs" />
     <Compile Include="V20180125\Models\UserWhiteRule.cs" />
     <Compile Include="V20180125\Models\UserWhiteRuleItem.cs" />
+    <Compile Include="V20180125\Models\ValueLevel.cs" />
     <Compile Include="V20180125\Models\VipInfo.cs" />
     <Compile Include="V20180125\Models\WafRuleLimit.cs" />
     <Compile Include="V20180125\Models\WafThreatenIntelligenceDetails.cs" />

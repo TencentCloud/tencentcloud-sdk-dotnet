@@ -73,6 +73,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string QueueName{ get; set; }
 
         /// <summary>
+        /// <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProfileDetail")]
+        public WarehouseProfileBriefInfo ProfileDetail{ get; set; }
+
+        /// <summary>
         /// <p>创建时间（毫秒时间戳）。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -152,6 +159,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
             this.SetParamSimple(map, prefix + "PartitionName", this.PartitionName);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamObj(map, prefix + "ProfileDetail.", this.ProfileDetail);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ActiveClusters", this.ActiveClusters);

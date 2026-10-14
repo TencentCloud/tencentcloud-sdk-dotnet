@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1514</VersionPrefix>
+    <VersionPrefix>3.0.1520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,11 +53,14 @@
     <Compile Include="V20210527\Models\Aggregation.cs" />
     <Compile Include="V20210527\Models\AlarmProfileList.cs" />
     <Compile Include="V20210527\Models\AlarmsRules.cs" />
+    <Compile Include="V20210527\Models\AuditDBLogItem.cs" />
     <Compile Include="V20210527\Models\AuditInstance.cs" />
     <Compile Include="V20210527\Models\AuditInstanceFilter.cs" />
     <Compile Include="V20210527\Models\AuditInstanceInfo.cs" />
     <Compile Include="V20210527\Models\AuditLogFile.cs" />
     <Compile Include="V20210527\Models\AuditLogFilter.cs" />
+    <Compile Include="V20210527\Models\AuditLogQueryFilter.cs" />
+    <Compile Include="V20210527\Models\AuditProxyLogItem.cs" />
     <Compile Include="V20210527\Models\AutonomyActionVo.cs" />
     <Compile Include="V20210527\Models\AutonomyEventVo.cs" />
     <Compile Include="V20210527\Models\AutonomyUserProfileInfo.cs" />
@@ -129,6 +132,8 @@
     <Compile Include="V20210527\Models\DescribeAuditLogFilesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAuditLogTopSqlsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBAuditLogTopSqlsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAuditLogsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBAuditLogsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAutonomyActionsRequest.cs" />
@@ -153,6 +158,8 @@
     <Compile Include="V20210527\Models\DescribeDBSpaceStatusResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDatabaseAutonomyStatusRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDatabaseAutonomyStatusResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDatabaseObjectV2Request.cs" />
+    <Compile Include="V20210527\Models\DescribeDatabaseObjectV2Response.cs" />
     <Compile Include="V20210527\Models\DescribeDeadLockLogsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDeadLockLogsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDiagDBInstancesRequest.cs" />
@@ -241,6 +248,7 @@
     <Compile Include="V20210527\Models\HealthScoreInfo.cs" />
     <Compile Include="V20210527\Models\HealthScoreTimeSeriesData.cs" />
     <Compile Include="V20210527\Models\HealthStatus.cs" />
+    <Compile Include="V20210527\Models\IndexDDLInfo.cs" />
     <Compile Include="V20210527\Models\IndexesToBuild.cs" />
     <Compile Include="V20210527\Models\IndexesToDrop.cs" />
     <Compile Include="V20210527\Models\InstanceBasicInfo.cs" />
@@ -311,6 +319,7 @@
     <Compile Include="V20210527\Models\Table.cs" />
     <Compile Include="V20210527\Models\TableSpaceData.cs" />
     <Compile Include="V20210527\Models\TableSpaceTimeSeries.cs" />
+    <Compile Include="V20210527\Models\TableStatistics.cs" />
     <Compile Include="V20210527\Models\TagFilterGroup.cs" />
     <Compile Include="V20210527\Models\TagInfo.cs" />
     <Compile Include="V20210527\Models\TagPair.cs" />

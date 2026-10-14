@@ -170,6 +170,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("CCNs")]
         public CCN[] CCNs{ get; set; }
 
+        /// <summary>
+        /// <p>挂靠的宿主集群</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterGroupSerialId")]
+        public string ClusterGroupSerialId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArrayObj(map, prefix + "CCNs.", this.CCNs);
+            this.SetParamSimple(map, prefix + "ClusterGroupSerialId", this.ClusterGroupSerialId);
         }
     }
 }

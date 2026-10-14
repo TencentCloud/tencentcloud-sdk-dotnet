@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1509</VersionPrefix>
+    <VersionPrefix>3.0.1520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,7 +89,9 @@
     <Compile Include="V20260520\Models\AppAuxiliaryInfo.cs" />
     <Compile Include="V20260520\Models\AppConfig.cs" />
     <Compile Include="V20260520\Models\AppExperienceConfig.cs" />
+    <Compile Include="V20260520\Models\AppFileVolumeMount.cs" />
     <Compile Include="V20260520\Models\AppGreetingConfig.cs" />
+    <Compile Include="V20260520\Models\AppIdentity.cs" />
     <Compile Include="V20260520\Models\AppMemoryConfig.cs" />
     <Compile Include="V20260520\Models\AppMetadata.cs" />
     <Compile Include="V20260520\Models\AppModeConfig.cs" />
@@ -120,6 +122,7 @@
     <Compile Include="V20260520\Models\AppTriggerWebhookParamSchemaConfig.cs" />
     <Compile Include="V20260520\Models\AppTriggerWebhookStatus.cs" />
     <Compile Include="V20260520\Models\AppTriggerWorkflowExecuteConfig.cs" />
+    <Compile Include="V20260520\Models\AppVariableValue.cs" />
     <Compile Include="V20260520\Models\AppWebSearchConfig.cs" />
     <Compile Include="V20260520\Models\AppWorkflowConfig.cs" />
     <Compile Include="V20260520\Models\AppealingStatus.cs" />
@@ -128,6 +131,7 @@
     <Compile Include="V20260520\Models\AuthConfig.cs" />
     <Compile Include="V20260520\Models\BackgroundImage.cs" />
     <Compile Include="V20260520\Models\BasicBilling.cs" />
+    <Compile Include="V20260520\Models\BatchRunSummary.cs" />
     <Compile Include="V20260520\Models\BillingAttribute.cs" />
     <Compile Include="V20260520\Models\CallSource.cs" />
     <Compile Include="V20260520\Models\CallbackConfig.cs" />
@@ -141,6 +145,7 @@
     <Compile Include="V20260520\Models\CheckLabelResponse.cs" />
     <Compile Include="V20260520\Models\CheckResult.cs" />
     <Compile Include="V20260520\Models\ClawAgentAgentTeamConfig.cs" />
+    <Compile Include="V20260520\Models\ClawAgentChannelContextTimeoutConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentLongMemoryConfig.cs" />
     <Compile Include="V20260520\Models\CodeToolConfig.cs" />
@@ -157,6 +162,8 @@
     <Compile Include="V20260520\Models\ConversationAgentTask.cs" />
     <Compile Include="V20260520\Models\ConversationContent.cs" />
     <Compile Include="V20260520\Models\ConversationExperience.cs" />
+    <Compile Include="V20260520\Models\ConversationFileCollection.cs" />
+    <Compile Include="V20260520\Models\ConversationFileInfo.cs" />
     <Compile Include="V20260520\Models\ConversationMcpApp.cs" />
     <Compile Include="V20260520\Models\ConversationMessage.cs" />
     <Compile Include="V20260520\Models\ConversationQuoteInfo.cs" />
@@ -166,6 +173,7 @@
     <Compile Include="V20260520\Models\ConversationRecordTokenUsage.cs" />
     <Compile Include="V20260520\Models\ConversationReference.cs" />
     <Compile Include="V20260520\Models\ConversationResetInfo.cs" />
+    <Compile Include="V20260520\Models\ConversationWidget.cs" />
     <Compile Include="V20260520\Models\ConversationWorkspace.cs" />
     <Compile Include="V20260520\Models\CopyAgentFromAppRequest.cs" />
     <Compile Include="V20260520\Models\CopyAgentFromAppResponse.cs" />
@@ -210,9 +218,12 @@
     <Compile Include="V20260520\Models\CreateVariableResponse.cs" />
     <Compile Include="V20260520\Models\CreateWebSocketTokenRequest.cs" />
     <Compile Include="V20260520\Models\CreateWebSocketTokenResponse.cs" />
+    <Compile Include="V20260520\Models\CreateWorkflowRunRequest.cs" />
+    <Compile Include="V20260520\Models\CreateWorkflowRunResponse.cs" />
     <Compile Include="V20260520\Models\CreateWorkspaceCredentialRequest.cs" />
     <Compile Include="V20260520\Models\CreateWorkspaceCredentialResponse.cs" />
     <Compile Include="V20260520\Models\CronSchedule.cs" />
+    <Compile Include="V20260520\Models\CustomVariable.cs" />
     <Compile Include="V20260520\Models\DBRetrievalConfig.cs" />
     <Compile Include="V20260520\Models\DailySchedule.cs" />
     <Compile Include="V20260520\Models\DeDuplicateStrategy.cs" />
@@ -316,6 +327,10 @@
     <Compile Include="V20260520\Models\DescribeMsgRecordCategoryListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeMsgRecordListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeMsgRecordListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeNodeBatchRunRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeNodeBatchRunResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeNodeRunDetailRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeNodeRunDetailResponse.cs" />
     <Compile Include="V20260520\Models\DescribePluginRequest.cs" />
     <Compile Include="V20260520\Models\DescribePluginResponse.cs" />
     <Compile Include="V20260520\Models\DescribePluginSummaryListRequest.cs" />
@@ -350,6 +365,10 @@
     <Compile Include="V20260520\Models\DescribeVariableListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeVariableRequest.cs" />
     <Compile Include="V20260520\Models\DescribeVariableResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeWorkflowRunRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeWorkflowRunResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeWorkflowRunSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeWorkflowRunSummaryListResponse.cs" />
     <Compile Include="V20260520\Models\DialogCustomConfig.cs" />
     <Compile Include="V20260520\Models\DigitalHumanConfig.cs" />
     <Compile Include="V20260520\Models\DingTalkChannelConfig.cs" />
@@ -383,6 +402,7 @@
     <Compile Include="V20260520\Models\FavoriteSkillResponse.cs" />
     <Compile Include="V20260520\Models\FieldMask.cs" />
     <Compile Include="V20260520\Models\FileParseModel.cs" />
+    <Compile Include="V20260520\Models\FileVolumeMount.cs" />
     <Compile Include="V20260520\Models\Filter.cs" />
     <Compile Include="V20260520\Models\FinalRerankConfig.cs" />
     <Compile Include="V20260520\Models\GenerateModel.cs" />
@@ -399,6 +419,8 @@
     <Compile Include="V20260520\Models\KBModifyExtendFields.cs" />
     <Compile Include="V20260520\Models\KBPermission.cs" />
     <Compile Include="V20260520\Models\KBRetrievalConfig.cs" />
+    <Compile Include="V20260520\Models\KBShareStatus.cs" />
+    <Compile Include="V20260520\Models\KBSpaceShare.cs" />
     <Compile Include="V20260520\Models\KBSpec.cs" />
     <Compile Include="V20260520\Models\KBSummary.cs" />
     <Compile Include="V20260520\Models\KVPair.cs" />
@@ -479,6 +501,11 @@
     <Compile Include="V20260520\Models\MultiAgentConfig.cs" />
     <Compile Include="V20260520\Models\MultiModalQAModel.cs" />
     <Compile Include="V20260520\Models\MultiModalUnderstandingModel.cs" />
+    <Compile Include="V20260520\Models\NodeRun.cs" />
+    <Compile Include="V20260520\Models\NodeRunContent.cs" />
+    <Compile Include="V20260520\Models\NodeRunDetail.cs" />
+    <Compile Include="V20260520\Models\NodeRunExecution.cs" />
+    <Compile Include="V20260520\Models\NodeRunLog.cs" />
     <Compile Include="V20260520\Models\OAuthConfig.cs" />
     <Compile Include="V20260520\Models\OnceSchedule.cs" />
     <Compile Include="V20260520\Models\OperationResult.cs" />
@@ -496,6 +523,7 @@
     <Compile Include="V20260520\Models\PluginUsageDetail.cs" />
     <Compile Include="V20260520\Models\PluginUsageSummary.cs" />
     <Compile Include="V20260520\Models\PluginUserState.cs" />
+    <Compile Include="V20260520\Models\PortalShareConfig.cs" />
     <Compile Include="V20260520\Models\PromptRewriteModel.cs" />
     <Compile Include="V20260520\Models\QACreateSpec.cs" />
     <Compile Include="V20260520\Models\QALifecycle.cs" />
@@ -512,6 +540,8 @@
     <Compile Include="V20260520\Models\ReleaseSkillRequest.cs" />
     <Compile Include="V20260520\Models\ReleaseSkillResponse.cs" />
     <Compile Include="V20260520\Models\ReleaseSummary.cs" />
+    <Compile Include="V20260520\Models\ReplyContent.cs" />
+    <Compile Include="V20260520\Models\ReplyMessage.cs" />
     <Compile Include="V20260520\Models\RequestParam.cs" />
     <Compile Include="V20260520\Models\RerankConfig.cs" />
     <Compile Include="V20260520\Models\ResetConversationRequest.cs" />
@@ -521,6 +551,8 @@
     <Compile Include="V20260520\Models\ResponseParam.cs" />
     <Compile Include="V20260520\Models\ResumeAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\ResumeAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\ResumeWorkflowRunRequest.cs" />
+    <Compile Include="V20260520\Models\ResumeWorkflowRunResponse.cs" />
     <Compile Include="V20260520\Models\RetrievalOption.cs" />
     <Compile Include="V20260520\Models\RetryReleaseRequest.cs" />
     <Compile Include="V20260520\Models\RetryReleaseResponse.cs" />
@@ -529,6 +561,10 @@
     <Compile Include="V20260520\Models\RollbackReleaseResponse.cs" />
     <Compile Include="V20260520\Models\RunAppTriggerNowRequest.cs" />
     <Compile Include="V20260520\Models\RunAppTriggerNowResponse.cs" />
+    <Compile Include="V20260520\Models\SaveWorkflowDebugContextRequest.cs" />
+    <Compile Include="V20260520\Models\SaveWorkflowDebugContextResponse.cs" />
+    <Compile Include="V20260520\Models\SaveWorkflowToolNodeOutputRequest.cs" />
+    <Compile Include="V20260520\Models\SaveWorkflowToolNodeOutputResponse.cs" />
     <Compile Include="V20260520\Models\SearchAdvancedConfig.cs" />
     <Compile Include="V20260520\Models\SearchBilling.cs" />
     <Compile Include="V20260520\Models\SearchContext.cs" />
@@ -559,6 +595,9 @@
     <Compile Include="V20260520\Models\Sort.cs" />
     <Compile Include="V20260520\Models\Space.cs" />
     <Compile Include="V20260520\Models\SpecialStatusInfo.cs" />
+    <Compile Include="V20260520\Models\Statistic.cs" />
+    <Compile Include="V20260520\Models\StopWorkflowRunListRequest.cs" />
+    <Compile Include="V20260520\Models\StopWorkflowRunListResponse.cs" />
     <Compile Include="V20260520\Models\SummaryListSwitch.cs" />
     <Compile Include="V20260520\Models\SupportedFileType.cs" />
     <Compile Include="V20260520\Models\SystemVariable.cs" />
@@ -596,5 +635,12 @@
     <Compile Include="V20260520\Models\WecomRobotWebsocketAccess.cs" />
     <Compile Include="V20260520\Models\WeeklySchedule.cs" />
     <Compile Include="V20260520\Models\WeeklyTime.cs" />
+    <Compile Include="V20260520\Models\WorkflowRun.cs" />
+    <Compile Include="V20260520\Models\WorkflowRunMetadata.cs" />
+    <Compile Include="V20260520\Models\WorkflowRunOutput.cs" />
+    <Compile Include="V20260520\Models\WorkflowRunProfile.cs" />
+    <Compile Include="V20260520\Models\WorkflowRunResult.cs" />
+    <Compile Include="V20260520\Models\WorkflowRunSummary.cs" />
+    <Compile Include="V20260520\Models\WorkflowRunTime.cs" />
   </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// app_id
+        /// <p>app_id</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

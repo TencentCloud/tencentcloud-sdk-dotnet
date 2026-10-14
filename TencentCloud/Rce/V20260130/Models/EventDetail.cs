@@ -168,6 +168,24 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("ModifyGuild")]
         public ModifyGuildEvent ModifyGuild{ get; set; }
 
+        /// <summary>
+        /// <p>搜索</p>
+        /// </summary>
+        [JsonProperty("Search")]
+        public SearchEvent Search{ get; set; }
+
+        /// <summary>
+        /// <p>预约</p>
+        /// </summary>
+        [JsonProperty("Booking")]
+        public BookingEvent Booking{ get; set; }
+
+        /// <summary>
+        /// <p>账号安全</p>
+        /// </summary>
+        [JsonProperty("AccountSecurity")]
+        public AccountSecurityEvent AccountSecurity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +216,9 @@ namespace TencentCloud.Rce.V20260130.Models
             this.SetParamObj(map, prefix + "ModifyRole.", this.ModifyRole);
             this.SetParamObj(map, prefix + "AddFriend.", this.AddFriend);
             this.SetParamObj(map, prefix + "ModifyGuild.", this.ModifyGuild);
+            this.SetParamObj(map, prefix + "Search.", this.Search);
+            this.SetParamObj(map, prefix + "Booking.", this.Booking);
+            this.SetParamObj(map, prefix + "AccountSecurity.", this.AccountSecurity);
         }
     }
 }

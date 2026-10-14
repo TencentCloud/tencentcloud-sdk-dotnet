@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1511";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -2364,6 +2364,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeVpcFwGroupSwitchResponse DescribeVpcFwGroupSwitchSync(DescribeVpcFwGroupSwitchRequest req)
         {
             return InternalRequestAsync<DescribeVpcFwGroupSwitchResponse>(req, "DescribeVpcFwGroupSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询VPC防火墙下，单IP粒度的流量统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcFwIpStatRequest"/></param>
+        /// <returns><see cref="DescribeVpcFwIpStatResponse"/></returns>
+        public Task<DescribeVpcFwIpStatResponse> DescribeVpcFwIpStat(DescribeVpcFwIpStatRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcFwIpStatResponse>(req, "DescribeVpcFwIpStat");
+        }
+
+        /// <summary>
+        /// 查询VPC防火墙下，单IP粒度的流量统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcFwIpStatRequest"/></param>
+        /// <returns><see cref="DescribeVpcFwIpStatResponse"/></returns>
+        public DescribeVpcFwIpStatResponse DescribeVpcFwIpStatSync(DescribeVpcFwIpStatRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcFwIpStatResponse>(req, "DescribeVpcFwIpStat")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

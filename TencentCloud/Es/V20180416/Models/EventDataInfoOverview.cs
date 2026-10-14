@@ -108,6 +108,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SubEventName")]
         public string SubEventName{ get; set; }
 
+        /// <summary>
+        /// <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
+        /// </summary>
+        [JsonProperty("EventScope")]
+        public ulong? EventScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SubEventType", this.SubEventType);
             this.SetParamSimple(map, prefix + "SubEventName", this.SubEventName);
+            this.SetParamSimple(map, prefix + "EventScope", this.EventScope);
         }
     }
 }

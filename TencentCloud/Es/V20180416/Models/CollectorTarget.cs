@@ -25,87 +25,128 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 采集配置名称
+        /// <p>采集配置名称</p>
         /// </summary>
         [JsonProperty("TargetName")]
         public string TargetName{ get; set; }
 
         /// <summary>
-        /// 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+        /// <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespaces")]
         public Namespaces Namespaces{ get; set; }
 
         /// <summary>
-        /// Pod标签列表
+        /// <p>Pod标签列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodLabels")]
         public PodLabel[] PodLabels{ get; set; }
 
         /// <summary>
-        /// 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+        /// <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerName")]
         public string ContainerName{ get; set; }
 
         /// <summary>
-        /// ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+        /// <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexPrefix")]
         public string IndexPrefix{ get; set; }
 
         /// <summary>
-        /// 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+        /// <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogFilters")]
         public string LogFilters{ get; set; }
 
         /// <summary>
-        /// 高级配置，可自定义采集规则，最多支持2048个字符
+        /// <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigContent")]
         public string ConfigContent{ get; set; }
 
         /// <summary>
-        /// Ckafka实例的Topic
+        /// <p>Ckafka实例的Topic</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KafkaTopic")]
         public string KafkaTopic{ get; set; }
 
         /// <summary>
-        /// ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+        /// <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexAlias")]
         public string IndexAlias{ get; set; }
 
         /// <summary>
-        /// /
+        /// <p>/</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
         /// <summary>
-        /// 日志采集host路径
+        /// <p>日志采集host路径</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputPath")]
         public string InputPath{ get; set; }
 
         /// <summary>
-        /// inputs.tail_files
+        /// <p>inputs.tail_files</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputsTailFiles")]
         public bool? InputsTailFiles{ get; set; }
+
+        /// <summary>
+        /// <p>开关inputs.multitline</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputsMultiLineEnabled")]
+        public bool? InputsMultiLineEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>inputs.multiline.type</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputsMultiLineType")]
+        public string InputsMultiLineType{ get; set; }
+
+        /// <summary>
+        /// <p>inputs.multiline.pattern</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputsMultiLinePattern")]
+        public string InputsMultiLinePattern{ get; set; }
+
+        /// <summary>
+        /// <p>inputs.multiline.negate</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputsMultiLineNegate")]
+        public bool? InputsMultiLineNegate{ get; set; }
+
+        /// <summary>
+        /// <p>inputs.multiline.match</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputsMultiLineMatch")]
+        public string InputsMultiLineMatch{ get; set; }
+
+        /// <summary>
+        /// <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
+        /// </summary>
+        [JsonProperty("TkeCollectType")]
+        public string TkeCollectType{ get; set; }
 
 
         /// <summary>
@@ -125,6 +166,12 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
             this.SetParamSimple(map, prefix + "InputPath", this.InputPath);
             this.SetParamSimple(map, prefix + "InputsTailFiles", this.InputsTailFiles);
+            this.SetParamSimple(map, prefix + "InputsMultiLineEnabled", this.InputsMultiLineEnabled);
+            this.SetParamSimple(map, prefix + "InputsMultiLineType", this.InputsMultiLineType);
+            this.SetParamSimple(map, prefix + "InputsMultiLinePattern", this.InputsMultiLinePattern);
+            this.SetParamSimple(map, prefix + "InputsMultiLineNegate", this.InputsMultiLineNegate);
+            this.SetParamSimple(map, prefix + "InputsMultiLineMatch", this.InputsMultiLineMatch);
+            this.SetParamSimple(map, prefix + "TkeCollectType", this.TkeCollectType);
         }
     }
 }

@@ -25,25 +25,25 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+        /// <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
         /// <summary>
-        /// 重启模式：0 滚动重启； 1 全量重启
+        /// <p>重启模式：0 滚动重启； 1 全量重启</p>
         /// </summary>
         [JsonProperty("RestartMode")]
         public long? RestartMode{ get; set; }
 
         /// <summary>
-        /// 重启时选择是否升级内核patch版本
+        /// <p>重启时选择是否升级内核patch版本</p>
         /// </summary>
         [JsonProperty("UpgradeKernel")]
         public bool? UpgradeKernel{ get; set; }

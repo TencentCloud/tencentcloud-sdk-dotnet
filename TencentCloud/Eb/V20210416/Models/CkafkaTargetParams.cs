@@ -25,22 +25,28 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 要投递到的ckafka topic
+        /// <p>要投递到的ckafka topic</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 重试策略
+        /// <p>重试策略</p>
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public RetryPolicy RetryPolicy{ get; set; }
 
         /// <summary>
-        /// 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+        /// <p>事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)</p>
         /// </summary>
         [JsonProperty("EventDeliveryFormat")]
         public string EventDeliveryFormat{ get; set; }
+
+        /// <summary>
+        /// <p>事件顶层Time参数投递格式</p><p>枚举值：</p><ul><li>RFC3339： 将时间戳转换成 YYYY-MM-DDTHH:mm:ssZ 格式</li></ul>
+        /// </summary>
+        [JsonProperty("TimeFormat")]
+        public string TimeFormat{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "EventDeliveryFormat", this.EventDeliveryFormat);
+            this.SetParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
         }
     }
 }

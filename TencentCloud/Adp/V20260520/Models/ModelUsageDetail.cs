@@ -31,7 +31,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public string CallType{ get; set; }
 
         /// <summary>
-        /// <p>是否默认知识库</p>
+        /// <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
         /// </summary>
         [JsonProperty("IsDefaultKB")]
         public bool? IsDefaultKB{ get; set; }

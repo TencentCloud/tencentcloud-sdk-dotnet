@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1514";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -705,6 +705,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 查询指定实例在时间窗口内的审计日志明细，支持按 SQL 类型、执行耗时、错误码、关键词等多条件过滤。当前仅支持 dcdb、mariadb 产品（cdb、cynosdb 已切至中台）。注意 Filter.MultiSql 与 Filter.ExcludeMultiSql 需以 JSON 字符串形式传递二维数组内容，例如 [["a","b"]] 表示 (a OR b)，服务端会自动解析。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBAuditLogsResponse"/></returns>
+        public Task<DescribeDBAuditLogsResponse> DescribeDBAuditLogs(DescribeDBAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAuditLogsResponse>(req, "DescribeDBAuditLogs");
+        }
+
+        /// <summary>
+        /// 查询指定实例在时间窗口内的审计日志明细，支持按 SQL 类型、执行耗时、错误码、关键词等多条件过滤。当前仅支持 dcdb、mariadb 产品（cdb、cynosdb 已切至中台）。注意 Filter.MultiSql 与 Filter.ExcludeMultiSql 需以 JSON 字符串形式传递二维数组内容，例如 [["a","b"]] 表示 (a OR b)，服务端会自动解析。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBAuditLogsResponse"/></returns>
+        public DescribeDBAuditLogsResponse DescribeDBAuditLogsSync(DescribeDBAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAuditLogsResponse>(req, "DescribeDBAuditLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 自治中心-查询自治事件任务详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBAutonomyActionRequest"/></param>
@@ -953,6 +974,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatusSync(DescribeDatabaseAutonomyStatusRequest req)
         {
             return InternalRequestAsync<DescribeDatabaseAutonomyStatusResponse>(req, "DescribeDatabaseAutonomyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectV2Request"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectV2Response"/></returns>
+        public Task<DescribeDatabaseObjectV2Response> DescribeDatabaseObjectV2(DescribeDatabaseObjectV2Request req)
+        {
+            return InternalRequestAsync<DescribeDatabaseObjectV2Response>(req, "DescribeDatabaseObjectV2");
+        }
+
+        /// <summary>
+        /// 查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectV2Request"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectV2Response"/></returns>
+        public DescribeDatabaseObjectV2Response DescribeDatabaseObjectV2Sync(DescribeDatabaseObjectV2Request req)
+        {
+            return InternalRequestAsync<DescribeDatabaseObjectV2Response>(req, "DescribeDatabaseObjectV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

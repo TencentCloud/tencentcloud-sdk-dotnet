@@ -60,6 +60,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }
 
+        /// <summary>
+        /// <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("QualityCheck")]
+        public bool? QualityCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "SpeakerNick", this.SpeakerNick);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+            this.SetParamSimple(map, prefix + "QualityCheck", this.QualityCheck);
         }
     }
 }

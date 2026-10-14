@@ -31,16 +31,10 @@ namespace TencentCloud.Adp.V20260520.Models
         public long? ModelScene{ get; set; }
 
         /// <summary>
-        /// <p>空间ID</p>
+        /// <p>过滤条件(多个 Filter 之间为 AND, 同一 Filter 多 Values 为 OR)<br>DeveloperName： 模型作者名称<br>ProviderName： 模型提供商名称<br>ProviderType：模型提供商类型</p>
         /// </summary>
-        [JsonProperty("SpaceId")]
-        public string SpaceId{ get; set; }
-
-        /// <summary>
-        /// <p>关键词模糊搜索</p>
-        /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
+        [JsonProperty("FilterList")]
+        public Filter[] FilterList{ get; set; }
 
         /// <summary>
         /// <p>页码。从0开始</p>
@@ -55,10 +49,16 @@ namespace TencentCloud.Adp.V20260520.Models
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// <p>过滤条件(多个 Filter 之间为 AND, 同一 Filter 多 Values 为 OR)<br>DeveloperName： 模型作者名称<br>ProviderName： 模型提供商名称<br>ProviderType：模型提供商类型</p>
+        /// <p>关键词模糊搜索</p>
         /// </summary>
-        [JsonProperty("FilterList")]
-        public Filter[] FilterList{ get; set; }
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
+        /// <summary>
+        /// <p>空间ID</p>
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
 
 
         /// <summary>
@@ -67,11 +67,11 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ModelScene", this.ModelScene);
-            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
-            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamArrayObj(map, prefix + "FilterList.", this.FilterList);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamArrayObj(map, prefix + "FilterList.", this.FilterList);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
         }
     }
 }

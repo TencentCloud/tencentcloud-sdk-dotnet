@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Catalog{ get; set; }
 
         /// <summary>
-        /// <p>需要授权的表名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
+        /// <p>需要授权的表名，填 * 代表当前Database有表（TClake场景下暂不支持通配符）。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。</p>
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }

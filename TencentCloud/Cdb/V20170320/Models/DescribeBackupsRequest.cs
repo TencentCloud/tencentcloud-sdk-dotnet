@@ -25,22 +25,34 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+        /// <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 偏移量，最小值为0。
+        /// <p>偏移量，最小值为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页大小，默认值为20，最小值为1，最大值为1000。
+        /// <p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+        /// </summary>
+        [JsonProperty("MinStartTime")]
+        public string MinStartTime{ get; set; }
+
+        /// <summary>
+        /// <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
+        /// </summary>
+        [JsonProperty("MaxStartTime")]
+        public string MaxStartTime{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
+            this.SetParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1510</VersionPrefix>
+    <VersionPrefix>3.0.1520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,14 +70,24 @@
     <Compile Include="V20230517\Models\AddStreamAuthResponse.cs" />
     <Compile Include="V20230517\Models\AddUserDeviceRequest.cs" />
     <Compile Include="V20230517\Models\AddUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\BatchAddVideoSnapshotConfigChannelRequest.cs" />
+    <Compile Include="V20230517\Models\BatchAddVideoSnapshotConfigChannelResponse.cs" />
+    <Compile Include="V20230517\Models\BatchAssignVLPlanChannelsRequest.cs" />
+    <Compile Include="V20230517\Models\BatchAssignVLPlanChannelsResponse.cs" />
     <Compile Include="V20230517\Models\BatchDeleteVideoDownloadTaskRequest.cs" />
     <Compile Include="V20230517\Models\BatchDeleteVideoDownloadTaskResponse.cs" />
+    <Compile Include="V20230517\Models\BatchGetVLPlanSourceFileURLRequest.cs" />
+    <Compile Include="V20230517\Models\BatchGetVLPlanSourceFileURLResponse.cs" />
+    <Compile Include="V20230517\Models\BatchGetVideoSnapshotImageUrlData.cs" />
+    <Compile Include="V20230517\Models\BatchGetVideoSnapshotImageUrlRequest.cs" />
+    <Compile Include="V20230517\Models\BatchGetVideoSnapshotImageUrlResponse.cs" />
     <Compile Include="V20230517\Models\BatchOperateDeviceData.cs" />
     <Compile Include="V20230517\Models\BatchOperateDeviceRequest.cs" />
     <Compile Include="V20230517\Models\BatchOperateDeviceResponse.cs" />
     <Compile Include="V20230517\Models\BitRateInfo.cs" />
     <Compile Include="V20230517\Models\CallISAPIRequest.cs" />
     <Compile Include="V20230517\Models\CallISAPIResponse.cs" />
+    <Compile Include="V20230517\Models\CallbackURL.cs" />
     <Compile Include="V20230517\Models\ChannelAttrInfo.cs" />
     <Compile Include="V20230517\Models\ChannelInfo.cs" />
     <Compile Include="V20230517\Models\ControlDevicePTZRequest.cs" />
@@ -93,8 +103,16 @@
     <Compile Include="V20230517\Models\ControlRecordResponse.cs" />
     <Compile Include="V20230517\Models\ControlRecordTimelineRequest.cs" />
     <Compile Include="V20230517\Models\ControlRecordTimelineResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVLTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVLTemplateResponse.cs" />
     <Compile Include="V20230517\Models\CreateVideoDownloadTaskRequest.cs" />
     <Compile Include="V20230517\Models\CreateVideoDownloadTaskResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotTemplateResponse.cs" />
     <Compile Include="V20230517\Models\DeleteDomainRequest.cs" />
     <Compile Include="V20230517\Models\DeleteDomainResponse.cs" />
     <Compile Include="V20230517\Models\DeleteOrganizationRequest.cs" />
@@ -113,6 +131,14 @@
     <Compile Include="V20230517\Models\DeleteTaskResponse.cs" />
     <Compile Include="V20230517\Models\DeleteUserDeviceRequest.cs" />
     <Compile Include="V20230517\Models\DeleteUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVLTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVLTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotTemplateResponse.cs" />
     <Compile Include="V20230517\Models\DescribeCNAMERequest.cs" />
     <Compile Include="V20230517\Models\DescribeCNAMEResponse.cs" />
     <Compile Include="V20230517\Models\DescribeDeviceAddrList.cs" />
@@ -167,14 +193,27 @@
     <Compile Include="V20230517\Models\DescribeUserDeviceListResponse.cs" />
     <Compile Include="V20230517\Models\DescribeUserDeviceRequest.cs" />
     <Compile Include="V20230517\Models\DescribeUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanResultRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanResultResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVLTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVLTemplateResponse.cs" />
     <Compile Include="V20230517\Models\DescribeVideoBitRateList.cs" />
     <Compile Include="V20230517\Models\DescribeVideoBitRateRequest.cs" />
     <Compile Include="V20230517\Models\DescribeVideoBitRateResponse.cs" />
     <Compile Include="V20230517\Models\DescribeVideoDownloadUrlData.cs" />
     <Compile Include="V20230517\Models\DescribeVideoDownloadUrlRequest.cs" />
     <Compile Include="V20230517\Models\DescribeVideoDownloadUrlResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\EffectiveTime.cs" />
     <Compile Include="V20230517\Models\GBDeviceSnapInfo.cs" />
     <Compile Include="V20230517\Models\ISAPIOutputData.cs" />
+    <Compile Include="V20230517\Models\ImageSceneInfo.cs" />
+    <Compile Include="V20230517\Models\ImageUrlInfo.cs" />
     <Compile Include="V20230517\Models\LifeCycleData.cs" />
     <Compile Include="V20230517\Models\ListDeviceInfo.cs" />
     <Compile Include="V20230517\Models\ListDeviceSnapshotsRequest.cs" />
@@ -215,9 +254,22 @@
     <Compile Include="V20230517\Models\ListTasksData.cs" />
     <Compile Include="V20230517\Models\ListTasksRequest.cs" />
     <Compile Include="V20230517\Models\ListTasksResponse.cs" />
+    <Compile Include="V20230517\Models\ListVLPlansRequest.cs" />
+    <Compile Include="V20230517\Models\ListVLPlansResponse.cs" />
+    <Compile Include="V20230517\Models\ListVLTemplatesRequest.cs" />
+    <Compile Include="V20230517\Models\ListVLTemplatesResponse.cs" />
     <Compile Include="V20230517\Models\ListVideoDownloadTaskData.cs" />
     <Compile Include="V20230517\Models\ListVideoDownloadTaskRequest.cs" />
     <Compile Include="V20230517\Models\ListVideoDownloadTaskResponse.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotTemplateData.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\ModifyVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\ModifyVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\ModifyVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\ModifyVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\MultiSnapshotMode.cs" />
+    <Compile Include="V20230517\Models\MultiVideoSnapshotMode.cs" />
     <Compile Include="V20230517\Models\OrganizationChannelInfo.cs" />
     <Compile Include="V20230517\Models\PlayRecordData.cs" />
     <Compile Include="V20230517\Models\PlayRecordRequest.cs" />
@@ -268,7 +320,14 @@
     <Compile Include="V20230517\Models\UpdateRecordTemplateResponse.cs" />
     <Compile Include="V20230517\Models\UpdateUserDeviceRequest.cs" />
     <Compile Include="V20230517\Models\UpdateUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\VLPlanInfo.cs" />
+    <Compile Include="V20230517\Models\VLPlanResultDetailInfo.cs" />
+    <Compile Include="V20230517\Models\VLPlanResultSnapshotImageUrlInfo.cs" />
+    <Compile Include="V20230517\Models\VLTemplateInfo.cs" />
     <Compile Include="V20230517\Models\VideoDownloadTask.cs" />
     <Compile Include="V20230517\Models\VideoDownloadTaskData.cs" />
+    <Compile Include="V20230517\Models\VideoSceneInfo.cs" />
+    <Compile Include="V20230517\Models\VideoSnapshotConfigInfo.cs" />
+    <Compile Include="V20230517\Models\VideoSnapshotTemplateInfo.cs" />
   </ItemGroup>
 </Project>

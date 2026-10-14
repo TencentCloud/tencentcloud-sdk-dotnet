@@ -67,17 +67,32 @@ namespace TencentCloud.Adp.V20260520.Models
         public AppStatusInfo Status{ get; set; }
 
         /// <summary>
-        /// <p>应用引用的共享知识库列表</p>
-        /// </summary>
-        [JsonProperty("SharedKbList")]
-        public AppSharedKbInfo[] SharedKbList{ get; set; }
-
-        /// <summary>
         /// <p>企业共享配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpShareConfig")]
         public CorpShareConfig CorpShareConfig{ get; set; }
+
+        /// <summary>
+        /// <p>应用引用的共享知识库列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SharedKbList")]
+        public AppSharedKbInfo[] SharedKbList{ get; set; }
+
+        /// <summary>
+        /// <p>portal共享配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PortalShareConfig")]
+        public PortalShareConfig PortalShareConfig{ get; set; }
+
+        /// <summary>
+        /// <p>应用挂载云盘</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileVolumeMountList")]
+        public FileVolumeMount[] FileVolumeMountList{ get; set; }
 
 
         /// <summary>
@@ -91,8 +106,10 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "SecretInfo.", this.SecretInfo);
             this.SetParamObj(map, prefix + "ShareUrlInfo.", this.ShareUrlInfo);
             this.SetParamObj(map, prefix + "Status.", this.Status);
-            this.SetParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
             this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
+            this.SetParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
+            this.SetParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
+            this.SetParamArrayObj(map, prefix + "FileVolumeMountList.", this.FileVolumeMountList);
         }
     }
 }

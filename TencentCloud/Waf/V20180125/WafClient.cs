@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -932,6 +932,48 @@ namespace TencentCloud.Waf.V20180125
         public DeleteIpAccessControlV2Response DeleteIpAccessControlV2Sync(DeleteIpAccessControlV2Request req)
         {
             return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除大模型内容防护规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMContentRuleRequest"/></param>
+        /// <returns><see cref="DeleteLLMContentRuleResponse"/></returns>
+        public Task<DeleteLLMContentRuleResponse> DeleteLLMContentRule(DeleteLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMContentRuleResponse>(req, "DeleteLLMContentRule");
+        }
+
+        /// <summary>
+        /// 删除大模型内容防护规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMContentRuleRequest"/></param>
+        /// <returns><see cref="DeleteLLMContentRuleResponse"/></returns>
+        public DeleteLLMContentRuleResponse DeleteLLMContentRuleSync(DeleteLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMContentRuleResponse>(req, "DeleteLLMContentRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除词库列表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DeleteLLMKeywordLibraryResponse"/></returns>
+        public Task<DeleteLLMKeywordLibraryResponse> DeleteLLMKeywordLibrary(DeleteLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMKeywordLibraryResponse>(req, "DeleteLLMKeywordLibrary");
+        }
+
+        /// <summary>
+        /// 删除词库列表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DeleteLLMKeywordLibraryResponse"/></returns>
+        public DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrarySync(DeleteLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMKeywordLibraryResponse>(req, "DeleteLLMKeywordLibrary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2133,6 +2175,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取LLM大模型内容防护规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentRuleListRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentRuleListResponse"/></returns>
+        public Task<DescribeLLMContentRuleListResponse> DescribeLLMContentRuleList(DescribeLLMContentRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentRuleListResponse>(req, "DescribeLLMContentRuleList");
+        }
+
+        /// <summary>
+        /// 获取LLM大模型内容防护规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentRuleListRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentRuleListResponse"/></returns>
+        public DescribeLLMContentRuleListResponse DescribeLLMContentRuleListSync(DescribeLLMContentRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentRuleListResponse>(req, "DescribeLLMContentRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 大模型请求内容和响应内容审核接口
         /// </summary>
         /// <param name="req"><see cref="DescribeLLMContentSecCheckRequest"/></param>
@@ -2150,6 +2213,90 @@ namespace TencentCloud.Waf.V20180125
         public DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheckSync(DescribeLLMContentSecCheckRequest req)
         {
             return InternalRequestAsync<DescribeLLMContentSecCheckResponse>(req, "DescribeLLMContentSecCheck")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询关键词列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DescribeLLMKeywordLibraryResponse"/></returns>
+        public Task<DescribeLLMKeywordLibraryResponse> DescribeLLMKeywordLibrary(DescribeLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMKeywordLibraryResponse>(req, "DescribeLLMKeywordLibrary");
+        }
+
+        /// <summary>
+        /// 查询关键词列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DescribeLLMKeywordLibraryResponse"/></returns>
+        public DescribeLLMKeywordLibraryResponse DescribeLLMKeywordLibrarySync(DescribeLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMKeywordLibraryResponse>(req, "DescribeLLMKeywordLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询sdk接入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DescribeLLMSdkAccessResponse"/></returns>
+        public Task<DescribeLLMSdkAccessResponse> DescribeLLMSdkAccess(DescribeLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMSdkAccessResponse>(req, "DescribeLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// 查询sdk接入配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DescribeLLMSdkAccessResponse"/></returns>
+        public DescribeLLMSdkAccessResponse DescribeLLMSdkAccessSync(DescribeLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMSdkAccessResponse>(req, "DescribeLLMSdkAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 DLP 规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafDLPRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafDLPRulesResponse"/></returns>
+        public Task<DescribeLLMWafDLPRulesResponse> DescribeLLMWafDLPRules(DescribeLLMWafDLPRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafDLPRulesResponse>(req, "DescribeLLMWafDLPRules");
+        }
+
+        /// <summary>
+        /// 查询 DLP 规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafDLPRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafDLPRulesResponse"/></returns>
+        public DescribeLLMWafDLPRulesResponse DescribeLLMWafDLPRulesSync(DescribeLLMWafDLPRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafDLPRulesResponse>(req, "DescribeLLMWafDLPRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 LLM 规则请求
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafProtectRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafProtectRulesResponse"/></returns>
+        public Task<DescribeLLMWafProtectRulesResponse> DescribeLLMWafProtectRules(DescribeLLMWafProtectRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafProtectRulesResponse>(req, "DescribeLLMWafProtectRules");
+        }
+
+        /// <summary>
+        /// 查询 LLM 规则请求
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafProtectRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafProtectRulesResponse"/></returns>
+        public DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRulesSync(DescribeLLMWafProtectRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafProtectRulesResponse>(req, "DescribeLLMWafProtectRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2994,6 +3141,27 @@ namespace TencentCloud.Waf.V20180125
         public EnableRateLimitsV2Response EnableRateLimitsV2Sync(EnableRateLimitsV2Request req)
         {
             return InternalRequestAsync<EnableRateLimitsV2Response>(req, "EnableRateLimitsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导出词库文件
+        /// </summary>
+        /// <param name="req"><see cref="ExportLLMKeywordLibRequest"/></param>
+        /// <returns><see cref="ExportLLMKeywordLibResponse"/></returns>
+        public Task<ExportLLMKeywordLibResponse> ExportLLMKeywordLib(ExportLLMKeywordLibRequest req)
+        {
+            return InternalRequestAsync<ExportLLMKeywordLibResponse>(req, "ExportLLMKeywordLib");
+        }
+
+        /// <summary>
+        /// 导出词库文件
+        /// </summary>
+        /// <param name="req"><see cref="ExportLLMKeywordLibRequest"/></param>
+        /// <returns><see cref="ExportLLMKeywordLibResponse"/></returns>
+        public ExportLLMKeywordLibResponse ExportLLMKeywordLibSync(ExportLLMKeywordLibRequest req)
+        {
+            return InternalRequestAsync<ExportLLMKeywordLibResponse>(req, "ExportLLMKeywordLib")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4008,6 +4176,132 @@ namespace TencentCloud.Waf.V20180125
         public ModifyIpAccessControlResponse ModifyIpAccessControlSync(ModifyIpAccessControlRequest req)
         {
             return InternalRequestAsync<ModifyIpAccessControlResponse>(req, "ModifyIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新大模型内容安全规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleResponse"/></returns>
+        public Task<ModifyLLMContentRuleResponse> ModifyLLMContentRule(ModifyLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleResponse>(req, "ModifyLLMContentRule");
+        }
+
+        /// <summary>
+        /// 更新大模型内容安全规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleResponse"/></returns>
+        public ModifyLLMContentRuleResponse ModifyLLMContentRuleSync(ModifyLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleResponse>(req, "ModifyLLMContentRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 切换大模型内容防护规则开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleStatusResponse"/></returns>
+        public Task<ModifyLLMContentRuleStatusResponse> ModifyLLMContentRuleStatus(ModifyLLMContentRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleStatusResponse>(req, "ModifyLLMContentRuleStatus");
+        }
+
+        /// <summary>
+        /// 切换大模型内容防护规则开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleStatusResponse"/></returns>
+        public ModifyLLMContentRuleStatusResponse ModifyLLMContentRuleStatusSync(ModifyLLMContentRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleStatusResponse>(req, "ModifyLLMContentRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户修改自定义词库
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="ModifyLLMKeywordLibraryResponse"/></returns>
+        public Task<ModifyLLMKeywordLibraryResponse> ModifyLLMKeywordLibrary(ModifyLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMKeywordLibraryResponse>(req, "ModifyLLMKeywordLibrary");
+        }
+
+        /// <summary>
+        /// 用户修改自定义词库
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="ModifyLLMKeywordLibraryResponse"/></returns>
+        public ModifyLLMKeywordLibraryResponse ModifyLLMKeywordLibrarySync(ModifyLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMKeywordLibraryResponse>(req, "ModifyLLMKeywordLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改大模型防护的模块开关状态，支持总开关及各子模块独立开关的开启/关闭操作。开启前需确保实例已购买大模型防护能力，未购买时开启操作会返回 AuthFailure.ErrCodeNoPurchased 错误。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMStatusResponse"/></returns>
+        public Task<ModifyLLMStatusResponse> ModifyLLMStatus(ModifyLLMStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMStatusResponse>(req, "ModifyLLMStatus");
+        }
+
+        /// <summary>
+        /// 修改大模型防护的模块开关状态，支持总开关及各子模块独立开关的开启/关闭操作。开启前需确保实例已购买大模型防护能力，未购买时开启操作会返回 AuthFailure.ErrCodeNoPurchased 错误。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMStatusResponse"/></returns>
+        public ModifyLLMStatusResponse ModifyLLMStatusSync(ModifyLLMStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMStatusResponse>(req, "ModifyLLMStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改llmwaf DLP 规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafDLPRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafDLPRuleResponse"/></returns>
+        public Task<ModifyLLMWafDLPRuleResponse> ModifyLLMWafDLPRule(ModifyLLMWafDLPRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafDLPRuleResponse>(req, "ModifyLLMWafDLPRule");
+        }
+
+        /// <summary>
+        /// 修改llmwaf DLP 规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafDLPRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafDLPRuleResponse"/></returns>
+        public ModifyLLMWafDLPRuleResponse ModifyLLMWafDLPRuleSync(ModifyLLMWafDLPRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafDLPRuleResponse>(req, "ModifyLLMWafDLPRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 LLM 规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafProtectRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafProtectRuleResponse"/></returns>
+        public Task<ModifyLLMWafProtectRuleResponse> ModifyLLMWafProtectRule(ModifyLLMWafProtectRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafProtectRuleResponse>(req, "ModifyLLMWafProtectRule");
+        }
+
+        /// <summary>
+        /// 修改 LLM 规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafProtectRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafProtectRuleResponse"/></returns>
+        public ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRuleSync(ModifyLLMWafProtectRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafProtectRuleResponse>(req, "ModifyLLMWafProtectRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

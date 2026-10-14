@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1517";
+       private const string sdkVersion = "SDK_NET_3.0.1520";
 
         /// <summary>
         /// Client constructor.
@@ -4373,6 +4373,69 @@ namespace TencentCloud.Live.V20180801
         public DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoListSync(DescribeStreamDayPlayInfoListRequest req)
         {
             return InternalRequestAsync<DescribeStreamDayPlayInfoListResponse>(req, "DescribeStreamDayPlayInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeStreamPackageIngestStatistics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageIngestStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageIngestStatisticsResponse"/></returns>
+        public Task<DescribeStreamPackageIngestStatisticsResponse> DescribeStreamPackageIngestStatistics(DescribeStreamPackageIngestStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageIngestStatisticsResponse>(req, "DescribeStreamPackageIngestStatistics");
+        }
+
+        /// <summary>
+        /// DescribeStreamPackageIngestStatistics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageIngestStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageIngestStatisticsResponse"/></returns>
+        public DescribeStreamPackageIngestStatisticsResponse DescribeStreamPackageIngestStatisticsSync(DescribeStreamPackageIngestStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageIngestStatisticsResponse>(req, "DescribeStreamPackageIngestStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询媒体包装输出用量信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageOutputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageOutputStatisticsResponse"/></returns>
+        public Task<DescribeStreamPackageOutputStatisticsResponse> DescribeStreamPackageOutputStatistics(DescribeStreamPackageOutputStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageOutputStatisticsResponse>(req, "DescribeStreamPackageOutputStatistics");
+        }
+
+        /// <summary>
+        /// 查询媒体包装输出用量信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageOutputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageOutputStatisticsResponse"/></returns>
+        public DescribeStreamPackageOutputStatisticsResponse DescribeStreamPackageOutputStatisticsSync(DescribeStreamPackageOutputStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageOutputStatisticsResponse>(req, "DescribeStreamPackageOutputStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeStreamPackageRemuxStatistics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageRemuxStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageRemuxStatisticsResponse"/></returns>
+        public Task<DescribeStreamPackageRemuxStatisticsResponse> DescribeStreamPackageRemuxStatistics(DescribeStreamPackageRemuxStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageRemuxStatisticsResponse>(req, "DescribeStreamPackageRemuxStatistics");
+        }
+
+        /// <summary>
+        /// DescribeStreamPackageRemuxStatistics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageRemuxStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageRemuxStatisticsResponse"/></returns>
+        public DescribeStreamPackageRemuxStatisticsResponse DescribeStreamPackageRemuxStatisticsSync(DescribeStreamPackageRemuxStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageRemuxStatisticsResponse>(req, "DescribeStreamPackageRemuxStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

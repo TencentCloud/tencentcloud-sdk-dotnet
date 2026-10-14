@@ -66,6 +66,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("IsPublishAsTemplate")]
         public bool? IsPublishAsTemplate{ get; set; }
 
+        /// <summary>
+        /// <p>portal配置</p>
+        /// </summary>
+        [JsonProperty("PortalShareConfig")]
+        public PortalShareConfig PortalShareConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsDevToRelease", this.IsDevToRelease);
             this.SetParamSimple(map, prefix + "IsPublishAsTemplate", this.IsPublishAsTemplate);
+            this.SetParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
         }
     }
 }

@@ -25,55 +25,61 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+        /// <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
         /// </summary>
         [JsonProperty("AppMode")]
         public long? AppMode{ get; set; }
 
         /// <summary>
-        /// 应用头像
+        /// <p>应用头像</p>
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
         /// <summary>
-        /// 应用名称
+        /// <p>应用名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 操作信息
+        /// <p>操作信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperationInfo")]
         public AppOperation OperationInfo{ get; set; }
 
         /// <summary>
-        /// 状态信息
+        /// <p>状态信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public AppStatusInfo Status{ get; set; }
 
         /// <summary>
-        /// 子状态信息
+        /// <p>子状态信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubStatus")]
         public AppSubStatusInfo SubStatus{ get; set; }
 
         /// <summary>
-        /// 资源操作权限
+        /// <p>资源操作权限</p>
         /// </summary>
         [JsonProperty("PermissionIdList")]
         public string[] PermissionIdList{ get; set; }
+
+        /// <summary>
+        /// <p>应用描述信息</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -89,6 +95,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "Status.", this.Status);
             this.SetParamObj(map, prefix + "SubStatus.", this.SubStatus);
             this.SetParamArraySimple(map, prefix + "PermissionIdList.", this.PermissionIdList);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

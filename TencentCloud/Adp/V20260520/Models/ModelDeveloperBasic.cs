@@ -25,16 +25,16 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
+        /// <p>作者别名</p>
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
+        /// <summary>
         /// <p>作者标识</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
-
-        /// <summary>
-        /// <p>作者显示名称</p>
-        /// </summary>
-        [JsonProperty("Alias")]
-        public string Alias{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

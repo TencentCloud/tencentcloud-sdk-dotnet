@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1508</VersionPrefix>
+    <VersionPrefix>3.0.1520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,8 @@
     <Compile Include="V20210331\Models\AddUserToGroupResponse.cs" />
     <Compile Include="V20210331\Models\AttachPolicyRequest.cs" />
     <Compile Include="V20210331\Models\AttachPolicyResponse.cs" />
+    <Compile Include="V20210331\Models\AuditPermissionApplyOrderRequest.cs" />
+    <Compile Include="V20210331\Models\AuditPermissionApplyOrderResponse.cs" />
     <Compile Include="V20210331\Models\AuthNode.cs" />
     <Compile Include="V20210331\Models\AuthRelationFile.cs" />
     <Compile Include="V20210331\Models\BindOrganizationMemberAuthAccountRequest.cs" />

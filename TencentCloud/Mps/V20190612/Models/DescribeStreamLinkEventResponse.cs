@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体传输事件的配置信息。
+        /// <p>媒体传输事件的配置信息。</p>
         /// </summary>
         [JsonProperty("Info")]
         public DescribeEvent Info{ get; set; }

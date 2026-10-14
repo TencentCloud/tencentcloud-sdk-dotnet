@@ -54,6 +54,18 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
+        /// <summary>
+        /// <p>数字分身ID</p>
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
+
+        /// <summary>
+        /// <p>模糊搜索制品信息</p>
+        /// </summary>
+        [JsonProperty("NameKeyword")]
+        public string NameKeyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
             this.SetParamArraySimple(map, prefix + "MimeTypes.", this.MimeTypes);
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
+            this.SetParamSimple(map, prefix + "NameKeyword", this.NameKeyword);
         }
     }
 }

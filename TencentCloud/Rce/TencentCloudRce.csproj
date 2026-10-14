@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1512</VersionPrefix>
+    <VersionPrefix>3.0.1520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,7 @@
     <Compile Include="V20250425\Models\ManageIPPortraitRiskResponse.cs" />
     <Compile Include="V20250425\Models\ManageIPPortraitRiskValueOutput.cs" />
     <Compile Include="V20260130\RceClient.cs" />
+    <Compile Include="V20260130\Models\AccountSecurityEvent.cs" />
     <Compile Include="V20260130\Models\AddFriendEvent.cs" />
     <Compile Include="V20260130\Models\AddPromotionEvent.cs" />
     <Compile Include="V20260130\Models\Address.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="V20260130\Models\AssessRiskResponse.cs" />
     <Compile Include="V20260130\Models\AssessRiskRsp.cs" />
     <Compile Include="V20260130\Models\Billing.cs" />
+    <Compile Include="V20260130\Models\BookingEvent.cs" />
     <Compile Include="V20260130\Models\BrowseEvent.cs" />
     <Compile Include="V20260130\Models\Browser.cs" />
     <Compile Include="V20260130\Models\Card.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="V20260130\Models\SMSEvent.cs" />
     <Compile Include="V20260130\Models\ScanCodeEvent.cs" />
     <Compile Include="V20260130\Models\Score.cs" />
+    <Compile Include="V20260130\Models\SearchEvent.cs" />
     <Compile Include="V20260130\Models\SecurityVerificationEvent.cs" />
     <Compile Include="V20260130\Models\Sender.cs" />
     <Compile Include="V20260130\Models\TaskEvent.cs" />

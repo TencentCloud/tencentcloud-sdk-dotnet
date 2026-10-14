@@ -60,6 +60,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
+        /// <summary>
+        /// <p>应用标识</p>
+        /// </summary>
+        [JsonProperty("AppIdentity")]
+        public AppIdentity AppIdentity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
             this.SetParamSimple(map, prefix + "SpaceName", this.SpaceName);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
+            this.SetParamObj(map, prefix + "AppIdentity.", this.AppIdentity);
         }
     }
 }

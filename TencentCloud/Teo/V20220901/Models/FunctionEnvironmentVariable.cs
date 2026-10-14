@@ -39,7 +39,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 变量的类型，取值有：
         /// <li>string：字符串类型；</li>
-        /// <li>json：json 对象类型。</li>默认值为：string。
+        /// <li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

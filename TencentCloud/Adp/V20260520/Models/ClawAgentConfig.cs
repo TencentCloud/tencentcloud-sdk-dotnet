@@ -25,18 +25,25 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// Agent团队协作配置
+        /// <p>Agent团队协作配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentTeamConfig")]
         public ClawAgentAgentTeamConfig AgentTeamConfig{ get; set; }
 
         /// <summary>
-        /// 长期记忆配置
+        /// <p>长期记忆配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LongMemoryConfig")]
         public ClawAgentLongMemoryConfig LongMemoryConfig{ get; set; }
+
+        /// <summary>
+        /// <p>渠道上下文超时清空配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelContextTimeoutConfig")]
+        public ClawAgentChannelContextTimeoutConfig ChannelContextTimeoutConfig{ get; set; }
 
 
         /// <summary>
@@ -46,6 +53,7 @@ namespace TencentCloud.Adp.V20260520.Models
         {
             this.SetParamObj(map, prefix + "AgentTeamConfig.", this.AgentTeamConfig);
             this.SetParamObj(map, prefix + "LongMemoryConfig.", this.LongMemoryConfig);
+            this.SetParamObj(map, prefix + "ChannelContextTimeoutConfig.", this.ChannelContextTimeoutConfig);
         }
     }
 }
