@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 凭证唯一标识
+        /// <p>凭证唯一标识</p>
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

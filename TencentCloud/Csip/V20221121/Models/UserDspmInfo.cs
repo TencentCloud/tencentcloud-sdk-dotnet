@@ -25,70 +25,82 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// APPID
+        /// <p>APPID</p>
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// UIN
+        /// <p>UIN</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 账号昵称
+        /// <p>账号昵称</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 账号下数据库资产数量
+        /// <p>账号下数据库资产数量</p>
         /// </summary>
         [JsonProperty("AssetNum")]
         public long? AssetNum{ get; set; }
 
         /// <summary>
-        /// 账号下开启安全分析数据库资产数量
+        /// <p>账号下开启安全分析数据库资产数量</p>
         /// </summary>
         [JsonProperty("UsedAssetNum")]
         public long? UsedAssetNum{ get; set; }
 
         /// <summary>
-        /// 是否被共享，1-被共享，2-未被共享
+        /// <p>是否被共享，1-被共享，2-未被共享</p>
         /// </summary>
         [JsonProperty("IsShared")]
         public long? IsShared{ get; set; }
 
         /// <summary>
-        /// 是否单独购买，1-单独购买，2-未单独购买
+        /// <p>是否单独购买，1-单独购买，2-未单独购买</p>
         /// </summary>
         [JsonProperty("IsSelfBuy")]
         public long? IsSelfBuy{ get; set; }
 
         /// <summary>
-        /// 配额来源账号
+        /// <p>配额来源账号</p>
         /// </summary>
         [JsonProperty("ShareFromAppID")]
         public long? ShareFromAppID{ get; set; }
 
         /// <summary>
-        /// 云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）
+        /// <p>云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）</p>
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// 账号是否隔离中
+        /// <p>账号是否隔离中</p>
         /// </summary>
         [JsonProperty("IsIsolating")]
         public bool? IsIsolating{ get; set; }
 
         /// <summary>
-        /// 是否正在数据清理
+        /// <p>是否正在数据清理</p>
         /// </summary>
         [JsonProperty("IsDataCleaning")]
         public bool? IsDataCleaning{ get; set; }
+
+        /// <summary>
+        /// <p>集团账号角色（member-普通成员/admin-管理员/delegatedAdmin-委派管理员），非集团账号为空</p>
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
+        /// <p>所属部门名称，未分配部门或非集团账号为空</p>
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
 
 
         /// <summary>
@@ -107,6 +119,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
             this.SetParamSimple(map, prefix + "IsIsolating", this.IsIsolating);
             this.SetParamSimple(map, prefix + "IsDataCleaning", this.IsDataCleaning);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
         }
     }
 }

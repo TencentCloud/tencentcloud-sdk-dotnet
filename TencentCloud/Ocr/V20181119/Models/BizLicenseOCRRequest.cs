@@ -25,38 +25,31 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片的 Base64 值。
-        /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-        /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// <p>图片的 Base64 值。<br>支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。<br>支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。<br>图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。
-        /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
-        /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-        /// 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// <p>图片的 Url 地址。<br>支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。<br>支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。<br>图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。<br>非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 是否返回告警码，默认为false
+        /// <p>是否返回告警码，默认为false</p>
         /// </summary>
         [JsonProperty("EnableCopyWarn")]
         public bool? EnableCopyWarn{ get; set; }
 
         /// <summary>
-        /// 是否返回自动拼接的有效期，默认为true
+        /// <p>是否返回自动拼接的有效期，默认为true</p>
         /// </summary>
         [JsonProperty("EnablePeriodComplete")]
         public bool? EnablePeriodComplete{ get; set; }
 
         /// <summary>
-        /// 是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false
+        /// <p>是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false</p>
         /// </summary>
         [JsonProperty("EnableBusinessCertificate")]
         public bool? EnableBusinessCertificate{ get; set; }

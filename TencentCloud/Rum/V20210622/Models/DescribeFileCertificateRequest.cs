@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Rum.V20210622.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnbindTWeTalkAIBotResponse : AbstractModel
+    public class DescribeFileCertificateRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 超时时间，不填默认是 5 分钟
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Timeout")]
+        public long? Timeout{ get; set; }
+
+        /// <summary>
+        /// bucket类型，不填默认1:web，2:app
+        /// </summary>
+        [JsonProperty("FileType")]
+        public long? FileType{ get; set; }
+
+        /// <summary>
+        /// ProjectID
+        /// </summary>
+        [JsonProperty("ID")]
+        public long? ID{ get; set; }
+
+        /// <summary>
+        /// reigon对应的id
+        /// </summary>
+        [JsonProperty("RegionID")]
+        public long? RegionID{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
         }
     }
 }

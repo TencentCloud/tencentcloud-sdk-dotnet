@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnbindTWeTalkAIBotRequest : AbstractModel
+    public class CreateNotebookImageRequest : AbstractModel
     {
         
         /// <summary>
-        /// 智能体ID
+        /// 镜像信息
         /// </summary>
-        [JsonProperty("BotId")]
-        public string BotId{ get; set; }
+        [JsonProperty("ImageInfo")]
+        public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// 产品ID
+        /// notebook id
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("NotebookId")]
+        public string NotebookId{ get; set; }
+
+        /// <summary>
+        /// 要保存的kernel数组
+        /// </summary>
+        [JsonProperty("Kernels")]
+        public string[] Kernels{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BotId", this.BotId);
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+            this.SetParamSimple(map, prefix + "NotebookId", this.NotebookId);
+            this.SetParamArraySimple(map, prefix + "Kernels.", this.Kernels);
         }
     }
 }

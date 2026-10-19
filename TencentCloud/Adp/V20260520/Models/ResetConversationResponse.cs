@@ -25,6 +25,18 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
+        /// <p>重置时间，单位为ms</p>
+        /// </summary>
+        [JsonProperty("ResetTime")]
+        public string ResetTime{ get; set; }
+
+        /// <summary>
+        /// <p>重置前的最后一条记录的recordId</p>
+        /// </summary>
+        [JsonProperty("ResetThroughRecordId")]
+        public string ResetThroughRecordId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ResetTime", this.ResetTime);
+            this.SetParamSimple(map, prefix + "ResetThroughRecordId", this.ResetThroughRecordId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,76 +25,82 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 集团名称
+        /// <p>集团名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 管理员账号信息
+        /// <p>管理员账号信息</p>
         /// </summary>
         [JsonProperty("AdminInfo")]
         public MemberInfo AdminInfo{ get; set; }
 
         /// <summary>
-        /// 管理员/委派管理员数量
+        /// <p>管理员/委派管理员数量</p>
         /// </summary>
         [JsonProperty("AdminCount")]
         public long? AdminCount{ get; set; }
 
         /// <summary>
-        /// 已接入成员数
+        /// <p>已接入成员数</p>
         /// </summary>
         [JsonProperty("JoinedMemberCount")]
         public long? JoinedMemberCount{ get; set; }
 
         /// <summary>
-        /// 接入成员上限（-1表示无上限）
+        /// <p>接入成员上限（-1表示无上限）</p>
         /// </summary>
         [JsonProperty("MemberLimit")]
         public long? MemberLimit{ get; set; }
 
         /// <summary>
-        /// 接入成员上限显示
+        /// <p>接入成员上限显示</p>
         /// </summary>
         [JsonProperty("MemberLimitDisplay")]
         public string MemberLimitDisplay{ get; set; }
 
         /// <summary>
-        /// 规格共享者数量
+        /// <p>规格共享者数量</p>
         /// </summary>
         [JsonProperty("CfwSharerCount")]
         public long? CfwSharerCount{ get; set; }
 
         /// <summary>
-        /// 规格使用者数量
+        /// <p>规格使用者数量</p>
         /// </summary>
         [JsonProperty("CfwUserCount")]
         public long? CfwUserCount{ get; set; }
 
         /// <summary>
-        /// 部门名称列表
+        /// <p>部门名称列表</p>
         /// </summary>
         [JsonProperty("Departments")]
         public string[] Departments{ get; set; }
 
         /// <summary>
-        /// 纳管账号数
+        /// <p>纳管账号数</p>
         /// </summary>
         [JsonProperty("ManagedMemberCount")]
         public long? ManagedMemberCount{ get; set; }
 
         /// <summary>
-        /// 纳管产品数
+        /// <p>纳管产品数</p>
         /// </summary>
         [JsonProperty("ManagedProductCount")]
         public long? ManagedProductCount{ get; set; }
 
         /// <summary>
-        /// 纳管账号数
+        /// <p>纳管账号数</p>
         /// </summary>
         [JsonProperty("CfwManageCount")]
         public long? CfwManageCount{ get; set; }
+
+        /// <summary>
+        /// <p>规格共享总配额</p>
+        /// </summary>
+        [JsonProperty("FwmShareUserQuota")]
+        public long? FwmShareUserQuota{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Fwm.V20250611.Models
             this.SetParamSimple(map, prefix + "ManagedMemberCount", this.ManagedMemberCount);
             this.SetParamSimple(map, prefix + "ManagedProductCount", this.ManagedProductCount);
             this.SetParamSimple(map, prefix + "CfwManageCount", this.CfwManageCount);
+            this.SetParamSimple(map, prefix + "FwmShareUserQuota", this.FwmShareUserQuota);
         }
     }
 }

@@ -25,14 +25,14 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 模型加速任务ID
+        /// <p>模型加速任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelAccTaskId")]
         public string ModelAccTaskId{ get; set; }
 
         /// <summary>
-        /// 异步任务ID
+        /// <p>异步任务ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncTaskId")]

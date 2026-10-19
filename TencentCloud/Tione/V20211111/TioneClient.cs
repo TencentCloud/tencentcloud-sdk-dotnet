@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1520";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -224,6 +224,27 @@ namespace TencentCloud.Tione.V20211111
         public CreateNotebookResponse CreateNotebookSync(CreateNotebookRequest req)
         {
             return InternalRequestAsync<CreateNotebookResponse>(req, "CreateNotebook")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 保存镜像
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookImageRequest"/></param>
+        /// <returns><see cref="CreateNotebookImageResponse"/></returns>
+        public Task<CreateNotebookImageResponse> CreateNotebookImage(CreateNotebookImageRequest req)
+        {
+            return InternalRequestAsync<CreateNotebookImageResponse>(req, "CreateNotebookImage");
+        }
+
+        /// <summary>
+        /// 保存镜像
+        /// </summary>
+        /// <param name="req"><see cref="CreateNotebookImageRequest"/></param>
+        /// <returns><see cref="CreateNotebookImageResponse"/></returns>
+        public CreateNotebookImageResponse CreateNotebookImageSync(CreateNotebookImageRequest req)
+        {
+            return InternalRequestAsync<CreateNotebookImageResponse>(req, "CreateNotebookImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,16 +25,16 @@ namespace TencentCloud.Apis.V20240801.Models
     {
         
         /// <summary>
-        /// <p>实例ID</p>
-        /// </summary>
-        [JsonProperty("InstanceID")]
-        public string InstanceID{ get; set; }
-
-        /// <summary>
         /// <p>数据量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
 
         /// <summary>
         /// <p>IDs</p>
@@ -84,8 +84,8 @@ namespace TencentCloud.Apis.V20240801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamArraySimple(map, prefix + "IDs.", this.IDs);
             this.SetParamArraySimple(map, prefix + "AgentAppIDs.", this.AgentAppIDs);
             this.SetParamArraySimple(map, prefix + "ServiceIDs.", this.ServiceIDs);

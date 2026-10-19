@@ -180,6 +180,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("CustomImage")]
         public string CustomImage{ get; set; }
 
+        /// <summary>
+        /// 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+        /// </summary>
+        [JsonProperty("RuntimeVersion")]
+        public string RuntimeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "AutomationService", this.AutomationService);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "CustomImage", this.CustomImage);
+            this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         }
     }
 }

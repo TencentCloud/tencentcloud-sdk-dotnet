@@ -49,6 +49,20 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
+        /// <summary>
+        /// <p>Volume的引用</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Volume")]
+        public VolumeRef Volume{ get; set; }
+
+        /// <summary>
+        /// <p>VolumeTemplate 的引用以及派生规则</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VolumeTemplate")]
+        public VolumeTemplateRef VolumeTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +73,8 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamObj(map, prefix + "StorageSource.", this.StorageSource);
             this.SetParamSimple(map, prefix + "MountPath", this.MountPath);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamObj(map, prefix + "Volume.", this.Volume);
+            this.SetParamObj(map, prefix + "VolumeTemplate.", this.VolumeTemplate);
         }
     }
 }

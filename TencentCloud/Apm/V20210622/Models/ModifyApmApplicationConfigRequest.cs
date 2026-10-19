@@ -408,6 +408,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("CrossAccountPeerId")]
         public string CrossAccountPeerId{ get; set; }
 
+        /// <summary>
+        /// <p>应用级自定义 Span 状态开关</p>
+        /// </summary>
+        [JsonProperty("EnableSpanStatusConfig")]
+        public bool? EnableSpanStatusConfig{ get; set; }
+
+        /// <summary>
+        /// <p>自定义 Span 状态配置</p>
+        /// </summary>
+        [JsonProperty("SpanStatusConfig")]
+        public SpanStatusConfig SpanStatusConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -478,6 +490,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
             this.SetParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
             this.SetParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
+            this.SetParamSimple(map, prefix + "EnableSpanStatusConfig", this.EnableSpanStatusConfig);
+            this.SetParamObj(map, prefix + "SpanStatusConfig.", this.SpanStatusConfig);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string LogPushTaskId{ get; set; }
 
         /// <summary>
-        /// <p>GA实例唯一Id</p>
+        /// <p>全球加速实例ID</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }

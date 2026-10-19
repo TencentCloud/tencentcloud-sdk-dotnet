@@ -252,6 +252,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// <p>网络配置，JSON 字符串</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -296,6 +302,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SubmissionTarget", this.SubmissionTarget);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }
 }

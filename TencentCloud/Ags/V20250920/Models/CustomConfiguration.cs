@@ -78,6 +78,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("DNSConfig")]
         public DNSConfig DNSConfig{ get; set; }
 
+        /// <summary>
+        /// <p>沙箱安全上下文</p>
+        /// </summary>
+        [JsonProperty("SecurityContext")]
+        public SecurityContext SecurityContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamObj(map, prefix + "Resources.", this.Resources);
             this.SetParamObj(map, prefix + "Probe.", this.Probe);
             this.SetParamObj(map, prefix + "DNSConfig.", this.DNSConfig);
+            this.SetParamObj(map, prefix + "SecurityContext.", this.SecurityContext);
         }
     }
 }

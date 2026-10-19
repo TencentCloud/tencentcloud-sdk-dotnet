@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string VideoUrl{ get; set; }
 
         /// <summary>
-        /// <p>产品信息</p>
+        /// <p>产品信息。除深度提取外，其他模式必填</p>
         /// </summary>
         [JsonProperty("Product")]
         public CloneViralProduct Product{ get; set; }

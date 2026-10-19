@@ -210,6 +210,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DecisionsConfig")]
         public DecisionsConfig DecisionsConfig{ get; set; }
 
+        /// <summary>
+        /// <p>Images 生图配置</p>
+        /// </summary>
+        [JsonProperty("ImageConfig")]
+        public ImageConfig ImageConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +252,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
             this.SetParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
             this.SetParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
+            this.SetParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
         }
     }
 }

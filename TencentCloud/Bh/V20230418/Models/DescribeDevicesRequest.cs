@@ -25,107 +25,112 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 资产ID集合
+        /// <p>资产ID集合</p>
         /// </summary>
         [JsonProperty("IdSet")]
         public ulong?[] IdSet{ get; set; }
 
         /// <summary>
-        /// 资产名或资产IP，模糊查询
+        /// <p>资产名或资产IP，模糊查询</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 暂未使用
+        /// <p>暂未使用</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 地域码集合
+        /// <p>地域码集合</p>
         /// </summary>
         [JsonProperty("ApCodeSet")]
         public string[] ApCodeSet{ get; set; }
 
         /// <summary>
-        /// 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+        /// <p>操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
         /// </summary>
         [JsonProperty("Kind")]
         public ulong? Kind{ get; set; }
 
         /// <summary>
-        /// 分页偏移位置，默认值为0
+        /// <p>分页偏移位置，默认值为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页条目数量，默认20
+        /// <p>每页条目数量</p><p>取值范围：[0, 500]</p><p>默认值：20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 有该资产访问权限的用户ID集合
+        /// <p>有该资产访问权限的用户ID集合</p>
         /// </summary>
         [JsonProperty("AuthorizedUserIdSet")]
         public ulong?[] AuthorizedUserIdSet{ get; set; }
 
         /// <summary>
-        /// 过滤条件，资产绑定的堡垒机服务ID集合
+        /// <p>过滤条件，资产绑定的堡垒机服务ID集合</p>
         /// </summary>
         [JsonProperty("ResourceIdSet")]
         public string[] ResourceIdSet{ get; set; }
 
         /// <summary>
-        /// 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+        /// <p>可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
         /// </summary>
         [JsonProperty("KindSet")]
         public ulong?[] KindSet{ get; set; }
 
         /// <summary>
-        /// 资产是否包含托管账号。1，包含；0，不包含
+        /// <p>资产是否包含托管账号。1，包含；0，不包含</p>
         /// </summary>
         [JsonProperty("ManagedAccount")]
         public string ManagedAccount{ get; set; }
 
         /// <summary>
-        /// 过滤条件，可按照部门ID进行过滤
+        /// <p>过滤条件，可按照部门ID进行过滤</p>
         /// </summary>
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
         /// <summary>
-        /// 资产所属云账号id
+        /// <p>资产所属云账号id</p>
         /// </summary>
         [JsonProperty("AccountIdSet")]
         public ulong?[] AccountIdSet{ get; set; }
 
         /// <summary>
-        /// 云厂商类型，1-腾讯云，2-阿里云
+        /// <p>云厂商类型，1-腾讯云，2-阿里云</p>
         /// </summary>
         [JsonProperty("ProviderTypeSet")]
         public ulong?[] ProviderTypeSet{ get; set; }
 
         /// <summary>
-        /// 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+        /// <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
         /// </summary>
         [JsonProperty("CloudDeviceStatusSet")]
         public ulong?[] CloudDeviceStatusSet{ get; set; }
 
         /// <summary>
-        /// 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+        /// <p>过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 过滤数组。支持的Name：
-        /// BindingStatus 绑定状态
+        /// <p>过滤数组。支持的Name：<br>BindingStatus 绑定状态</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>所属成员 AppId</p>
+        /// </summary>
+        [JsonProperty("OwnerAppIds")]
+        public ulong?[] OwnerAppIds{ get; set; }
 
 
         /// <summary>
@@ -150,6 +155,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "CloudDeviceStatusSet.", this.CloudDeviceStatusSet);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "OwnerAppIds.", this.OwnerAppIds);
         }
     }
 }

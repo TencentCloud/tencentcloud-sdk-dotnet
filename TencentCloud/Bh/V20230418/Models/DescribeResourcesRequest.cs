@@ -25,31 +25,31 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 地域码, 如: ap-guangzhou
+        /// <p>地域码, 如: ap-guangzhou</p>
         /// </summary>
         [JsonProperty("ApCode")]
         public string ApCode{ get; set; }
 
         /// <summary>
-        /// 按照堡垒机开通的 VPC 实例ID查询
+        /// <p>按照堡垒机开通的 VPC 实例ID查询</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
+        /// <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 每页条目数量
+        /// <p>每页条目数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移位置
+        /// <p>分页偏移位置</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

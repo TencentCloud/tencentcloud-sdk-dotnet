@@ -25,143 +25,100 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 时区
+        /// <p>时区</p>
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
         /// <summary>
-        /// 周期类型：支持的类型为
-        /// ONEOFF_CYCLE: 一次性
-        /// YEAR_CYCLE: 年
-        /// MONTH_CYCLE: 月
-        /// WEEK_CYCLE: 周
-        /// DAY_CYCLE: 天
-        /// HOUR_CYCLE: 小时
-        /// MINUTE_CYCLE: 分钟
-        /// CRONTAB_CYCLE: crontab表达式类型
+        /// <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+        /// <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
         /// </summary>
         [JsonProperty("SelfDepend")]
         public string SelfDepend{ get; set; }
 
         /// <summary>
-        /// 生效开始时间
+        /// <p>生效开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 生效结束时间
+        /// <p>生效结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// cron表达式
+        /// <p>cron表达式</p>
         /// </summary>
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
         /// <summary>
-        /// 工作流依赖，yes or no
+        /// <p>工作流依赖，yes or no</p>
         /// </summary>
         [JsonProperty("DependencyWorkflow")]
         public string DependencyWorkflow{ get; set; }
 
         /// <summary>
-        /// 0：不修改 1：将任务的上游依赖配置改为默认值
+        /// <p>0：不修改 1：将任务的上游依赖配置改为默认值</p>
         /// </summary>
         [JsonProperty("ModifyCycleValue")]
         public string ModifyCycleValue{ get; set; }
 
         /// <summary>
-        /// 工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系
+        /// <p>工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系</p>
         /// </summary>
         [JsonProperty("ClearLink")]
         public bool? ClearLink{ get; set; }
 
         /// <summary>
-        /// ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：
-        /// * CRONTAB
-        /// * DAY
-        /// * HOUR
-        /// * LIST_DAY
-        /// * LIST_HOUR
-        /// * LIST_MINUTE
-        /// * MINUTE
-        /// * MONTH
-        /// * RANGE_DAY
-        /// * RANGE_HOUR
-        /// * RANGE_MINUTE
-        /// * WEEK
-        /// * YEAR
-        /// 
-        /// https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+        /// <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：</p><ul><li>CRONTAB</li><li>DAY</li><li>HOUR</li><li>LIST_DAY</li><li>LIST_HOUR</li><li>LIST_MINUTE</li><li>MINUTE</li><li>MONTH</li><li>RANGE_DAY</li><li>RANGE_HOUR</li><li>RANGE_MINUTE</li><li>WEEK</li><li>YEAR</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
         /// </summary>
         [JsonProperty("MainCyclicConfig")]
         public string MainCyclicConfig{ get; set; }
 
         /// <summary>
-        /// ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
-        /// 取值为：
-        /// * ALL_DAY_OF_YEAR
-        /// * ALL_MONTH_OF_YEAR
-        /// * CURRENT
-        /// * CURRENT_DAY
-        /// * CURRENT_HOUR
-        /// * CURRENT_MINUTE
-        /// * CURRENT_MONTH
-        /// * CURRENT_WEEK
-        /// * CURRENT_YEAR
-        /// * PREVIOUS_BEGIN_OF_MONTH
-        /// * PREVIOUS_DAY
-        /// * PREVIOUS_DAY_LATER_OFFSET_HOUR
-        /// * PREVIOUS_DAY_LATER_OFFSET_MINUTE
-        /// * PREVIOUS_END_OF_MONTH
-        /// * PREVIOUS_FRIDAY
-        /// * PREVIOUS_HOUR
-        /// * PREVIOUS_HOUR_CYCLE
-        /// * PREVIOUS_HOUR_LATER_OFFSET_MINUTE
-        /// * PREVIOUS_MINUTE_CYCLE
-        /// * PREVIOUS_MONTH
-        /// * PREVIOUS_WEEK
-        /// * PREVIOUS_WEEKEND
-        /// * RECENT_DATE
-        /// 
-        /// https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+        /// <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围<br>取值为：</p><ul><li>ALL_DAY_OF_YEAR</li><li>ALL_MONTH_OF_YEAR</li><li>CURRENT</li><li>CURRENT_DAY</li><li>CURRENT_HOUR</li><li>CURRENT_MINUTE</li><li>CURRENT_MONTH</li><li>CURRENT_WEEK</li><li>CURRENT_YEAR</li><li>PREVIOUS_BEGIN_OF_MONTH</li><li>PREVIOUS_DAY</li><li>PREVIOUS_DAY_LATER_OFFSET_HOUR</li><li>PREVIOUS_DAY_LATER_OFFSET_MINUTE</li><li>PREVIOUS_END_OF_MONTH</li><li>PREVIOUS_FRIDAY</li><li>PREVIOUS_HOUR</li><li>PREVIOUS_HOUR_CYCLE</li><li>PREVIOUS_HOUR_LATER_OFFSET_MINUTE</li><li>PREVIOUS_MINUTE_CYCLE</li><li>PREVIOUS_MONTH</li><li>PREVIOUS_WEEK</li><li>PREVIOUS_WEEKEND</li><li>RECENT_DATE</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
         /// </summary>
         [JsonProperty("SubordinateCyclicConfig")]
         public string SubordinateCyclicConfig{ get; set; }
 
         /// <summary>
-        /// 执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入
+        /// <p>执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入</p>
         /// </summary>
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
         /// <summary>
-        /// 执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入
+        /// <p>执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入</p>
         /// </summary>
         [JsonProperty("ExecutionEndTime")]
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// 是否开启日历调度 1 开启 0关闭
+        /// <p>是否开启日历调度 1 开启 0关闭</p>
         /// </summary>
         [JsonProperty("CalendarOpen")]
         public string CalendarOpen{ get; set; }
 
         /// <summary>
-        /// 日历id
+        /// <p>日历id</p>
         /// </summary>
         [JsonProperty("CalendarId")]
         public string CalendarId{ get; set; }
+
+        /// <summary>
+        /// <p>分钟任务相位偏移</p>
+        /// </summary>
+        [JsonProperty("MinuteOffset")]
+        public ulong? MinuteOffset{ get; set; }
 
 
         /// <summary>
@@ -184,6 +141,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
             this.SetParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
             this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
+            this.SetParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
         }
     }
 }

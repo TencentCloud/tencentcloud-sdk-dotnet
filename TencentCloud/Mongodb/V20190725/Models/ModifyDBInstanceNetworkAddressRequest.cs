@@ -25,33 +25,31 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+        /// <p>指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 原 IP 地址保留时长。
-        /// - 单位为分钟，0表示立即回收原 IP 地址。
-        /// - 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+        /// <p>原 IP 地址保留时长。</p><ul><li>单位为分钟，0表示立即回收原 IP 地址。</li><li>原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。</li></ul>
         /// </summary>
         [JsonProperty("OldIpExpiredTime")]
         public ulong? OldIpExpiredTime{ get; set; }
 
         /// <summary>
-        /// 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+        /// <p>切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络 ID。</p>
         /// </summary>
         [JsonProperty("NewUniqVpcId")]
         public string NewUniqVpcId{ get; set; }
 
         /// <summary>
-        /// 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
+        /// <p>切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络的子网 ID。</p>
         /// </summary>
         [JsonProperty("NewUniqSubnetId")]
         public string NewUniqSubnetId{ get; set; }
 
         /// <summary>
-        /// IP 地址信息，包含新 IP 地址与 原 IP 地址。
+        /// <p>IP 地址信息，包含新 IP 地址与 原 IP 地址。</p>
         /// </summary>
         [JsonProperty("NetworkAddresses")]
         public ModifyNetworkAddress[] NetworkAddresses{ get; set; }

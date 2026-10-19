@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1520</VersionPrefix>
+    <VersionPrefix>3.0.1521</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,7 @@
     <Compile Include="V20250920\Models\CLSConfig.cs" />
     <Compile Include="V20250920\Models\CancelRegistryRecordRequest.cs" />
     <Compile Include="V20250920\Models\CancelRegistryRecordResponse.cs" />
+    <Compile Include="V20250920\Models\Capabilities.cs" />
     <Compile Include="V20250920\Models\CfsStorageSource.cs" />
     <Compile Include="V20250920\Models\CloudAgentSourceInput.cs" />
     <Compile Include="V20250920\Models\CloudAuditLog.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="V20250920\Models\SandboxSnapshot.cs" />
     <Compile Include="V20250920\Models\SandboxTool.cs" />
     <Compile Include="V20250920\Models\ScalingConfiguration.cs" />
+    <Compile Include="V20250920\Models\SecurityContext.cs" />
     <Compile Include="V20250920\Models\SessionInfo.cs" />
     <Compile Include="V20250920\Models\SessionSpaceInfo.cs" />
     <Compile Include="V20250920\Models\SessionState.cs" />
@@ -222,6 +224,8 @@
     <Compile Include="V20250920\Models\UpdateSandboxToolRequest.cs" />
     <Compile Include="V20250920\Models\UpdateSandboxToolResponse.cs" />
     <Compile Include="V20250920\Models\VPCConfig.cs" />
+    <Compile Include="V20250920\Models\VolumeRef.cs" />
+    <Compile Include="V20250920\Models\VolumeTemplateRef.cs" />
     <Compile Include="V20250920\Models\WAAConfiguration.cs" />
   </ItemGroup>
 </Project>

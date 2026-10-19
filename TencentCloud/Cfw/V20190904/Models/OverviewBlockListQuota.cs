@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TalkProductInfo : AbstractModel
+    public class OverviewBlockListQuota : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// <p>封禁列表总配额数量。</p>
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("TotalCnt")]
+        public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// <p>封禁列表已使用数量。</p>
         /// </summary>
-        [JsonProperty("ProductName")]
-        public string ProductName{ get; set; }
+        [JsonProperty("UsedCnt")]
+        public long? UsedCnt{ get; set; }
+
+        /// <summary>
+        /// <p>入站方向已使用的封禁列表记录。</p>
+        /// </summary>
+        [JsonProperty("InUsedCnt")]
+        public long? InUsedCnt{ get; set; }
+
+        /// <summary>
+        /// <p>出方向封禁列表已使用数量。</p>
+        /// </summary>
+        [JsonProperty("OutUsedCnt")]
+        public long? OutUsedCnt{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
+            this.SetParamSimple(map, prefix + "UsedCnt", this.UsedCnt);
+            this.SetParamSimple(map, prefix + "InUsedCnt", this.InUsedCnt);
+            this.SetParamSimple(map, prefix + "OutUsedCnt", this.OutUsedCnt);
         }
     }
 }

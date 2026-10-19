@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1520";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 添加控制台用户
+        /// 添加控制台用户，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="AddConsoleUsersRequest"/></param>
         /// <returns><see cref="AddConsoleUsersResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 添加控制台用户
+        /// 添加控制台用户，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="AddConsoleUsersRequest"/></param>
         /// <returns><see cref="AddConsoleUsersResponse"/></returns>
@@ -138,7 +138,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 创建控制台用户组
+        /// 创建控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="CreateConsoleGroupRequest"/></param>
         /// <returns><see cref="CreateConsoleGroupResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 创建控制台用户组
+        /// 创建控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="CreateConsoleGroupRequest"/></param>
         /// <returns><see cref="CreateConsoleGroupResponse"/></returns>
@@ -257,7 +257,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 创建工作空间
+        /// 创建工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceRequest"/></param>
         /// <returns><see cref="CreateWorkspaceResponse"/></returns>
@@ -267,7 +267,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 创建工作空间
+        /// 创建工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceRequest"/></param>
         /// <returns><see cref="CreateWorkspaceResponse"/></returns>
@@ -320,7 +320,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 删除控制台用户组
+        /// 删除控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="DeleteConsoleGroupsRequest"/></param>
         /// <returns><see cref="DeleteConsoleGroupsResponse"/></returns>
@@ -330,7 +330,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 删除控制台用户组
+        /// 删除控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="DeleteConsoleGroupsRequest"/></param>
         /// <returns><see cref="DeleteConsoleGroupsResponse"/></returns>
@@ -1081,7 +1081,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询工作空间列表
+        /// 查询工作空间列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListWorkspacesRequest"/></param>
         /// <returns><see cref="ListWorkspacesResponse"/></returns>
@@ -1091,7 +1091,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 查询工作空间列表
+        /// 查询工作空间列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="ListWorkspacesRequest"/></param>
         /// <returns><see cref="ListWorkspacesResponse"/></returns>
@@ -1102,7 +1102,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
+        /// <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准），该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。</p>
         /// </summary>
         /// <param name="req"><see cref="RemoveConsoleUsersRequest"/></param>
         /// <returns><see cref="RemoveConsoleUsersResponse"/></returns>
@@ -1112,7 +1112,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
+        /// <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准），该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。</p>
         /// </summary>
         /// <param name="req"><see cref="RemoveConsoleUsersRequest"/></param>
         /// <returns><see cref="RemoveConsoleUsersResponse"/></returns>
@@ -1251,7 +1251,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 修改控制台用户组
+        /// 修改控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="UpdateConsoleGroupRequest"/></param>
         /// <returns><see cref="UpdateConsoleGroupResponse"/></returns>
@@ -1261,7 +1261,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 修改控制台用户组
+        /// 修改控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="UpdateConsoleGroupRequest"/></param>
         /// <returns><see cref="UpdateConsoleGroupResponse"/></returns>
@@ -1272,7 +1272,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 修改控制台用户角色
+        /// 修改控制台用户角色，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="UpdateConsoleUsersRequest"/></param>
         /// <returns><see cref="UpdateConsoleUsersResponse"/></returns>
@@ -1282,7 +1282,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 修改控制台用户角色
+        /// 修改控制台用户角色，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="UpdateConsoleUsersRequest"/></param>
         /// <returns><see cref="UpdateConsoleUsersResponse"/></returns>
@@ -1394,7 +1394,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 修改工作空间
+        /// 修改工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkspaceRequest"/></param>
         /// <returns><see cref="UpdateWorkspaceResponse"/></returns>
@@ -1404,7 +1404,7 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
-        /// 修改工作空间
+        /// 修改工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkspaceRequest"/></param>
         /// <returns><see cref="UpdateWorkspaceResponse"/></returns>

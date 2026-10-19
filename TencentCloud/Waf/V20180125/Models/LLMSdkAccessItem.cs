@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// <p>SDK接入来源，tokenhub 表示通过 TokenHub 创建，空字符串表示通过控制台创建</p>
+        /// <p>SDK接入来源，可不填</p>
         /// </summary>
         [JsonProperty("SdkSource")]
         public string SdkSource{ get; set; }
@@ -127,6 +127,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public bool? IntentStatus{ get; set; }
 
         /// <summary>
+        /// <p>恶意URL检测开关</p>
+        /// </summary>
+        [JsonProperty("UrlDetectStatus")]
+        public bool? UrlDetectStatus{ get; set; }
+
+        /// <summary>
         /// <p>生效规则数量</p>
         /// </summary>
         [JsonProperty("EffectiveRules")]
@@ -155,6 +161,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "DLPStatus", this.DLPStatus);
             this.SetParamSimple(map, prefix + "SkillsStatus", this.SkillsStatus);
             this.SetParamSimple(map, prefix + "IntentStatus", this.IntentStatus);
+            this.SetParamSimple(map, prefix + "UrlDetectStatus", this.UrlDetectStatus);
             this.SetParamSimple(map, prefix + "EffectiveRules", this.EffectiveRules);
         }
     }

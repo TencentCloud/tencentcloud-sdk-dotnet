@@ -409,6 +409,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("ResourceZoneSet")]
         public ResourceDeployZone[] ResourceZoneSet{ get; set; }
 
+        /// <summary>
+        /// <p>多账号额度</p>
+        /// </summary>
+        [JsonProperty("OrgAccountQuota")]
+        public ulong? OrgAccountQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -479,6 +485,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "BillingZone", this.BillingZone);
             this.SetParamSimple(map, prefix + "DeployCvmCount", this.DeployCvmCount);
             this.SetParamArrayObj(map, prefix + "ResourceZoneSet.", this.ResourceZoneSet);
+            this.SetParamSimple(map, prefix + "OrgAccountQuota", this.OrgAccountQuota);
         }
     }
 }

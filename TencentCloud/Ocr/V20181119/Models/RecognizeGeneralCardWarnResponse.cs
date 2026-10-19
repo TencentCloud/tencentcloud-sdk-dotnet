@@ -25,84 +25,73 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 卡证类型参数，包含以下范围： 
-        /// General：通用卡证
-        /// IDCard：身份证 
-        /// Passport：护照 
-        /// BankCard：银行卡
-        /// VehicleLicense：行驶证
-        /// DriverLicense：驾驶证
-        /// BizLicense：营业执照 
-        /// HmtResidentPermit：港澳台居住证
-        /// ForeignPermanentResident：外国人永居证
-        /// MainlandPermit：港澳台来往内地通行证
-        /// SocialSecurityCard：社保卡
+        /// <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
         /// </summary>
         [JsonProperty("CardType")]
         public string CardType{ get; set; }
 
         /// <summary>
-        /// 模糊信息
+        /// <p>模糊信息</p>
         /// </summary>
         [JsonProperty("Blur")]
         public GeneralCardWarnInfo Blur{ get; set; }
 
         /// <summary>
-        /// 边框不完整信息
+        /// <p>边框不完整信息</p>
         /// </summary>
         [JsonProperty("BorderIncomplete")]
         public GeneralCardWarnInfo BorderIncomplete{ get; set; }
 
         /// <summary>
-        /// 复印件信息
+        /// <p>复印件信息</p>
         /// </summary>
         [JsonProperty("Copy")]
         public GeneralCardWarnInfo Copy{ get; set; }
 
         /// <summary>
-        /// ps篡改信息
+        /// <p>ps篡改信息</p>
         /// </summary>
         [JsonProperty("Ps")]
         public GeneralCardWarnInfo Ps{ get; set; }
 
         /// <summary>
-        /// 反光信息
+        /// <p>反光信息</p>
         /// </summary>
         [JsonProperty("Reflection")]
         public GeneralCardWarnInfo Reflection{ get; set; }
 
         /// <summary>
-        /// 翻拍件信息
+        /// <p>翻拍件信息</p>
         /// </summary>
         [JsonProperty("Reprint")]
         public GeneralCardWarnInfo Reprint{ get; set; }
 
         /// <summary>
-        /// 是否截图
+        /// <p>是否截图</p>
         /// </summary>
         [JsonProperty("Screenshot")]
         public GeneralCardWarnInfo Screenshot{ get; set; }
 
         /// <summary>
-        /// 是否遮挡
+        /// <p>是否遮挡</p>
         /// </summary>
         [JsonProperty("Cover")]
         public GeneralCardWarnInfo Cover{ get; set; }
 
         /// <summary>
-        /// 是否重叠
+        /// <p>是否重叠</p>
         /// </summary>
         [JsonProperty("Overlap")]
         public GeneralCardWarnInfo Overlap{ get; set; }
 
         /// <summary>
-        /// 是否水印
+        /// <p>是否水印</p>
         /// </summary>
         [JsonProperty("Watermark")]
         public GeneralCardWarnInfo Watermark{ get; set; }
 
         /// <summary>
-        /// 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+        /// <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
         /// </summary>
         [JsonProperty("Electron")]
         public GeneralCardWarnInfo Electron{ get; set; }

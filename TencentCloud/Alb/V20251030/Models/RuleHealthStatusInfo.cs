@@ -25,22 +25,28 @@ namespace TencentCloud.Alb.V20251030.Models
     {
         
         /// <summary>
-        /// 是否为默认转发规则。
+        /// <p>是否为默认转发规则。</p>
         /// </summary>
         [JsonProperty("IsDefaultRule")]
         public string IsDefaultRule{ get; set; }
 
         /// <summary>
-        /// 转发规则 ID，格式为 rule- 后接 8 位字母数字。
+        /// <p>转发规则 ID，格式为 rule- 后接 8 位字母数字。</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 目标组健康状态。
+        /// <p>目标组健康状态。</p>
         /// </summary>
         [JsonProperty("TargetGroupHealthInfos")]
         public TargetGroupHealthInfo[] TargetGroupHealthInfos{ get; set; }
+
+        /// <summary>
+        /// <p>优先级，值越小优先级越高，取值范围：1~10000。</p>
+        /// </summary>
+        [JsonProperty("Priority")]
+        public long? Priority{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Alb.V20251030.Models
             this.SetParamSimple(map, prefix + "IsDefaultRule", this.IsDefaultRule);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArrayObj(map, prefix + "TargetGroupHealthInfos.", this.TargetGroupHealthInfos);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
         }
     }
 }

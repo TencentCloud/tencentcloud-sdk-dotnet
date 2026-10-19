@@ -25,10 +25,16 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 证书描述，不超过64字符
+        /// <p>证书描述，不超过64字符</p>
         /// </summary>
         [JsonProperty("CertDesc")]
         public string CertDesc{ get; set; }
+
+        /// <summary>
+        /// <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertDesc", this.CertDesc);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

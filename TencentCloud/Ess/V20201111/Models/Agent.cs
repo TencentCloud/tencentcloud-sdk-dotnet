@@ -28,7 +28,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
         /// </summary>
         [JsonProperty("AppId")]
-        [System.Obsolete]
         public string AppId{ get; set; }
 
         /// <summary>

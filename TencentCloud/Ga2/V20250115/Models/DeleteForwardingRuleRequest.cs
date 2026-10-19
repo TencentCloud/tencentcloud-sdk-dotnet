@@ -25,25 +25,25 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 监听器ID。
+        /// <p>监听器ID。</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 策略ID。
+        /// <p>七层转发策略ID。</p>
         /// </summary>
         [JsonProperty("ForwardingPolicyId")]
         public string ForwardingPolicyId{ get; set; }
 
         /// <summary>
-        /// 七层转发规则ID。
+        /// <p>七层转发规则ID。</p>
         /// </summary>
         [JsonProperty("ForwardingRuleId")]
         public string ForwardingRuleId{ get; set; }

@@ -138,6 +138,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("LoadBalanceMode")]
         public string LoadBalanceMode{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+        /// </summary>
+        [JsonProperty("TransAllSplit")]
+        public bool? TransAllSplit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
             this.SetParamArrayObj(map, prefix + "InstanceWeights.", this.InstanceWeights);
             this.SetParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
+            this.SetParamSimple(map, prefix + "TransAllSplit", this.TransAllSplit);
         }
     }
 }

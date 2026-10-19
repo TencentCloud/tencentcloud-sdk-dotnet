@@ -25,10 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
+        /// <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
         /// </summary>
         [JsonProperty("CaptchaMode")]
         public string CaptchaMode{ get; set; }
+
+        /// <summary>
+        /// <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
+        /// </summary>
+        [JsonProperty("MobileCaptchaMode")]
+        public string MobileCaptchaMode{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CaptchaMode", this.CaptchaMode);
+            this.SetParamSimple(map, prefix + "MobileCaptchaMode", this.MobileCaptchaMode);
         }
     }
 }

@@ -25,28 +25,28 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 模型加速任务详情
+        /// <p>模型加速任务详情</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelAccelerateTask")]
         public ModelAccelerateTask ModelAccelerateTask{ get; set; }
 
         /// <summary>
-        /// 模型加速时长，单位s
+        /// <p>模型加速时长，单位s</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelAccRuntimeInSecond")]
         public ulong? ModelAccRuntimeInSecond{ get; set; }
 
         /// <summary>
-        /// 模型加速任务开始时间
+        /// <p>模型加速任务开始时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelAccStartTime")]
         public string ModelAccStartTime{ get; set; }
 
         /// <summary>
-        /// 模型加速任务结束时间
+        /// <p>模型加速任务结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelAccEndTime")]

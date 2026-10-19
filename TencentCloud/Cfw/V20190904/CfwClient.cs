@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1520";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -2007,6 +2007,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeOfflineExportTemporaryCredentialsResponse DescribeOfflineExportTemporaryCredentialsSync(DescribeOfflineExportTemporaryCredentialsRequest req)
         {
             return InternalRequestAsync<DescribeOfflineExportTemporaryCredentialsResponse>(req, "DescribeOfflineExportTemporaryCredentials")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云防火墙概览页资源与配额详情信息，返回带宽配额、实例与规则配额、日志存储信息及相关能力标识。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewResourceQuotaRequest"/></param>
+        /// <returns><see cref="DescribeOverviewResourceQuotaResponse"/></returns>
+        public Task<DescribeOverviewResourceQuotaResponse> DescribeOverviewResourceQuota(DescribeOverviewResourceQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeOverviewResourceQuotaResponse>(req, "DescribeOverviewResourceQuota");
+        }
+
+        /// <summary>
+        /// 查询云防火墙概览页资源与配额详情信息，返回带宽配额、实例与规则配额、日志存储信息及相关能力标识。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewResourceQuotaRequest"/></param>
+        /// <returns><see cref="DescribeOverviewResourceQuotaResponse"/></returns>
+        public DescribeOverviewResourceQuotaResponse DescribeOverviewResourceQuotaSync(DescribeOverviewResourceQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeOverviewResourceQuotaResponse>(req, "DescribeOverviewResourceQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -35,6 +35,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         /// <ul><li>开启副本只读时，实例总带宽  = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
         /// </summary>
         [JsonProperty("Bandwidth")]
+        [System.Obsolete]
         public long? Bandwidth{ get; set; }
 
         /// <summary>

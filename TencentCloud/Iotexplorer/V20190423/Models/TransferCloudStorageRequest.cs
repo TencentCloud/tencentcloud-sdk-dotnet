@@ -25,28 +25,40 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 已开通云存的设备名称
+        /// <p>已开通云存的设备名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 未开通云存的设备名称
+        /// <p>未开通云存的设备名称</p>
         /// </summary>
         [JsonProperty("ToDeviceName")]
         public string ToDeviceName{ get; set; }
 
         /// <summary>
-        /// 未开通云存的设备产品ID
+        /// <p>未开通云存的设备产品ID</p>
         /// </summary>
         [JsonProperty("ToProductId")]
         public string ToProductId{ get; set; }
+
+        /// <summary>
+        /// <p>已开通云存的通道id</p>
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
+        /// <summary>
+        /// <p>未开通云存的通道id</p>
+        /// </summary>
+        [JsonProperty("ToChannelId")]
+        public ulong? ToChannelId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ToDeviceName", this.ToDeviceName);
             this.SetParamSimple(map, prefix + "ToProductId", this.ToProductId);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "ToChannelId", this.ToChannelId);
         }
     }
 }

@@ -222,6 +222,24 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("SyncCloudDeviceStatus")]
         public ulong? SyncCloudDeviceStatus{ get; set; }
 
+        /// <summary>
+        /// <p>所属账号 AppId</p>
+        /// </summary>
+        [JsonProperty("OwnerAppId")]
+        public ulong? OwnerAppId{ get; set; }
+
+        /// <summary>
+        /// <p>所属账号 UIN</p>
+        /// </summary>
+        [JsonProperty("OwnerAccountUin")]
+        public string OwnerAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>所属账号展示名</p>
+        /// </summary>
+        [JsonProperty("OwnerAccountName")]
+        public string OwnerAccountName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +279,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "ProviderType", this.ProviderType);
             this.SetParamSimple(map, prefix + "ProviderName", this.ProviderName);
             this.SetParamSimple(map, prefix + "SyncCloudDeviceStatus", this.SyncCloudDeviceStatus);
+            this.SetParamSimple(map, prefix + "OwnerAppId", this.OwnerAppId);
+            this.SetParamSimple(map, prefix + "OwnerAccountUin", this.OwnerAccountUin);
+            this.SetParamSimple(map, prefix + "OwnerAccountName", this.OwnerAccountName);
         }
     }
 }

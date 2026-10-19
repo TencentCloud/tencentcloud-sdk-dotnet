@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1520</VersionPrefix>
+    <VersionPrefix>3.0.1521</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -265,6 +265,8 @@
     <Compile Include="V20190904\Models\DescribeOfflineExportTaskResponse.cs" />
     <Compile Include="V20190904\Models\DescribeOfflineExportTemporaryCredentialsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeOfflineExportTemporaryCredentialsResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeOverviewResourceQuotaRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeOverviewResourceQuotaResponse.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupNewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupNewResponse.cs" />
     <Compile Include="V20190904\Models\DescribeResourceGroupRequest.cs" />
@@ -437,6 +439,17 @@
     <Compile Include="V20190904\Models\OpenClusterNatFwSwitchRequest.cs" />
     <Compile Include="V20190904\Models\OpenClusterNatFwSwitchResponse.cs" />
     <Compile Include="V20190904\Models\OperatorFilter.cs" />
+    <Compile Include="V20190904\Models\OverviewBlockListQuota.cs" />
+    <Compile Include="V20190904\Models\OverviewBlockListQuotaDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewCommonRuleQuotaDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewEastWestDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewLogStorageDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewNDRDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewNorthSouthDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewQuotaDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewResourceQuotaDataLite.cs" />
+    <Compile Include="V20190904\Models\OverviewResourceQuotaDetail.cs" />
+    <Compile Include="V20190904\Models\OverviewVpcRuleQuotaDetail.cs" />
     <Compile Include="V20190904\Models\PolicyRoutePreCheckReport.cs" />
     <Compile Include="V20190904\Models\RegionCidrConfig.cs" />
     <Compile Include="V20190904\Models\RegionFwStatus.cs" />
@@ -494,6 +507,7 @@
     <Compile Include="V20190904\Models\UpdateCheckCcnNonDirectFlagResponse.cs" />
     <Compile Include="V20190904\Models\UpdateClusterVpcFwRequest.cs" />
     <Compile Include="V20190904\Models\UpdateClusterVpcFwResponse.cs" />
+    <Compile Include="V20190904\Models\VolumeUsageDetail.cs" />
     <Compile Include="V20190904\Models\VpcDnsInfo.cs" />
     <Compile Include="V20190904\Models\VpcFwCvmInsInfo.cs" />
     <Compile Include="V20190904\Models\VpcFwGroupInfo.cs" />

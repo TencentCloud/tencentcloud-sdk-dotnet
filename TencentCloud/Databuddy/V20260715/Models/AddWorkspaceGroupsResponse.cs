@@ -25,7 +25,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 添加结果
+        /// <p>添加结果</p>
         /// </summary>
         [JsonProperty("Data")]
         public PlatformStatusRsp Data{ get; set; }

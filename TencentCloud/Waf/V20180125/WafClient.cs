@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1520";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Waf.V20180125
         public AddDomainWhiteRuleResponse AddDomainWhiteRuleSync(AddDomainWhiteRuleRequest req)
         {
             return InternalRequestAsync<AddDomainWhiteRuleResponse>(req, "AddDomainWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// llmwaf-sdk新增接入配置接口
+        /// </summary>
+        /// <param name="req"><see cref="AddLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="AddLLMSdkAccessResponse"/></returns>
+        public Task<AddLLMSdkAccessResponse> AddLLMSdkAccess(AddLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<AddLLMSdkAccessResponse>(req, "AddLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// llmwaf-sdk新增接入配置接口
+        /// </summary>
+        /// <param name="req"><see cref="AddLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="AddLLMSdkAccessResponse"/></returns>
+        public AddLLMSdkAccessResponse AddLLMSdkAccessSync(AddLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<AddLLMSdkAccessResponse>(req, "AddLLMSdkAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1205,6 +1226,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAccessIndexResponse DescribeAccessIndexSync(DescribeAccessIndexRequest req)
         {
             return InternalRequestAsync<DescribeAccessIndexResponse>(req, "DescribeAccessIndex")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询后付费实例列表（仅 Edition=llm-sdk-waf）。请求参数与 DescribeInstances 一致；仅返回 tb_instance_conf 基础数据，不含套餐/标签等扩展信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAfterPayInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAfterPayInstancesResponse"/></returns>
+        public Task<DescribeAfterPayInstancesResponse> DescribeAfterPayInstances(DescribeAfterPayInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAfterPayInstancesResponse>(req, "DescribeAfterPayInstances");
+        }
+
+        /// <summary>
+        /// 查询后付费实例列表（仅 Edition=llm-sdk-waf）。请求参数与 DescribeInstances 一致；仅返回 tb_instance_conf 基础数据，不含套餐/标签等扩展信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAfterPayInstancesRequest"/></param>
+        /// <returns><see cref="DescribeAfterPayInstancesResponse"/></returns>
+        public DescribeAfterPayInstancesResponse DescribeAfterPayInstancesSync(DescribeAfterPayInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeAfterPayInstancesResponse>(req, "DescribeAfterPayInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

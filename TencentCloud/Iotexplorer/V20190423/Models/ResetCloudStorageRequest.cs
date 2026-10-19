@@ -25,28 +25,34 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// <p>设备名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+        /// <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
         /// </summary>
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }
 
         /// <summary>
-        /// 云存用户Id，为空则为默认云存空间。
+        /// <p>云存用户Id，为空则为默认云存空间。</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
+
+        /// <summary>
+        /// <p>订单id</p>
+        /// </summary>
+        [JsonProperty("OrderId")]
+        public string OrderId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
         }
     }
 }

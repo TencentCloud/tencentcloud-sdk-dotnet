@@ -25,34 +25,40 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+        /// <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 起草要求，范围要求 5-1000 字
+        /// <p>起草要求，范围要求 5-1000 字</p>
         /// </summary>
         [JsonProperty("Requirement")]
         public string Requirement{ get; set; }
 
         /// <summary>
-        /// 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+        /// <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
         /// </summary>
         [JsonProperty("ReferenceTemplateId")]
         public string ReferenceTemplateId{ get; set; }
 
         /// <summary>
-        /// 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+        /// <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
         /// </summary>
         [JsonProperty("RequirementFileIds")]
         public string[] RequirementFileIds{ get; set; }
 
         /// <summary>
-        /// 起草合同的语言要求（zh，en）默认zh
+        /// <p>起草合同的语言要求（zh，en）默认zh</p>
         /// </summary>
         [JsonProperty("ContractLanguage")]
         public string ContractLanguage{ get; set; }
+
+        /// <summary>
+        /// <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
+        /// </summary>
+        [JsonProperty("ReviewTaskId")]
+        public string ReviewTaskId{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ReferenceTemplateId", this.ReferenceTemplateId);
             this.SetParamArraySimple(map, prefix + "RequirementFileIds.", this.RequirementFileIds);
             this.SetParamSimple(map, prefix + "ContractLanguage", this.ContractLanguage);
+            this.SetParamSimple(map, prefix + "ReviewTaskId", this.ReviewTaskId);
         }
     }
 }

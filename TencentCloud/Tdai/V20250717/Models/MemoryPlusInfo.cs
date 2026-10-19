@@ -79,6 +79,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         public float? CreditUsage{ get; set; }
 
         /// <summary>
+        /// <p>是否开启压缩</p>
+        /// </summary>
+        [JsonProperty("Compressed")]
+        public bool? Compressed{ get; set; }
+
+        /// <summary>
         /// <p>资源标签</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
@@ -129,6 +135,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
             this.SetParamSimple(map, prefix + "CreditUsage", this.CreditUsage);
+            this.SetParamSimple(map, prefix + "Compressed", this.Compressed);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);

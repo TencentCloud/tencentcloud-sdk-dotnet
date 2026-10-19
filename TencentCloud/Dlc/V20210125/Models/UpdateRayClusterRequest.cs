@@ -114,6 +114,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }
 }

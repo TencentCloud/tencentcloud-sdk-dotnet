@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Cdc.V20201214.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindTWeTalkAIBotRequest : AbstractModel
+    public class DescribeEdgeHostVmRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 智能体ID
-        /// </summary>
-        [JsonProperty("BotId")]
-        public string BotId{ get; set; }
-
-        /// <summary>
-        /// 产品ID
-        /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BotId", this.BotId);
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

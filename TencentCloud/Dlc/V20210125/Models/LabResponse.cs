@@ -265,6 +265,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
+        /// <summary>
+        /// <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -311,6 +317,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
             this.SetParamSimple(map, prefix + "EnableToken", this.EnableToken);
             this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }
 }

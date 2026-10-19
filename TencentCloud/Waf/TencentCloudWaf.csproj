@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1520</VersionPrefix>
+    <VersionPrefix>3.0.1521</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,8 +79,11 @@
     <Compile Include="V20180125\Models\AddCustomWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddDomainWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddDomainWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AddLLMSdkAccessRequest.cs" />
+    <Compile Include="V20180125\Models\AddLLMSdkAccessResponse.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\AfterPayInstanceInfo.cs" />
     <Compile Include="V20180125\Models\AnonymousInfo.cs" />
     <Compile Include="V20180125\Models\ApiAsset.cs" />
     <Compile Include="V20180125\Models\ApiDataFilter.cs" />
@@ -239,6 +242,8 @@
     <Compile Include="V20180125\Models\DescribeAccessHistogramResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAccessIndexRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAccessIndexResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAfterPayInstancesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAfterPayInstancesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAntiFakeRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAntiFakeRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesStrategyItem.cs" />
@@ -489,6 +494,7 @@
     <Compile Include="V20180125\Models\KVInt.cs" />
     <Compile Include="V20180125\Models\KeyWordInfo.cs" />
     <Compile Include="V20180125\Models\LLMDetectResult.cs" />
+    <Compile Include="V20180125\Models\LLMImageTrendItem.cs" />
     <Compile Include="V20180125\Models\LLMKeywordLibrary.cs" />
     <Compile Include="V20180125\Models\LLMMonPkg.cs" />
     <Compile Include="V20180125\Models\LLMOptionsItem.cs" />
@@ -496,6 +502,8 @@
     <Compile Include="V20180125\Models\LLMRisks.cs" />
     <Compile Include="V20180125\Models\LLMSdkAccessItem.cs" />
     <Compile Include="V20180125\Models\LLMSensitiveValueLevel.cs" />
+    <Compile Include="V20180125\Models\LLMTokenTrendItem.cs" />
+    <Compile Include="V20180125\Models\LLMTokenUsage.cs" />
     <Compile Include="V20180125\Models\LimitHeader.cs" />
     <Compile Include="V20180125\Models\LimitHeaderName.cs" />
     <Compile Include="V20180125\Models\LimitMethod.cs" />

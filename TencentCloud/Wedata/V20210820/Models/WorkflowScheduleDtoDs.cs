@@ -206,6 +206,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
+        /// <summary>
+        /// <p>分钟任务相位偏移</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinuteOffset")]
+        public ulong? MinuteOffset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +245,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+            this.SetParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
         }
     }
 }

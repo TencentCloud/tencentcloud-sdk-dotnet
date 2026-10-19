@@ -25,31 +25,31 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 产品类型
+        /// <p>产品类型</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 下发账号
+        /// <p>下发账号</p>
         /// </summary>
         [JsonProperty("ReceiveAccount")]
         public string[] ReceiveAccount{ get; set; }
 
         /// <summary>
-        /// 前区规则组
+        /// <p>前区规则组</p>
         /// </summary>
         [JsonProperty("PreStrategy")]
         public StrategyReq[] PreStrategy{ get; set; }
 
         /// <summary>
-        /// 后区规则组
+        /// <p>后区规则组</p>
         /// </summary>
         [JsonProperty("PostStrategy")]
         public StrategyReq[] PostStrategy{ get; set; }
 
         /// <summary>
-        /// 下发账号组
+        /// <p>下发账号组</p>
         /// </summary>
         [JsonProperty("ReceiveGroup")]
         public string[] ReceiveGroup{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1520";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -2389,7 +2389,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API has been retired and is no longer available. To obtain cluster access credentials (Kubeconfig), use DescribeClusterKubeconfig. To query the cluster API Server’s access addresses, domain names, and other connection information, use DescribeClusterEndpoints. Update your integration to accommodate the replacement APIs’ request parameters and response fields. DescribeClusterKubeconfig returns credentials specific to the calling account. A cluster administrator must configure the required Kubernetes RBAC permissions for that account under “Authorization Management” in TKE. Select the private or public network access configuration based on your network environment. If you rely on other information returned by the retired API, submit a support ticket for assistance.
+        /// This API has been retired and is no longer available. To obtain cluster access credentials (Kubeconfig), use DescribeClusterKubeconfig. To query the cluster API Server\\\'s access addresses, domain names, and other connection information, use DescribeClusterEndpoints. Update your integration to accommodate the replacement APIs\\\' request parameters and response fields. DescribeClusterKubeconfig returns credentials specific to the calling account. A cluster administrator must configure the required Kubernetes RBAC permissions for that account under \\\"Authorization Management\\\" in TKE. Select the private or public network access configuration based on your network environment. If you rely on other information returned by the retired API, submit a support ticket for assistance.
         /// 
         /// 集群的密钥信息
         /// </summary>
@@ -2401,7 +2401,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API has been retired and is no longer available. To obtain cluster access credentials (Kubeconfig), use DescribeClusterKubeconfig. To query the cluster API Server’s access addresses, domain names, and other connection information, use DescribeClusterEndpoints. Update your integration to accommodate the replacement APIs’ request parameters and response fields. DescribeClusterKubeconfig returns credentials specific to the calling account. A cluster administrator must configure the required Kubernetes RBAC permissions for that account under “Authorization Management” in TKE. Select the private or public network access configuration based on your network environment. If you rely on other information returned by the retired API, submit a support ticket for assistance.
+        /// This API has been retired and is no longer available. To obtain cluster access credentials (Kubeconfig), use DescribeClusterKubeconfig. To query the cluster API Server\\\'s access addresses, domain names, and other connection information, use DescribeClusterEndpoints. Update your integration to accommodate the replacement APIs\\\' request parameters and response fields. DescribeClusterKubeconfig returns credentials specific to the calling account. A cluster administrator must configure the required Kubernetes RBAC permissions for that account under \\\"Authorization Management\\\" in TKE. Select the private or public network access configuration based on your network environment. If you rely on other information returned by the retired API, submit a support ticket for assistance.
         /// 
         /// 集群的密钥信息
         /// </summary>

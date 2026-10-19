@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1520</VersionPrefix>
+    <VersionPrefix>3.0.1521</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -143,6 +143,8 @@
     <Compile Include="V20211111\Models\CreateModelServiceResponse.cs" />
     <Compile Include="V20211111\Models\CreateMountLimitRequest.cs" />
     <Compile Include="V20211111\Models\CreateMountLimitResponse.cs" />
+    <Compile Include="V20211111\Models\CreateNotebookImageRequest.cs" />
+    <Compile Include="V20211111\Models\CreateNotebookImageResponse.cs" />
     <Compile Include="V20211111\Models\CreateNotebookRequest.cs" />
     <Compile Include="V20211111\Models\CreateNotebookResponse.cs" />
     <Compile Include="V20211111\Models\CreatePresignedNotebookUrlRequest.cs" />

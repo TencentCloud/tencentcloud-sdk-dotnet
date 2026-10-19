@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteTWeTalkAIBotRequest : AbstractModel
+    public class OverviewResourceQuotaDataLite : AbstractModel
     {
         
         /// <summary>
-        /// 智能体ID
+        /// <p>资源与配额详情核心数据，包含南北向带宽、东西向带宽、NDR 带宽、资源配额和日志存储信息。</p>
         /// </summary>
-        [JsonProperty("BotId")]
-        public string BotId{ get; set; }
+        [JsonProperty("Detail")]
+        public OverviewResourceQuotaDetail Detail{ get; set; }
+
+        /// <summary>
+        /// <p>纯按量计费使用情况</p>
+        /// </summary>
+        [JsonProperty("VolumeUsageDetail")]
+        public VolumeUsageDetail VolumeUsageDetail{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BotId", this.BotId);
+            this.SetParamObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamObj(map, prefix + "VolumeUsageDetail.", this.VolumeUsageDetail);
         }
     }
 }

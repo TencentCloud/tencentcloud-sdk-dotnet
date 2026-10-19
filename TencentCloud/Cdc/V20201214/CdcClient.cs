@@ -28,7 +28,7 @@ namespace TencentCloud.Cdc.V20201214
 
        private const string endpoint = "cdc.tencentcloudapi.com";
        private const string version = "2020-12-14";
-       private const string sdkVersion = "SDK_NET_3.0.1457";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Cdc.V20201214
         public DescribeDedicatedSupportedZonesResponse DescribeDedicatedSupportedZonesSync(DescribeDedicatedSupportedZonesRequest req)
         {
             return InternalRequestAsync<DescribeDedicatedSupportedZonesResponse>(req, "DescribeDedicatedSupportedZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询专属集群宿主机上的虚机信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeHostVmRequest"/></param>
+        /// <returns><see cref="DescribeEdgeHostVmResponse"/></returns>
+        public Task<DescribeEdgeHostVmResponse> DescribeEdgeHostVm(DescribeEdgeHostVmRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeHostVmResponse>(req, "DescribeEdgeHostVm");
+        }
+
+        /// <summary>
+        /// 查询专属集群宿主机上的虚机信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeHostVmRequest"/></param>
+        /// <returns><see cref="DescribeEdgeHostVmResponse"/></returns>
+        public DescribeEdgeHostVmResponse DescribeEdgeHostVmSync(DescribeEdgeHostVmRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeHostVmResponse>(req, "DescribeEdgeHostVm")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

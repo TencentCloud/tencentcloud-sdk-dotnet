@@ -25,19 +25,19 @@ namespace TencentCloud.Ga2.V20250115.Models
     {
         
         /// <summary>
-        /// 全球加速实例ID。
+        /// <p>全球加速实例ID。</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorId")]
         public string GlobalAcceleratorId{ get; set; }
 
         /// <summary>
-        /// 安全策略ID
+        /// <p>访问控制策略ID</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorAclPolicyId")]
         public string GlobalAcceleratorAclPolicyId{ get; set; }
 
         /// <summary>
-        /// Acl规则ID。
+        /// <p>访问规则ID</p>
         /// </summary>
         [JsonProperty("GlobalAcceleratorAclRuleIds")]
         public string[] GlobalAcceleratorAclRuleIds{ get; set; }

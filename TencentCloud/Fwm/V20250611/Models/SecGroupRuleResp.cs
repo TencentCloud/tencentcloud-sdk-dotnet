@@ -176,6 +176,7 @@ namespace TencentCloud.Fwm.V20250611.Models
 
         /// <summary>
         /// <p>域名解析的IP统计</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DnsParseCount")]
         public SgDnsParseCount DnsParseCount{ get; set; }

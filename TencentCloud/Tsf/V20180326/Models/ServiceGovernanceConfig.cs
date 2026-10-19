@@ -25,19 +25,19 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 是否开启服务注册治理
+        /// <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
         /// </summary>
         [JsonProperty("EnableGovernance")]
         public bool? EnableGovernance{ get; set; }
 
         /// <summary>
-        /// 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
+        /// <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
         /// </summary>
         [JsonProperty("GovernanceType")]
         public string GovernanceType{ get; set; }
 
         /// <summary>
-        /// 独享实例列表
+        /// <p>北极星实例列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExclusiveInstances")]

@@ -67,7 +67,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public ulong? IdleTimeout{ get; set; }
 
         /// <summary>
-        /// <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+        /// <p>四层获取源IP方式。</p><p>枚举值：</p><ul><li>TOA： TOA</li><li>ProxyProtocol： ProxyProtocol</li><li>ProxyProtocolV2： ProxyProtocolV2</li></ul><p>需要开启四层获取源IP方式，才填写此参数。</p>
         /// </summary>
         [JsonProperty("GetRealIpType")]
         public string GetRealIpType{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 规则组Id
+        /// <p>规则组Id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 规则列表
+        /// <p>规则列表</p>
         /// </summary>
         [JsonProperty("Rules")]
         public SecurityGroupRule[] Rules{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 模型版本列表
+        /// <p>模型版本列表</p>
         /// </summary>
         [JsonProperty("TrainingModelVersions")]
         public TrainingModelVersionDTO[] TrainingModelVersions{ get; set; }

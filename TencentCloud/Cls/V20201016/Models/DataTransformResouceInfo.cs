@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ExternalId{ get; set; }
 
         /// <summary>
-        /// <p>topic名称</p>
+        /// <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

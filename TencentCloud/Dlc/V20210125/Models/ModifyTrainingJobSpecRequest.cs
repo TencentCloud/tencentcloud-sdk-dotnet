@@ -174,6 +174,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TuningParams")]
         public TrainingTuningParams TuningParams{ get; set; }
 
+        /// <summary>
+        /// <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "Checkpoint.", this.Checkpoint);
             this.SetParamSimple(map, prefix + "ResumeTraining", this.ResumeTraining);
             this.SetParamObj(map, prefix + "TuningParams.", this.TuningParams);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }
 }

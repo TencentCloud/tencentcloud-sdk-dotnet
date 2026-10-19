@@ -217,6 +217,12 @@ namespace TencentCloud.Wedata.V20250806.Models
         [System.Obsolete]
         public long? AllowDownstreamDependency{ get; set; }
 
+        /// <summary>
+        /// <p>分钟任务相位偏移</p>
+        /// </summary>
+        [JsonProperty("MinuteOffset")]
+        public ulong? MinuteOffset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +260,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
             this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
             this.SetParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
+            this.SetParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
+        /// <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li><li>global-accelerator-name - String -（过滤条件）全球加速实例名称。</li></p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

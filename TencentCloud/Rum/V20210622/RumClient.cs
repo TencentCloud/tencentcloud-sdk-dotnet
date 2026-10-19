@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1474";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -1167,6 +1167,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeFOOMReportListResponse DescribeFOOMReportListSync(DescribeFOOMReportListRequest req)
         {
             return InternalRequestAsync<DescribeFOOMReportListResponse>(req, "DescribeFOOMReportList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取COS存储的临时密钥，具体到ProjectId
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileCertificateRequest"/></param>
+        /// <returns><see cref="DescribeFileCertificateResponse"/></returns>
+        public Task<DescribeFileCertificateResponse> DescribeFileCertificate(DescribeFileCertificateRequest req)
+        {
+            return InternalRequestAsync<DescribeFileCertificateResponse>(req, "DescribeFileCertificate");
+        }
+
+        /// <summary>
+        /// 获取COS存储的临时密钥，具体到ProjectId
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileCertificateRequest"/></param>
+        /// <returns><see cref="DescribeFileCertificateResponse"/></returns>
+        public DescribeFileCertificateResponse DescribeFileCertificateSync(DescribeFileCertificateRequest req)
+        {
+            return InternalRequestAsync<DescribeFileCertificateResponse>(req, "DescribeFileCertificate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

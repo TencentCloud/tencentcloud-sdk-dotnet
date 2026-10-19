@@ -180,6 +180,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("AgentMem")]
         public AgentMemInfo AgentMem{ get; set; }
 
+        /// <summary>
+        /// <p>关联的 memory（AGM）实例ID（仅免部署实例有值）</p>
+        /// </summary>
+        [JsonProperty("MemInstanceId")]
+        public string MemInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
             this.SetParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
             this.SetParamObj(map, prefix + "AgentMem.", this.AgentMem);
+            this.SetParamSimple(map, prefix + "MemInstanceId", this.MemInstanceId);
         }
     }
 }

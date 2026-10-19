@@ -193,6 +193,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LogDeliveryDisableReason{ get; set; }
 
         /// <summary>
+        /// <p>日志审计禁止开通时的详细说明</p>
+        /// </summary>
+        [JsonProperty("LogDeliveryDisableMessage")]
+        public string LogDeliveryDisableMessage{ get; set; }
+
+        /// <summary>
         /// <p>在线日志的起始时间戳，精确到秒</p>
         /// </summary>
         [JsonProperty("OldestOnlineLogTimestamp")]
@@ -248,6 +254,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// <p>数据库版本</p>
+        /// </summary>
+        [JsonProperty("DbVersion")]
+        public string DbVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +294,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "SecurityAnalyseStatus", this.SecurityAnalyseStatus);
             this.SetParamSimple(map, prefix + "TotalAuditLogs", this.TotalAuditLogs);
             this.SetParamSimple(map, prefix + "LogDeliveryDisableReason", this.LogDeliveryDisableReason);
+            this.SetParamSimple(map, prefix + "LogDeliveryDisableMessage", this.LogDeliveryDisableMessage);
             this.SetParamSimple(map, prefix + "OldestOnlineLogTimestamp", this.OldestOnlineLogTimestamp);
             this.SetParamSimple(map, prefix + "NewestOnlineLogTimestamp", this.NewestOnlineLogTimestamp);
             this.SetParamSimple(map, prefix + "OperationErrorMsg", this.OperationErrorMsg);
@@ -291,6 +304,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IdentifyScanSupported", this.IdentifyScanSupported);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
         }
     }
 }

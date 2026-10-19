@@ -15,56 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTWeTalkAIBotListRequest : AbstractModel
+    public class AddLLMSdkAccessRequest : AbstractModel
     {
         
         /// <summary>
-        /// 智能体ID
-        /// </summary>
-        [JsonProperty("BotId")]
-        public string BotId{ get; set; }
-
-        /// <summary>
-        /// 智能体名称
+        /// 要接入的应用名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 产品ID
-        /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
-
-        /// <summary>
-        /// 实例ID
+        /// 实例id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否脱敏
+        /// 备注
         /// </summary>
-        [JsonProperty("IncludeCredentials")]
-        public bool? IncludeCredentials{ get; set; }
-
-        /// <summary>
-        /// 1
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 10
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
 
         /// <summary>
@@ -72,13 +48,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BotId", this.BotId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "IncludeCredentials", this.IncludeCredentials);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

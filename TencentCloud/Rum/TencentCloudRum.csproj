@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1474</VersionPrefix>
+    <VersionPrefix>3.0.1521</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,6 +155,8 @@
     <Compile Include="V20210622\Models\DescribeFOOMProblemListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeFOOMReportListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeFOOMReportListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeFileCertificateRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeFileCertificateResponse.cs" />
     <Compile Include="V20210622\Models\DescribeIssuesDistributionRequest.cs" />
     <Compile Include="V20210622\Models\DescribeIssuesDistributionResponse.cs" />
     <Compile Include="V20210622\Models\DescribeIssuesListRequest.cs" />

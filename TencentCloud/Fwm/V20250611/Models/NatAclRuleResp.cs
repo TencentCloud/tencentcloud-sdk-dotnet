@@ -237,6 +237,18 @@ namespace TencentCloud.Fwm.V20250611.Models
         [JsonProperty("DnsParseCnt")]
         public long? DnsParseCnt{ get; set; }
 
+        /// <summary>
+        /// 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+        /// </summary>
+        [JsonProperty("HitCount")]
+        public long? HitCount{ get; set; }
+
+        /// <summary>
+        /// 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
+        /// </summary>
+        [JsonProperty("LastHitTime")]
+        public string LastHitTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +287,8 @@ namespace TencentCloud.Fwm.V20250611.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "DnsParseCnt", this.DnsParseCnt);
+            this.SetParamSimple(map, prefix + "HitCount", this.HitCount);
+            this.SetParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
         }
     }
 }

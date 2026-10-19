@@ -156,6 +156,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("LabImagePullType")]
         public string LabImagePullType{ get; set; }
 
+        /// <summary>
+        /// <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "EnableToken", this.EnableToken);
             this.SetParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
             this.SetParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }
 }

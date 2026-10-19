@@ -96,6 +96,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AdvancedOptions")]
         public string AdvancedOptions{ get; set; }
 
+        /// <summary>
+        /// <p>NetworkConfig</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AutoscalingEnabled", this.AutoscalingEnabled);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }
 }

@@ -324,6 +324,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("TokenDisplayProtection")]
         public long? TokenDisplayProtection{ get; set; }
 
+        /// <summary>
+        /// <p>自定义 Span 状态配置</p>
+        /// </summary>
+        [JsonProperty("SpanStatusConfig")]
+        public SpanStatusConfig SpanStatusConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -380,6 +386,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
             this.SetParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
             this.SetParamSimple(map, prefix + "TokenDisplayProtection", this.TokenDisplayProtection);
+            this.SetParamObj(map, prefix + "SpanStatusConfig.", this.SpanStatusConfig);
         }
     }
 }

@@ -259,6 +259,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AdvancedOptions")]
         public string AdvancedOptions{ get; set; }
 
+        /// <summary>
+        /// <p>创建人子账号 UIN（实际提交者）</p>
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
+
+        /// <summary>
+        /// <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -301,6 +319,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "TuningParams.", this.TuningParams);
             this.SetParamSimple(map, prefix + "ResumeTraining", this.ResumeTraining);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }
 }

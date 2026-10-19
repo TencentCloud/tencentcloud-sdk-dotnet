@@ -187,6 +187,7 @@ namespace TencentCloud.Apis.V20240801.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeLimitConfigStatus")]
+        [System.Obsolete]
         public bool? InvokeLimitConfigStatus{ get; set; }
 
         /// <summary>
@@ -194,6 +195,7 @@ namespace TencentCloud.Apis.V20240801.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvokeLimitConfig")]
+        [System.Obsolete]
         public InvokeLimitConfigDTO InvokeLimitConfig{ get; set; }
 
         /// <summary>

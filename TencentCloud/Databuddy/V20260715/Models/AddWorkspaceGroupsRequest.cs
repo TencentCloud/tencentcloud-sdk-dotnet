@@ -25,19 +25,19 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 用户组ID，可通过 ListWorkspaceGroups 接口获取
+        /// <p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 工作空间ID
+        /// <p>工作空间ID</p>
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public string WorkspaceId{ get; set; }
 
         /// <summary>
-        /// 角色ID，可通过 ListWorkspaceRoles 接口获取
+        /// <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
         /// </summary>
         [JsonProperty("RoleIds")]
         public string[] RoleIds{ get; set; }

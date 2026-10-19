@@ -109,6 +109,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         public float? CreditLimit{ get; set; }
 
         /// <summary>
+        /// <p>是否开启压缩</p>
+        /// </summary>
+        [JsonProperty("Compressed")]
+        public bool? Compressed{ get; set; }
+
+        /// <summary>
         /// <p>Memory 实例的内网访问地址。</p>
         /// </summary>
         [JsonProperty("AccessUrl")]
@@ -170,6 +176,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
             this.SetParamSimple(map, prefix + "CreditUsage", this.CreditUsage);
             this.SetParamSimple(map, prefix + "CreditLimit", this.CreditLimit);
+            this.SetParamSimple(map, prefix + "Compressed", this.Compressed);
             this.SetParamSimple(map, prefix + "AccessUrl", this.AccessUrl);
             this.SetParamSimple(map, prefix + "WanAccessUrl", this.WanAccessUrl);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);

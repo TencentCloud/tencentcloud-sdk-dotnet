@@ -147,7 +147,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? CacheDataDiskSize{ get; set; }
 
         /// <summary>
-        /// <p>磁盘加密</p>
+        /// <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
         /// </summary>
         [JsonProperty("DiskEncrypt")]
         public long? DiskEncrypt{ get; set; }

@@ -100,12 +100,14 @@ namespace TencentCloud.Apis.V20240801.Models
         /// <p>流量控制开启状态</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfigStatus")]
+        [System.Obsolete]
         public bool? InvokeLimitConfigStatus{ get; set; }
 
         /// <summary>
         /// <p>流量控制配置</p>
         /// </summary>
         [JsonProperty("InvokeLimitConfig")]
+        [System.Obsolete]
         public InvokeLimitConfigDTO InvokeLimitConfig{ get; set; }
 
         /// <summary>

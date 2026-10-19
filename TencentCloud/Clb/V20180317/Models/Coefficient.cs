@@ -66,6 +66,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("OutputVideoSecondCoefficient")]
         public float? OutputVideoSecondCoefficient{ get; set; }
 
+        /// <summary>
+        /// <p>输出图片系数</p>
+        /// </summary>
+        [JsonProperty("OutputImageCoefficient")]
+        public float? OutputImageCoefficient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "InputImageCoefficient", this.InputImageCoefficient);
             this.SetParamSimple(map, prefix + "InputVideoSecondCoefficient", this.InputVideoSecondCoefficient);
             this.SetParamSimple(map, prefix + "OutputVideoSecondCoefficient", this.OutputVideoSecondCoefficient);
+            this.SetParamSimple(map, prefix + "OutputImageCoefficient", this.OutputImageCoefficient);
         }
     }
 }

@@ -25,79 +25,91 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 待处理风险个数
+        /// <p>待处理风险个数</p>
         /// </summary>
         [JsonProperty("UnprocessedRisk")]
         public long? UnprocessedRisk{ get; set; }
 
         /// <summary>
-        /// 配置风险个数
+        /// <p>配置风险个数</p>
         /// </summary>
         [JsonProperty("ConfigurationRisk")]
         [System.Obsolete]
         public long? ConfigurationRisk{ get; set; }
 
         /// <summary>
-        /// 基线风险个数
+        /// <p>基线风险个数</p>
         /// </summary>
         [JsonProperty("BaselineDeviation")]
         [System.Obsolete]
         public long? BaselineDeviation{ get; set; }
 
         /// <summary>
-        /// 泄露风险个数
+        /// <p>泄露风险个数</p>
         /// </summary>
         [JsonProperty("LeakDetection")]
         [System.Obsolete]
         public long? LeakDetection{ get; set; }
 
         /// <summary>
-        /// SQL行为异常风险个数
+        /// <p>SQL行为异常风险个数</p>
         /// </summary>
         [JsonProperty("SQLBehaviorAnomaly")]
         public long? SQLBehaviorAnomaly{ get; set; }
 
         /// <summary>
-        /// 权限异常风险个数
+        /// <p>权限异常风险个数</p>
         /// </summary>
         [JsonProperty("PermissionAnomaly")]
         public long? PermissionAnomaly{ get; set; }
 
         /// <summary>
-        /// 登录行为异常风险个数
+        /// <p>登录行为异常风险个数</p>
         /// </summary>
         [JsonProperty("LoginBehaviorAnomaly")]
         public long? LoginBehaviorAnomaly{ get; set; }
 
         /// <summary>
-        /// 攻击面风险个数
+        /// <p>攻击面风险个数</p>
         /// </summary>
         [JsonProperty("AttackSurfaceRisk")]
         public long? AttackSurfaceRisk{ get; set; }
 
         /// <summary>
-        /// 账号敏感操作个数
+        /// <p>账号敏感操作个数</p>
         /// </summary>
         [JsonProperty("AccountSensitiveOperation")]
         public long? AccountSensitiveOperation{ get; set; }
 
         /// <summary>
-        /// 待处理告警个数
+        /// <p>待处理告警个数</p>
         /// </summary>
         [JsonProperty("UnprocessedAlarm")]
         public long? UnprocessedAlarm{ get; set; }
 
         /// <summary>
-        /// 新增事件告警
+        /// <p>新增事件告警</p>
         /// </summary>
         [JsonProperty("NumOfNewAlarmEvent")]
         public long? NumOfNewAlarmEvent{ get; set; }
 
         /// <summary>
-        /// 新增配置风险
+        /// <p>新增配置风险</p>
         /// </summary>
         [JsonProperty("NumOfNewConfigRisk")]
         public long? NumOfNewConfigRisk{ get; set; }
+
+        /// <summary>
+        /// <p>账号风险条数</p>
+        /// </summary>
+        [JsonProperty("AccountRisk")]
+        public long? AccountRisk{ get; set; }
+
+        /// <summary>
+        /// <p>配置风险条数</p>
+        /// </summary>
+        [JsonProperty("ConfigRisk")]
+        public long? ConfigRisk{ get; set; }
 
 
         /// <summary>
@@ -117,6 +129,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "UnprocessedAlarm", this.UnprocessedAlarm);
             this.SetParamSimple(map, prefix + "NumOfNewAlarmEvent", this.NumOfNewAlarmEvent);
             this.SetParamSimple(map, prefix + "NumOfNewConfigRisk", this.NumOfNewConfigRisk);
+            this.SetParamSimple(map, prefix + "AccountRisk", this.AccountRisk);
+            this.SetParamSimple(map, prefix + "ConfigRisk", this.ConfigRisk);
         }
     }
 }

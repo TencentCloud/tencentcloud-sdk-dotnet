@@ -226,6 +226,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public bool? IsCustom{ get; set; }
 
         /// <summary>
+        /// <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -267,6 +273,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
             this.SetParamSimple(map, prefix + "IsCustom", this.IsCustom);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

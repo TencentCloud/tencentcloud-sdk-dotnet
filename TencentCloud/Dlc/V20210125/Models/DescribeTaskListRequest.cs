@@ -43,7 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
+        /// <p>排序字段，支持如下字段类型，create-time（创建时间，默认）</p>
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }

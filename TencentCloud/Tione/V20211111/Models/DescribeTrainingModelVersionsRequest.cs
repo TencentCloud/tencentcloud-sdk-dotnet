@@ -25,21 +25,19 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 模型ID
+        /// <p>模型ID</p>
         /// </summary>
         [JsonProperty("TrainingModelId")]
         public string TrainingModelId{ get; set; }
 
         /// <summary>
-        /// 过滤条件
-        /// Filter.Name: 枚举值:
-        ///     TrainingModelVersionId (模型版本ID)
-        ///     ModelVersionType (模型版本类型) 其值支持: NORMAL(通用) ACCELERATE (加速)
-        ///     ModelFormat（模型格式）其值Filter.Values支持：
-        /// TORCH_SCRIPT/PYTORCH/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML
-        ///     AlgorithmFramework (算法框架) 其值Filter.Values支持：TENSORFLOW/PYTORCH/DETECTRON2
-        /// Filter.Values: 当长度为1时，支持模糊查询; 不为1时，精确查询
-        /// 每次请求的Filters的上限为10，Filter.Values的上限为100
+        /// <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>过滤条件<br>Filter.Name: 枚举值:<br>    TrainingModelVersionId (模型版本ID)<br>    ModelVersionType (模型版本类型) 其值支持: NORMAL(通用) ACCELERATE (加速)<br>    ModelFormat（模型格式）其值Filter.Values支持：<br>TORCH_SCRIPT/PYTORCH/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML<br>    AlgorithmFramework (算法框架) 其值Filter.Values支持：TENSORFLOW/PYTORCH/DETECTRON2<br>Filter.Values: 当长度为1时，支持模糊查询; 不为1时，精确查询<br>每次请求的Filters的上限为10，Filter.Values的上限为100</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -51,6 +49,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TrainingModelId", this.TrainingModelId);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

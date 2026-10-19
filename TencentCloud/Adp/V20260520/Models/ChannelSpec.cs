@@ -118,6 +118,20 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("WecomRobot")]
         public WecomRobotChannelConfig WecomRobot{ get; set; }
 
+        /// <summary>
+        /// <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShareGroupConversation")]
+        public bool? ShareGroupConversation{ get; set; }
+
+        /// <summary>
+        /// <p>是否调试态</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsDebug")]
+        public bool? IsDebug{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +152,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "WechatCustomerService.", this.WechatCustomerService);
             this.SetParamObj(map, prefix + "WecomApp.", this.WecomApp);
             this.SetParamObj(map, prefix + "WecomRobot.", this.WecomRobot);
+            this.SetParamSimple(map, prefix + "ShareGroupConversation", this.ShareGroupConversation);
+            this.SetParamSimple(map, prefix + "IsDebug", this.IsDebug);
         }
     }
 }

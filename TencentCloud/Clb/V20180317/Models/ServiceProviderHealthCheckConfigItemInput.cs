@@ -66,6 +66,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthCheckMethod")]
         public string HealthCheckMethod{ get; set; }
 
+        /// <summary>
+        /// <p>健康检查超时时间</p><p>取值范围：[1, 60]</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("HealthCheckTimeout")]
+        public ulong? HealthCheckTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
             this.SetParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
             this.SetParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
+            this.SetParamSimple(map, prefix + "HealthCheckTimeout", this.HealthCheckTimeout);
         }
     }
 }

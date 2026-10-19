@@ -42,6 +42,12 @@ namespace TencentCloud.Tdai.V20250717.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启压缩</p>
+        /// </summary>
+        [JsonProperty("Compressed")]
+        public bool? Compressed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdai.V20250717.Models
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Compressed", this.Compressed);
         }
     }
 }

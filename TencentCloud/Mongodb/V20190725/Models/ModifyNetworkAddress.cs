@@ -25,16 +25,22 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 新IP地址。
+        /// <p>新IP地址。</p>
         /// </summary>
         [JsonProperty("NewIPAddress")]
         public string NewIPAddress{ get; set; }
 
         /// <summary>
-        /// 原IP地址。
+        /// <p>原IP地址。</p>
         /// </summary>
         [JsonProperty("OldIpAddress")]
         public string OldIpAddress{ get; set; }
+
+        /// <summary>
+        /// <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         {
             this.SetParamSimple(map, prefix + "NewIPAddress", this.NewIPAddress);
             this.SetParamSimple(map, prefix + "OldIpAddress", this.OldIpAddress);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
         }
     }
 }

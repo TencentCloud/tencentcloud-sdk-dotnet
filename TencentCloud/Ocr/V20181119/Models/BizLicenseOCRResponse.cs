@@ -25,150 +25,145 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 统一社会信用代码（三合一之前为注册号）
+        /// <p>统一社会信用代码（三合一之前为注册号）</p>
         /// </summary>
         [JsonProperty("RegNum")]
         public string RegNum{ get; set; }
 
         /// <summary>
-        /// 公司名称
+        /// <p>公司名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 注册资本
+        /// <p>注册资本</p>
         /// </summary>
         [JsonProperty("Capital")]
         public string Capital{ get; set; }
 
         /// <summary>
-        /// 法定代表人
+        /// <p>法定代表人</p>
         /// </summary>
         [JsonProperty("Person")]
         public string Person{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// <p>地址</p>
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 经营范围
+        /// <p>经营范围</p>
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
-        /// 主体类型
+        /// <p>主体类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 营业期限
+        /// <p>营业期限</p>
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }
 
         /// <summary>
-        /// 组成形式
+        /// <p>组成形式</p>
         /// </summary>
         [JsonProperty("ComposingForm")]
         public string ComposingForm{ get; set; }
 
         /// <summary>
-        /// 成立日期
+        /// <p>成立日期</p>
         /// </summary>
         [JsonProperty("SetDate")]
         public string SetDate{ get; set; }
 
         /// <summary>
-        /// Code 告警码列表和释义：
-        /// -9102 黑白复印件告警
-        /// -9104 翻拍件告警
+        /// <p>Code 告警码列表和释义：<br>-9102 黑白复印件告警<br>-9104 翻拍件告警<br>-9108 经营范围识别异常告警（由于文字过小、模糊、反光、遮挡或明显倾斜等情况导致未能正常识别）</p>
         /// </summary>
         [JsonProperty("RecognizeWarnCode")]
         public long?[] RecognizeWarnCode{ get; set; }
 
         /// <summary>
-        /// 告警码说明：
-        /// WARN_COPY_CARD 黑白复印件告警
-        /// WARN_RESHOOT_CARD翻拍件告警
+        /// <p>告警码说明：<br>WARN_COPY_CARD 黑白复印件告警<br>WARN_RESHOOT_CARD翻拍件告警<br>WARN_EARLY_STOP 经营范围识别异常告警</p>
         /// </summary>
         [JsonProperty("RecognizeWarnMsg")]
         public string[] RecognizeWarnMsg{ get; set; }
 
         /// <summary>
-        /// 是否为副本。1为是，-1为不是。
+        /// <p>是否为副本。1为是，-1为不是。</p>
         /// </summary>
         [JsonProperty("IsDuplication")]
         public long? IsDuplication{ get; set; }
 
         /// <summary>
-        /// 登记日期
+        /// <p>登记日期</p>
         /// </summary>
         [JsonProperty("RegistrationDate")]
         public string RegistrationDate{ get; set; }
 
         /// <summary>
-        ///  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
-        /// 
+        /// <p>图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度</p>
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }
 
         /// <summary>
-        /// 是否有国徽。false为没有，true为有。
+        /// <p>是否有国徽。false为没有，true为有。</p>
         /// </summary>
         [JsonProperty("NationalEmblem")]
         public bool? NationalEmblem{ get; set; }
 
         /// <summary>
-        /// 是否有二维码。false为没有，true为有。
+        /// <p>是否有二维码。false为没有，true为有。</p>
         /// </summary>
         [JsonProperty("QRCode")]
         public bool? QRCode{ get; set; }
 
         /// <summary>
-        /// 是否有印章。false为没有，true为有。
+        /// <p>是否有印章。false为没有，true为有。</p>
         /// </summary>
         [JsonProperty("Seal")]
         public bool? Seal{ get; set; }
 
         /// <summary>
-        /// 标题
+        /// <p>标题</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 编号
+        /// <p>编号</p>
         /// </summary>
         [JsonProperty("SerialNumber")]
         public string SerialNumber{ get; set; }
 
         /// <summary>
-        /// 登记机关
+        /// <p>登记机关</p>
         /// </summary>
         [JsonProperty("RegistrationAuthority")]
         public string RegistrationAuthority{ get; set; }
 
         /// <summary>
-        /// 是否是电子营业执照。false为没有，true为有。
+        /// <p>是否是电子营业执照。false为没有，true为有。</p>
         /// </summary>
         [JsonProperty("Electronic")]
         public bool? Electronic{ get; set; }
 
         /// <summary>
-        /// 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+        /// <p>非营业执照的营业类证件识别结果，将以结构化形式呈现。</p>
         /// </summary>
         [JsonProperty("BusinessCertificate")]
         public BusinessCertificateInfo[] BusinessCertificate{ get; set; }
 
         /// <summary>
-        /// 重要提示字段
+        /// <p>重要提示字段</p>
         /// </summary>
         [JsonProperty("Important")]
         public string Important{ get; set; }

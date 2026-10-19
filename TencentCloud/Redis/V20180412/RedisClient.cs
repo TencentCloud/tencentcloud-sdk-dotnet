@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1519";
+       private const string sdkVersion = "SDK_NET_3.0.1521";
 
         /// <summary>
         /// Client constructor.
@@ -554,6 +554,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestrictionSync(DescribeBackupDownloadRestrictionRequest req)
         {
             return InternalRequestAsync<DescribeBackupDownloadRestrictionResponse>(req, "DescribeBackupDownloadRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupEncryptConfig）用于查询实例 备份加密相关信息，包括开启状态、加密密钥等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptConfigRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptConfigResponse"/></returns>
+        public Task<DescribeBackupEncryptConfigResponse> DescribeBackupEncryptConfig(DescribeBackupEncryptConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupEncryptConfigResponse>(req, "DescribeBackupEncryptConfig");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupEncryptConfig）用于查询实例 备份加密相关信息，包括开启状态、加密密钥等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptConfigRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptConfigResponse"/></returns>
+        public DescribeBackupEncryptConfigResponse DescribeBackupEncryptConfigSync(DescribeBackupEncryptConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupEncryptConfigResponse>(req, "DescribeBackupEncryptConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1860,6 +1881,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestrictionSync(ModifyBackupDownloadRestrictionRequest req)
         {
             return InternalRequestAsync<ModifyBackupDownloadRestrictionResponse>(req, "ModifyBackupDownloadRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyBackupEncrypt）用于开启 /关闭备份加密，修改备份密钥功能。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptResponse"/></returns>
+        public Task<ModifyBackupEncryptResponse> ModifyBackupEncrypt(ModifyBackupEncryptRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupEncryptResponse>(req, "ModifyBackupEncrypt");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyBackupEncrypt）用于开启 /关闭备份加密，修改备份密钥功能。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptResponse"/></returns>
+        public ModifyBackupEncryptResponse ModifyBackupEncryptSync(ModifyBackupEncryptRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupEncryptResponse>(req, "ModifyBackupEncrypt")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
