@@ -43,6 +43,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string TopicType{ get; set; }
 
         /// <summary>
+        /// <p>队列数量</p>
+        /// </summary>
+        [JsonProperty("QueueNum")]
+        public long? QueueNum{ get; set; }
+
+        /// <summary>
         /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
+            this.SetParamSimple(map, prefix + "QueueNum", this.QueueNum);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);

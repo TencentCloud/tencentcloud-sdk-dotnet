@@ -25,14 +25,14 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 事件的列表
+        /// <p>事件的列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Events")]
         public Event[] Events{ get; set; }
 
         /// <summary>
-        /// 此次查询的事件的个数
+        /// <p>此次查询的事件的个数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

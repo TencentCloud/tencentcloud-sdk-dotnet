@@ -50,6 +50,20 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("UpStreamCount")]
         public long? UpStreamCount{ get; set; }
 
+        /// <summary>
+        /// 查询字段名（本次请求携带的字段名，用于聚合）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceColumnName")]
+        public string SourceColumnName{ get; set; }
+
+        /// <summary>
+        /// 当前结果字段名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColumnName")]
+        public string ColumnName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +74,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamObj(map, prefix + "Relation.", this.Relation);
             this.SetParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
             this.SetParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
+            this.SetParamSimple(map, prefix + "SourceColumnName", this.SourceColumnName);
+            this.SetParamSimple(map, prefix + "ColumnName", this.ColumnName);
         }
     }
 }

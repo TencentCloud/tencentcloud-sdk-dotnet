@@ -31,6 +31,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Id{ get; set; }
 
         /// <summary>
+        /// <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
         /// Notebook修改标签集合
         /// </summary>
         [JsonProperty("Tags")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

@@ -25,106 +25,112 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 策略名称
+        /// <p>策略名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 1:有效 0:无效
+        /// <p>1:有效 0:无效</p>
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 0:黑名单 1:白名单
+        /// <p>0:黑名单 1:白名单</p>
         /// </summary>
         [JsonProperty("White")]
         public long? White{ get; set; }
 
         /// <summary>
-        /// 0:告警 1:白名单 2:拦截
+        /// <p>0:告警 1:白名单 2:拦截</p>
         /// </summary>
         [JsonProperty("BashAction")]
         public long? BashAction{ get; set; }
 
         /// <summary>
-        /// 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
+        /// <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
 
         /// <summary>
-        /// 危险等级(0:无，1: 高危 2:中危 3: 低危)
+        /// <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
-        /// 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
+        /// <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
         /// </summary>
         [JsonProperty("Scope")]
         public long? Scope{ get; set; }
 
         /// <summary>
-        /// 策略ID
+        /// <p>策略ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// <p>策略描述</p>
         /// </summary>
         [JsonProperty("Descript")]
         public string Descript{ get; set; }
 
         /// <summary>
-        /// 事件列表点击“加入白名单”时,需要传EventId 事件的id
+        /// <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// 是否处理旧事件为白名单 0=不处理 1=处理
+        /// <p>是否处理旧事件为白名单 0=不处理 1=处理</p>
         /// </summary>
         [JsonProperty("DealOldEvents")]
         public long? DealOldEvents{ get; set; }
 
         /// <summary>
-        /// 生效主机的QUUID集合
+        /// <p>生效主机的QUUID集合</p>
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
-        /// 策略类型，0:系统  1:用户
+        /// <p>策略类型，0:系统  1:用户</p>
         /// </summary>
         [JsonProperty("Category")]
         public long? Category{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 老版本兼容可能会用到
+        /// <p>老版本兼容可能会用到</p>
         /// </summary>
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
         /// <summary>
-        /// 规则表达式
+        /// <p>规则表达式</p>
         /// </summary>
         [JsonProperty("Rules")]
         public PolicyRules Rules{ get; set; }
+
+        /// <summary>
+        /// <p>匹配类型：0-命令行（默认） 1-文件操作</p>
+        /// </summary>
+        [JsonProperty("MatchType")]
+        public ulong? MatchType{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
             this.SetParamObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "MatchType", this.MatchType);
         }
     }
 }

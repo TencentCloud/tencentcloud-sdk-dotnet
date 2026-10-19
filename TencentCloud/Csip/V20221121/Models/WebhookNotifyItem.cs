@@ -48,6 +48,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Items")]
         public string[] Items{ get; set; }
 
+        /// <summary>
+        /// <p>可选项</p>
+        /// </summary>
+        [JsonProperty("Options")]
+        public string[] Options{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "SubModule", this.SubModule);
             this.SetParamArraySimple(map, prefix + "Levels.", this.Levels);
             this.SetParamArraySimple(map, prefix + "Items.", this.Items);
+            this.SetParamArraySimple(map, prefix + "Options.", this.Options);
         }
     }
 }

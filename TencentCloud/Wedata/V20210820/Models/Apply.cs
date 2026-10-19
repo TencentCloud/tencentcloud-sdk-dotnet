@@ -25,141 +25,147 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 申请人id
+        /// <p>申请人id</p>
         /// </summary>
         [JsonProperty("ApplicantId")]
         public string ApplicantId{ get; set; }
 
         /// <summary>
-        /// 申请人名称
+        /// <p>申请人名称</p>
         /// </summary>
         [JsonProperty("ApplicantName")]
         public string ApplicantName{ get; set; }
 
         /// <summary>
-        /// 审批备注
+        /// <p>审批备注</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 审批分类key
+        /// <p>审批分类key</p>
         /// </summary>
         [JsonProperty("ApproveClassification")]
         public string ApproveClassification{ get; set; }
 
         /// <summary>
-        /// 审批单id
+        /// <p>审批单id</p>
         /// </summary>
         [JsonProperty("ApproveId")]
         public string ApproveId{ get; set; }
 
         /// <summary>
-        /// 审批类型key
+        /// <p>审批类型key</p>
         /// </summary>
         [JsonProperty("ApproveType")]
         public string ApproveType{ get; set; }
 
         /// <summary>
-        /// 申请原因
+        /// <p>申请原因</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 审批时间
+        /// <p>审批时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveTime")]
         public string ApproveTime{ get; set; }
 
         /// <summary>
-        /// 审批分类名称
+        /// <p>审批分类名称</p>
         /// </summary>
         [JsonProperty("ApproveClassificationName")]
         public string ApproveClassificationName{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 审批类型名称
+        /// <p>审批类型名称</p>
         /// </summary>
         [JsonProperty("ApproveTypeName")]
         public string ApproveTypeName{ get; set; }
 
         /// <summary>
-        /// 审批异常或者失败信息
+        /// <p>审批异常或者失败信息</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 申请名称
+        /// <p>申请名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyName")]
         public string ApplyName{ get; set; }
 
         /// <summary>
-        /// 审批人id
+        /// <p>审批人id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverId")]
         public string ApproverId{ get; set; }
 
         /// <summary>
-        /// 审批人名称
+        /// <p>审批人名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproverName")]
         public string ApproverName{ get; set; }
 
         /// <summary>
-        /// 审批所属项目
+        /// <p>审批所属项目</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveProjectName")]
         public string ApproveProjectName{ get; set; }
 
         /// <summary>
-        /// 审批id
+        /// <p>审批id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyId")]
         public string ApplyId{ get; set; }
 
         /// <summary>
-        /// 扩展字段
+        /// <p>扩展字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadata")]
         public string Metadata{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTimestamp")]
         public ulong? CreateTimestamp{ get; set; }
 
         /// <summary>
-        /// 审批时间
+        /// <p>审批时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApproveTimestamp")]
         public ulong? ApproveTimestamp{ get; set; }
+
+        /// <summary>
+        /// <p>审批扩展码</p>
+        /// </summary>
+        [JsonProperty("ApproveCode")]
+        public string ApproveCode{ get; set; }
 
 
         /// <summary>
@@ -188,6 +194,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Metadata", this.Metadata);
             this.SetParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
             this.SetParamSimple(map, prefix + "ApproveTimestamp", this.ApproveTimestamp);
+            this.SetParamSimple(map, prefix + "ApproveCode", this.ApproveCode);
         }
     }
 }

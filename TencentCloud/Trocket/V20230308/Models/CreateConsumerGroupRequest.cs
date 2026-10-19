@@ -78,6 +78,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("LiteTopic")]
         public string LiteTopic{ get; set; }
 
+        /// <summary>
+        /// <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
+        /// </summary>
+        [JsonProperty("DeadLetterTargetTopic")]
+        public string DeadLetterTargetTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
+            this.SetParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
         }
     }
 }

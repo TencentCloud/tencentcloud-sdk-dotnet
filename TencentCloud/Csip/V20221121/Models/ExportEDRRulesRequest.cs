@@ -48,6 +48,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("By")]
         public string By{ get; set; }
 
+        /// <summary>
+        /// <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+        /// </summary>
+        [JsonProperty("FileOperationRules")]
+        public RuleContentFileOperation FileOperationRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
         }
     }
 }

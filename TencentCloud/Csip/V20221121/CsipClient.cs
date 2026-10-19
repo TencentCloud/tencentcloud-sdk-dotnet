@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1522";
 
         /// <summary>
         /// Client constructor.
@@ -5085,6 +5085,11 @@ namespace TencentCloud.Csip.V20221121
 
         /// <summary>
         /// 查询当前账号的合并版计费信息，包括订单状态、付费模式以及配额等详细信息。
+        /// 
+        /// 补充说明：
+        /// 1. 请求参数 NeedQuotaUsed 默认为 false，此时不采集配额用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true；
+        /// 2. NeedQuotaUsed 为 true 时，若配额用量查询失败，接口仍正常返回订单信息，错误提示保存在 QuotaUsedError 字段，此时 QuotaUsed 恒为 0；
+        /// 3. 可通过公共参数 MemberId 查询集团成员的计费信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCSCPayInfoRequest"/></param>
         /// <returns><see cref="DescribeCSCPayInfoResponse"/></returns>
@@ -5095,6 +5100,11 @@ namespace TencentCloud.Csip.V20221121
 
         /// <summary>
         /// 查询当前账号的合并版计费信息，包括订单状态、付费模式以及配额等详细信息。
+        /// 
+        /// 补充说明：
+        /// 1. 请求参数 NeedQuotaUsed 默认为 false，此时不采集配额用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true；
+        /// 2. NeedQuotaUsed 为 true 时，若配额用量查询失败，接口仍正常返回订单信息，错误提示保存在 QuotaUsedError 字段，此时 QuotaUsed 恒为 0；
+        /// 3. 可通过公共参数 MemberId 查询集团成员的计费信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCSCPayInfoRequest"/></param>
         /// <returns><see cref="DescribeCSCPayInfoResponse"/></returns>

@@ -104,6 +104,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("FilterCheckpoint")]
         public bool? FilterCheckpoint{ get; set; }
 
+        /// <summary>
+        /// <p>跳过报错的DDL策略</p>
+        /// </summary>
+        [JsonProperty("SkipDdlOnError")]
+        public SkipDdlOnError SkipDdlOnError{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "StartPosition", this.StartPosition);
             this.SetParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
             this.SetParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
+            this.SetParamObj(map, prefix + "SkipDdlOnError.", this.SkipDdlOnError);
         }
     }
 }

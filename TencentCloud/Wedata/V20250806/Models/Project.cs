@@ -80,6 +80,12 @@ namespace TencentCloud.Wedata.V20250806.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
+        /// </summary>
+        [JsonProperty("DisplayStatus")]
+        public string DisplayStatus{ get; set; }
+
+        /// <summary>
         /// <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -106,6 +112,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
             this.SetParamSimple(map, prefix + "ProjectOwnerUin", this.ProjectOwnerUin);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "DisplayStatus", this.DisplayStatus);
             this.SetParamSimple(map, prefix + "ProjectModel", this.ProjectModel);
             this.SetParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
         }

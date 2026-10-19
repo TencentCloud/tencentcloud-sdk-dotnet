@@ -25,7 +25,7 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 应用配置项
+        /// <p>应用配置项</p>
         /// </summary>
         [JsonProperty("ApmApplicationConfigView")]
         public ApmApplicationConfigView ApmApplicationConfigView{ get; set; }

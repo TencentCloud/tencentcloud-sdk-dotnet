@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1521</VersionPrefix>
+    <VersionPrefix>3.0.1522</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -262,6 +262,7 @@
     <Compile Include="V20211206\Models\SchemaDifference.cs" />
     <Compile Include="V20211206\Models\SkipCheckItemRequest.cs" />
     <Compile Include="V20211206\Models\SkipCheckItemResponse.cs" />
+    <Compile Include="V20211206\Models\SkipDdlOnError.cs" />
     <Compile Include="V20211206\Models\SkipSyncCheckItemRequest.cs" />
     <Compile Include="V20211206\Models\SkipSyncCheckItemResponse.cs" />
     <Compile Include="V20211206\Models\SkippedDetail.cs" />

@@ -55,7 +55,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string[] WorkflowNames{ get; set; }
 
         /// <summary>
-        /// <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
+        /// <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
         /// </summary>
         [JsonProperty("WorkflowIds")]
         public string[] WorkflowIds{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string[] LabelValueIds{ get; set; }
 
         /// <summary>
-        /// <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
+        /// <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
         /// </summary>
         [JsonProperty("QuickSelectionType")]
         public string QuickSelectionType{ get; set; }
 
         /// <summary>
-        /// <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
+        /// <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
         /// </summary>
         [JsonProperty("OrderBys")]
         public OrderBy[] OrderBys{ get; set; }

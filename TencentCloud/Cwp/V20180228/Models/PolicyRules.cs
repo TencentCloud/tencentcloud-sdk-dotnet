@@ -25,22 +25,34 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 进程
+        /// <p>进程</p>
         /// </summary>
         [JsonProperty("Process")]
         public CommandLine Process{ get; set; }
 
         /// <summary>
-        /// 父进程
+        /// <p>父进程</p>
         /// </summary>
         [JsonProperty("PProcess")]
         public CommandLine PProcess{ get; set; }
 
         /// <summary>
-        /// 祖先进程
+        /// <p>祖先进程</p>
         /// </summary>
         [JsonProperty("AProcess")]
         public CommandLine AProcess{ get; set; }
+
+        /// <summary>
+        /// <p>目标文件路径（匹配类型=文件操作时有效）</p>
+        /// </summary>
+        [JsonProperty("FilePath")]
+        public string FilePath{ get; set; }
+
+        /// <summary>
+        /// <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
+        /// </summary>
+        [JsonProperty("FileActions")]
+        public string[] FileActions{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "Process.", this.Process);
             this.SetParamObj(map, prefix + "PProcess.", this.PProcess);
             this.SetParamObj(map, prefix + "AProcess.", this.AProcess);
+            this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
+            this.SetParamArraySimple(map, prefix + "FileActions.", this.FileActions);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1521</VersionPrefix>
+    <VersionPrefix>3.0.1522</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -365,6 +365,10 @@
     <Compile Include="V20211111\Models\ServiceInfo.cs" />
     <Compile Include="V20211111\Models\ServiceLimit.cs" />
     <Compile Include="V20211111\Models\SidecarSpec.cs" />
+    <Compile Include="V20211111\Models\SmartRouter.cs" />
+    <Compile Include="V20211111\Models\SmartRouterComponent.cs" />
+    <Compile Include="V20211111\Models\SmartRouterResourceConfig.cs" />
+    <Compile Include="V20211111\Models\SmartRouterResourceSpec.cs" />
     <Compile Include="V20211111\Models\Spec.cs" />
     <Compile Include="V20211111\Models\SpecPrice.cs" />
     <Compile Include="V20211111\Models\SpecUnit.cs" />

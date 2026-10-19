@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1522";
 
         /// <summary>
         /// Client constructor.
@@ -1562,9 +1562,9 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。新接入客户请注意UseNewModel选择
+        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，新接入客户请注意UseNewModel选择。如果涉及多页试卷录入和单题跨页/跨栏问题可以选择使用[异步试卷切题（提交任务）](https://cloud.tencent.com/document/product/866/137427)
         /// 
-        /// 默认接口请求频率限制：2次/秒。
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="QuestionSplitOCRRequest"/></param>
         /// <returns><see cref="QuestionSplitOCRResponse"/></returns>
@@ -1574,9 +1574,9 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。新接入客户请注意UseNewModel选择
+        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，新接入客户请注意UseNewModel选择。如果涉及多页试卷录入和单题跨页/跨栏问题可以选择使用[异步试卷切题（提交任务）](https://cloud.tencent.com/document/product/866/137427)
         /// 
-        /// 默认接口请求频率限制：2次/秒。
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="QuestionSplitOCRRequest"/></param>
         /// <returns><see cref="QuestionSplitOCRResponse"/></returns>

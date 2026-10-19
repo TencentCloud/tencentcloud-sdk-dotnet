@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1521</VersionPrefix>
+    <VersionPrefix>3.0.1522</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,6 +133,8 @@
     <Compile Include="V20260520\Models\BasicBilling.cs" />
     <Compile Include="V20260520\Models\BatchRunSummary.cs" />
     <Compile Include="V20260520\Models\BillingAttribute.cs" />
+    <Compile Include="V20260520\Models\CallMCPToolRequest.cs" />
+    <Compile Include="V20260520\Models\CallMCPToolResponse.cs" />
     <Compile Include="V20260520\Models\CallSource.cs" />
     <Compile Include="V20260520\Models\CallbackConfig.cs" />
     <Compile Include="V20260520\Models\CamAuthConfig.cs" />
@@ -439,6 +441,7 @@
     <Compile Include="V20260520\Models\LarkChannelConfig.cs" />
     <Compile Include="V20260520\Models\LineChannelConfig.cs" />
     <Compile Include="V20260520\Models\MCPPluginConfig.cs" />
+    <Compile Include="V20260520\Models\MCPResourceContents.cs" />
     <Compile Include="V20260520\Models\MCPToolConfig.cs" />
     <Compile Include="V20260520\Models\MCPToolMeta.cs" />
     <Compile Include="V20260520\Models\MCPToolUIMeta.cs" />
@@ -536,6 +539,8 @@
     <Compile Include="V20260520\Models\QASegmentHighlight.cs" />
     <Compile Include="V20260520\Models\QASourceInfo.cs" />
     <Compile Include="V20260520\Models\QASummary.cs" />
+    <Compile Include="V20260520\Models\ReadMCPResourceRequest.cs" />
+    <Compile Include="V20260520\Models\ReadMCPResourceResponse.cs" />
     <Compile Include="V20260520\Models\ReleaseRecord.cs" />
     <Compile Include="V20260520\Models\ReleaseSkillRequest.cs" />
     <Compile Include="V20260520\Models\ReleaseSkillResponse.cs" />

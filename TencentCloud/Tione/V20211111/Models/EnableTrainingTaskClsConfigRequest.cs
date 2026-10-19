@@ -37,6 +37,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public bool? LogEnable{ get; set; }
 
         /// <summary>
+        /// <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
         /// 日志配置
         /// </summary>
         [JsonProperty("LogConfig")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "LogEnable", this.LogEnable);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
         }
     }

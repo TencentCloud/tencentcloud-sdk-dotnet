@@ -25,22 +25,28 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// flv 流地址
+        /// <p>flv 流地址</p>
         /// </summary>
         [JsonProperty("Flv")]
         public string Flv{ get; set; }
 
         /// <summary>
-        /// hls 流地址
+        /// <p>hls 流地址</p>
         /// </summary>
         [JsonProperty("Hls")]
         public string Hls{ get; set; }
 
         /// <summary>
-        /// rtmp 流地址
+        /// <p>rtmp 流地址</p>
         /// </summary>
         [JsonProperty("Rtmp")]
         public string Rtmp{ get; set; }
+
+        /// <summary>
+        /// <p>fmp4地址</p>
+        /// </summary>
+        [JsonProperty("FMp4")]
+        public string FMp4{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "Flv", this.Flv);
             this.SetParamSimple(map, prefix + "Hls", this.Hls);
             this.SetParamSimple(map, prefix + "Rtmp", this.Rtmp);
+            this.SetParamSimple(map, prefix + "FMp4", this.FMp4);
         }
     }
 }

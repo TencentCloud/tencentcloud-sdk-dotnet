@@ -61,6 +61,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PageIndex")]
         public long? PageIndex{ get; set; }
 
+        /// <summary>
+        /// <p>批改时答案的额外数据</p>
+        /// </summary>
+        [JsonProperty("AnswerElement")]
+        public AnswerElement AnswerElement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "ResultList.", this.ResultList);
             this.SetParamSimple(map, prefix + "Index", this.Index);
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
+            this.SetParamObj(map, prefix + "AnswerElement.", this.AnswerElement);
         }
     }
 }

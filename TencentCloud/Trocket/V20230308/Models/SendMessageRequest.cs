@@ -37,28 +37,34 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 消息内容
+        /// <p>消息内容</p>
         /// </summary>
         [JsonProperty("MsgBody")]
         public string MsgBody{ get; set; }
 
         /// <summary>
-        /// 消息Key
+        /// <p>消息Key</p>
         /// </summary>
         [JsonProperty("MsgKey")]
         public string MsgKey{ get; set; }
 
         /// <summary>
-        /// 消息Tag
+        /// <p>消息Tag</p>
         /// </summary>
         [JsonProperty("MsgTag")]
         public string MsgTag{ get; set; }
 
         /// <summary>
-        /// 轻量主题
+        /// <p>轻量主题</p>
         /// </summary>
         [JsonProperty("LiteTopic")]
         public string LiteTopic{ get; set; }
+
+        /// <summary>
+        /// <p>指定队列优先级</p>
+        /// </summary>
+        [JsonProperty("Priority")]
+        public long? Priority{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MsgKey", this.MsgKey);
             this.SetParamSimple(map, prefix + "MsgTag", this.MsgTag);
             this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
         }
     }
 }

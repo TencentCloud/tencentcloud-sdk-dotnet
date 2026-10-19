@@ -25,22 +25,34 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 镜像信息
+        /// <p>镜像信息</p>
         /// </summary>
         [JsonProperty("ImageInfo")]
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// notebook id
+        /// <p>notebook id</p>
         /// </summary>
         [JsonProperty("NotebookId")]
         public string NotebookId{ get; set; }
 
         /// <summary>
-        /// 要保存的kernel数组
+        /// <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>要保存的kernel数组</p>
         /// </summary>
         [JsonProperty("Kernels")]
         public string[] Kernels{ get; set; }
+
+        /// <summary>
+        /// <p>是否保存到镜像中心</p>
+        /// </summary>
+        [JsonProperty("RegisterToImageCenter")]
+        public bool? RegisterToImageCenter{ get; set; }
 
 
         /// <summary>
@@ -50,7 +62,9 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "NotebookId", this.NotebookId);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamArraySimple(map, prefix + "Kernels.", this.Kernels);
+            this.SetParamSimple(map, prefix + "RegisterToImageCenter", this.RegisterToImageCenter);
         }
     }
 }

@@ -25,32 +25,25 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 通道 ID（从通道查询接口DescribeDeviceChannel中获取）
+        /// <p>通道 ID（从通道查询接口DescribeDeviceChannel中获取）</p>
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
         /// <summary>
-        /// 流类型（1:主码流；
-        /// 2:子码流（不可以和 Resolution 同时下发））
+        /// <p>流类型（1:主码流；<br>2:子码流（不可以和 Resolution 同时下发））</p>
         /// </summary>
         [JsonProperty("StreamType")]
         public string StreamType{ get; set; }
 
         /// <summary>
-        /// 分辨率（1:QCIF；
-        /// 2:CIF；
-        /// 3:4CIF；
-        /// 4:D1；
-        /// 5:720P；
-        /// 6:1080P/I；
-        /// 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+        /// <p>分辨率（1:QCIF；<br>2:CIF；<br>3:4CIF；<br>4:D1；<br>5:720P；<br>6:1080P/I；<br>自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 是否内网
+        /// <p>是否内网</p>
         /// </summary>
         [JsonProperty("IsInternal")]
         public bool? IsInternal{ get; set; }

@@ -24,12 +24,26 @@ namespace TencentCloud.Csip.V20221121.Models
     public class DescribeCSCPayInfoRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>集团账号的成员id</p>
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>是否返回配额已使用量。默认为 false：不采集用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true。只关心订单状态、到期时间或配额购买数量的调用方无需传入</p>
+        /// </summary>
+        [JsonProperty("NeedQuotaUsed")]
+        public bool? NeedQuotaUsed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamSimple(map, prefix + "NeedQuotaUsed", this.NeedQuotaUsed);
         }
     }
 }

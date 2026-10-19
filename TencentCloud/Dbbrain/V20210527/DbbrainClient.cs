@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1522";
 
         /// <summary>
         /// Client constructor.
@@ -680,6 +680,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
         {
             return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定实例在时间窗口内的阻塞日志扁平明细列表，不建阻塞树。每一条Item对应一次blocked_process_report（一条blocker→blocked边）在某一次monitorLoop内被lock monitor捕获的瞬时数据。支持按ReportTime / DurationMs / BlockedWaitTimeMs / BlockingWaitTimeMs升降序排序，并支持根因、数据库名、头SQL / 被阻塞SQL MD5、会话ID、登录名、客户端主机 / 应用、被阻塞锁模式、等待时长范围过滤与分页。适合普通表格展示与二次过滤；若需查看某个采集点的完整链路拓扑，请透传返回的MonitorLoop调用DescribeBlockingLockTree。注意：同一blocker→blocked会话对跨monitorLoop连续采集场景下会产生多条明细行，若需统计发生多少次阻塞请按(BlockingSessionId, BlockedSessionId, BlockedWaitResource)自行去重。时间字段按服务端时区UTC+8解析，建议单次查询跨度≤7天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockingLogsRequest"/></param>
+        /// <returns><see cref="DescribeBlockingLogsResponse"/></returns>
+        public Task<DescribeBlockingLogsResponse> DescribeBlockingLogs(DescribeBlockingLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeBlockingLogsResponse>(req, "DescribeBlockingLogs");
+        }
+
+        /// <summary>
+        /// 查询指定实例在时间窗口内的阻塞日志扁平明细列表，不建阻塞树。每一条Item对应一次blocked_process_report（一条blocker→blocked边）在某一次monitorLoop内被lock monitor捕获的瞬时数据。支持按ReportTime / DurationMs / BlockedWaitTimeMs / BlockingWaitTimeMs升降序排序，并支持根因、数据库名、头SQL / 被阻塞SQL MD5、会话ID、登录名、客户端主机 / 应用、被阻塞锁模式、等待时长范围过滤与分页。适合普通表格展示与二次过滤；若需查看某个采集点的完整链路拓扑，请透传返回的MonitorLoop调用DescribeBlockingLockTree。注意：同一blocker→blocked会话对跨monitorLoop连续采集场景下会产生多条明细行，若需统计发生多少次阻塞请按(BlockingSessionId, BlockedSessionId, BlockedWaitResource)自行去重。时间字段按服务端时区UTC+8解析，建议单次查询跨度≤7天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockingLogsRequest"/></param>
+        /// <returns><see cref="DescribeBlockingLogsResponse"/></returns>
+        public DescribeBlockingLogsResponse DescribeBlockingLogsSync(DescribeBlockingLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeBlockingLogsResponse>(req, "DescribeBlockingLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

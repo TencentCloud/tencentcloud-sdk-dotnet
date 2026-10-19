@@ -204,6 +204,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ChangerName")]
         public string ChangerName{ get; set; }
 
+        /// <summary>
+        /// <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SmartRouter")]
+        public SmartRouter SmartRouter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +245,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
             this.SetParamSimple(map, prefix + "Changer", this.Changer);
             this.SetParamSimple(map, prefix + "ChangerName", this.ChangerName);
+            this.SetParamObj(map, prefix + "SmartRouter.", this.SmartRouter);
         }
     }
 }

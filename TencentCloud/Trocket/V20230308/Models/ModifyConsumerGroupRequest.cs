@@ -31,14 +31,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否开启消费
+        /// <p>是否开启消费</p>
         /// </summary>
         [JsonProperty("ConsumeEnable")]
         public bool? ConsumeEnable{ get; set; }
 
         /// <summary>
-        /// 顺序投递：true
-        /// 并发投递：false
+        /// <p>顺序投递：true<br>并发投递：false</p>
         /// </summary>
         [JsonProperty("ConsumeMessageOrderly")]
         public bool? ConsumeMessageOrderly{ get; set; }
@@ -50,22 +49,28 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string ConsumerGroup{ get; set; }
 
         /// <summary>
-        /// 最大重试次数，取值范围0～1000
+        /// <p>最大重试次数，取值范围0～1000</p>
         /// </summary>
         [JsonProperty("MaxRetryTimes")]
         public long? MaxRetryTimes{ get; set; }
 
         /// <summary>
-        /// 备注信息，最多 128 个字符
+        /// <p>备注信息，最多 128 个字符</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 重试策略
+        /// <p>重试策略</p>
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public RetryPolicy RetryPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>自定义死信Topic</p>
+        /// </summary>
+        [JsonProperty("DeadLetterTargetTopic")]
+        public string DeadLetterTargetTopic{ get; set; }
 
 
         /// <summary>
@@ -80,6 +85,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+            this.SetParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
         }
     }
 }

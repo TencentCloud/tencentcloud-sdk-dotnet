@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。</p>
+        /// <p>不传则默认识别整个PDF，如果识别单页则输入指定页码</p>
         /// </summary>
         [JsonProperty("PdfPageNumber")]
         public long? PdfPageNumber{ get; set; }
@@ -57,25 +57,25 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableDeepThink{ get; set; }
 
         /// <summary>
-        /// <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；</p><p>当key为DisableAnswerAnalysis value为true表示不输出答案解析；</p><p>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p><p>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p>
+        /// <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；<br>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p>
         /// </summary>
         [JsonProperty("QuestionConfigMap")]
         public string QuestionConfigMap{ get; set; }
 
         /// <summary>
-        /// <p>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
+        /// <p>【废除字段】<br>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
         /// </summary>
         [JsonProperty("ReferenceAnswer")]
         public string ReferenceAnswer{ get; set; }
 
         /// <summary>
-        /// <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+        /// <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
         /// </summary>
         [JsonProperty("ImageBase64List")]
         public string[] ImageBase64List{ get; set; }
 
         /// <summary>
-        /// <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+        /// <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
         /// </summary>
         [JsonProperty("ImageUrlList")]
         public string[] ImageUrlList{ get; set; }
@@ -91,6 +91,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("AnswerAssistMap")]
         public string AnswerAssistMap{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启<br>示例值：false</p>
+        /// </summary>
+        [JsonProperty("EnableImageCrop")]
+        public bool? EnableImageCrop{ get; set; }
 
 
         /// <summary>
@@ -109,6 +115,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
             this.SetParamSimple(map, prefix + "AssistMarkType", this.AssistMarkType);
             this.SetParamSimple(map, prefix + "AnswerAssistMap", this.AnswerAssistMap);
+            this.SetParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
         }
     }
 }

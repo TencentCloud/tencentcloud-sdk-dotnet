@@ -25,25 +25,28 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 配额键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>配额键</p>
         /// </summary>
         [JsonProperty("QuotaKey")]
         public string QuotaKey{ get; set; }
 
         /// <summary>
-        /// 配额总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>配额总量</p>
         /// </summary>
         [JsonProperty("QuotaNum")]
         public long? QuotaNum{ get; set; }
 
         /// <summary>
-        /// 配额已使用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
         /// </summary>
         [JsonProperty("QuotaUsed")]
         public long? QuotaUsed{ get; set; }
+
+        /// <summary>
+        /// <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
+        /// </summary>
+        [JsonProperty("QuotaGranted")]
+        public long? QuotaGranted{ get; set; }
 
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "QuotaKey", this.QuotaKey);
             this.SetParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
             this.SetParamSimple(map, prefix + "QuotaUsed", this.QuotaUsed);
+            this.SetParamSimple(map, prefix + "QuotaGranted", this.QuotaGranted);
         }
     }
 }

@@ -25,143 +25,148 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 工作流ID
+        /// <p>工作流ID</p>
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 延迟时间
+        /// <p>延迟时间</p>
         /// </summary>
         [JsonProperty("DelayTime")]
         public ulong? DelayTime{ get; set; }
 
         /// <summary>
-        /// 启动时间
+        /// <p>启动时间</p>
         /// </summary>
         [JsonProperty("StartupTime")]
         public ulong? StartupTime{ get; set; }
 
         /// <summary>
-        /// 任务依赖
+        /// <p>任务依赖</p>
         /// </summary>
         [JsonProperty("SelfDepend")]
         public string SelfDepend{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 指定运行时间
+        /// <p>指定运行时间</p>
         /// </summary>
         [JsonProperty("TaskAction")]
         public string TaskAction{ get; set; }
 
         /// <summary>
-        /// 调度周期时间单位
+        /// <p>调度周期时间单位</p>
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// 调度周期
+        /// <p>调度周期</p>
         /// </summary>
         [JsonProperty("CycleStep")]
         public long? CycleStep{ get; set; }
 
         /// <summary>
-        /// 执行时间左闭区间
+        /// <p>执行时间左闭区间</p>
         /// </summary>
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
         /// <summary>
-        /// 执行时间右闭区间
+        /// <p>执行时间右闭区间</p>
         /// </summary>
         [JsonProperty("ExecutionEndTime")]
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// 任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1
+        /// <p>任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1</p>
         /// </summary>
         [JsonProperty("InstanceInitStrategy")]
         public string InstanceInitStrategy{ get; set; }
 
         /// <summary>
-        /// 工作流依赖，yes or no
+        /// <p>工作流依赖，yes or no</p>
         /// </summary>
         [JsonProperty("DependencyWorkflow")]
         public string DependencyWorkflow{ get; set; }
 
         /// <summary>
-        /// CrontabExpression
+        /// <p>CrontabExpression</p>
         /// </summary>
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
         /// <summary>
-        /// 0：不修改
-        /// 1：将任务的上游依赖配置改为默认值 
+        /// <p>0：不修改<br>1：将任务的上游依赖配置改为默认值</p>
         /// </summary>
         [JsonProperty("ModifyCycleValue")]
         public string ModifyCycleValue{ get; set; }
 
         /// <summary>
-        /// 是否开启日历调度 1 开启 0关闭
+        /// <p>是否开启日历调度 1 开启 0关闭</p>
         /// </summary>
         [JsonProperty("CalendarOpen")]
         public string CalendarOpen{ get; set; }
 
         /// <summary>
-        /// 日历名称
+        /// <p>日历名称</p>
         /// </summary>
         [JsonProperty("CalendarName")]
         public string CalendarName{ get; set; }
 
         /// <summary>
-        /// 日历id
+        /// <p>日历id</p>
         /// </summary>
         [JsonProperty("CalendarId")]
         public string CalendarId{ get; set; }
 
         /// <summary>
-        /// 时区
+        /// <p>时区</p>
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
         /// <summary>
-        /// 是否自动清理不支持的任务链接
+        /// <p>是否自动清理不支持的任务链接</p>
         /// </summary>
         [JsonProperty("ClearLink")]
         public bool? ClearLink{ get; set; }
 
         /// <summary>
-        /// ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+        /// <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度</p>
         /// </summary>
         [JsonProperty("MainCyclicConfig")]
         public string MainCyclicConfig{ get; set; }
 
         /// <summary>
-        /// ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+        /// <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围</p>
         /// </summary>
         [JsonProperty("SubordinateCyclicConfig")]
         public string SubordinateCyclicConfig{ get; set; }
+
+        /// <summary>
+        /// <p>分钟任务相位偏移</p>
+        /// </summary>
+        [JsonProperty("MinuteOffset")]
+        public ulong? MinuteOffset{ get; set; }
 
 
         /// <summary>
@@ -192,6 +197,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ClearLink", this.ClearLink);
             this.SetParamSimple(map, prefix + "MainCyclicConfig", this.MainCyclicConfig);
             this.SetParamSimple(map, prefix + "SubordinateCyclicConfig", this.SubordinateCyclicConfig);
+            this.SetParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
         }
     }
 }

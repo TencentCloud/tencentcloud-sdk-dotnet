@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1522";
 
         /// <summary>
         /// Client constructor.
@@ -5801,6 +5801,27 @@ namespace TencentCloud.Vod.V20180717
         public VerifyDomainRecordResponse VerifyDomainRecordSync(VerifyDomainRecordRequest req)
         {
             return InternalRequestAsync<VerifyDomainRecordResponse>(req, "VerifyDomainRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 视频深度估计接口。输入视频，输出灰度深度视频，白色为近、黑色为远。深度值为单视频内归一化的相对深度。输出存储由 OutputConfig 控制，默认临时存储 7 天后过期。任务提交成功后返回任务 ID，可通过 DescribeTaskDetail 查询结果
+        /// </summary>
+        /// <param name="req"><see cref="VideoDepthEstimationRequest"/></param>
+        /// <returns><see cref="VideoDepthEstimationResponse"/></returns>
+        public Task<VideoDepthEstimationResponse> VideoDepthEstimation(VideoDepthEstimationRequest req)
+        {
+            return InternalRequestAsync<VideoDepthEstimationResponse>(req, "VideoDepthEstimation");
+        }
+
+        /// <summary>
+        /// 视频深度估计接口。输入视频，输出灰度深度视频，白色为近、黑色为远。深度值为单视频内归一化的相对深度。输出存储由 OutputConfig 控制，默认临时存储 7 天后过期。任务提交成功后返回任务 ID，可通过 DescribeTaskDetail 查询结果
+        /// </summary>
+        /// <param name="req"><see cref="VideoDepthEstimationRequest"/></param>
+        /// <returns><see cref="VideoDepthEstimationResponse"/></returns>
+        public VideoDepthEstimationResponse VideoDepthEstimationSync(VideoDepthEstimationRequest req)
+        {
+            return InternalRequestAsync<VideoDepthEstimationResponse>(req, "VideoDepthEstimation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

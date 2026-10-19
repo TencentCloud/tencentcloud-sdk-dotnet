@@ -79,6 +79,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("RateLimit")]
         public RateLimit RateLimit{ get; set; }
 
+        /// <summary>
+        /// <p>跳过报错的DDL策略</p>
+        /// </summary>
+        [JsonProperty("SkipDdlOnError")]
+        public SkipDdlOnError SkipDdlOnError{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
             this.SetParamSimple(map, prefix + "MigrateWay", this.MigrateWay);
             this.SetParamObj(map, prefix + "RateLimit.", this.RateLimit);
+            this.SetParamObj(map, prefix + "SkipDdlOnError.", this.SkipDdlOnError);
         }
     }
 }

@@ -25,10 +25,16 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 录像播放地址
+        /// <p>flv录像播放地址</p>
         /// </summary>
         [JsonProperty("Flv")]
         public string Flv{ get; set; }
+
+        /// <summary>
+        /// <p>fmp4录像播放地址</p>
+        /// </summary>
+        [JsonProperty("FMp4")]
+        public string FMp4{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Flv", this.Flv);
+            this.SetParamSimple(map, prefix + "FMp4", this.FMp4);
         }
     }
 }

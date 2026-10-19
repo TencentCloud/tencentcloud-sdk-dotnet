@@ -43,7 +43,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// <p>工作流ID，精确匹配。非必填，单值</p>
+        /// <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }

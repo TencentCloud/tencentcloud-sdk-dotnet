@@ -108,6 +108,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ScanTotalCount")]
         public ulong? ScanTotalCount{ get; set; }
 
+        /// <summary>
+        /// <p>检测的策略列表</p>
+        /// </summary>
+        [JsonProperty("PolicyList")]
+        public BaselinePolicyBrief[] PolicyList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanSuccessCount", this.ScanSuccessCount);
             this.SetParamSimple(map, prefix + "ScanFailedCount", this.ScanFailedCount);
             this.SetParamSimple(map, prefix + "ScanTotalCount", this.ScanTotalCount);
+            this.SetParamArrayObj(map, prefix + "PolicyList.", this.PolicyList);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string QuestionCount{ get; set; }
 
         /// <summary>
-        /// <p>客户图片url</p>
+        /// <p>废弃字段</p>
         /// </summary>
         [JsonProperty("OriginalImageUrl")]
         public string OriginalImageUrl{ get; set; }

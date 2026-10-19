@@ -102,6 +102,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Scanned")]
         public bool? Scanned{ get; set; }
 
+        /// <summary>
+        /// <p>自定义策略情况下策略的appid</p>
+        /// </summary>
+        [JsonProperty("AppID")]
+        public ulong? AppID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
             this.SetParamSimple(map, prefix + "CheckAssetType", this.CheckAssetType);
             this.SetParamSimple(map, prefix + "Scanned", this.Scanned);
+            this.SetParamSimple(map, prefix + "AppID", this.AppID);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// notebook详情
+        /// <p>notebook详情</p>
         /// </summary>
         [JsonProperty("NotebookSet")]
         public NotebookSetItem[] NotebookSet{ get; set; }
 
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

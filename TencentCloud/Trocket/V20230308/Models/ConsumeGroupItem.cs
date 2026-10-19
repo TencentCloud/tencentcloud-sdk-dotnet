@@ -25,94 +25,105 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消费组名称
+        /// <p>消费组名称</p>
         /// </summary>
         [JsonProperty("ConsumerGroup")]
         public string ConsumerGroup{ get; set; }
 
         /// <summary>
-        /// 是否开启消费
+        /// <p>是否开启消费</p>
         /// </summary>
         [JsonProperty("ConsumeEnable")]
         public bool? ConsumeEnable{ get; set; }
 
         /// <summary>
-        /// 顺序投递：true
-        /// 并发投递：false
+        /// <p>顺序投递：true<br>并发投递：false</p>
         /// </summary>
         [JsonProperty("ConsumeMessageOrderly")]
         public bool? ConsumeMessageOrderly{ get; set; }
 
         /// <summary>
-        /// 最大重试次数
+        /// <p>最大重试次数</p>
         /// </summary>
         [JsonProperty("MaxRetryTimes")]
         public long? MaxRetryTimes{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 4.x的集群ID
+        /// <p>4.x的集群ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIdV4")]
         public string ClusterIdV4{ get; set; }
 
         /// <summary>
-        /// 4.x的命名空间
+        /// <p>4.x的命名空间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceV4")]
         public string NamespaceV4{ get; set; }
 
         /// <summary>
-        /// 4.x的消费组名称
+        /// <p>4.x的消费组名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerGroupV4")]
         public string ConsumerGroupV4{ get; set; }
 
         /// <summary>
-        /// 4.x的完整命名空间
+        /// <p>4.x的完整命名空间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullNamespaceV4")]
         public string FullNamespaceV4{ get; set; }
 
         /// <summary>
-        /// 订阅的主题个数
+        /// <p>订阅的主题个数</p>
         /// </summary>
         [JsonProperty("SubscribeTopicNum")]
         public long? SubscribeTopicNum{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 绑定的标签列表
+        /// <p>绑定的标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// 重试策略
+        /// <p>重试策略</p>
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public RetryPolicy RetryPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>消费模式，枚举值如下：</p><ul><li>CLUSTERING：集群/广播消费</li><li>LITE：LiteTopic 消费</li></ul>
+        /// </summary>
+        [JsonProperty("ConsumeModel")]
+        public string ConsumeModel{ get; set; }
+
+        /// <summary>
+        /// <p>自定义的死信Topic名称</p>
+        /// </summary>
+        [JsonProperty("DeadLetterTargetTopic")]
+        public string DeadLetterTargetTopic{ get; set; }
 
 
         /// <summary>
@@ -134,6 +145,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+            this.SetParamSimple(map, prefix + "ConsumeModel", this.ConsumeModel);
+            this.SetParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
         }
     }
 }

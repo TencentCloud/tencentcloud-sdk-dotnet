@@ -78,6 +78,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("CoordPageIndex")]
         public long?[] CoordPageIndex{ get; set; }
 
+        /// <summary>
+        /// <p>返回正确答案内容</p>
+        /// </summary>
+        [JsonProperty("RightAnswer")]
+        public string RightAnswer{ get; set; }
+
+        /// <summary>
+        /// <p>学科（如语文、数学、英语）</p>
+        /// </summary>
+        [JsonProperty("Subject")]
+        public string Subject{ get; set; }
+
+        /// <summary>
+        /// <p>返回题目的知识点内容</p>
+        /// </summary>
+        [JsonProperty("KnowledgePoints")]
+        public string[] KnowledgePoints{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +110,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "Parse.", this.Parse);
             this.SetParamArrayObj(map, prefix + "Coord.", this.Coord);
             this.SetParamArraySimple(map, prefix + "CoordPageIndex.", this.CoordPageIndex);
+            this.SetParamSimple(map, prefix + "RightAnswer", this.RightAnswer);
+            this.SetParamSimple(map, prefix + "Subject", this.Subject);
+            this.SetParamArraySimple(map, prefix + "KnowledgePoints.", this.KnowledgePoints);
         }
     }
 }

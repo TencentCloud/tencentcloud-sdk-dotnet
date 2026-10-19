@@ -43,7 +43,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ResourceConfigInfo[] ResourceConfigInfos{ get; set; }
 
         /// <summary>
-        /// <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+        /// <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
         /// </summary>
         [JsonProperty("TiProjectId")]
         public string TiProjectId{ get; set; }

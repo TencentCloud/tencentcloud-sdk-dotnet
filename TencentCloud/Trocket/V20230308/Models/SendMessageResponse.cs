@@ -25,7 +25,7 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 消息ID
+        /// <p>消息ID</p>
         /// </summary>
         [JsonProperty("MsgId")]
         public string MsgId{ get; set; }

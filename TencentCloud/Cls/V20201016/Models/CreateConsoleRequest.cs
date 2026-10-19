@@ -43,13 +43,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string DomainPrefix{ get; set; }
 
         /// <summary>
-        /// <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+        /// <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
         /// </summary>
         [JsonProperty("Accounts")]
         public ConsoleAccount[] Accounts{ get; set; }
 
         /// <summary>
-        /// <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+        /// <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
         /// </summary>
         [JsonProperty("AnonymousLogin")]
         public AnonymousLoginInfo AnonymousLogin{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
+        /// <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
         /// </summary>
         [JsonProperty("AuthRoles")]
         public AuthRoleInfo[] AuthRoles{ get; set; }

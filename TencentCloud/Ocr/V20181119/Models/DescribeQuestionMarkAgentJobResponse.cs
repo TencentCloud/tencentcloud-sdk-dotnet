@@ -25,34 +25,40 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+        /// <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+        /// <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+        /// <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
         /// </summary>
         [JsonProperty("JobStatus")]
         public string JobStatus{ get; set; }
 
         /// <summary>
-        /// 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+        /// <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }
 
         /// <summary>
-        /// 试题批改信息
+        /// <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
         /// </summary>
         [JsonProperty("MarkInfos")]
         public MarkInfo[] MarkInfos{ get; set; }
+
+        /// <summary>
+        /// <p>试题批改信息。</p>
+        /// </summary>
+        [JsonProperty("QuestionInfo")]
+        public QuestionInfo[] QuestionInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +77,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
             this.SetParamSimple(map, prefix + "Angle", this.Angle);
             this.SetParamArrayObj(map, prefix + "MarkInfos.", this.MarkInfos);
+            this.SetParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

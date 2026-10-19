@@ -25,43 +25,43 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+        /// <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 记录偏移量，默认值为0。
+        /// <p>记录偏移量，默认值为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+        /// <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 匹配账号名的正则表达式，规则同 MySQL 官网。
+        /// <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
         /// </summary>
         [JsonProperty("AccountRegexp")]
         public string AccountRegexp{ get; set; }
 
         /// <summary>
-        /// 默认无排序，支持：ASC、DESC、asc、desc
+        /// <p>默认无排序，支持：ASC、DESC、asc、desc</p>
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+        /// <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+        /// <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
         /// </summary>
         [JsonProperty("HostRegexp")]
         public string HostRegexp{ get; set; }

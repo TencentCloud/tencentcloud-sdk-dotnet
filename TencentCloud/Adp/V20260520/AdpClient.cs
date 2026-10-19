@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1522";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Adp.V20260520
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 用户在 MCP App iframe 内触发的工具调用
+        /// </summary>
+        /// <param name="req"><see cref="CallMCPToolRequest"/></param>
+        /// <returns><see cref="CallMCPToolResponse"/></returns>
+        public Task<CallMCPToolResponse> CallMCPTool(CallMCPToolRequest req)
+        {
+            return InternalRequestAsync<CallMCPToolResponse>(req, "CallMCPTool");
+        }
+
+        /// <summary>
+        /// 用户在 MCP App iframe 内触发的工具调用
+        /// </summary>
+        /// <param name="req"><see cref="CallMCPToolRequest"/></param>
+        /// <returns><see cref="CallMCPToolResponse"/></returns>
+        public CallMCPToolResponse CallMCPToolSync(CallMCPToolRequest req)
+        {
+            return InternalRequestAsync<CallMCPToolResponse>(req, "CallMCPTool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2530,6 +2551,27 @@ namespace TencentCloud.Adp.V20260520
         public PauseAppTriggerResponse PauseAppTriggerSync(PauseAppTriggerRequest req)
         {
             return InternalRequestAsync<PauseAppTriggerResponse>(req, "PauseAppTrigger")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 读取 MCP UI 资源（HTML），供前端 iframe 加载 MCP App 界面
+        /// </summary>
+        /// <param name="req"><see cref="ReadMCPResourceRequest"/></param>
+        /// <returns><see cref="ReadMCPResourceResponse"/></returns>
+        public Task<ReadMCPResourceResponse> ReadMCPResource(ReadMCPResourceRequest req)
+        {
+            return InternalRequestAsync<ReadMCPResourceResponse>(req, "ReadMCPResource");
+        }
+
+        /// <summary>
+        /// 读取 MCP UI 资源（HTML），供前端 iframe 加载 MCP App 界面
+        /// </summary>
+        /// <param name="req"><see cref="ReadMCPResourceRequest"/></param>
+        /// <returns><see cref="ReadMCPResourceResponse"/></returns>
+        public ReadMCPResourceResponse ReadMCPResourceSync(ReadMCPResourceRequest req)
+        {
+            return InternalRequestAsync<ReadMCPResourceResponse>(req, "ReadMCPResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

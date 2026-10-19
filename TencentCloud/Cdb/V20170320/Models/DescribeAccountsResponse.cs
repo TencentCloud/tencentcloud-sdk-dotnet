@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 符合查询条件的账号数量。
+        /// <p>符合查询条件的账号数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 符合查询条件的账号详细信息。
+        /// <p>符合查询条件的账号详细信息。</p>
         /// </summary>
         [JsonProperty("Items")]
         public AccountInfo[] Items{ get; set; }
 
         /// <summary>
-        /// 用户可设置实例最大连接数。
+        /// <p>用户可设置实例最大连接数。</p>
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }

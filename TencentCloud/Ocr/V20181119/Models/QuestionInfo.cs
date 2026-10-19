@@ -67,6 +67,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
+        /// <summary>
+        /// <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
+        /// </summary>
+        [JsonProperty("ReturnImageUrl")]
+        public string ReturnImageUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "OrgHeight", this.OrgHeight);
             this.SetParamSimple(map, prefix + "OrgWidth", this.OrgWidth);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "ReturnImageUrl", this.ReturnImageUrl);
         }
     }
 }

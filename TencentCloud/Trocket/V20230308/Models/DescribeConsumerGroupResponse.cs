@@ -103,6 +103,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string LiteTopic{ get; set; }
 
         /// <summary>
+        /// <p>自定义死信Topic</p>
+        /// </summary>
+        [JsonProperty("DeadLetterTargetTopic")]
+        public string DeadLetterTargetTopic{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -127,6 +133,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "ConsumeModel", this.ConsumeModel);
             this.SetParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
+            this.SetParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

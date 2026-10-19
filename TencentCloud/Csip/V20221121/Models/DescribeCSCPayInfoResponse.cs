@@ -109,6 +109,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public OrderQuotaInfo[] QuotaList{ get; set; }
 
         /// <summary>
+        /// <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
+        /// </summary>
+        [JsonProperty("QuotaUsedError")]
+        public string QuotaUsedError{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -134,6 +140,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "NewUser", this.NewUser);
             this.SetParamArrayObj(map, prefix + "QuotaList.", this.QuotaList);
+            this.SetParamSimple(map, prefix + "QuotaUsedError", this.QuotaUsedError);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -246,6 +246,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TagItems")]
         public EDRRuleTagItem[] TagItems{ get; set; }
 
+        /// <summary>
+        /// <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+        /// </summary>
+        [JsonProperty("FileOperationRules")]
+        public RuleContentFileOperation FileOperationRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +295,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "ExcludeClusterIDs.", this.ExcludeClusterIDs);
             this.SetParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
+            this.SetParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
         }
     }
 }

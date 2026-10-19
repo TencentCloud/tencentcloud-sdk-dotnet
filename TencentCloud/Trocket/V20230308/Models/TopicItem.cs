@@ -25,78 +25,88 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// <p>主题名称</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 主题类型
-        /// NORMAL:普通消息,
-        /// FIFO:顺序消息,
-        /// DELAY:延时消息,
-        /// TRANSACTION:事务消息
+        /// <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// 队列数量
+        /// <p>队列数量</p>
         /// </summary>
         [JsonProperty("QueueNum")]
         public long? QueueNum{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 4.x的集群id
+        /// <p>4.x的集群id</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterIdV4")]
         public string ClusterIdV4{ get; set; }
 
         /// <summary>
-        /// 4.x的命名空间
+        /// <p>4.x的命名空间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceV4")]
         public string NamespaceV4{ get; set; }
 
         /// <summary>
-        /// 4.x的主题名称
+        /// <p>4.x的主题名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicV4")]
         public string TopicV4{ get; set; }
 
         /// <summary>
-        /// 4.x的完整命名空间
+        /// <p>4.x的完整命名空间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullNamespaceV4")]
         public string FullNamespaceV4{ get; set; }
 
         /// <summary>
-        /// 消息保留时长
+        /// <p>消息保留时长</p>
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }
 
         /// <summary>
-        /// 绑定的标签列表
+        /// <p>绑定的标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
+
+        /// <summary>
+        /// <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoExpireDelete")]
+        public bool? AutoExpireDelete{ get; set; }
+
+        /// <summary>
+        /// <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoExpireTime")]
+        public ulong? AutoExpireTime{ get; set; }
 
 
         /// <summary>
@@ -115,6 +125,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+            this.SetParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
         }
     }
 }

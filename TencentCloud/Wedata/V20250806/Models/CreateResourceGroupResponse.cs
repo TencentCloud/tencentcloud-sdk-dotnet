@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 是否开启成功
+        /// <p>是否开启成功</p>
         /// </summary>
         [JsonProperty("Data")]
         public ResourceResult Data{ get; set; }

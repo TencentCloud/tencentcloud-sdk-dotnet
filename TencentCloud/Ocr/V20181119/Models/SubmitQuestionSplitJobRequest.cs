@@ -42,6 +42,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ModelType")]
         public string ModelType{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启</p>
+        /// </summary>
+        [JsonProperty("EnableImageCrop")]
+        public bool? EnableImageCrop{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
             this.SetParamArraySimple(map, prefix + "ImageBase64List.", this.ImageBase64List);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
+            this.SetParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
         }
     }
 }

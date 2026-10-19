@@ -25,58 +25,64 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。
+        /// <p>资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 开通的资源组信息
+        /// <p>开通的资源组信息</p>
         /// </summary>
         [JsonProperty("Type")]
         public ResourceType Type{ get; set; }
 
         /// <summary>
-        /// 是否自动续费
+        /// <p>是否自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenewEnabled")]
         public bool? AutoRenewEnabled{ get; set; }
 
         /// <summary>
-        /// 购买时长，单位月
+        /// <p>购买时长，单位月</p>
         /// </summary>
         [JsonProperty("PurchasePeriod")]
         public long? PurchasePeriod{ get; set; }
 
         /// <summary>
-        /// vpcId
+        /// <p>vpcId</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网
+        /// <p>子网</p>
         /// </summary>
         [JsonProperty("SubNet")]
         public string SubNet{ get; set; }
 
         /// <summary>
-        /// 资源购买地域
+        /// <p>资源购买地域</p>
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// 关联项目空间项目id
+        /// <p>关联项目空间项目id</p>
         /// </summary>
         [JsonProperty("AssociatedProjectId")]
         public string AssociatedProjectId{ get; set; }
 
         /// <summary>
-        /// 资源组描述
+        /// <p>资源组描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>标签值</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public ResourceTag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "AssociatedProjectId", this.AssociatedProjectId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

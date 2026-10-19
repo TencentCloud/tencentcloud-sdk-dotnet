@@ -54,6 +54,18 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("QueryDelayMessage")]
         public bool? QueryDelayMessage{ get; set; }
 
+        /// <summary>
+        /// <p>是否为重试消息</p>
+        /// </summary>
+        [JsonProperty("QueryRetryMessage")]
+        public bool? QueryRetryMessage{ get; set; }
+
+        /// <summary>
+        /// <p>查询重试消息时，需要指定具体的消费组名称</p>
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "MsgId", this.MsgId);
             this.SetParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
             this.SetParamSimple(map, prefix + "QueryDelayMessage", this.QueryDelayMessage);
+            this.SetParamSimple(map, prefix + "QueryRetryMessage", this.QueryRetryMessage);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

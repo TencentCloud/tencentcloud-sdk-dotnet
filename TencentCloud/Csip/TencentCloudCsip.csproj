@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1521</VersionPrefix>
+    <VersionPrefix>3.0.1522</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,7 @@
     <Compile Include="V20221121\Models\BaselineMainTask.cs" />
     <Compile Include="V20221121\Models\BaselineOverviewStatistic.cs" />
     <Compile Include="V20221121\Models\BaselinePolicy.cs" />
+    <Compile Include="V20221121\Models\BaselinePolicyBrief.cs" />
     <Compile Include="V20221121\Models\BaselinePolicySubCategoryConf.cs" />
     <Compile Include="V20221121\Models\BaselinePolicySystemCategoryConf.cs" />
     <Compile Include="V20221121\Models\BaselineRiskLevelStatistic.cs" />
@@ -1926,6 +1927,7 @@
     <Compile Include="V20221121\Models\RoleInfo.cs" />
     <Compile Include="V20221121\Models\RouteInfo.cs" />
     <Compile Include="V20221121\Models\RuleContentCmdLine.cs" />
+    <Compile Include="V20221121\Models\RuleContentFileOperation.cs" />
     <Compile Include="V20221121\Models\RuleContentProcessInfo.cs" />
     <Compile Include="V20221121\Models\RuleContentProcessNetwork.cs" />
     <Compile Include="V20221121\Models\RuleStatisticsItem.cs" />

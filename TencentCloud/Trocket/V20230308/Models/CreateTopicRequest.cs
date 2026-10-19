@@ -37,49 +37,43 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 主题类型，枚举值如下：
-        /// 
-        /// - NORMAL: 普通消息
-        /// - FIFO: 顺序消息
-        /// - DELAY: 延时消息
-        /// - TRANSACTION: 事务消息
-        /// - LITE: 轻量消息
+        /// <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// 队列数量，取值范围3～16
+        /// <p>队列数量，取值范围3～16</p>
         /// </summary>
         [JsonProperty("QueueNum")]
         public long? QueueNum{ get; set; }
 
         /// <summary>
-        /// 备注信息，最多 128 个字符
+        /// <p>备注信息，最多 128 个字符</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 消息保留时长（单位：小时）
+        /// <p>消息保留时长（单位：小时）</p>
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// 是否过期自动删除（仅针对轻量主题类型）
+        /// <p>是否过期自动删除（仅针对轻量主题类型）</p>
         /// </summary>
         [JsonProperty("AutoExpireDelete")]
         public bool? AutoExpireDelete{ get; set; }
 
         /// <summary>
-        /// 过期时间，单位：秒（仅针对轻量主题类型）
+        /// <p>过期时间，单位：秒（仅针对轻量主题类型）</p>
         /// </summary>
         [JsonProperty("AutoExpireTime")]
         public long? AutoExpireTime{ get; set; }
