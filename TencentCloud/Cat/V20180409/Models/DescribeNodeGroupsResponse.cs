@@ -25,21 +25,21 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 树状节点列表，总共两级
+        /// <p>树状节点列表，总共两级</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeList")]
         public NodeTree[] NodeList{ get; set; }
 
         /// <summary>
-        /// 省份或国家列表
+        /// <p>省份或国家列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DistrictList")]
         public DistinctOrNetServiceInfo[] DistrictList{ get; set; }
 
         /// <summary>
-        /// 运营商列表
+        /// <p>运营商列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetServiceList")]

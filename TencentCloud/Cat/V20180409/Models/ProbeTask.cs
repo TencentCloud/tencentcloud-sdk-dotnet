@@ -25,134 +25,108 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务名
+        /// <p>任务名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 任务 ID
+        /// <p>任务 ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 拨测类型
-        /// <li>1 = 页面浏览</li>
-        /// <li> 2 =文件上传 </li>
-        /// <li> 3 = 文件下载</li>
-        /// <li> 4 = 端口性能 </li>
-        /// <li> 5 = 网络质量 </li>
-        /// <li> 6 =流媒体 </li>
-        /// 
-        /// 即时拨测只支持页面浏览，网络质量，文件下载
+        /// <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即时拨测只支持页面浏览，网络质量，文件下载</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 拨测节点列表
+        /// <p>拨测节点列表</p>
         /// </summary>
         [JsonProperty("Nodes")]
         public string[] Nodes{ get; set; }
 
         /// <summary>
-        /// 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+        /// <p>拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeIpType")]
         public long? NodeIpType{ get; set; }
 
         /// <summary>
-        /// 拨测间隔，单位为分钟
+        /// <p>拨测间隔，单位为分钟</p>
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// 拨测参数
+        /// <p>拨测参数</p>
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
 
         /// <summary>
-        /// 任务状态
-        /// <li>1 = 创建中</li>
-        /// <li> 2 = 运行中 </li>
-        /// <li> 3 = 运行异常 </li>
-        /// <li> 4 = 暂停中 </li>
-        /// <li> 5 = 暂停异常 </li>
-        /// <li> 6 = 任务暂停 </li>
-        /// <li> 7 = 任务删除中 </li>
-        /// <li> 8 = 任务删除异常 </li>
-        /// <li> 9 = 任务删除</li>
-        /// <li> 10 = 定时任务暂停中 </li>
+        /// <p>任务状态</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 目标地址
+        /// <p>目标地址</p>
         /// </summary>
         [JsonProperty("TargetAddress")]
         public string TargetAddress{ get; set; }
 
         /// <summary>
-        /// 付费模式
-        /// <li>1 = 试用版本</li>
-        /// <li> 2 = 付费版本 </li>
+        /// <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 订单状态
-        /// <li>1 = 正常</li>
-        /// <li> 2 = 欠费 </li>
+        /// <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
         /// </summary>
         [JsonProperty("OrderState")]
         public long? OrderState{ get; set; }
 
         /// <summary>
-        /// 任务分类
-        /// <li>1 = PC</li>
-        /// <li> 2 = Mobile </li>
+        /// <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
         /// </summary>
         [JsonProperty("TaskCategory")]
         public long? TaskCategory{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 定时任务cron表达式
+        /// <p>定时任务cron表达式</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cron")]
         public string Cron{ get; set; }
 
         /// <summary>
-        /// 定时任务启动状态
-        /// <li>1 = 定时任务表达式生效</li>
-        /// <li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
+        /// <p>定时任务启动状态</p><li>1 = 定时任务表达式生效</li><li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronState")]
         public long? CronState{ get; set; }
 
         /// <summary>
-        /// 任务当前绑定的标签
+        /// <p>任务当前绑定的标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagInfoList")]
         public KeyValuePair[] TagInfoList{ get; set; }
 
         /// <summary>
-        /// 是否为同步账号
+        /// <p>是否为同步账号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubSyncFlag")]

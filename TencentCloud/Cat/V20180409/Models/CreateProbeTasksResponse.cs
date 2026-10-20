@@ -25,7 +25,7 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务ID列表
+        /// <p>任务ID列表</p>
         /// </summary>
         [JsonProperty("TaskIDs")]
         public string[] TaskIDs{ get; set; }

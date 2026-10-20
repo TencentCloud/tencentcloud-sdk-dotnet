@@ -303,7 +303,11 @@ namespace TencentCloud.Waf.V20180125.Models
         public string GmSSLId{ get; set; }
 
         /// <summary>
-        /// 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+        /// 回源策略。
+        /// 枚举值：
+        /// 0：负载均衡回源（默认值）
+        /// 1：分流回源
+        /// 2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源
         /// </summary>
         [JsonProperty("UpstreamPolicy")]
         public long? UpstreamPolicy{ get; set; }

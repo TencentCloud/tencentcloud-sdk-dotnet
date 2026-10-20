@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>付费模式</p>
+        /// 付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
@@ -187,13 +187,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? QpsStandard{ get; set; }
 
         /// <summary>
-        /// <p>购买的带宽规格</p>
+        /// 购买的带宽规格上限，单位：Mbps
         /// </summary>
         [JsonProperty("BandwidthStandard")]
         public ulong? BandwidthStandard{ get; set; }
 
         /// <summary>
-        /// <p>实例状态</p>
+        /// 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -229,7 +229,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ApiPkg ApiPkg{ get; set; }
 
         /// <summary>
-        /// <p>小程序安全加速包</p>
+        /// <p>小程序安全防护包</p>
         /// </summary>
         [JsonProperty("MiniPkg")]
         public MiniPkg MiniPkg{ get; set; }
@@ -265,7 +265,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string BillingItem{ get; set; }
 
         /// <summary>
-        /// <p>实例延期释放标识</p>
+        /// 实例延期释放标识，0表示不延期，1表示延期释放
         /// </summary>
         [JsonProperty("FreeDelayFlag")]
         public ulong? FreeDelayFlag{ get; set; }
@@ -281,6 +281,18 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Last3MaxBandwidth")]
         public ulong? Last3MaxBandwidth{ get; set; }
+
+        /// <summary>
+        /// <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+        /// </summary>
+        [JsonProperty("Last7MaxMiniBandwidth")]
+        public ulong? Last7MaxMiniBandwidth{ get; set; }
+
+        /// <summary>
+        /// <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+        /// </summary>
+        [JsonProperty("MiniBandwidthStandard")]
+        public ulong? MiniBandwidthStandard{ get; set; }
 
         /// <summary>
         /// <p>重保增强包</p>
@@ -305,6 +317,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("RCEPkg")]
         public RCEPkg RCEPkg{ get; set; }
+
+        /// <summary>
+        /// <p>RCE QPS扩展包</p>
+        /// </summary>
+        [JsonProperty("RCEExtendPkg")]
+        public RCEExtendPkg RCEExtendPkg{ get; set; }
 
         /// <summary>
         /// <p>超量策略。0：超量沙箱<br>1：超量限流</p>
@@ -415,10 +433,13 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
             this.SetParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
             this.SetParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
+            this.SetParamSimple(map, prefix + "Last7MaxMiniBandwidth", this.Last7MaxMiniBandwidth);
+            this.SetParamSimple(map, prefix + "MiniBandwidthStandard", this.MiniBandwidthStandard);
             this.SetParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
             this.SetParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
             this.SetParamObj(map, prefix + "NetworkConfig.", this.NetworkConfig);
             this.SetParamObj(map, prefix + "RCEPkg.", this.RCEPkg);
+            this.SetParamObj(map, prefix + "RCEExtendPkg.", this.RCEExtendPkg);
             this.SetParamSimple(map, prefix + "ExceedPolicy", this.ExceedPolicy);
             this.SetParamObj(map, prefix + "LLMPkg.", this.LLMPkg);
             this.SetParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);

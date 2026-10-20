@@ -25,39 +25,19 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 腾讯电子签小程序的实名认证链接。
-        /// 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
-        /// 
-        /// <strong>1.如果EndPoint是APP</strong>：
-        /// 得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
-        /// 
-        /// <strong>2.如果EndPoint是HTTP</strong>：
-        /// 得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
-        /// 
-        /// <strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：
-        /// 得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
-        /// 
-        /// <strong>4.如果EndPoint是H5</strong>：
-        /// 得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署
-        /// 
-        /// <strong>5.如果EndPoint是H5_SHORT_URL</strong>：
-        /// 得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署
-        /// 
-        /// 
-        /// `注：` <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font>
-        /// 示例值：https://essurl.cn/2n**42Nd
+        /// <p>腾讯电子签小程序的实名认证链接。<br>如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。</p><p><strong>1.如果EndPoint是APP</strong>：<br>得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&amp;shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的&quot;跳转到小程序的实现&quot;</p><p><strong>2.如果EndPoint是HTTP</strong>：<br>得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&amp;shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>4.如果EndPoint是H5</strong>：<br>得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU<strong><strong>VJhsS5q&amp;CodeType=xxx&amp;shortKey=yD*</strong></strong>frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><strong>5.如果EndPoint是H5_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><code>注：</code> <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font><br>示例值：https://essurl.cn/2n**42Nd</p>
         /// </summary>
         [JsonProperty("UserVerifyUrl")]
         public string UserVerifyUrl{ get; set; }
 
         /// <summary>
-        /// 链接过期时间，为Unix时间戳（单位为秒）。
+        /// <p>链接过期时间，为Unix时间戳（单位为秒）。</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回
+        /// <p>小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回</p>
         /// </summary>
         [JsonProperty("MiniAppId")]
         public string MiniAppId{ get; set; }

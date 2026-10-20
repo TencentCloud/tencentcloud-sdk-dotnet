@@ -25,163 +25,190 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 敏捷上云实例id
+        /// <p>敏捷上云实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 敏捷上云名称
+        /// <p>敏捷上云名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 合作伙伴的AppId
+        /// <p>合作伙伴的AppId</p>
         /// </summary>
         [JsonProperty("IapId")]
         public string IapId{ get; set; }
 
         /// <summary>
-        /// 需要接入敏捷上云的IDC的地址
+        /// <p>需要接入敏捷上云的IDC的地址</p>
         /// </summary>
         [JsonProperty("IdcAddress")]
         public string IdcAddress{ get; set; }
 
         /// <summary>
-        /// 需要接入敏捷上云的IDC的互联网服务提供商类型
+        /// <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p>
         /// </summary>
         [JsonProperty("IdcType")]
         public string IdcType{ get; set; }
 
         /// <summary>
-        /// 敏捷上云的带宽，单位为MB
+        /// <p>敏捷上云的带宽，单位为MB</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 联系电话
+        /// <p>联系电话</p>
         /// </summary>
         [JsonProperty("Telephone")]
         public string Telephone{ get; set; }
 
         /// <summary>
-        /// 敏捷上云的状态
-        /// available：就绪状态
-        /// applying：申请，待审核状态
-        /// pendingpay：代付款状态
-        /// building：建设中状态
-        /// confirming：待确认状态
-        /// isolate: 隔离状态
-        /// stoped：终止状态
+        /// <p>敏捷上云的状态<br>available：就绪状态<br>applying：申请，待审核状态<br>pendingpay：代付款状态<br>building：建设中状态<br>confirming：待确认状态<br>isolate: 隔离状态<br>stoped：终止状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 敏捷上云申请的时间
+        /// <p>敏捷上云申请的时间</p>
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// 敏捷上云建设完成的时间
+        /// <p>敏捷上云建设完成的时间</p>
         /// </summary>
         [JsonProperty("ReadyTime")]
         public string ReadyTime{ get; set; }
 
         /// <summary>
-        /// 敏捷上云过期时间
+        /// <p>敏捷上云过期时间</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 备注信息
+        /// <p>备注信息</p>
         /// </summary>
         [JsonProperty("Remarks")]
         public string Remarks{ get; set; }
 
         /// <summary>
-        /// 敏捷上云的地域状态。
-        /// same-region：同地域
-        /// cross-region：跨地域
+        /// <p>敏捷上云的地域状态。<br>same-region：同地域<br>cross-region：跨地域</p>
         /// </summary>
         [JsonProperty("RegionStatus")]
         public string RegionStatus{ get; set; }
 
         /// <summary>
-        /// 用户的AppId
+        /// <p>用户的AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 用户的Uin
+        /// <p>用户的Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 用户注册名称
+        /// <p>用户注册名称</p>
         /// </summary>
         [JsonProperty("CustomerAuthName")]
         public string CustomerAuthName{ get; set; }
 
         /// <summary>
-        /// 物理专线实例ID
+        /// <p>物理专线实例ID</p>
         /// </summary>
         [JsonProperty("DirectConnectId")]
         public string DirectConnectId{ get; set; }
 
         /// <summary>
-        /// 敏捷上云是否支持创建高速上云专线网关
+        /// <p>敏捷上云是否支持创建高速上云专线网关</p>
         /// </summary>
         [JsonProperty("CloudAttachServiceGatewaysSupport")]
         public bool? CloudAttachServiceGatewaysSupport{ get; set; }
 
         /// <summary>
-        /// 敏捷上云服务是否处于升降配中
+        /// <p>敏捷上云服务是否处于升降配中</p>
         /// </summary>
         [JsonProperty("BUpdateBandwidth")]
         public bool? BUpdateBandwidth{ get; set; }
 
         /// <summary>
-        /// 接入地域
+        /// <p>接入地域</p>
         /// </summary>
         [JsonProperty("ArRegion")]
         public string ArRegion{ get; set; }
 
         /// <summary>
-        /// 运营商代码
+        /// <p>运营商代码</p>
         /// </summary>
         [JsonProperty("IapCode")]
         public string IapCode{ get; set; }
 
         /// <summary>
-        /// IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+        /// <p>IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p>
         /// </summary>
         [JsonProperty("IdcPointType")]
         public string IdcPointType{ get; set; }
 
         /// <summary>
-        /// 运营商链路是否有保护
+        /// <p>运营商链路是否有保护</p>
         /// </summary>
         [JsonProperty("BIapLinkProtected")]
         public bool? BIapLinkProtected{ get; set; }
 
         /// <summary>
-        /// 服务类型：SHARE-共享型，EXCLUSIVE-独占型
+        /// <p>服务类型：SHARE-共享型，EXCLUSIVE-独占型</p>
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// VLAN范围
+        /// <p>VLAN范围</p>
         /// </summary>
         [JsonProperty("VlanRange")]
         public string VlanRange{ get; set; }
+
+        /// <summary>
+        /// <p>裁撤状态</p><p>枚举值：</p><ul><li>APPLYING： 申请裁撤</li><li>EXECUTING： 裁撤执行中</li><li>FAILED： 裁撤失败</li></ul>
+        /// </summary>
+        [JsonProperty("RepealStatus")]
+        public string RepealStatus{ get; set; }
+
+        /// <summary>
+        /// <p>计划裁撤时间</p>
+        /// </summary>
+        [JsonProperty("PlanRepealTime")]
+        public string PlanRepealTime{ get; set; }
+
+        /// <summary>
+        /// <p>续费标记</p><p>枚举值：</p><ul><li>MANUAL_RENEW： 手动续费</li><li>AUTO_RENEW： 自动续费</li><li>NO_RENEW： 到期不续</li></ul>
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
+        /// <summary>
+        /// <p>接入点ID</p>
+        /// </summary>
+        [JsonProperty("AccessPointId")]
+        public string AccessPointId{ get; set; }
+
+        /// <summary>
+        /// <p>接入点名称</p>
+        /// </summary>
+        [JsonProperty("AccessPointName")]
+        public string AccessPointName{ get; set; }
+
+        /// <summary>
+        /// <p>计费阶梯带宽(Mbps)</p>
+        /// </summary>
+        [JsonProperty("BillStairBandwidth")]
+        public ulong? BillStairBandwidth{ get; set; }
 
 
         /// <summary>
@@ -214,6 +241,12 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "VlanRange", this.VlanRange);
+            this.SetParamSimple(map, prefix + "RepealStatus", this.RepealStatus);
+            this.SetParamSimple(map, prefix + "PlanRepealTime", this.PlanRepealTime);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "AccessPointId", this.AccessPointId);
+            this.SetParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
+            this.SetParamSimple(map, prefix + "BillStairBandwidth", this.BillStairBandwidth);
         }
     }
 }

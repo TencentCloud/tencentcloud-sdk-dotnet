@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// <p>服务ID</p>
+        /// <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -36,6 +36,24 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// <p>排序字段，当前仅支持 UpdateTime；为空则按规则默认顺序返回</p>
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
+        /// <summary>
+        /// <p>排序方向：asc(升序)/desc(降序)，默认 desc</p>
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

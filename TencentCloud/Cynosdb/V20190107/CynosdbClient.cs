@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1522";
+       private const string sdkVersion = "SDK_NET_3.0.1523";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CancelClusterServerlessScalePlanResponse CancelClusterServerlessScalePlanSync(CancelClusterServerlessScalePlanRequest req)
         {
             return InternalRequestAsync<CancelClusterServerlessScalePlanResponse>(req, "CancelClusterServerlessScalePlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消等待执行的任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelTaskRequest"/></param>
+        /// <returns><see cref="CancelTaskResponse"/></returns>
+        public Task<CancelTaskResponse> CancelTask(CancelTaskRequest req)
+        {
+            return InternalRequestAsync<CancelTaskResponse>(req, "CancelTask");
+        }
+
+        /// <summary>
+        /// 取消等待执行的任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelTaskRequest"/></param>
+        /// <returns><see cref="CancelTaskResponse"/></returns>
+        public CancelTaskResponse CancelTaskSync(CancelTaskRequest req)
+        {
+            return InternalRequestAsync<CancelTaskResponse>(req, "CancelTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2570,6 +2591,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeProxySpecsResponse DescribeProxySpecsSync(DescribeProxySpecsRequest req)
         {
             return InternalRequestAsync<DescribeProxySpecsResponse>(req, "DescribeProxySpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口(DescribeProxyZoneStocks)查询数据库代理地域库存
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyZoneStocksRequest"/></param>
+        /// <returns><see cref="DescribeProxyZoneStocksResponse"/></returns>
+        public Task<DescribeProxyZoneStocksResponse> DescribeProxyZoneStocks(DescribeProxyZoneStocksRequest req)
+        {
+            return InternalRequestAsync<DescribeProxyZoneStocksResponse>(req, "DescribeProxyZoneStocks");
+        }
+
+        /// <summary>
+        /// 该接口(DescribeProxyZoneStocks)查询数据库代理地域库存
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyZoneStocksRequest"/></param>
+        /// <returns><see cref="DescribeProxyZoneStocksResponse"/></returns>
+        public DescribeProxyZoneStocksResponse DescribeProxyZoneStocksSync(DescribeProxyZoneStocksRequest req)
+        {
+            return InternalRequestAsync<DescribeProxyZoneStocksResponse>(req, "DescribeProxyZoneStocks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

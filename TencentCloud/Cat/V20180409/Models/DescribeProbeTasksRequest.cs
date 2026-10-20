@@ -25,101 +25,79 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务 ID  列表
+        /// <p>任务 ID  列表</p>
         /// </summary>
         [JsonProperty("TaskIDs")]
         public string[] TaskIDs{ get; set; }
 
         /// <summary>
-        /// 任务名
+        /// <p>任务名</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 拨测目标
+        /// <p>拨测目标</p>
         /// </summary>
         [JsonProperty("TargetAddress")]
         public string TargetAddress{ get; set; }
 
         /// <summary>
-        /// 任务状态列表
-        /// <li>1 = 创建中</li>
-        /// <li> 2 = 运行中 </li>
-        /// <li> 3 = 运行异常 </li>
-        /// <li> 4 = 暂停中 </li>
-        /// <li> 5 = 暂停异常 </li>
-        /// <li> 6 = 任务暂停 </li>
-        /// <li> 7 = 任务删除中 </li>
-        /// <li> 8 = 任务删除异常 </li>
-        /// <li> 9 = 任务删除</li>
-        /// <li> 10 = 定时任务暂停中 </li>
+        /// <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long?[] TaskStatus{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// <p>偏移量，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100
+        /// <p>返回数量，默认为20，最大值为100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 付费模式
-        /// <li>1 = 试用版本</li>
-        /// <li> 2 = 付费版本 </li>
+        /// <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 订单状态
-        /// <li>1 = 正常</li>
-        /// <li> 2 = 欠费 </li>
+        /// <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
         /// </summary>
         [JsonProperty("OrderState")]
         public long? OrderState{ get; set; }
 
         /// <summary>
-        /// 拨测类型
-        /// <li>1 = 页面浏览</li>
-        /// <li> 2 =文件上传 </li>
-        /// <li> 3 = 文件下载</li>
-        /// <li> 4 = 端口性能 </li>
-        /// <li> 5 = 网络质量 </li>
-        /// <li> 6 =流媒体 </li>
-        /// 
-        /// 即使拨测只支持页面浏览，网络质量，文件下载
+        /// <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public long?[] TaskType{ get; set; }
 
         /// <summary>
-        /// 节点类型
+        /// <p>节点类型</p>
         /// </summary>
         [JsonProperty("TaskCategory")]
         public long?[] TaskCategory{ get; set; }
 
         /// <summary>
-        /// 排序的列
+        /// <p>排序的列</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 是否正序
+        /// <p>是否正序</p>
         /// </summary>
         [JsonProperty("Ascend")]
         public bool? Ascend{ get; set; }
 
         /// <summary>
-        /// 资源标签值
+        /// <p>资源标签值</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public KeyValuePair[] TagFilters{ get; set; }

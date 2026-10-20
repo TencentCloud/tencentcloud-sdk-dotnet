@@ -25,14 +25,14 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务
+        /// <p>任务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tasks")]
         public SingleInstantTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

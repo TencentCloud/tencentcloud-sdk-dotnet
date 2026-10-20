@@ -25,7 +25,7 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 标签值序列化后的字符串
+        /// <p>标签值序列化后的字符串</p>
         /// </summary>
         [JsonProperty("TagValueSet")]
         public string TagValueSet{ get; set; }

@@ -25,16 +25,22 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 计算资源 ID
-        /// </summary>
-        [JsonProperty("ResourceId")]
-        public string ResourceId{ get; set; }
-
-        /// <summary>
         /// 工作空间 ID
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public string WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+        /// </summary>
+        [JsonProperty("ComputeResourceId")]
+        public string ComputeResourceId{ get; set; }
+
+        /// <summary>
+        /// [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Databuddy.V20260715.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

@@ -67,6 +67,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public bool? DirectInternetAccess{ get; set; }
 
         /// <summary>
+        /// <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+        /// </summary>
+        [JsonProperty("TiProjectId")]
+        public string TiProjectId{ get; set; }
+
+        /// <summary>
         /// <p>资源组ID(for预付费)</p>
         /// </summary>
         [JsonProperty("ResourceGroupId")]
@@ -187,6 +193,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "RootAccess", this.RootAccess);
             this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
             this.SetParamSimple(map, prefix + "DirectInternetAccess", this.DirectInternetAccess);
+            this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);

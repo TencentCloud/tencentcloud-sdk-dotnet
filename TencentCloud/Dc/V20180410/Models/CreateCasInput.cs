@@ -84,6 +84,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
+        /// <summary>
+        /// <p>接入点ID</p>
+        /// </summary>
+        [JsonProperty("AccessPointId")]
+        public string AccessPointId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
             this.SetParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "AccessPointId", this.AccessPointId);
         }
     }
 }

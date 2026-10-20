@@ -25,50 +25,49 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务 ID，如task-n1wchki8
+        /// <p>任务 ID，如task-n1wchki8</p>
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
 
         /// <summary>
-        /// 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+        /// <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
         /// </summary>
         [JsonProperty("Nodes")]
         public string[] Nodes{ get; set; }
 
         /// <summary>
-        /// 拨测间隔，如30，单位为分钟。
+        /// <p>拨测间隔，如30，单位为分钟。</p>
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// 拨测参数，详细参数配置可参考云拨测官网文档。
+        /// <p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
 
         /// <summary>
-        /// 定时任务cron表达式
+        /// <p>定时任务cron表达式</p>
         /// </summary>
         [JsonProperty("Cron")]
         public string Cron{ get; set; }
 
         /// <summary>
-        /// 预付费套餐id
-        /// 需要与taskId对应
+        /// <p>预付费套餐id<br>需要与taskId对应</p>
         /// </summary>
         [JsonProperty("ResourceIDs")]
         public string[] ResourceIDs{ get; set; }
 
         /// <summary>
-        /// 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+        /// <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
         /// </summary>
         [JsonProperty("NodeIpType")]
         public long? NodeIpType{ get; set; }
 
         /// <summary>
-        /// 批量任务名-地址
+        /// <p>批量任务名-地址</p>
         /// </summary>
         [JsonProperty("BatchTasks")]
         public ProbeTaskBasicConfiguration[] BatchTasks{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1522</VersionPrefix>
+    <VersionPrefix>3.0.1523</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20180608\Models\AIModel.cs" />
     <Compile Include="V20180608\Models\AIModelGroup.cs" />
     <Compile Include="V20180608\Models\AIModelSecret.cs" />
+    <Compile Include="V20180608\Models\AIModelStatus.cs" />
     <Compile Include="V20180608\Models\AddProviderRequest.cs" />
     <Compile Include="V20180608\Models\AddProviderResponse.cs" />
     <Compile Include="V20180608\Models\AgentRuntimeCodeImageConfig.cs" />
@@ -329,6 +330,8 @@
     <Compile Include="V20180608\Models\MigrationInput.cs" />
     <Compile Include="V20180608\Models\MigrationPlanItem.cs" />
     <Compile Include="V20180608\Models\MigrationSummary.cs" />
+    <Compile Include="V20180608\Models\ModifyAIModelStatusRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyAIModelStatusResponse.cs" />
     <Compile Include="V20180608\Models\ModifyClientRequest.cs" />
     <Compile Include="V20180608\Models\ModifyClientResponse.cs" />
     <Compile Include="V20180608\Models\ModifyClsTopicRequest.cs" />

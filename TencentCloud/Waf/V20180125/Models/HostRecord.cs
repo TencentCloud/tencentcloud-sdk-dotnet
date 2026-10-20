@@ -97,6 +97,7 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 域名绑定的LB的地域，以逗号分割多个地域
+        /// 与 ApRegion 表达同一含义、格式不同。本字段为地域缩写，多个地域以英文逗号拼接；入参与 ApRegion 同时传入时以 ApRegion 为准
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -122,6 +123,61 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("ClsStatus")]
         public ulong? ClsStatus{ get; set; }
+
+        /// <summary>
+        /// 域名绑定的负载均衡所在地域，腾讯云标准地域格式
+        /// 参数格式：形如 ap-guangzhou
+        /// 与 Region 表达同一含义、格式不同：Region 为地域缩写且多个地域以英文逗号拼接，本字段为标准地域名数组
+        /// 入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion
+        /// 出参在可识别时填充，无法识别的地域不返回对应元素
+        /// 枚举值：
+        /// ap-guangzhou：广州
+        /// ap-shanghai：上海
+        /// ap-beijing：北京
+        /// ap-chengdu：成都
+        /// ap-chongqing：重庆
+        /// ap-hongkong：中国香港
+        /// ap-nanjing：南京
+        /// ap-tianjin：天津
+        /// ap-shenzhen：深圳
+        /// ap-qingyuan：清远
+        /// ap-guangzhou-open：广州Open
+        /// ap-shenzhen-fsi：深圳金融
+        /// ap-beijing-fsi：北京金融
+        /// ap-shanghai-fsi：上海金融
+        /// ap-hangzhou-ec：杭州
+        /// ap-fuzhou-ec：福州
+        /// ap-jinan-ec：济南
+        /// ap-wuhan-ec：武汉
+        /// ap-changsha-ec：长沙
+        /// ap-hefei-ec：合肥
+        /// ap-shenyang-ec：沈阳
+        /// ap-xian-ec：西安
+        /// ap-xibei-ec：西北
+        /// ap-shijiazhuang-ec：石家庄
+        /// ap-zhengzhou-ec：郑州
+        /// ap-qingyuan-xinan：清远信安
+        /// ap-shanghai-adc：上海ADC
+        /// ap-shanghai-wxp-ops：上海无线城市运营
+        /// ap-singapore：新加坡
+        /// ap-seoul：首尔
+        /// ap-tokyo：东京
+        /// ap-osaka：大阪
+        /// ap-mumbai：孟买
+        /// ap-bangkok：曼谷
+        /// ap-jakarta：雅加达
+        /// ap-taipei：台北
+        /// ap-johorbahru：柔佛巴鲁
+        /// eu-frankfurt：法兰克福
+        /// eu-moscow：莫斯科
+        /// na-ashburn：弗吉尼亚
+        /// na-siliconvalley：硅谷
+        /// na-toronto：多伦多
+        /// sa-saopaulo：圣保罗
+        /// me-saudi-arabia：沙特阿拉伯
+        /// </summary>
+        [JsonProperty("ApRegion")]
+        public string[] ApRegion{ get; set; }
 
         /// <summary>
         /// 防护等级，可选值100,200,300
@@ -193,6 +249,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "FlowMode", this.FlowMode);
             this.SetParamSimple(map, prefix + "ClsStatus", this.ClsStatus);
+            this.SetParamArraySimple(map, prefix + "ApRegion.", this.ApRegion);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamArraySimple(map, prefix + "CdcClusters.", this.CdcClusters);
             this.SetParamSimple(map, prefix + "AlbType", this.AlbType);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1520</VersionPrefix>
+    <VersionPrefix>3.0.1523</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,9 +82,16 @@
     <Compile Include="V20220601\Models\DeleteAccountGroupResourcesRequest.cs" />
     <Compile Include="V20220601\Models\DeleteAccountGroupResourcesResponse.cs" />
     <Compile Include="V20220601\Models\DeleteAccountGroupResponse.cs" />
+    <Compile Include="V20220601\Models\DeleteDeliveryServerRequest.cs" />
+    <Compile Include="V20220601\Models\DeleteDeliveryServerResponse.cs" />
+    <Compile Include="V20220601\Models\DeleteDeliveryStrategyRequest.cs" />
+    <Compile Include="V20220601\Models\DeleteDeliveryStrategyResponse.cs" />
     <Compile Include="V20220601\Models\DeleteDeviceVirtualGroupRequest.cs" />
     <Compile Include="V20220601\Models\DeleteDeviceVirtualGroupResponse.cs" />
     <Compile Include="V20220601\Models\DeleteResourceData.cs" />
+    <Compile Include="V20220601\Models\DeliverServerItem.cs" />
+    <Compile Include="V20220601\Models\DeliveryStrategyData.cs" />
+    <Compile Include="V20220601\Models\DeliveryStrategyItem.cs" />
     <Compile Include="V20220601\Models\DescribeAccountAccountGroupsData.cs" />
     <Compile Include="V20220601\Models\DescribeAccountGroupsData.cs" />
     <Compile Include="V20220601\Models\DescribeAccountGroupsPageResp.cs" />
@@ -125,6 +132,10 @@
     <Compile Include="V20220601\Models\DescribeDLPFileDetectTaskResult.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectTaskResultRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDLPFileDetectTaskResultResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDeliveryServerRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDeliveryServerResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeDeliveryStrategyRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeDeliveryStrategyResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceChildGroupsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceChildGroupsResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDeviceChildGroupsRspData.cs" />
@@ -158,6 +169,9 @@
     <Compile Include="V20220601\Models\DescribeProfileFieldsMenuRequest.cs" />
     <Compile Include="V20220601\Models\DescribeProfileFieldsMenuResponse.cs" />
     <Compile Include="V20220601\Models\DescribeProfileFieldsRspData.cs" />
+    <Compile Include="V20220601\Models\DescribePublicEncryptKeyData.cs" />
+    <Compile Include="V20220601\Models\DescribePublicEncryptKeyRequest.cs" />
+    <Compile Include="V20220601\Models\DescribePublicEncryptKeyResponse.cs" />
     <Compile Include="V20220601\Models\DescribeResourceGrantedAccountGroupsData.cs" />
     <Compile Include="V20220601\Models\DescribeResourceGrantedAccountGroupsRequest.cs" />
     <Compile Include="V20220601\Models\DescribeResourceGrantedAccountGroupsResponse.cs" />
@@ -220,6 +234,12 @@
     <Compile Include="V20220601\Models\ModifyBusinessResourceResponse.cs" />
     <Compile Include="V20220601\Models\ModifyCompanyDirectoryConfigRequest.cs" />
     <Compile Include="V20220601\Models\ModifyCompanyDirectoryConfigResponse.cs" />
+    <Compile Include="V20220601\Models\ModifyDeliveryServerData.cs" />
+    <Compile Include="V20220601\Models\ModifyDeliveryServerRequest.cs" />
+    <Compile Include="V20220601\Models\ModifyDeliveryServerResponse.cs" />
+    <Compile Include="V20220601\Models\ModifyDeliveryStrategyData.cs" />
+    <Compile Include="V20220601\Models\ModifyDeliveryStrategyRequest.cs" />
+    <Compile Include="V20220601\Models\ModifyDeliveryStrategyResponse.cs" />
     <Compile Include="V20220601\Models\ModifyDeviceTrustStatusRequest.cs" />
     <Compile Include="V20220601\Models\ModifyDeviceTrustStatusResponse.cs" />
     <Compile Include="V20220601\Models\ModifyVirtualDeviceGroupsReqItem.cs" />

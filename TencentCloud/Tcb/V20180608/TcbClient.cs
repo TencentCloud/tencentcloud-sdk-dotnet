@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1522";
+       private const string sdkVersion = "SDK_NET_3.0.1523";
 
         /// <summary>
         /// Client constructor.
@@ -2245,6 +2245,27 @@ namespace TencentCloud.Tcb.V20180608
         public ListTablesResponse ListTablesSync(ListTablesRequest req)
         {
             return InternalRequestAsync<ListTablesResponse>(req, "ListTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启停AI模型，只支持内置分组 cloudbase 和 hunyuan-image
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIModelStatusRequest"/></param>
+        /// <returns><see cref="ModifyAIModelStatusResponse"/></returns>
+        public Task<ModifyAIModelStatusResponse> ModifyAIModelStatus(ModifyAIModelStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAIModelStatusResponse>(req, "ModifyAIModelStatus");
+        }
+
+        /// <summary>
+        /// 启停AI模型，只支持内置分组 cloudbase 和 hunyuan-image
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIModelStatusRequest"/></param>
+        /// <returns><see cref="ModifyAIModelStatusResponse"/></returns>
+        public ModifyAIModelStatusResponse ModifyAIModelStatusSync(ModifyAIModelStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAIModelStatusResponse>(req, "ModifyAIModelStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

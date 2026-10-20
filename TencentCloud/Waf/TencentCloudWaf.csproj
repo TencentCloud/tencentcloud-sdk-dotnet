@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1521</VersionPrefix>
+    <VersionPrefix>3.0.1523</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -678,6 +678,7 @@
     <Compile Include="V20180125\Models\QueryBypassAllStatusResponse.cs" />
     <Compile Include="V20180125\Models\QueryClientMsgRequest.cs" />
     <Compile Include="V20180125\Models\QueryClientMsgResponse.cs" />
+    <Compile Include="V20180125\Models\RCEExtendPkg.cs" />
     <Compile Include="V20180125\Models\RCEPkg.cs" />
     <Compile Include="V20180125\Models\RateLimitCommonRsp.cs" />
     <Compile Include="V20180125\Models\RedirectInfo.cs" />
@@ -749,6 +750,8 @@
     <Compile Include="V20180125\Models\UpsertSessionRequest.cs" />
     <Compile Include="V20180125\Models\UpsertSessionResponse.cs" />
     <Compile Include="V20180125\Models\UpstreamRule.cs" />
+    <Compile Include="V20180125\Models\UrlDetectResult.cs" />
+    <Compile Include="V20180125\Models\UrlHitInfo.cs" />
     <Compile Include="V20180125\Models\UserDomainInfo.cs" />
     <Compile Include="V20180125\Models\UserSignatureRule.cs" />
     <Compile Include="V20180125\Models\UserWhiteRule.cs" />

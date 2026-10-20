@@ -25,19 +25,19 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名id
+        /// <p>域名id</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

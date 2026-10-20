@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string ResourceIds{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态，0表示关闭，1表示开启
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -67,10 +67,16 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? UsedNum{ get; set; }
 
         /// <summary>
-        /// 续费标志
+        /// 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
         /// </summary>
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }
+
+        /// <summary>
+        /// 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
+        /// </summary>
+        [JsonProperty("ElasticNodeNum")]
+        public long? ElasticNodeNum{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "InquireNum", this.InquireNum);
             this.SetParamSimple(map, prefix + "UsedNum", this.UsedNum);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "ElasticNodeNum", this.ElasticNodeNum);
         }
     }
 }

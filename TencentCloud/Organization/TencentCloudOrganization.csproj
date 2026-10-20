@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1520</VersionPrefix>
+    <VersionPrefix>3.0.1523</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -112,6 +112,7 @@
     <Compile Include="V20210331\Models\AddShareUnitResponse.cs" />
     <Compile Include="V20210331\Models\AddUserToGroupRequest.cs" />
     <Compile Include="V20210331\Models\AddUserToGroupResponse.cs" />
+    <Compile Include="V20210331\Models\ApplyRoleConfiguration.cs" />
     <Compile Include="V20210331\Models\AttachPolicyRequest.cs" />
     <Compile Include="V20210331\Models\AttachPolicyResponse.cs" />
     <Compile Include="V20210331\Models\AuditPermissionApplyOrderRequest.cs" />
@@ -150,6 +151,8 @@
     <Compile Include="V20210331\Models\CreatePolicyResponse.cs" />
     <Compile Include="V20210331\Models\CreateRoleAssignmentRequest.cs" />
     <Compile Include="V20210331\Models\CreateRoleAssignmentResponse.cs" />
+    <Compile Include="V20210331\Models\CreateRoleConfigurationApplyScopeRequest.cs" />
+    <Compile Include="V20210331\Models\CreateRoleConfigurationApplyScopeResponse.cs" />
     <Compile Include="V20210331\Models\CreateRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\CreateRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\CreateSCIMCredentialRequest.cs" />
@@ -180,6 +183,8 @@
     <Compile Include="V20210331\Models\DeletePolicyResponse.cs" />
     <Compile Include="V20210331\Models\DeleteRoleAssignmentRequest.cs" />
     <Compile Include="V20210331\Models\DeleteRoleAssignmentResponse.cs" />
+    <Compile Include="V20210331\Models\DeleteRoleConfigurationApplyScopeRequest.cs" />
+    <Compile Include="V20210331\Models\DeleteRoleConfigurationApplyScopeResponse.cs" />
     <Compile Include="V20210331\Models\DeleteRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\DeleteRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\DeleteSCIMCredentialRequest.cs" />
@@ -293,6 +298,8 @@
     <Compile Include="V20210331\Models\ListOrganizationIdentityResponse.cs" />
     <Compile Include="V20210331\Models\ListOrganizationServiceRequest.cs" />
     <Compile Include="V20210331\Models\ListOrganizationServiceResponse.cs" />
+    <Compile Include="V20210331\Models\ListPermissionApplyOrdersRequest.cs" />
+    <Compile Include="V20210331\Models\ListPermissionApplyOrdersResponse.cs" />
     <Compile Include="V20210331\Models\ListPermissionPoliciesInRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\ListPermissionPoliciesInRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\ListPoliciesForTarget.cs" />
@@ -303,6 +310,8 @@
     <Compile Include="V20210331\Models\ListPolicyNode.cs" />
     <Compile Include="V20210331\Models\ListRoleAssignmentsRequest.cs" />
     <Compile Include="V20210331\Models\ListRoleAssignmentsResponse.cs" />
+    <Compile Include="V20210331\Models\ListRoleConfigurationApplyScopesRequest.cs" />
+    <Compile Include="V20210331\Models\ListRoleConfigurationApplyScopesResponse.cs" />
     <Compile Include="V20210331\Models\ListRoleConfigurationProvisioningsRequest.cs" />
     <Compile Include="V20210331\Models\ListRoleConfigurationProvisioningsResponse.cs" />
     <Compile Include="V20210331\Models\ListRoleConfigurationsRequest.cs" />
@@ -340,6 +349,7 @@
     <Compile Include="V20210331\Models\OrgProductFinancial.cs" />
     <Compile Include="V20210331\Models\OrganizationServiceAssign.cs" />
     <Compile Include="V20210331\Models\OrganizationServiceAssignMember.cs" />
+    <Compile Include="V20210331\Models\PermissionApplyOrder.cs" />
     <Compile Include="V20210331\Models\PolicyDetail.cs" />
     <Compile Include="V20210331\Models\ProductResource.cs" />
     <Compile Include="V20210331\Models\ProvisionRoleConfigurationRequest.cs" />

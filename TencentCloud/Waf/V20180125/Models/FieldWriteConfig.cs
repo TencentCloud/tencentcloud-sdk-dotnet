@@ -48,6 +48,24 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("EnableResponse")]
         public long? EnableResponse{ get; set; }
 
+        /// <summary>
+        /// <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+        /// </summary>
+        [JsonProperty("EnableResponseHeaders")]
+        public long? EnableResponseHeaders{ get; set; }
+
+        /// <summary>
+        /// <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+        /// </summary>
+        [JsonProperty("EnableResponseLength")]
+        public long? EnableResponseLength{ get; set; }
+
+        /// <summary>
+        /// <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+        /// </summary>
+        [JsonProperty("EnableResponseStatusLine")]
+        public long? EnableResponseStatusLine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "EnableBody", this.EnableBody);
             this.SetParamSimple(map, prefix + "EnableBot", this.EnableBot);
             this.SetParamSimple(map, prefix + "EnableResponse", this.EnableResponse);
+            this.SetParamSimple(map, prefix + "EnableResponseHeaders", this.EnableResponseHeaders);
+            this.SetParamSimple(map, prefix + "EnableResponseLength", this.EnableResponseLength);
+            this.SetParamSimple(map, prefix + "EnableResponseStatusLine", this.EnableResponseStatusLine);
         }
     }
 }

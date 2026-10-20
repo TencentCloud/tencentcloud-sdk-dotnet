@@ -42,6 +42,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
+        /// <summary>
+        /// <p>标签描述列表，通过指定该参数可以同时绑定标签到应用创建的主题和日志集。</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamSimple(map, prefix + "AccessType", this.AccessType);
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

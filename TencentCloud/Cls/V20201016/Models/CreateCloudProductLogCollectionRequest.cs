@@ -90,6 +90,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
+        /// </summary>
+        [JsonProperty("TopicConfig")]
+        public CloudProductTopicConfig TopicConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "TopicConfig.", this.TopicConfig);
         }
     }
 }

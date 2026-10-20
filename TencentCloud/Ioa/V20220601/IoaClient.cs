@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1520";
+       private const string sdkVersion = "SDK_NET_3.0.1523";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,48 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 删除转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryServer
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeliveryServerRequest"/></param>
+        /// <returns><see cref="DeleteDeliveryServerResponse"/></returns>
+        public Task<DeleteDeliveryServerResponse> DeleteDeliveryServer(DeleteDeliveryServerRequest req)
+        {
+            return InternalRequestAsync<DeleteDeliveryServerResponse>(req, "DeleteDeliveryServer");
+        }
+
+        /// <summary>
+        /// 删除转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryServer
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeliveryServerRequest"/></param>
+        /// <returns><see cref="DeleteDeliveryServerResponse"/></returns>
+        public DeleteDeliveryServerResponse DeleteDeliveryServerSync(DeleteDeliveryServerRequest req)
+        {
+            return InternalRequestAsync<DeleteDeliveryServerResponse>(req, "DeleteDeliveryServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryStrategy
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeliveryStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDeliveryStrategyResponse"/></returns>
+        public Task<DeleteDeliveryStrategyResponse> DeleteDeliveryStrategy(DeleteDeliveryStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDeliveryStrategyResponse>(req, "DeleteDeliveryStrategy");
+        }
+
+        /// <summary>
+        /// 删除转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryStrategy
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeliveryStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDeliveryStrategyResponse"/></returns>
+        public DeleteDeliveryStrategyResponse DeleteDeliveryStrategySync(DeleteDeliveryStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDeliveryStrategyResponse>(req, "DeleteDeliveryStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除终端自定义分组，私有化调用path为：/capi/Assets/Device/DeleteDeviceVirtualGroup
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceVirtualGroupRequest"/></param>
@@ -537,6 +579,48 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 转发服务器详情，私有化调用path为：capi/LogCenter/DescribeDeliveryServer
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryServerRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryServerResponse"/></returns>
+        public Task<DescribeDeliveryServerResponse> DescribeDeliveryServer(DescribeDeliveryServerRequest req)
+        {
+            return InternalRequestAsync<DescribeDeliveryServerResponse>(req, "DescribeDeliveryServer");
+        }
+
+        /// <summary>
+        /// 转发服务器详情，私有化调用path为：capi/LogCenter/DescribeDeliveryServer
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryServerRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryServerResponse"/></returns>
+        public DescribeDeliveryServerResponse DescribeDeliveryServerSync(DescribeDeliveryServerRequest req)
+        {
+            return InternalRequestAsync<DescribeDeliveryServerResponse>(req, "DescribeDeliveryServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转发策略详情，私有化调用path为：capi/LogCenter/DeliveryLog/DescribeDeliveryStrategy
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryStrategyResponse"/></returns>
+        public Task<DescribeDeliveryStrategyResponse> DescribeDeliveryStrategy(DescribeDeliveryStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDeliveryStrategyResponse>(req, "DescribeDeliveryStrategy");
+        }
+
+        /// <summary>
+        /// 转发策略详情，私有化调用path为：capi/LogCenter/DeliveryLog/DescribeDeliveryStrategy
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryStrategyRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryStrategyResponse"/></returns>
+        public DescribeDeliveryStrategyResponse DescribeDeliveryStrategySync(DescribeDeliveryStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeDeliveryStrategyResponse>(req, "DescribeDeliveryStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceChildGroupsRequest"/></param>
@@ -747,6 +831,27 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeProfileFieldsMenuResponse DescribeProfileFieldsMenuSync(DescribeProfileFieldsMenuRequest req)
         {
             return InternalRequestAsync<DescribeProfileFieldsMenuResponse>(req, "DescribeProfileFieldsMenu")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用于RSA加密的公钥，对敏感数据进行加密传输。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicEncryptKeyRequest"/></param>
+        /// <returns><see cref="DescribePublicEncryptKeyResponse"/></returns>
+        public Task<DescribePublicEncryptKeyResponse> DescribePublicEncryptKey(DescribePublicEncryptKeyRequest req)
+        {
+            return InternalRequestAsync<DescribePublicEncryptKeyResponse>(req, "DescribePublicEncryptKey");
+        }
+
+        /// <summary>
+        /// 获取用于RSA加密的公钥，对敏感数据进行加密传输。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicEncryptKeyRequest"/></param>
+        /// <returns><see cref="DescribePublicEncryptKeyResponse"/></returns>
+        public DescribePublicEncryptKeyResponse DescribePublicEncryptKeySync(DescribePublicEncryptKeyRequest req)
+        {
+            return InternalRequestAsync<DescribePublicEncryptKeyResponse>(req, "DescribePublicEncryptKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1062,6 +1167,48 @@ namespace TencentCloud.Ioa.V20220601
         public ModifyCompanyDirectoryConfigResponse ModifyCompanyDirectoryConfigSync(ModifyCompanyDirectoryConfigRequest req)
         {
             return InternalRequestAsync<ModifyCompanyDirectoryConfigResponse>(req, "ModifyCompanyDirectoryConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建或编辑日志转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryServer
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeliveryServerRequest"/></param>
+        /// <returns><see cref="ModifyDeliveryServerResponse"/></returns>
+        public Task<ModifyDeliveryServerResponse> ModifyDeliveryServer(ModifyDeliveryServerRequest req)
+        {
+            return InternalRequestAsync<ModifyDeliveryServerResponse>(req, "ModifyDeliveryServer");
+        }
+
+        /// <summary>
+        /// 创建或编辑日志转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryServer
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeliveryServerRequest"/></param>
+        /// <returns><see cref="ModifyDeliveryServerResponse"/></returns>
+        public ModifyDeliveryServerResponse ModifyDeliveryServerSync(ModifyDeliveryServerRequest req)
+        {
+            return InternalRequestAsync<ModifyDeliveryServerResponse>(req, "ModifyDeliveryServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建或编辑日志转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryStrategy
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeliveryStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDeliveryStrategyResponse"/></returns>
+        public Task<ModifyDeliveryStrategyResponse> ModifyDeliveryStrategy(ModifyDeliveryStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDeliveryStrategyResponse>(req, "ModifyDeliveryStrategy");
+        }
+
+        /// <summary>
+        /// 创建或编辑日志转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryStrategy
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeliveryStrategyRequest"/></param>
+        /// <returns><see cref="ModifyDeliveryStrategyResponse"/></returns>
+        public ModifyDeliveryStrategyResponse ModifyDeliveryStrategySync(ModifyDeliveryStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyDeliveryStrategyResponse>(req, "ModifyDeliveryStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

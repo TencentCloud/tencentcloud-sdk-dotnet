@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1523";
 
         /// <summary>
         /// Client constructor.
@@ -4951,6 +4951,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 新购图片云存资源包
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseImagePackageRequest"/></param>
+        /// <returns><see cref="PurchaseImagePackageResponse"/></returns>
+        public Task<PurchaseImagePackageResponse> PurchaseImagePackage(PurchaseImagePackageRequest req)
+        {
+            return InternalRequestAsync<PurchaseImagePackageResponse>(req, "PurchaseImagePackage");
+        }
+
+        /// <summary>
+        /// 新购图片云存资源包
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseImagePackageRequest"/></param>
+        /// <returns><see cref="PurchaseImagePackageResponse"/></returns>
+        public PurchaseImagePackageResponse PurchaseImagePackageSync(PurchaseImagePackageRequest req)
+        {
+            return InternalRequestAsync<PurchaseImagePackageResponse>(req, "PurchaseImagePackage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新购视频云存资源包
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseVideoPackageRequest"/></param>
+        /// <returns><see cref="PurchaseVideoPackageResponse"/></returns>
+        public Task<PurchaseVideoPackageResponse> PurchaseVideoPackage(PurchaseVideoPackageRequest req)
+        {
+            return InternalRequestAsync<PurchaseVideoPackageResponse>(req, "PurchaseVideoPackage");
+        }
+
+        /// <summary>
+        /// 新购视频云存资源包
+        /// </summary>
+        /// <param name="req"><see cref="PurchaseVideoPackageRequest"/></param>
+        /// <returns><see cref="PurchaseVideoPackageResponse"/></returns>
+        public PurchaseVideoPackageResponse PurchaseVideoPackageSync(PurchaseVideoPackageRequest req)
+        {
+            return InternalRequestAsync<PurchaseVideoPackageResponse>(req, "PurchaseVideoPackage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
         /// </summary>
         /// <param name="req"><see cref="ReleaseStudioProductRequest"/></param>
@@ -5261,6 +5303,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ShareDeviceToUserResponse ShareDeviceToUserSync(ShareDeviceToUserRequest req)
         {
             return InternalRequestAsync<ShareDeviceToUserResponse>(req, "ShareDeviceToUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用套餐用量上报
+        /// </summary>
+        /// <param name="req"><see cref="StartPackageUsageReportRequest"/></param>
+        /// <returns><see cref="StartPackageUsageReportResponse"/></returns>
+        public Task<StartPackageUsageReportResponse> StartPackageUsageReport(StartPackageUsageReportRequest req)
+        {
+            return InternalRequestAsync<StartPackageUsageReportResponse>(req, "StartPackageUsageReport");
+        }
+
+        /// <summary>
+        /// 启用套餐用量上报
+        /// </summary>
+        /// <param name="req"><see cref="StartPackageUsageReportRequest"/></param>
+        /// <returns><see cref="StartPackageUsageReportResponse"/></returns>
+        public StartPackageUsageReportResponse StartPackageUsageReportSync(StartPackageUsageReportRequest req)
+        {
+            return InternalRequestAsync<StartPackageUsageReportResponse>(req, "StartPackageUsageReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停用套餐用量上报
+        /// </summary>
+        /// <param name="req"><see cref="StopPackageUsageReportRequest"/></param>
+        /// <returns><see cref="StopPackageUsageReportResponse"/></returns>
+        public Task<StopPackageUsageReportResponse> StopPackageUsageReport(StopPackageUsageReportRequest req)
+        {
+            return InternalRequestAsync<StopPackageUsageReportResponse>(req, "StopPackageUsageReport");
+        }
+
+        /// <summary>
+        /// 停用套餐用量上报
+        /// </summary>
+        /// <param name="req"><see cref="StopPackageUsageReportRequest"/></param>
+        /// <returns><see cref="StopPackageUsageReportResponse"/></returns>
+        public StopPackageUsageReportResponse StopPackageUsageReportSync(StopPackageUsageReportRequest req)
+        {
+            return InternalRequestAsync<StopPackageUsageReportResponse>(req, "StopPackageUsageReport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

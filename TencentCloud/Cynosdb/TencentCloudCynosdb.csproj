@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1522</VersionPrefix>
+    <VersionPrefix>3.0.1523</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,6 +101,8 @@
     <Compile Include="V20190107\Models\CalculateBackupSaveSecExpiresResponse.cs" />
     <Compile Include="V20190107\Models\CancelClusterServerlessScalePlanRequest.cs" />
     <Compile Include="V20190107\Models\CancelClusterServerlessScalePlanResponse.cs" />
+    <Compile Include="V20190107\Models\CancelTaskRequest.cs" />
+    <Compile Include="V20190107\Models\CancelTaskResponse.cs" />
     <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceRequest.cs" />
     <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceResponse.cs" />
     <Compile Include="V20190107\Models\CheckItem.cs" />
@@ -346,6 +348,8 @@
     <Compile Include="V20190107\Models\DescribeProxyNodesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeProxySpecsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeProxySpecsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeProxyZoneStocksRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeProxyZoneStocksResponse.cs" />
     <Compile Include="V20190107\Models\DescribeRedoLogListByVaultItem.cs" />
     <Compile Include="V20190107\Models\DescribeRedoLogListByVaultRequest.cs" />
     <Compile Include="V20190107\Models\DescribeRedoLogListByVaultResponse.cs" />
@@ -604,6 +608,7 @@
     <Compile Include="V20190107\Models\ProxySpec.cs" />
     <Compile Include="V20190107\Models\ProxyVersionInfo.cs" />
     <Compile Include="V20190107\Models\ProxyZone.cs" />
+    <Compile Include="V20190107\Models\ProxyZoneStockInfo.cs" />
     <Compile Include="V20190107\Models\QueryFilter.cs" />
     <Compile Include="V20190107\Models\QueryParamFilter.cs" />
     <Compile Include="V20190107\Models\QuerySimpleFilter.cs" />

@@ -102,6 +102,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ClientIP")]
         public string ClientIP{ get; set; }
 
+        /// <summary>
+        /// 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+        /// 入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+        /// </summary>
+        [JsonProperty("History")]
+        public string[] History{ get; set; }
+
+        /// <summary>
+        /// 待检测的URL列表，用于恶意URL检测
+        /// 入参限制：最多50个，单个URL长度不超过2048字符，超出截断
+        /// </summary>
+        [JsonProperty("Urls")]
+        public string[] Urls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +135,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamObj(map, prefix + "IntentContent.", this.IntentContent);
             this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
+            this.SetParamArraySimple(map, prefix + "History.", this.History);
+            this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
         }
     }
 }

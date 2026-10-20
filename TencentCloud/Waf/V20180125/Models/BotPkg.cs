@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string ResourceIds{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态，0表示关闭，1表示开启
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 续费标志	
+        /// 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
         /// </summary>
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }

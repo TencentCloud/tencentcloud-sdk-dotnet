@@ -25,31 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 图片 base64 数据。
-        /// - base64 编码后大小不可超过5M。
-        /// - jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-        /// - 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-        /// - 人脸尺寸大于100X100像素。
-        /// - 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// <p>图片 base64 数据。</p><ul><li>base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 。
-        /// - 对应图片 base64 编码后大小不可超过5M。
-        /// - jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-        /// - Url、Image必须提供一个，如果都提供，只使用 Url。 
-        /// - 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-        /// - 人脸尺寸大于100X100像素。
-        /// - 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-        /// - 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// <p>图片的 Url 。</p><ul><li>对应图片 base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。</li><li>Url、Image必须提供一个，如果都提供，只使用 Url。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
+        /// <p>人脸识别服务所用的算法模型版本。目前入参支持“3.0“。</p>
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }

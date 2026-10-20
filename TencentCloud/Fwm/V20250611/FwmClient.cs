@@ -28,7 +28,7 @@ namespace TencentCloud.Fwm.V20250611
 
        private const string endpoint = "fwm.tencentcloudapi.com";
        private const string version = "2025-06-11";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1523";
 
         /// <summary>
         /// Client constructor.
@@ -596,6 +596,27 @@ namespace TencentCloud.Fwm.V20250611
         public DescribeRiskListResponse DescribeRiskListSync(DescribeRiskListRequest req)
         {
             return InternalRequestAsync<DescribeRiskListResponse>(req, "DescribeRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询规则组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRuleGroupsRequest"/></param>
+        /// <returns><see cref="DescribeRuleGroupsResponse"/></returns>
+        public Task<DescribeRuleGroupsResponse> DescribeRuleGroups(DescribeRuleGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeRuleGroupsResponse>(req, "DescribeRuleGroups");
+        }
+
+        /// <summary>
+        /// 查询规则组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRuleGroupsRequest"/></param>
+        /// <returns><see cref="DescribeRuleGroupsResponse"/></returns>
+        public DescribeRuleGroupsResponse DescribeRuleGroupsSync(DescribeRuleGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeRuleGroupsResponse>(req, "DescribeRuleGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

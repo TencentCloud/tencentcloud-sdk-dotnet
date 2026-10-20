@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string ResourceIds{ get; set; }
 
         /// <summary>
-        /// <p>状态</p>
+        /// 状态，0表示关闭，1表示开启
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

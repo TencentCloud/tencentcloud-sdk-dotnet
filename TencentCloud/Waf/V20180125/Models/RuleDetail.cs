@@ -72,6 +72,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
+        /// <summary>
+        /// <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public ulong? UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DesensitizeSample", this.DesensitizeSample);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

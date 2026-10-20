@@ -162,6 +162,246 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LLMTokenUsage")]
         public LLMTokenUsage LLMTokenUsage{ get; set; }
 
+        /// <summary>
+        /// <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public ulong? Mode{ get; set; }
+
+        /// <summary>
+        /// <p>已配置域名个数。</p><p>按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回实时去重后的接入域名数，统计范围覆盖SaaS接入域名、云原生防护对象（含默认虚拟域名）与四层REIP接入域名，同一域名多条接入记录只计一次。</p>
+        /// </summary>
+        [JsonProperty("DomainCount")]
+        public ulong? DomainCount{ get; set; }
+
+        /// <summary>
+        /// <p>已配置主域名个数。</p><p>按接入域名归属的主域名去重统计；未接入任何域名时为0。</p>
+        /// </summary>
+        [JsonProperty("MainDomainCount")]
+        public ulong? MainDomainCount{ get; set; }
+
+        /// <summary>
+        /// <p>实例当前实时开启的专家规则数量。统计口径：接入一个防护对象（域名）即默认计1个专家规则，即等于该实例的实时接入域名数DomainCount；未接入任何对象时为0。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值ExpertUsage可能存在差异。</p>
+        /// </summary>
+        [JsonProperty("ExpertRuleCount")]
+        public ulong? ExpertRuleCount{ get; set; }
+
+        /// <summary>
+        /// <p>实例下所有接入域名的实时自定义规则条数之和。统计范围包含自定义策略、规则白名单、IP封禁、自定义CC、紧急CC、地域封禁、防信息泄露、防篡改、IP黑白名单等模块；同一条批量规则命中该实例下N个域名时计N条。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照且不做多实例平分，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值CustomUsage可能存在差异。</p>
+        /// </summary>
+        [JsonProperty("CustomRuleCount")]
+        public ulong? CustomRuleCount{ get; set; }
+
+        /// <summary>
+        /// <p>实例30天内QPS峰值</p>
+        /// </summary>
+        [JsonProperty("MaxQPS")]
+        public ulong? MaxQPS{ get; set; }
+
+        /// <summary>
+        /// <p>qps扩展包信息</p>
+        /// </summary>
+        [JsonProperty("QPS")]
+        public QPSPackageNew QPS{ get; set; }
+
+        /// <summary>
+        /// <p>域名扩展包信息</p>
+        /// </summary>
+        [JsonProperty("DomainPkg")]
+        public DomainPackageNew DomainPkg{ get; set; }
+
+        /// <summary>
+        /// <p>业务安全包</p>
+        /// </summary>
+        [JsonProperty("FraudPkg")]
+        public FraudPkg FraudPkg{ get; set; }
+
+        /// <summary>
+        /// <p>Bot资源包</p>
+        /// </summary>
+        [JsonProperty("BotPkg")]
+        public BotPkg BotPkg{ get; set; }
+
+        /// <summary>
+        /// <p>bot的qps详情</p>
+        /// </summary>
+        [JsonProperty("BotQPS")]
+        public BotQPS BotQPS{ get; set; }
+
+        /// <summary>
+        /// <p>带宽峰值，单位为B/s(字节每秒)</p>
+        /// </summary>
+        [JsonProperty("MaxBandwidth")]
+        public ulong? MaxBandwidth{ get; set; }
+
+        /// <summary>
+        /// <p>购买的qps规格</p>
+        /// </summary>
+        [JsonProperty("QpsStandard")]
+        public ulong? QpsStandard{ get; set; }
+
+        /// <summary>
+        /// <p>购买的带宽规格</p>
+        /// </summary>
+        [JsonProperty("BandwidthStandard")]
+        public ulong? BandwidthStandard{ get; set; }
+
+        /// <summary>
+        /// <p>实例状态</p>
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// <p>实例沙箱qps值</p>
+        /// </summary>
+        [JsonProperty("SandboxQps")]
+        public ulong? SandboxQps{ get; set; }
+
+        /// <summary>
+        /// <p>重保包</p>
+        /// </summary>
+        [JsonProperty("MajorEventsPkg")]
+        public MajorEventsPkg MajorEventsPkg{ get; set; }
+
+        /// <summary>
+        /// <p>混合云子节点包</p>
+        /// </summary>
+        [JsonProperty("HybridPkg")]
+        public HybridPkg HybridPkg{ get; set; }
+
+        /// <summary>
+        /// <p>API安全资源包</p>
+        /// </summary>
+        [JsonProperty("ApiPkg")]
+        public ApiPkg ApiPkg{ get; set; }
+
+        /// <summary>
+        /// <p>小程序安全加速包</p>
+        /// </summary>
+        [JsonProperty("MiniPkg")]
+        public MiniPkg MiniPkg{ get; set; }
+
+        /// <summary>
+        /// <p>小程序qps规格</p>
+        /// </summary>
+        [JsonProperty("MiniQpsStandard")]
+        public ulong? MiniQpsStandard{ get; set; }
+
+        /// <summary>
+        /// <p>小程序qps峰值</p>
+        /// </summary>
+        [JsonProperty("MiniMaxQPS")]
+        public ulong? MiniMaxQPS{ get; set; }
+
+        /// <summary>
+        /// <p>最近一次超量时间</p>
+        /// </summary>
+        [JsonProperty("LastQpsExceedTime")]
+        public string LastQpsExceedTime{ get; set; }
+
+        /// <summary>
+        /// <p>小程序安全接入ID数量扩张包</p>
+        /// </summary>
+        [JsonProperty("MiniExtendPkg")]
+        public MiniExtendPkg MiniExtendPkg{ get; set; }
+
+        /// <summary>
+        /// <p>最近3天最大qps</p>
+        /// </summary>
+        [JsonProperty("Last3MaxQPS")]
+        public ulong? Last3MaxQPS{ get; set; }
+
+        /// <summary>
+        /// <p>最近3天最大带宽</p>
+        /// </summary>
+        [JsonProperty("Last3MaxBandwidth")]
+        public ulong? Last3MaxBandwidth{ get; set; }
+
+        /// <summary>
+        /// <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+        /// </summary>
+        [JsonProperty("Last7MaxMiniBandwidth")]
+        public ulong? Last7MaxMiniBandwidth{ get; set; }
+
+        /// <summary>
+        /// <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+        /// </summary>
+        [JsonProperty("MiniBandwidthStandard")]
+        public ulong? MiniBandwidthStandard{ get; set; }
+
+        /// <summary>
+        /// <p>重保增强包</p>
+        /// </summary>
+        [JsonProperty("MajorEventsProPkg")]
+        public MajorEventsProPkg MajorEventsProPkg{ get; set; }
+
+        /// <summary>
+        /// <p>实例的网络配置</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public NetworkConfig NetworkConfig{ get; set; }
+
+        /// <summary>
+        /// <p>RCE设备安全信息包</p>
+        /// </summary>
+        [JsonProperty("RCEPkg")]
+        public RCEPkg RCEPkg{ get; set; }
+
+        /// <summary>
+        /// <p>超量策略。0：超量沙箱<br>1：超量限流</p>
+        /// </summary>
+        [JsonProperty("ExceedPolicy")]
+        public long? ExceedPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>弹性资源Id</p>
+        /// </summary>
+        [JsonProperty("ElasticResourceId")]
+        public string ElasticResourceId{ get; set; }
+
+        /// <summary>
+        /// <p>预付费大模型安全信息包</p>
+        /// </summary>
+        [JsonProperty("LLMMonPkg")]
+        public LLMMonPkg LLMMonPkg{ get; set; }
+
+        /// <summary>
+        /// <p>地域id</p>
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public ulong? RegionId{ get; set; }
+
+        /// <summary>
+        /// <p>BOT安全护航信息</p>
+        /// </summary>
+        [JsonProperty("BotSecurityPkg")]
+        public BotSecurityPkg BotSecurityPkg{ get; set; }
+
+        /// <summary>
+        /// <p>BOT安全监测资源信息</p>
+        /// </summary>
+        [JsonProperty("BotMonitorPkg")]
+        public BotMonitorPkg BotMonitorPkg{ get; set; }
+
+        /// <summary>
+        /// <p>独享ip资源信息</p>
+        /// </summary>
+        [JsonProperty("DedicatedIPPkg")]
+        public DedicatedIPPkg DedicatedIPPkg{ get; set; }
+
+        /// <summary>
+        /// <p>已经配置独享ip的数量</p>
+        /// </summary>
+        [JsonProperty("DedicatedIPCount")]
+        public long? DedicatedIPCount{ get; set; }
+
+        /// <summary>
+        /// <p>标签结构体</p>
+        /// </summary>
+        [JsonProperty("TagInfos")]
+        public TagInfo[] TagInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +431,46 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
             this.SetParamObj(map, prefix + "LLMPkg.", this.LLMPkg);
             this.SetParamObj(map, prefix + "LLMTokenUsage.", this.LLMTokenUsage);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "DomainCount", this.DomainCount);
+            this.SetParamSimple(map, prefix + "MainDomainCount", this.MainDomainCount);
+            this.SetParamSimple(map, prefix + "ExpertRuleCount", this.ExpertRuleCount);
+            this.SetParamSimple(map, prefix + "CustomRuleCount", this.CustomRuleCount);
+            this.SetParamSimple(map, prefix + "MaxQPS", this.MaxQPS);
+            this.SetParamObj(map, prefix + "QPS.", this.QPS);
+            this.SetParamObj(map, prefix + "DomainPkg.", this.DomainPkg);
+            this.SetParamObj(map, prefix + "FraudPkg.", this.FraudPkg);
+            this.SetParamObj(map, prefix + "BotPkg.", this.BotPkg);
+            this.SetParamObj(map, prefix + "BotQPS.", this.BotQPS);
+            this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
+            this.SetParamSimple(map, prefix + "QpsStandard", this.QpsStandard);
+            this.SetParamSimple(map, prefix + "BandwidthStandard", this.BandwidthStandard);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SandboxQps", this.SandboxQps);
+            this.SetParamObj(map, prefix + "MajorEventsPkg.", this.MajorEventsPkg);
+            this.SetParamObj(map, prefix + "HybridPkg.", this.HybridPkg);
+            this.SetParamObj(map, prefix + "ApiPkg.", this.ApiPkg);
+            this.SetParamObj(map, prefix + "MiniPkg.", this.MiniPkg);
+            this.SetParamSimple(map, prefix + "MiniQpsStandard", this.MiniQpsStandard);
+            this.SetParamSimple(map, prefix + "MiniMaxQPS", this.MiniMaxQPS);
+            this.SetParamSimple(map, prefix + "LastQpsExceedTime", this.LastQpsExceedTime);
+            this.SetParamObj(map, prefix + "MiniExtendPkg.", this.MiniExtendPkg);
+            this.SetParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
+            this.SetParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
+            this.SetParamSimple(map, prefix + "Last7MaxMiniBandwidth", this.Last7MaxMiniBandwidth);
+            this.SetParamSimple(map, prefix + "MiniBandwidthStandard", this.MiniBandwidthStandard);
+            this.SetParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
+            this.SetParamObj(map, prefix + "NetworkConfig.", this.NetworkConfig);
+            this.SetParamObj(map, prefix + "RCEPkg.", this.RCEPkg);
+            this.SetParamSimple(map, prefix + "ExceedPolicy", this.ExceedPolicy);
+            this.SetParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);
+            this.SetParamObj(map, prefix + "LLMMonPkg.", this.LLMMonPkg);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamObj(map, prefix + "BotSecurityPkg.", this.BotSecurityPkg);
+            this.SetParamObj(map, prefix + "BotMonitorPkg.", this.BotMonitorPkg);
+            this.SetParamObj(map, prefix + "DedicatedIPPkg.", this.DedicatedIPPkg);
+            this.SetParamSimple(map, prefix + "DedicatedIPCount", this.DedicatedIPCount);
+            this.SetParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
         }
     }
 }

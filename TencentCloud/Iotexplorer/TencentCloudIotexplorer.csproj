@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1521</VersionPrefix>
+    <VersionPrefix>3.0.1523</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -575,6 +575,10 @@
     <Compile Include="V20190423\Models\PublishMessageResponse.cs" />
     <Compile Include="V20190423\Models\PublishRRPCMessageRequest.cs" />
     <Compile Include="V20190423\Models\PublishRRPCMessageResponse.cs" />
+    <Compile Include="V20190423\Models\PurchaseImagePackageRequest.cs" />
+    <Compile Include="V20190423\Models\PurchaseImagePackageResponse.cs" />
+    <Compile Include="V20190423\Models\PurchaseVideoPackageRequest.cs" />
+    <Compile Include="V20190423\Models\PurchaseVideoPackageResponse.cs" />
     <Compile Include="V20190423\Models\RegisteredDeviceNetTypeInfo.cs" />
     <Compile Include="V20190423\Models\RegisteredDeviceTypeInfo.cs" />
     <Compile Include="V20190423\Models\ReleaseStudioProductRequest.cs" />
@@ -636,6 +640,10 @@
     <Compile Include="V20190423\Models\SeeTaskPersonInfo.cs" />
     <Compile Include="V20190423\Models\ShareDeviceToUserRequest.cs" />
     <Compile Include="V20190423\Models\ShareDeviceToUserResponse.cs" />
+    <Compile Include="V20190423\Models\StartPackageUsageReportRequest.cs" />
+    <Compile Include="V20190423\Models\StartPackageUsageReportResponse.cs" />
+    <Compile Include="V20190423\Models\StopPackageUsageReportRequest.cs" />
+    <Compile Include="V20190423\Models\StopPackageUsageReportResponse.cs" />
     <Compile Include="V20190423\Models\SubscribedTopicItem.cs" />
     <Compile Include="V20190423\Models\TRTCParams.cs" />
     <Compile Include="V20190423\Models\TWeCallActiveInfo.cs" />

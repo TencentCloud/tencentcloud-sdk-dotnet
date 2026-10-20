@@ -67,16 +67,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
+        /// <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
         /// <p>实例状态</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
+        [System.Obsolete]
         public string InstanceStatus{ get; set; }
+
+        /// <summary>
+        /// <p>实例状态中文描述</p>
+        /// </summary>
+        [JsonProperty("StatusDesc")]
+        public string StatusDesc{ get; set; }
 
         /// <summary>
         /// <p>实例状态描述</p>
         /// </summary>
         [JsonProperty("InstanceStatusDesc")]
+        [System.Obsolete]
         public string InstanceStatusDesc{ get; set; }
+
+        /// <summary>
+        /// <p>Cpu</p><p>单位：核</p>
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
 
         /// <summary>
         /// <p>cpu核数</p>
@@ -84,12 +104,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceCpu")]
         [System.Obsolete]
         public long? InstanceCpu{ get; set; }
-
-        /// <summary>
-        /// <p>Cpu</p><p>单位：核</p>
-        /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
 
         /// <summary>
         /// <p>serverless实例cpu下限</p><p>单位：核</p>
@@ -113,6 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <p>内存</p>
         /// </summary>
         [JsonProperty("InstanceMemory")]
+        [System.Obsolete]
         public long? InstanceMemory{ get; set; }
 
         /// <summary>
@@ -152,9 +167,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ObjectTask[] InstanceTasks{ get; set; }
 
         /// <summary>
+        /// <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
         /// <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
         /// </summary>
         [JsonProperty("InstanceDeviceType")]
+        [System.Obsolete]
         public string InstanceDeviceType{ get; set; }
 
         /// <summary>
@@ -210,18 +232,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
-
-        /// <summary>
-        /// <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// <p>实例状态中文描述</p>
-        /// </summary>
-        [JsonProperty("StatusDesc")]
-        public string StatusDesc{ get; set; }
 
         /// <summary>
         /// <p>数据库类型</p>
@@ -393,12 +403,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public InstanceAbility InstanceAbility{ get; set; }
 
         /// <summary>
-        /// <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
-        /// </summary>
-        [JsonProperty("DeviceType")]
-        public string DeviceType{ get; set; }
-
-        /// <summary>
         /// <p>全球数据库唯一标识</p>
         /// </summary>
         [JsonProperty("GdnId")]
@@ -417,10 +421,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
             this.SetParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
-            this.SetParamSimple(map, prefix + "InstanceCpu", this.InstanceCpu);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "InstanceCpu", this.InstanceCpu);
             this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
@@ -431,6 +437,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
             this.SetParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
             this.SetParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
             this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
@@ -441,8 +448,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
@@ -471,7 +476,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
-            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
         }
     }

@@ -109,7 +109,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
+        /// <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
         /// </summary>
         [JsonProperty("ReplyType")]
         public ulong? ReplyType{ get; set; }
@@ -144,6 +144,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("AppliedModules")]
         public ulong?[] AppliedModules{ get; set; }
 
+        /// <summary>
+        /// <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
+        /// </summary>
+        [JsonProperty("RiskLevel")]
+        public string RiskLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamArraySimple(map, prefix + "AppliedModules.", this.AppliedModules);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         }
     }
 }

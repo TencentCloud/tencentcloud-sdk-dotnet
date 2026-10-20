@@ -85,7 +85,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         public string ServiceUrl{ get; set; }
 
         /// <summary>
-        /// 授权方式列表：NONE / ONEID / OAUTH2_IDP
+        /// 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
         /// </summary>
         [JsonProperty("AuthModes")]
         public string[] AuthModes{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         [JsonProperty("ModifiedTime")]
         public string ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+        /// </summary>
+        [JsonProperty("VpcConfigId")]
+        public string VpcConfigId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
             this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "VpcConfigId", this.VpcConfigId);
         }
     }
 }

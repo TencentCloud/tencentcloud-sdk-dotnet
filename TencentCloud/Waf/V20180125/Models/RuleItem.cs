@@ -48,6 +48,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Levels")]
         public ValueLevel[] Levels{ get; set; }
 
+        /// <summary>
+        /// Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Op", this.Op);
             this.SetParamArraySimple(map, prefix + "Value.", this.Value);
             this.SetParamArrayObj(map, prefix + "Levels.", this.Levels);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

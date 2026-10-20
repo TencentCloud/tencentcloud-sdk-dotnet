@@ -188,6 +188,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Cname{ get; set; }
 
         /// <summary>
+        /// <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
+        /// </summary>
+        [JsonProperty("DnssecCname")]
+        public string DnssecCname{ get; set; }
+
+        /// <summary>
         /// <p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
         /// </summary>
         [JsonProperty("IsKeepAlive")]
@@ -424,6 +430,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UpstreamScheme", this.UpstreamScheme);
             this.SetParamSimple(map, prefix + "Cls", this.Cls);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
+            this.SetParamSimple(map, prefix + "DnssecCname", this.DnssecCname);
             this.SetParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
             this.SetParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
             this.SetParamSimple(map, prefix + "TLSVersion", this.TLSVersion);

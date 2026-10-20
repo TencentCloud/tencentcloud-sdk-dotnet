@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 后付费实例列表
+        /// 后付费实例列表（结构与 DescribeInstances 的 InstanceInfo 一致，全量返回实例字段含各类套餐包信息，额外填充 LLMTokenUsage）
         /// </summary>
         [JsonProperty("Instances")]
         public AfterPayInstanceInfo[] Instances{ get; set; }

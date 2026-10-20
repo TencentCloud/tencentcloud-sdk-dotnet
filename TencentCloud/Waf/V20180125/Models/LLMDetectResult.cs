@@ -73,6 +73,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Payload{ get; set; }
 
         /// <summary>
+        /// <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
+        /// </summary>
+        [JsonProperty("Desensitization")]
+        public string Desensitization{ get; set; }
+
+        /// <summary>
         /// <p>图片检测结果</p>
         /// </summary>
         [JsonProperty("ImageResult")]
@@ -96,6 +102,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IntentDetectResult")]
         public IntentDetectResult IntentDetectResult{ get; set; }
 
+        /// <summary>
+        /// <p>恶意URL检测结果</p>
+        /// </summary>
+        [JsonProperty("UrlDetectResult")]
+        public UrlDetectResult UrlDetectResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,10 +122,12 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Payload", this.Payload);
+            this.SetParamSimple(map, prefix + "Desensitization", this.Desensitization);
             this.SetParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
             this.SetParamSimple(map, prefix + "MsgID", this.MsgID);
             this.SetParamObj(map, prefix + "ToolCallResult.", this.ToolCallResult);
             this.SetParamObj(map, prefix + "IntentDetectResult.", this.IntentDetectResult);
+            this.SetParamObj(map, prefix + "UrlDetectResult.", this.UrlDetectResult);
         }
     }
 }

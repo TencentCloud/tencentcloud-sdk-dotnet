@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// clb域名详情
+        /// <p>clb域名详情</p>
         /// </summary>
         [JsonProperty("DomainsClbPartInfo")]
         public ClbDomainsInfo DomainsClbPartInfo{ get; set; }

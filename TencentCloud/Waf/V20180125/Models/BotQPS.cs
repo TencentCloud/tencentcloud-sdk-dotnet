@@ -55,7 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? MaxBotQPS{ get; set; }
 
         /// <summary>
-        /// 续费标志
+        /// 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
         /// </summary>
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }

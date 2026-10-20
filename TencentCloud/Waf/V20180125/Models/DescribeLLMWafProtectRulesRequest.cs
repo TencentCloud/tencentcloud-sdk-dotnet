@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// <p>服务ID</p>
+        /// <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
+        /// <summary>
+        /// <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

@@ -121,10 +121,64 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>对象地域</p>
+        /// <p>对象地域<br>对象地域，地域缩写，例如 gz。与 ApRegion 表达同一含义、格式不同</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
+
+        /// <summary>
+        /// 对象所在地域，腾讯云标准地域格式
+        /// 参数格式：形如 ap-guangzhou
+        /// 与 Region 表达同一含义、格式不同。对象恒为单地域，数组长度恒为 0 或 1
+        /// 出参在可识别时填充，无法识别时为空
+        /// 枚举值：
+        /// ap-guangzhou：广州
+        /// ap-shanghai：上海
+        /// ap-beijing：北京
+        /// ap-chengdu：成都
+        /// ap-chongqing：重庆
+        /// ap-hongkong：中国香港
+        /// ap-nanjing：南京
+        /// ap-tianjin：天津
+        /// ap-shenzhen：深圳
+        /// ap-qingyuan：清远
+        /// ap-guangzhou-open：广州Open
+        /// ap-shenzhen-fsi：深圳金融
+        /// ap-beijing-fsi：北京金融
+        /// ap-shanghai-fsi：上海金融
+        /// ap-hangzhou-ec：杭州
+        /// ap-fuzhou-ec：福州
+        /// ap-jinan-ec：济南
+        /// ap-wuhan-ec：武汉
+        /// ap-changsha-ec：长沙
+        /// ap-hefei-ec：合肥
+        /// ap-shenyang-ec：沈阳
+        /// ap-xian-ec：西安
+        /// ap-xibei-ec：西北
+        /// ap-shijiazhuang-ec：石家庄
+        /// ap-zhengzhou-ec：郑州
+        /// ap-qingyuan-xinan：清远信安
+        /// ap-shanghai-adc：上海ADC
+        /// ap-shanghai-wxp-ops：上海无线城市运营
+        /// ap-singapore：新加坡
+        /// ap-seoul：首尔
+        /// ap-tokyo：东京
+        /// ap-osaka：大阪
+        /// ap-mumbai：孟买
+        /// ap-bangkok：曼谷
+        /// ap-jakarta：雅加达
+        /// ap-taipei：台北
+        /// ap-johorbahru：柔佛巴鲁
+        /// eu-frankfurt：法兰克福
+        /// eu-moscow：莫斯科
+        /// na-ashburn：弗吉尼亚
+        /// na-siliconvalley：硅谷
+        /// na-toronto：多伦多
+        /// sa-saopaulo：圣保罗
+        /// me-saudi-arabia：沙特阿拉伯
+        /// </summary>
+        [JsonProperty("ApRegion")]
+        public string[] ApRegion{ get; set; }
 
         /// <summary>
         /// <p>代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出</p>
@@ -245,6 +299,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArraySimple(map, prefix + "ApRegion.", this.ApRegion);
             this.SetParamSimple(map, prefix + "Proxy", this.Proxy);
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
             this.SetParamSimple(map, prefix + "BotStatus", this.BotStatus);

@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1520";
+       private const string sdkVersion = "SDK_NET_3.0.1523";
 
         /// <summary>
         /// Client constructor.
@@ -663,6 +663,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 创建权限申请范围，支持批量upsert
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleConfigurationApplyScopeRequest"/></param>
+        /// <returns><see cref="CreateRoleConfigurationApplyScopeResponse"/></returns>
+        public Task<CreateRoleConfigurationApplyScopeResponse> CreateRoleConfigurationApplyScope(CreateRoleConfigurationApplyScopeRequest req)
+        {
+            return InternalRequestAsync<CreateRoleConfigurationApplyScopeResponse>(req, "CreateRoleConfigurationApplyScope");
+        }
+
+        /// <summary>
+        /// 创建权限申请范围，支持批量upsert
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleConfigurationApplyScopeRequest"/></param>
+        /// <returns><see cref="CreateRoleConfigurationApplyScopeResponse"/></returns>
+        public CreateRoleConfigurationApplyScopeResponse CreateRoleConfigurationApplyScopeSync(CreateRoleConfigurationApplyScopeRequest req)
+        {
+            return InternalRequestAsync<CreateRoleConfigurationApplyScopeResponse>(req, "CreateRoleConfigurationApplyScope")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建SCIM密钥
         /// </summary>
         /// <param name="req"><see cref="CreateSCIMCredentialRequest"/></param>
@@ -974,6 +995,27 @@ namespace TencentCloud.Organization.V20210331
         public DeleteRoleConfigurationResponse DeleteRoleConfigurationSync(DeleteRoleConfigurationRequest req)
         {
             return InternalRequestAsync<DeleteRoleConfigurationResponse>(req, "DeleteRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除权限申请范围
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleConfigurationApplyScopeRequest"/></param>
+        /// <returns><see cref="DeleteRoleConfigurationApplyScopeResponse"/></returns>
+        public Task<DeleteRoleConfigurationApplyScopeResponse> DeleteRoleConfigurationApplyScope(DeleteRoleConfigurationApplyScopeRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleConfigurationApplyScopeResponse>(req, "DeleteRoleConfigurationApplyScope");
+        }
+
+        /// <summary>
+        /// 删除权限申请范围
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleConfigurationApplyScopeRequest"/></param>
+        /// <returns><see cref="DeleteRoleConfigurationApplyScopeResponse"/></returns>
+        public DeleteRoleConfigurationApplyScopeResponse DeleteRoleConfigurationApplyScopeSync(DeleteRoleConfigurationApplyScopeRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleConfigurationApplyScopeResponse>(req, "DeleteRoleConfigurationApplyScope")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2091,6 +2133,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 管理员审批列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionApplyOrdersRequest"/></param>
+        /// <returns><see cref="ListPermissionApplyOrdersResponse"/></returns>
+        public Task<ListPermissionApplyOrdersResponse> ListPermissionApplyOrders(ListPermissionApplyOrdersRequest req)
+        {
+            return InternalRequestAsync<ListPermissionApplyOrdersResponse>(req, "ListPermissionApplyOrders");
+        }
+
+        /// <summary>
+        /// 管理员审批列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionApplyOrdersRequest"/></param>
+        /// <returns><see cref="ListPermissionApplyOrdersResponse"/></returns>
+        public ListPermissionApplyOrdersResponse ListPermissionApplyOrdersSync(ListPermissionApplyOrdersRequest req)
+        {
+            return InternalRequestAsync<ListPermissionApplyOrdersResponse>(req, "ListPermissionApplyOrders")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取权限配置中的策略列表
         /// </summary>
         /// <param name="req"><see cref="ListPermissionPoliciesInRoleConfigurationRequest"/></param>
@@ -2171,6 +2234,27 @@ namespace TencentCloud.Organization.V20210331
         public ListRoleAssignmentsResponse ListRoleAssignmentsSync(ListRoleAssignmentsRequest req)
         {
             return InternalRequestAsync<ListRoleAssignmentsResponse>(req, "ListRoleAssignments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 权限申请范围列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationApplyScopesRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationApplyScopesResponse"/></returns>
+        public Task<ListRoleConfigurationApplyScopesResponse> ListRoleConfigurationApplyScopes(ListRoleConfigurationApplyScopesRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationApplyScopesResponse>(req, "ListRoleConfigurationApplyScopes");
+        }
+
+        /// <summary>
+        /// 权限申请范围列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationApplyScopesRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationApplyScopesResponse"/></returns>
+        public ListRoleConfigurationApplyScopesResponse ListRoleConfigurationApplyScopesSync(ListRoleConfigurationApplyScopesRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationApplyScopesResponse>(req, "ListRoleConfigurationApplyScopes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

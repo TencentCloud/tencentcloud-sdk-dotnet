@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public FiltersItemNew[] Filters{ get; set; }
 
         /// <summary>
-        /// 释放延期标识
+        /// 释放延期标识，0表示不延期，1表示延期释放
         /// </summary>
         [JsonProperty("FreeDelayFlag")]
         public ulong? FreeDelayFlag{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 数量
+        /// <p>数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 起始位置
+        /// <p>起始位置</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
