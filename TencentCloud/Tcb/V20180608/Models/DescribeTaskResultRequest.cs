@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// <p>云开发环境ID</p>
+        /// <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }

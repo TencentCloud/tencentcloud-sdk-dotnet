@@ -25,28 +25,34 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 回调目标 ID，格式为 `callback-` + 8 位小写字母数字
+        /// <p>回调目标 ID</p>
         /// </summary>
         [JsonProperty("CallbackId")]
         public string CallbackId{ get; set; }
 
         /// <summary>
-        /// 回调 URL，需要可访问并通过 Echo 校验
-        /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
-
-        /// <summary>
-        /// 回调类型。当前仅支持：`http`
+        /// <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 回调签名 token，最大长度 128
+        /// <p>回调 URL，需要可访问并通过 Echo 校验</p>
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// <p>回调签名 token，最大长度 128</p>
         /// </summary>
         [JsonProperty("CallbackToken")]
         public string CallbackToken{ get; set; }
+
+        /// <summary>
+        /// <p>回调 CKafka 配置</p>
+        /// </summary>
+        [JsonProperty("CallbackCKafka")]
+        public SeeCallbackCKafkaConfig CallbackCKafka{ get; set; }
 
 
         /// <summary>
@@ -55,9 +61,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CallbackId", this.CallbackId);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "CallbackToken", this.CallbackToken);
+            this.SetParamObj(map, prefix + "CallbackCKafka.", this.CallbackCKafka);
         }
     }
 }

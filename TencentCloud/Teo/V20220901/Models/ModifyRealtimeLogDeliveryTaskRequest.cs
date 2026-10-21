@@ -61,13 +61,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// <p>投递的自定义日志字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，详见 <a href="">自定义日志字段表达式</a>。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段，允许配置的自定义字段个数有配额限制，如遇配额不足请 <a href="https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE">联系我们</a> 。</p>
+        /// <p>投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。<br>自定义字段名称不能重复，仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE)。</p>
         /// </summary>
         [JsonProperty("CustomFields")]
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
-        /// <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+        /// <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式](https://cloud.tencent.com/document/product/1552/105794)。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
         /// </summary>
         [JsonProperty("CustomExpressionFields")]
         public CustomExpressionField[] CustomExpressionFields{ get; set; }
@@ -97,10 +97,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public CustomEndpoint CustomEndpoint{ get; set; }
 
         /// <summary>
-        /// <p>AWS S3 兼容存储桶的配置信息，不填保持原有配置。</p>
+        /// <p>S3 兼容（兼容 SigV4 鉴权算法）的对象存储的配置信息，不填保持原有配置。</p>
         /// </summary>
         [JsonProperty("S3")]
         public S3 S3{ get; set; }
+
+        /// <summary>
+        /// <p>AWS S3 对象存储的配置信息，不填保持原有配置。</p>
+        /// </summary>
+        [JsonProperty("AWSS3")]
+        public AWSS3 AWSS3{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "LogFormat.", this.LogFormat);
             this.SetParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
             this.SetParamObj(map, prefix + "S3.", this.S3);
+            this.SetParamObj(map, prefix + "AWSS3.", this.AWSS3);
         }
     }
 }

@@ -186,6 +186,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("AirflowGitCredential")]
         public AirflowGitCredentialInput AirflowGitCredential{ get; set; }
 
+        /// <summary>
+        /// <p>多安全组绑定</p>
+        /// </summary>
+        [JsonProperty("SgIds")]
+        public string[] SgIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "LogStoreID", this.LogStoreID);
             this.SetParamObj(map, prefix + "AirflowDagSource.", this.AirflowDagSource);
             this.SetParamObj(map, prefix + "AirflowGitCredential.", this.AirflowGitCredential);
+            this.SetParamArraySimple(map, prefix + "SgIds.", this.SgIds);
         }
     }
 }

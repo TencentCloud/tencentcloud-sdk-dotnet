@@ -25,36 +25,33 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 状态码，取值为 301、302、303、307、308 之一。
+        /// <p>状态码，取值为 301、302、303、307、308 之一。</p>
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
 
         /// <summary>
-        /// 目标请求协议，取值有：
-        /// <li>http：目标请求协议 HTTP；</li>
-        /// <li>https：目标请求协议 HTTPS；</li>
-        /// <li>follow：跟随请求。</li>
+        /// <p>目标请求协议。</p><p>枚举值：</p><ul><li>http： 目标请求协议为 HTTP。</li><li>https： 目标请求协议为 HTTPS。</li><li>follow： 跟随请求。</li></ul>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 目标 HostName 。
+        /// <p>目标 HostName。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public HostName HostName{ get; set; }
 
         /// <summary>
-        /// 目标路径。
+        /// <p>目标路径。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("URLPath")]
         public URLPath URLPath{ get; set; }
 
         /// <summary>
-        /// 携带查询参数。
+        /// <p>携带查询参数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryString")]

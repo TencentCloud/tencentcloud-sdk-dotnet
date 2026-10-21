@@ -28,7 +28,7 @@ namespace TencentCloud.Ai3d.V20250513
 
        private const string endpoint = "ai3d.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1503";
+       private const string sdkVersion = "SDK_NET_3.0.1524";
 
         /// <summary>
         /// Client constructor.
@@ -140,6 +140,8 @@ namespace TencentCloud.Ai3d.V20250513
         }
 
         /// <summary>
+        /// 混元旧模型即将下线，对应模型云侧绑定的接口需下线处理，目前无客户调用，且产品侧已经通知客户。
+        /// 
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
         /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
@@ -151,6 +153,8 @@ namespace TencentCloud.Ai3d.V20250513
         }
 
         /// <summary>
+        /// 混元旧模型即将下线，对应模型云侧绑定的接口需下线处理，目前无客户调用，且产品侧已经通知客户。
+        /// 
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
         /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
@@ -410,6 +414,8 @@ namespace TencentCloud.Ai3d.V20250513
         }
 
         /// <summary>
+        /// 混元旧模型即将下线，对应模型云侧绑定的接口需下线处理，目前无客户调用，且产品侧已经通知客户。
+        /// 
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
         /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>
@@ -421,6 +427,8 @@ namespace TencentCloud.Ai3d.V20250513
         }
 
         /// <summary>
+        /// 混元旧模型即将下线，对应模型云侧绑定的接口需下线处理，目前无客户调用，且产品侧已经通知客户。
+        /// 
         /// 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
         /// 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
         /// </summary>

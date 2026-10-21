@@ -25,37 +25,43 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 回调目标 ID
+        /// <p>回调目标 ID</p>
         /// </summary>
         [JsonProperty("CallbackId")]
         public string CallbackId{ get; set; }
 
         /// <summary>
-        /// 回调签名 token
-        /// </summary>
-        [JsonProperty("CallbackToken")]
-        public string CallbackToken{ get; set; }
-
-        /// <summary>
-        /// 回调 URL
-        /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
-
-        /// <summary>
-        /// 创建时间（秒级时间戳）
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public long? CreateTime{ get; set; }
-
-        /// <summary>
-        /// 回调类型
+        /// <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 更新时间（秒级时间戳）
+        /// <p>回调 URL</p>
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// <p>回调签名 token</p>
+        /// </summary>
+        [JsonProperty("CallbackToken")]
+        public string CallbackToken{ get; set; }
+
+        /// <summary>
+        /// <p>回调 CKafka 配置</p>
+        /// </summary>
+        [JsonProperty("CallbackCKafka")]
+        public SeeCallbackCKafkaConfig CallbackCKafka{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间（秒级时间戳）</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public long? CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>更新时间（秒级时间戳）</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
@@ -67,10 +73,11 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CallbackId", this.CallbackId);
-            this.SetParamSimple(map, prefix + "CallbackToken", this.CallbackToken);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "CallbackToken", this.CallbackToken);
+            this.SetParamObj(map, prefix + "CallbackCKafka.", this.CallbackCKafka);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }

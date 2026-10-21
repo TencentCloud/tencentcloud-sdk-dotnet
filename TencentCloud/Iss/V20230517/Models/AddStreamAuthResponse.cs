@@ -25,7 +25,7 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 设置推拉流鉴权返回数据
+        /// <p>设置推拉流鉴权返回数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public AddStreamAuthData Data{ get; set; }

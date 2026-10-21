@@ -25,46 +25,52 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 鉴权配置ID（uuid）
+        /// <p>鉴权配置ID（uuid）</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 是否开播放鉴权（1:开启,0:关闭）
+        /// <p>是否开播放鉴权（1:开启,0:关闭）</p>
         /// </summary>
         [JsonProperty("PullState")]
         public long? PullState{ get; set; }
 
         /// <summary>
-        /// 播放密钥（仅支持字母数字，长度0-10位）
+        /// <p>播放密钥（仅支持字母数字，长度0-10位）</p>
         /// </summary>
         [JsonProperty("PullSecret")]
         public string PullSecret{ get; set; }
 
         /// <summary>
-        /// 播放过期时间（单位：分钟）
+        /// <p>播放过期时间（单位：分钟）</p>
         /// </summary>
         [JsonProperty("PullExpired")]
         public long? PullExpired{ get; set; }
 
         /// <summary>
-        /// 是否开启推流鉴权（1:开启,0:关闭）
+        /// <p>是否开启推流鉴权（1:开启,0:关闭）</p>
         /// </summary>
         [JsonProperty("PushState")]
         public long? PushState{ get; set; }
 
         /// <summary>
-        /// 推流密钥（仅支持字母数字，长度0-10位）
+        /// <p>推流密钥（仅支持字母数字，长度0-10位）</p>
         /// </summary>
         [JsonProperty("PushSecret")]
         public string PushSecret{ get; set; }
 
         /// <summary>
-        /// 推流过期时间（单位：分钟）
+        /// <p>推流过期时间（单位：分钟）</p>
         /// </summary>
         [JsonProperty("PushExpired")]
         public long? PushExpired{ get; set; }
+
+        /// <summary>
+        /// <p>不生效推流鉴权的域名 ID 列表</p>
+        /// </summary>
+        [JsonProperty("ExcludePushDomainIds")]
+        public string[] ExcludePushDomainIds{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "PushState", this.PushState);
             this.SetParamSimple(map, prefix + "PushSecret", this.PushSecret);
             this.SetParamSimple(map, prefix + "PushExpired", this.PushExpired);
+            this.SetParamArraySimple(map, prefix + "ExcludePushDomainIds.", this.ExcludePushDomainIds);
         }
     }
 }

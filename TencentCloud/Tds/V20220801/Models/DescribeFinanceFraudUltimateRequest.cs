@@ -61,7 +61,7 @@ namespace TencentCloud.Tds.V20220801.Models
         public string WeChatOpenId{ get; set; }
 
         /// <summary>
-        /// <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+        /// <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 收费类型
+        /// <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
         /// </summary>
         [JsonProperty("ServiceChargeType")]
         public string ServiceChargeType{ get; set; }

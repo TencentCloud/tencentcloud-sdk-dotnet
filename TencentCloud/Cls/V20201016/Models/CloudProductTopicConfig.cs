@@ -102,6 +102,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
+        /// <summary>
+        /// <p>主题扩展信息</p>
+        /// </summary>
+        [JsonProperty("Extends")]
+        public TopicExtendInfo Extends{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamObj(map, prefix + "Extends.", this.Extends);
         }
     }
 }

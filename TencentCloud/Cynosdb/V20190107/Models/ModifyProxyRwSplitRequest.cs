@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+        /// <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public string ConsistencyTimeOut{ get; set; }

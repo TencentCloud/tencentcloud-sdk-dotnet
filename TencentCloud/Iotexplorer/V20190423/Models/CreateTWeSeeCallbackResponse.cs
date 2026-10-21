@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 回调目标 ID
+        /// <p>回调目标 ID</p>
         /// </summary>
         [JsonProperty("CallbackId")]
         public string CallbackId{ get; set; }

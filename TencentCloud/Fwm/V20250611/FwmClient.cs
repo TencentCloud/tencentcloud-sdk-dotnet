@@ -28,7 +28,7 @@ namespace TencentCloud.Fwm.V20250611
 
        private const string endpoint = "fwm.tencentcloudapi.com";
        private const string version = "2025-06-11";
-       private const string sdkVersion = "SDK_NET_3.0.1523";
+       private const string sdkVersion = "SDK_NET_3.0.1524";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Fwm.V20250611
         public CancelIgnorePolicyRiskResponse CancelIgnorePolicyRiskSync(CancelIgnorePolicyRiskRequest req)
         {
             return InternalRequestAsync<CancelIgnorePolicyRiskResponse>(req, "CancelIgnorePolicyRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建账户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountGroupRequest"/></param>
+        /// <returns><see cref="CreateAccountGroupResponse"/></returns>
+        public Task<CreateAccountGroupResponse> CreateAccountGroup(CreateAccountGroupRequest req)
+        {
+            return InternalRequestAsync<CreateAccountGroupResponse>(req, "CreateAccountGroup");
+        }
+
+        /// <summary>
+        /// 创建账户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountGroupRequest"/></param>
+        /// <returns><see cref="CreateAccountGroupResponse"/></returns>
+        public CreateAccountGroupResponse CreateAccountGroupSync(CreateAccountGroupRequest req)
+        {
+            return InternalRequestAsync<CreateAccountGroupResponse>(req, "CreateAccountGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -306,6 +327,27 @@ namespace TencentCloud.Fwm.V20250611
         }
 
         /// <summary>
+        /// 删除账户组，账户组下有成员时不可删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResponse"/></returns>
+        public Task<DeleteAccountGroupResponse> DeleteAccountGroup(DeleteAccountGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountGroupResponse>(req, "DeleteAccountGroup");
+        }
+
+        /// <summary>
+        /// 删除账户组，账户组下有成员时不可删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResponse"/></returns>
+        public DeleteAccountGroupResponse DeleteAccountGroupSync(DeleteAccountGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountGroupResponse>(req, "DeleteAccountGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量删除互联网边界ACL规则。支持一次删除多条规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteEdgeAclRuleRequest"/></param>
@@ -428,6 +470,27 @@ namespace TencentCloud.Fwm.V20250611
         public DeleteVpcAclRuleResponse DeleteVpcAclRuleSync(DeleteVpcAclRuleRequest req)
         {
             return InternalRequestAsync<DeleteVpcAclRuleResponse>(req, "DeleteVpcAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取账户组列表，支持分页和关键词搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
+        public Task<DescribeAccountGroupsResponse> DescribeAccountGroups(DescribeAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups");
+        }
+
+        /// <summary>
+        /// 获取账户组列表，支持分页和关键词搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
+        public DescribeAccountGroupsResponse DescribeAccountGroupsSync(DescribeAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -810,6 +873,69 @@ namespace TencentCloud.Fwm.V20250611
         }
 
         /// <summary>
+        /// 修改账户组名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountGroupRequest"/></param>
+        /// <returns><see cref="ModifyAccountGroupResponse"/></returns>
+        public Task<ModifyAccountGroupResponse> ModifyAccountGroup(ModifyAccountGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyAccountGroupResponse>(req, "ModifyAccountGroup");
+        }
+
+        /// <summary>
+        /// 修改账户组名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountGroupRequest"/></param>
+        /// <returns><see cref="ModifyAccountGroupResponse"/></returns>
+        public ModifyAccountGroupResponse ModifyAccountGroupSync(ModifyAccountGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyAccountGroupResponse>(req, "ModifyAccountGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置成员账号的云防火墙纳管状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCfwManagedRequest"/></param>
+        /// <returns><see cref="ModifyCfwManagedResponse"/></returns>
+        public Task<ModifyCfwManagedResponse> ModifyCfwManaged(ModifyCfwManagedRequest req)
+        {
+            return InternalRequestAsync<ModifyCfwManagedResponse>(req, "ModifyCfwManaged");
+        }
+
+        /// <summary>
+        /// 设置成员账号的云防火墙纳管状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCfwManagedRequest"/></param>
+        /// <returns><see cref="ModifyCfwManagedResponse"/></returns>
+        public ModifyCfwManagedResponse ModifyCfwManagedSync(ModifyCfwManagedRequest req)
+        {
+            return InternalRequestAsync<ModifyCfwManagedResponse>(req, "ModifyCfwManaged")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置集团成员的云防火墙共享角色（sharer/user/none）。共享者全集团唯一；共享者→使用者禁止直接变更，需先将角色改为 none；设为使用者时必须指定共享者 SharerAppId。仅管理员可操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCfwShareRoleRequest"/></param>
+        /// <returns><see cref="ModifyCfwShareRoleResponse"/></returns>
+        public Task<ModifyCfwShareRoleResponse> ModifyCfwShareRole(ModifyCfwShareRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyCfwShareRoleResponse>(req, "ModifyCfwShareRole");
+        }
+
+        /// <summary>
+        /// 设置集团成员的云防火墙共享角色（sharer/user/none）。共享者全集团唯一；共享者→使用者禁止直接变更，需先将角色改为 none；设为使用者时必须指定共享者 SharerAppId。仅管理员可操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCfwShareRoleRequest"/></param>
+        /// <returns><see cref="ModifyCfwShareRoleResponse"/></returns>
+        public ModifyCfwShareRoleResponse ModifyCfwShareRoleSync(ModifyCfwShareRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyCfwShareRoleResponse>(req, "ModifyCfwShareRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改互联网边界ACL规则。Rule 参数中必须包含 RuleId 用于指定要修改的规则。
         /// </summary>
         /// <param name="req"><see cref="ModifyEdgeAclRuleRequest"/></param>
@@ -848,6 +974,27 @@ namespace TencentCloud.Fwm.V20250611
         public ModifyEdgeAclRuleSequenceResponse ModifyEdgeAclRuleSequenceSync(ModifyEdgeAclRuleSequenceRequest req)
         {
             return InternalRequestAsync<ModifyEdgeAclRuleSequenceResponse>(req, "ModifyEdgeAclRuleSequence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置成员所属账户组，GroupId为空字符串表示移出账户组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMemberGroupRequest"/></param>
+        /// <returns><see cref="ModifyMemberGroupResponse"/></returns>
+        public Task<ModifyMemberGroupResponse> ModifyMemberGroup(ModifyMemberGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyMemberGroupResponse>(req, "ModifyMemberGroup");
+        }
+
+        /// <summary>
+        /// 设置成员所属账户组，GroupId为空字符串表示移出账户组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMemberGroupRequest"/></param>
+        /// <returns><see cref="ModifyMemberGroupResponse"/></returns>
+        public ModifyMemberGroupResponse ModifyMemberGroupSync(ModifyMemberGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyMemberGroupResponse>(req, "ModifyMemberGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

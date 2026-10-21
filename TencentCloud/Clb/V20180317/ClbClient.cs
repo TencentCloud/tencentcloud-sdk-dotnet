@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1524";
 
         /// <summary>
         /// Client constructor.
@@ -733,7 +733,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。
+        /// 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。支持建组时绑定 Prompt：传入 PromptId 与 PromptVersion 后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容，并受该版本 MaxTokens 约束；不传则默认不绑定 Prompt，建组后可通过 ModifyUserGroupPrompt 绑定、更换版本或解绑。仅传入 PromptId 或 PromptVersion 其一时返回 InvalidParameter；PromptId 不存在时返回 ResourceNotFound.Prompt；PromptVersion 不存在于该 Prompt 的历史版本中时返回 ResourceNotFound.PromptVersion。
         /// </summary>
         /// <param name="req"><see cref="CreateUserGroupRequest"/></param>
         /// <returns><see cref="CreateUserGroupResponse"/></returns>
@@ -743,7 +743,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。
+        /// 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。支持建组时绑定 Prompt：传入 PromptId 与 PromptVersion 后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容，并受该版本 MaxTokens 约束；不传则默认不绑定 Prompt，建组后可通过 ModifyUserGroupPrompt 绑定、更换版本或解绑。仅传入 PromptId 或 PromptVersion 其一时返回 InvalidParameter；PromptId 不存在时返回 ResourceNotFound.Prompt；PromptVersion 不存在于该 Prompt 的历史版本中时返回 ResourceNotFound.PromptVersion。
         /// </summary>
         /// <param name="req"><see cref="CreateUserGroupRequest"/></param>
         /// <returns><see cref="CreateUserGroupResponse"/></returns>

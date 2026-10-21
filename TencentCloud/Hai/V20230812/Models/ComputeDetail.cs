@@ -78,6 +78,12 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("PostpaidEnable")]
         public bool? PostpaidEnable{ get; set; }
 
+        /// <summary>
+        /// <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
+        /// </summary>
+        [JsonProperty("SupportedChargeTypes")]
+        public string[] SupportedChargeTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "PrepaidEnable", this.PrepaidEnable);
             this.SetParamSimple(map, prefix + "PostpaidEnable", this.PostpaidEnable);
+            this.SetParamArraySimple(map, prefix + "SupportedChargeTypes.", this.SupportedChargeTypes);
         }
     }
 }

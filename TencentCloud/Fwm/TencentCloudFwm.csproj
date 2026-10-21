@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6FE55EBA-5399-3AE2-A259-B16D1C7531CB}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1523</VersionPrefix>
+    <VersionPrefix>3.0.1524</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="V20250611\FwmClient.cs" />
     <Compile Include="V20250611\Models\Account.cs" />
+    <Compile Include="V20250611\Models\AccountGroup.cs" />
     <Compile Include="V20250611\Models\AccountGroupInfo.cs" />
     <Compile Include="V20250611\Models\AccountGroupQuotaDetail.cs" />
     <Compile Include="V20250611\Models\AccountProductDetailStats.cs" />
@@ -58,6 +59,8 @@
     <Compile Include="V20250611\Models\CancelIgnorePolicyRiskRequest.cs" />
     <Compile Include="V20250611\Models\CancelIgnorePolicyRiskResponse.cs" />
     <Compile Include="V20250611\Models\CommonFilter.cs" />
+    <Compile Include="V20250611\Models\CreateAccountGroupRequest.cs" />
+    <Compile Include="V20250611\Models\CreateAccountGroupResponse.cs" />
     <Compile Include="V20250611\Models\CreateAnalyzePolicyTaskRequest.cs" />
     <Compile Include="V20250611\Models\CreateAnalyzePolicyTaskResponse.cs" />
     <Compile Include="V20250611\Models\CreateEdgeAclRuleGroupRequest.cs" />
@@ -80,6 +83,8 @@
     <Compile Include="V20250611\Models\CreateVpcAclRuleGroupResponse.cs" />
     <Compile Include="V20250611\Models\CreateVpcAclRuleRequest.cs" />
     <Compile Include="V20250611\Models\CreateVpcAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DeleteAccountGroupRequest.cs" />
+    <Compile Include="V20250611\Models\DeleteAccountGroupResponse.cs" />
     <Compile Include="V20250611\Models\DeleteEdgeAclRuleRequest.cs" />
     <Compile Include="V20250611\Models\DeleteEdgeAclRuleResponse.cs" />
     <Compile Include="V20250611\Models\DeleteNatAclRuleRequest.cs" />
@@ -92,6 +97,8 @@
     <Compile Include="V20250611\Models\DeleteStrategyResponse.cs" />
     <Compile Include="V20250611\Models\DeleteVpcAclRuleRequest.cs" />
     <Compile Include="V20250611\Models\DeleteVpcAclRuleResponse.cs" />
+    <Compile Include="V20250611\Models\DescribeAccountGroupsRequest.cs" />
+    <Compile Include="V20250611\Models\DescribeAccountGroupsResponse.cs" />
     <Compile Include="V20250611\Models\DescribeEdgeAclRulesRequest.cs" />
     <Compile Include="V20250611\Models\DescribeEdgeAclRulesResponse.cs" />
     <Compile Include="V20250611\Models\DescribeNatAclRulesRequest.cs" />
@@ -131,10 +138,18 @@
     <Compile Include="V20250611\Models\IgnorePolicyRiskRequest.cs" />
     <Compile Include="V20250611\Models\IgnorePolicyRiskResponse.cs" />
     <Compile Include="V20250611\Models\MemberInfo.cs" />
+    <Compile Include="V20250611\Models\ModifyAccountGroupRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyAccountGroupResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyCfwManagedRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyCfwManagedResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyCfwShareRoleRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyCfwShareRoleResponse.cs" />
     <Compile Include="V20250611\Models\ModifyEdgeAclRuleRequest.cs" />
     <Compile Include="V20250611\Models\ModifyEdgeAclRuleResponse.cs" />
     <Compile Include="V20250611\Models\ModifyEdgeAclRuleSequenceRequest.cs" />
     <Compile Include="V20250611\Models\ModifyEdgeAclRuleSequenceResponse.cs" />
+    <Compile Include="V20250611\Models\ModifyMemberGroupRequest.cs" />
+    <Compile Include="V20250611\Models\ModifyMemberGroupResponse.cs" />
     <Compile Include="V20250611\Models\ModifyNatAclRuleRequest.cs" />
     <Compile Include="V20250611\Models\ModifyNatAclRuleResponse.cs" />
     <Compile Include="V20250611\Models\ModifyNatAclRuleSequenceRequest.cs" />
