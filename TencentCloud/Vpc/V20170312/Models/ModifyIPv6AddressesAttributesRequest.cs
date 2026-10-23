@@ -25,16 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
+        /// <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
         /// </summary>
         [JsonProperty("IPv6AddressIds")]
         public string[] IPv6AddressIds{ get; set; }
 
         /// <summary>
-        /// 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+        /// <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
         /// </summary>
         [JsonProperty("IPv6AddressName")]
         public string IPv6AddressName{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启弹性公网IPv6地址网卡可见</p>
+        /// </summary>
+        [JsonProperty("EipVisibleOnEni")]
+        public bool? EipVisibleOnEni{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "IPv6AddressIds.", this.IPv6AddressIds);
             this.SetParamSimple(map, prefix + "IPv6AddressName", this.IPv6AddressName);
+            this.SetParamSimple(map, prefix + "EipVisibleOnEni", this.EipVisibleOnEni);
         }
     }
 }

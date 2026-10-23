@@ -25,14 +25,14 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+        /// <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeName")]
         public string VolumeName{ get; set; }
 
         /// <summary>
-        /// 稳定 Volume ID，格式 vol-xxxxxxxx
+        /// <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeId")]

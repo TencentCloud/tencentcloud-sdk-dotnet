@@ -25,34 +25,40 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 空间 ID
+        /// <p>空间 ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 权限配置 ID
+        /// <p>权限配置 ID</p>
         /// </summary>
         [JsonProperty("RoleConfigurationId")]
         public string RoleConfigurationId{ get; set; }
 
         /// <summary>
-        /// 新的权限配置描述。  长度：最大 1024 个字符。
+        /// <p>新的权限配置描述。  长度：最大 1024 个字符。</p>
         /// </summary>
         [JsonProperty("NewDescription")]
         public string NewDescription{ get; set; }
 
         /// <summary>
-        /// 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+        /// <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
         /// </summary>
         [JsonProperty("NewSessionDuration")]
         public long? NewSessionDuration{ get; set; }
 
         /// <summary>
-        /// 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+        /// <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
         /// </summary>
         [JsonProperty("NewRelayState")]
         public string NewRelayState{ get; set; }
+
+        /// <summary>
+        /// <p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
+        /// </summary>
+        [JsonProperty("IsApply")]
+        public bool? IsApply{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "NewDescription", this.NewDescription);
             this.SetParamSimple(map, prefix + "NewSessionDuration", this.NewSessionDuration);
             this.SetParamSimple(map, prefix + "NewRelayState", this.NewRelayState);
+            this.SetParamSimple(map, prefix + "IsApply", this.IsApply);
         }
     }
 }

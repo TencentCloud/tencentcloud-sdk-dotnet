@@ -42,6 +42,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("InputModalities")]
         public string[] InputModalities{ get; set; }
 
+        /// <summary>
+        /// <p>新的上游模型名称</p>
+        /// </summary>
+        [JsonProperty("NewModelName")]
+        public string NewModelName{ get; set; }
+
+        /// <summary>
+        /// <p>新的对外模型名称</p>
+        /// </summary>
+        [JsonProperty("NewModelAlias")]
+        public string NewModelAlias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamArraySimple(map, prefix + "InputModalities.", this.InputModalities);
+            this.SetParamSimple(map, prefix + "NewModelName", this.NewModelName);
+            this.SetParamSimple(map, prefix + "NewModelAlias", this.NewModelAlias);
         }
     }
 }

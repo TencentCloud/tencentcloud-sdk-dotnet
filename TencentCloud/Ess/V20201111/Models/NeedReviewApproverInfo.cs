@@ -55,7 +55,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverIdCardNumber{ get; set; }
 
         /// <summary>
-        /// <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。<br>如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。</p>
+        /// <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。<br>如果签署方是企业签署方， 则企业名称必填。</p>
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }

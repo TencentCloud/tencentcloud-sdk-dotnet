@@ -25,53 +25,76 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 权限配置配置ID。
+        /// <p>权限配置配置ID。</p>
         /// </summary>
         [JsonProperty("RoleConfigurationId")]
         public string RoleConfigurationId{ get; set; }
 
         /// <summary>
-        /// 权限配置配名称。
+        /// <p>权限配置配名称。</p>
         /// </summary>
         [JsonProperty("RoleConfigurationName")]
         public string RoleConfigurationName{ get; set; }
 
         /// <summary>
-        /// 权限配置的描述。
+        /// <p>权限配置的描述。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 会话持续时间。CIC 用户使用访问配置访问成员账号时，会话最多保持的时间。
-        /// 单位：秒。
+        /// <p>会话持续时间。CIC 用户使用访问配置访问成员账号时，会话最多保持的时间。<br>单位：秒。</p>
         /// </summary>
         [JsonProperty("SessionDuration")]
         public long? SessionDuration{ get; set; }
 
         /// <summary>
-        /// 初始访问页面。CIC 用户使用访问配置访问成员账号时，初始访问的页面地址。
+        /// <p>初始访问页面。CIC 用户使用访问配置访问成员账号时，初始访问的页面地址。</p>
         /// </summary>
         [JsonProperty("RelayState")]
         public string RelayState{ get; set; }
 
         /// <summary>
-        /// 权限配置的创建时间。
+        /// <p>权限配置的创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 权限配置的更新时间。
+        /// <p>权限配置的更新时间。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 如果有入参FilterTargets查询成员账号是否配置过权限，配置了返回true，否则返回false。
+        /// <p>如果有入参FilterTargets查询成员账号是否配置过权限，配置了返回true，否则返回false。</p>
         /// </summary>
         [JsonProperty("IsSelected")]
         public bool? IsSelected{ get; set; }
+
+        /// <summary>
+        /// <p>会话时长应用状态</p><p>枚举值：</p><ul><li>Success： 全部账号应用成功</li><li>Failed： 存在失败账号</li><li>Applying： 任务在途</li><li>Unknown： 已部署账号超查询上限</li></ul>
+        /// </summary>
+        [JsonProperty("ApplyStatus")]
+        public string ApplyStatus{ get; set; }
+
+        /// <summary>
+        /// <p>当前已真实下发到 CAM 的会话时长</p><p>取值范围：[900, 43200]</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("AppliedSessionDuration")]
+        public ulong? AppliedSessionDuration{ get; set; }
+
+        /// <summary>
+        /// <p>最近一次成功下发时间</p><p>参数格式： YYYY-MM-DD hh:mm:ss</p>
+        /// </summary>
+        [JsonProperty("SessionDurationUpdateTime")]
+        public string SessionDurationUpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>未成功应用的账号明细</p><p>仅 Failed 态返回</p>
+        /// </summary>
+        [JsonProperty("FailedAccounts")]
+        public FailedAccount[] FailedAccounts{ get; set; }
 
 
         /// <summary>
@@ -87,6 +110,10 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "IsSelected", this.IsSelected);
+            this.SetParamSimple(map, prefix + "ApplyStatus", this.ApplyStatus);
+            this.SetParamSimple(map, prefix + "AppliedSessionDuration", this.AppliedSessionDuration);
+            this.SetParamSimple(map, prefix + "SessionDurationUpdateTime", this.SessionDurationUpdateTime);
+            this.SetParamArrayObj(map, prefix + "FailedAccounts.", this.FailedAccounts);
         }
     }
 }

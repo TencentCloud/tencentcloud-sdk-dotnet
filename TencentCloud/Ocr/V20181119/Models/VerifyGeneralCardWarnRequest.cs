@@ -42,6 +42,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
+        /// <summary>
+        /// <p>推理 Prompt 模板，默认使用 VLM 对图片进行理解推理，同时支持使用 ${变量名} 进行推理。传入该参数即开启推理流程。</p><p>入参限制：长度限制：1–3000 字符</p>
+        /// </summary>
+        [JsonProperty("ReasoningPrompt")]
+        public string ReasoningPrompt{ get; set; }
+
+        /// <summary>
+        /// <p>推理输出配置。当 ReasoningPrompt 传入时建议同步传入，未传入时使用默认配置（OutputMode=enum, EnumValues=[&quot;true&quot;,&quot;false&quot;], EnableImageInput=true）。</p>
+        /// </summary>
+        [JsonProperty("ReasoningConfig")]
+        public ReasoningConfig ReasoningConfig{ get; set; }
+
+        /// <summary>
+        /// <p>水印提示排除类型，选择出参“水印提示”排除掉的水印类型，不传的话即代表任意水印都会提示。 PhoneCam：手机相机水印  WatermarkCam：水印相机水印</p>
+        /// </summary>
+        [JsonProperty("IgnoreWatermarkCategories")]
+        public string[] IgnoreWatermarkCategories{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CardType", this.CardType);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "ReasoningPrompt", this.ReasoningPrompt);
+            this.SetParamObj(map, prefix + "ReasoningConfig.", this.ReasoningConfig);
+            this.SetParamArraySimple(map, prefix + "IgnoreWatermarkCategories.", this.IgnoreWatermarkCategories);
         }
     }
 }

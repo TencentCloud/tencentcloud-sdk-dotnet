@@ -25,194 +25,178 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `EIP`的`ID`，是`EIP`的唯一标识。
+        /// <p><code>EIP</code>的<code>ID</code>，是<code>EIP</code>的唯一标识。</p>
         /// </summary>
         [JsonProperty("AddressId")]
         public string AddressId{ get; set; }
 
         /// <summary>
-        /// `EIP`名称。
+        /// <p><code>EIP</code>名称。</p>
         /// </summary>
         [JsonProperty("AddressName")]
         public string AddressName{ get; set; }
 
         /// <summary>
-        /// `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+        /// <p><code>EIP</code>状态，包含&#39;CREATING&#39;(创建中),&#39;BINDING&#39;(绑定中),&#39;BIND&#39;(已绑定),&#39;UNBINDING&#39;(解绑中),&#39;UNBIND&#39;(已解绑),&#39;OFFLINING&#39;(释放中),&#39;BIND_ENI&#39;(绑定悬空弹性网卡)</p>
         /// </summary>
         [JsonProperty("AddressStatus")]
         public string AddressStatus{ get; set; }
 
         /// <summary>
-        /// 外网IP地址
+        /// <p>外网IP地址</p>
         /// </summary>
         [JsonProperty("AddressIp")]
         public string AddressIp{ get; set; }
 
         /// <summary>
-        /// 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+        /// <p>绑定的资源实例<code>ID</code>。可能是一个<code>CVM</code>，<code>NAT</code>。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        /// <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+        /// <p>绑定的弹性网卡ID，null表示没有绑定弹性网卡。</p>
         /// </summary>
         [JsonProperty("NetworkInterfaceId")]
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 绑定的资源内网ip，null表示没有绑定资源内网ip。
+        /// <p>绑定的资源内网ip，null表示没有绑定资源内网ip。</p>
         /// </summary>
         [JsonProperty("PrivateAddressIp")]
         public string PrivateAddressIp{ get; set; }
 
         /// <summary>
-        /// 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+        /// <p>资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态</p>
         /// </summary>
         [JsonProperty("IsArrears")]
         public bool? IsArrears{ get; set; }
 
         /// <summary>
-        /// 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+        /// <p>资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态</p>
         /// </summary>
         [JsonProperty("IsBlocked")]
         public bool? IsBlocked{ get; set; }
 
         /// <summary>
-        /// eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+        /// <p>eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式</p>
         /// </summary>
         [JsonProperty("IsEipDirectConnection")]
         public bool? IsEipDirectConnection{ get; set; }
 
         /// <summary>
-        /// EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：`CalcIP` 表示设备 IP，`WanIP` 表示普通公网 IP，`EIP` 表示弹性公网 IP，`AnycastEIP` 表示加速 EIP，`AntiDDoSEIP`表示高防EIP。
+        /// <p>EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：<code>CalcIP</code> 表示设备 IP，<code>WanIP</code> 表示普通公网 IP，<code>EIP</code> 表示弹性公网 IP，<code>AnycastEIP</code> 表示加速 EIP，<code>AntiDDoSEIP</code>表示高防EIP。</p>
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
 
         /// <summary>
-        /// eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+        /// <p>eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放</p>
         /// </summary>
         [JsonProperty("CascadeRelease")]
         public bool? CascadeRelease{ get; set; }
 
         /// <summary>
-        /// EIP ALG开启的协议类型。
+        /// <p>EIP ALG开启的协议类型。</p>
         /// </summary>
         [JsonProperty("EipAlgType")]
         public AlgType EipAlgType{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+        /// <p>弹性公网IP的运营商信息，当前可能返回值包括&quot;CMCC&quot;(移动),&quot;CTCC&quot;(电信),&quot;CUCC&quot;(联通),&quot;BGP&quot;(常规BGP)。</p>
         /// </summary>
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
         /// <summary>
-        /// 是否本地带宽EIP，可选值：
-        /// <li>true：本地带宽EIP</li>
-        /// <li>false：非本地带宽EIP</li>
+        /// <p>是否本地带宽EIP，可选值：</p><li>true：本地带宽EIP</li><li>false：非本地带宽EIP</li>
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
+        /// <p>弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 包括：
-        /// <li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
-        /// <p style="padding-left: 30px;">表示包月带宽预付费。</p>
-        /// <li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
-        /// <p style="padding-left: 30px;">表示按小时流量后付费。</p>
-        /// <li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
-        /// <p style="padding-left: 30px;">表示按小时带宽后付费。</p>
-        /// <li><strong>BANDWIDTH_PACKAGE</strong></li>
-        /// <p style="padding-left: 30px;">表示共享带宽包。</p>
+        /// <p>弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。<br>注意：此字段可能返回 null，表示取不到有效值。<br>包括：</p><li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li><p style="padding-left: 30px;">表示包月带宽预付费。</p><li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时流量后付费。</p><li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时带宽后付费。</p><li><strong>BANDWIDTH_PACKAGE</strong></li><p style="padding-left: 30px;">表示共享带宽包。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP关联的标签列表。
+        /// <p>弹性公网IP关联的标签列表。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 预付费包月带宽IP到期时间。
-        /// 时间格式：YYYY-MM-DDThh:mm:ssZ
+        /// <p>预付费包月带宽IP到期时间。<br>时间格式：YYYY-MM-DDThh:mm:ssZ</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadlineDate")]
         public string DeadlineDate{ get; set; }
 
         /// <summary>
-        /// EIP绑定的实例类型。可选值：
-        /// <li>CVM：云服务器</li>
-        /// <li>NAT：NAT 网关</li>
-        /// <li>HAVIP：高可用虚拟IP</li>
-        /// <li>ENI：弹性网卡</li>
-        /// <li>CLB：内网CLB</li>
-        /// <li>DHCPIP：弹性内网IP</li>
-        /// 
-        /// 
+        /// <p>EIP绑定的实例类型。可选值：</p><li>CVM：云服务器</li><li>NAT：NAT 网关</li><li>HAVIP：高可用虚拟IP</li><li>ENI：弹性网卡</li><li>CLB：内网CLB</li><li>DHCPIP：弹性内网IP</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 静态单线IP网络出口
+        /// <p>静态单线IP网络出口</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
         /// <summary>
-        /// 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+        /// <p>高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.</p>
         /// </summary>
         [JsonProperty("AntiDDoSPackageId")]
         public string AntiDDoSPackageId{ get; set; }
 
         /// <summary>
-        /// 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
-        /// <li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+        /// <p>当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:</p><li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+        /// <p>当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 传统弹性公网IPv6所属vpc唯一ID
+        /// <p>传统弹性公网IPv6所属vpc唯一ID</p>
         /// </summary>
         [JsonProperty("UnVpcId")]
         public string UnVpcId{ get; set; }
 
         /// <summary>
-        /// CDC唯一ID
+        /// <p>CDC唯一ID</p>
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>eip是否在网卡上可见。true表示支持，false表示不支持</p>
+        /// </summary>
+        [JsonProperty("EipVisibleOnEni")]
+        public bool? EipVisibleOnEni{ get; set; }
 
 
         /// <summary>
@@ -247,6 +231,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "UnVpcId", this.UnVpcId);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "EipVisibleOnEni", this.EipVisibleOnEni);
         }
     }
 }

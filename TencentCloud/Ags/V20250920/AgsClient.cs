@@ -28,7 +28,7 @@ namespace TencentCloud.Ags.V20250920
 
        private const string endpoint = "ags.tencentcloudapi.com";
        private const string version = "2025-09-20";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1525";
 
         /// <summary>
         /// Client constructor.
@@ -849,6 +849,27 @@ namespace TencentCloud.Ags.V20250920
         public DescribeSandboxInstanceListResponse DescribeSandboxInstanceListSync(DescribeSandboxInstanceListRequest req)
         {
             return InternalRequestAsync<DescribeSandboxInstanceListResponse>(req, "DescribeSandboxInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询沙箱实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxInstancesRequest"/></param>
+        /// <returns><see cref="DescribeSandboxInstancesResponse"/></returns>
+        public Task<DescribeSandboxInstancesResponse> DescribeSandboxInstances(DescribeSandboxInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxInstancesResponse>(req, "DescribeSandboxInstances");
+        }
+
+        /// <summary>
+        /// 查询沙箱实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSandboxInstancesRequest"/></param>
+        /// <returns><see cref="DescribeSandboxInstancesResponse"/></returns>
+        public DescribeSandboxInstancesResponse DescribeSandboxInstancesSync(DescribeSandboxInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeSandboxInstancesResponse>(req, "DescribeSandboxInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

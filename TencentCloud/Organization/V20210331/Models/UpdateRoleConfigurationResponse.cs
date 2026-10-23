@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 权限配置详情
+        /// <p>权限配置详情</p>
         /// </summary>
         [JsonProperty("RoleConfigurationInfo")]
         public RoleConfiguration RoleConfigurationInfo{ get; set; }

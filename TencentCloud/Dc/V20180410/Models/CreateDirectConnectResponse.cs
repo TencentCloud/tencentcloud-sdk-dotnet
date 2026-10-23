@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 物理专线的ID。
+        /// <p>物理专线的ID。</p>
         /// </summary>
         [JsonProperty("DirectConnectIdSet")]
         public string[] DirectConnectIdSet{ get; set; }

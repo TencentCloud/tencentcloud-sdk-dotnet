@@ -67,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string NewAdminIdCardNumber{ get; set; }
 
         /// <summary>
-        /// <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
+        /// <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
         /// </summary>
         [JsonProperty("AuthFiles")]
         public string[] AuthFiles{ get; set; }

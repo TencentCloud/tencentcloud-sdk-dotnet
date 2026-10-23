@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1524";
+       private const string sdkVersion = "SDK_NET_3.0.1525";
 
         /// <summary>
         /// Client constructor.
@@ -2790,6 +2790,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeLogAnalysisDownloadTasksResponse DescribeLogAnalysisDownloadTasksSync(DescribeLogAnalysisDownloadTasksRequest req)
         {
             return InternalRequestAsync<DescribeLogAnalysisDownloadTasksResponse>(req, "DescribeLogAnalysisDownloadTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于日志分析统计结果查询。用户在检索语句后追加 SQL 聚合语句（[检索条件] | [SQL语句]），后端执行聚合并返回列式统计结果（列定义 + 数据行）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisStatisticsResponse"/></returns>
+        public Task<DescribeLogAnalysisStatisticsResponse> DescribeLogAnalysisStatistics(DescribeLogAnalysisStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisStatisticsResponse>(req, "DescribeLogAnalysisStatistics");
+        }
+
+        /// <summary>
+        /// 本接口用于日志分析统计结果查询。用户在检索语句后追加 SQL 聚合语句（[检索条件] | [SQL语句]），后端执行聚合并返回列式统计结果（列定义 + 数据行）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisStatisticsResponse"/></returns>
+        public DescribeLogAnalysisStatisticsResponse DescribeLogAnalysisStatisticsSync(DescribeLogAnalysisStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisStatisticsResponse>(req, "DescribeLogAnalysisStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

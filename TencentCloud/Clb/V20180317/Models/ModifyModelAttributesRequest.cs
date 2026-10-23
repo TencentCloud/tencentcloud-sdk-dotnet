@@ -54,6 +54,36 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EndpointPath")]
         public string EndpointPath{ get; set; }
 
+        /// <summary>
+        /// <p>所属厂商</p>
+        /// </summary>
+        [JsonProperty("ModelProvider")]
+        public string ModelProvider{ get; set; }
+
+        /// <summary>
+        /// <p>协议</p>
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// <p>所使用的CMR 私网管道 ID</p>
+        /// </summary>
+        [JsonProperty("CMRPrivateNetworkTunnelId")]
+        public string CMRPrivateNetworkTunnelId{ get; set; }
+
+        /// <summary>
+        /// <p>携带的Host Header</p>
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
+
+        /// <summary>
+        /// <p>是否需要进行ssl校验</p>
+        /// </summary>
+        [JsonProperty("VerifySSL")]
+        public bool? VerifySSL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
             this.SetParamSimple(map, prefix + "ApiBase", this.ApiBase);
             this.SetParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
+            this.SetParamSimple(map, prefix + "ModelProvider", this.ModelProvider);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
+            this.SetParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
         }
     }
 }

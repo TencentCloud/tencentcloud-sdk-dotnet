@@ -30,6 +30,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
+        /// <summary>
+        /// <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+        /// </summary>
+        [JsonProperty("TimeoutSeconds")]
+        public ulong? TimeoutSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
         }
     }
 }

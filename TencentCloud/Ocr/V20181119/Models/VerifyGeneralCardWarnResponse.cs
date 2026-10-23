@@ -109,6 +109,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string WatermarkContent{ get; set; }
 
         /// <summary>
+        /// <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+        /// </summary>
+        [JsonProperty("ReasoningResult")]
+        public ReasoningResult ReasoningResult{ get; set; }
+
+        /// <summary>
+        /// <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
+        /// </summary>
+        [JsonProperty("IsKeyFieldTamper")]
+        public string IsKeyFieldTamper{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -134,6 +146,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "Electron.", this.Electron);
             this.SetParamObj(map, prefix + "TextWatermark.", this.TextWatermark);
             this.SetParamSimple(map, prefix + "WatermarkContent", this.WatermarkContent);
+            this.SetParamObj(map, prefix + "ReasoningResult.", this.ReasoningResult);
+            this.SetParamSimple(map, prefix + "IsKeyFieldTamper", this.IsKeyFieldTamper);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

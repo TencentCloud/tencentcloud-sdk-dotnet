@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1524</VersionPrefix>
+    <VersionPrefix>3.0.1525</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -442,6 +442,8 @@
     <Compile Include="V20220901\Models\DescribeLogAnalysisDetailResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLogAnalysisDownloadTasksRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLogAnalysisDownloadTasksResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeLogAnalysisStatisticsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeLogAnalysisStatisticsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineRequest.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineResponse.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayOriginACLRequest.cs" />
@@ -907,6 +909,7 @@
     <Compile Include="V20220901\Models\SourceIDC.cs" />
     <Compile Include="V20220901\Models\StandardDebug.cs" />
     <Compile Include="V20220901\Models\StandardDebugParameters.cs" />
+    <Compile Include="V20220901\Models\StatisticsRecord.cs" />
     <Compile Include="V20220901\Models\StatusCodeCacheParam.cs" />
     <Compile Include="V20220901\Models\StatusCodeCacheParameters.cs" />
     <Compile Include="V20220901\Models\SubRule.cs" />

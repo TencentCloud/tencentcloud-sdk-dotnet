@@ -217,6 +217,18 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>是否是迁移的节点</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("IsMigrated")]
+        public bool? IsMigrated{ get; set; }
+
+        /// <summary>
+        /// <p>资源 ID</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -253,6 +265,8 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsMigrated", this.IsMigrated);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }
