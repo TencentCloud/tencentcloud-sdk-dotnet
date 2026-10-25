@@ -25,42 +25,42 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// <p>应用 Id（AppId）。</p>
+        /// 应用 Id（AppId）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// <p>实例 Id。</p>
+        /// 实例 Id。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>数据库名。</p>
+        /// 数据库名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }
 
         /// <summary>
-        /// <p>数据采集时间戳（毫秒）。</p>
+        /// 数据采集时间戳（毫秒）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// <p>磁盘占用大小（字节）。</p>
+        /// 磁盘占用大小（字节）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SizeOnDisk")]
         public long? SizeOnDisk{ get; set; }
 
         /// <summary>
-        /// <p>集合级空间使用明细。</p>
+        /// 集合级空间使用明细。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Collection")]

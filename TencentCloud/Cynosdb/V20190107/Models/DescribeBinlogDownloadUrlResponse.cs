@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 下载地址
+        /// <p>下载地址</p>
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }

@@ -25,145 +25,121 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 克隆的源实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+        /// <p>克隆的源实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+        /// <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// 实例磁盘容量大小，设置步长限制为10。单位：GB。
+        /// <p>实例磁盘容量大小，设置步长限制为10。单位：GB。</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 购买时长，单位：月。
-        /// 
-        /// - 预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-        /// - 后付费：只支持1
+        /// <p>购买时长，单位：月。</p><ul><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：只支持1</li></ul>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 续费标记。仅当计费模式为预付费时生效。
-        /// 枚举值：
-        /// 
-        /// - 0：手动续费
-        /// - 1：自动续费
-        /// 
-        /// 默认值：0
+        /// <p>续费标记。仅当计费模式为预付费时生效。<br>枚举值：</p><ul><li>0：手动续费</li><li>1：自动续费</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+        /// <p>私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a> ，从接口返回中的unVpcId字段获取。</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+        /// <p>私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"源实例名-Copy"。
+        /// <p>新购的实例名称，仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;，不指定实例名称则默认显示&quot;源实例名-Copy&quot;。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 实例计费类型，目前支持：
-        /// 
-        /// - PREPAID：预付费，即包年包月
-        /// - POSTPAID_BY_HOUR：后付费，即按量计费
-        /// 
-        /// 默认值：PREPAID
+        /// <p>实例计费类型，目前支持：</p><ul><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：后付费，即按量计费</li></ul><p>默认值：PREPAID</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 实例所属安全组。该参数可以通过调用[DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808)的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。
+        /// <p>实例所属安全组。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a>的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 项目ID。默认值为0，表示所属默认项目。
+        /// <p>项目ID。默认值为0，表示所属默认项目。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+        /// <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// 实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。
-        /// 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+        /// <p>实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券：
-        /// 
-        /// - 0：否
-        /// - 1：是
-        /// 
-        /// 默认值：0
+        /// <p>是否自动使用代金券：</p><ul><li>0：否</li><li>1：是</li></ul><p>默认值：0</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 代金券ID列表。
+        /// <p>代金券ID列表。</p>
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string VoucherIds{ get; set; }
 
         /// <summary>
-        /// 活动ID。
+        /// <p>活动ID。</p>
         /// </summary>
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// 基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
+        /// <p>基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。</p>
         /// </summary>
         [JsonProperty("BackupSetId")]
         public string BackupSetId{ get; set; }
 
         /// <summary>
-        /// 恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
+        /// <p>恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。</p>
         /// </summary>
         [JsonProperty("RecoveryTargetTime")]
         public string RecoveryTargetTime{ get; set; }
 
         /// <summary>
-        /// 主从同步方式，支持： 
-        /// <li>Semi-sync：半同步</li>
-        /// <li>Async：异步</li>
-        /// 主实例默认值：Semi-sync
-        /// 只读实例默认值：Async
+        /// <p>主从同步方式，支持： </p><li>Semi-sync：半同步</li><li>Async：异步</li>主实例默认值：Semi-sync只读实例默认值：Async
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }
 
         /// <summary>
-        /// 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+        /// <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }

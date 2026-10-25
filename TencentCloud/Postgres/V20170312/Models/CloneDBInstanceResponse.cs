@@ -25,19 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 订单号。
+        /// <p>订单号。</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// 订单流水号。
+        /// <p>订单流水号。</p>
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// 克隆出的新实例ID，当前只支持后付费返回该值。
+        /// <p>克隆出的新实例ID，当前只支持后付费返回该值。</p>
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }

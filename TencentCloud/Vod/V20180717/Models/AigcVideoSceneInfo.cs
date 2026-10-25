@@ -25,17 +25,22 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// AI生视频场景类型，可选值：
-        /// - product_showcase： 产品360度展示。
+        /// <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 产品展示参数
+        /// <p>产品展示参数配置。</p>
         /// </summary>
         [JsonProperty("ProductShowcaseConfig")]
         public ProductShowcaseConfig ProductShowcaseConfig{ get; set; }
+
+        /// <summary>
+        /// <p>角色场景参数配置。</p>
+        /// </summary>
+        [JsonProperty("CharacterSceneConfig")]
+        public CharacterSceneConfig CharacterSceneConfig{ get; set; }
 
 
         /// <summary>
@@ -45,6 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "ProductShowcaseConfig.", this.ProductShowcaseConfig);
+            this.SetParamObj(map, prefix + "CharacterSceneConfig.", this.CharacterSceneConfig);
         }
     }
 }

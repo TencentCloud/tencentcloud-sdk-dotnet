@@ -30,6 +30,18 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
+        /// <summary>
+        /// <p>标注档位</p>
+        /// </summary>
+        [JsonProperty("Edition")]
+        public string Edition{ get; set; }
+
+        /// <summary>
+        /// <p>通用扩展参数，json格式字符串</p>
+        /// </summary>
+        [JsonProperty("ExtraParams")]
+        public string ExtraParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Trro.V20220325.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
         }
     }
 }

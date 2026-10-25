@@ -52,6 +52,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("OwnerName")]
         public string OwnerName{ get; set; }
 
+        /// <summary>
+        /// 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogSource")]
+        public string CatalogSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "OwnerType", this.OwnerType);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
+            this.SetParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1525</VersionPrefix>
+    <VersionPrefix>3.0.1526</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,7 +64,10 @@
     <Compile Include="V20210527\Models\AutonomyActionVo.cs" />
     <Compile Include="V20210527\Models\AutonomyEventVo.cs" />
     <Compile Include="V20210527\Models\AutonomyUserProfileInfo.cs" />
+    <Compile Include="V20210527\Models\BlockingChainNode.cs" />
+    <Compile Include="V20210527\Models\BlockingChainTree.cs" />
     <Compile Include="V20210527\Models\BlockingLogItem.cs" />
+    <Compile Include="V20210527\Models\BlockingTrendPoint.cs" />
     <Compile Include="V20210527\Models\CancelDBAutonomyActionRequest.cs" />
     <Compile Include="V20210527\Models\CancelDBAutonomyActionResponse.cs" />
     <Compile Include="V20210527\Models\CancelDBAutonomyEventRequest.cs" />
@@ -131,8 +134,12 @@
     <Compile Include="V20210527\Models\DescribeAuditInstanceListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeBlockingLockTreeRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeBlockingLockTreeResponse.cs" />
     <Compile Include="V20210527\Models\DescribeBlockingLogsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeBlockingLogsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeBlockingTrendRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeBlockingTrendResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAuditLogTopSqlsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeDBAuditLogTopSqlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeDBAuditLogsRequest.cs" />
@@ -229,6 +236,8 @@
     <Compile Include="V20210527\Models\DescribeSqlFiltersResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSqlTemplateRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSqlTemplateResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeTableSpaceDataV2Request.cs" />
+    <Compile Include="V20210527\Models\DescribeTableSpaceDataV2Response.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemaTimeSeriesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemaTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemasRequest.cs" />
@@ -279,6 +288,7 @@
     <Compile Include="V20210527\Models\MongoDBProcessItem.cs" />
     <Compile Include="V20210527\Models\MongoDBProcessList.cs" />
     <Compile Include="V20210527\Models\MongoDBTableSpaceItem.cs" />
+    <Compile Include="V20210527\Models\MongodbSpaceObjectItem.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetric.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="V20210527\Models\MonitorMetric.cs" />
@@ -316,6 +326,7 @@
     <Compile Include="V20210527\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="V20210527\Models\SlowLogUser.cs" />
     <Compile Include="V20210527\Models\SqlCostDistribution.cs" />
+    <Compile Include="V20210527\Models\SqlServerSpaceObjectItem.cs" />
     <Compile Include="V20210527\Models\StatDimension.cs" />
     <Compile Include="V20210527\Models\StatisticDataInfo.cs" />
     <Compile Include="V20210527\Models\StatisticInfo.cs" />

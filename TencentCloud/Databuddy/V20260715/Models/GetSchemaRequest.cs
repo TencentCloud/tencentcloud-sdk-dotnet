@@ -49,13 +49,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public FetchOption FetchOption{ get; set; }
 
         /// <summary>
-        /// 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
+        /// <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
         /// </summary>
         [JsonProperty("ConnectionId")]
         public string ConnectionId{ get; set; }
 
         /// <summary>
-        /// 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+        /// <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
         /// </summary>
         [JsonProperty("CatalogSource")]
         public string CatalogSource{ get; set; }

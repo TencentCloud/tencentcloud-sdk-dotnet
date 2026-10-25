@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+        /// <p>会话粘性的超时时间（秒），取值范围 180–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[180, 21600]</p><p>单位：秒</p><p>默认值：1800</p>
         /// </summary>
         [JsonProperty("TimeoutSeconds")]
         public ulong? TimeoutSeconds{ get; set; }

@@ -216,6 +216,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ImageConfig")]
         public ImageConfig ImageConfig{ get; set; }
 
+        /// <summary>
+        /// <p>实例重定向配置</p>
+        /// </summary>
+        [JsonProperty("RedirectConfig")]
+        public RedirectConfig RedirectConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -253,6 +259,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
             this.SetParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
             this.SetParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
+            this.SetParamObj(map, prefix + "RedirectConfig.", this.RedirectConfig);
         }
     }
 }

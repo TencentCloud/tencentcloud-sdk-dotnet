@@ -25,64 +25,70 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+        /// <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+        /// <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
-        /// 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
+        /// <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
 
         /// <summary>
-        /// 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+        /// <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
         /// </summary>
         [JsonProperty("EncryptionType")]
         public string EncryptionType{ get; set; }
 
         /// <summary>
-        /// 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+        /// <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// 数据协议 (1 使用物模型 2 为自定义)
+        /// <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
         /// </summary>
         [JsonProperty("DataProtocol")]
         public long? DataProtocol{ get; set; }
 
         /// <summary>
-        /// 产品描述
+        /// <p>产品描述</p>
         /// </summary>
         [JsonProperty("ProductDesc")]
         public string ProductDesc{ get; set; }
 
         /// <summary>
-        /// 产品的项目ID
+        /// <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 平均传输速率
+        /// <p>平均传输速率</p>
         /// </summary>
         [JsonProperty("Rate")]
         public string Rate{ get; set; }
 
         /// <summary>
-        /// 期限
+        /// <p>期限</p>
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }
+
+        /// <summary>
+        /// <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
+        /// </summary>
+        [JsonProperty("PrivateCAName")]
+        public string PrivateCAName{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Rate", this.Rate);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "PrivateCAName", this.PrivateCAName);
         }
     }
 }

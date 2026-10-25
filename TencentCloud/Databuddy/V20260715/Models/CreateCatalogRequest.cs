@@ -25,43 +25,43 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// catalog名称
+        /// <p>catalog名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// catalog类型, 可选值TABLE、MODEL、VOLUME
+        /// <p>catalog类型, 可选值TABLE、MODEL、VOLUME</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 工作空间唯一id
+        /// <p>工作空间唯一id</p>
         /// </summary>
         [JsonProperty("WorkspaceId")]
         public string WorkspaceId{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// connection 的 ID
+        /// <p>connection 的 ID，通过ListConnections接口获取</p>
         /// </summary>
         [JsonProperty("ConnectionId")]
         public string ConnectionId{ get; set; }
 
         /// <summary>
-        /// 数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
+        /// <p>数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理</p>
         /// </summary>
         [JsonProperty("CatalogSource")]
         public string CatalogSource{ get; set; }
 
         /// <summary>
-        /// 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+        /// <p>连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。</p>
         /// </summary>
         [JsonProperty("ConnectionCatalogName")]
         public string ConnectionCatalogName{ get; set; }

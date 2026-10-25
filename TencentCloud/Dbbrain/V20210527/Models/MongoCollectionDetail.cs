@@ -25,84 +25,84 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// <p>集合命名空间，格式为 db.collection。</p>
+        /// 集合命名空间，格式为 db.collection。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CollStats")]
         public string CollStats{ get; set; }
 
         /// <summary>
-        /// <p>集合逻辑大小（字节，未压缩）。</p>
+        /// 集合逻辑大小（字节，未压缩）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CollectionSize")]
         public long? CollectionSize{ get; set; }
 
         /// <summary>
-        /// <p>集合已分配但未使用的空间（字节）。</p>
+        /// 集合已分配但未使用的空间（字节）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataFree")]
         public long? DataFree{ get; set; }
 
         /// <summary>
-        /// <p>空间利用率（百分比字符串）。</p>
+        /// 空间利用率（百分比字符串）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpaceRatio")]
         public string SpaceRatio{ get; set; }
 
         /// <summary>
-        /// <p>碎片率（百分比字符串）。</p>
+        /// 碎片率（百分比字符串）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FragRatio")]
         public string FragRatio{ get; set; }
 
         /// <summary>
-        /// <p>集合数据大小（字节）。</p>
+        /// 集合数据大小（字节）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// <p>所有索引占用大小（字节）。</p>
+        /// 所有索引占用大小（字节）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalIndexSize")]
         public long? TotalIndexSize{ get; set; }
 
         /// <summary>
-        /// <p>平均文档大小（字节）。</p>
+        /// 平均文档大小（字节）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvgObjSize")]
         public long? AvgObjSize{ get; set; }
 
         /// <summary>
-        /// <p>集合实际占用存储大小（字节，压缩后）。</p>
+        /// 集合实际占用存储大小（字节，压缩后）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageSize")]
         public long? StorageSize{ get; set; }
 
         /// <summary>
-        /// <p>文档数量。</p>
+        /// 文档数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// <p>压缩率（百分比字符串）。</p>
+        /// 压缩率（百分比字符串）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompressionRatio")]
         public string CompressionRatio{ get; set; }
 
         /// <summary>
-        /// <p>可复用文件空间（字节）。</p>
+        /// 可复用文件空间（字节）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileReuseBytes")]

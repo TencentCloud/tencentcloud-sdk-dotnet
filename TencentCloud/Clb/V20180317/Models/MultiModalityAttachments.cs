@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
+        /// <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 可购买的最小规格码。
+        /// <p>可购买的最小规格码。</p>
         /// </summary>
         [JsonProperty("MinSpecCode")]
         public string MinSpecCode{ get; set; }
 
         /// <summary>
-        /// 可购买的最小磁盘容量，单位GB。
+        /// <p>可购买的最小磁盘容量，单位GB。</p>
         /// </summary>
         [JsonProperty("MinStorage")]
         public long? MinStorage{ get; set; }

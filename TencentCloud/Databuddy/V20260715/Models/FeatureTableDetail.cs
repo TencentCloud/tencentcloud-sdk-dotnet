@@ -25,34 +25,46 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 特征表主键字段列表
+        /// <p>特征表主键字段列表</p>
         /// </summary>
         [JsonProperty("PrimaryKeys")]
         public string[] PrimaryKeys{ get; set; }
 
         /// <summary>
-        /// 特征表时间戳字段名称
+        /// <p>特征表时间戳字段名称</p>
         /// </summary>
         [JsonProperty("TimestampField")]
         public string TimestampField{ get; set; }
 
         /// <summary>
-        /// 在线特征表对应的来源表名称（离线表）
+        /// <p>在线特征表对应的来源表名称（离线表）</p>
         /// </summary>
         [JsonProperty("SourceTableName")]
         public string SourceTableName{ get; set; }
 
         /// <summary>
-        /// 在线特征表关联的工作流ID
+        /// <p>在线特征表关联的工作流ID</p>
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 离线特征表对应生成的在线特征表名称
+        /// <p>离线特征表对应生成的在线特征表名称</p>
         /// </summary>
         [JsonProperty("OnlineTableName")]
         public string OnlineTableName{ get; set; }
+
+        /// <summary>
+        /// <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+        /// </summary>
+        [JsonProperty("OnlineTableType")]
+        public string OnlineTableType{ get; set; }
+
+        /// <summary>
+        /// <p>离线特征表对应生成的在线特征表ConnectionId</p>
+        /// </summary>
+        [JsonProperty("ConnectionId")]
+        public string ConnectionId{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "SourceTableName", this.SourceTableName);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "OnlineTableName", this.OnlineTableName);
+            this.SetParamSimple(map, prefix + "OnlineTableType", this.OnlineTableType);
+            this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
         }
     }
 }

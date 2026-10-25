@@ -28,7 +28,7 @@ namespace TencentCloud.Ssm.V20190923
 
        private const string endpoint = "ssm.tencentcloudapi.com";
        private const string version = "2019-09-23";
-       private const string sdkVersion = "SDK_NET_3.0.1491";
+       private const string sdkVersion = "SDK_NET_3.0.1526";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Ssm.V20190923
         public CreateSecretResponse CreateSecretSync(CreateSecretRequest req)
         {
             return InternalRequestAsync<CreateSecretResponse>(req, "CreateSecret")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通 ssm 服务接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceRequest"/></param>
+        /// <returns><see cref="CreateServiceResponse"/></returns>
+        public Task<CreateServiceResponse> CreateService(CreateServiceRequest req)
+        {
+            return InternalRequestAsync<CreateServiceResponse>(req, "CreateService");
+        }
+
+        /// <summary>
+        /// 开通 ssm 服务接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceRequest"/></param>
+        /// <returns><see cref="CreateServiceResponse"/></returns>
+        public CreateServiceResponse CreateServiceSync(CreateServiceRequest req)
+        {
+            return InternalRequestAsync<CreateServiceResponse>(req, "CreateService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

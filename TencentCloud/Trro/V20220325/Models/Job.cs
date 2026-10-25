@@ -78,6 +78,12 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
+        /// <summary>
+        /// <p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
+        /// </summary>
+        [JsonProperty("TaskStatusCount")]
+        public string TaskStatusCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamSimple(map, prefix + "TotalNumber", this.TotalNumber);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "TaskStatusCount", this.TaskStatusCount);
         }
     }
 }

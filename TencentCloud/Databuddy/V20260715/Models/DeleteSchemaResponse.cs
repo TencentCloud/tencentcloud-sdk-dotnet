@@ -25,7 +25,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 操作结果
+        /// <p>操作结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]

@@ -44,14 +44,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 限制下载的vpc设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitVpcs")]
         public BackupLimitVpcItem[] LimitVpcs{ get; set; }
 
         /// <summary>
         /// 限制下载的ip设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitIps")]
         public string[] LimitIps{ get; set; }

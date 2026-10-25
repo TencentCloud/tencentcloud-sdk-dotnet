@@ -25,7 +25,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 创建catalog响应
+        /// <p>创建catalog响应</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]

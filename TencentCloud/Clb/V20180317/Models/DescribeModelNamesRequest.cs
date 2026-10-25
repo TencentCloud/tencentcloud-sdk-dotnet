@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照模态过滤。</li></ul>
+        /// <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照输入模态过滤。</li><li>Capability：按照输出模态过滤。</li></ul>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

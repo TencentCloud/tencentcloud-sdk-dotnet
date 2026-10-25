@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Binlog文件ID
+        /// <p>Binlog文件ID</p>
         /// </summary>
         [JsonProperty("BinlogId")]
         public long? BinlogId{ get; set; }
 
         /// <summary>
-        /// 备份下载来源限制条件
+        /// <p>备份下载来源限制条件</p>
         /// </summary>
         [JsonProperty("DownloadRestriction")]
         public BackupLimitRestriction DownloadRestriction{ get; set; }

@@ -46,6 +46,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Engine{ get; set; }
 
         /// <summary>
+        /// <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableStatus")]
+        public long? TableStatus{ get; set; }
+
+        /// <summary>
         /// <p>行数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -103,6 +110,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "TableSchema", this.TableSchema);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "Engine", this.Engine);
+            this.SetParamSimple(map, prefix + "TableStatus", this.TableStatus);
             this.SetParamSimple(map, prefix + "TableRows", this.TableRows);
             this.SetParamSimple(map, prefix + "TotalLength", this.TotalLength);
             this.SetParamSimple(map, prefix + "DataLength", this.DataLength);

@@ -30,6 +30,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
+        /// <summary>
+        /// <p>选定的分类决策模型名，不传递表示随机选用。</p>
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
         }
     }
 }

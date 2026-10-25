@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
+        /// <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p><ol><li>wand-vega-image模型支持的分辨率:1K, 2K, 4K。</li></ol>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品描述
+        /// <p>产品描述</p>
         /// </summary>
         [JsonProperty("Product")]
         public ProductEntry Product{ get; set; }

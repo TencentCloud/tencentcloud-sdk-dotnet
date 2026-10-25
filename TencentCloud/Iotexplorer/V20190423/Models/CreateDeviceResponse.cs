@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 设备参数描述。
+        /// <p>设备参数描述。</p>
         /// </summary>
         [JsonProperty("Data")]
         public DeviceData Data{ get; set; }

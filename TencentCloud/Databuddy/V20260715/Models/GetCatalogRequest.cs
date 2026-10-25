@@ -49,7 +49,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public FetchOption FetchOption{ get; set; }
 
         /// <summary>
-        /// <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径</p>
+        /// <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
         /// </summary>
         [JsonProperty("ConnectionId")]
         public string ConnectionId{ get; set; }

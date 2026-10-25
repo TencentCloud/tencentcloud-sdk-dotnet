@@ -25,52 +25,58 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品ID。
+        /// <p>产品ID。</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+        /// <p>设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// LoRaWAN 设备地址
+        /// <p>LoRaWAN 设备地址</p>
         /// </summary>
         [JsonProperty("DevAddr")]
         public string DevAddr{ get; set; }
 
         /// <summary>
-        /// LoRaWAN 应用密钥
+        /// <p>LoRaWAN 应用密钥</p>
         /// </summary>
         [JsonProperty("AppKey")]
         public string AppKey{ get; set; }
 
         /// <summary>
-        /// LoRaWAN 设备唯一标识
+        /// <p>LoRaWAN 设备唯一标识</p>
         /// </summary>
         [JsonProperty("DevEUI")]
         public string DevEUI{ get; set; }
 
         /// <summary>
-        /// LoRaWAN 应用会话密钥
+        /// <p>LoRaWAN 应用会话密钥</p>
         /// </summary>
         [JsonProperty("AppSKey")]
         public string AppSKey{ get; set; }
 
         /// <summary>
-        /// LoRaWAN 网络会话密钥
+        /// <p>LoRaWAN 网络会话密钥</p>
         /// </summary>
         [JsonProperty("NwkSKey")]
         public string NwkSKey{ get; set; }
 
         /// <summary>
-        /// 手动指定设备的PSK密钥
+        /// <p>手动指定设备的PSK密钥</p>
         /// </summary>
         [JsonProperty("DefinedPsk")]
         public string DefinedPsk{ get; set; }
+
+        /// <summary>
+        /// <p>设备证书。第三方CA证书认证的产品下必填；腾讯云CA证书产品传入会报错；非证书认证产品传入会被忽略</p>
+        /// </summary>
+        [JsonProperty("TlsCrt")]
+        public string TlsCrt{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "AppSKey", this.AppSKey);
             this.SetParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
             this.SetParamSimple(map, prefix + "DefinedPsk", this.DefinedPsk);
+            this.SetParamSimple(map, prefix + "TlsCrt", this.TlsCrt);
         }
     }
 }

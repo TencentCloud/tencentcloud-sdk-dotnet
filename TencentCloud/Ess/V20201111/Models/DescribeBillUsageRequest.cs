@@ -48,6 +48,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("DisplaySubEnterprise")]
         public bool? DisplaySubEnterprise{ get; set; }
 
+        /// <summary>
+        /// <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "QuotaType", this.QuotaType);
             this.SetParamSimple(map, prefix + "DisplaySubEnterprise", this.DisplaySubEnterprise);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

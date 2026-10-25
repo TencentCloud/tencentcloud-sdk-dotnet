@@ -49,7 +49,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public bool? IncludeContent{ get; set; }
 
         /// <summary>
-        /// <p>文件版本 ID。来源：ListFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
+        /// <p>文件版本 ID。来源：ListCodeFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }

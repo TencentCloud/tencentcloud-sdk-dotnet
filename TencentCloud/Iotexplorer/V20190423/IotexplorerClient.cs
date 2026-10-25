@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1524";
+       private const string sdkVersion = "SDK_NET_3.0.1526";
 
         /// <summary>
         /// Client constructor.
@@ -907,6 +907,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 创建私有CA证书
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateCARequest"/></param>
+        /// <returns><see cref="CreatePrivateCAResponse"/></returns>
+        public Task<CreatePrivateCAResponse> CreatePrivateCA(CreatePrivateCARequest req)
+        {
+            return InternalRequestAsync<CreatePrivateCAResponse>(req, "CreatePrivateCA");
+        }
+
+        /// <summary>
+        /// 创建私有CA证书
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateCARequest"/></param>
+        /// <returns><see cref="CreatePrivateCAResponse"/></returns>
+        public CreatePrivateCAResponse CreatePrivateCASync(CreatePrivateCARequest req)
+        {
+            return InternalRequestAsync<CreatePrivateCAResponse>(req, "CreatePrivateCA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 为用户提供新建项目的能力，用于集中管理产品和应用。
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
@@ -1449,6 +1470,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DeletePositionSpaceResponse DeletePositionSpaceSync(DeletePositionSpaceRequest req)
         {
             return InternalRequestAsync<DeletePositionSpaceResponse>(req, "DeletePositionSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除私有CA证书
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateCARequest"/></param>
+        /// <returns><see cref="DeletePrivateCAResponse"/></returns>
+        public Task<DeletePrivateCAResponse> DeletePrivateCA(DeletePrivateCARequest req)
+        {
+            return InternalRequestAsync<DeletePrivateCAResponse>(req, "DeletePrivateCA");
+        }
+
+        /// <summary>
+        /// 删除私有CA证书
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateCARequest"/></param>
+        /// <returns><see cref="DeletePrivateCAResponse"/></returns>
+        public DeletePrivateCAResponse DeletePrivateCASync(DeletePrivateCARequest req)
+        {
+            return InternalRequestAsync<DeletePrivateCAResponse>(req, "DeletePrivateCA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除产品绑定的CA证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProductPrivateCARequest"/></param>
+        /// <returns><see cref="DeleteProductPrivateCAResponse"/></returns>
+        public Task<DeleteProductPrivateCAResponse> DeleteProductPrivateCA(DeleteProductPrivateCARequest req)
+        {
+            return InternalRequestAsync<DeleteProductPrivateCAResponse>(req, "DeleteProductPrivateCA");
+        }
+
+        /// <summary>
+        /// 删除产品绑定的CA证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProductPrivateCARequest"/></param>
+        /// <returns><see cref="DeleteProductPrivateCAResponse"/></returns>
+        public DeleteProductPrivateCAResponse DeleteProductPrivateCASync(DeleteProductPrivateCARequest req)
+        {
+            return InternalRequestAsync<DeleteProductPrivateCAResponse>(req, "DeleteProductPrivateCA")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2730,6 +2793,90 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribePositionFenceListResponse DescribePositionFenceListSync(DescribePositionFenceListRequest req)
         {
             return InternalRequestAsync<DescribePositionFenceListResponse>(req, "DescribePositionFenceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询私有化CA信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateCARequest"/></param>
+        /// <returns><see cref="DescribePrivateCAResponse"/></returns>
+        public Task<DescribePrivateCAResponse> DescribePrivateCA(DescribePrivateCARequest req)
+        {
+            return InternalRequestAsync<DescribePrivateCAResponse>(req, "DescribePrivateCA");
+        }
+
+        /// <summary>
+        /// 查询私有化CA信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateCARequest"/></param>
+        /// <returns><see cref="DescribePrivateCAResponse"/></returns>
+        public DescribePrivateCAResponse DescribePrivateCASync(DescribePrivateCARequest req)
+        {
+            return InternalRequestAsync<DescribePrivateCAResponse>(req, "DescribePrivateCA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询私有CA绑定的产品列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateCABindedProductsRequest"/></param>
+        /// <returns><see cref="DescribePrivateCABindedProductsResponse"/></returns>
+        public Task<DescribePrivateCABindedProductsResponse> DescribePrivateCABindedProducts(DescribePrivateCABindedProductsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateCABindedProductsResponse>(req, "DescribePrivateCABindedProducts");
+        }
+
+        /// <summary>
+        /// 查询私有CA绑定的产品列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateCABindedProductsRequest"/></param>
+        /// <returns><see cref="DescribePrivateCABindedProductsResponse"/></returns>
+        public DescribePrivateCABindedProductsResponse DescribePrivateCABindedProductsSync(DescribePrivateCABindedProductsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateCABindedProductsResponse>(req, "DescribePrivateCABindedProducts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询私有CA证书列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateCAsRequest"/></param>
+        /// <returns><see cref="DescribePrivateCAsResponse"/></returns>
+        public Task<DescribePrivateCAsResponse> DescribePrivateCAs(DescribePrivateCAsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateCAsResponse>(req, "DescribePrivateCAs");
+        }
+
+        /// <summary>
+        /// 查询私有CA证书列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateCAsRequest"/></param>
+        /// <returns><see cref="DescribePrivateCAsResponse"/></returns>
+        public DescribePrivateCAsResponse DescribePrivateCAsSync(DescribePrivateCAsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateCAsResponse>(req, "DescribePrivateCAs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询产品绑定的CA证书
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductCARequest"/></param>
+        /// <returns><see cref="DescribeProductCAResponse"/></returns>
+        public Task<DescribeProductCAResponse> DescribeProductCA(DescribeProductCARequest req)
+        {
+            return InternalRequestAsync<DescribeProductCAResponse>(req, "DescribeProductCA");
+        }
+
+        /// <summary>
+        /// 查询产品绑定的CA证书
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductCARequest"/></param>
+        /// <returns><see cref="DescribeProductCAResponse"/></returns>
+        public DescribeProductCAResponse DescribeProductCASync(DescribeProductCARequest req)
+        {
+            return InternalRequestAsync<DescribeProductCAResponse>(req, "DescribeProductCA")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5576,6 +5723,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public UpdateOtaTaskStatusResponse UpdateOtaTaskStatusSync(UpdateOtaTaskStatusRequest req)
         {
             return InternalRequestAsync<UpdateOtaTaskStatusResponse>(req, "UpdateOtaTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新私有CA证书
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrivateCARequest"/></param>
+        /// <returns><see cref="UpdatePrivateCAResponse"/></returns>
+        public Task<UpdatePrivateCAResponse> UpdatePrivateCA(UpdatePrivateCARequest req)
+        {
+            return InternalRequestAsync<UpdatePrivateCAResponse>(req, "UpdatePrivateCA");
+        }
+
+        /// <summary>
+        /// 更新私有CA证书
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrivateCARequest"/></param>
+        /// <returns><see cref="UpdatePrivateCAResponse"/></returns>
+        public UpdatePrivateCAResponse UpdatePrivateCASync(UpdatePrivateCARequest req)
+        {
+            return InternalRequestAsync<UpdatePrivateCAResponse>(req, "UpdatePrivateCA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新产品的私有CA
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProductPrivateCARequest"/></param>
+        /// <returns><see cref="UpdateProductPrivateCAResponse"/></returns>
+        public Task<UpdateProductPrivateCAResponse> UpdateProductPrivateCA(UpdateProductPrivateCARequest req)
+        {
+            return InternalRequestAsync<UpdateProductPrivateCAResponse>(req, "UpdateProductPrivateCA");
+        }
+
+        /// <summary>
+        /// 更新产品的私有CA
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProductPrivateCARequest"/></param>
+        /// <returns><see cref="UpdateProductPrivateCAResponse"/></returns>
+        public UpdateProductPrivateCAResponse UpdateProductPrivateCASync(UpdateProductPrivateCARequest req)
+        {
+            return InternalRequestAsync<UpdateProductPrivateCAResponse>(req, "UpdateProductPrivateCA")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

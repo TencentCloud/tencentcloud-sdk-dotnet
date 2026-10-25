@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1523";
+       private const string sdkVersion = "SDK_NET_3.0.1526";
 
         /// <summary>
         /// Client constructor.
@@ -215,6 +215,71 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 创建存储位置
+        /// 使用场景：在数据湖仓库中创建新的存储位置
+        /// </summary>
+        /// <param name="req"><see cref="CreateLocationRequest"/></param>
+        /// <returns><see cref="CreateLocationResponse"/></returns>
+        public Task<CreateLocationResponse> CreateLocation(CreateLocationRequest req)
+        {
+            return InternalRequestAsync<CreateLocationResponse>(req, "CreateLocation");
+        }
+
+        /// <summary>
+        /// 创建存储位置
+        /// 使用场景：在数据湖仓库中创建新的存储位置
+        /// </summary>
+        /// <param name="req"><see cref="CreateLocationRequest"/></param>
+        /// <returns><see cref="CreateLocationResponse"/></returns>
+        public CreateLocationResponse CreateLocationSync(CreateLocationRequest req)
+        {
+            return InternalRequestAsync<CreateLocationResponse>(req, "CreateLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建模型接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRequest"/></param>
+        /// <returns><see cref="CreateModelResponse"/></returns>
+        public Task<CreateModelResponse> CreateModel(CreateModelRequest req)
+        {
+            return InternalRequestAsync<CreateModelResponse>(req, "CreateModel");
+        }
+
+        /// <summary>
+        /// 创建模型接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRequest"/></param>
+        /// <returns><see cref="CreateModelResponse"/></returns>
+        public CreateModelResponse CreateModelSync(CreateModelRequest req)
+        {
+            return InternalRequestAsync<CreateModelResponse>(req, "CreateModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建模型版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelVersionRequest"/></param>
+        /// <returns><see cref="CreateModelVersionResponse"/></returns>
+        public Task<CreateModelVersionResponse> CreateModelVersion(CreateModelVersionRequest req)
+        {
+            return InternalRequestAsync<CreateModelVersionResponse>(req, "CreateModelVersion");
+        }
+
+        /// <summary>
+        /// 创建模型版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelVersionRequest"/></param>
+        /// <returns><see cref="CreateModelVersionResponse"/></returns>
+        public CreateModelVersionResponse CreateModelVersionSync(CreateModelVersionRequest req)
+        {
+            return InternalRequestAsync<CreateModelVersionResponse>(req, "CreateModelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建schema
         /// </summary>
         /// <param name="req"><see cref="CreateSchemaRequest"/></param>
@@ -232,6 +297,27 @@ namespace TencentCloud.Databuddy.V20260715
         public CreateSchemaResponse CreateSchemaSync(CreateSchemaRequest req)
         {
             return InternalRequestAsync<CreateSchemaResponse>(req, "CreateSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建数据卷接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateVolumeRequest"/></param>
+        /// <returns><see cref="CreateVolumeResponse"/></returns>
+        public Task<CreateVolumeResponse> CreateVolume(CreateVolumeRequest req)
+        {
+            return InternalRequestAsync<CreateVolumeResponse>(req, "CreateVolume");
+        }
+
+        /// <summary>
+        /// 创建数据卷接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateVolumeRequest"/></param>
+        /// <returns><see cref="CreateVolumeResponse"/></returns>
+        public CreateVolumeResponse CreateVolumeSync(CreateVolumeRequest req)
+        {
+            return InternalRequestAsync<CreateVolumeResponse>(req, "CreateVolume")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -417,6 +503,54 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 删除存储位置
+        /// 使用场景：删除指定的存储位置
+        /// 前置条件：存储位置名称必须存在
+        /// 错误码：MetaLakeNotFound - 存储位置不存在
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLocationRequest"/></param>
+        /// <returns><see cref="DeleteLocationResponse"/></returns>
+        public Task<DeleteLocationResponse> DeleteLocation(DeleteLocationRequest req)
+        {
+            return InternalRequestAsync<DeleteLocationResponse>(req, "DeleteLocation");
+        }
+
+        /// <summary>
+        /// 删除存储位置
+        /// 使用场景：删除指定的存储位置
+        /// 前置条件：存储位置名称必须存在
+        /// 错误码：MetaLakeNotFound - 存储位置不存在
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLocationRequest"/></param>
+        /// <returns><see cref="DeleteLocationResponse"/></returns>
+        public DeleteLocationResponse DeleteLocationSync(DeleteLocationRequest req)
+        {
+            return InternalRequestAsync<DeleteLocationResponse>(req, "DeleteLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public Task<DeleteModelResponse> DeleteModel(DeleteModelRequest req)
+        {
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel");
+        }
+
+        /// <summary>
+        /// 删除模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public DeleteModelResponse DeleteModelSync(DeleteModelRequest req)
+        {
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除schema
         /// </summary>
         /// <param name="req"><see cref="DeleteSchemaRequest"/></param>
@@ -455,6 +589,48 @@ namespace TencentCloud.Databuddy.V20260715
         public DeleteTableResponse DeleteTableSync(DeleteTableRequest req)
         {
             return InternalRequestAsync<DeleteTableResponse>(req, "DeleteTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除view
+        /// </summary>
+        /// <param name="req"><see cref="DeleteViewRequest"/></param>
+        /// <returns><see cref="DeleteViewResponse"/></returns>
+        public Task<DeleteViewResponse> DeleteView(DeleteViewRequest req)
+        {
+            return InternalRequestAsync<DeleteViewResponse>(req, "DeleteView");
+        }
+
+        /// <summary>
+        /// 删除view
+        /// </summary>
+        /// <param name="req"><see cref="DeleteViewRequest"/></param>
+        /// <returns><see cref="DeleteViewResponse"/></returns>
+        public DeleteViewResponse DeleteViewSync(DeleteViewRequest req)
+        {
+            return InternalRequestAsync<DeleteViewResponse>(req, "DeleteView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除数据卷
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVolumeRequest"/></param>
+        /// <returns><see cref="DeleteVolumeResponse"/></returns>
+        public Task<DeleteVolumeResponse> DeleteVolume(DeleteVolumeRequest req)
+        {
+            return InternalRequestAsync<DeleteVolumeResponse>(req, "DeleteVolume");
+        }
+
+        /// <summary>
+        /// 删除数据卷
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVolumeRequest"/></param>
+        /// <returns><see cref="DeleteVolumeResponse"/></returns>
+        public DeleteVolumeResponse DeleteVolumeSync(DeleteVolumeRequest req)
+        {
+            return InternalRequestAsync<DeleteVolumeResponse>(req, "DeleteVolume")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -619,6 +795,75 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 查询存储位置详情
+        /// 使用场景：根据存储位置名获取单个存储位置的详细信息
+        /// 前置条件：存储位置名称必须存在
+        /// 错误码：MetaLakeNotFound - 存储位置不存在
+        /// </summary>
+        /// <param name="req"><see cref="GetLocationRequest"/></param>
+        /// <returns><see cref="GetLocationResponse"/></returns>
+        public Task<GetLocationResponse> GetLocation(GetLocationRequest req)
+        {
+            return InternalRequestAsync<GetLocationResponse>(req, "GetLocation");
+        }
+
+        /// <summary>
+        /// 查询存储位置详情
+        /// 使用场景：根据存储位置名获取单个存储位置的详细信息
+        /// 前置条件：存储位置名称必须存在
+        /// 错误码：MetaLakeNotFound - 存储位置不存在
+        /// </summary>
+        /// <param name="req"><see cref="GetLocationRequest"/></param>
+        /// <returns><see cref="GetLocationResponse"/></returns>
+        public GetLocationResponse GetLocationSync(GetLocationRequest req)
+        {
+            return InternalRequestAsync<GetLocationResponse>(req, "GetLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取模型详情
+        /// </summary>
+        /// <param name="req"><see cref="GetModelRequest"/></param>
+        /// <returns><see cref="GetModelResponse"/></returns>
+        public Task<GetModelResponse> GetModel(GetModelRequest req)
+        {
+            return InternalRequestAsync<GetModelResponse>(req, "GetModel");
+        }
+
+        /// <summary>
+        /// 获取模型详情
+        /// </summary>
+        /// <param name="req"><see cref="GetModelRequest"/></param>
+        /// <returns><see cref="GetModelResponse"/></returns>
+        public GetModelResponse GetModelSync(GetModelRequest req)
+        {
+            return InternalRequestAsync<GetModelResponse>(req, "GetModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取模型版本详情
+        /// </summary>
+        /// <param name="req"><see cref="GetModelVersionRequest"/></param>
+        /// <returns><see cref="GetModelVersionResponse"/></returns>
+        public Task<GetModelVersionResponse> GetModelVersion(GetModelVersionRequest req)
+        {
+            return InternalRequestAsync<GetModelVersionResponse>(req, "GetModelVersion");
+        }
+
+        /// <summary>
+        /// 获取模型版本详情
+        /// </summary>
+        /// <param name="req"><see cref="GetModelVersionRequest"/></param>
+        /// <returns><see cref="GetModelVersionResponse"/></returns>
+        public GetModelVersionResponse GetModelVersionSync(GetModelVersionRequest req)
+        {
+            return InternalRequestAsync<GetModelVersionResponse>(req, "GetModelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询schema详情
         /// </summary>
         /// <param name="req"><see cref="GetSchemaRequest"/></param>
@@ -678,6 +923,48 @@ namespace TencentCloud.Databuddy.V20260715
         public GetTablesResponse GetTablesSync(GetTablesRequest req)
         {
             return InternalRequestAsync<GetTablesResponse>(req, "GetTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询view详情
+        /// </summary>
+        /// <param name="req"><see cref="GetViewRequest"/></param>
+        /// <returns><see cref="GetViewResponse"/></returns>
+        public Task<GetViewResponse> GetView(GetViewRequest req)
+        {
+            return InternalRequestAsync<GetViewResponse>(req, "GetView");
+        }
+
+        /// <summary>
+        /// 查询view详情
+        /// </summary>
+        /// <param name="req"><see cref="GetViewRequest"/></param>
+        /// <returns><see cref="GetViewResponse"/></returns>
+        public GetViewResponse GetViewSync(GetViewRequest req)
+        {
+            return InternalRequestAsync<GetViewResponse>(req, "GetView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取模型详情
+        /// </summary>
+        /// <param name="req"><see cref="GetVolumeRequest"/></param>
+        /// <returns><see cref="GetVolumeResponse"/></returns>
+        public Task<GetVolumeResponse> GetVolume(GetVolumeRequest req)
+        {
+            return InternalRequestAsync<GetVolumeResponse>(req, "GetVolume");
+        }
+
+        /// <summary>
+        /// 获取模型详情
+        /// </summary>
+        /// <param name="req"><see cref="GetVolumeRequest"/></param>
+        /// <returns><see cref="GetVolumeResponse"/></returns>
+        public GetVolumeResponse GetVolumeSync(GetVolumeRequest req)
+        {
+            return InternalRequestAsync<GetVolumeResponse>(req, "GetVolume")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -787,6 +1074,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 分页查询数据目录名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListCatalogNamesRequest"/></param>
+        /// <returns><see cref="ListCatalogNamesResponse"/></returns>
+        public Task<ListCatalogNamesResponse> ListCatalogNames(ListCatalogNamesRequest req)
+        {
+            return InternalRequestAsync<ListCatalogNamesResponse>(req, "ListCatalogNames");
+        }
+
+        /// <summary>
+        /// 分页查询数据目录名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListCatalogNamesRequest"/></param>
+        /// <returns><see cref="ListCatalogNamesResponse"/></returns>
+        public ListCatalogNamesResponse ListCatalogNamesSync(ListCatalogNamesRequest req)
+        {
+            return InternalRequestAsync<ListCatalogNamesResponse>(req, "ListCatalogNames")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 分页获取数据目录列表
         /// </summary>
         /// <param name="req"><see cref="ListCatalogsRequest"/></param>
@@ -892,6 +1200,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 查询特征表列表
+        /// </summary>
+        /// <param name="req"><see cref="ListFeatureTablesRequest"/></param>
+        /// <returns><see cref="ListFeatureTablesResponse"/></returns>
+        public Task<ListFeatureTablesResponse> ListFeatureTables(ListFeatureTablesRequest req)
+        {
+            return InternalRequestAsync<ListFeatureTablesResponse>(req, "ListFeatureTables");
+        }
+
+        /// <summary>
+        /// 查询特征表列表
+        /// </summary>
+        /// <param name="req"><see cref="ListFeatureTablesRequest"/></param>
+        /// <returns><see cref="ListFeatureTablesResponse"/></returns>
+        public ListFeatureTablesResponse ListFeatureTablesSync(ListFeatureTablesRequest req)
+        {
+            return InternalRequestAsync<ListFeatureTablesResponse>(req, "ListFeatureTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取文件夹和文件列表
         /// </summary>
         /// <param name="req"><see cref="ListFilesRequest"/></param>
@@ -909,6 +1238,71 @@ namespace TencentCloud.Databuddy.V20260715
         public ListFilesResponse ListFilesSync(ListFilesRequest req)
         {
             return InternalRequestAsync<ListFilesResponse>(req, "ListFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询存储位置列表
+        /// 使用场景：分页查询数据湖仓库中的存储位置详情列表，支持模式匹配和快照分页
+        /// </summary>
+        /// <param name="req"><see cref="ListLocationsRequest"/></param>
+        /// <returns><see cref="ListLocationsResponse"/></returns>
+        public Task<ListLocationsResponse> ListLocations(ListLocationsRequest req)
+        {
+            return InternalRequestAsync<ListLocationsResponse>(req, "ListLocations");
+        }
+
+        /// <summary>
+        /// 分页查询存储位置列表
+        /// 使用场景：分页查询数据湖仓库中的存储位置详情列表，支持模式匹配和快照分页
+        /// </summary>
+        /// <param name="req"><see cref="ListLocationsRequest"/></param>
+        /// <returns><see cref="ListLocationsResponse"/></returns>
+        public ListLocationsResponse ListLocationsSync(ListLocationsRequest req)
+        {
+            return InternalRequestAsync<ListLocationsResponse>(req, "ListLocations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页获取模型信息
+        /// </summary>
+        /// <param name="req"><see cref="ListModelsRequest"/></param>
+        /// <returns><see cref="ListModelsResponse"/></returns>
+        public Task<ListModelsResponse> ListModels(ListModelsRequest req)
+        {
+            return InternalRequestAsync<ListModelsResponse>(req, "ListModels");
+        }
+
+        /// <summary>
+        /// 分页获取模型信息
+        /// </summary>
+        /// <param name="req"><see cref="ListModelsRequest"/></param>
+        /// <returns><see cref="ListModelsResponse"/></returns>
+        public ListModelsResponse ListModelsSync(ListModelsRequest req)
+        {
+            return InternalRequestAsync<ListModelsResponse>(req, "ListModels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询数据库名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSchemaNamesRequest"/></param>
+        /// <returns><see cref="ListSchemaNamesResponse"/></returns>
+        public Task<ListSchemaNamesResponse> ListSchemaNames(ListSchemaNamesRequest req)
+        {
+            return InternalRequestAsync<ListSchemaNamesResponse>(req, "ListSchemaNames");
+        }
+
+        /// <summary>
+        /// 分页查询数据库名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSchemaNamesRequest"/></param>
+        /// <returns><see cref="ListSchemaNamesResponse"/></returns>
+        public ListSchemaNamesResponse ListSchemaNamesSync(ListSchemaNamesRequest req)
+        {
+            return InternalRequestAsync<ListSchemaNamesResponse>(req, "ListSchemaNames")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -934,6 +1328,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 分页查询数据表名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTableNamesRequest"/></param>
+        /// <returns><see cref="ListTableNamesResponse"/></returns>
+        public Task<ListTableNamesResponse> ListTableNames(ListTableNamesRequest req)
+        {
+            return InternalRequestAsync<ListTableNamesResponse>(req, "ListTableNames");
+        }
+
+        /// <summary>
+        /// 分页查询数据表名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTableNamesRequest"/></param>
+        /// <returns><see cref="ListTableNamesResponse"/></returns>
+        public ListTableNamesResponse ListTableNamesSync(ListTableNamesRequest req)
+        {
+            return InternalRequestAsync<ListTableNamesResponse>(req, "ListTableNames")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取table列表
         /// </summary>
         /// <param name="req"><see cref="ListTablesRequest"/></param>
@@ -951,6 +1366,69 @@ namespace TencentCloud.Databuddy.V20260715
         public ListTablesResponse ListTablesSync(ListTablesRequest req)
         {
             return InternalRequestAsync<ListTablesResponse>(req, "ListTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询视图名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListViewNamesRequest"/></param>
+        /// <returns><see cref="ListViewNamesResponse"/></returns>
+        public Task<ListViewNamesResponse> ListViewNames(ListViewNamesRequest req)
+        {
+            return InternalRequestAsync<ListViewNamesResponse>(req, "ListViewNames");
+        }
+
+        /// <summary>
+        /// 分页查询视图名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListViewNamesRequest"/></param>
+        /// <returns><see cref="ListViewNamesResponse"/></returns>
+        public ListViewNamesResponse ListViewNamesSync(ListViewNamesRequest req)
+        {
+            return InternalRequestAsync<ListViewNamesResponse>(req, "ListViewNames")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取view列表
+        /// </summary>
+        /// <param name="req"><see cref="ListViewsRequest"/></param>
+        /// <returns><see cref="ListViewsResponse"/></returns>
+        public Task<ListViewsResponse> ListViews(ListViewsRequest req)
+        {
+            return InternalRequestAsync<ListViewsResponse>(req, "ListViews");
+        }
+
+        /// <summary>
+        /// 获取view列表
+        /// </summary>
+        /// <param name="req"><see cref="ListViewsRequest"/></param>
+        /// <returns><see cref="ListViewsResponse"/></returns>
+        public ListViewsResponse ListViewsSync(ListViewsRequest req)
+        {
+            return InternalRequestAsync<ListViewsResponse>(req, "ListViews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页获取数据卷信息
+        /// </summary>
+        /// <param name="req"><see cref="ListVolumesRequest"/></param>
+        /// <returns><see cref="ListVolumesResponse"/></returns>
+        public Task<ListVolumesResponse> ListVolumes(ListVolumesRequest req)
+        {
+            return InternalRequestAsync<ListVolumesResponse>(req, "ListVolumes");
+        }
+
+        /// <summary>
+        /// 分页获取数据卷信息
+        /// </summary>
+        /// <param name="req"><see cref="ListVolumesRequest"/></param>
+        /// <returns><see cref="ListVolumesResponse"/></returns>
+        public ListVolumesResponse ListVolumesSync(ListVolumesRequest req)
+        {
+            return InternalRequestAsync<ListVolumesResponse>(req, "ListVolumes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1186,6 +1664,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 资产统一搜索
+        /// </summary>
+        /// <param name="req"><see cref="SearchAssetRequest"/></param>
+        /// <returns><see cref="SearchAssetResponse"/></returns>
+        public Task<SearchAssetResponse> SearchAsset(SearchAssetRequest req)
+        {
+            return InternalRequestAsync<SearchAssetResponse>(req, "SearchAsset");
+        }
+
+        /// <summary>
+        /// 资产统一搜索
+        /// </summary>
+        /// <param name="req"><see cref="SearchAssetRequest"/></param>
+        /// <returns><see cref="SearchAssetResponse"/></returns>
+        public SearchAssetResponse SearchAssetSync(SearchAssetRequest req)
+        {
+            return InternalRequestAsync<SearchAssetResponse>(req, "SearchAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 启动计算资源
         /// </summary>
         /// <param name="req"><see cref="StartComputeRequest"/></param>
@@ -1247,6 +1746,31 @@ namespace TencentCloud.Databuddy.V20260715
         public UnbindWorkflowBundleResponse UnbindWorkflowBundleSync(UnbindWorkflowBundleRequest req)
         {
             return InternalRequestAsync<UnbindWorkflowBundleResponse>(req, "UnbindWorkflowBundle")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改数据目录信息
+        /// 使用场景：修改数据目录的注释，按需传入NewComment字段
+        /// 前置条件：数据目录必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCatalogRequest"/></param>
+        /// <returns><see cref="UpdateCatalogResponse"/></returns>
+        public Task<UpdateCatalogResponse> UpdateCatalog(UpdateCatalogRequest req)
+        {
+            return InternalRequestAsync<UpdateCatalogResponse>(req, "UpdateCatalog");
+        }
+
+        /// <summary>
+        /// 修改数据目录信息
+        /// 使用场景：修改数据目录的注释，按需传入NewComment字段
+        /// 前置条件：数据目录必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCatalogRequest"/></param>
+        /// <returns><see cref="UpdateCatalogResponse"/></returns>
+        public UpdateCatalogResponse UpdateCatalogSync(UpdateCatalogRequest req)
+        {
+            return InternalRequestAsync<UpdateCatalogResponse>(req, "UpdateCatalog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1369,6 +1893,233 @@ namespace TencentCloud.Databuddy.V20260715
         public UpdateFolderResponse UpdateFolderSync(UpdateFolderRequest req)
         {
             return InternalRequestAsync<UpdateFolderResponse>(req, "UpdateFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改函数信息
+        /// 使用场景：修改函数的注释，按需传入NewComment字段
+        /// 前置条件：函数必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionRequest"/></param>
+        /// <returns><see cref="UpdateFunctionResponse"/></returns>
+        public Task<UpdateFunctionResponse> UpdateFunction(UpdateFunctionRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionResponse>(req, "UpdateFunction");
+        }
+
+        /// <summary>
+        /// 修改函数信息
+        /// 使用场景：修改函数的注释，按需传入NewComment字段
+        /// 前置条件：函数必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionRequest"/></param>
+        /// <returns><see cref="UpdateFunctionResponse"/></returns>
+        public UpdateFunctionResponse UpdateFunctionSync(UpdateFunctionRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionResponse>(req, "UpdateFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改存储位置
+        /// 使用场景：修改存储位置的名称、描述或属性信息
+        /// 前置条件：存储位置名称必须存在
+        /// 错误码：MetaLakeNotFound - 存储位置不存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLocationRequest"/></param>
+        /// <returns><see cref="UpdateLocationResponse"/></returns>
+        public Task<UpdateLocationResponse> UpdateLocation(UpdateLocationRequest req)
+        {
+            return InternalRequestAsync<UpdateLocationResponse>(req, "UpdateLocation");
+        }
+
+        /// <summary>
+        /// 修改存储位置
+        /// 使用场景：修改存储位置的名称、描述或属性信息
+        /// 前置条件：存储位置名称必须存在
+        /// 错误码：MetaLakeNotFound - 存储位置不存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLocationRequest"/></param>
+        /// <returns><see cref="UpdateLocationResponse"/></returns>
+        public UpdateLocationResponse UpdateLocationSync(UpdateLocationRequest req)
+        {
+            return InternalRequestAsync<UpdateLocationResponse>(req, "UpdateLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改模型信息
+        /// 使用场景：修改模型的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：模型必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateModelRequest"/></param>
+        /// <returns><see cref="UpdateModelResponse"/></returns>
+        public Task<UpdateModelResponse> UpdateModel(UpdateModelRequest req)
+        {
+            return InternalRequestAsync<UpdateModelResponse>(req, "UpdateModel");
+        }
+
+        /// <summary>
+        /// 修改模型信息
+        /// 使用场景：修改模型的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：模型必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateModelRequest"/></param>
+        /// <returns><see cref="UpdateModelResponse"/></returns>
+        public UpdateModelResponse UpdateModelSync(UpdateModelRequest req)
+        {
+            return InternalRequestAsync<UpdateModelResponse>(req, "UpdateModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改模型版本信息
+        /// 使用场景：修改模型版本的别名或注释，按需传入对应字段
+        /// 前置条件：模型版本必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateModelVersionRequest"/></param>
+        /// <returns><see cref="UpdateModelVersionResponse"/></returns>
+        public Task<UpdateModelVersionResponse> UpdateModelVersion(UpdateModelVersionRequest req)
+        {
+            return InternalRequestAsync<UpdateModelVersionResponse>(req, "UpdateModelVersion");
+        }
+
+        /// <summary>
+        /// 修改模型版本信息
+        /// 使用场景：修改模型版本的别名或注释，按需传入对应字段
+        /// 前置条件：模型版本必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateModelVersionRequest"/></param>
+        /// <returns><see cref="UpdateModelVersionResponse"/></returns>
+        public UpdateModelVersionResponse UpdateModelVersionSync(UpdateModelVersionRequest req)
+        {
+            return InternalRequestAsync<UpdateModelVersionResponse>(req, "UpdateModelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改schema信息
+        /// 使用场景：修改schema的注释，按需传入NewComment字段
+        /// 前置条件：schema必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSchemaRequest"/></param>
+        /// <returns><see cref="UpdateSchemaResponse"/></returns>
+        public Task<UpdateSchemaResponse> UpdateSchema(UpdateSchemaRequest req)
+        {
+            return InternalRequestAsync<UpdateSchemaResponse>(req, "UpdateSchema");
+        }
+
+        /// <summary>
+        /// 修改schema信息
+        /// 使用场景：修改schema的注释，按需传入NewComment字段
+        /// 前置条件：schema必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSchemaRequest"/></param>
+        /// <returns><see cref="UpdateSchemaResponse"/></returns>
+        public UpdateSchemaResponse UpdateSchemaSync(UpdateSchemaRequest req)
+        {
+            return InternalRequestAsync<UpdateSchemaResponse>(req, "UpdateSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改表信息
+        /// 使用场景：修改表的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：表必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTableRequest"/></param>
+        /// <returns><see cref="UpdateTableResponse"/></returns>
+        public Task<UpdateTableResponse> UpdateTable(UpdateTableRequest req)
+        {
+            return InternalRequestAsync<UpdateTableResponse>(req, "UpdateTable");
+        }
+
+        /// <summary>
+        /// 修改表信息
+        /// 使用场景：修改表的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：表必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTableRequest"/></param>
+        /// <returns><see cref="UpdateTableResponse"/></returns>
+        public UpdateTableResponse UpdateTableSync(UpdateTableRequest req)
+        {
+            return InternalRequestAsync<UpdateTableResponse>(req, "UpdateTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改表字段描述
+        /// 使用场景：修改表中一个或多个字段的注释
+        /// 前置条件：用户需对目标表有写权限；字段名必须存在于目标表中
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTableColumnRequest"/></param>
+        /// <returns><see cref="UpdateTableColumnResponse"/></returns>
+        public Task<UpdateTableColumnResponse> UpdateTableColumn(UpdateTableColumnRequest req)
+        {
+            return InternalRequestAsync<UpdateTableColumnResponse>(req, "UpdateTableColumn");
+        }
+
+        /// <summary>
+        /// 修改表字段描述
+        /// 使用场景：修改表中一个或多个字段的注释
+        /// 前置条件：用户需对目标表有写权限；字段名必须存在于目标表中
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTableColumnRequest"/></param>
+        /// <returns><see cref="UpdateTableColumnResponse"/></returns>
+        public UpdateTableColumnResponse UpdateTableColumnSync(UpdateTableColumnRequest req)
+        {
+            return InternalRequestAsync<UpdateTableColumnResponse>(req, "UpdateTableColumn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改视图信息
+        /// 使用场景：修改视图的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：视图必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateViewRequest"/></param>
+        /// <returns><see cref="UpdateViewResponse"/></returns>
+        public Task<UpdateViewResponse> UpdateView(UpdateViewRequest req)
+        {
+            return InternalRequestAsync<UpdateViewResponse>(req, "UpdateView");
+        }
+
+        /// <summary>
+        /// 修改视图信息
+        /// 使用场景：修改视图的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：视图必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateViewRequest"/></param>
+        /// <returns><see cref="UpdateViewResponse"/></returns>
+        public UpdateViewResponse UpdateViewSync(UpdateViewRequest req)
+        {
+            return InternalRequestAsync<UpdateViewResponse>(req, "UpdateView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改数据卷信息
+        /// 使用场景：修改数据卷的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：数据卷必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVolumeRequest"/></param>
+        /// <returns><see cref="UpdateVolumeResponse"/></returns>
+        public Task<UpdateVolumeResponse> UpdateVolume(UpdateVolumeRequest req)
+        {
+            return InternalRequestAsync<UpdateVolumeResponse>(req, "UpdateVolume");
+        }
+
+        /// <summary>
+        /// 修改数据卷信息
+        /// 使用场景：修改数据卷的名称或注释，按需传入NewName/NewComment字段
+        /// 前置条件：数据卷必须存在
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVolumeRequest"/></param>
+        /// <returns><see cref="UpdateVolumeResponse"/></returns>
+        public UpdateVolumeResponse UpdateVolumeSync(UpdateVolumeRequest req)
+        {
+            return InternalRequestAsync<UpdateVolumeResponse>(req, "UpdateVolume")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
