@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 源集群Id
+        /// <p>源集群Id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 目标可用区
+        /// <p>目标可用区</p>
         /// </summary>
         [JsonProperty("DstZone")]
         public string DstZone{ get; set; }
 
         /// <summary>
-        /// 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
+        /// <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
         /// </summary>
         [JsonProperty("MaxLag")]
         public long? MaxLag{ get; set; }
 
         /// <summary>
-        /// Immediate:立即执行，InMaintain:时间窗口执行
+        /// <p>Immediate:立即执行，InMaintain:时间窗口执行</p>
         /// </summary>
         [JsonProperty("TransferType")]
         public string TransferType{ get; set; }
 
         /// <summary>
-        /// 多可用区备区
+        /// <p>多可用区备区</p>
         /// </summary>
         [JsonProperty("DstSlaveZone")]
         public string DstSlaveZone{ get; set; }
 
         /// <summary>
-        /// proxy迁移的目标可用区信息
+        /// <p>proxy迁移的目标可用区信息</p>
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }

@@ -48,6 +48,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+        /// </summary>
+        [JsonProperty("OperationSource")]
+        public string OperationSource{ get; set; }
+
+        /// <summary>
+        /// <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
+        /// </summary>
+        [JsonProperty("ParentConsumerGroupIds")]
+        public string[] ParentConsumerGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "OperationSource", this.OperationSource);
+            this.SetParamArraySimple(map, prefix + "ParentConsumerGroupIds.", this.ParentConsumerGroupIds);
         }
     }
 }

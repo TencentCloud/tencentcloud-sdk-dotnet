@@ -31,22 +31,52 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// <p>每页条数，范围 [1, 100]，默认 10。</p>
+        /// <p>每页数量，最大20个</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>起始位置，从 0 开始。</p>
+        /// <p>起始值</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+        /// <p>资源类型：</p><ul><li>Consumer: 消费者</li><li>LLM: 模型服务</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>资源id</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// <p>是否展示可以用于绑定信息,true/false</p>
+        /// </summary>
+        [JsonProperty("UseToBind")]
+        public bool? UseToBind{ get; set; }
+
+        /// <summary>
+        /// <p>Key 可选：</p><ul><li>SecretType:  密钥类型 ApiKey</li><li>GenerateType:  生成方式，例如 KMS</li><li>Status: 状态 Enable/Disable</li></ul>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>检索关键字</p>
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
+        /// <summary>
+        /// <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+        /// </summary>
+        [JsonProperty("IncludeCreationInfo")]
+        public bool? IncludeCreationInfo{ get; set; }
 
 
         /// <summary>
@@ -58,6 +88,11 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "UseToBind", this.UseToBind);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "IncludeCreationInfo", this.IncludeCreationInfo);
         }
     }
 }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Cngw.V20230418.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateUserKeyResponse : AbstractModel
+    public class AIGWLengthLimitConfig : AbstractModel
     {
         
         /// <summary>
-        /// <p>更新记录条数</p>
+        /// <p>是否开启输入长度限制</p>
         /// </summary>
-        [JsonProperty("UpdateResult")]
-        public ulong? UpdateResult{ get; set; }
+        [JsonProperty("EnableInputLimit")]
+        public bool? EnableInputLimit{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>最大输入长度字符数</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("MaxInputChars")]
+        public ulong? MaxInputChars{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UpdateResult", this.UpdateResult);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "EnableInputLimit", this.EnableInputLimit);
+            this.SetParamSimple(map, prefix + "MaxInputChars", this.MaxInputChars);
         }
     }
 }

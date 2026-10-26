@@ -54,6 +54,30 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+        /// </summary>
+        [JsonProperty("Origin")]
+        public string Origin{ get; set; }
+
+        /// <summary>
+        /// <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>仅查询指定同步源产生的消费者。</p>
+        /// </summary>
+        [JsonProperty("SyncSourceId")]
+        public string SyncSourceId{ get; set; }
+
+        /// <summary>
+        /// <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
+        /// </summary>
+        [JsonProperty("WithoutSyncSource")]
+        public bool? WithoutSyncSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +89,10 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "Origin", this.Origin);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SyncSourceId", this.SyncSourceId);
+            this.SetParamSimple(map, prefix + "WithoutSyncSource", this.WithoutSyncSource);
         }
     }
 }

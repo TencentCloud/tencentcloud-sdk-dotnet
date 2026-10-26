@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 商品价格
+        /// <p>商品价格</p>
         /// </summary>
         [JsonProperty("GoodsPrice")]
         public GoodsPrice[] GoodsPrice{ get; set; }

@@ -15,32 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindService : AbstractModel
+    public class AIGWSimpleSecretKey : AbstractModel
     {
         
         /// <summary>
-        /// 服务标识
+        /// <p>密钥ID</p>
         /// </summary>
-        [JsonProperty("ID")]
-        public string ID{ get; set; }
+        [JsonProperty("SecretKeyId")]
+        public string SecretKeyId{ get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// <p>密钥名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 场景，云托管、云函数、aibuilder等
+        /// <p>启用状态</p><p>枚举值：</p><ul><li>Enable： 启动</li><li>Disable： 禁用</li></ul>
         /// </summary>
-        [JsonProperty("Scene")]
-        public string Scene{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>密钥类型</p><p>枚举值：</p><ul><li>ApiKey： ApiKey类型</li></ul>
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public string SecretType{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间</p><p>参数格式：2026-09-03 14:11:05</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Scene", this.Scene);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

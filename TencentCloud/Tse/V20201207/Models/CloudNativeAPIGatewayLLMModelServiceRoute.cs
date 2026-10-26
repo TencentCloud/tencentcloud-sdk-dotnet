@@ -55,13 +55,13 @@ namespace TencentCloud.Tse.V20201207.Models
         public AIGWLatencyPriorityConfig LatencyPriorityConfig{ get; set; }
 
         /// <summary>
-        /// <p>缓存感知路由配置（前缀缓存）</p>
+        /// <p>前缀缓存感知路由</p>
         /// </summary>
         [JsonProperty("CacheAwareRouteConfig")]
         public AIGWCacheAwareRouteConfig CacheAwareRouteConfig{ get; set; }
 
         /// <summary>
-        /// <p>token 长度路由</p>
+        /// <p>按请求 Token 长度选择模型服务的路由配置。</p>
         /// </summary>
         [JsonProperty("TokenLengthRouteConfig")]
         public AIGWTokenLengthRoute TokenLengthRouteConfig{ get; set; }

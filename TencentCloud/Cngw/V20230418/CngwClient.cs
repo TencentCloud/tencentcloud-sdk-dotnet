@@ -28,7 +28,7 @@ namespace TencentCloud.Cngw.V20230418
 
        private const string endpoint = "cngw.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1527";
 
         /// <summary>
         /// Client constructor.
@@ -97,6 +97,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 添加密钥与资源的引用关系接口
+        /// 【消费者批量自动分配 API Key｜修改：内部并发/配额逻辑，字段不变】ResourceType=Consumer 时与批量预留共用实例写锁，单消费者绑定配额使用当前锁定读。仍按原 SecretKeyId、ResourceIds 绑定；消费者目标最多一个，单密钥不能同时绑定多个消费者，成功仍返回 Result=true。此入口不新增 OperationDenied.BatchKeyPending；该错误属于下述四个变更入口的保护逻辑。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="BindCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="BindCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -107,6 +108,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 添加密钥与资源的引用关系接口
+        /// 【消费者批量自动分配 API Key｜修改：内部并发/配额逻辑，字段不变】ResourceType=Consumer 时与批量预留共用实例写锁，单消费者绑定配额使用当前锁定读。仍按原 SecretKeyId、ResourceIds 绑定；消费者目标最多一个，单密钥不能同时绑定多个消费者，成功仍返回 Result=true。此入口不新增 OperationDenied.BatchKeyPending；该错误属于下述四个变更入口的保护逻辑。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="BindCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="BindCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -349,6 +351,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 创建消费者密钥。
+        /// 【消费者批量自动分配 API Key｜修改：内部并发/配额逻辑，字段不变】消费者密钥单条创建在事务中使用与批量预留相同的实例写锁，配额检查使用当前锁定读，避免单条与批量并发绕过配额。仍是单条创建；原 GenerateType、请求字段、既有配额错误语义及 Result.Success/ID 不变，不增加 ConsumerIds/ClientToken。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -359,6 +362,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 创建消费者密钥。
+        /// 【消费者批量自动分配 API Key｜修改：内部并发/配额逻辑，字段不变】消费者密钥单条创建在事务中使用与批量预留相同的实例写锁，配额检查使用当前锁定读，避免单条与批量并发绕过配额。仍是单条创建；原 GenerateType、请求字段、既有配额错误语义及 Result.Success/ID 不变，不增加 ConsumerIds/ClientToken。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -412,6 +416,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 删除AI网关消费者组
+        /// 
+        /// 同步组仅在 soft_deleted 状态且全部依赖已清理后允许手动硬删除；ConsumerGroupId 使用组织 UUID。存在配额规则时须先删除规则，单纯停用不能解除依赖。硬删除时重新校验，依赖变化可能导致删除失败。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -422,6 +428,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 删除AI网关消费者组
+        /// 
+        /// 同步组仅在 soft_deleted 状态且全部依赖已清理后允许手动硬删除；ConsumerGroupId 使用组织 UUID。存在配额规则时须先删除规则，单纯停用不能解除依赖。硬删除时重新校验，依赖变化可能导致删除失败。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -559,6 +567,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 删除消费者密钥（被绑定时需先解绑）。
+        /// 【消费者批量自动分配 API Key｜修改：新增未完成批次保护，字段不变】目标密钥属于批次且对应项处于 Pending/Running/Reconciling 时，删除返回 OperationDenied.BatchKeyPending。完成后仍执行原绑定/依赖删除检查；原 GatewayId/SecretKeyId 不变，成功不新增业务 Result。删除已生成密钥不改写批次历史成功，后续批次明文读取返回逐项 ResourceNotFound.SecretKey。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -569,6 +578,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 删除消费者密钥（被绑定时需先解绑）。
+        /// 【消费者批量自动分配 API Key｜修改：新增未完成批次保护，字段不变】目标密钥属于批次且对应项处于 Pending/Running/Reconciling 时，删除返回 OperationDenied.BatchKeyPending。完成后仍执行原绑定/依赖删除检查；原 GatewayId/SecretKeyId 不变，成功不新增业务 Result。删除已生成密钥不改写批次历史成功，后续批次明文读取返回逐项 ResourceNotFound.SecretKey。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -601,6 +611,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询AI网关配额
+        /// 
+        /// 支持 ConsumerGroup 配额，返回 ConsumerGroupPath、ConsumerGroupActive 及实际用量；失效组的规则仍可查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaResponse"/></returns>
@@ -611,6 +623,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询AI网关配额
+        /// 
+        /// 支持 ConsumerGroup 配额，返回 ConsumerGroupPath、ConsumerGroupActive 及实际用量；失效组的规则仍可查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaResponse"/></returns>
@@ -622,6 +636,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询AI配额配置列表
+        /// 
+        /// 支持按 ConsumerGroup 查询组自身配额，默认仍只查询 Consumer；返回组路径、有效状态及实际用量。上下级关联配额请使用 DescribeAIGWConsumerGroupAIQuotaList。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaListResponse"/></returns>
@@ -632,6 +648,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询AI配额配置列表
+        /// 
+        /// 支持按 ConsumerGroup 查询组自身配额，默认仍只查询 Consumer；返回组路径、有效状态及实际用量。上下级关联配额请使用 DescribeAIGWConsumerGroupAIQuotaList。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaListResponse"/></returns>
@@ -664,6 +682,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询云原生消费者详情
+        /// 
+        /// 组织架构扩展：保留原消费者详情与完整字段，ConsumerGroups 补齐对应组织成员关系；同步成员保持目录归属隔离。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -674,6 +694,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询云原生消费者详情
+        /// 
+        /// 组织架构扩展：保留原消费者详情与完整字段，ConsumerGroups 补齐对应组织成员关系；同步成员保持目录归属隔离。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerResponse"/></returns>
@@ -685,6 +707,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询消费者组详情。
+        /// 
+        /// 组织架构扩展：ConsumerGroupId 同时支持原 cg-* 和组织部门 UUID；保留状态、数量、时间和描述逻辑。原普通组状态为 Enable/Disable，目录部门状态为 active/disabled/soft_deleted。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -695,6 +719,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询消费者组详情。
+        /// 
+        /// 组织架构扩展：ConsumerGroupId 同时支持原 cg-* 和组织部门 UUID；保留状态、数量、时间和描述逻辑。原普通组状态为 Enable/Disable，目录部门状态为 active/disabled/soft_deleted。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConsumerGroupRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConsumerGroupResponse"/></returns>
@@ -1084,6 +1110,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询密钥详情（SecretValue 字段会被掩码）。
+        /// 普通版批量新建密钥的生成来源扩展：新页面按需 IncludeCreationInfo=true，省略/false 保持原响应字段。原 GenerateType 不新增 Batch；批量记录仍为 System。协议：https://iwiki.woa.com/p/4042678235。
+        /// 【消费者批量自动分配 API Key｜修改：可选参数及可选出参】增加可选 IncludeCreationInfo（默认 false）。仅 true 且 ResourceType=Consumer 时在原 Result 增加 CredentialGenerateType、CreationSource、BatchId 三个非必返字段；省略/false 保持旧响应。原字段、SecretValue 脱敏和单条详情结构不变。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1094,6 +1122,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询密钥详情（SecretValue 字段会被掩码）。
+        /// 普通版批量新建密钥的生成来源扩展：新页面按需 IncludeCreationInfo=true，省略/false 保持原响应字段。原 GenerateType 不新增 Batch；批量记录仍为 System。协议：https://iwiki.woa.com/p/4042678235。
+        /// 【消费者批量自动分配 API Key｜修改：可选参数及可选出参】增加可选 IncludeCreationInfo（默认 false）。仅 true 且 ResourceType=Consumer 时在原 Result 增加 CredentialGenerateType、CreationSource、BatchId 三个非必返字段；省略/false 保持旧响应。原字段、SecretValue 脱敏和单条详情结构不变。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1105,6 +1135,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询密钥列表。
+        /// 普通版批量新建密钥的生成来源扩展：新页面按需 IncludeCreationInfo=true，省略/false 保持原响应字段。原 GenerateType 不新增 Batch；批量记录仍为 System。协议：https://iwiki.woa.com/p/4042678235。
+        /// 【消费者批量自动分配 API Key｜修改：可选参数、可选出参及筛选】增加可选 IncludeCreationInfo（默认 false）。仅 true 且 ResourceType=Consumer 时在原 Result.SecretKeys[] 增加 CredentialGenerateType、CreationSource、BatchId 三个非必返字段；Result.TotalCount/SecretKeys 结构不变。Filters 新增 CredentialGenerateType、CreationSource，先过滤后计数分页，与是否返回来源字段独立；保留原 GenerateType 枚举和原分页上限。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
@@ -1115,6 +1147,8 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 查询密钥列表。
+        /// 普通版批量新建密钥的生成来源扩展：新页面按需 IncludeCreationInfo=true，省略/false 保持原响应字段。原 GenerateType 不新增 Batch；批量记录仍为 System。协议：https://iwiki.woa.com/p/4042678235。
+        /// 【消费者批量自动分配 API Key｜修改：可选参数、可选出参及筛选】增加可选 IncludeCreationInfo（默认 false）。仅 true 且 ResourceType=Consumer 时在原 Result.SecretKeys[] 增加 CredentialGenerateType、CreationSource、BatchId 三个非必返字段；Result.TotalCount/SecretKeys 结构不变。Filters 新增 CredentialGenerateType、CreationSource，先过滤后计数分页，与是否返回来源字段独立；保留原 GenerateType 枚举和原分页上限。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
@@ -1441,6 +1475,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 修改AI网关密钥
+        /// 【消费者批量自动分配 API Key｜修改：新增未完成批次保护，字段不变】目标密钥属于批次且对应项处于 Pending/Running/Reconciling 时，编辑返回 OperationDenied.BatchKeyPending，提示等待批次完成。其他情况继续原编辑校验和行为；原 GatewayId/SecretKeyId/Name/Description 不变，成功不新增业务 Result。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1451,6 +1486,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 修改AI网关密钥
+        /// 【消费者批量自动分配 API Key｜修改：新增未完成批次保护，字段不变】目标密钥属于批次且对应项处于 Pending/Running/Reconciling 时，编辑返回 OperationDenied.BatchKeyPending，提示等待批次完成。其他情况继续原编辑校验和行为；原 GatewayId/SecretKeyId/Name/Description 不变，成功不新增业务 Result。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1525,6 +1561,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 解绑密钥
+        /// 【消费者批量自动分配 API Key｜修改：新增未完成批次保护，字段不变】目标密钥属于批次且对应项处于 Pending/Running/Reconciling 时，解绑返回 OperationDenied.BatchKeyPending。完成后继续原解绑；原 GatewayId/SecretKeyId/ResourceType/ResourceIds 不变，成功不新增业务 Result。解绑不改写批次历史成功，后续批次明文读取返回逐项 OperationDenied.BindingChanged。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="UnbindCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="UnbindCloudNativeAPIGatewaySecretKeyResponse"/></returns>
@@ -1535,6 +1572,7 @@ namespace TencentCloud.Cngw.V20230418
 
         /// <summary>
         /// 解绑密钥
+        /// 【消费者批量自动分配 API Key｜修改：新增未完成批次保护，字段不变】目标密钥属于批次且对应项处于 Pending/Running/Reconciling 时，解绑返回 OperationDenied.BatchKeyPending。完成后继续原解绑；原 GatewayId/SecretKeyId/ResourceType/ResourceIds 不变，成功不新增业务 Result。解绑不改写批次历史成功，后续批次明文读取返回逐项 OperationDenied.BindingChanged。 完整接口清单与逐项说明：https://iwiki.woa.com/p/4042678235（第 2、2.4 节）。
         /// </summary>
         /// <param name="req"><see cref="UnbindCloudNativeAPIGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="UnbindCloudNativeAPIGatewaySecretKeyResponse"/></returns>

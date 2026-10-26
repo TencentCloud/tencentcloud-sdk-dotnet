@@ -36,6 +36,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConsumerId")]
         public string ConsumerId{ get; set; }
 
+        /// <summary>
+        /// <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+        /// </summary>
+        [JsonProperty("OperationSource")]
+        public string OperationSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
+            this.SetParamSimple(map, prefix + "OperationSource", this.OperationSource);
         }
     }
 }

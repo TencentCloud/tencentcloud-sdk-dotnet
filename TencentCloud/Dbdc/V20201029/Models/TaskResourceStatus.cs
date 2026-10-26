@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Dbdc.V20201029.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateUserKeyResponse : AbstractModel
+    public class TaskResourceStatus : AbstractModel
     {
         
         /// <summary>
-        /// <p>创建成功记录条数</p>
+        /// <p>资源ID。如节点ID dbcn-tnjzxz3n</p>
         /// </summary>
-        [JsonProperty("CreateResult")]
-        public ulong? CreateResult{ get; set; }
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>任务状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Succeeded： 成功</li><li>Failed： 失败</li></ul>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CreateResult", this.CreateResult);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

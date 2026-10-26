@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1525</VersionPrefix>
+    <VersionPrefix>3.0.1527</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,13 +52,9 @@
     <Compile Include="V20180608\Models\AIModelGroup.cs" />
     <Compile Include="V20180608\Models\AIModelSecret.cs" />
     <Compile Include="V20180608\Models\AIModelStatus.cs" />
-    <Compile Include="V20180608\Models\APIsUserKeyInfo.cs" />
     <Compile Include="V20180608\Models\AddProviderRequest.cs" />
     <Compile Include="V20180608\Models\AddProviderResponse.cs" />
-    <Compile Include="V20180608\Models\AgentRuntimeCode.cs" />
     <Compile Include="V20180608\Models\AgentRuntimeCodeImageConfig.cs" />
-    <Compile Include="V20180608\Models\AgentRuntimeConfig.cs" />
-    <Compile Include="V20180608\Models\AgentRuntimeSessionConfig.cs" />
     <Compile Include="V20180608\Models\AllocateEnvRequest.cs" />
     <Compile Include="V20180608\Models\AllocateEnvResponse.cs" />
     <Compile Include="V20180608\Models\ApiKeyToken.cs" />
@@ -69,8 +65,6 @@
     <Compile Include="V20180608\Models\BanConfig.cs" />
     <Compile Include="V20180608\Models\BindClsRequest.cs" />
     <Compile Include="V20180608\Models\BindClsResponse.cs" />
-    <Compile Include="V20180608\Models\BindService.cs" />
-    <Compile Include="V20180608\Models\BindServiceList.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceRequest.cs" />
     <Compile Include="V20180608\Models\BindStorageSourceResponse.cs" />
     <Compile Include="V20180608\Models\BuildArtifactInfo.cs" />
@@ -128,8 +122,6 @@
     <Compile Include="V20180608\Models\CreateStaticStoreResponse.cs" />
     <Compile Include="V20180608\Models\CreateTableRequest.cs" />
     <Compile Include="V20180608\Models\CreateTableResponse.cs" />
-    <Compile Include="V20180608\Models\CreateUserKeyRequest.cs" />
-    <Compile Include="V20180608\Models\CreateUserKeyResponse.cs" />
     <Compile Include="V20180608\Models\CreateUserRequest.cs" />
     <Compile Include="V20180608\Models\CreateUserResp.cs" />
     <Compile Include="V20180608\Models\CreateUserResponse.cs" />
@@ -157,8 +149,6 @@
     <Compile Include="V20180608\Models\DeleteProviderResponse.cs" />
     <Compile Include="V20180608\Models\DeleteTableRequest.cs" />
     <Compile Include="V20180608\Models\DeleteTableResponse.cs" />
-    <Compile Include="V20180608\Models\DeleteUserKeyRequest.cs" />
-    <Compile Include="V20180608\Models\DeleteUserKeyResponse.cs" />
     <Compile Include="V20180608\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20180608\Models\DeleteUsersResp.cs" />
     <Compile Include="V20180608\Models\DeleteUsersResponse.cs" />
@@ -291,12 +281,8 @@
     <Compile Include="V20180608\Models\GatewayVersionItem.cs" />
     <Compile Include="V20180608\Models\GetFunctionRequest.cs" />
     <Compile Include="V20180608\Models\GetFunctionResponse.cs" />
-    <Compile Include="V20180608\Models\GetOneUserKeyRequest.cs" />
-    <Compile Include="V20180608\Models\GetOneUserKeyResponse.cs" />
     <Compile Include="V20180608\Models\GetProvidersRequest.cs" />
     <Compile Include="V20180608\Models\GetProvidersResponse.cs" />
-    <Compile Include="V20180608\Models\GetUserKeyListRequest.cs" />
-    <Compile Include="V20180608\Models\GetUserKeyListResponse.cs" />
     <Compile Include="V20180608\Models\HTTPServiceCacheAction.cs" />
     <Compile Include="V20180608\Models\HTTPServiceCacheKeyParams.cs" />
     <Compile Include="V20180608\Models\HTTPServiceCacheParams.cs" />
@@ -449,8 +435,6 @@
     <Compile Include="V20180608\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
     <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
-    <Compile Include="V20180608\Models\UpdateUserKeyRequest.cs" />
-    <Compile Include="V20180608\Models\UpdateUserKeyResponse.cs" />
     <Compile Include="V20180608\Models\UpgradePGInstanceToDedicatedRequest.cs" />
     <Compile Include="V20180608\Models\UpgradePGInstanceToDedicatedResponse.cs" />
     <Compile Include="V20180608\Models\User.cs" />

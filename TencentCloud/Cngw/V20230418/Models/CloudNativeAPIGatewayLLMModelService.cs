@@ -282,6 +282,18 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("HealthCheck")]
         public AIGWLLMHealthCheckSetting HealthCheck{ get; set; }
 
+        /// <summary>
+        /// <p>内容长度限制配置</p>
+        /// </summary>
+        [JsonProperty("LengthLimitConfig")]
+        public AIGWLengthLimitConfig LengthLimitConfig{ get; set; }
+
+        /// <summary>
+        /// <p>智能负载均衡配置。</p>
+        /// </summary>
+        [JsonProperty("SmartBalance")]
+        public AIGWSmartBalanceConfig SmartBalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -331,6 +343,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+            this.SetParamObj(map, prefix + "LengthLimitConfig.", this.LengthLimitConfig);
+            this.SetParamObj(map, prefix + "SmartBalance.", this.SmartBalance);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
+        /// <p>启用最大文档数限制</p>
         /// </summary>
         [JsonProperty("EnableMaxDocuments")]
         public bool? EnableMaxDocuments{ get; set; }
 
         /// <summary>
-        /// <p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
+        /// <p>Rerank场景最大文档数限制</p>
         /// </summary>
         [JsonProperty("MaxDocumentValue")]
         public long? MaxDocumentValue{ get; set; }

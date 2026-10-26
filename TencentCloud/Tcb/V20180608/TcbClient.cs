@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1525";
+       private const string sdkVersion = "SDK_NET_3.0.1527";
 
         /// <summary>
         /// Client constructor.
@@ -639,27 +639,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 用户创建集成
-        /// </summary>
-        /// <param name="req"><see cref="CreateUserKeyRequest"/></param>
-        /// <returns><see cref="CreateUserKeyResponse"/></returns>
-        public Task<CreateUserKeyResponse> CreateUserKey(CreateUserKeyRequest req)
-        {
-            return InternalRequestAsync<CreateUserKeyResponse>(req, "CreateUserKey");
-        }
-
-        /// <summary>
-        /// 用户创建集成
-        /// </summary>
-        /// <param name="req"><see cref="CreateUserKeyRequest"/></param>
-        /// <returns><see cref="CreateUserKeyResponse"/></returns>
-        public CreateUserKeyResponse CreateUserKeySync(CreateUserKeyRequest req)
-        {
-            return InternalRequestAsync<CreateUserKeyResponse>(req, "CreateUserKey")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除 AI 模型配置分组，支持批量删除。内置分组无法删除。分组删除后，该分组下的所有模型配置将同步移除，针对该分组模型的请求将会失败，请在删除前确认业务侧已停止对该分组的调用。
         /// 
         /// 注意：
@@ -894,27 +873,6 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteTableResponse DeleteTableSync(DeleteTableRequest req)
         {
             return InternalRequestAsync<DeleteTableResponse>(req, "DeleteTable")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用户删除集成
-        /// </summary>
-        /// <param name="req"><see cref="DeleteUserKeyRequest"/></param>
-        /// <returns><see cref="DeleteUserKeyResponse"/></returns>
-        public Task<DeleteUserKeyResponse> DeleteUserKey(DeleteUserKeyRequest req)
-        {
-            return InternalRequestAsync<DeleteUserKeyResponse>(req, "DeleteUserKey");
-        }
-
-        /// <summary>
-        /// 用户删除集成
-        /// </summary>
-        /// <param name="req"><see cref="DeleteUserKeyRequest"/></param>
-        /// <returns><see cref="DeleteUserKeyResponse"/></returns>
-        public DeleteUserKeyResponse DeleteUserKeySync(DeleteUserKeyRequest req)
-        {
-            return InternalRequestAsync<DeleteUserKeyResponse>(req, "DeleteUserKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2203,27 +2161,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 用户获取集成详情
-        /// </summary>
-        /// <param name="req"><see cref="GetOneUserKeyRequest"/></param>
-        /// <returns><see cref="GetOneUserKeyResponse"/></returns>
-        public Task<GetOneUserKeyResponse> GetOneUserKey(GetOneUserKeyRequest req)
-        {
-            return InternalRequestAsync<GetOneUserKeyResponse>(req, "GetOneUserKey");
-        }
-
-        /// <summary>
-        /// 用户获取集成详情
-        /// </summary>
-        /// <param name="req"><see cref="GetOneUserKeyRequest"/></param>
-        /// <returns><see cref="GetOneUserKeyResponse"/></returns>
-        public GetOneUserKeyResponse GetOneUserKeySync(GetOneUserKeyRequest req)
-        {
-            return InternalRequestAsync<GetOneUserKeyResponse>(req, "GetOneUserKey")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。
         /// </summary>
         /// <param name="req"><see cref="GetProvidersRequest"/></param>
@@ -2241,27 +2178,6 @@ namespace TencentCloud.Tcb.V20180608
         public GetProvidersResponse GetProvidersSync(GetProvidersRequest req)
         {
             return InternalRequestAsync<GetProvidersResponse>(req, "GetProviders")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用户获取集成列表
-        /// </summary>
-        /// <param name="req"><see cref="GetUserKeyListRequest"/></param>
-        /// <returns><see cref="GetUserKeyListResponse"/></returns>
-        public Task<GetUserKeyListResponse> GetUserKeyList(GetUserKeyListRequest req)
-        {
-            return InternalRequestAsync<GetUserKeyListResponse>(req, "GetUserKeyList");
-        }
-
-        /// <summary>
-        /// 用户获取集成列表
-        /// </summary>
-        /// <param name="req"><see cref="GetUserKeyListRequest"/></param>
-        /// <returns><see cref="GetUserKeyListResponse"/></returns>
-        public GetUserKeyListResponse GetUserKeyListSync(GetUserKeyListRequest req)
-        {
-            return InternalRequestAsync<GetUserKeyListResponse>(req, "GetUserKeyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3077,27 +2993,6 @@ namespace TencentCloud.Tcb.V20180608
         public UpdateTableResponse UpdateTableSync(UpdateTableRequest req)
         {
             return InternalRequestAsync<UpdateTableResponse>(req, "UpdateTable")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用户更新集成信息
-        /// </summary>
-        /// <param name="req"><see cref="UpdateUserKeyRequest"/></param>
-        /// <returns><see cref="UpdateUserKeyResponse"/></returns>
-        public Task<UpdateUserKeyResponse> UpdateUserKey(UpdateUserKeyRequest req)
-        {
-            return InternalRequestAsync<UpdateUserKeyResponse>(req, "UpdateUserKey");
-        }
-
-        /// <summary>
-        /// 用户更新集成信息
-        /// </summary>
-        /// <param name="req"><see cref="UpdateUserKeyRequest"/></param>
-        /// <returns><see cref="UpdateUserKeyResponse"/></returns>
-        public UpdateUserKeyResponse UpdateUserKeySync(UpdateUserKeyRequest req)
-        {
-            return InternalRequestAsync<UpdateUserKeyResponse>(req, "UpdateUserKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

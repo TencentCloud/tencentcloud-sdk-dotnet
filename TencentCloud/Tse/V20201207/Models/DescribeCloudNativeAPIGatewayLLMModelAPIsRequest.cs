@@ -67,10 +67,16 @@ namespace TencentCloud.Tse.V20201207.Models
         public bool? UseToBind{ get; set; }
 
         /// <summary>
-        /// <p>消费者ID</p>
+        /// <p>消费者 ID（以 consumer- 开头）。</p>
         /// </summary>
         [JsonProperty("ConsumerId")]
         public string ConsumerId{ get; set; }
+
+        /// <summary>
+        /// <p>密钥ID</p>
+        /// </summary>
+        [JsonProperty("SecretKeyId")]
+        public string SecretKeyId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ConsumerGroupId", this.ConsumerGroupId);
             this.SetParamSimple(map, prefix + "UseToBind", this.UseToBind);
             this.SetParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
+            this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
         }
     }
 }

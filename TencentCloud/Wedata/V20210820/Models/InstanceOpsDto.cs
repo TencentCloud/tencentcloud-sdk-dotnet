@@ -559,6 +559,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
+        /// <summary>
+        /// <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerSource")]
+        public string TriggerSource{ get; set; }
+
+        /// <summary>
+        /// <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentSpTaskId")]
+        public string ParentSpTaskId{ get; set; }
+
+        /// <summary>
+        /// <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentSpInstanceName")]
+        public string ParentSpInstanceName{ get; set; }
+
+        /// <summary>
+        /// <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentSpInstanceDataTime")]
+        public string ParentSpInstanceDataTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -642,6 +670,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkflowRunName", this.WorkflowRunName);
             this.SetParamObj(map, prefix + "ProxyTaskType.", this.ProxyTaskType);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+            this.SetParamSimple(map, prefix + "TriggerSource", this.TriggerSource);
+            this.SetParamSimple(map, prefix + "ParentSpTaskId", this.ParentSpTaskId);
+            this.SetParamSimple(map, prefix + "ParentSpInstanceName", this.ParentSpInstanceName);
+            this.SetParamSimple(map, prefix + "ParentSpInstanceDataTime", this.ParentSpInstanceDataTime);
         }
     }
 }

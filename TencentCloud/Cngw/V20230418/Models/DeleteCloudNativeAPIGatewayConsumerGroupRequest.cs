@@ -31,10 +31,16 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 消费者组ID
+        /// 消费者组ID<p>CustomOrganization 时必须为当前网关自定义部门 UUID，保留系统节点、子部门、成员与授权/MCP 依赖检查。Legacy 原 cg-* 及已有 UUID 兼容行为不变。成功响应不新增 Result。</p>
         /// </summary>
         [JsonProperty("ConsumerGroupId")]
         public string ConsumerGroupId{ get; set; }
+
+        /// <summary>
+        /// <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+        /// </summary>
+        [JsonProperty("OperationSource")]
+        public string OperationSource{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "ConsumerGroupId", this.ConsumerGroupId);
+            this.SetParamSimple(map, prefix + "OperationSource", this.OperationSource);
         }
     }
 }

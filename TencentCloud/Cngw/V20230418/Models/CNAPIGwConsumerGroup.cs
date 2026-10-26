@@ -85,6 +85,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("SyncedVersion")]
         public string SyncedVersion{ get; set; }
 
+        /// <summary>
+        /// <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
         }
     }
 }

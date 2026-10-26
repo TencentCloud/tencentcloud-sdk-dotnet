@@ -55,13 +55,13 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Delimiter{ get; set; }
 
         /// <summary>
-        /// 全局配置 Id
+        /// 网关全局配置 Id
         /// </summary>
         [JsonProperty("GlobalConfigId")]
         public string GlobalConfigId{ get; set; }
 
         /// <summary>
-        /// 全局配置名称
+        /// 网关全局配置名称
         /// </summary>
         [JsonProperty("GlobalConfigName")]
         public string GlobalConfigName{ get; set; }

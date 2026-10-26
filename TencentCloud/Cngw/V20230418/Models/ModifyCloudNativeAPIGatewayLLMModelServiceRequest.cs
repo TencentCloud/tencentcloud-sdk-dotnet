@@ -204,6 +204,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("LoadBalanceConfig")]
         public AIGWLoadBalanceConfig LoadBalanceConfig{ get; set; }
 
+        /// <summary>
+        /// <p>智能负载均衡配置</p>
+        /// </summary>
+        [JsonProperty("SmartBalance")]
+        public AIGWSmartBalanceConfig SmartBalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +246,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
             this.SetParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
+            this.SetParamObj(map, prefix + "SmartBalance.", this.SmartBalance);
         }
     }
 }

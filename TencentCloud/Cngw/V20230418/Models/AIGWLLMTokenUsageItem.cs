@@ -37,7 +37,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string ConsumerName{ get; set; }
 
         /// <summary>
-        /// <p>消费者组信息列表</p>
+        /// <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
         /// </summary>
         [JsonProperty("ConsumerGroups")]
         public AIGWConsumerGroupBrief[] ConsumerGroups{ get; set; }
@@ -96,6 +96,13 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
+        /// <summary>
+        /// <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DimensionList")]
+        public AIGWLLMResourceDimension[] DimensionList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "RequestCount", this.RequestCount);
             this.SetParamSimple(map, prefix + "Cost", this.Cost);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamArrayObj(map, prefix + "DimensionList.", this.DimensionList);
         }
     }
 }

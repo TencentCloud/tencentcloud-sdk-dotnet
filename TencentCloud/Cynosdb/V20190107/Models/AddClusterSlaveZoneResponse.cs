@@ -31,6 +31,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
+        /// <p>订单ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BigDealIds")]
+        public string[] BigDealIds{ get; set; }
+
+        /// <summary>
+        /// <p>订单名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
+
+        /// <summary>
+        /// <p>交易ID</p>
+        /// </summary>
+        [JsonProperty("TranId")]
+        public string TranId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +63,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "TranId", this.TranId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

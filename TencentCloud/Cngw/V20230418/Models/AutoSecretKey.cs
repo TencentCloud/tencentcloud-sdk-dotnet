@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Cngw.V20230418.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetUserKeyListResponse : AbstractModel
+    public class AutoSecretKey : AbstractModel
     {
         
         /// <summary>
-        /// <p>用户密钥对列表</p>
+        /// <p>密钥名称，2-60 字符。</p><p>字符集与「密钥管理-新建密钥」一致（中英文、数字、下划线、短横线），禁止 -share 后缀，同网关内不可重名。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UserKeyList")]
-        public APIsUserKeyInfo[] UserKeyList{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// <p>数据记录条数</p>
+        /// <p>密钥描述。长度 ≤ 200，可为空。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "UserKeyList.", this.UserKeyList);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

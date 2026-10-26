@@ -61,10 +61,23 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string Currency{ get; set; }
 
         /// <summary>
-        /// <p>查询时间范围内成本最高的消费者</p>
+        /// <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
         /// </summary>
         [JsonProperty("TopConsumers")]
         public AIGWTopConsumersItem[] TopConsumers{ get; set; }
+
+        /// <summary>
+        /// <p>查询时间范围内原始 total_tokens 累计</p>
+        /// </summary>
+        [JsonProperty("TotalTokens")]
+        public long? TotalTokens{ get; set; }
+
+        /// <summary>
+        /// <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrgAttributionIncomplete")]
+        public bool? OrgAttributionIncomplete{ get; set; }
 
 
         /// <summary>
@@ -79,6 +92,8 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamArrayObj(map, prefix + "TopConsumers.", this.TopConsumers);
+            this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
+            this.SetParamSimple(map, prefix + "OrgAttributionIncomplete", this.OrgAttributionIncomplete);
         }
     }
 }

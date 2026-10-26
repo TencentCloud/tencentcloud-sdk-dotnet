@@ -36,6 +36,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ClientSecret")]
         public string ClientSecret{ get; set; }
 
+        /// <summary>
+        /// <p>OAuth2 授权回调地址</p>
+        /// </summary>
+        [JsonProperty("RedirectURIs")]
+        public string RedirectURIs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
+            this.SetParamSimple(map, prefix + "RedirectURIs", this.RedirectURIs);
         }
     }
 }

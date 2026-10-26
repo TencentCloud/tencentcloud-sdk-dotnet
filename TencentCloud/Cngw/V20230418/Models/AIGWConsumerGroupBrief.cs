@@ -36,6 +36,13 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("ConsumerGroupId")]
         public string ConsumerGroupId{ get; set; }
 
+        /// <summary>
+        /// <p>消费者组（组织节点）的当前展示路径，可选。TokenUsageList 在网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐，用于展示当前直接所属组的位置；多父节点使用确定性路径。更早版本、无可用路径或未补齐此元数据的接口可省略；前端缺省时回退 Name。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsumerGroupPath")]
+        public string ConsumerGroupPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ConsumerGroupId", this.ConsumerGroupId);
+            this.SetParamSimple(map, prefix + "ConsumerGroupPath", this.ConsumerGroupPath);
         }
     }
 }

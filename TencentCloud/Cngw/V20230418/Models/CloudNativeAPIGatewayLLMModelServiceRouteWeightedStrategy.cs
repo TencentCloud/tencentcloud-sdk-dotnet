@@ -36,6 +36,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
+        /// <summary>
+        /// <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+        /// </summary>
+        [JsonProperty("StandardModelName")]
+        public string StandardModelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "ModelServiceId", this.ModelServiceId);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
         }
     }
 }

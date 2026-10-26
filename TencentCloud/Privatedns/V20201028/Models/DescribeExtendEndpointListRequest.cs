@@ -25,19 +25,19 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// 分页偏移量，从0开始
+        /// <p>分页偏移量，从0开始</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页限制数目， 最大100，默认20
+        /// <p>分页限制数目， 最大100，默认20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤参数，支持EndpointName,EndpointId
+        /// <p>过滤参数，支持EndpointName,EndpointId</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

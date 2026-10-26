@@ -25,7 +25,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 消息列表
+        /// <p>消息列表</p>
         /// </summary>
         [JsonProperty("Data")]
         public MQTTMessage[] Data{ get; set; }

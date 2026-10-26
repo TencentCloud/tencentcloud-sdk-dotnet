@@ -25,16 +25,16 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// <p>用户名</p>
-        /// </summary>
-        [JsonProperty("Username")]
-        public string Username{ get; set; }
-
-        /// <summary>
         /// <p>密码</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
+
+        /// <summary>
+        /// <p>用户名</p>
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tse.V20201207.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
         }
     }
 }

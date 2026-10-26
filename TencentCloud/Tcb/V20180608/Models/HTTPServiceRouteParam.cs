@@ -31,16 +31,22 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+        /// <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
         /// </summary>
         [JsonProperty("UpstreamResourceType")]
         public string UpstreamResourceType{ get; set; }
 
         /// <summary>
-        /// <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+        /// <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
         /// </summary>
         [JsonProperty("UpstreamResourceName")]
         public string UpstreamResourceName{ get; set; }
+
+        /// <summary>
+        /// <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+        /// </summary>
+        [JsonProperty("UpstreamResourceVersion")]
+        public string UpstreamResourceVersion{ get; set; }
 
         /// <summary>
         /// <p>路径重写</p>
@@ -93,6 +99,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "UpstreamResourceType", this.UpstreamResourceType);
             this.SetParamSimple(map, prefix + "UpstreamResourceName", this.UpstreamResourceName);
+            this.SetParamSimple(map, prefix + "UpstreamResourceVersion", this.UpstreamResourceVersion);
             this.SetParamObj(map, prefix + "PathRewrite.", this.PathRewrite);
             this.SetParamSimple(map, prefix + "EnableSafeDomain", this.EnableSafeDomain);
             this.SetParamSimple(map, prefix + "EnableAuth", this.EnableAuth);

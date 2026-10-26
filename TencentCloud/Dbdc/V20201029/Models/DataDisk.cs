@@ -42,6 +42,30 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }
 
+        /// <summary>
+        /// <p>数据盘是否加密</p><p>枚举值：</p><ul><li>false： 不加密</li><li>true： 加密</li></ul>
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
+        /// <summary>
+        /// <p>磁盘ID</p><p>入参限制：该参数目前仅用于 DescribeDBCustomNodes 等查询类接口的返回参数，不可用于 CreateDBCustomNodes 等写接口的入参。</p>
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
+
+        /// <summary>
+        /// <p>数据盘快照ID</p><p>入参限制：选择的数据盘快照大小需小于数据盘大小</p>
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
+        /// <summary>
+        /// <p>自定义的数据盘标识（如 data / log / backup）</p>
+        /// </summary>
+        [JsonProperty("ClientDiskKey")]
+        public string ClientDiskKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +75,10 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "ClientDiskKey", this.ClientDiskKey);
         }
     }
 }

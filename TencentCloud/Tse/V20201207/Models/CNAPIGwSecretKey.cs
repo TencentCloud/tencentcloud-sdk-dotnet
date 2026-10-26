@@ -25,28 +25,30 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// <p>密钥id</p>
+        /// <p>绑定数</p>
         /// </summary>
-        [JsonProperty("SecretKeyId")]
-        public string SecretKeyId{ get; set; }
+        [JsonProperty("BindCount")]
+        public ulong? BindCount{ get; set; }
 
         /// <summary>
-        /// <p>密钥名字</p>
+        /// <p>是否可以绑定</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("CanBind")]
+        public bool? CanBind{ get; set; }
 
         /// <summary>
-        /// <p>密钥协议类型。</p>
+        /// <p>创建时间</p>
         /// </summary>
-        [JsonProperty("SecretType")]
-        public string SecretType{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+        /// <p>描述</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
         /// <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
@@ -55,10 +57,10 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GenerateType{ get; set; }
 
         /// <summary>
-        /// <p>密钥明文</p>
+        /// <p>JWT凭证配置</p>
         /// </summary>
-        [JsonProperty("SecretValue")]
-        public string SecretValue{ get; set; }
+        [JsonProperty("JWTCredentialConfig")]
+        public AIGWJWTCredentialConfig JWTCredentialConfig{ get; set; }
 
         /// <summary>
         /// <p>KMS凭证名字</p>
@@ -75,51 +77,19 @@ namespace TencentCloud.Tse.V20201207.Models
         public string KmsKeyVersion{ get; set; }
 
         /// <summary>
-        /// <p>描述</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// <p>是否可以绑定</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CanBind")]
-        public bool? CanBind{ get; set; }
-
-        /// <summary>
-        /// <p>创建时间</p>
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
         /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// <p>绑定数</p>
+        /// <p>密钥名字</p>
         /// </summary>
-        [JsonProperty("BindCount")]
-        public ulong? BindCount{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
-        /// </summary>
-        [JsonProperty("ResourceType")]
-        public string ResourceType{ get; set; }
-
-        /// <summary>
-        /// <p>JWT凭证配置</p>
-        /// </summary>
-        [JsonProperty("JWTCredentialConfig")]
-        public AIGWJWTCredentialConfig JWTCredentialConfig{ get; set; }
-
-        /// <summary>
-        /// <p>OAuth凭证配置</p>
+        /// <p>OAuth2凭证配置</p>
         /// </summary>
         [JsonProperty("OAuthCredentialConfig")]
         public AIGWOAuthCredentialConfig OAuthCredentialConfig{ get; set; }
@@ -131,10 +101,58 @@ namespace TencentCloud.Tse.V20201207.Models
         public AIGWOIDCCredentialConfig OIDCCredentialConfig{ get; set; }
 
         /// <summary>
-        /// <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+        /// <p>Agent 密钥类型</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
+
+        /// <summary>
+        /// <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>密钥id</p>
+        /// </summary>
+        [JsonProperty("SecretKeyId")]
+        public string SecretKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>密钥协议类型。</p>
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public string SecretType{ get; set; }
+
+        /// <summary>
+        /// <p>密钥明文</p>
+        /// </summary>
+        [JsonProperty("SecretValue")]
+        public string SecretValue{ get; set; }
+
+        /// <summary>
+        /// <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public string SyncStatus{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// <p>同步版本</p>
+        /// </summary>
+        [JsonProperty("SyncedVersion")]
+        public string SyncedVersion{ get; set; }
 
         /// <summary>
         /// <p>AK/SK凭证配置</p>
@@ -173,22 +191,34 @@ namespace TencentCloud.Tse.V20201207.Models
         public AIGWQueryParamCredentialConfig QueryParamCredentialConfig{ get; set; }
 
         /// <summary>
-        /// <p>同步状态</p>
+        /// <p>该消费者密钥绑定的模型密钥列表</p>
         /// </summary>
-        [JsonProperty("SyncStatus")]
-        public string SyncStatus{ get; set; }
+        [JsonProperty("BoundModelSecretKeys")]
+        public AIGWSimpleSecretKey[] BoundModelSecretKeys{ get; set; }
 
         /// <summary>
-        /// <p>来源类型</p>
+        /// <p>绑定了该模型密钥的消费者密钥列表</p>
         /// </summary>
-        [JsonProperty("SourceType")]
-        public string SourceType{ get; set; }
+        [JsonProperty("BoundConsumerSecretKeys")]
+        public AIGWSimpleSecretKey[] BoundConsumerSecretKeys{ get; set; }
 
         /// <summary>
-        /// <p>已同步版本</p>
+        /// <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
         /// </summary>
-        [JsonProperty("SyncedVersion")]
-        public string SyncedVersion{ get; set; }
+        [JsonProperty("CredentialGenerateType")]
+        public string CredentialGenerateType{ get; set; }
+
+        /// <summary>
+        /// <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+        /// </summary>
+        [JsonProperty("CreationSource")]
+        public string CreationSource{ get; set; }
+
+        /// <summary>
+        /// <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+        /// </summary>
+        [JsonProperty("BatchId")]
+        public string BatchId{ get; set; }
 
 
         /// <summary>
@@ -196,33 +226,38 @@ namespace TencentCloud.Tse.V20201207.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
-            this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
-            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
-            this.SetParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "BindCount", this.BindCount);
             this.SetParamSimple(map, prefix + "CanBind", this.CanBind);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
-            this.SetParamSimple(map, prefix + "BindCount", this.BindCount);
-            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
             this.SetParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
+            this.SetParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
             this.SetParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "SecretValue", this.SecretValue);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
             this.SetParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
             this.SetParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
             this.SetParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
             this.SetParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
             this.SetParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
             this.SetParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
-            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
-            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
-            this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+            this.SetParamArrayObj(map, prefix + "BoundModelSecretKeys.", this.BoundModelSecretKeys);
+            this.SetParamArrayObj(map, prefix + "BoundConsumerSecretKeys.", this.BoundConsumerSecretKeys);
+            this.SetParamSimple(map, prefix + "CredentialGenerateType", this.CredentialGenerateType);
+            this.SetParamSimple(map, prefix + "CreationSource", this.CreationSource);
+            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
         }
     }
 }

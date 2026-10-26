@@ -25,16 +25,22 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 错误信息，为空就是没有错误
+        /// <p>错误信息，为空就是没有错误</p>
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
+        /// </summary>
+        [JsonProperty("SkippedItems")]
+        public SkippedPrivilegeItem SkippedItems{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "SkippedItems.", this.SkippedItems);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

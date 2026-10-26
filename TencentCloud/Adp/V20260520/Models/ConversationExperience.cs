@@ -81,6 +81,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("RecommendPromptMode")]
         public long? RecommendPromptMode{ get; set; }
 
+        /// <summary>
+        /// <p>新消息中断正在进行的消息</p>
+        /// </summary>
+        [JsonProperty("EnableNewMessageInterrupt")]
+        public bool? EnableNewMessageInterrupt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +102,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "InputBoxConfig.", this.InputBoxConfig);
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "RecommendPromptMode", this.RecommendPromptMode);
+            this.SetParamSimple(map, prefix + "EnableNewMessageInterrupt", this.EnableNewMessageInterrupt);
         }
     }
 }

@@ -49,13 +49,13 @@ namespace TencentCloud.Cngw.V20230418.Models
         public long? ResponseLogPayloadMaxSize{ get; set; }
 
         /// <summary>
-        /// <p>请求 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+        /// <p>请求 payload access log 输出模式。MCP情况下不需要传入</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始请求</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
         /// </summary>
         [JsonProperty("RequestLogPayloadMode")]
         public string RequestLogPayloadMode{ get; set; }
 
         /// <summary>
-        /// <p>上游原始 payload access log 输出模式</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
+        /// <p>上游原始 payload access log 输出模式。MCP情况下不需要传入</p><p>枚举值：</p><ul><li>raw： access log 中 body 记录客户端原始上游响应</li><li>processed： access log 中 body 记录 AI 网关协议适配、改写、归一化后的 OpenAI-compatible 内容</li></ul>
         /// </summary>
         [JsonProperty("ResponseLogPayloadMode")]
         public string ResponseLogPayloadMode{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 可用区,每个地域提供最佳实践
+        /// <p>可用区,每个地域提供最佳实践</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+        /// <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
         /// </summary>
         [JsonProperty("InstancePayMode")]
         public string InstancePayMode{ get; set; }
 
         /// <summary>
-        /// 存储购买类型，可选值为：PREPAID, POSTPAID
+        /// <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// 商品规格
+        /// <p>商品规格</p>
         /// </summary>
         [JsonProperty("GoodsSpecs")]
         public GoodsSpec[] GoodsSpecs{ get; set; }

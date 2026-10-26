@@ -114,6 +114,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("LogConfig")]
         public AIGWLogConfig LogConfig{ get; set; }
 
+        /// <summary>
+        /// <p>服务级参数改写规则</p>
+        /// </summary>
+        [JsonProperty("ParamRewriteConfig")]
+        public AIGWMCPServerParamRewriteConfig ParamRewriteConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
             this.SetParamObj(map, prefix + "LogConfig.", this.LogConfig);
+            this.SetParamObj(map, prefix + "ParamRewriteConfig.", this.ParamRewriteConfig);
         }
     }
 }

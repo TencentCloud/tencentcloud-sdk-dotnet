@@ -42,6 +42,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("RouteMode")]
         public string RouteMode{ get; set; }
 
+        /// <summary>
+        /// <p>网络延迟探测间隔</p><p>单位：毫秒</p>
+        /// </summary>
+        [JsonProperty("ProbeIntervalMs")]
+        public long? ProbeIntervalMs{ get; set; }
+
+        /// <summary>
+        /// <p>网络延迟探测超时时间</p><p>单位：毫秒</p>
+        /// </summary>
+        [JsonProperty("ProbeTimeoutMs")]
+        public long? ProbeTimeoutMs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "LatencyMetric", this.LatencyMetric);
             this.SetParamSimple(map, prefix + "RouteMode", this.RouteMode);
+            this.SetParamSimple(map, prefix + "ProbeIntervalMs", this.ProbeIntervalMs);
+            this.SetParamSimple(map, prefix + "ProbeTimeoutMs", this.ProbeTimeoutMs);
         }
     }
 }

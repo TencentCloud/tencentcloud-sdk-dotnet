@@ -25,19 +25,19 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>资源 ID</p>
+        /// 资源 ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// <p>失败原因（succeeded=false 时填充）</p>
+        /// 失败原因（succeeded=false 时填充）
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
-        /// <p>是否成功</p>
+        /// 是否成功
         /// </summary>
         [JsonProperty("Succeeded")]
         public bool? Succeeded{ get; set; }

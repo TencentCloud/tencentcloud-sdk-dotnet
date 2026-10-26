@@ -103,7 +103,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute{ get; set; }
 
         /// <summary>
-        /// <p>无</p>
+        /// <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
         /// </summary>
         [JsonProperty("MatchHeaders")]
         public AIGWKVMatch[] MatchHeaders{ get; set; }
@@ -151,7 +151,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public AIGWForwardDesensitizeConfig ForwardDesensitizeConfig{ get; set; }
 
         /// <summary>
-        /// <p>Rerank场景最大文档数限制配置</p>
+        /// <p>rerank documents 上限</p>
         /// </summary>
         [JsonProperty("MaxDocumentsConfig")]
         public AIGWRerankMaxDocumentsConfig MaxDocumentsConfig{ get; set; }
@@ -163,16 +163,52 @@ namespace TencentCloud.Tse.V20201207.Models
         public AIGWSensitiveWordRoute SensitiveWordRoute{ get; set; }
 
         /// <summary>
-        /// <p>消费者组的授权模型范围</p>
+        /// <p>消费者组模型范围</p>
         /// </summary>
         [JsonProperty("ConsumerGroupModelScopes")]
         public AIGWAuthModelScopeItem[] ConsumerGroupModelScopes{ get; set; }
 
         /// <summary>
-        /// <p>继承自消费者组的授权模型范围</p>
+        /// <p>消费者继承的模型范围</p>
         /// </summary>
         [JsonProperty("ConsumerInheritModelScope")]
         public AIGWConsumerModelScope ConsumerInheritModelScope{ get; set; }
+
+        /// <summary>
+        /// <p>消费者密钥模型范围</p>
+        /// </summary>
+        [JsonProperty("SecretKeyModelScopes")]
+        public AIGWAuthModelScopeItem[] SecretKeyModelScopes{ get; set; }
+
+        /// <summary>
+        /// <p>模型API是否支持Playground调试</p>
+        /// </summary>
+        [JsonProperty("PlaygroundAvailable")]
+        public bool? PlaygroundAvailable{ get; set; }
+
+        /// <summary>
+        /// <p>请求优先级配置</p>
+        /// </summary>
+        [JsonProperty("PriorityScheduleConfig")]
+        public AIGWPriorityScheduleConfig PriorityScheduleConfig{ get; set; }
+
+        /// <summary>
+        /// <p>消费者模型范围</p>
+        /// </summary>
+        [JsonProperty("ConsumerDirectModelScopes")]
+        public AIGWAuthModelScopeItem[] ConsumerDirectModelScopes{ get; set; }
+
+        /// <summary>
+        /// <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+        /// </summary>
+        [JsonProperty("ModelNameRoute")]
+        public AIGWModelNameRoute ModelNameRoute{ get; set; }
+
+        /// <summary>
+        /// <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+        /// </summary>
+        [JsonProperty("StandardModelName")]
+        public string StandardModelName{ get; set; }
 
 
         /// <summary>
@@ -205,6 +241,12 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
             this.SetParamArrayObj(map, prefix + "ConsumerGroupModelScopes.", this.ConsumerGroupModelScopes);
             this.SetParamObj(map, prefix + "ConsumerInheritModelScope.", this.ConsumerInheritModelScope);
+            this.SetParamArrayObj(map, prefix + "SecretKeyModelScopes.", this.SecretKeyModelScopes);
+            this.SetParamSimple(map, prefix + "PlaygroundAvailable", this.PlaygroundAvailable);
+            this.SetParamObj(map, prefix + "PriorityScheduleConfig.", this.PriorityScheduleConfig);
+            this.SetParamArrayObj(map, prefix + "ConsumerDirectModelScopes.", this.ConsumerDirectModelScopes);
+            this.SetParamObj(map, prefix + "ModelNameRoute.", this.ModelNameRoute);
+            this.SetParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
         }
     }
 }

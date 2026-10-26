@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 灰度规则列表
+        /// <p>灰度规则列表</p>
         /// </summary>
         [JsonProperty("Result")]
         public CloudAPIGatewayCanaryRuleList Result{ get; set; }

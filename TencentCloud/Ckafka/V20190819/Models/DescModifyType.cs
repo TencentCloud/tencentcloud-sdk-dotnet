@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 变配类型
+        /// <p>变配类型</p>
         /// </summary>
         [JsonProperty("ModifyType")]
         public long? ModifyType{ get; set; }
 
         /// <summary>
-        /// 是否迁移标志
+        /// <p>是否迁移标志</p>
         /// </summary>
         [JsonProperty("MigrateFlag")]
         public bool? MigrateFlag{ get; set; }

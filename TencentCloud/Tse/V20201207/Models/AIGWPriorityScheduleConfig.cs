@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindServiceList : AbstractModel
+    public class AIGWPriorityScheduleConfig : AbstractModel
     {
         
         /// <summary>
-        /// 密钥对绑定的mcp服务列表
+        /// <p>是否开启优先级调度</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
         /// </summary>
-        [JsonProperty("Mcp")]
-        public BindService[] Mcp{ get; set; }
-
-        /// <summary>
-        /// 密钥对绑定的apis服务列表
-        /// </summary>
-        [JsonProperty("Apis")]
-        public BindService[] Apis{ get; set; }
-
-        /// <summary>
-        /// 登记哪个资源下的哪个场景使用了密钥对
-        /// </summary>
-        [JsonProperty("Other")]
-        public BindService[] Other{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Mcp.", this.Mcp);
-            this.SetParamArrayObj(map, prefix + "Apis.", this.Apis);
-            this.SetParamArrayObj(map, prefix + "Other.", this.Other);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

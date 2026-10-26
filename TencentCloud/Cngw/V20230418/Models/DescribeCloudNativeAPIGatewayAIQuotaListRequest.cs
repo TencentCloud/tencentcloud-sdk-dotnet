@@ -49,7 +49,7 @@ namespace TencentCloud.Cngw.V20230418.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// <p>过滤条件</p>
+        /// 可选过滤条件，不同 Name 为 AND，同一 Values 为 OR。支持 ResourceType（单值 Consumer 或 ConsumerGroup，省略默认 Consumer）、ResourceId（资源 ID，1～100 项）、ConsumerId（仅 Consumer 可用）、Source（Manual / Default / DefaultPolicy）、QuotaId、QuotaType（RequestCount / TotalToken / Cost）、PeriodUnit（Day / Week / Month / Year / Unlimit）。Values 不得为空，QuotaId、QuotaType、PeriodUnit 各为 1～100 项。ConsumerGroup 使用 ResourceId，不使用 ConsumerId；不自动展开上下级。Source 省略时排除 DefaultPolicy。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

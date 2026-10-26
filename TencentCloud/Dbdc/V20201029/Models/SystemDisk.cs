@@ -36,6 +36,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
+        /// <summary>
+        /// <p>磁盘ID</p>
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         {
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
         }
     }
 }

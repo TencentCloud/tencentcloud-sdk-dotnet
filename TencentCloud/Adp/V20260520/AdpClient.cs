@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1522";
+       private const string sdkVersion = "SDK_NET_3.0.1527";
 
         /// <summary>
         /// Client constructor.
@@ -2597,8 +2597,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 重置会话
-        /// 注意：当前Claw模式应用会话不支持重置
+        /// 该接口用于重置会话上下文。会话上下文重置后，对话处理中不会携带重置前的历史对话内容
         /// </summary>
         /// <param name="req"><see cref="ResetConversationRequest"/></param>
         /// <returns><see cref="ResetConversationResponse"/></returns>
@@ -2608,8 +2607,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 重置会话
-        /// 注意：当前Claw模式应用会话不支持重置
+        /// 该接口用于重置会话上下文。会话上下文重置后，对话处理中不会携带重置前的历史对话内容
         /// </summary>
         /// <param name="req"><see cref="ResetConversationRequest"/></param>
         /// <returns><see cref="ResetConversationResponse"/></returns>

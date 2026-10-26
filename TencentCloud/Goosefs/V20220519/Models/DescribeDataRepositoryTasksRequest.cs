@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Goosefs.V20220519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetOneUserKeyResponse : AbstractModel
+    public class DescribeDataRepositoryTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>单个密钥对详情页</p>
+        /// 文件系统ID
         /// </summary>
-        [JsonProperty("UserKeyInfo")]
-        public APIsUserKeyInfo UserKeyInfo{ get; set; }
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 偏移量
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 最大返回数量
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "UserKeyInfo.", this.UserKeyInfo);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

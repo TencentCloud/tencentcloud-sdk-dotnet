@@ -25,19 +25,19 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消息ID
+        /// <p>消息ID</p>
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }
 
         /// <summary>
-        /// 订阅表达式
+        /// <p>订阅表达式</p>
         /// </summary>
         [JsonProperty("Subscription")]
         public string Subscription{ get; set; }

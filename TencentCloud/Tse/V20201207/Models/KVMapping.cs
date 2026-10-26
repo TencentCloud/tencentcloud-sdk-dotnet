@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// key
+        /// 键值映射的键
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// value
+        /// 键值映射的值
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

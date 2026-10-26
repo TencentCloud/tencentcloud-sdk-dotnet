@@ -208,6 +208,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("LatestRunningTaskType")]
         public string LatestRunningTaskType{ get; set; }
 
+        /// <summary>
+        /// <p>节点所属的业务类型</p><p>枚举值：</p><ul><li>sqlserver： 腾讯云 SQL Server 数据库实例 Custom 形态的节点</li></ul>
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public string BusinessType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -244,6 +250,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
             this.SetParamSimple(map, prefix + "LatestRunningTaskType", this.LatestRunningTaskType);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
         }
     }
 }

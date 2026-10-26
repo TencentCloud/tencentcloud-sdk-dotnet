@@ -202,6 +202,24 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("BoundConsumerSecretKeys")]
         public AIGWSimpleSecretKey[] BoundConsumerSecretKeys{ get; set; }
 
+        /// <summary>
+        /// <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+        /// </summary>
+        [JsonProperty("CredentialGenerateType")]
+        public string CredentialGenerateType{ get; set; }
+
+        /// <summary>
+        /// <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+        /// </summary>
+        [JsonProperty("CreationSource")]
+        public string CreationSource{ get; set; }
+
+        /// <summary>
+        /// <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+        /// </summary>
+        [JsonProperty("BatchId")]
+        public string BatchId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +255,9 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
             this.SetParamArrayObj(map, prefix + "BoundModelSecretKeys.", this.BoundModelSecretKeys);
             this.SetParamArrayObj(map, prefix + "BoundConsumerSecretKeys.", this.BoundConsumerSecretKeys);
+            this.SetParamSimple(map, prefix + "CredentialGenerateType", this.CredentialGenerateType);
+            this.SetParamSimple(map, prefix + "CreationSource", this.CreationSource);
+            this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
         }
     }
 }

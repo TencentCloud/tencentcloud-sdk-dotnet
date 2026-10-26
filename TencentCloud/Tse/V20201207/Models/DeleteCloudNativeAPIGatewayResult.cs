@@ -25,16 +25,22 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 云原生网关ID。
+        /// <p>云原生网关ID。</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 云原生网关状态。
+        /// <p>云原生网关状态。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>任务ID</p>
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

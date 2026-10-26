@@ -120,6 +120,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TagIds")]
         public ulong?[] TagIds{ get; set; }
 
+        /// <summary>
+        /// <p>优先使用腾讯云软件源</p>
+        /// </summary>
+        [JsonProperty("PreferCloudSource")]
+        public bool? PreferCloudSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "EnableSync", this.EnableSync);
             this.SetParamArraySimple(map, prefix + "SyncTo.", this.SyncTo);
             this.SetParamArraySimple(map, prefix + "TagIds.", this.TagIds);
+            this.SetParamSimple(map, prefix + "PreferCloudSource", this.PreferCloudSource);
         }
     }
 }

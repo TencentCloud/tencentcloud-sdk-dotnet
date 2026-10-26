@@ -72,6 +72,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("UseToBind")]
         public bool? UseToBind{ get; set; }
 
+        /// <summary>
+        /// <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+        /// </summary>
+        [JsonProperty("IncludeCreationInfo")]
+        public bool? IncludeCreationInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "UseToBind", this.UseToBind);
+            this.SetParamSimple(map, prefix + "IncludeCreationInfo", this.IncludeCreationInfo);
         }
     }
 }

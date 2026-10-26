@@ -72,6 +72,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DirectoryTimeFormat")]
         public string DirectoryTimeFormat{ get; set; }
 
+        /// <summary>
+        /// <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+        /// </summary>
+        [JsonProperty("Timezone")]
+        public string Timezone{ get; set; }
+
+        /// <summary>
+        /// <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
+        /// </summary>
+        [JsonProperty("SourceDataFormat")]
+        public string SourceDataFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "FormatOutputType", this.FormatOutputType);
             this.SetParamSimple(map, prefix + "ObjectKeyPrefix", this.ObjectKeyPrefix);
             this.SetParamSimple(map, prefix + "DirectoryTimeFormat", this.DirectoryTimeFormat);
+            this.SetParamSimple(map, prefix + "Timezone", this.Timezone);
+            this.SetParamSimple(map, prefix + "SourceDataFormat", this.SourceDataFormat);
         }
     }
 }

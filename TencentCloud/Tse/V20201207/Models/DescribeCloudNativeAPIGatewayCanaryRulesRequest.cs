@@ -25,34 +25,52 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 网关ID
+        /// <p>网关ID</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 服务 ID
+        /// <p>服务 ID</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 灰度规则类别 Standard｜Lane
+        /// <p>灰度规则类别 Standard｜Lane</p>
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// 列表数量
+        /// <p>列表数量</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 列表offset
+        /// <p>列表offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+        /// </summary>
+        [JsonProperty("OrderType")]
+        public string OrderType{ get; set; }
+
+        /// <summary>
+        /// <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public ListFilter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -65,6 +83,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

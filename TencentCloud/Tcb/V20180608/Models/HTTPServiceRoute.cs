@@ -37,16 +37,22 @@ namespace TencentCloud.Tcb.V20180608.Models
         public HTTPServicePathRewrite PathRewrite{ get; set; }
 
         /// <summary>
-        /// <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
+        /// <p>上游资源类型</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： WEB云函数</li><li>STORAGE： 云存储</li></ul>
         /// </summary>
         [JsonProperty("UpstreamResourceType")]
         public string UpstreamResourceType{ get; set; }
 
         /// <summary>
-        /// <p>上游服务名</p>
+        /// <p>上游资源名</p>
         /// </summary>
         [JsonProperty("UpstreamResourceName")]
         public string UpstreamResourceName{ get; set; }
+
+        /// <summary>
+        /// <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+        /// </summary>
+        [JsonProperty("UpstreamResourceVersion")]
+        public string UpstreamResourceVersion{ get; set; }
 
         /// <summary>
         /// <p>是否开启安全域名</p>
@@ -106,6 +112,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamObj(map, prefix + "PathRewrite.", this.PathRewrite);
             this.SetParamSimple(map, prefix + "UpstreamResourceType", this.UpstreamResourceType);
             this.SetParamSimple(map, prefix + "UpstreamResourceName", this.UpstreamResourceName);
+            this.SetParamSimple(map, prefix + "UpstreamResourceVersion", this.UpstreamResourceVersion);
             this.SetParamSimple(map, prefix + "EnableSafeDomain", this.EnableSafeDomain);
             this.SetParamSimple(map, prefix + "EnableAuth", this.EnableAuth);
             this.SetParamSimple(map, prefix + "EnablePathTransmission", this.EnablePathTransmission);

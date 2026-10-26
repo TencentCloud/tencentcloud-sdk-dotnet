@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteUserKeyRequest : AbstractModel
+    public class EndpointService : AbstractModel
     {
         
         /// <summary>
-        /// 环境ID
+        /// <p>子网剩余IP数</p>
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
-
-        /// <summary>
-        /// 用户密钥对标识，前半部分用户填写，后半部分平台按照一定规则生成
-        /// </summary>
-        [JsonProperty("KeyID")]
-        public string KeyID{ get; set; }
+        [JsonProperty("SubnetLessIp")]
+        public ulong? SubnetLessIp{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamSimple(map, prefix + "KeyID", this.KeyID);
+            this.SetParamSimple(map, prefix + "SubnetLessIp", this.SubnetLessIp);
         }
     }
 }

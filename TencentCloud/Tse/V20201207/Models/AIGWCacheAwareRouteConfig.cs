@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// <p>前缀缓存感知路由模型服务候选列表</p>
+        /// <p>前缀缓存感知路由模型服务列表</p>
         /// </summary>
         [JsonProperty("Candidates")]
         public AIGWCacheAwareRouteCandidate[] Candidates{ get; set; }

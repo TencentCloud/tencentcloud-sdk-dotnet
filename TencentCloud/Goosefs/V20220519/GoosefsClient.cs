@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1519";
+       private const string sdkVersion = "SDK_NET_3.0.1527";
 
         /// <summary>
         /// Client constructor.
@@ -533,6 +533,27 @@ namespace TencentCloud.Goosefs.V20220519
         public DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatusSync(DescribeDataRepositoryTaskStatusRequest req)
         {
             return InternalRequestAsync<DescribeDataRepositoryTaskStatusResponse>(req, "DescribeDataRepositoryTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出所有的数据流通任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRepositoryTasksRequest"/></param>
+        /// <returns><see cref="DescribeDataRepositoryTasksResponse"/></returns>
+        public Task<DescribeDataRepositoryTasksResponse> DescribeDataRepositoryTasks(DescribeDataRepositoryTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeDataRepositoryTasksResponse>(req, "DescribeDataRepositoryTasks");
+        }
+
+        /// <summary>
+        /// 列出所有的数据流通任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataRepositoryTasksRequest"/></param>
+        /// <returns><see cref="DescribeDataRepositoryTasksResponse"/></returns>
+        public DescribeDataRepositoryTasksResponse DescribeDataRepositoryTasksSync(DescribeDataRepositoryTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeDataRepositoryTasksResponse>(req, "DescribeDataRepositoryTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

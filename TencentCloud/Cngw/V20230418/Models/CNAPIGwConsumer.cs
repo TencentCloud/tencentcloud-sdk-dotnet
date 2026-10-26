@@ -86,6 +86,42 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("SyncedVersion")]
         public string SyncedVersion{ get; set; }
 
+        /// <summary>
+        /// <p>消费者展示名称；目录同步对象可与登录名不同。</p>
+        /// </summary>
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// <p>消费者登录名称。</p>
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
+        /// <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+        /// </summary>
+        [JsonProperty("Origin")]
+        public string Origin{ get; set; }
+
+        /// <summary>
+        /// <p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+        /// </summary>
+        [JsonProperty("SyncSourceId")]
+        public string SyncSourceId{ get; set; }
+
+        /// <summary>
+        /// <p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +138,12 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Origin", this.Origin);
+            this.SetParamSimple(map, prefix + "SyncSourceId", this.SyncSourceId);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("ModelNameConfig")]
         public CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy[] ModelNameConfig{ get; set; }
 
+        /// <summary>
+        /// <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+        /// </summary>
+        [JsonProperty("StandardModelName")]
+        public string StandardModelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamArraySimple(map, prefix + "SelectedTypes.", this.SelectedTypes);
             this.SetParamArrayObj(map, prefix + "WeightedConfig.", this.WeightedConfig);
             this.SetParamArrayObj(map, prefix + "ModelNameConfig.", this.ModelNameConfig);
+            this.SetParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
         }
     }
 }

@@ -25,71 +25,77 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
+        /// <p>Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id</p>
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
-        /// 是否为自建集群
+        /// <p>是否为自建集群</p>
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }
 
         /// <summary>
-        /// 是否更新到关联的Dip任务
+        /// <p>是否更新到关联的Dip任务</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUpdate")]
         public bool? IsUpdate{ get; set; }
 
         /// <summary>
-        /// Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
+        /// <p>Kafka连接的broker地址, NetworkType=PUBLIC公网时必填</p>
         /// </summary>
         [JsonProperty("BrokerAddress")]
         public string BrokerAddress{ get; set; }
 
         /// <summary>
-        /// CKafka连接源的实例资源地域, 跨地域时必填
+        /// <p>CKafka连接源的实例资源地域, 跨地域时必填</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 网络类型：PUBLIC公网；VPC
+        /// <p>网络类型：PUBLIC公网；VPC</p>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// vpcId，NetworkType=VPC时必传
+        /// <p>vpcId，NetworkType=VPC时必传</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// vip，NetworkType=VPC时必传
+        /// <p>vip，NetworkType=VPC时必传</p>
         /// </summary>
         [JsonProperty("ServiceVip")]
         public string ServiceVip{ get; set; }
 
         /// <summary>
-        /// 端口，NetworkType=VPC时必传
+        /// <p>端口，NetworkType=VPC时必传</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 跨云同步下需要客户传递唯一Id标志一组资源
+        /// <p>跨云同步下需要客户传递唯一Id标志一组资源</p>
         /// </summary>
         [JsonProperty("CrossNetResourceUniqueId")]
         public string CrossNetResourceUniqueId{ get; set; }
 
         /// <summary>
-        /// 跨云子网ID
+        /// <p>跨云子网ID</p>
         /// </summary>
         [JsonProperty("CrossNetVpcSubNetId")]
         public string CrossNetVpcSubNetId{ get; set; }
+
+        /// <summary>
+        /// <p>用户输入原始broker接入点地址</p>
+        /// </summary>
+        [JsonProperty("OriginalBrokerAddresses")]
+        public string OriginalBrokerAddresses{ get; set; }
 
 
         /// <summary>
@@ -108,6 +114,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "CrossNetResourceUniqueId", this.CrossNetResourceUniqueId);
             this.SetParamSimple(map, prefix + "CrossNetVpcSubNetId", this.CrossNetVpcSubNetId);
+            this.SetParamSimple(map, prefix + "OriginalBrokerAddresses", this.OriginalBrokerAddresses);
         }
     }
 }
