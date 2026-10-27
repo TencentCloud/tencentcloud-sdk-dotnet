@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9F835F6-1803-3B17-BB4D-62B3D292010A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1524</VersionPrefix>
+    <VersionPrefix>3.0.1528</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20250115\Models\AclEntries.cs" />
     <Compile Include="V20250115\Models\CreateAccelerateAreasRequest.cs" />
     <Compile Include="V20250115\Models\CreateAccelerateAreasResponse.cs" />
+    <Compile Include="V20250115\Models\CreateAcceleratorAreasInfo.cs" />
     <Compile Include="V20250115\Models\CreateEndpointGroupRequest.cs" />
     <Compile Include="V20250115\Models\CreateEndpointGroupResponse.cs" />
     <Compile Include="V20250115\Models\CreateForwardingPolicyRequest.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="V20250115\Models\HideResponseHeaders.cs" />
     <Compile Include="V20250115\Models\IpAddressInfoSet.cs" />
     <Compile Include="V20250115\Models\ListenerSet.cs" />
+    <Compile Include="V20250115\Models\ModifyAccelerateAreasInfo.cs" />
     <Compile Include="V20250115\Models\ModifyAccelerateAreasRequest.cs" />
     <Compile Include="V20250115\Models\ModifyAccelerateAreasResponse.cs" />
     <Compile Include="V20250115\Models\ModifyAccessLogStatusRequest.cs" />

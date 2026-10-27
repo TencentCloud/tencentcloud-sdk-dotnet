@@ -31,13 +31,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>需要进行搜索的内容</p>
+        /// <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// <p>知识库ID，留空时将使用默认知识库</p>
+        /// <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
+        /// <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }
@@ -80,6 +92,8 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);

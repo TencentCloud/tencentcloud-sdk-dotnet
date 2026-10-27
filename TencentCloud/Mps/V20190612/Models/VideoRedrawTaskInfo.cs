@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+        /// <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 统计详情
+        /// <p>统计详情</p>
         /// </summary>
         [JsonProperty("Data")]
         public LogHistogramInfo[] Data{ get; set; }
 
         /// <summary>
-        /// 时间段大小
+        /// <p>时间段大小</p><p>单位：秒</p>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 统计的条目数
+        /// <p>统计的条目数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

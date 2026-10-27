@@ -73,6 +73,34 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         public bool? SupportsImages{ get; set; }
 
         /// <summary>
+        /// 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportsThinking")]
+        public bool? SupportsThinking{ get; set; }
+
+        /// <summary>
+        /// 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThinkingLevels")]
+        public string[] ThinkingLevels{ get; set; }
+
+        /// <summary>
+        /// 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultThinkingLevel")]
+        public string DefaultThinkingLevel{ get; set; }
+
+        /// <summary>
+        /// 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanDisableThinking")]
+        public bool? CanDisableThinking{ get; set; }
+
+        /// <summary>
         /// 模型中文描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -134,6 +162,10 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
             this.SetParamSimple(map, prefix + "MaxInputTokens", this.MaxInputTokens);
             this.SetParamSimple(map, prefix + "SupportsToolCall", this.SupportsToolCall);
             this.SetParamSimple(map, prefix + "SupportsImages", this.SupportsImages);
+            this.SetParamSimple(map, prefix + "SupportsThinking", this.SupportsThinking);
+            this.SetParamArraySimple(map, prefix + "ThinkingLevels.", this.ThinkingLevels);
+            this.SetParamSimple(map, prefix + "DefaultThinkingLevel", this.DefaultThinkingLevel);
+            this.SetParamSimple(map, prefix + "CanDisableThinking", this.CanDisableThinking);
             this.SetParamSimple(map, prefix + "DescriptionZh", this.DescriptionZh);
             this.SetParamSimple(map, prefix + "DescriptionEn", this.DescriptionEn);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);

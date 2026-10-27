@@ -28,7 +28,7 @@ namespace TencentCloud.Ctem.V20231128
 
        private const string endpoint = "ctem.tencentcloudapi.com";
        private const string version = "2023-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1519";
+       private const string sdkVersion = "SDK_NET_3.0.1528";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Ctem.V20231128
         public CreateAssetResponse CreateAssetSync(CreateAssetRequest req)
         {
             return InternalRequestAsync<CreateAssetResponse>(req, "CreateAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查修复状况
+        /// </summary>
+        /// <param name="req"><see cref="CreateCheckRequest"/></param>
+        /// <returns><see cref="CreateCheckResponse"/></returns>
+        public Task<CreateCheckResponse> CreateCheck(CreateCheckRequest req)
+        {
+            return InternalRequestAsync<CreateCheckResponse>(req, "CreateCheck");
+        }
+
+        /// <summary>
+        /// 检查修复状况
+        /// </summary>
+        /// <param name="req"><see cref="CreateCheckRequest"/></param>
+        /// <returns><see cref="CreateCheckResponse"/></returns>
+        public CreateCheckResponse CreateCheckSync(CreateCheckRequest req)
+        {
+            return InternalRequestAsync<CreateCheckResponse>(req, "CreateCheck")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -239,6 +260,27 @@ namespace TencentCloud.Ctem.V20231128
         public CreatePortResponse CreatePortSync(CreatePortRequest req)
         {
             return InternalRequestAsync<CreatePortResponse>(req, "CreatePort")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 扫描巡检
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanRequest"/></param>
+        /// <returns><see cref="CreateScanResponse"/></returns>
+        public Task<CreateScanResponse> CreateScan(CreateScanRequest req)
+        {
+            return InternalRequestAsync<CreateScanResponse>(req, "CreateScan");
+        }
+
+        /// <summary>
+        /// 扫描巡检
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanRequest"/></param>
+        /// <returns><see cref="CreateScanResponse"/></returns>
+        public CreateScanResponse CreateScanSync(CreateScanRequest req)
+        {
+            return InternalRequestAsync<CreateScanResponse>(req, "CreateScan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +705,27 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
+        /// 相关资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBannerAssetDataRequest"/></param>
+        /// <returns><see cref="DescribeBannerAssetDataResponse"/></returns>
+        public Task<DescribeBannerAssetDataResponse> DescribeBannerAssetData(DescribeBannerAssetDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBannerAssetDataResponse>(req, "DescribeBannerAssetData");
+        }
+
+        /// <summary>
+        /// 相关资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBannerAssetDataRequest"/></param>
+        /// <returns><see cref="DescribeBannerAssetDataResponse"/></returns>
+        public DescribeBannerAssetDataResponse DescribeBannerAssetDataSync(DescribeBannerAssetDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBannerAssetDataResponse>(req, "DescribeBannerAssetData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看目录爆破数据
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigsRequest"/></param>
@@ -894,6 +957,27 @@ namespace TencentCloud.Ctem.V20231128
         }
 
         /// <summary>
+        /// 查询情报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntelligencesRequest"/></param>
+        /// <returns><see cref="DescribeIntelligencesResponse"/></returns>
+        public Task<DescribeIntelligencesResponse> DescribeIntelligences(DescribeIntelligencesRequest req)
+        {
+            return InternalRequestAsync<DescribeIntelligencesResponse>(req, "DescribeIntelligences");
+        }
+
+        /// <summary>
+        /// 查询情报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntelligencesRequest"/></param>
+        /// <returns><see cref="DescribeIntelligencesResponse"/></returns>
+        public DescribeIntelligencesResponse DescribeIntelligencesSync(DescribeIntelligencesRequest req)
+        {
+            return InternalRequestAsync<DescribeIntelligencesResponse>(req, "DescribeIntelligences")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查看链路详情
         /// </summary>
         /// <param name="req"><see cref="DescribeJobRecordDetailsRequest"/></param>
@@ -1037,6 +1121,27 @@ namespace TencentCloud.Ctem.V20231128
         public DescribeNetDisksResponse DescribeNetDisksSync(DescribeNetDisksRequest req)
         {
             return InternalRequestAsync<DescribeNetDisksResponse>(req, "DescribeNetDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 实际受影响资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribePocAssetDataRequest"/></param>
+        /// <returns><see cref="DescribePocAssetDataResponse"/></returns>
+        public Task<DescribePocAssetDataResponse> DescribePocAssetData(DescribePocAssetDataRequest req)
+        {
+            return InternalRequestAsync<DescribePocAssetDataResponse>(req, "DescribePocAssetData");
+        }
+
+        /// <summary>
+        /// 实际受影响资产
+        /// </summary>
+        /// <param name="req"><see cref="DescribePocAssetDataRequest"/></param>
+        /// <returns><see cref="DescribePocAssetDataResponse"/></returns>
+        public DescribePocAssetDataResponse DescribePocAssetDataSync(DescribePocAssetDataRequest req)
+        {
+            return InternalRequestAsync<DescribePocAssetDataResponse>(req, "DescribePocAssetData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

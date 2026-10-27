@@ -25,25 +25,25 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 查询的域名，所有域名使用all
+        /// <p>查询的域名，所有域名使用all</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 查询起始时间
+        /// <p>查询起始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// <p>查询结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Lucene语法
+        /// <p>Lucene语法</p>
         /// </summary>
         [JsonProperty("QueryString")]
         public string QueryString{ get; set; }

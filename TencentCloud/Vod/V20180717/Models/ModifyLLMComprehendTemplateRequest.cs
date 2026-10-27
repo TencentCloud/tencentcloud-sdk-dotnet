@@ -72,6 +72,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("FaceRecognition")]
         public LLMComprehendFaceRecognitionForUpdate FaceRecognition{ get; set; }
 
+        /// <summary>
+        /// <p>DNA解析配置</p>
+        /// </summary>
+        [JsonProperty("DNA")]
+        public LLMComprehendDNA DNA{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Summary.", this.Summary);
             this.SetParamObj(map, prefix + "Asr.", this.Asr);
             this.SetParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
+            this.SetParamObj(map, prefix + "DNA.", this.DNA);
         }
     }
 }

@@ -25,53 +25,49 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 资源模块Id
-        /// </summary>
-        [JsonProperty("AreaId")]
-        public long? AreaId{ get; set; }
-
-        /// <summary>
-        /// 搜索的业务资源名称
-        /// </summary>
-        [JsonProperty("ServiceName")]
-        public string ServiceName{ get; set; }
-
-        /// <summary>
-        /// 获取业务资源列表的开始时间，时间格式：2006-01-02
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// 搜索关键字
-        /// </summary>
-        [JsonProperty("Keywords")]
-        public string Keywords{ get; set; }
-
-        /// <summary>
-        /// 获取业务资源列表的结束时间，时间格式：2006-01-02
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 滤条件、分页参数。分页内容不传，默认获取第1页，10条数据
-        /// 排序条件
-        /// <li>CreateTime - string - 是否必填：否 - 排序支持：是 - 按业务资源创建时间排序。</li>
-        /// <li>Levels - int - 是否必填：否 - 排序支持：是 - 按业务资源优先级排序。</li>
-        /// <li>ReachableState - int - 是否必填：否 - 排序支持：是 - 按业务资源连通性排序(私有化版本不支持)。</li>
+        /// <p>滤条件、分页参数。分页内容不传，默认获取第1页，10条数据<br>排序条件</p><li>CreateTime - string - 是否必填：否 - 排序支持：是 - 按业务资源创建时间排序。</li><li>Levels - int - 是否必填：否 - 排序支持：是 - 按业务资源优先级排序。</li><li>ReachableState - int - 是否必填：否 - 排序支持：是 - 按业务资源连通性排序(私有化版本不支持)。</li>
         /// </summary>
         [JsonProperty("Condition")]
         public Condition Condition{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// <p>资源模块Id</p>
+        /// </summary>
+        [JsonProperty("AreaId")]
+        public long? AreaId{ get; set; }
+
+        /// <summary>
+        /// <p>服务名称</p>
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
+        /// <summary>
+        /// <p>搜索关键字</p>
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string Keywords{ get; set; }
+
+        /// <summary>
+        /// <p>获取业务资源列表的开始时间，时间格式：2006-01-02</p>
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// <p>获取业务资源列表的结束时间，时间格式：2006-01-02</p>
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// <p>资源类型</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
 
         /// <summary>
-        /// web资源前端地址
+        /// <p>web资源前端地址</p>
         /// </summary>
         [JsonProperty("FrontAddr")]
         public string FrontAddr{ get; set; }
@@ -82,12 +78,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamSimple(map, prefix + "AreaId", this.AreaId);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Keywords", this.Keywords);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamSimple(map, prefix + "AccessType", this.AccessType);
             this.SetParamSimple(map, prefix + "FrontAddr", this.FrontAddr);
         }

@@ -25,10 +25,16 @@ namespace TencentCloud.Cdz.V20221123.Models
     {
         
         /// <summary>
-        /// 返回Host和Host上部署的实例信息之间的关系
+        /// <p>返回Host和Host上部署的实例信息之间的关系</p>
         /// </summary>
         [JsonProperty("CloudDedicatedZoneHostsInfoSet")]
         public CloudDedicatedZoneHostsInfo[] CloudDedicatedZoneHostsInfoSet{ get; set; }
+
+        /// <summary>
+        /// <p>母机总数</p>
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Cdz.V20221123.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "CloudDedicatedZoneHostsInfoSet.", this.CloudDedicatedZoneHostsInfoSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

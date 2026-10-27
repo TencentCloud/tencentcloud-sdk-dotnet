@@ -44,6 +44,12 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         public ExpertCounts Counts{ get; set; }
 
         /// <summary>
+        /// <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
+        /// </summary>
+        [JsonProperty("MaxBindings")]
+        public long? MaxBindings{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +64,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "ExpertSet.", this.ExpertSet);
             this.SetParamObj(map, prefix + "Counts.", this.Counts);
+            this.SetParamSimple(map, prefix + "MaxBindings", this.MaxBindings);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -80,6 +80,42 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         [JsonProperty("StartedAt")]
         public string StartedAt{ get; set; }
 
+        /// <summary>
+        /// 本次调用对应的业务专家 ID。
+        /// </summary>
+        [JsonProperty("ExpertId")]
+        public string ExpertId{ get; set; }
+
+        /// <summary>
+        /// 本次调用对应的专家名称。
+        /// </summary>
+        [JsonProperty("ExpertName")]
+        public string ExpertName{ get; set; }
+
+        /// <summary>
+        /// 执行时解析到的专家资源版本。
+        /// </summary>
+        [JsonProperty("ExpertVersion")]
+        public string ExpertVersion{ get; set; }
+
+        /// <summary>
+        /// CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+        /// </summary>
+        [JsonProperty("SubAgentId")]
+        public string SubAgentId{ get; set; }
+
+        /// <summary>
+        /// CBC 子代理定义名称。
+        /// </summary>
+        [JsonProperty("SubAgentName")]
+        public string SubAgentName{ get; set; }
+
+        /// <summary>
+        /// 父会话中触发本次子代理执行的工具调用 ID。
+        /// </summary>
+        [JsonProperty("ParentToolCallId")]
+        public string ParentToolCallId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +130,12 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
             this.SetParamSimple(map, prefix + "EndedAt", this.EndedAt);
             this.SetParamSimple(map, prefix + "DurationMs", this.DurationMs);
             this.SetParamSimple(map, prefix + "StartedAt", this.StartedAt);
+            this.SetParamSimple(map, prefix + "ExpertId", this.ExpertId);
+            this.SetParamSimple(map, prefix + "ExpertName", this.ExpertName);
+            this.SetParamSimple(map, prefix + "ExpertVersion", this.ExpertVersion);
+            this.SetParamSimple(map, prefix + "SubAgentId", this.SubAgentId);
+            this.SetParamSimple(map, prefix + "SubAgentName", this.SubAgentName);
+            this.SetParamSimple(map, prefix + "ParentToolCallId", this.ParentToolCallId);
         }
     }
 }

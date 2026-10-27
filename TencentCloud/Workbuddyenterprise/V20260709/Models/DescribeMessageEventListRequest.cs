@@ -54,6 +54,12 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SubAgentId")]
+        public string SubAgentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "SubAgentId", this.SubAgentId);
         }
     }
 }

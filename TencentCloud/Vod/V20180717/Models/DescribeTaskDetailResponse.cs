@@ -335,6 +335,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public VideoDepthEstimationTask VideoDepthEstimationTask{ get; set; }
 
         /// <summary>
+        /// <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("DNATask")]
+        public DNATask DNATask{ get; set; }
+
+        /// <summary>
+        /// <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
+        /// </summary>
+        [JsonProperty("SearchMediaBySemanticsAsync")]
+        public SearchMediaBySemanticsAsync SearchMediaBySemanticsAsync{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -394,6 +406,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "TextToSpeechAsyncTask.", this.TextToSpeechAsyncTask);
             this.SetParamObj(map, prefix + "VideoDubbingAsyncTask.", this.VideoDubbingAsyncTask);
             this.SetParamObj(map, prefix + "VideoDepthEstimationTask.", this.VideoDepthEstimationTask);
+            this.SetParamObj(map, prefix + "DNATask.", this.DNATask);
+            this.SetParamObj(map, prefix + "SearchMediaBySemanticsAsync.", this.SearchMediaBySemanticsAsync);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

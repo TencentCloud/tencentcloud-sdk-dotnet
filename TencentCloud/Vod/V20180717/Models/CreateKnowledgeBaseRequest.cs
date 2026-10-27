@@ -42,6 +42,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+        /// </summary>
+        [JsonProperty("IndexType")]
+        public string IndexType{ get; set; }
+
+        /// <summary>
+        /// <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public string MediaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "IndexType", this.IndexType);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
         }
     }
 }

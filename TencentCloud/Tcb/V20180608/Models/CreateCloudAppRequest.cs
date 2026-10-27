@@ -37,7 +37,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// <p>部署类型</p>
+        /// <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
         /// </summary>
         [JsonProperty("DeployType")]
         public string DeployType{ get; set; }
@@ -138,6 +138,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("PostDeployCommand")]
         public string PostDeployCommand{ get; set; }
 
+        /// <summary>
+        /// <p>流水线运行配置</p>
+        /// </summary>
+        [JsonProperty("Runner")]
+        public BuildRunner Runner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "PreDeployCommand", this.PreDeployCommand);
             this.SetParamSimple(map, prefix + "PostDeployCommand", this.PostDeployCommand);
+            this.SetParamObj(map, prefix + "Runner.", this.Runner);
         }
     }
 }

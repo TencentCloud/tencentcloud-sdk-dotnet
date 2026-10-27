@@ -73,6 +73,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public LLMComprehendFaceRecognition FaceRecognition{ get; set; }
 
         /// <summary>
+        /// <p>DNA解析配置</p>
+        /// </summary>
+        [JsonProperty("DNA")]
+        public LLMComprehendDNA DNA{ get; set; }
+
+        /// <summary>
         /// <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -98,6 +104,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Summary.", this.Summary);
             this.SetParamObj(map, prefix + "Asr.", this.Asr);
             this.SetParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
+            this.SetParamObj(map, prefix + "DNA.", this.DNA);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

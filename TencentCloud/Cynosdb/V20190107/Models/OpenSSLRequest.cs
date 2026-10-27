@@ -25,16 +25,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>证书类型</p><p>枚举值：</p><ul><li>platform： 云端证书</li><li>custom： 自定义证书</li></ul><p>默认值：platform</p>
+        /// </summary>
+        [JsonProperty("CertType")]
+        public string CertType{ get; set; }
+
+        /// <summary>
+        /// <p>证书ID，CertType=custom 时必传</p>
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
         }
     }
 }

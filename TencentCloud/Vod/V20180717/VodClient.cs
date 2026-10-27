@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1526";
+       private const string sdkVersion = "SDK_NET_3.0.1528";
 
         /// <summary>
         /// Client constructor.
@@ -5527,6 +5527,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 使用自然语言对媒体进行语义搜索。
+        /// 仅支持文搜视频、文搜图、图搜图，图搜视频请使用SearchMediaBySemanticsAsync.
         /// </summary>
         /// <param name="req"><see cref="SearchMediaBySemanticsRequest"/></param>
         /// <returns><see cref="SearchMediaBySemanticsResponse"/></returns>
@@ -5537,6 +5538,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 使用自然语言对媒体进行语义搜索。
+        /// 仅支持文搜视频、文搜图、图搜图，图搜视频请使用SearchMediaBySemanticsAsync.
         /// </summary>
         /// <param name="req"><see cref="SearchMediaBySemanticsRequest"/></param>
         /// <returns><see cref="SearchMediaBySemanticsResponse"/></returns>

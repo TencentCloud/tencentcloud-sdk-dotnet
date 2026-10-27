@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1526</VersionPrefix>
+    <VersionPrefix>3.0.1528</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -242,6 +242,8 @@
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemaTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemasRequest.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemasResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeTopSpaceSchemasV2Request.cs" />
+    <Compile Include="V20210527\Models\DescribeTopSpaceSchemasV2Response.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceTableTimeSeriesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceTablesRequest.cs" />
@@ -287,6 +289,7 @@
     <Compile Include="V20210527\Models\MongoDBIndex.cs" />
     <Compile Include="V20210527\Models\MongoDBProcessItem.cs" />
     <Compile Include="V20210527\Models\MongoDBProcessList.cs" />
+    <Compile Include="V20210527\Models\MongoDBSchemaSpaceItem.cs" />
     <Compile Include="V20210527\Models\MongoDBTableSpaceItem.cs" />
     <Compile Include="V20210527\Models\MongodbSpaceObjectItem.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetric.cs" />

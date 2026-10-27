@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1527</VersionPrefix>
+    <VersionPrefix>3.0.1528</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -103,6 +103,7 @@
     <Compile Include="V20190107\Models\CancelClusterServerlessScalePlanResponse.cs" />
     <Compile Include="V20190107\Models\CancelTaskRequest.cs" />
     <Compile Include="V20190107\Models\CancelTaskResponse.cs" />
+    <Compile Include="V20190107\Models\CertDetail.cs" />
     <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceRequest.cs" />
     <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceResponse.cs" />
     <Compile Include="V20190107\Models\CheckItem.cs" />

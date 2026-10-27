@@ -25,31 +25,31 @@ namespace TencentCloud.Cdz.V20221123.Models
     {
         
         /// <summary>
-        /// 专属可用区ID 
+        /// <p>专属可用区ID</p>
         /// </summary>
         [JsonProperty("CloudDedicatedZoneID")]
         public string CloudDedicatedZoneID{ get; set; }
 
         /// <summary>
-        /// 一个或多个Host面的CVM实例信息。最大支持查询100台Host。
+        /// <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
         /// </summary>
         [JsonProperty("HostUuids")]
         public string[] HostUuids{ get; set; }
 
         /// <summary>
-        /// 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
+        /// <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+        /// <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+        /// <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

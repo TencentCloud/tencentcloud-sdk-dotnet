@@ -43,7 +43,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// <p>返回数量。</p><p>取值范围：[0, 200]</p>
+        /// <p>返回数量。</p><p>取值范围：[1, 200]</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

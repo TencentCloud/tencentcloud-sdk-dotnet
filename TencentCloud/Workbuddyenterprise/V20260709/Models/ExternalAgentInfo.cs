@@ -81,6 +81,13 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         public string A2AVersion{ get; set; }
 
         /// <summary>
+        /// 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestVersionName")]
+        public string LatestVersionName{ get; set; }
+
+        /// <summary>
         /// A2A card skills 集合
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -101,6 +108,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
             this.SetParamSimple(map, prefix + "Bound", this.Bound);
             this.SetParamSimple(map, prefix + "IconUrl", this.IconUrl);
             this.SetParamSimple(map, prefix + "A2AVersion", this.A2AVersion);
+            this.SetParamSimple(map, prefix + "LatestVersionName", this.LatestVersionName);
             this.SetParamArrayObj(map, prefix + "A2ASkillSet.", this.A2ASkillSet);
         }
     }

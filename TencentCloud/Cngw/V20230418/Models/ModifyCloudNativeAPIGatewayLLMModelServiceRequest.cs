@@ -210,6 +210,12 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("SmartBalance")]
         public AIGWSmartBalanceConfig SmartBalance{ get; set; }
 
+        /// <summary>
+        /// <p>内容长度限制配置</p>
+        /// </summary>
+        [JsonProperty("LengthLimitConfig")]
+        public AIGWLengthLimitConfig LengthLimitConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +253,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
             this.SetParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
             this.SetParamObj(map, prefix + "SmartBalance.", this.SmartBalance);
+            this.SetParamObj(map, prefix + "LengthLimitConfig.", this.LengthLimitConfig);
         }
     }
 }

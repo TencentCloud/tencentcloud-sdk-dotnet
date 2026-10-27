@@ -1,0 +1,175 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{426B719D-93F8-30F5-8FAF-B5185344B549}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1528</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Cvd</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201104\CvdClient.cs" />
+    <Compile Include="V20201104\Models\AssociateSecurityGroupRequest.cs" />
+    <Compile Include="V20201104\Models\AssociateSecurityGroupResponse.cs" />
+    <Compile Include="V20201104\Models\AttributeInfo.cs" />
+    <Compile Include="V20201104\Models\BindInfo.cs" />
+    <Compile Include="V20201104\Models\BindInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\BindInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\BindStatusInfo.cs" />
+    <Compile Include="V20201104\Models\ChargePrepaid.cs" />
+    <Compile Include="V20201104\Models\CommandDetail.cs" />
+    <Compile Include="V20201104\Models\CreateCommandTaskRequest.cs" />
+    <Compile Include="V20201104\Models\CreateCommandTaskResponse.cs" />
+    <Compile Include="V20201104\Models\CreateDataDiskRequest.cs" />
+    <Compile Include="V20201104\Models\CreateDataDiskResponse.cs" />
+    <Compile Include="V20201104\Models\CreateDomainControlPolicyRequest.cs" />
+    <Compile Include="V20201104\Models\CreateDomainControlPolicyResponse.cs" />
+    <Compile Include="V20201104\Models\CreateImageRequest.cs" />
+    <Compile Include="V20201104\Models\CreateImageResponse.cs" />
+    <Compile Include="V20201104\Models\CreateInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\CreateInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\CreatePolicyRequest.cs" />
+    <Compile Include="V20201104\Models\CreatePolicyResponse.cs" />
+    <Compile Include="V20201104\Models\DataPoint.cs" />
+    <Compile Include="V20201104\Models\DeleteCommandTasksRequest.cs" />
+    <Compile Include="V20201104\Models\DeleteCommandTasksResponse.cs" />
+    <Compile Include="V20201104\Models\DeleteDomainControlPolicyRequest.cs" />
+    <Compile Include="V20201104\Models\DeleteDomainControlPolicyResponse.cs" />
+    <Compile Include="V20201104\Models\DeleteImagesRequest.cs" />
+    <Compile Include="V20201104\Models\DeleteImagesResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeCommandTasksRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeCommandTasksResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeImagesRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceFetchMsgRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceFetchMsgResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceGraphDataRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceGraphDataResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceLoginMsgRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceLoginMsgResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceMonitorDataRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceMonitorDataResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceRegionDistributionRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstanceRegionDistributionResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstancesBindStatusRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstancesBindStatusResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInstancesStatusRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInstancesStatusResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInvocationDetailRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInvocationDetailResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeInvocationsRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeInvocationsResponse.cs" />
+    <Compile Include="V20201104\Models\DescribePolicyDetailRequest.cs" />
+    <Compile Include="V20201104\Models\DescribePolicyDetailResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeSecurityGroupsRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeSecurityGroupsResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeSnapshotsRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeSnapshotsResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeUsageRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeUsageResponse.cs" />
+    <Compile Include="V20201104\Models\DescribeUsersRequest.cs" />
+    <Compile Include="V20201104\Models\DescribeUsersResponse.cs" />
+    <Compile Include="V20201104\Models\Dimension.cs" />
+    <Compile Include="V20201104\Models\DisassociateSecurityGroupRequest.cs" />
+    <Compile Include="V20201104\Models\DisassociateSecurityGroupResponse.cs" />
+    <Compile Include="V20201104\Models\Disk.cs" />
+    <Compile Include="V20201104\Models\DistributionInfo.cs" />
+    <Compile Include="V20201104\Models\DomainControlDetail.cs" />
+    <Compile Include="V20201104\Models\Filter.cs" />
+    <Compile Include="V20201104\Models\ImageInfo.cs" />
+    <Compile Include="V20201104\Models\Instance.cs" />
+    <Compile Include="V20201104\Models\InstanceInfo.cs" />
+    <Compile Include="V20201104\Models\InstanceStatus.cs" />
+    <Compile Include="V20201104\Models\Invocation.cs" />
+    <Compile Include="V20201104\Models\InvocationDetail.cs" />
+    <Compile Include="V20201104\Models\InvocationOutput.cs" />
+    <Compile Include="V20201104\Models\IpControlDetail.cs" />
+    <Compile Include="V20201104\Models\ModifyDiskConfigurationRequest.cs" />
+    <Compile Include="V20201104\Models\ModifyDiskConfigurationResponse.cs" />
+    <Compile Include="V20201104\Models\ModifyImageAttrsRequest.cs" />
+    <Compile Include="V20201104\Models\ModifyImageAttrsResponse.cs" />
+    <Compile Include="V20201104\Models\ModifyInstanceBasicAttributeRequest.cs" />
+    <Compile Include="V20201104\Models\ModifyInstanceBasicAttributeResponse.cs" />
+    <Compile Include="V20201104\Models\ModifyInstancesTypeRequest.cs" />
+    <Compile Include="V20201104\Models\ModifyInstancesTypeResponse.cs" />
+    <Compile Include="V20201104\Models\ModifyInstancesVpcRequest.cs" />
+    <Compile Include="V20201104\Models\ModifyInstancesVpcResponse.cs" />
+    <Compile Include="V20201104\Models\Partition.cs" />
+    <Compile Include="V20201104\Models\PolicyDetail.cs" />
+    <Compile Include="V20201104\Models\PolicyInfo.cs" />
+    <Compile Include="V20201104\Models\RebootInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\RebootInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\RemoveDataDisksRequest.cs" />
+    <Compile Include="V20201104\Models\RemoveDataDisksResponse.cs" />
+    <Compile Include="V20201104\Models\RemovePolicyRequest.cs" />
+    <Compile Include="V20201104\Models\RemovePolicyResponse.cs" />
+    <Compile Include="V20201104\Models\RenewInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\RenewInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\ResetInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\ResetInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\RunCommandRequest.cs" />
+    <Compile Include="V20201104\Models\RunCommandResponse.cs" />
+    <Compile Include="V20201104\Models\SnapshotInfo.cs" />
+    <Compile Include="V20201104\Models\StartInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\StartInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\StopCommandTasksRequest.cs" />
+    <Compile Include="V20201104\Models\StopCommandTasksResponse.cs" />
+    <Compile Include="V20201104\Models\StopInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\StopInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\StopInvocationRequest.cs" />
+    <Compile Include="V20201104\Models\StopInvocationResponse.cs" />
+    <Compile Include="V20201104\Models\StopSessionRequest.cs" />
+    <Compile Include="V20201104\Models\StopSessionResponse.cs" />
+    <Compile Include="V20201104\Models\Tag.cs" />
+    <Compile Include="V20201104\Models\TerminateInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\TerminateInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\UnbindInstancesRequest.cs" />
+    <Compile Include="V20201104\Models\UnbindInstancesResponse.cs" />
+    <Compile Include="V20201104\Models\UpdatePolicyRequest.cs" />
+    <Compile Include="V20201104\Models\UpdatePolicyResponse.cs" />
+    <Compile Include="V20201104\Models\Usage.cs" />
+    <Compile Include="V20201104\Models\User.cs" />
+    <Compile Include="V20201104\Models\VirtualPrivateCloud.cs" />
+  </ItemGroup>
+</Project>

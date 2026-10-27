@@ -25,18 +25,18 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 业务资源列表数据对象集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Items")]
-        public DescribeBusinessResourceData[] Items{ get; set; }
-
-        /// <summary>
         /// 分页公共对象
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public Paging Page{ get; set; }
+
+        /// <summary>
+        /// 业务资源列表数据对象集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Items")]
+        public DescribeBusinessResourceData[] Items{ get; set; }
 
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamObj(map, prefix + "Page.", this.Page);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
         }
     }
 }

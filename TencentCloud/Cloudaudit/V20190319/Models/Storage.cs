@@ -66,6 +66,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("Compress")]
         public ulong? Compress{ get; set; }
 
+        /// <summary>
+        /// <p>CKAFKA路由信息</p>
+        /// </summary>
+        [JsonProperty("CkafkaRoute")]
+        public string CkafkaRoute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "StorageAccountId", this.StorageAccountId);
             this.SetParamSimple(map, prefix + "StorageAppId", this.StorageAppId);
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
+            this.SetParamSimple(map, prefix + "CkafkaRoute", this.CkafkaRoute);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Kms.V20190118
 
        private const string endpoint = "kms.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1524";
+       private const string sdkVersion = "SDK_NET_3.0.1528";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Kms.V20190118
         public CreateKeyResponse CreateKeySync(CreateKeyRequest req)
         {
             return InternalRequestAsync<CreateKeyResponse>(req, "CreateKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 购买开通KMS服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateKmsInstanceRequest"/></param>
+        /// <returns><see cref="CreateKmsInstanceResponse"/></returns>
+        public Task<CreateKmsInstanceResponse> CreateKmsInstance(CreateKmsInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateKmsInstanceResponse>(req, "CreateKmsInstance");
+        }
+
+        /// <summary>
+        /// 购买开通KMS服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateKmsInstanceRequest"/></param>
+        /// <returns><see cref="CreateKmsInstanceResponse"/></returns>
+        public CreateKmsInstanceResponse CreateKmsInstanceSync(CreateKmsInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateKmsInstanceResponse>(req, "CreateKmsInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

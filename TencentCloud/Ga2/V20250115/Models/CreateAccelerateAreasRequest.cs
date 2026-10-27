@@ -34,7 +34,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         /// <p>加速地域信息。一次最多创建10组加速地域。</p>
         /// </summary>
         [JsonProperty("AcceleratorAreas")]
-        public AcceleratorAreas[] AcceleratorAreas{ get; set; }
+        public CreateAcceleratorAreasInfo[] AcceleratorAreas{ get; set; }
 
 
         /// <summary>

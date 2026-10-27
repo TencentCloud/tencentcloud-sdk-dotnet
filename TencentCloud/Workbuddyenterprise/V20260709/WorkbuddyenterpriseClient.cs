@@ -28,7 +28,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
 
        private const string endpoint = "workbuddyenterprise.tencentcloudapi.com";
        private const string version = "2026-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1526";
+       private const string sdkVersion = "SDK_NET_3.0.1528";
 
         /// <summary>
         /// Client constructor.
@@ -306,7 +306,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         }
 
         /// <summary>
-        /// 查询当前企业的内置模型列表，支持分页与过滤。内置模型由平台预置，企业可按需启用/停用。过滤字段支持：ModelId（模型ID，模糊）、Name（模型名称，模糊）、Vendor（供应商，模糊）、Status（状态，精确：enabled/disabled）。
+        /// 查询当前企业的内置模型列表，支持分页与过滤，内置模型由平台预置，企业可按需启用/停用。过滤字段支持：ModelId（模型ID，模糊）、Name（模型名称，模糊）、Vendor（供应商，模糊）、Status（状态，精确：enabled/disabled）。出参中的 SupportsThinking、ThinkingLevels、DefaultThinkingLevel、CanDisableThinking 描述模型的思考能力，用于配置 Agent 版本 Manifest 中的 thinking。
         /// </summary>
         /// <param name="req"><see cref="DescribeBuiltinModelListRequest"/></param>
         /// <returns><see cref="DescribeBuiltinModelListResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         }
 
         /// <summary>
-        /// 查询当前企业的内置模型列表，支持分页与过滤。内置模型由平台预置，企业可按需启用/停用。过滤字段支持：ModelId（模型ID，模糊）、Name（模型名称，模糊）、Vendor（供应商，模糊）、Status（状态，精确：enabled/disabled）。
+        /// 查询当前企业的内置模型列表，支持分页与过滤，内置模型由平台预置，企业可按需启用/停用。过滤字段支持：ModelId（模型ID，模糊）、Name（模型名称，模糊）、Vendor（供应商，模糊）、Status（状态，精确：enabled/disabled）。出参中的 SupportsThinking、ThinkingLevels、DefaultThinkingLevel、CanDisableThinking 描述模型的思考能力，用于配置 Agent 版本 Manifest 中的 thinking。
         /// </summary>
         /// <param name="req"><see cref="DescribeBuiltinModelListRequest"/></param>
         /// <returns><see cref="DescribeBuiltinModelListResponse"/></returns>

@@ -43,6 +43,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+        /// </summary>
+        [JsonProperty("IndexType")]
+        public string IndexType{ get; set; }
+
+        /// <summary>
+        /// <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public string MediaType{ get; set; }
+
+        /// <summary>
         /// <p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
@@ -63,6 +75,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "IndexType", this.IndexType);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }

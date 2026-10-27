@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1526</VersionPrefix>
+    <VersionPrefix>3.0.1528</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -430,6 +430,8 @@
     <Compile Include="V20180717\Models\CreateWordSamplesRequest.cs" />
     <Compile Include="V20180717\Models\CreateWordSamplesResponse.cs" />
     <Compile Include="V20180717\Models\CustomVoiceInfo.cs" />
+    <Compile Include="V20180717\Models\DNATask.cs" />
+    <Compile Include="V20180717\Models\DNATaskOutput.cs" />
     <Compile Include="V20180717\Models\DNSVerifyInfo.cs" />
     <Compile Include="V20180717\Models\DailyPlayStatInfo.cs" />
     <Compile Include="V20180717\Models\DeleteAIAnalysisTemplateRequest.cs" />
@@ -757,6 +759,7 @@
     <Compile Include="V20180717\Models\KnowledgeBasesInfo.cs" />
     <Compile Include="V20180717\Models\LLMComprehendAsr.cs" />
     <Compile Include="V20180717\Models\LLMComprehendAsrForUpdate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendDNA.cs" />
     <Compile Include="V20180717\Models\LLMComprehendFaceRecognition.cs" />
     <Compile Include="V20180717\Models\LLMComprehendFaceRecognitionForUpdate.cs" />
     <Compile Include="V20180717\Models\LLMComprehendSummary.cs" />
@@ -1102,6 +1105,7 @@
     <Compile Include="V20180717\Models\SceneAigcVideoTaskInputFileInfo.cs" />
     <Compile Include="V20180717\Models\SceneAigcVideoTaskOutput.cs" />
     <Compile Include="V20180717\Models\ScratchRepairInfo.cs" />
+    <Compile Include="V20180717\Models\SearchMediaBySemanticsAsync.cs" />
     <Compile Include="V20180717\Models\SearchMediaBySemanticsRequest.cs" />
     <Compile Include="V20180717\Models\SearchMediaBySemanticsResponse.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />
