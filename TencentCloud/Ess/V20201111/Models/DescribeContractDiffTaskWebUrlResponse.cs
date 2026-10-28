@@ -25,8 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同对比嵌入式web页面链接，有效期：5分钟
-        /// 链接仅能使用一次
+        /// <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
         /// </summary>
         [JsonProperty("WebUrl")]
         public string WebUrl{ get; set; }

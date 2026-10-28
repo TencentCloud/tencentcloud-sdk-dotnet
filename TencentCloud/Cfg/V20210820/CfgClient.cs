@@ -28,7 +28,7 @@ namespace TencentCloud.Cfg.V20210820
 
        private const string endpoint = "cfg.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1429";
+       private const string sdkVersion = "SDK_NET_3.0.1529";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Cfg.V20210820
         public DescribeActionLibraryListResponse DescribeActionLibraryListSync(DescribeActionLibraryListRequest req)
         {
             return InternalRequestAsync<DescribeActionLibraryListResponse>(req, "DescribeActionLibraryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询探针列表，换为OTeam探针版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceAgentListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceAgentListResponse"/></returns>
+        public Task<DescribeInstanceAgentListResponse> DescribeInstanceAgentList(DescribeInstanceAgentListRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceAgentListResponse>(req, "DescribeInstanceAgentList");
+        }
+
+        /// <summary>
+        /// 查询探针列表，换为OTeam探针版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceAgentListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceAgentListResponse"/></returns>
+        public DescribeInstanceAgentListResponse DescribeInstanceAgentListSync(DescribeInstanceAgentListRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceAgentListResponse>(req, "DescribeInstanceAgentList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +390,27 @@ namespace TencentCloud.Cfg.V20210820
         }
 
         /// <summary>
+        /// 安装探针接口
+        /// </summary>
+        /// <param name="req"><see cref="InstallAgentOpenApiRequest"/></param>
+        /// <returns><see cref="InstallAgentOpenApiResponse"/></returns>
+        public Task<InstallAgentOpenApiResponse> InstallAgentOpenApi(InstallAgentOpenApiRequest req)
+        {
+            return InternalRequestAsync<InstallAgentOpenApiResponse>(req, "InstallAgentOpenApi");
+        }
+
+        /// <summary>
+        /// 安装探针接口
+        /// </summary>
+        /// <param name="req"><see cref="InstallAgentOpenApiRequest"/></param>
+        /// <returns><see cref="InstallAgentOpenApiResponse"/></returns>
+        public InstallAgentOpenApiResponse InstallAgentOpenApiSync(InstallAgentOpenApiRequest req)
+        {
+            return InternalRequestAsync<InstallAgentOpenApiResponse>(req, "InstallAgentOpenApi")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改任务运行状态
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskRunStatusRequest"/></param>
@@ -407,6 +449,27 @@ namespace TencentCloud.Cfg.V20210820
         public TriggerPolicyResponse TriggerPolicySync(TriggerPolicyRequest req)
         {
             return InternalRequestAsync<TriggerPolicyResponse>(req, "TriggerPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 卸载探针
+        /// </summary>
+        /// <param name="req"><see cref="UninstallAgentOpenApiRequest"/></param>
+        /// <returns><see cref="UninstallAgentOpenApiResponse"/></returns>
+        public Task<UninstallAgentOpenApiResponse> UninstallAgentOpenApi(UninstallAgentOpenApiRequest req)
+        {
+            return InternalRequestAsync<UninstallAgentOpenApiResponse>(req, "UninstallAgentOpenApi");
+        }
+
+        /// <summary>
+        /// 卸载探针
+        /// </summary>
+        /// <param name="req"><see cref="UninstallAgentOpenApiRequest"/></param>
+        /// <returns><see cref="UninstallAgentOpenApiResponse"/></returns>
+        public UninstallAgentOpenApiResponse UninstallAgentOpenApiSync(UninstallAgentOpenApiRequest req)
+        {
+            return InternalRequestAsync<UninstallAgentOpenApiResponse>(req, "UninstallAgentOpenApi")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

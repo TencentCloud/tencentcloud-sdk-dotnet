@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1526</VersionPrefix>
+    <VersionPrefix>3.0.1529</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -172,10 +172,6 @@
     <Compile Include="V20190423\Models\CreateTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkAgentRequest.cs" />
     <Compile Include="V20190423\Models\CreateTWeTalkAgentResponse.cs" />
-    <Compile Include="V20190423\Models\CreateTWeTalkProductConfigRequest.cs" />
-    <Compile Include="V20190423\Models\CreateTWeTalkProductConfigResponse.cs" />
-    <Compile Include="V20190423\Models\CreateTWeTalkProductConfigV2Request.cs" />
-    <Compile Include="V20190423\Models\CreateTWeTalkProductConfigV2Response.cs" />
     <Compile Include="V20190423\Models\CreateTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\CreateTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\CreateTopicRuleRequest.cs" />
@@ -220,8 +216,6 @@
     <Compile Include="V20190423\Models\DeleteTWeSeeTasksByConditionResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkAgentRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTWeTalkAgentResponse.cs" />
-    <Compile Include="V20190423\Models\DeleteTWeTalkProductConfigV2Request.cs" />
-    <Compile Include="V20190423\Models\DeleteTWeTalkProductConfigV2Response.cs" />
     <Compile Include="V20190423\Models\DeleteTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleRequest.cs" />
@@ -374,10 +368,6 @@
     <Compile Include="V20190423\Models\DescribeTWeTalkAgentListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkAgentRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTWeTalkAgentResponse.cs" />
-    <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigRequest.cs" />
-    <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigResponse.cs" />
-    <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigV2Request.cs" />
-    <Compile Include="V20190423\Models\DescribeTWeTalkProductConfigV2Response.cs" />
     <Compile Include="V20190423\Models\DescribeTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleRequest.cs" />
@@ -456,10 +446,6 @@
     <Compile Include="V20190423\Models\GetTWeTalkActiveRecordListResponse.cs" />
     <Compile Include="V20190423\Models\GetTWeTalkActiveStatusRequest.cs" />
     <Compile Include="V20190423\Models\GetTWeTalkActiveStatusResponse.cs" />
-    <Compile Include="V20190423\Models\GetTWeTalkProductConfigListRequest.cs" />
-    <Compile Include="V20190423\Models\GetTWeTalkProductConfigListResponse.cs" />
-    <Compile Include="V20190423\Models\GetTWeTalkProductConfigListV2Request.cs" />
-    <Compile Include="V20190423\Models\GetTWeTalkProductConfigListV2Response.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListRequest.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListResponse.cs" />
     <Compile Include="V20190423\Models\GetVodCloudStorageEventListRequest.cs" />
@@ -468,7 +454,6 @@
     <Compile Include="V20190423\Models\GetVodCloudStorageVideoListResponse.cs" />
     <Compile Include="V20190423\Models\GetWechatDeviceTicketRequest.cs" />
     <Compile Include="V20190423\Models\GetWechatDeviceTicketResponse.cs" />
-    <Compile Include="V20190423\Models\IdleResponseInfo.cs" />
     <Compile Include="V20190423\Models\ImportTWeSeeFacesRequest.cs" />
     <Compile Include="V20190423\Models\ImportTWeSeeFacesResponse.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserRequest.cs" />
@@ -557,10 +542,6 @@
     <Compile Include="V20190423\Models\ModifyTWeSeeSubscriptionResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkAgentRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTWeTalkAgentResponse.cs" />
-    <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigRequest.cs" />
-    <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigResponse.cs" />
-    <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigV2Request.cs" />
-    <Compile Include="V20190423\Models\ModifyTWeTalkProductConfigV2Response.cs" />
     <Compile Include="V20190423\Models\ModifyTopicPolicyRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleRequest.cs" />
@@ -671,22 +652,14 @@
     <Compile Include="V20190423\Models\TalkActivationStatusInfo.cs" />
     <Compile Include="V20190423\Models\TalkAgentBinding.cs" />
     <Compile Include="V20190423\Models\TalkAgentInfo.cs" />
-    <Compile Include="V20190423\Models\TalkBasicConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkConversationConfig.cs" />
-    <Compile Include="V20190423\Models\TalkConversationConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkEventCallbackConfig.cs" />
     <Compile Include="V20190423\Models\TalkIOTTool.cs" />
-    <Compile Include="V20190423\Models\TalkIdleDetectionConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkLLMConfig.cs" />
-    <Compile Include="V20190423\Models\TalkLLMConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkMemoryConfig.cs" />
-    <Compile Include="V20190423\Models\TalkProductConfigInfo.cs" />
-    <Compile Include="V20190423\Models\TalkProductConfigV2Info.cs" />
     <Compile Include="V20190423\Models\TalkSTTConfig.cs" />
-    <Compile Include="V20190423\Models\TalkSTTConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkSTTTRTC.cs" />
     <Compile Include="V20190423\Models\TalkTTSConfig.cs" />
-    <Compile Include="V20190423\Models\TalkTTSConfigInfo.cs" />
     <Compile Include="V20190423\Models\TalkTTSFlow.cs" />
     <Compile Include="V20190423\Models\TalkWebhookAuth.cs" />
     <Compile Include="V20190423\Models\TalkWebhookEndpoint.cs" />

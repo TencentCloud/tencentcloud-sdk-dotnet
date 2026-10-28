@@ -43,7 +43,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

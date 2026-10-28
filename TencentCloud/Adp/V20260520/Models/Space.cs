@@ -25,28 +25,40 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 空间id
+        /// <p>空间id</p>
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
 
         /// <summary>
-        /// 空间名称
+        /// <p>空间名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 空间描述
+        /// <p>空间描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 空间权限
+        /// <p>空间权限</p>
         /// </summary>
         [JsonProperty("PermissionIdList")]
         public string[] PermissionIdList{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间</p><p>参数格式：秒时间戳</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>更新时间</p><p>参数格式：秒时间戳</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArraySimple(map, prefix + "PermissionIdList.", this.PermissionIdList);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

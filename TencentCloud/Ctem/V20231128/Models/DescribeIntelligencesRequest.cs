@@ -25,6 +25,12 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
+        /// <p>企业ID</p>
+        /// </summary>
+        [JsonProperty("CustomerId")]
+        public long? CustomerId{ get; set; }
+
+        /// <summary>
         /// 查询数组
         /// </summary>
         [JsonProperty("Filters")]
@@ -42,15 +48,23 @@ namespace TencentCloud.Ctem.V20231128.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// <p>是否筛选有效情报</p>
+        /// </summary>
+        [JsonProperty("IsActual")]
+        public bool? IsActual{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CustomerId", this.CustomerId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "IsActual", this.IsActual);
         }
     }
 }

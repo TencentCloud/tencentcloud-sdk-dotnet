@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C8FAE73A-C1CE-3D50-805A-4FB5B32F597E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1527</VersionPrefix>
+    <VersionPrefix>3.0.1529</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,8 @@
     <Compile Include="V20220519\Models\CreateLoadTaskResponse.cs" />
     <Compile Include="V20220519\Models\CreatePolicyRuleRequest.cs" />
     <Compile Include="V20220519\Models\CreatePolicyRuleResponse.cs" />
+    <Compile Include="V20220519\Models\CreateUserQuotaRequest.cs" />
+    <Compile Include="V20220519\Models\CreateUserQuotaResponse.cs" />
     <Compile Include="V20220519\Models\CustomerClusterAttr.cs" />
     <Compile Include="V20220519\Models\DataRepositoryTaskAttribute.cs" />
     <Compile Include="V20220519\Models\DeleteCrossVpcSubnetSupportForClientNodeRequest.cs" />
@@ -91,6 +93,8 @@
     <Compile Include="V20220519\Models\DeleteFilesetResponse.cs" />
     <Compile Include="V20220519\Models\DeletePolicyRuleRequest.cs" />
     <Compile Include="V20220519\Models\DeletePolicyRuleResponse.cs" />
+    <Compile Include="V20220519\Models\DeleteUserQuotaRequest.cs" />
+    <Compile Include="V20220519\Models\DeleteUserQuotaResponse.cs" />
     <Compile Include="V20220519\Models\DescribeClientNodesRequest.cs" />
     <Compile Include="V20220519\Models\DescribeClientNodesResponse.cs" />
     <Compile Include="V20220519\Models\DescribeClusterClientTokenRequest.cs" />
@@ -117,6 +121,8 @@
     <Compile Include="V20220519\Models\DescribePolicyRuleExecuteRecordResponse.cs" />
     <Compile Include="V20220519\Models\DescribePolicyRuleRequest.cs" />
     <Compile Include="V20220519\Models\DescribePolicyRuleResponse.cs" />
+    <Compile Include="V20220519\Models\DescribeUserQuotaRequest.cs" />
+    <Compile Include="V20220519\Models\DescribeUserQuotaResponse.cs" />
     <Compile Include="V20220519\Models\DetachFileSystemBucketRequest.cs" />
     <Compile Include="V20220519\Models\DetachFileSystemBucketResponse.cs" />
     <Compile Include="V20220519\Models\DisablePolicyRuleRequest.cs" />
@@ -166,5 +172,8 @@
     <Compile Include="V20220519\Models\UpdateFilesetResponse.cs" />
     <Compile Include="V20220519\Models\UpdateLoadTaskPriorityRequest.cs" />
     <Compile Include="V20220519\Models\UpdateLoadTaskPriorityResponse.cs" />
+    <Compile Include="V20220519\Models\UpdateUserQuotaRequest.cs" />
+    <Compile Include="V20220519\Models\UpdateUserQuotaResponse.cs" />
+    <Compile Include="V20220519\Models\UserQuotaInfo.cs" />
   </ItemGroup>
 </Project>

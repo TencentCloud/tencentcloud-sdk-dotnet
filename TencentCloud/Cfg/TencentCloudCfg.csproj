@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{AF157AA3-DE93-39B8-BF94-0C33E09A4A03}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1429</VersionPrefix>
+    <VersionPrefix>3.0.1529</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20210820\Models\ActionFieldConfigResult.cs" />
     <Compile Include="V20210820\Models\ActionFilter.cs" />
     <Compile Include="V20210820\Models\ActionLibraryListResult.cs" />
+    <Compile Include="V20210820\Models\AgentFilter.cs" />
     <Compile Include="V20210820\Models\ApmServiceInfo.cs" />
     <Compile Include="V20210820\Models\CreateTaskFromActionRequest.cs" />
     <Compile Include="V20210820\Models\CreateTaskFromActionResponse.cs" />
@@ -65,6 +66,8 @@
     <Compile Include="V20210820\Models\DescribeActionFieldConfigListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeActionLibraryListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeActionLibraryListResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeInstanceAgentListRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeInstanceAgentListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeObjectTypeListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeObjectTypeListResponse.cs" />
     <Compile Include="V20210820\Models\DescribePolicy.cs" />
@@ -84,6 +87,10 @@
     <Compile Include="V20210820\Models\ExecuteTaskInstanceResponse.cs" />
     <Compile Include="V20210820\Models\ExecuteTaskRequest.cs" />
     <Compile Include="V20210820\Models\ExecuteTaskResponse.cs" />
+    <Compile Include="V20210820\Models\InstallAgentOpenApiRequest.cs" />
+    <Compile Include="V20210820\Models\InstallAgentOpenApiResponse.cs" />
+    <Compile Include="V20210820\Models\InstanceAgent.cs" />
+    <Compile Include="V20210820\Models\InstanceAgentItem.cs" />
     <Compile Include="V20210820\Models\ModifyTaskRunStatusRequest.cs" />
     <Compile Include="V20210820\Models\ModifyTaskRunStatusResponse.cs" />
     <Compile Include="V20210820\Models\ObjectType.cs" />
@@ -116,5 +123,7 @@
     <Compile Include="V20210820\Models\TemplatePolicy.cs" />
     <Compile Include="V20210820\Models\TriggerPolicyRequest.cs" />
     <Compile Include="V20210820\Models\TriggerPolicyResponse.cs" />
+    <Compile Include="V20210820\Models\UninstallAgentOpenApiRequest.cs" />
+    <Compile Include="V20210820\Models\UninstallAgentOpenApiResponse.cs" />
   </ItemGroup>
 </Project>

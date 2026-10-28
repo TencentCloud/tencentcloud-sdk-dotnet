@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1526";
+       private const string sdkVersion = "SDK_NET_3.0.1529";
 
         /// <summary>
         /// Client constructor.
@@ -3974,7 +3974,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。支持传入过滤项配置列表来过滤相关对比项。
         /// 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
         /// 
         /// 嵌入页面长相如下：
@@ -3988,7 +3988,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+        /// 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。支持传入过滤项配置列表来过滤相关对比项。
         /// 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
         /// 
         /// 嵌入页面长相如下：

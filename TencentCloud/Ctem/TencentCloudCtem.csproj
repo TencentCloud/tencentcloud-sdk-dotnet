@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B533628D-9934-32F7-A296-3BAC24AA8E1B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1528</VersionPrefix>
+    <VersionPrefix>3.0.1529</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -206,6 +206,7 @@
     <Compile Include="V20231128\Models\IdndValue.cs" />
     <Compile Include="V20231128\Models\IgnoreDataRequest.cs" />
     <Compile Include="V20231128\Models\IgnoreDataResponse.cs" />
+    <Compile Include="V20231128\Models\IntelligenceDesc.cs" />
     <Compile Include="V20231128\Models\IntelligenceResult.cs" />
     <Compile Include="V20231128\Models\JobRecordProgress.cs" />
     <Compile Include="V20231128\Models\ModifyCustomerRequest.cs" />

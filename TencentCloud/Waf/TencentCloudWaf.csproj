@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1528</VersionPrefix>
+    <VersionPrefix>3.0.1529</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -220,6 +220,8 @@
     <Compile Include="V20180125\Models\DeleteLLMContentRuleResponse.cs" />
     <Compile Include="V20180125\Models\DeleteLLMKeywordLibraryRequest.cs" />
     <Compile Include="V20180125\Models\DeleteLLMKeywordLibraryResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMSdkAccessRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMSdkAccessResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleRequest.cs" />

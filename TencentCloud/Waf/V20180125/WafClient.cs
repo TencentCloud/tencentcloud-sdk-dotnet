@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1528";
+       private const string sdkVersion = "SDK_NET_3.0.1529";
 
         /// <summary>
         /// Client constructor.
@@ -995,6 +995,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrarySync(DeleteLLMKeywordLibraryRequest req)
         {
             return InternalRequestAsync<DeleteLLMKeywordLibraryResponse>(req, "DeleteLLMKeywordLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// llmwaf-sdk删除接入配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DeleteLLMSdkAccessResponse"/></returns>
+        public Task<DeleteLLMSdkAccessResponse> DeleteLLMSdkAccess(DeleteLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMSdkAccessResponse>(req, "DeleteLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// llmwaf-sdk删除接入配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DeleteLLMSdkAccessResponse"/></returns>
+        public DeleteLLMSdkAccessResponse DeleteLLMSdkAccessSync(DeleteLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMSdkAccessResponse>(req, "DeleteLLMSdkAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -114,6 +114,12 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("EmotionIntensity")]
         public long? EmotionIntensity{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
+        /// </summary>
+        [JsonProperty("EnableLatex")]
+        public bool? EnableLatex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
             this.SetParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
             this.SetParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
+            this.SetParamSimple(map, prefix + "EnableLatex", this.EnableLatex);
         }
     }
 }

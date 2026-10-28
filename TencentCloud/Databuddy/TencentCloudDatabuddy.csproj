@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1526</VersionPrefix>
+    <VersionPrefix>3.0.1529</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -322,6 +322,9 @@
     <Compile Include="V20260715\Models\RemoveConsoleUsersRsp.cs" />
     <Compile Include="V20260715\Models\RemoveWorkspaceGroupsRequest.cs" />
     <Compile Include="V20260715\Models\RemoveWorkspaceGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\RemoveWorkspaceUsersRequest.cs" />
+    <Compile Include="V20260715\Models\RemoveWorkspaceUsersResponse.cs" />
+    <Compile Include="V20260715\Models\RemoveWorkspaceUsersRsp.cs" />
     <Compile Include="V20260715\Models\RerunWorkflowRunRequest.cs" />
     <Compile Include="V20260715\Models\RerunWorkflowRunResponse.cs" />
     <Compile Include="V20260715\Models\ResourceGroupInfo.cs" />
@@ -407,6 +410,9 @@
     <Compile Include="V20260715\Models\UpdateWorkflowRsp.cs" />
     <Compile Include="V20260715\Models\UpdateWorkspaceGroupsRolesRequest.cs" />
     <Compile Include="V20260715\Models\UpdateWorkspaceGroupsRolesResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceGroupsTagsRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceGroupsTagsResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceGroupsTagsRsp.cs" />
     <Compile Include="V20260715\Models\UpdateWorkspaceRequest.cs" />
     <Compile Include="V20260715\Models\UpdateWorkspaceResponse.cs" />
     <Compile Include="V20260715\Models\UpdateWorkspaceRoleRequest.cs" />
@@ -415,6 +421,9 @@
     <Compile Include="V20260715\Models\UpdateWorkspaceRsp.cs" />
     <Compile Include="V20260715\Models\UpdateWorkspaceUsersRolesRequest.cs" />
     <Compile Include="V20260715\Models\UpdateWorkspaceUsersRolesResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceUsersTagsRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceUsersTagsResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceUsersTagsRsp.cs" />
     <Compile Include="V20260715\Models\UserActivityInfo.cs" />
     <Compile Include="V20260715\Models\UserInfo.cs" />
     <Compile Include="V20260715\Models\UserTagInfo.cs" />

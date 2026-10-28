@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1526";
+       private const string sdkVersion = "SDK_NET_3.0.1529";
 
         /// <summary>
         /// Client constructor.
@@ -1622,6 +1622,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// <p>批量移除工作空间用户（单次最多10个；单个 UIN 失败不影响其他 UIN 移除，成败以 SuccessUins/FailItems 为准）</p>
+        /// </summary>
+        /// <param name="req"><see cref="RemoveWorkspaceUsersRequest"/></param>
+        /// <returns><see cref="RemoveWorkspaceUsersResponse"/></returns>
+        public Task<RemoveWorkspaceUsersResponse> RemoveWorkspaceUsers(RemoveWorkspaceUsersRequest req)
+        {
+            return InternalRequestAsync<RemoveWorkspaceUsersResponse>(req, "RemoveWorkspaceUsers");
+        }
+
+        /// <summary>
+        /// <p>批量移除工作空间用户（单次最多10个；单个 UIN 失败不影响其他 UIN 移除，成败以 SuccessUins/FailItems 为准）</p>
+        /// </summary>
+        /// <param name="req"><see cref="RemoveWorkspaceUsersRequest"/></param>
+        /// <returns><see cref="RemoveWorkspaceUsersResponse"/></returns>
+        public RemoveWorkspaceUsersResponse RemoveWorkspaceUsersSync(RemoveWorkspaceUsersRequest req)
+        {
+            return InternalRequestAsync<RemoveWorkspaceUsersResponse>(req, "RemoveWorkspaceUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重跑工作流
         /// </summary>
         /// <param name="req"><see cref="RerunWorkflowRunRequest"/></param>
@@ -2187,6 +2208,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 修改工作空间用户组标签
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceGroupsTagsRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceGroupsTagsResponse"/></returns>
+        public Task<UpdateWorkspaceGroupsTagsResponse> UpdateWorkspaceGroupsTags(UpdateWorkspaceGroupsTagsRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceGroupsTagsResponse>(req, "UpdateWorkspaceGroupsTags");
+        }
+
+        /// <summary>
+        /// 修改工作空间用户组标签
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceGroupsTagsRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceGroupsTagsResponse"/></returns>
+        public UpdateWorkspaceGroupsTagsResponse UpdateWorkspaceGroupsTagsSync(UpdateWorkspaceGroupsTagsRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceGroupsTagsResponse>(req, "UpdateWorkspaceGroupsTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新工作空间角色
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkspaceRoleRequest"/></param>
@@ -2225,6 +2267,37 @@ namespace TencentCloud.Databuddy.V20260715
         public UpdateWorkspaceUsersRolesResponse UpdateWorkspaceUsersRolesSync(UpdateWorkspaceUsersRolesRequest req)
         {
             return InternalRequestAsync<UpdateWorkspaceUsersRolesResponse>(req, "UpdateWorkspaceUsersRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改工作空间用户标签
+        /// 本接口为整体覆盖式修改：每次调用以请求中的 Tags 为准，替换指定用户的全部直绑标签，而非增量追加。
+        /// 1、传入 Tags（含 TagId/TagValueId）：替换为该批标签
+        /// 2、不传 Tags 或传入空数组（"Tags": []）：将清除 UserUins 中所有用户的全部直绑标签，且操作不可逆，请谨慎调用
+        /// 3、多个用户将共享同一批 Tags；仅修改单个用户时，UserUins 请只传该用户
+        /// 4、仅清除用户直绑（Source=1）的标签，用户从用户组继承的标签（Source=2）不受影响
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceUsersTagsRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceUsersTagsResponse"/></returns>
+        public Task<UpdateWorkspaceUsersTagsResponse> UpdateWorkspaceUsersTags(UpdateWorkspaceUsersTagsRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceUsersTagsResponse>(req, "UpdateWorkspaceUsersTags");
+        }
+
+        /// <summary>
+        /// 修改工作空间用户标签
+        /// 本接口为整体覆盖式修改：每次调用以请求中的 Tags 为准，替换指定用户的全部直绑标签，而非增量追加。
+        /// 1、传入 Tags（含 TagId/TagValueId）：替换为该批标签
+        /// 2、不传 Tags 或传入空数组（"Tags": []）：将清除 UserUins 中所有用户的全部直绑标签，且操作不可逆，请谨慎调用
+        /// 3、多个用户将共享同一批 Tags；仅修改单个用户时，UserUins 请只传该用户
+        /// 4、仅清除用户直绑（Source=1）的标签，用户从用户组继承的标签（Source=2）不受影响
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkspaceUsersTagsRequest"/></param>
+        /// <returns><see cref="UpdateWorkspaceUsersTagsResponse"/></returns>
+        public UpdateWorkspaceUsersTagsResponse UpdateWorkspaceUsersTagsSync(UpdateWorkspaceUsersTagsRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkspaceUsersTagsResponse>(req, "UpdateWorkspaceUsersTags")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

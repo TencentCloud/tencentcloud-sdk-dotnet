@@ -28,7 +28,7 @@ namespace TencentCloud.Dbdc.V20201029
 
        private const string endpoint = "dbdc.tencentcloudapi.com";
        private const string version = "2020-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1527";
+       private const string sdkVersion = "SDK_NET_3.0.1529";
 
         /// <summary>
         /// Client constructor.
@@ -873,6 +873,29 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口（ModifyDBCustomNodeType）用于修改 DB Custom 节点配置。
+        /// 修改节点配置过程中会重启节点。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodeTypeRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodeTypeResponse"/></returns>
+        public Task<ModifyDBCustomNodeTypeResponse> ModifyDBCustomNodeType(ModifyDBCustomNodeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodeTypeResponse>(req, "ModifyDBCustomNodeType");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomNodeType）用于修改 DB Custom 节点配置。
+        /// 修改节点配置过程中会重启节点。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodeTypeRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodeTypeResponse"/></returns>
+        public ModifyDBCustomNodeTypeResponse ModifyDBCustomNodeTypeSync(ModifyDBCustomNodeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodeTypeResponse>(req, "ModifyDBCustomNodeType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（ModifyDBCustomNodesDisasterRecoverGroup）用于修改 DB Custom 节点的置放群组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBCustomNodesDisasterRecoverGroupRequest"/></param>
@@ -915,6 +938,27 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口（RebootDBCustomNodes）用于重启 DB Custom 节点。
+        /// </summary>
+        /// <param name="req"><see cref="RebootDBCustomNodesRequest"/></param>
+        /// <returns><see cref="RebootDBCustomNodesResponse"/></returns>
+        public Task<RebootDBCustomNodesResponse> RebootDBCustomNodes(RebootDBCustomNodesRequest req)
+        {
+            return InternalRequestAsync<RebootDBCustomNodesResponse>(req, "RebootDBCustomNodes");
+        }
+
+        /// <summary>
+        /// 该接口（RebootDBCustomNodes）用于重启 DB Custom 节点。
+        /// </summary>
+        /// <param name="req"><see cref="RebootDBCustomNodesRequest"/></param>
+        /// <returns><see cref="RebootDBCustomNodesResponse"/></returns>
+        public RebootDBCustomNodesResponse RebootDBCustomNodesSync(RebootDBCustomNodesRequest req)
+        {
+            return InternalRequestAsync<RebootDBCustomNodesResponse>(req, "RebootDBCustomNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移出节点。
         /// </summary>
         /// <param name="req"><see cref="RemoveNodesFromDBCustomClusterRequest"/></param>
@@ -953,6 +997,90 @@ namespace TencentCloud.Dbdc.V20201029
         public RenewDBCustomNodeResponse RenewDBCustomNodeSync(RenewDBCustomNodeRequest req)
         {
             return InternalRequestAsync<RenewDBCustomNodeResponse>(req, "RenewDBCustomNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ResetDBCustomNode）用于重装 DB Custom 节点的操作系统。
+        /// </summary>
+        /// <param name="req"><see cref="ResetDBCustomNodeRequest"/></param>
+        /// <returns><see cref="ResetDBCustomNodeResponse"/></returns>
+        public Task<ResetDBCustomNodeResponse> ResetDBCustomNode(ResetDBCustomNodeRequest req)
+        {
+            return InternalRequestAsync<ResetDBCustomNodeResponse>(req, "ResetDBCustomNode");
+        }
+
+        /// <summary>
+        /// 该接口（ResetDBCustomNode）用于重装 DB Custom 节点的操作系统。
+        /// </summary>
+        /// <param name="req"><see cref="ResetDBCustomNodeRequest"/></param>
+        /// <returns><see cref="ResetDBCustomNodeResponse"/></returns>
+        public ResetDBCustomNodeResponse ResetDBCustomNodeSync(ResetDBCustomNodeRequest req)
+        {
+            return InternalRequestAsync<ResetDBCustomNodeResponse>(req, "ResetDBCustomNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ResizeDBCustomNodeDisk）用于调整 DB Custom 节点磁盘容量。
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDBCustomNodeDiskRequest"/></param>
+        /// <returns><see cref="ResizeDBCustomNodeDiskResponse"/></returns>
+        public Task<ResizeDBCustomNodeDiskResponse> ResizeDBCustomNodeDisk(ResizeDBCustomNodeDiskRequest req)
+        {
+            return InternalRequestAsync<ResizeDBCustomNodeDiskResponse>(req, "ResizeDBCustomNodeDisk");
+        }
+
+        /// <summary>
+        /// 该接口（ResizeDBCustomNodeDisk）用于调整 DB Custom 节点磁盘容量。
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDBCustomNodeDiskRequest"/></param>
+        /// <returns><see cref="ResizeDBCustomNodeDiskResponse"/></returns>
+        public ResizeDBCustomNodeDiskResponse ResizeDBCustomNodeDiskSync(ResizeDBCustomNodeDiskRequest req)
+        {
+            return InternalRequestAsync<ResizeDBCustomNodeDiskResponse>(req, "ResizeDBCustomNodeDisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（StartDBCustomNodes）用于开机 DB Custom 节点。
+        /// </summary>
+        /// <param name="req"><see cref="StartDBCustomNodesRequest"/></param>
+        /// <returns><see cref="StartDBCustomNodesResponse"/></returns>
+        public Task<StartDBCustomNodesResponse> StartDBCustomNodes(StartDBCustomNodesRequest req)
+        {
+            return InternalRequestAsync<StartDBCustomNodesResponse>(req, "StartDBCustomNodes");
+        }
+
+        /// <summary>
+        /// 该接口（StartDBCustomNodes）用于开机 DB Custom 节点。
+        /// </summary>
+        /// <param name="req"><see cref="StartDBCustomNodesRequest"/></param>
+        /// <returns><see cref="StartDBCustomNodesResponse"/></returns>
+        public StartDBCustomNodesResponse StartDBCustomNodesSync(StartDBCustomNodesRequest req)
+        {
+            return InternalRequestAsync<StartDBCustomNodesResponse>(req, "StartDBCustomNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（StopDBCustomNodes）用于关机 DB Custom 节点。
+        /// </summary>
+        /// <param name="req"><see cref="StopDBCustomNodesRequest"/></param>
+        /// <returns><see cref="StopDBCustomNodesResponse"/></returns>
+        public Task<StopDBCustomNodesResponse> StopDBCustomNodes(StopDBCustomNodesRequest req)
+        {
+            return InternalRequestAsync<StopDBCustomNodesResponse>(req, "StopDBCustomNodes");
+        }
+
+        /// <summary>
+        /// 该接口（StopDBCustomNodes）用于关机 DB Custom 节点。
+        /// </summary>
+        /// <param name="req"><see cref="StopDBCustomNodesRequest"/></param>
+        /// <returns><see cref="StopDBCustomNodesResponse"/></returns>
+        public StopDBCustomNodesResponse StopDBCustomNodesSync(StopDBCustomNodesRequest req)
+        {
+            return InternalRequestAsync<StopDBCustomNodesResponse>(req, "StopDBCustomNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

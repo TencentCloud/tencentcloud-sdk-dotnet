@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1527";
+       private const string sdkVersion = "SDK_NET_3.0.1529";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,27 @@ namespace TencentCloud.Goosefs.V20220519
         }
 
         /// <summary>
+        /// 创建用户配额
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserQuotaRequest"/></param>
+        /// <returns><see cref="CreateUserQuotaResponse"/></returns>
+        public Task<CreateUserQuotaResponse> CreateUserQuota(CreateUserQuotaRequest req)
+        {
+            return InternalRequestAsync<CreateUserQuotaResponse>(req, "CreateUserQuota");
+        }
+
+        /// <summary>
+        /// 创建用户配额
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserQuotaRequest"/></param>
+        /// <returns><see cref="CreateUserQuotaResponse"/></returns>
+        public CreateUserQuotaResponse CreateUserQuotaSync(CreateUserQuotaRequest req)
+        {
+            return InternalRequestAsync<CreateUserQuotaResponse>(req, "CreateUserQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 为客户端节点删除跨vpc子网访问能力
         /// </summary>
         /// <param name="req"><see cref="DeleteCrossVpcSubnetSupportForClientNodeRequest"/></param>
@@ -428,6 +449,27 @@ namespace TencentCloud.Goosefs.V20220519
         public DeletePolicyRuleResponse DeletePolicyRuleSync(DeletePolicyRuleRequest req)
         {
             return InternalRequestAsync<DeletePolicyRuleResponse>(req, "DeletePolicyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户配额
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserQuotaRequest"/></param>
+        /// <returns><see cref="DeleteUserQuotaResponse"/></returns>
+        public Task<DeleteUserQuotaResponse> DeleteUserQuota(DeleteUserQuotaRequest req)
+        {
+            return InternalRequestAsync<DeleteUserQuotaResponse>(req, "DeleteUserQuota");
+        }
+
+        /// <summary>
+        /// 删除用户配额
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserQuotaRequest"/></param>
+        /// <returns><see cref="DeleteUserQuotaResponse"/></returns>
+        public DeleteUserQuotaResponse DeleteUserQuotaSync(DeleteUserQuotaRequest req)
+        {
+            return InternalRequestAsync<DeleteUserQuotaResponse>(req, "DeleteUserQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -701,6 +743,27 @@ namespace TencentCloud.Goosefs.V20220519
         public DescribePolicyRuleExecuteRecordResponse DescribePolicyRuleExecuteRecordSync(DescribePolicyRuleExecuteRecordRequest req)
         {
             return InternalRequestAsync<DescribePolicyRuleExecuteRecordResponse>(req, "DescribePolicyRuleExecuteRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaResponse"/></returns>
+        public Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeUserQuotaResponse>(req, "DescribeUserQuota");
+        }
+
+        /// <summary>
+        /// 查询用户配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaResponse"/></returns>
+        public DescribeUserQuotaResponse DescribeUserQuotaSync(DescribeUserQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeUserQuotaResponse>(req, "DescribeUserQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -995,6 +1058,27 @@ namespace TencentCloud.Goosefs.V20220519
         public UpdateLoadTaskPriorityResponse UpdateLoadTaskPrioritySync(UpdateLoadTaskPriorityRequest req)
         {
             return InternalRequestAsync<UpdateLoadTaskPriorityResponse>(req, "UpdateLoadTaskPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户配额
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserQuotaRequest"/></param>
+        /// <returns><see cref="UpdateUserQuotaResponse"/></returns>
+        public Task<UpdateUserQuotaResponse> UpdateUserQuota(UpdateUserQuotaRequest req)
+        {
+            return InternalRequestAsync<UpdateUserQuotaResponse>(req, "UpdateUserQuota");
+        }
+
+        /// <summary>
+        /// 修改用户配额
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserQuotaRequest"/></param>
+        /// <returns><see cref="UpdateUserQuotaResponse"/></returns>
+        public UpdateUserQuotaResponse UpdateUserQuotaSync(UpdateUserQuotaRequest req)
+        {
+            return InternalRequestAsync<UpdateUserQuotaResponse>(req, "UpdateUserQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
