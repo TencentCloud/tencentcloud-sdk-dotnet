@@ -68,6 +68,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }
 
+        /// <summary>
+        /// 大模型后处理结果
+        /// </summary>
+        [JsonProperty("LlmResults")]
+        public LlmResult[] LlmResults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
             this.SetParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+            this.SetParamArrayObj(map, prefix + "LlmResults.", this.LlmResults);
         }
     }
 }

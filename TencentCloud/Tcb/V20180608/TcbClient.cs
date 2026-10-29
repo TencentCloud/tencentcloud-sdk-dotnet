@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1528";
+       private const string sdkVersion = "SDK_NET_3.0.1530";
 
         /// <summary>
         /// Client constructor.
@@ -2115,6 +2115,29 @@ namespace TencentCloud.Tcb.V20180608
         public DownloadFunctionResponse DownloadFunctionSync(DownloadFunctionRequest req)
         {
             return InternalRequestAsync<DownloadFunctionResponse>(req, "DownloadFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 当前环境下开启 Postgresql 数据库文档插件能力，开启后会在指定  EnvId 的 PostgreSQL 实例下自动生成  pgdoc schema 以提供文档能力，不会额外产生费用，可以云开发控制或云 API 开启使用。
+        /// 当前支持地域已环境开通时所在地域为准。
+        /// </summary>
+        /// <param name="req"><see cref="EnablePGDocumentExtRequest"/></param>
+        /// <returns><see cref="EnablePGDocumentExtResponse"/></returns>
+        public Task<EnablePGDocumentExtResponse> EnablePGDocumentExt(EnablePGDocumentExtRequest req)
+        {
+            return InternalRequestAsync<EnablePGDocumentExtResponse>(req, "EnablePGDocumentExt");
+        }
+
+        /// <summary>
+        /// 当前环境下开启 Postgresql 数据库文档插件能力，开启后会在指定  EnvId 的 PostgreSQL 实例下自动生成  pgdoc schema 以提供文档能力，不会额外产生费用，可以云开发控制或云 API 开启使用。
+        /// 当前支持地域已环境开通时所在地域为准。
+        /// </summary>
+        /// <param name="req"><see cref="EnablePGDocumentExtRequest"/></param>
+        /// <returns><see cref="EnablePGDocumentExtResponse"/></returns>
+        public EnablePGDocumentExtResponse EnablePGDocumentExtSync(EnablePGDocumentExtRequest req)
+        {
+            return InternalRequestAsync<EnablePGDocumentExtResponse>(req, "EnablePGDocumentExt")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
