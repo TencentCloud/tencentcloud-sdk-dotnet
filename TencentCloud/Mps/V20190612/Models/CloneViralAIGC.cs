@@ -48,6 +48,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ModelTier")]
         public string ModelTier{ get; set; }
 
+        /// <summary>
+        /// <p>深度估计结果是否含音频， 默认不含</p>
+        /// </summary>
+        [JsonProperty("DepthWithAudio")]
+        public bool? DepthWithAudio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "ModelTier", this.ModelTier);
+            this.SetParamSimple(map, prefix + "DepthWithAudio", this.DepthWithAudio);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+        /// <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
         /// </summary>
         [JsonProperty("InputModalities")]
         public string[] InputModalities{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("NewModelAlias")]
         public string NewModelAlias{ get; set; }
 
+        /// <summary>
+        /// <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
+        /// </summary>
+        [JsonProperty("UpstreamRollout")]
+        public UpstreamRolloutOperation UpstreamRollout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "InputModalities.", this.InputModalities);
             this.SetParamSimple(map, prefix + "NewModelName", this.NewModelName);
             this.SetParamSimple(map, prefix + "NewModelAlias", this.NewModelAlias);
+            this.SetParamObj(map, prefix + "UpstreamRollout.", this.UpstreamRollout);
         }
     }
 }

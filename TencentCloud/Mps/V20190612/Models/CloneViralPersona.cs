@@ -48,6 +48,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("BodyType")]
         public string BodyType{ get; set; }
 
+        /// <summary>
+        /// <p>人物图片</p>
+        /// </summary>
+        [JsonProperty("Images")]
+        public string[] Images{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamSimple(map, prefix + "Ethnicity", this.Ethnicity);
             this.SetParamSimple(map, prefix + "BodyType", this.BodyType);
+            this.SetParamArraySimple(map, prefix + "Images.", this.Images);
         }
     }
 }

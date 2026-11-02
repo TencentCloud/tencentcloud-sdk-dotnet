@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1529";
+       private const string sdkVersion = "SDK_NET_3.0.1531";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Adp.V20260520
         public CreateReleaseResponse CreateReleaseSync(CreateReleaseRequest req)
         {
             return InternalRequestAsync<CreateReleaseResponse>(req, "CreateRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 SSE Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSETokenRequest"/></param>
+        /// <returns><see cref="CreateSSETokenResponse"/></returns>
+        public Task<CreateSSETokenResponse> CreateSSEToken(CreateSSETokenRequest req)
+        {
+            return InternalRequestAsync<CreateSSETokenResponse>(req, "CreateSSEToken");
+        }
+
+        /// <summary>
+        /// 创建 SSE Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSETokenRequest"/></param>
+        /// <returns><see cref="CreateSSETokenResponse"/></returns>
+        public CreateSSETokenResponse CreateSSETokenSync(CreateSSETokenRequest req)
+        {
+            return InternalRequestAsync<CreateSSETokenResponse>(req, "CreateSSEToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

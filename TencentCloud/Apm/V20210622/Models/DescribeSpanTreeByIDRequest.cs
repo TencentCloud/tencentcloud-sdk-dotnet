@@ -78,6 +78,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("EnableResourceLink")]
         public bool? EnableResourceLink{ get; set; }
 
+        /// <summary>
+        /// <p>字符串数组，tagstag里面的key</p>
+        /// </summary>
+        [JsonProperty("FilterTagKeys")]
+        public string[] FilterTagKeys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "FocusSpanId", this.FocusSpanId);
             this.SetParamArraySimple(map, prefix + "FilterViewTagKeyList.", this.FilterViewTagKeyList);
             this.SetParamSimple(map, prefix + "EnableResourceLink", this.EnableResourceLink);
+            this.SetParamArraySimple(map, prefix + "FilterTagKeys.", this.FilterTagKeys);
         }
     }
 }

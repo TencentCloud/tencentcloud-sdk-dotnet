@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
+        /// <summary>
+        /// <p>是否有视频输入</p>
+        /// </summary>
+        [JsonProperty("HasInputVideo")]
+        public bool? HasInputVideo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "InputTokensAbove", this.InputTokensAbove);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "HasInputVideo", this.HasInputVideo);
         }
     }
 }

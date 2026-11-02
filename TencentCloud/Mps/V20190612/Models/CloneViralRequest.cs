@@ -31,6 +31,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string VideoUrl{ get; set; }
 
         /// <summary>
+        /// <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
         /// <p>产品信息。除深度提取外，其他模式必填</p>
         /// </summary>
         [JsonProperty("Product")]
@@ -60,6 +66,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Output")]
         public CloneViralOutputOption Output{ get; set; }
 
+        /// <summary>
+        /// <p>其他参考素材（如背景、服装）</p>
+        /// </summary>
+        [JsonProperty("Reference")]
+        public CloneViralReference Reference{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,11 +79,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamObj(map, prefix + "Product.", this.Product);
             this.SetParamObj(map, prefix + "AIGCParam.", this.AIGCParam);
             this.SetParamObj(map, prefix + "ContentParam.", this.ContentParam);
             this.SetParamObj(map, prefix + "Persona.", this.Persona);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamObj(map, prefix + "Reference.", this.Reference);
         }
     }
 }
