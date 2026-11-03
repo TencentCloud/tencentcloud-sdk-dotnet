@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5926007E-BC61-30BC-96D2-7B18B8113F0A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1528</VersionPrefix>
+    <VersionPrefix>3.0.1532</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -165,6 +165,9 @@
     <Compile Include="V20230418\Models\CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy.cs" />
     <Compile Include="V20230418\Models\CompareCloudNativeAPIGatewayMCPToolVersionRequest.cs" />
     <Compile Include="V20230418\Models\CompareCloudNativeAPIGatewayMCPToolVersionResponse.cs" />
+    <Compile Include="V20230418\Models\CreateAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20230418\Models\CreateAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20230418\Models\CreateAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayAIServiceSourceRequest.cs" />
     <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayAIServiceSourceResponse.cs" />
     <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayConsumerGroupRequest.cs" />
@@ -183,13 +186,50 @@
     <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewayMCPToolResponse.cs" />
     <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewaySecretKeyRequest.cs" />
     <Compile Include="V20230418\Models\CreateCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest.cs" />
+    <Compile Include="V20230418\Models\CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailAuthConfig.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailAuthConfigInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailAuthConfigPatch.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailBehaviorConfig.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailBehaviorConfigInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailBehaviorConfigPatch.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailBindableResource.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailCapabilityLimits.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailDecisionConfig.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailDecisionConfigInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailDecisionConfigPatch.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailFieldMapping.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailFieldMappingInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailFieldMappingPatch.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailFilterConfig.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailFilterConfigInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailFilterConfigPatch.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailHit.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailHitFilter.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailPolicy.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailPolicyBinding.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailPolicyFilter.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailResourceRef.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailResourceRefInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailScope.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailScopeInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailServiceConfig.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailServiceConfigInput.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailServiceConfigPatch.cs" />
+    <Compile Include="V20230418\Models\CustomGuardrailSyncFailure.cs" />
     <Compile Include="V20230418\Models\DefaultKongRoute.cs" />
+    <Compile Include="V20230418\Models\DeleteAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayAIServiceSourceRequest.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayAIServiceSourceResponse.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerGroupRequest.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerGroupResponse.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerRequest.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayIPRestrictionRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayIPRestrictionResponse.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayLLMModelServiceRequest.cs" />
@@ -204,6 +244,21 @@
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewayMCPToolVersionResponse.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewaySecretKeyRequest.cs" />
     <Compile Include="V20230418\Models\DeleteCloudNativeAPIGatewaySecretKeyResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailBindableResourcesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailBindableResourcesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailBindableResourcesResult.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailCapabilitiesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailCapabilitiesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailCapabilitiesResult.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailHitsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailHitsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailHitsResult.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyListRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyListResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyListResult.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20230418\Models\DescribeCNGWServicesWithRoutesRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCNGWServicesWithRoutesResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayAIQuotaListRequest.cs" />
@@ -216,6 +271,8 @@
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerGroupResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayConsumerResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayIPRestrictionRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayIPRestrictionResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelAPIRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelAPIResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayLLMModelAPIsRequest.cs" />
@@ -258,6 +315,10 @@
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyValueRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewaySecretKeyValueResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeKongIpRestrictionResult.cs" />
+    <Compile Include="V20230418\Models\ExportAIGWCustomGuardrailHitsRequest.cs" />
+    <Compile Include="V20230418\Models\ExportAIGWCustomGuardrailHitsResponse.cs" />
+    <Compile Include="V20230418\Models\ExportAIGWCustomGuardrailHitsResult.cs" />
     <Compile Include="V20230418\Models\Filter.cs" />
     <Compile Include="V20230418\Models\KVMapping.cs" />
     <Compile Include="V20230418\Models\KeyValue.cs" />
@@ -270,6 +331,9 @@
     <Compile Include="V20230418\Models\ListCloudNativeAPIGatewayLLMModelAPI.cs" />
     <Compile Include="V20230418\Models\ListCloudNativeAPIGatewayLLMModelService.cs" />
     <Compile Include="V20230418\Models\ListFilter.cs" />
+    <Compile Include="V20230418\Models\ModifyAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayAIServiceSourceRequest.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayAIServiceSourceResponse.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerGroupRequest.cs" />

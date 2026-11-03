@@ -25,52 +25,58 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("CustomerId")]
         public long? CustomerId{ get; set; }
 
         /// <summary>
-        /// ip种子数组
+        /// <p>ip种子数组</p>
         /// </summary>
         [JsonProperty("Ips")]
         public string[] Ips{ get; set; }
 
         /// <summary>
-        /// icon种子数组
+        /// <p>icon种子数组</p>
         /// </summary>
         [JsonProperty("Icons")]
         public string[] Icons{ get; set; }
 
         /// <summary>
-        /// 主域名种子数组
+        /// <p>主域名种子数组</p>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// title种子数组
+        /// <p>title种子数组</p>
         /// </summary>
         [JsonProperty("Titles")]
         public string[] Titles{ get; set; }
 
         /// <summary>
-        /// 子域名种子数组
+        /// <p>子域名种子数组</p>
         /// </summary>
         [JsonProperty("SubDomains")]
         public string[] SubDomains{ get; set; }
 
         /// <summary>
-        /// 关键词种子数组
+        /// <p>关键词种子数组</p>
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 母公司种子数组
+        /// <p>母公司种子数组</p>
         /// </summary>
         [JsonProperty("ParentCompanies")]
         public string[] ParentCompanies{ get; set; }
+
+        /// <summary>
+        /// <p>关键词用途：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号，不填=全部用途</p>
+        /// </summary>
+        [JsonProperty("KeywordPurposes")]
+        public string[] KeywordPurposes{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamArraySimple(map, prefix + "SubDomains.", this.SubDomains);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamArraySimple(map, prefix + "ParentCompanies.", this.ParentCompanies);
+            this.SetParamArraySimple(map, prefix + "KeywordPurposes.", this.KeywordPurposes);
         }
     }
 }

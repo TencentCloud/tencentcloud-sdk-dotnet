@@ -90,6 +90,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("LayerCreateTime")]
         public string LayerCreateTime{ get; set; }
 
+        /// <summary>
+        /// <p>敏感文件数</p>
+        /// </summary>
+        [JsonProperty("SecretFileCnt")]
+        public ulong? SecretFileCnt{ get; set; }
+
+        /// <summary>
+        /// <p>构建风险数</p>
+        /// </summary>
+        [JsonProperty("BuildRiskCnt")]
+        public ulong? BuildRiskCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "VirusCnt", this.VirusCnt);
             this.SetParamSimple(map, prefix + "SensitiveCnt", this.SensitiveCnt);
             this.SetParamSimple(map, prefix + "LayerCreateTime", this.LayerCreateTime);
+            this.SetParamSimple(map, prefix + "SecretFileCnt", this.SecretFileCnt);
+            this.SetParamSimple(map, prefix + "BuildRiskCnt", this.BuildRiskCnt);
         }
     }
 }

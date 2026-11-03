@@ -91,6 +91,42 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? TrialQuota{ get; set; }
 
         /// <summary>
+        /// <p>有风险的镜像数</p>
+        /// </summary>
+        [JsonProperty("RiskImageCnt")]
+        public ulong? RiskImageCnt{ get; set; }
+
+        /// <summary>
+        /// <p>CICD镜像数</p>
+        /// </summary>
+        [JsonProperty("CICDImageCnt")]
+        public ulong? CICDImageCnt{ get; set; }
+
+        /// <summary>
+        /// <p>CICD已扫描镜数</p>
+        /// </summary>
+        [JsonProperty("CICDImageScannedCnt")]
+        public ulong? CICDImageScannedCnt{ get; set; }
+
+        /// <summary>
+        /// <p>有风险的CICD镜像数</p>
+        /// </summary>
+        [JsonProperty("RiskCICDImageCnt")]
+        public ulong? RiskCICDImageCnt{ get; set; }
+
+        /// <summary>
+        /// <p>敏感文件数</p>
+        /// </summary>
+        [JsonProperty("SecretFileCnt")]
+        public ulong? SecretFileCnt{ get; set; }
+
+        /// <summary>
+        /// <p>构建风险数</p>
+        /// </summary>
+        [JsonProperty("BuildRiskCnt")]
+        public ulong? BuildRiskCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +149,12 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "UsedQuota", this.UsedQuota);
             this.SetParamSimple(map, prefix + "RemainingQuota", this.RemainingQuota);
             this.SetParamSimple(map, prefix + "TrialQuota", this.TrialQuota);
+            this.SetParamSimple(map, prefix + "RiskImageCnt", this.RiskImageCnt);
+            this.SetParamSimple(map, prefix + "CICDImageCnt", this.CICDImageCnt);
+            this.SetParamSimple(map, prefix + "CICDImageScannedCnt", this.CICDImageScannedCnt);
+            this.SetParamSimple(map, prefix + "RiskCICDImageCnt", this.RiskCICDImageCnt);
+            this.SetParamSimple(map, prefix + "SecretFileCnt", this.SecretFileCnt);
+            this.SetParamSimple(map, prefix + "BuildRiskCnt", this.BuildRiskCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -72,6 +72,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
+        /// <summary>
+        /// <p>影响仓库镜像数</p>
+        /// </summary>
+        [JsonProperty("AffectedRegistryImageCount")]
+        public ulong? AffectedRegistryImageCount{ get; set; }
+
+        /// <summary>
+        /// <p>影响CICD镜像数</p>
+        /// </summary>
+        [JsonProperty("AffectedCICDImageCount")]
+        public ulong? AffectedCICDImageCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AffectImageCount", this.AffectImageCount);
             this.SetParamObj(map, prefix + "VulInfo.", this.VulInfo);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "AffectedRegistryImageCount", this.AffectedRegistryImageCount);
+            this.SetParamSimple(map, prefix + "AffectedCICDImageCount", this.AffectedCICDImageCount);
         }
     }
 }

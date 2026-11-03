@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AlertId{ get; set; }
 
         /// <summary>
-        /// <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
+        /// <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
         /// </summary>
         [JsonProperty("AlertCategory")]
         public string AlertCategory{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ContainerId{ get; set; }
 
         /// <summary>
-        /// <p>集群ID（保留字段，恒为空串）</p>
+        /// <p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
+        /// <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }

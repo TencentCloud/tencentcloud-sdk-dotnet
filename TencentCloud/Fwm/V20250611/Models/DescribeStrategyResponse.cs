@@ -25,7 +25,7 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 策略详情
+        /// <p>策略详情</p>
         /// </summary>
         [JsonProperty("Strategy")]
         public StrategyResp Strategy{ get; set; }

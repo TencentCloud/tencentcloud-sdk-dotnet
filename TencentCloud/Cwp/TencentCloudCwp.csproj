@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1522</VersionPrefix>
+    <VersionPrefix>3.0.1532</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1224,6 +1224,7 @@
     <Compile Include="V20180228\Models\ProtectMachine.cs" />
     <Compile Include="V20180228\Models\ProtectMachineInfo.cs" />
     <Compile Include="V20180228\Models\ProtectStat.cs" />
+    <Compile Include="V20180228\Models\QuaraTypeDictItem.cs" />
     <Compile Include="V20180228\Models\RansomDefenseBackup.cs" />
     <Compile Include="V20180228\Models\RansomDefenseEvent.cs" />
     <Compile Include="V20180228\Models\RansomDefenseRollbackRequest.cs" />

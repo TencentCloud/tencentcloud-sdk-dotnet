@@ -282,6 +282,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TagModifyInfo")]
         public AssetTagModifyAssetItem TagModifyInfo{ get; set; }
 
+        /// <summary>
+        /// <p>集群普通节点数</p>
+        /// </summary>
+        [JsonProperty("NormalNodeCount")]
+        public ulong? NormalNodeCount{ get; set; }
+
+        /// <summary>
+        /// <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
+        /// </summary>
+        [JsonProperty("AuditLogFailedInfo")]
+        public string AuditLogFailedInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -329,6 +341,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "UnboundUltimateNodeCount", this.UnboundUltimateNodeCount);
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
             this.SetParamObj(map, prefix + "TagModifyInfo.", this.TagModifyInfo);
+            this.SetParamSimple(map, prefix + "NormalNodeCount", this.NormalNodeCount);
+            this.SetParamSimple(map, prefix + "AuditLogFailedInfo", this.AuditLogFailedInfo);
         }
     }
 }

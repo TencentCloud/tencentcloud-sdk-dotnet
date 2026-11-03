@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1474";
+       private const string sdkVersion = "SDK_NET_3.0.1532";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ssl.V20191205
         public ApplyCertificateResponse ApplyCertificateSync(ApplyCertificateRequest req)
         {
             return InternalRequestAsync<ApplyCertificateResponse>(req, "ApplyCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除CSR
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteCSRRequest"/></param>
+        /// <returns><see cref="BatchDeleteCSRResponse"/></returns>
+        public Task<BatchDeleteCSRResponse> BatchDeleteCSR(BatchDeleteCSRRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteCSRResponse>(req, "BatchDeleteCSR");
+        }
+
+        /// <summary>
+        /// 批量删除CSR
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteCSRRequest"/></param>
+        /// <returns><see cref="BatchDeleteCSRResponse"/></returns>
+        public BatchDeleteCSRResponse BatchDeleteCSRSync(BatchDeleteCSRRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteCSRResponse>(req, "BatchDeleteCSR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -260,6 +281,27 @@ namespace TencentCloud.Ssl.V20191205
         public CompleteCertificateResponse CompleteCertificateSync(CompleteCertificateRequest req)
         {
             return InternalRequestAsync<CompleteCertificateResponse>(req, "CompleteCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建CSR
+        /// </summary>
+        /// <param name="req"><see cref="CreateCSRRequest"/></param>
+        /// <returns><see cref="CreateCSRResponse"/></returns>
+        public Task<CreateCSRResponse> CreateCSR(CreateCSRRequest req)
+        {
+            return InternalRequestAsync<CreateCSRResponse>(req, "CreateCSR");
+        }
+
+        /// <summary>
+        /// 创建CSR
+        /// </summary>
+        /// <param name="req"><see cref="CreateCSRRequest"/></param>
+        /// <returns><see cref="CreateCSRResponse"/></returns>
+        public CreateCSRResponse CreateCSRSync(CreateCSRRequest req)
+        {
+            return InternalRequestAsync<CreateCSRResponse>(req, "CreateCSR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -463,6 +505,48 @@ namespace TencentCloud.Ssl.V20191205
         public DeployCertificateRecordRollbackResponse DeployCertificateRecordRollbackSync(DeployCertificateRecordRollbackRequest req)
         {
             return InternalRequestAsync<DeployCertificateRecordRollbackResponse>(req, "DeployCertificateRecordRollback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询CSR详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRRequest"/></param>
+        /// <returns><see cref="DescribeCSRResponse"/></returns>
+        public Task<DescribeCSRResponse> DescribeCSR(DescribeCSRRequest req)
+        {
+            return InternalRequestAsync<DescribeCSRResponse>(req, "DescribeCSR");
+        }
+
+        /// <summary>
+        /// 查询CSR详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRRequest"/></param>
+        /// <returns><see cref="DescribeCSRResponse"/></returns>
+        public DescribeCSRResponse DescribeCSRSync(DescribeCSRRequest req)
+        {
+            return InternalRequestAsync<DescribeCSRResponse>(req, "DescribeCSR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询CSR列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRSetRequest"/></param>
+        /// <returns><see cref="DescribeCSRSetResponse"/></returns>
+        public Task<DescribeCSRSetResponse> DescribeCSRSet(DescribeCSRSetRequest req)
+        {
+            return InternalRequestAsync<DescribeCSRSetResponse>(req, "DescribeCSRSet");
+        }
+
+        /// <summary>
+        /// 查询CSR列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRSetRequest"/></param>
+        /// <returns><see cref="DescribeCSRSetResponse"/></returns>
+        public DescribeCSRSetResponse DescribeCSRSetSync(DescribeCSRSetRequest req)
+        {
+            return InternalRequestAsync<DescribeCSRSetResponse>(req, "DescribeCSRSet")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1114,6 +1198,27 @@ namespace TencentCloud.Ssl.V20191205
         public DownloadCertificateResponse DownloadCertificateSync(DownloadCertificateRequest req)
         {
             return InternalRequestAsync<DownloadCertificateResponse>(req, "DownloadCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改CSR信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCSRRequest"/></param>
+        /// <returns><see cref="ModifyCSRResponse"/></returns>
+        public Task<ModifyCSRResponse> ModifyCSR(ModifyCSRRequest req)
+        {
+            return InternalRequestAsync<ModifyCSRResponse>(req, "ModifyCSR");
+        }
+
+        /// <summary>
+        /// 修改CSR信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCSRRequest"/></param>
+        /// <returns><see cref="ModifyCSRResponse"/></returns>
+        public ModifyCSRResponse ModifyCSRSync(ModifyCSRRequest req)
+        {
+            return InternalRequestAsync<ModifyCSRResponse>(req, "ModifyCSR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

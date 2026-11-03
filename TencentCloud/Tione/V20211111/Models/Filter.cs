@@ -25,25 +25,25 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 过滤字段名称
+        /// <p>过滤字段名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 过滤字段取值
+        /// <p>过滤字段取值</p>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// 是否开启反向查询
+        /// <p>是否开启反向查询</p>
         /// </summary>
         [JsonProperty("Negative")]
         public bool? Negative{ get; set; }
 
         /// <summary>
-        /// 是否开启模糊匹配
+        /// <p>是否开启模糊匹配</p>
         /// </summary>
         [JsonProperty("Fuzzy")]
         public bool? Fuzzy{ get; set; }

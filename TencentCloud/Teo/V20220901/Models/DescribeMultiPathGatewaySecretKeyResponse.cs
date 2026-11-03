@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 接入密钥。
+        /// <p>接入密钥。</p>
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

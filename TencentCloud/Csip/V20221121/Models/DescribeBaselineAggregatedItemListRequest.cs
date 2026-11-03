@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// <p>通用过滤条件。支持的 Name：ResultStatus（结果状态 PASS/NOT_PASS/CHECKING/CHECK_FAILED/NOT_INVOLVED）、Name（检测项名称，模糊搜索）、RiskLevel（风险等级 CRITICAL/HIGH/MEDIUM/LOW）、PolicyName（所属基线/策略名称，模糊搜索）。</p>
+        /// <p>通用过滤条件。支持的 Name：<br>ResultStatus（结果状态 PASS/NOT_PASS/CHECKING/CHECK_FAILED/NOT_INVOLVED）<br>Name（检测项名称，模糊搜索）<br>RiskLevel（风险等级 CRITICAL/HIGH/MEDIUM/LOW）<br>ClusterCaMD5（集群CaMD5，精准搜索）<br>ClusterId（集群Id，精准搜索）</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

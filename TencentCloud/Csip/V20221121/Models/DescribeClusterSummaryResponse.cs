@@ -215,6 +215,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? UnboundUltimateNodeCount{ get; set; }
 
         /// <summary>
+        /// <p>普通节点总数</p>
+        /// </summary>
+        [JsonProperty("NormalNodeCount")]
+        public ulong? NormalNodeCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -255,6 +261,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CriticalRiskClusterCount", this.CriticalRiskClusterCount);
             this.SetParamSimple(map, prefix + "HighRiskClusterCount", this.HighRiskClusterCount);
             this.SetParamSimple(map, prefix + "UnboundUltimateNodeCount", this.UnboundUltimateNodeCount);
+            this.SetParamSimple(map, prefix + "NormalNodeCount", this.NormalNodeCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

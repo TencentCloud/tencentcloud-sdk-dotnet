@@ -96,6 +96,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("FailType")]
         public long? FailType{ get; set; }
 
+        /// <summary>
+        /// <p>扫描失败原因</p>
+        /// </summary>
+        [JsonProperty("FailReason")]
+        public string FailReason{ get; set; }
+
+        /// <summary>
+        /// <p>扫描失败解决方案</p>
+        /// </summary>
+        [JsonProperty("FailSolution")]
+        public string FailSolution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanTime", this.ScanTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FailType", this.FailType);
+            this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
+            this.SetParamSimple(map, prefix + "FailSolution", this.FailSolution);
         }
     }
 }

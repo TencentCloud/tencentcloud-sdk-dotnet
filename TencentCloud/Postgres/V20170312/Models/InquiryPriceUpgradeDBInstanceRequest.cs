@@ -25,33 +25,32 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例的磁盘大小，单位GB
+        /// <p>实例的磁盘大小，单位GB</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 实例的内存大小，单位GB
+        /// <p>实例的内存大小，单位GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+        /// <p>实例ID，形如postgres-hez4fh0v。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例计费类型。
+        /// <p>实例计费类型。</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         [System.Obsolete]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 实例的Cpu大小，单位Core。
-        /// 不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+        /// <p>实例的Cpu大小，单位Core。<br>不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

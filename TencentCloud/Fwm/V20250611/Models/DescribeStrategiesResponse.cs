@@ -25,13 +25,13 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 策略列表
+        /// <p>策略列表</p>
         /// </summary>
         [JsonProperty("Strategies")]
         public StrategyResp[] Strategies{ get; set; }

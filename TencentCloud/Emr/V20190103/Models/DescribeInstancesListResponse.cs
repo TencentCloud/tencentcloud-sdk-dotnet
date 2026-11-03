@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 符合条件的实例总数。
+        /// <p>符合条件的实例总数。</p>
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// 集群实例列表
+        /// <p>集群实例列表</p>
         /// </summary>
         [JsonProperty("InstancesList")]
         public EmrListInstance[] InstancesList{ get; set; }

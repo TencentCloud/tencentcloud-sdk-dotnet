@@ -25,11 +25,16 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 主机安全模块自动扩容配置
-        /// 补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
+        /// <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
         /// </summary>
         [JsonProperty("HostConfig")]
         public HostAutoScaleConfig HostConfig{ get; set; }
+
+        /// <summary>
+        /// <p>容器安全模块自动扩容配置，不传则不修改</p>
+        /// </summary>
+        [JsonProperty("ContainerConfig")]
+        public ContainerAutoScaleConfig ContainerConfig{ get; set; }
 
 
         /// <summary>
@@ -38,6 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "HostConfig.", this.HostConfig);
+            this.SetParamObj(map, prefix + "ContainerConfig.", this.ContainerConfig);
         }
     }
 }

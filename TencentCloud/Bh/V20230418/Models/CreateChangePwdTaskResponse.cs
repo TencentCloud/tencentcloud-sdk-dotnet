@@ -25,7 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// <p>任务id</p>
         /// </summary>
         [JsonProperty("OperationId")]
         public string OperationId{ get; set; }

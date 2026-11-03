@@ -28,7 +28,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
 
        private const string endpoint = "workbuddyenterprise.tencentcloudapi.com";
        private const string version = "2026-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1528";
+       private const string sdkVersion = "SDK_NET_3.0.1532";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,27 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         }
 
         /// <summary>
+        /// 创建自动化任务。AgentConfig 由上游传入，managed-agent 仅做协议透传。
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledTaskRequest"/></param>
+        /// <returns><see cref="CreateScheduledTaskResponse"/></returns>
+        public Task<CreateScheduledTaskResponse> CreateScheduledTask(CreateScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<CreateScheduledTaskResponse>(req, "CreateScheduledTask");
+        }
+
+        /// <summary>
+        /// 创建自动化任务。AgentConfig 由上游传入，managed-agent 仅做协议透传。
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledTaskRequest"/></param>
+        /// <returns><see cref="CreateScheduledTaskResponse"/></returns>
+        public CreateScheduledTaskResponse CreateScheduledTaskSync(CreateScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<CreateScheduledTaskResponse>(req, "CreateScheduledTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除指定的 Agent 及其所有版本。删除后不可恢复。
         /// </summary>
         /// <param name="req"><see cref="DeleteAgentRequest"/></param>
@@ -176,6 +197,27 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         public DeleteAgentResponse DeleteAgentSync(DeleteAgentRequest req)
         {
             return InternalRequestAsync<DeleteAgentResponse>(req, "DeleteAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指定的自动化任务。删除后不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledTaskRequest"/></param>
+        /// <returns><see cref="DeleteScheduledTaskResponse"/></returns>
+        public Task<DeleteScheduledTaskResponse> DeleteScheduledTask(DeleteScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteScheduledTaskResponse>(req, "DeleteScheduledTask");
+        }
+
+        /// <summary>
+        /// 删除指定的自动化任务。删除后不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledTaskRequest"/></param>
+        /// <returns><see cref="DeleteScheduledTaskResponse"/></returns>
+        public DeleteScheduledTaskResponse DeleteScheduledTaskSync(DeleteScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteScheduledTaskResponse>(req, "DeleteScheduledTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,6 +474,90 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         }
 
         /// <summary>
+        /// 查询单个自动化任务的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskResponse"/></returns>
+        public Task<DescribeScheduledTaskResponse> DescribeScheduledTask(DescribeScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskResponse>(req, "DescribeScheduledTask");
+        }
+
+        /// <summary>
+        /// 查询单个自动化任务的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskResponse"/></returns>
+        public DescribeScheduledTaskResponse DescribeScheduledTaskSync(DescribeScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskResponse>(req, "DescribeScheduledTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询自动化任务列表，支持按任务名称、状态、Agent 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskListRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskListResponse"/></returns>
+        public Task<DescribeScheduledTaskListResponse> DescribeScheduledTaskList(DescribeScheduledTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskListResponse>(req, "DescribeScheduledTaskList");
+        }
+
+        /// <summary>
+        /// 分页查询自动化任务列表，支持按任务名称、状态、Agent 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskListRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskListResponse"/></returns>
+        public DescribeScheduledTaskListResponse DescribeScheduledTaskListSync(DescribeScheduledTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskListResponse>(req, "DescribeScheduledTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询单条自动化任务执行日志的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskLogRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskLogResponse"/></returns>
+        public Task<DescribeScheduledTaskLogResponse> DescribeScheduledTaskLog(DescribeScheduledTaskLogRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskLogResponse>(req, "DescribeScheduledTaskLog");
+        }
+
+        /// <summary>
+        /// 查询单条自动化任务执行日志的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskLogRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskLogResponse"/></returns>
+        public DescribeScheduledTaskLogResponse DescribeScheduledTaskLogSync(DescribeScheduledTaskLogRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskLogResponse>(req, "DescribeScheduledTaskLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询自动化任务执行日志列表，支持状态和时间范围过滤，可选返回聚合统计。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskLogListRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskLogListResponse"/></returns>
+        public Task<DescribeScheduledTaskLogListResponse> DescribeScheduledTaskLogList(DescribeScheduledTaskLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskLogListResponse>(req, "DescribeScheduledTaskLogList");
+        }
+
+        /// <summary>
+        /// 分页查询自动化任务执行日志列表，支持状态和时间范围过滤，可选返回聚合统计。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledTaskLogListRequest"/></param>
+        /// <returns><see cref="DescribeScheduledTaskLogListResponse"/></returns>
+        public DescribeScheduledTaskLogListResponse DescribeScheduledTaskLogListSync(DescribeScheduledTaskLogListRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledTaskLogListResponse>(req, "DescribeScheduledTaskLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 分页查询 Skill 列表，支持关键词、分类、发布状态过滤。
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillListRequest"/></param>
@@ -575,6 +701,48 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         public ModifyAgentVersionResponse ModifyAgentVersionSync(ModifyAgentVersionRequest req)
         {
             return InternalRequestAsync<ModifyAgentVersionResponse>(req, "ModifyAgentVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 部分更新自动化任务配置（Patch 语义：仅传递需要更新的字段），支持启停状态切换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledTaskRequest"/></param>
+        /// <returns><see cref="ModifyScheduledTaskResponse"/></returns>
+        public Task<ModifyScheduledTaskResponse> ModifyScheduledTask(ModifyScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyScheduledTaskResponse>(req, "ModifyScheduledTask");
+        }
+
+        /// <summary>
+        /// 部分更新自动化任务配置（Patch 语义：仅传递需要更新的字段），支持启停状态切换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledTaskRequest"/></param>
+        /// <returns><see cref="ModifyScheduledTaskResponse"/></returns>
+        public ModifyScheduledTaskResponse ModifyScheduledTaskSync(ModifyScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyScheduledTaskResponse>(req, "ModifyScheduledTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 手动触发一次自动化任务执行，返回执行日志 ID。
+        /// </summary>
+        /// <param name="req"><see cref="TriggerScheduledTaskRequest"/></param>
+        /// <returns><see cref="TriggerScheduledTaskResponse"/></returns>
+        public Task<TriggerScheduledTaskResponse> TriggerScheduledTask(TriggerScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<TriggerScheduledTaskResponse>(req, "TriggerScheduledTask");
+        }
+
+        /// <summary>
+        /// 手动触发一次自动化任务执行，返回执行日志 ID。
+        /// </summary>
+        /// <param name="req"><see cref="TriggerScheduledTaskRequest"/></param>
+        /// <returns><see cref="TriggerScheduledTaskResponse"/></returns>
+        public TriggerScheduledTaskResponse TriggerScheduledTaskSync(TriggerScheduledTaskRequest req)
+        {
+            return InternalRequestAsync<TriggerScheduledTaskResponse>(req, "TriggerScheduledTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 存储位置详情列表
+        /// 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
         /// </summary>
         [JsonProperty("Locations")]
         public LocationInfo[] Locations{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
+        /// <summary>
+        /// 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
+        /// </summary>
+        [JsonProperty("Items")]
+        public ListLocationItem[] Items{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamArrayObj(map, prefix + "Locations.", this.Locations);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
         }
     }
 }

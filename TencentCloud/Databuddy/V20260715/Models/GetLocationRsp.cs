@@ -30,6 +30,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("Location")]
         public LocationInfo Location{ get; set; }
 
+        /// <summary>
+        /// COS 文件事件订阅明细（未订阅时为空）
+        /// </summary>
+        [JsonProperty("FileEventSubscription")]
+        public CosEventSubscription FileEventSubscription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Location.", this.Location);
+            this.SetParamObj(map, prefix + "FileEventSubscription.", this.FileEventSubscription);
         }
     }
 }

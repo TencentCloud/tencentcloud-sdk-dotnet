@@ -276,6 +276,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("MaxCapacityLimitEnabled")]
         public bool? MaxCapacityLimitEnabled{ get; set; }
 
+        /// <summary>
+        /// <p>维护窗口</p>
+        /// </summary>
+        [JsonProperty("MaintenanceWindow")]
+        public MaintenanceWindow[] MaintenanceWindow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +330,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "IsMainRegion", this.IsMainRegion);
             this.SetParamSimple(map, prefix + "MutationEnabled", this.MutationEnabled);
             this.SetParamSimple(map, prefix + "MaxCapacityLimitEnabled", this.MaxCapacityLimitEnabled);
+            this.SetParamArrayObj(map, prefix + "MaintenanceWindow.", this.MaintenanceWindow);
         }
     }
 }

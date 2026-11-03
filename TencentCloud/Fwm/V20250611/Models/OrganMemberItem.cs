@@ -115,6 +115,13 @@ namespace TencentCloud.Fwm.V20250611.Models
         public string CfwSharerAppId{ get; set; }
 
         /// <summary>
+        /// <p>共享者MemberId</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CfwSharerMemberId")]
+        public string CfwSharerMemberId{ get; set; }
+
+        /// <summary>
         /// <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -165,6 +172,12 @@ namespace TencentCloud.Fwm.V20250611.Models
         [JsonProperty("IsCfwPostPay")]
         public long? IsCfwPostPay{ get; set; }
 
+        /// <summary>
+        /// <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
+        /// </summary>
+        [JsonProperty("SgFreeClaimed")]
+        public long? SgFreeClaimed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +197,7 @@ namespace TencentCloud.Fwm.V20250611.Models
             this.SetParamSimple(map, prefix + "CfwShareRole", this.CfwShareRole);
             this.SetParamSimple(map, prefix + "CfwShareRoleDisplay", this.CfwShareRoleDisplay);
             this.SetParamSimple(map, prefix + "CfwSharerAppId", this.CfwSharerAppId);
+            this.SetParamSimple(map, prefix + "CfwSharerMemberId", this.CfwSharerMemberId);
             this.SetParamSimple(map, prefix + "CfwInstanceId", this.CfwInstanceId);
             this.SetParamSimple(map, prefix + "PolicyAnalysisEnabled", this.PolicyAnalysisEnabled);
             this.SetParamSimple(map, prefix + "MemberCreateTime", this.MemberCreateTime);
@@ -192,6 +206,7 @@ namespace TencentCloud.Fwm.V20250611.Models
             this.SetParamSimple(map, prefix + "CfwCapable", this.CfwCapable);
             this.SetParamSimple(map, prefix + "SgManaged", this.SgManaged);
             this.SetParamSimple(map, prefix + "IsCfwPostPay", this.IsCfwPostPay);
+            this.SetParamSimple(map, prefix + "SgFreeClaimed", this.SgFreeClaimed);
         }
     }
 }

@@ -403,6 +403,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CertServiceValidCertificateCount")]
         public long? CertServiceValidCertificateCount{ get; set; }
 
+        /// <summary>
+        /// <p>是否可重新提交。</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("ResubmitAble")]
+        public bool? ResubmitAble{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -472,6 +478,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertServiceEndTime", this.CertServiceEndTime);
             this.SetParamSimple(map, prefix + "CertServiceShareEnabled", this.CertServiceShareEnabled);
             this.SetParamSimple(map, prefix + "CertServiceValidCertificateCount", this.CertServiceValidCertificateCount);
+            this.SetParamSimple(map, prefix + "ResubmitAble", this.ResubmitAble);
         }
     }
 }

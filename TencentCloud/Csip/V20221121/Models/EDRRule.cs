@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+        /// <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
@@ -252,6 +252,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("FileOperationRules")]
         public RuleContentFileOperation FileOperationRules{ get; set; }
 
+        /// <summary>
+        /// <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
+        /// </summary>
+        [JsonProperty("K8sApiRule")]
+        public RuleContentK8sAPI K8sApiRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -296,6 +302,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
             this.SetParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
+            this.SetParamObj(map, prefix + "K8sApiRule.", this.K8sApiRule);
         }
     }
 }

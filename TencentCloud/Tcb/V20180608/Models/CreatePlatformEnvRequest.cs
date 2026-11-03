@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// <p>环境别名</p>
+        /// <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

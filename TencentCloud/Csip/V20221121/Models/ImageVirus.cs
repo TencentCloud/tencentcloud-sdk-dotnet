@@ -156,6 +156,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("VirusType")]
         public string VirusType{ get; set; }
 
+        /// <summary>
+        /// <p>影响镜像数</p>
+        /// </summary>
+        [JsonProperty("AffectedImageCount")]
+        public ulong? AffectedImageCount{ get; set; }
+
+        /// <summary>
+        /// <p>影响仓库镜像数</p>
+        /// </summary>
+        [JsonProperty("AffectedRegistryImageCount")]
+        public ulong? AffectedRegistryImageCount{ get; set; }
+
+        /// <summary>
+        /// <p>影响CICD镜像数</p>
+        /// </summary>
+        [JsonProperty("AffectedCICDImageCount")]
+        public ulong? AffectedCICDImageCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +202,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "VirusType", this.VirusType);
+            this.SetParamSimple(map, prefix + "AffectedImageCount", this.AffectedImageCount);
+            this.SetParamSimple(map, prefix + "AffectedRegistryImageCount", this.AffectedRegistryImageCount);
+            this.SetParamSimple(map, prefix + "AffectedCICDImageCount", this.AffectedCICDImageCount);
         }
     }
 }

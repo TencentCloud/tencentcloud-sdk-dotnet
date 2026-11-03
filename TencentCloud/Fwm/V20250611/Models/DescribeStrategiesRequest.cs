@@ -25,31 +25,31 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 产品类型
+        /// <p>产品类型</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 执行区域：pre是前区，post 是后区
+        /// <p>执行区域：pre是前区，post 是后区</p>
         /// </summary>
         [JsonProperty("ExecArea")]
         public string ExecArea{ get; set; }
 
         /// <summary>
-        /// 筛选条件
+        /// <p>筛选条件</p>
         /// </summary>
         [JsonProperty("Filters")]
         public CommonFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 条数限制
+        /// <p>条数限制</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

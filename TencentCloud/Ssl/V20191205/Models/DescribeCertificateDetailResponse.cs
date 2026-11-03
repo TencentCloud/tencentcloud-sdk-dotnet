@@ -319,6 +319,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? HostingStatus{ get; set; }
 
         /// <summary>
+        /// <p>是否可重新提交。</p>
+        /// </summary>
+        [JsonProperty("ResubmitAble")]
+        public bool? ResubmitAble{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -376,6 +382,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertType", this.CertType);
             this.SetParamSimple(map, prefix + "UseCrossSignRoot", this.UseCrossSignRoot);
             this.SetParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
+            this.SetParamSimple(map, prefix + "ResubmitAble", this.ResubmitAble);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

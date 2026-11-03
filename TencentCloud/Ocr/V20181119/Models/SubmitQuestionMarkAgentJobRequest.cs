@@ -57,7 +57,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableDeepThink{ get; set; }
 
         /// <summary>
-        /// <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；<br>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p>
+        /// <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p>
         /// </summary>
         [JsonProperty("QuestionConfigMap")]
         public string QuestionConfigMap{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AnswerAssistMap{ get; set; }
 
         /// <summary>
-        /// <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启</p>
+        /// <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUrl中,默认为false不开启</p>
         /// </summary>
         [JsonProperty("EnableImageCrop")]
         public bool? EnableImageCrop{ get; set; }

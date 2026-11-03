@@ -85,6 +85,12 @@ namespace TencentCloud.Hai.V20230812.Models
         public HyperParam HyperParam{ get; set; }
 
         /// <summary>
+        /// <p>角色状态</p>
+        /// </summary>
+        [JsonProperty("RoleStatuses")]
+        public RoleStatusInfo[] RoleStatuses{ get; set; }
+
+        /// <summary>
         /// <p>安全类型</p>
         /// </summary>
         [JsonProperty("SecurityType")]
@@ -148,6 +154,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
             this.SetParamObj(map, prefix + "HyperParam.", this.HyperParam);
+            this.SetParamArrayObj(map, prefix + "RoleStatuses.", this.RoleStatuses);
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
             this.SetParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
             this.SetParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);

@@ -25,10 +25,16 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 物理专线的ID。
+        /// <p>物理专线的ID。</p>
         /// </summary>
         [JsonProperty("DirectConnectId")]
         public string DirectConnectId{ get; set; }
+
+        /// <summary>
+        /// <p>预计裁撤时间</p>
+        /// </summary>
+        [JsonProperty("PlannedRepealDate")]
+        public string PlannedRepealDate{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);
+            this.SetParamSimple(map, prefix + "PlannedRepealDate", this.PlannedRepealDate);
         }
     }
 }

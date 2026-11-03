@@ -276,6 +276,60 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ScanTaskId")]
         public ulong? ScanTaskId{ get; set; }
 
+        /// <summary>
+        /// <p>CICD名</p>
+        /// </summary>
+        [JsonProperty("CICDName")]
+        public string CICDName{ get; set; }
+
+        /// <summary>
+        /// <p>CICD Id</p>
+        /// </summary>
+        [JsonProperty("CICDId")]
+        public ulong? CICDId{ get; set; }
+
+        /// <summary>
+        /// <p>是否是CICD镜像</p>
+        /// </summary>
+        [JsonProperty("IsCICD")]
+        public ulong? IsCICD{ get; set; }
+
+        /// <summary>
+        /// <p>敏感文件数</p>
+        /// </summary>
+        [JsonProperty("SecretFileCnt")]
+        public ulong? SecretFileCnt{ get; set; }
+
+        /// <summary>
+        /// <p>构建风险数</p>
+        /// </summary>
+        [JsonProperty("BuildRiskCnt")]
+        public ulong? BuildRiskCnt{ get; set; }
+
+        /// <summary>
+        /// <p>高危敏感文件数</p>
+        /// </summary>
+        [JsonProperty("HighLevelSecretFileCnt")]
+        public ulong? HighLevelSecretFileCnt{ get; set; }
+
+        /// <summary>
+        /// <p>严重敏感文件数</p>
+        /// </summary>
+        [JsonProperty("CriticalLevelSecretFileCnt")]
+        public ulong? CriticalLevelSecretFileCnt{ get; set; }
+
+        /// <summary>
+        /// <p>高危构建风险数</p>
+        /// </summary>
+        [JsonProperty("HighLevelBuildRiskCnt")]
+        public ulong? HighLevelBuildRiskCnt{ get; set; }
+
+        /// <summary>
+        /// <p>严重构建风险数</p>
+        /// </summary>
+        [JsonProperty("CriticalLevelBuildRiskCnt")]
+        public ulong? CriticalLevelBuildRiskCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +378,15 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanSolution", this.ScanSolution);
             this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
             this.SetParamSimple(map, prefix + "ScanTaskId", this.ScanTaskId);
+            this.SetParamSimple(map, prefix + "CICDName", this.CICDName);
+            this.SetParamSimple(map, prefix + "CICDId", this.CICDId);
+            this.SetParamSimple(map, prefix + "IsCICD", this.IsCICD);
+            this.SetParamSimple(map, prefix + "SecretFileCnt", this.SecretFileCnt);
+            this.SetParamSimple(map, prefix + "BuildRiskCnt", this.BuildRiskCnt);
+            this.SetParamSimple(map, prefix + "HighLevelSecretFileCnt", this.HighLevelSecretFileCnt);
+            this.SetParamSimple(map, prefix + "CriticalLevelSecretFileCnt", this.CriticalLevelSecretFileCnt);
+            this.SetParamSimple(map, prefix + "HighLevelBuildRiskCnt", this.HighLevelBuildRiskCnt);
+            this.SetParamSimple(map, prefix + "CriticalLevelBuildRiskCnt", this.CriticalLevelBuildRiskCnt);
         }
     }
 }

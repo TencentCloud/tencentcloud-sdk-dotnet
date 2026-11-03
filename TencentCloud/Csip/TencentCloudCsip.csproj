@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1528</VersionPrefix>
+    <VersionPrefix>3.0.1532</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -215,6 +215,7 @@
     <Compile Include="V20221121\Models\ConditionMatch.cs" />
     <Compile Include="V20221121\Models\ConnectivityDetectConfig.cs" />
     <Compile Include="V20221121\Models\ContainerAppItem.cs" />
+    <Compile Include="V20221121\Models\ContainerAutoScaleConfig.cs" />
     <Compile Include="V20221121\Models\ContainerComponentItem.cs" />
     <Compile Include="V20221121\Models\ContainerEnvInfo.cs" />
     <Compile Include="V20221121\Models\ContainerMountItem.cs" />
@@ -1902,6 +1903,7 @@
     <Compile Include="V20221121\Models\ProviderNode.cs" />
     <Compile Include="V20221121\Models\PublicAssetInfo.cs" />
     <Compile Include="V20221121\Models\PublicIpDomainListKey.cs" />
+    <Compile Include="V20221121\Models\QuaraTypeDictItem.cs" />
     <Compile Include="V20221121\Models\RaspLicenseList.cs" />
     <Compile Include="V20221121\Models\RegionConfig.cs" />
     <Compile Include="V20221121\Models\RegionInfo.cs" />
@@ -1928,6 +1930,7 @@
     <Compile Include="V20221121\Models\RouteInfo.cs" />
     <Compile Include="V20221121\Models\RuleContentCmdLine.cs" />
     <Compile Include="V20221121\Models\RuleContentFileOperation.cs" />
+    <Compile Include="V20221121\Models\RuleContentK8sAPI.cs" />
     <Compile Include="V20221121\Models\RuleContentProcessInfo.cs" />
     <Compile Include="V20221121\Models\RuleContentProcessNetwork.cs" />
     <Compile Include="V20221121\Models\RuleStatisticsItem.cs" />

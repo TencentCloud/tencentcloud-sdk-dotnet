@@ -25,97 +25,103 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 策略Id
+        /// <p>策略Id</p>
         /// </summary>
         [JsonProperty("StrategyId")]
         public string StrategyId{ get; set; }
 
         /// <summary>
-        /// 规则组Id
+        /// <p>规则组Id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 规则组名称
+        /// <p>产品类型</p>
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
+        /// <summary>
+        /// <p>规则组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 规则数
+        /// <p>规则数</p>
         /// </summary>
         [JsonProperty("RuleCount")]
         public long? RuleCount{ get; set; }
 
         /// <summary>
-        /// 策略状态
+        /// <p>策略状态</p>
         /// </summary>
         [JsonProperty("RuleStatus")]
         public long? RuleStatus{ get; set; }
 
         /// <summary>
-        /// 下发账号
+        /// <p>下发账号</p>
         /// </summary>
         [JsonProperty("ReceiveAccount")]
         public ReceiveAccount[] ReceiveAccount{ get; set; }
 
         /// <summary>
-        /// 优先级
+        /// <p>优先级</p>
         /// </summary>
         [JsonProperty("Sequence")]
         public long? Sequence{ get; set; }
 
         /// <summary>
-        /// 下发失败原因
+        /// <p>下发失败原因</p>
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
         /// <summary>
-        /// 下发失败原因类型
+        /// <p>下发失败原因类型</p>
         /// </summary>
         [JsonProperty("ErrorType")]
         public string ErrorType{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 创建人
+        /// <p>创建人</p>
         /// </summary>
         [JsonProperty("CreateBy")]
         public string CreateBy{ get; set; }
 
         /// <summary>
-        /// 更新人
+        /// <p>更新人</p>
         /// </summary>
         [JsonProperty("UpdateBy")]
         public string UpdateBy{ get; set; }
 
         /// <summary>
-        /// 执行区域
+        /// <p>执行区域</p>
         /// </summary>
         [JsonProperty("ExecArea")]
         public string ExecArea{ get; set; }
 
         /// <summary>
-        /// 创建人名称
+        /// <p>创建人名称</p>
         /// </summary>
         [JsonProperty("CreateName")]
         public string CreateName{ get; set; }
 
         /// <summary>
-        /// 更新人名称
+        /// <p>更新人名称</p>
         /// </summary>
         [JsonProperty("UpdateName")]
         public string UpdateName{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -128,6 +134,7 @@ namespace TencentCloud.Fwm.V20250611.Models
         {
             this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "RuleCount", this.RuleCount);
             this.SetParamSimple(map, prefix + "RuleStatus", this.RuleStatus);

@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// <p>总条数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 分页偏移
+        /// <p>分页偏移</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 数据库列表
+        /// <p>数据库列表</p>
         /// </summary>
         [JsonProperty("Databases")]
         public string[] Databases{ get; set; }
 
         /// <summary>
-        /// 分页限制数
+        /// <p>分页限制数</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

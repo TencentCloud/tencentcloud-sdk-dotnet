@@ -43,7 +43,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public bool? SnapshotBased{ get; set; }
 
         /// <summary>
-        /// <p>快照ID</p>
+        /// <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }

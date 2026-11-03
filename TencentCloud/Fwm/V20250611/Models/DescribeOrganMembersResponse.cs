@@ -25,13 +25,13 @@ namespace TencentCloud.Fwm.V20250611.Models
     {
         
         /// <summary>
-        /// 集团成员总数
+        /// <p>集团成员总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 集团成员列表
+        /// <p>集团成员列表</p>
         /// </summary>
         [JsonProperty("Members")]
         public OrganMemberItem[] Members{ get; set; }

@@ -25,58 +25,64 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 运维任务结果日志ID
+        /// <p>运维任务结果日志ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 运维任务ID
+        /// <p>运维任务ID</p>
         /// </summary>
         [JsonProperty("OperationId")]
         public string OperationId{ get; set; }
 
         /// <summary>
-        /// 运维任务名称
+        /// <p>运维任务名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 执行任务来源IP
+        /// <p>执行任务来源IP</p>
         /// </summary>
         [JsonProperty("FromIp")]
         public string FromIp{ get; set; }
 
         /// <summary>
-        /// 运维任务所属用户
+        /// <p>运维任务所属用户</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 运维任务所属用户的姓名
+        /// <p>运维任务所属用户的姓名</p>
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
+        /// <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 运维任务开始时间
+        /// <p>运维任务开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 运维任务结束时间
+        /// <p>运维任务结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
+
+        /// <summary>
+        /// <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("Category")]
+        public long? Category{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

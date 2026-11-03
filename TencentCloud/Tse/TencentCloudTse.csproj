@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1527</VersionPrefix>
+    <VersionPrefix>3.0.1532</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -152,6 +152,9 @@
     <Compile Include="V20201207\Models\ConfigFileReleaseHistory.cs" />
     <Compile Include="V20201207\Models\ConfigFileTag.cs" />
     <Compile Include="V20201207\Models\ConfigFileTemplate.cs" />
+    <Compile Include="V20201207\Models\CreateAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20201207\Models\CreateAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20201207\Models\CreateAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20201207\Models\CreateAutoScalerResourceStrategyRequest.cs" />
     <Compile Include="V20201207\Models\CreateAutoScalerResourceStrategyResponse.cs" />
     <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleRequest.cs" />
@@ -212,7 +215,40 @@
     <Compile Include="V20201207\Models\CreatePublicNetworkResult.cs" />
     <Compile Include="V20201207\Models\CreateWafDomainsRequest.cs" />
     <Compile Include="V20201207\Models\CreateWafDomainsResponse.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailAuthConfig.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailAuthConfigInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailAuthConfigPatch.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailBehaviorConfig.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailBehaviorConfigInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailBehaviorConfigPatch.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailBindableResource.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailCapabilityLimits.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailDecisionConfig.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailDecisionConfigInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailDecisionConfigPatch.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailFieldMapping.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailFieldMappingInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailFieldMappingPatch.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailFilterConfig.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailFilterConfigInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailFilterConfigPatch.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailHit.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailHitFilter.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailPolicy.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailPolicyBinding.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailPolicyFilter.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailResourceRef.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailResourceRefInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailScope.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailScopeInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailServiceConfig.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailServiceConfigInput.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailServiceConfigPatch.cs" />
+    <Compile Include="V20201207\Models\CustomGuardrailSyncFailure.cs" />
     <Compile Include="V20201207\Models\DefaultKongRoute.cs" />
+    <Compile Include="V20201207\Models\DeleteAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyRequest.cs" />
     <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyResponse.cs" />
     <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCORSRequest.cs" />
@@ -274,6 +310,21 @@
     <Compile Include="V20201207\Models\DeleteNativeGatewayServiceSourceResponse.cs" />
     <Compile Include="V20201207\Models\DeleteWafDomainsRequest.cs" />
     <Compile Include="V20201207\Models\DeleteWafDomainsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailBindableResourcesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailBindableResourcesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailBindableResourcesResult.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailCapabilitiesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailCapabilitiesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailCapabilitiesResult.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailHitsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailHitsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailHitsResult.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailPolicyListRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailPolicyListResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailPolicyListResult.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20201207\Models\DescribeAllConfigFileTemplatesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeAllConfigFileTemplatesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategiesRequest.cs" />
@@ -414,6 +465,9 @@
     <Compile Include="V20201207\Models\EngineRegionInfo.cs" />
     <Compile Include="V20201207\Models\EnvAddressInfo.cs" />
     <Compile Include="V20201207\Models\EnvInfo.cs" />
+    <Compile Include="V20201207\Models\ExportAIGWCustomGuardrailHitsRequest.cs" />
+    <Compile Include="V20201207\Models\ExportAIGWCustomGuardrailHitsResponse.cs" />
+    <Compile Include="V20201207\Models\ExportAIGWCustomGuardrailHitsResult.cs" />
     <Compile Include="V20201207\Models\ExtendedMetadata.cs" />
     <Compile Include="V20201207\Models\ExternalRedis.cs" />
     <Compile Include="V20201207\Models\Filter.cs" />
@@ -466,7 +520,11 @@
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyResult.cs" />
     <Compile Include="V20201207\Models\ListFilter.cs" />
     <Compile Include="V20201207\Models\Location.cs" />
+    <Compile Include="V20201207\Models\MaintenanceWindow.cs" />
     <Compile Include="V20201207\Models\Metadata.cs" />
+    <Compile Include="V20201207\Models\ModifyAIGWCustomGuardrailPolicyRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyAIGWCustomGuardrailPolicyResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyAIGWCustomGuardrailPolicyResult.cs" />
     <Compile Include="V20201207\Models\ModifyAutoScalerResourceStrategyRequest.cs" />
     <Compile Include="V20201207\Models\ModifyAutoScalerResourceStrategyResponse.cs" />
     <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCanaryRuleRequest.cs" />

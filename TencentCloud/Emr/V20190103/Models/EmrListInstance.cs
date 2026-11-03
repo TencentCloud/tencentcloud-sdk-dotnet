@@ -25,198 +25,216 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
+        /// <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 集群名字
+        /// <p>集群名字</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群地域
+        /// <p>集群地域</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 用户APPID
+        /// <p>用户APPID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 运行时间
+        /// <p>运行时间</p>
         /// </summary>
         [JsonProperty("RunTime")]
         public string RunTime{ get; set; }
 
         /// <summary>
-        /// 集群IP
+        /// <p>集群IP</p>
         /// </summary>
         [JsonProperty("MasterIp")]
         public string MasterIp{ get; set; }
 
         /// <summary>
-        /// 集群版本
+        /// <p>集群版本</p>
         /// </summary>
         [JsonProperty("EmrVersion")]
         public string EmrVersion{ get; set; }
 
         /// <summary>
-        /// 集群计费类型
+        /// <p>集群计费类型</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public ulong? ChargeType{ get; set; }
 
         /// <summary>
-        /// emr ID
+        /// <p>emr ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 产品ID
+        /// <p>产品ID</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 区域
+        /// <p>区域</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public ulong? SubnetId{ get; set; }
 
         /// <summary>
-        /// 网络ID
+        /// <p>网络ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public ulong? VpcId{ get; set; }
 
         /// <summary>
-        /// 地区
+        /// <p>地区</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
+        /// <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 实例标签
+        /// <p>实例标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 告警信息
+        /// <p>告警信息</p>
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public string AlarmInfo{ get; set; }
 
         /// <summary>
-        /// 是否是woodpecker集群
+        /// <p>是否是woodpecker集群</p>
         /// </summary>
         [JsonProperty("IsWoodpeckerCluster")]
         public ulong? IsWoodpeckerCluster{ get; set; }
 
         /// <summary>
-        /// Vpc中文
+        /// <p>Vpc中文</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 子网中文
+        /// <p>子网中文</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 字符串VpcId
+        /// <p>字符串VpcId</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 字符串子网
+        /// <p>字符串子网</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// </summary>
         [JsonProperty("ClusterClass")]
         public string ClusterClass{ get; set; }
 
         /// <summary>
-        /// 是否为跨AZ集群
+        /// <p>是否为跨AZ集群</p>
         /// </summary>
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
         /// <summary>
-        /// 是否手戳集群
+        /// <p>是否手戳集群</p>
         /// </summary>
         [JsonProperty("IsHandsCluster")]
         public bool? IsHandsCluster{ get; set; }
 
         /// <summary>
-        /// 体外客户端组件信息
+        /// <p>体外客户端组件信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutSideSoftInfo")]
         public SoftDependInfo[] OutSideSoftInfo{ get; set; }
 
         /// <summary>
-        /// 当前集群的应用场景是否支持体外客户端
+        /// <p>当前集群的应用场景是否支持体外客户端</p>
         /// </summary>
         [JsonProperty("IsSupportOutsideCluster")]
         public bool? IsSupportOutsideCluster{ get; set; }
 
         /// <summary>
-        /// 是否专有集群场景集群
+        /// <p>是否专有集群场景集群</p>
         /// </summary>
         [JsonProperty("IsDedicatedCluster")]
         public bool? IsDedicatedCluster{ get; set; }
 
         /// <summary>
-        /// 集群支持克隆
+        /// <p>集群支持克隆</p>
         /// </summary>
         [JsonProperty("IsSupportClone")]
         public bool? IsSupportClone{ get; set; }
+
+        /// <summary>
+        /// <p>集群包含的组件</p>
+        /// </summary>
+        [JsonProperty("Soft")]
+        public string[] Soft{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启了实例保护</p>
+        /// </summary>
+        [JsonProperty("IsTerminateProtection")]
+        public bool? IsTerminateProtection{ get; set; }
+
+        /// <summary>
+        /// <p>mcp密码信息</p>
+        /// </summary>
+        [JsonProperty("McpPasswordInfo")]
+        public McpPasswordInfo McpPasswordInfo{ get; set; }
 
 
         /// <summary>
@@ -256,6 +274,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
             this.SetParamSimple(map, prefix + "IsDedicatedCluster", this.IsDedicatedCluster);
             this.SetParamSimple(map, prefix + "IsSupportClone", this.IsSupportClone);
+            this.SetParamArraySimple(map, prefix + "Soft.", this.Soft);
+            this.SetParamSimple(map, prefix + "IsTerminateProtection", this.IsTerminateProtection);
+            this.SetParamObj(map, prefix + "McpPasswordInfo.", this.McpPasswordInfo);
         }
     }
 }

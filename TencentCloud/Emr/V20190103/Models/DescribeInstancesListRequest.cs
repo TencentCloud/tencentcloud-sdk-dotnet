@@ -25,47 +25,52 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
+        /// <p>集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li></p>
         /// </summary>
         [JsonProperty("DisplayStrategy")]
         public string DisplayStrategy{ get; set; }
 
         /// <summary>
-        /// 页编号，默认值为0，表示第一页。
+        /// <p>页编号，默认值为0，表示第一页。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页返回数量，默认值为100，最大值为100。
-        /// 如果limit和offset都为0，则查询全部记录；
+        /// <p>每页返回数量，默认值为100，最大值为100。<br>如果limit和offset都为0，则查询全部记录；</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
+        /// <p>排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li></p>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。
+        /// <p>按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。</p>
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }
 
         /// <summary>
-        /// 自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>根据clusterName过滤实例：[{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>根据ClusterStatus过滤实例：[{"Name": "ClusterStatus","Values": ["2"]}]</li>
+        /// <p>自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{&quot;Name&quot;:&quot;ClusterId&quot;,&quot;Values&quot;:[&quot;emr-xxxxxxxx&quot;]}]</li><li>根据clusterName过滤实例：[{&quot;Name&quot;: &quot;ClusterName&quot;,&quot;Values&quot;: [&quot;cluster_name&quot;]}]</li><li>根据ClusterStatus过滤实例：[{&quot;Name&quot;: &quot;ClusterStatus&quot;,&quot;Values&quot;: [&quot;2&quot;]}]</li></p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// 默认0为普通集群，2为tke集群
+        /// <p>默认0为普通集群，2为tke集群</p>
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
+
+        /// <summary>
+        /// <p>是否返回需要密码信息</p>
+        /// </summary>
+        [JsonProperty("NeedMcpPasswordInfo")]
+        public bool? NeedMcpPasswordInfo{ get; set; }
 
 
         /// <summary>
@@ -80,6 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "NeedMcpPasswordInfo", this.NeedMcpPasswordInfo);
         }
     }
 }

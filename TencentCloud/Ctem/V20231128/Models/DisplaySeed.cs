@@ -25,53 +25,59 @@ namespace TencentCloud.Ctem.V20231128.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// <p>主键ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 企业ID
+        /// <p>企业ID</p>
         /// </summary>
         [JsonProperty("CustomerId")]
         public long? CustomerId{ get; set; }
 
         /// <summary>
-        /// 分类，包括：domain(主域名)、icon(图标)、ip(IP)、
-        /// keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)
+        /// <p>分类，包括：domain(主域名)、icon(图标)、ip(IP)、<br>keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)</p>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// 值
+        /// <p>值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// md5值
+        /// <p>md5值</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 来源
+        /// <p>来源</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
-        /// 是否可信
+        /// <p>是否可信</p>
         /// </summary>
         [JsonProperty("IsValid")]
         public bool? IsValid{ get; set; }
+
+        /// <summary>
+        /// <p>关键词用途，可多选：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号；不填=全部用途</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Purposes")]
+        public string[] Purposes{ get; set; }
 
 
         /// <summary>
@@ -87,6 +93,7 @@ namespace TencentCloud.Ctem.V20231128.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
             this.SetParamSimple(map, prefix + "IsValid", this.IsValid);
+            this.SetParamArraySimple(map, prefix + "Purposes.", this.Purposes);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1529";
+       private const string sdkVersion = "SDK_NET_3.0.1532";
 
         /// <summary>
         /// Client constructor.

@@ -24,12 +24,19 @@ namespace TencentCloud.Databuddy.V20260715.Models
     public class CreateLocationRequest : AbstractModel
     {
         
+        /// <summary>
+        /// COS 文件事件订阅配置，可选；不设置时不订阅（仅 COS 类型 Location 生效）。设置时先订阅 COS 桶事件投递到 CKafka 再创建 Location，创建失败自动回滚退订
+        /// </summary>
+        [JsonProperty("FileEventSubscription")]
+        public CosEventSubscription FileEventSubscription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "FileEventSubscription.", this.FileEventSubscription);
         }
     }
 }

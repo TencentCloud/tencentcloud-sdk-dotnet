@@ -44,7 +44,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string StartupCommand{ get; set; }
 
         /// <summary>
-        /// <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+        /// <p>容器运行时的环境变量。最多支持 50 个变量。</p>
         /// </summary>
         [JsonProperty("EnvironmentVariables")]
         public InferenceEnvironmentVariable[] EnvironmentVariables{ get; set; }
