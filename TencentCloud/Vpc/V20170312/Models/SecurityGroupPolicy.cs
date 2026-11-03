@@ -25,74 +25,73 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+        /// <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
         /// </summary>
         [JsonProperty("PolicyIndex")]
         public long? PolicyIndex{ get; set; }
 
         /// <summary>
-        /// 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+        /// <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 端口(all, 离散port,  range)。
-        /// 说明：如果Protocol设置为ALL，则Port也需要设置为all。
+        /// <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+        /// <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
         /// </summary>
         [JsonProperty("ServiceTemplate")]
         public ServiceTemplateSpecification ServiceTemplate{ get; set; }
 
         /// <summary>
-        /// 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+        /// <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
+        /// <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }
 
         /// <summary>
-        /// 安全组实例ID，例如：sg-ohuuioma。
+        /// <p>安全组实例ID，例如：sg-ohuuioma。</p>
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// IP地址ID或者IP地址组ID。
+        /// <p>IP地址ID或者IP地址组ID。</p>
         /// </summary>
         [JsonProperty("AddressTemplate")]
         public AddressTemplateSpecification AddressTemplate{ get; set; }
 
         /// <summary>
-        /// ACCEPT 或 DROP。
+        /// <p>ACCEPT 或 DROP。</p>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
+        /// <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
         /// </summary>
         [JsonProperty("PolicyDescription")]
         public string PolicyDescription{ get; set; }
 
         /// <summary>
-        /// 安全组最近修改时间。
+        /// <p>安全组最近修改时间。</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+        /// <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }

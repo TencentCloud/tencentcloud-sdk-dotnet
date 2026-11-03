@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1521</VersionPrefix>
+    <VersionPrefix>3.0.1533</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,7 +90,10 @@
     <Compile Include="V20210125\Models\BindWorkGroupsToUserRequest.cs" />
     <Compile Include="V20210125\Models\BindWorkGroupsToUserResponse.cs" />
     <Compile Include="V20210125\Models\BucketPartitioning.cs" />
+    <Compile Include="V20210125\Models\CFSFileSystemInfo.cs" />
+    <Compile Include="V20210125\Models\CFSTurboFileSystemInfo.cs" />
     <Compile Include="V20210125\Models\CHDFSProductVpcInfo.cs" />
+    <Compile Include="V20210125\Models\COSBucketInfo.cs" />
     <Compile Include="V20210125\Models\CSV.cs" />
     <Compile Include="V20210125\Models\CSVSerde.cs" />
     <Compile Include="V20210125\Models\CancelNotebookSessionStatementBatchRequest.cs" />
@@ -670,8 +673,11 @@
     <Compile Include="V20210125\Models\GetRayJobResponse.cs" />
     <Compile Include="V20210125\Models\GetRayJobYamlRequest.cs" />
     <Compile Include="V20210125\Models\GetRayJobYamlResponse.cs" />
+    <Compile Include="V20210125\Models\GetRayServeEventRequest.cs" />
+    <Compile Include="V20210125\Models\GetRayServeEventResponse.cs" />
     <Compile Include="V20210125\Models\GetResourceConfigRequest.cs" />
     <Compile Include="V20210125\Models\GetResourceConfigResponse.cs" />
+    <Compile Include="V20210125\Models\GooseFSClustersInfo.cs" />
     <Compile Include="V20210125\Models\GooseFSConfig.cs" />
     <Compile Include="V20210125\Models\GpuSummaryItem.cs" />
     <Compile Include="V20210125\Models\GrantDLCCatalogAccessRequest.cs" />
@@ -770,6 +776,8 @@
     <Compile Include="V20210125\Models\ListResourceConfigsResponse.cs" />
     <Compile Include="V20210125\Models\ListServiceApiKeysRequest.cs" />
     <Compile Include="V20210125\Models\ListServiceApiKeysResponse.cs" />
+    <Compile Include="V20210125\Models\ListStoragesRequest.cs" />
+    <Compile Include="V20210125\Models\ListStoragesResponse.cs" />
     <Compile Include="V20210125\Models\ListTaskJobLogDetailRequest.cs" />
     <Compile Include="V20210125\Models\ListTaskJobLogDetailResponse.cs" />
     <Compile Include="V20210125\Models\ListTaskJobLogNameRequest.cs" />
@@ -968,6 +976,8 @@
     <Compile Include="V20210125\Models\StopRayClusterRequest.cs" />
     <Compile Include="V20210125\Models\StopRayClusterResponse.cs" />
     <Compile Include="V20210125\Models\StreamingStatistics.cs" />
+    <Compile Include="V20210125\Models\SubmitRayJobRequest.cs" />
+    <Compile Include="V20210125\Models\SubmitRayJobResponse.cs" />
     <Compile Include="V20210125\Models\SubmitTrainingJobRequest.cs" />
     <Compile Include="V20210125\Models\SubmitTrainingJobResponse.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineRequest.cs" />

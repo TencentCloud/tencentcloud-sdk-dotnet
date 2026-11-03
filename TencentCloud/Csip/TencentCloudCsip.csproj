@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1532</VersionPrefix>
+    <VersionPrefix>3.0.1533</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -542,6 +542,10 @@
     <Compile Include="V20221121\Models\DeleteImageVirusWhitelistResponse.cs" />
     <Compile Include="V20221121\Models\DeleteImageVulWhitelistRequest.cs" />
     <Compile Include="V20221121\Models\DeleteImageVulWhitelistResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteCustomEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteCustomEDRResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteLearnEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteLearnEDRResponse.cs" />
     <Compile Include="V20221121\Models\DeleteLoginWhiteListRequest.cs" />
     <Compile Include="V20221121\Models\DeleteLoginWhiteListResponse.cs" />
     <Compile Include="V20221121\Models\DeleteMachineClearHistoryRequest.cs" />
@@ -1039,6 +1043,8 @@
     <Compile Include="V20221121\Models\DescribeEdrExportJobListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeEdrLogCollectPathsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeEdrLogCollectPathsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrMalwareFileRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrMalwareFileResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExportJobDownloadURLRequest.cs" />
     <Compile Include="V20221121\Models\DescribeExportJobDownloadURLResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExportJobManageListRequest.cs" />
@@ -1158,8 +1164,12 @@
     <Compile Include="V20221121\Models\DescribeLoginTypeHostResponse.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteCombinedListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteCombinedListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteCustomListEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteCustomListEDRResponse.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteHostListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteHostListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteLearnListEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteLearnListEDRResponse.cs" />
     <Compile Include="V20221121\Models\DescribeMachineClearHistoryRequest.cs" />
     <Compile Include="V20221121\Models\DescribeMachineClearHistoryResponse.cs" />
     <Compile Include="V20221121\Models\DescribeMachineGeneralRequest.cs" />
@@ -1619,6 +1629,9 @@
     <Compile Include="V20221121\Models\LogTopicIndexInfo.cs" />
     <Compile Include="V20221121\Models\LogValueInfo.cs" />
     <Compile Include="V20221121\Models\LoginWhiteCombinedInfo.cs" />
+    <Compile Include="V20221121\Models\LoginWhiteItem.cs" />
+    <Compile Include="V20221121\Models\LoginWhitePlace.cs" />
+    <Compile Include="V20221121\Models\LoginWhitePlaceInput.cs" />
     <Compile Include="V20221121\Models\Machine.cs" />
     <Compile Include="V20221121\Models\MachineClearHistory.cs" />
     <Compile Include="V20221121\Models\MachineDetail.cs" />
@@ -1781,6 +1794,10 @@
     <Compile Include="V20221121\Models\ModifyImageVulWhitelistRequest.cs" />
     <Compile Include="V20221121\Models\ModifyImageVulWhitelistResponse.cs" />
     <Compile Include="V20221121\Models\ModifyLoginTypeFailInfo.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteCustomEDRRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteCustomEDRResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteLearnEDRRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteLearnEDRResponse.cs" />
     <Compile Include="V20221121\Models\ModifyLoginWhiteRecordRequest.cs" />
     <Compile Include="V20221121\Models\ModifyLoginWhiteRecordResponse.cs" />
     <Compile Include="V20221121\Models\ModifyMachineAutoClearConfigRequest.cs" />

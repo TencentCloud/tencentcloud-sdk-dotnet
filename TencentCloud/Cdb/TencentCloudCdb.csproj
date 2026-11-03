@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1524</VersionPrefix>
+    <VersionPrefix>3.0.1533</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -126,6 +126,7 @@
     <Compile Include="V20170320\Models\CreateCdbProxyResponse.cs" />
     <Compile Include="V20170320\Models\CreateCloneInstanceRequest.cs" />
     <Compile Include="V20170320\Models\CreateCloneInstanceResponse.cs" />
+    <Compile Include="V20170320\Models\CreateDBAccount.cs" />
     <Compile Include="V20170320\Models\CreateDBImportJobRequest.cs" />
     <Compile Include="V20170320\Models\CreateDBImportJobResponse.cs" />
     <Compile Include="V20170320\Models\CreateDBInstanceHourRequest.cs" />
@@ -158,6 +159,7 @@
     <Compile Include="V20170320\Models\DeleteAuditRuleTemplatesResponse.cs" />
     <Compile Include="V20170320\Models\DeleteBackupRequest.cs" />
     <Compile Include="V20170320\Models\DeleteBackupResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteDBAccount.cs" />
     <Compile Include="V20170320\Models\DeleteDatabaseRequest.cs" />
     <Compile Include="V20170320\Models\DeleteDatabaseResponse.cs" />
     <Compile Include="V20170320\Models\DeleteDeployGroupsRequest.cs" />
@@ -434,6 +436,7 @@
     <Compile Include="V20170320\Models\Parameter.cs" />
     <Compile Include="V20170320\Models\ParameterDetail.cs" />
     <Compile Include="V20170320\Models\PeriodStrategy.cs" />
+    <Compile Include="V20170320\Models\PrivilegeGroup.cs" />
     <Compile Include="V20170320\Models\ProxyAddress.cs" />
     <Compile Include="V20170320\Models\ProxyAllocation.cs" />
     <Compile Include="V20170320\Models\ProxyGroupInfo.cs" />
@@ -471,6 +474,7 @@
     <Compile Include="V20170320\Models\RuleFilters.cs" />
     <Compile Include="V20170320\Models\RuleTemplateInfo.cs" />
     <Compile Include="V20170320\Models\RuleTemplateRecordInfo.cs" />
+    <Compile Include="V20170320\Models\SSMCreateAccountInfos.cs" />
     <Compile Include="V20170320\Models\SecurityGroup.cs" />
     <Compile Include="V20170320\Models\SlaveConfig.cs" />
     <Compile Include="V20170320\Models\SlaveInfo.cs" />

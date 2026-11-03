@@ -28,7 +28,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
 
        private const string endpoint = "workbuddyenterprise.tencentcloudapi.com";
        private const string version = "2026-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1532";
+       private const string sdkVersion = "SDK_NET_3.0.1533";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         public DeleteScheduledTaskResponse DeleteScheduledTaskSync(DeleteScheduledTaskRequest req)
         {
             return InternalRequestAsync<DeleteScheduledTaskResponse>(req, "DeleteScheduledTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除指定的物料，删除后不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSessionArtifactListRequest"/></param>
+        /// <returns><see cref="DeleteSessionArtifactListResponse"/></returns>
+        public Task<DeleteSessionArtifactListResponse> DeleteSessionArtifactList(DeleteSessionArtifactListRequest req)
+        {
+            return InternalRequestAsync<DeleteSessionArtifactListResponse>(req, "DeleteSessionArtifactList");
+        }
+
+        /// <summary>
+        /// 删除指定的物料，删除后不可恢复。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSessionArtifactListRequest"/></param>
+        /// <returns><see cref="DeleteSessionArtifactListResponse"/></returns>
+        public DeleteSessionArtifactListResponse DeleteSessionArtifactListSync(DeleteSessionArtifactListRequest req)
+        {
+            return InternalRequestAsync<DeleteSessionArtifactListResponse>(req, "DeleteSessionArtifactList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -554,6 +575,48 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
         public DescribeScheduledTaskLogListResponse DescribeScheduledTaskLogListSync(DescribeScheduledTaskLogListRequest req)
         {
             return InternalRequestAsync<DescribeScheduledTaskLogListResponse>(req, "DescribeScheduledTaskLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取会话物料下载链接。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionArtifactDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeSessionArtifactDownloadUrlResponse"/></returns>
+        public Task<DescribeSessionArtifactDownloadUrlResponse> DescribeSessionArtifactDownloadUrl(DescribeSessionArtifactDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionArtifactDownloadUrlResponse>(req, "DescribeSessionArtifactDownloadUrl");
+        }
+
+        /// <summary>
+        /// 获取会话物料下载链接。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionArtifactDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeSessionArtifactDownloadUrlResponse"/></returns>
+        public DescribeSessionArtifactDownloadUrlResponse DescribeSessionArtifactDownloadUrlSync(DescribeSessionArtifactDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionArtifactDownloadUrlResponse>(req, "DescribeSessionArtifactDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询会话物料列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionArtifactListRequest"/></param>
+        /// <returns><see cref="DescribeSessionArtifactListResponse"/></returns>
+        public Task<DescribeSessionArtifactListResponse> DescribeSessionArtifactList(DescribeSessionArtifactListRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionArtifactListResponse>(req, "DescribeSessionArtifactList");
+        }
+
+        /// <summary>
+        /// 分页查询会话物料列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionArtifactListRequest"/></param>
+        /// <returns><see cref="DescribeSessionArtifactListResponse"/></returns>
+        public DescribeSessionArtifactListResponse DescribeSessionArtifactListSync(DescribeSessionArtifactListRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionArtifactListResponse>(req, "DescribeSessionArtifactList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

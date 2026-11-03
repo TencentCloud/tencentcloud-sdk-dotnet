@@ -48,6 +48,30 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }
 
+        /// <summary>
+        /// <p>配额重置周期。</p><p>枚举值：</p><ul><li>Day： 每天重置。</li><li>Month： 每月指定日期重置。</li><li>Total： 永不重置，QuotaLimit参数即为总额度。</li></ul>
+        /// </summary>
+        [JsonProperty("QuotaPeriod")]
+        public string QuotaPeriod{ get; set; }
+
+        /// <summary>
+        /// <p>每月配额的重置日期，仅QuotaPeriod=Month时有效。</p><p>如果当月无所选日期时，顺延至次月 1 日 00:00 重置。</p>
+        /// </summary>
+        [JsonProperty("ResetDay")]
+        public ulong? ResetDay{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启按单个模型设置配额</p><p>枚举值：</p><ul><li>ON： 打开</li><li>OFF： 关闭</li></ul>
+        /// </summary>
+        [JsonProperty("ModelQuotaSwitch")]
+        public string ModelQuotaSwitch{ get; set; }
+
+        /// <summary>
+        /// <p>按单个模型设置的配额，仅ModelQuotaSwitch=ON时有效。</p>
+        /// </summary>
+        [JsonProperty("ModelQuotas")]
+        public AigcModelQuota[] ModelQuotas{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "QuotaType", this.QuotaType);
             this.SetParamSimple(map, prefix + "QuotaLimit", this.QuotaLimit);
             this.SetParamSimple(map, prefix + "ApiToken", this.ApiToken);
+            this.SetParamSimple(map, prefix + "QuotaPeriod", this.QuotaPeriod);
+            this.SetParamSimple(map, prefix + "ResetDay", this.ResetDay);
+            this.SetParamSimple(map, prefix + "ModelQuotaSwitch", this.ModelQuotaSwitch);
+            this.SetParamArrayObj(map, prefix + "ModelQuotas.", this.ModelQuotas);
         }
     }
 }

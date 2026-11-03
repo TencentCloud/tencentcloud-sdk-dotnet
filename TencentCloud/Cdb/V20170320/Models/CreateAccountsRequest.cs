@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }
 
+        /// <summary>
+        /// <p>创建账号时的完整信息</p>
+        /// </summary>
+        [JsonProperty("CreateAccounts")]
+        public CreateDBAccount[] CreateAccounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamArrayObj(map, prefix + "CreateAccounts.", this.CreateAccounts);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
+        /// <summary>
+        /// <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
+        /// </summary>
+        [JsonProperty("QueryLevel")]
+        public string QueryLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
             this.SetParamSimple(map, prefix + "NeedUsageDetails", this.NeedUsageDetails);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
+            this.SetParamSimple(map, prefix + "QueryLevel", this.QueryLevel);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1531</VersionPrefix>
+    <VersionPrefix>3.0.1533</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -188,6 +188,8 @@
     <Compile Include="V20180717\Models\AigcImageTaskInputFileInfo.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskOutput.cs" />
     <Compile Include="V20180717\Models\AigcImageTaskOutputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcModelQuota.cs" />
+    <Compile Include="V20180717\Models\AigcModelQuotaWithUsage.cs" />
     <Compile Include="V20180717\Models\AigcQuotaItem.cs" />
     <Compile Include="V20180717\Models\AigcTextDetail.cs" />
     <Compile Include="V20180717\Models\AigcTextDetailData.cs" />

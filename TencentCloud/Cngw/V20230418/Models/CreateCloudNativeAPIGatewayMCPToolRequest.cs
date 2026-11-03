@@ -25,10 +25,40 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
+        /// <p>网关实例 id</p>
+        /// </summary>
+        [JsonProperty("GatewayId")]
+        public string GatewayId{ get; set; }
+
+        /// <summary>
+        /// <p>MCP Server Id</p>
+        /// </summary>
+        [JsonProperty("ServerId")]
+        public string ServerId{ get; set; }
+
+        /// <summary>
         /// <p>内容类型</p>
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
+
+        /// <summary>
+        /// <p>名字</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>方法</p><p>枚举值：</p><ul><li>GET： GET</li><li>POST： POST</li><li>PUT： PUT</li><li>DELETE： DELETE</li><li>PATCH： PATCH</li></ul>
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// <p>路径</p>
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
         /// <summary>
         /// <p>展示名字</p>
@@ -42,15 +72,34 @@ namespace TencentCloud.Cngw.V20230418.Models
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
+        /// <summary>
+        /// <p>输入</p>
+        /// </summary>
+        [JsonProperty("InputParams")]
+        public CNAPIGwMCPToolParam[] InputParams{ get; set; }
+
+        /// <summary>
+        /// <p>描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
+            this.SetParamSimple(map, prefix + "ServerId", this.ServerId);
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamArrayObj(map, prefix + "InputParams.", this.InputParams);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string WorkspaceId{ get; set; }
 
         /// <summary>
-        /// <p>数据目录id</p>
+        /// <p>数据目录id，通过ListCatalogs接口获取</p>
         /// </summary>
         [JsonProperty("CatalogId")]
         public string CatalogId{ get; set; }

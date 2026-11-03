@@ -25,16 +25,22 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 规则
+        /// <p>规则</p>
         /// </summary>
         [JsonProperty("Rule")]
         public BanAndAllowRule Rule{ get; set; }
 
         /// <summary>
-        /// RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+        /// <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
+
+        /// <summary>
+        /// <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
+        /// </summary>
+        [JsonProperty("CoverDuplicate")]
+        public long? CoverDuplicate{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
         }
     }
 }

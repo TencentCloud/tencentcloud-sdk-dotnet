@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1532";
+       private const string sdkVersion = "SDK_NET_3.0.1533";
 
         /// <summary>
         /// Client constructor.
@@ -1534,6 +1534,27 @@ namespace TencentCloud.Databuddy.V20260715
         public ListWorkspaceGroupsResponse ListWorkspaceGroupsSync(ListWorkspaceGroupsRequest req)
         {
             return InternalRequestAsync<ListWorkspaceGroupsResponse>(req, "ListWorkspaceGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询工作空间角色列表
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkspaceRolesRequest"/></param>
+        /// <returns><see cref="ListWorkspaceRolesResponse"/></returns>
+        public Task<ListWorkspaceRolesResponse> ListWorkspaceRoles(ListWorkspaceRolesRequest req)
+        {
+            return InternalRequestAsync<ListWorkspaceRolesResponse>(req, "ListWorkspaceRoles");
+        }
+
+        /// <summary>
+        /// 查询工作空间角色列表
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkspaceRolesRequest"/></param>
+        /// <returns><see cref="ListWorkspaceRolesResponse"/></returns>
+        public ListWorkspaceRolesResponse ListWorkspaceRolesSync(ListWorkspaceRolesRequest req)
+        {
+            return InternalRequestAsync<ListWorkspaceRolesResponse>(req, "ListWorkspaceRoles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Tcbr.V20220217
 
        private const string endpoint = "tcbr.tencentcloudapi.com";
        private const string version = "2022-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1484";
+       private const string sdkVersion = "SDK_NET_3.0.1533";
 
         /// <summary>
         /// Client constructor.
@@ -344,6 +344,27 @@ namespace TencentCloud.Tcbr.V20220217
         public DescribeVersionDetailResponse DescribeVersionDetailSync(DescribeVersionDetailRequest req)
         {
             return InternalRequestAsync<DescribeVersionDetailResponse>(req, "DescribeVersionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云托管环境，并开通资源。
+        /// </summary>
+        /// <param name="req"><see cref="InitializeCloudRunResourceRequest"/></param>
+        /// <returns><see cref="InitializeCloudRunResourceResponse"/></returns>
+        public Task<InitializeCloudRunResourceResponse> InitializeCloudRunResource(InitializeCloudRunResourceRequest req)
+        {
+            return InternalRequestAsync<InitializeCloudRunResourceResponse>(req, "InitializeCloudRunResource");
+        }
+
+        /// <summary>
+        /// 创建云托管环境，并开通资源。
+        /// </summary>
+        /// <param name="req"><see cref="InitializeCloudRunResourceRequest"/></param>
+        /// <returns><see cref="InitializeCloudRunResourceResponse"/></returns>
+        public InitializeCloudRunResourceResponse InitializeCloudRunResourceSync(InitializeCloudRunResourceRequest req)
+        {
+            return InternalRequestAsync<InitializeCloudRunResourceResponse>(req, "InitializeCloudRunResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

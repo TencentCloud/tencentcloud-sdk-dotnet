@@ -31,7 +31,7 @@ namespace TencentCloud.Dbs.V20211108.Models
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 资源ID。
+        /// 备份计划 ID 列表。单次最多返回 10 个。
         /// </summary>
         [JsonProperty("BackupPlanIds")]
         public string[] BackupPlanIds{ get; set; }

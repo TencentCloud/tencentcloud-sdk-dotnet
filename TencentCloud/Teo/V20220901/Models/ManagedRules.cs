@@ -25,37 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
+        /// <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
+        /// <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
         /// </summary>
         [JsonProperty("DetectionOnly")]
         public string DetectionOnly{ get; set; }
 
         /// <summary>
-        /// 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
+        /// <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
         /// </summary>
         [JsonProperty("SemanticAnalysis")]
         public string SemanticAnalysis{ get; set; }
 
         /// <summary>
-        /// 托管规则自动更新选项。
+        /// <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+        /// </summary>
+        [JsonProperty("SemanticAnalysisRules")]
+        public SemanticAnalysisRules SemanticAnalysisRules{ get; set; }
+
+        /// <summary>
+        /// <p>托管规则自动更新选项。</p>
         /// </summary>
         [JsonProperty("AutoUpdate")]
         public ManagedRuleAutoUpdate AutoUpdate{ get; set; }
 
         /// <summary>
-        /// 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
+        /// <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
         /// </summary>
         [JsonProperty("ManagedRuleGroups")]
         public ManagedRuleGroup[] ManagedRuleGroups{ get; set; }
 
         /// <summary>
-        /// 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+        /// <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
         /// </summary>
         [JsonProperty("FrequentScanningProtection")]
         public FrequentScanningProtection FrequentScanningProtection{ get; set; }
@@ -69,6 +75,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "DetectionOnly", this.DetectionOnly);
             this.SetParamSimple(map, prefix + "SemanticAnalysis", this.SemanticAnalysis);
+            this.SetParamObj(map, prefix + "SemanticAnalysisRules.", this.SemanticAnalysisRules);
             this.SetParamObj(map, prefix + "AutoUpdate.", this.AutoUpdate);
             this.SetParamArrayObj(map, prefix + "ManagedRuleGroups.", this.ManagedRuleGroups);
             this.SetParamObj(map, prefix + "FrequentScanningProtection.", this.FrequentScanningProtection);

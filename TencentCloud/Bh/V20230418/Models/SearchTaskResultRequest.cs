@@ -78,6 +78,18 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+        /// </summary>
+        [JsonProperty("Category")]
+        public long?[] Category{ get; set; }
+
+        /// <summary>
+        /// <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong?[] Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "TaskType.", this.TaskType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "Category.", this.Category);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
         }
     }
 }

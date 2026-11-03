@@ -45,6 +45,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
+        /// </summary>
+        [JsonProperty("KeepAudio")]
+        public string KeepAudio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
             this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "KeepAudio", this.KeepAudio);
         }
     }
 }

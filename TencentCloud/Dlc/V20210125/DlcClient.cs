@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1533";
 
         /// <summary>
         /// Client constructor.
@@ -5608,6 +5608,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 通过 ResourceManager 调用 CLS SearchLog API 查询 RayServe 部署相关事件日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetRayServeEventRequest"/></param>
+        /// <returns><see cref="GetRayServeEventResponse"/></returns>
+        public Task<GetRayServeEventResponse> GetRayServeEvent(GetRayServeEventRequest req)
+        {
+            return InternalRequestAsync<GetRayServeEventResponse>(req, "GetRayServeEvent");
+        }
+
+        /// <summary>
+        /// 通过 ResourceManager 调用 CLS SearchLog API 查询 RayServe 部署相关事件日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetRayServeEventRequest"/></param>
+        /// <returns><see cref="GetRayServeEventResponse"/></returns>
+        public GetRayServeEventResponse GetRayServeEventSync(GetRayServeEventRequest req)
+        {
+            return InternalRequestAsync<GetRayServeEventResponse>(req, "GetRayServeEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取资源配置模板详情
         /// </summary>
         /// <param name="req"><see cref="GetResourceConfigRequest"/></param>
@@ -6297,6 +6318,27 @@ namespace TencentCloud.Dlc.V20210125
         public ListServiceApiKeysResponse ListServiceApiKeysSync(ListServiceApiKeysRequest req)
         {
             return InternalRequestAsync<ListServiceApiKeysResponse>(req, "ListServiceApiKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据集群ID列出所有Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="ListStoragesRequest"/></param>
+        /// <returns><see cref="ListStoragesResponse"/></returns>
+        public Task<ListStoragesResponse> ListStorages(ListStoragesRequest req)
+        {
+            return InternalRequestAsync<ListStoragesResponse>(req, "ListStorages");
+        }
+
+        /// <summary>
+        /// 根据集群ID列出所有Ray任务
+        /// </summary>
+        /// <param name="req"><see cref="ListStoragesRequest"/></param>
+        /// <returns><see cref="ListStoragesResponse"/></returns>
+        public ListStoragesResponse ListStoragesSync(ListStoragesRequest req)
+        {
+            return InternalRequestAsync<ListStoragesResponse>(req, "ListStorages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7326,6 +7368,27 @@ namespace TencentCloud.Dlc.V20210125
         public StopRayClusterResponse StopRayClusterSync(StopRayClusterRequest req)
         {
             return InternalRequestAsync<StopRayClusterResponse>(req, "StopRayCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交新的Ray任务到指定集群
+        /// </summary>
+        /// <param name="req"><see cref="SubmitRayJobRequest"/></param>
+        /// <returns><see cref="SubmitRayJobResponse"/></returns>
+        public Task<SubmitRayJobResponse> SubmitRayJob(SubmitRayJobRequest req)
+        {
+            return InternalRequestAsync<SubmitRayJobResponse>(req, "SubmitRayJob");
+        }
+
+        /// <summary>
+        /// 提交新的Ray任务到指定集群
+        /// </summary>
+        /// <param name="req"><see cref="SubmitRayJobRequest"/></param>
+        /// <returns><see cref="SubmitRayJobResponse"/></returns>
+        public SubmitRayJobResponse SubmitRayJobSync(SubmitRayJobRequest req)
+        {
+            return InternalRequestAsync<SubmitRayJobResponse>(req, "SubmitRayJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1532";
+       private const string sdkVersion = "SDK_NET_3.0.1533";
 
         /// <summary>
         /// Client constructor.
@@ -3271,6 +3271,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteImageVulWhitelistResponse DeleteImageVulWhitelistSync(DeleteImageVulWhitelistRequest req)
         {
             return InternalRequestAsync<DeleteImageVulWhitelistResponse>(req, "DeleteImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除 CSC 异常登录自定义白名单（软删 status=2），支持跨页全选。Ids 与 SelectAll 二选一，均为空时返回 InvalidParameter；跨页全选总量超过 100000 条时整体拒绝。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteCustomEDRResponse"/></returns>
+        public Task<DeleteLoginWhiteCustomEDRResponse> DeleteLoginWhiteCustomEDR(DeleteLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteCustomEDRResponse>(req, "DeleteLoginWhiteCustomEDR");
+        }
+
+        /// <summary>
+        /// 批量删除 CSC 异常登录自定义白名单（软删 status=2），支持跨页全选。Ids 与 SelectAll 二选一，均为空时返回 InvalidParameter；跨页全选总量超过 100000 条时整体拒绝。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteCustomEDRResponse"/></returns>
+        public DeleteLoginWhiteCustomEDRResponse DeleteLoginWhiteCustomEDRSync(DeleteLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteCustomEDRResponse>(req, "DeleteLoginWhiteCustomEDR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除 CSC 异常登录自学习白名单规则组（整组软删 enable=0），传入组内任一行 ID 即可定位整组，支持跨页全选（上限 100000 个规则组）。删除后不会被自动重学，需重新开关自学习刷新学习锚点；本接口不回扫历史告警。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteLearnEDRResponse"/></returns>
+        public Task<DeleteLoginWhiteLearnEDRResponse> DeleteLoginWhiteLearnEDR(DeleteLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteLearnEDRResponse>(req, "DeleteLoginWhiteLearnEDR");
+        }
+
+        /// <summary>
+        /// 批量删除 CSC 异常登录自学习白名单规则组（整组软删 enable=0），传入组内任一行 ID 即可定位整组，支持跨页全选（上限 100000 个规则组）。删除后不会被自动重学，需重新开关自学习刷新学习锚点；本接口不回扫历史告警。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteLearnEDRResponse"/></returns>
+        public DeleteLoginWhiteLearnEDRResponse DeleteLoginWhiteLearnEDRSync(DeleteLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteLearnEDRResponse>(req, "DeleteLoginWhiteLearnEDR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8517,6 +8559,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 按 EDR 告警标识定位恶意文件告警，返回其恶意样本的下载链接。仅 alert_sub_type=1（恶意文件）的告警允许下载，其它子类型按资源不存在处理。公有云返回 COS 预签名 URL（1 小时有效）；非公有云且导出开关打开时返回 base64 DataURL 并同时返回 FileName。跨账号场景由 TargetAppId 指定告警所属账号，会做归属校验（fail-close，无权限返回 InvalidParameter）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrMalwareFileRequest"/></param>
+        /// <returns><see cref="DescribeEdrMalwareFileResponse"/></returns>
+        public Task<DescribeEdrMalwareFileResponse> DescribeEdrMalwareFile(DescribeEdrMalwareFileRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrMalwareFileResponse>(req, "DescribeEdrMalwareFile");
+        }
+
+        /// <summary>
+        /// 按 EDR 告警标识定位恶意文件告警，返回其恶意样本的下载链接。仅 alert_sub_type=1（恶意文件）的告警允许下载，其它子类型按资源不存在处理。公有云返回 COS 预签名 URL（1 小时有效）；非公有云且导出开关打开时返回 base64 DataURL 并同时返回 FileName。跨账号场景由 TargetAppId 指定告警所属账号，会做归属校验（fail-close，无权限返回 InvalidParameter）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrMalwareFileRequest"/></param>
+        /// <returns><see cref="DescribeEdrMalwareFileResponse"/></returns>
+        public DescribeEdrMalwareFileResponse DescribeEdrMalwareFileSync(DescribeEdrMalwareFileRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrMalwareFileResponse>(req, "DescribeEdrMalwareFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 导出任务结果下载URL
         /// </summary>
         /// <param name="req"><see cref="DescribeExportJobDownloadURLRequest"/></param>
@@ -9756,6 +9819,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询 CSC 异常登录自定义白名单列表。多账号场景按 MemberId 解析出全部成员 AppId 后一次聚合查询。按 ModifyTime DESC 分页返回，出参切片字段恒为 [] 不会为 null。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteCustomListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteCustomListEDRResponse"/></returns>
+        public Task<DescribeLoginWhiteCustomListEDRResponse> DescribeLoginWhiteCustomListEDR(DescribeLoginWhiteCustomListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteCustomListEDRResponse>(req, "DescribeLoginWhiteCustomListEDR");
+        }
+
+        /// <summary>
+        /// 查询 CSC 异常登录自定义白名单列表。多账号场景按 MemberId 解析出全部成员 AppId 后一次聚合查询。按 ModifyTime DESC 分页返回，出参切片字段恒为 [] 不会为 null。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteCustomListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteCustomListEDRResponse"/></returns>
+        public DescribeLoginWhiteCustomListEDRResponse DescribeLoginWhiteCustomListEDRSync(DescribeLoginWhiteCustomListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteCustomListEDRResponse>(req, "DescribeLoginWhiteCustomListEDR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询合并后白名单机器列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginWhiteHostListRequest"/></param>
@@ -9773,6 +9857,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostListSync(DescribeLoginWhiteHostListRequest req)
         {
             return InternalRequestAsync<DescribeLoginWhiteHostListResponse>(req, "DescribeLoginWhiteHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 CSC 异常登录自学习白名单列表（规则组）。规则组按 (AppId, 常用登录地) 聚合，Id 为组内最小行 ID；出参 SrcIp/UserName/StartTime/EndTime 恒为空。AutoLearnEnable 返回自学习开关状态，供前端空态展示判断是否跳转开启。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteLearnListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteLearnListEDRResponse"/></returns>
+        public Task<DescribeLoginWhiteLearnListEDRResponse> DescribeLoginWhiteLearnListEDR(DescribeLoginWhiteLearnListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteLearnListEDRResponse>(req, "DescribeLoginWhiteLearnListEDR");
+        }
+
+        /// <summary>
+        /// 查询 CSC 异常登录自学习白名单列表（规则组）。规则组按 (AppId, 常用登录地) 聚合，Id 为组内最小行 ID；出参 SrcIp/UserName/StartTime/EndTime 恒为空。AutoLearnEnable 返回自学习开关状态，供前端空态展示判断是否跳转开启。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteLearnListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteLearnListEDRResponse"/></returns>
+        public DescribeLoginWhiteLearnListEDRResponse DescribeLoginWhiteLearnListEDRSync(DescribeLoginWhiteLearnListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteLearnListEDRResponse>(req, "DescribeLoginWhiteLearnListEDR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -14249,6 +14354,48 @@ namespace TencentCloud.Csip.V20221121
         public ModifyImageVulWhitelistResponse ModifyImageVulWhitelistSync(ModifyImageVulWhitelistRequest req)
         {
             return InternalRequestAsync<ModifyImageVulWhitelistResponse>(req, "ModifyImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 CSC 异常登录自定义白名单，全量覆盖保存（未传字段视为清空）。本接口不触发历史告警回扫；查重时排除自身；规则不存在返回 ResourceNotFound。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteCustomEDRResponse"/></returns>
+        public Task<ModifyLoginWhiteCustomEDRResponse> ModifyLoginWhiteCustomEDR(ModifyLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteCustomEDRResponse>(req, "ModifyLoginWhiteCustomEDR");
+        }
+
+        /// <summary>
+        /// 修改 CSC 异常登录自定义白名单，全量覆盖保存（未传字段视为清空）。本接口不触发历史告警回扫；查重时排除自身；规则不存在返回 ResourceNotFound。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteCustomEDRResponse"/></returns>
+        public ModifyLoginWhiteCustomEDRResponse ModifyLoginWhiteCustomEDRSync(ModifyLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteCustomEDRResponse>(req, "ModifyLoginWhiteCustomEDR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 CSC 异常登录自学习白名单规则组，按 (AppId, 常用登录地) 定位整组。约束：不支持新建、不支持按标签生效（TagIDs 必须为空）；仅支持 Scope=0 直接选择 与 Scope=1 全部资产+剔除；规则组行数超过 5000 时拒绝；单事务先插后删；编辑后最长一个缓存周期（默认 120s）内生效。本接口不回扫历史告警。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteLearnEDRResponse"/></returns>
+        public Task<ModifyLoginWhiteLearnEDRResponse> ModifyLoginWhiteLearnEDR(ModifyLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteLearnEDRResponse>(req, "ModifyLoginWhiteLearnEDR");
+        }
+
+        /// <summary>
+        /// 修改 CSC 异常登录自学习白名单规则组，按 (AppId, 常用登录地) 定位整组。约束：不支持新建、不支持按标签生效（TagIDs 必须为空）；仅支持 Scope=0 直接选择 与 Scope=1 全部资产+剔除；规则组行数超过 5000 时拒绝；单事务先插后删；编辑后最长一个缓存周期（默认 120s）内生效。本接口不回扫历史告警。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteLearnEDRResponse"/></returns>
+        public ModifyLoginWhiteLearnEDRResponse ModifyLoginWhiteLearnEDRSync(ModifyLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteLearnEDRResponse>(req, "ModifyLoginWhiteLearnEDR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,67 +25,67 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 例外规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：ExceptionRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
+        /// <p>例外规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：ExceptionRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 例外规则的名称。
+        /// <p>例外规则的名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 例外规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+        /// <p>例外规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// 例外规则执行选项，取值有：<li>WebSecurityModules: 指定例外规则的安全防护模块，需配合  ⁠WebSecurityModulesForException⁠  使用；</li><li>WebSecuritySubmodules: 指定例外规则的安全防护子模块，需配合  ⁠WebSecuritySubmodulesForException⁠  使用；</li><li>ManagedRules：指定例外规则的具体托管规则，需配合  ⁠ManagedRulesForException⁠  使用；</li><li>ManagedRuleGroups：指定例外规则的托管规则组，需配合  ⁠ManagedRuleGroupsForException⁠  使用。</li>
+        /// <p>例外规则执行选项，取值有：<li>WebSecurityModules: 指定例外规则的安全防护模块，需配合 WebSecurityModulesForException 使用；</li><li>WebSecuritySubmodules: 指定例外规则的安全防护子模块，需配合 WebSecuritySubmodulesForException 使用；</li><li>ManagedRules：指定例外规则的具体托管规则，需配合 ManagedRulesForException 使用；</li><li>ManagedRuleGroups：指定例外规则的托管规则组，需配合 ManagedRuleGroupsForException 使用。</li></p>
         /// </summary>
         [JsonProperty("SkipScope")]
         public string SkipScope{ get; set; }
 
         /// <summary>
-        /// 跳过请求的具体类型，取值有：<li>SkipOnAllRequestFields: 跳过所有请求；</li><li>SkipOnSpecifiedRequestFields: 跳过指定请求字段。</li>仅当 SkipScope 为 ManagedRules 或 ManagedRuleGroups 时有效。
+        /// <p>跳过请求的具体类型，取值有：<li>SkipOnAllRequestFields: 跳过所有请求；</li><li>SkipOnSpecifiedRequestFields: 跳过指定请求字段。</li>仅当 SkipScope 为 ManagedRules 或 ManagedRuleGroups 时有效。</p>
         /// </summary>
         [JsonProperty("SkipOption")]
         public string SkipOption{ get; set; }
 
         /// <summary>
-        /// 指定例外规则的安全防护模块，仅当 SkipScope 为 WebSecurityModules 时有效，取值有：<li>websec-mod-managed-rules：托管规则；</li><li>websec-mod-rate-limiting：速率限制；</li><li>websec-mod-custom-rules：自定义规则；</li><li>websec-mod-adaptive-control：自适应频控、智能客户端过滤、慢速攻击防护、流量盗刷防护；</li><li>websec-mod-bot：Bot管理。</li>
+        /// <p>指定例外规则的安全防护模块，仅当 SkipScope 为 WebSecurityModules 时有效，取值有：<li>websec-mod-managed-rules：托管规则；</li><li>websec-mod-rate-limiting：速率限制；</li><li>websec-mod-custom-rules：自定义规则；</li><li>websec-mod-adaptive-control：自适应频控、智能客户端过滤、慢速攻击防护、流量盗刷防护；</li><li>websec-mod-bot：Bot管理。</li></p>
         /// </summary>
         [JsonProperty("WebSecurityModulesForException")]
         public string[] WebSecurityModulesForException{ get; set; }
 
         /// <summary>
-        /// 指定例外规则的安全防护子模块，仅当 SkipScope 为 WebSecuritySubmodules 时有效，取值有：<ul><li>托管规则（ManagedRules）模块功能：<ul><li>websec-mod-managed-rules/managed-rule-groups：规则集；</li><li>websec-mod-managed-rules/frequent-scanning-protection：高频扫描防护；</li></ul></li><li>速率限制（RateLimitingRules）模块功能：<ul><li>websec-mod-rate-limiting-rules：速率限制规则；</li></ul></li><li>自定义规则（CustomRules）模块功能：<ul><li>websec-mod-custom-rules：自定义规则；</li></ul></li><li>HTTP DDoS 防护（HttpDDoSProtection）模块功能：<ul><li>websec-mod-http-ddos-protection/adaptive-frequency-control：自适应频控；</li><li>websec-mod-http-ddos-protection/client-filtering：智能客户端过滤；</li><li>websec-mod-http-ddos-protection/bandwidth-abuse-defense：流量盗刷防护；</li></ul></li><li>高级 Bot 管理（BotManagement）模块功能：<ul><li>websec-mod-bot-management/basic-feature：基础特征管理；</li><li>websec-mod-bot-management/ip-reputation：客户端画像分析；</li><li>websec-mod-bot-management/bot-intelligence：智能 Bot 分析；</li><li>websec-mod-bot-management/custom-rules：自定义规则；</li><li>websec-mod-bot-management/browser-impersonation-detection：主动特征识别；</li><li>websec-mod-bot-management/client-attestation-rules：客户端认证；</li></ul></li><li>基础 Bot 管理（BotManagementLite）模块功能：<ul><li>websec-mod-bot-management-lite/ai-crawler-detection：AI 爬虫处置；</li><li>websec-mod-bot-management-lite/captcha-page-challenge：人机校验页。</li></ul></li></ul>
+        /// <p>指定例外规则的安全防护子模块，仅当 SkipScope 为 WebSecuritySubmodules 时有效。</p><p>枚举值：</p><ul><li>websec-mod-managed-rules/semantic-analysis： 托管规则-深度分析</li><li>websec-mod-managed-rules/managed-rule-groups： 托管规则-规则集</li><li>websec-mod-managed-rules/frequent-scanning-protection： 托管规则-高频扫描防护</li><li>websec-mod-rate-limiting-rules： 速率限制规则</li><li>websec-mod-custom-rules： 自定义规则</li><li>websec-mod-http-ddos-protection/adaptive-frequency-control： HTTP DDoS 防护-自适应频控</li><li>websec-mod-http-ddos-protection/client-filtering： HTTP DDoS 防护-智能客户端过滤</li><li>websec-mod-http-ddos-protection/bandwidth-abuse-defense： HTTP DDoS 防护-流量盗刷防护</li><li>websec-mod-bot-management/basic-feature： 高级 Bot 管理-基础特征管理</li><li>websec-mod-bot-management/ip-reputation： 高级 Bot 管理-客户端画像分析</li><li>websec-mod-bot-management/bot-intelligence： 高级 Bot 管理-智能 Bot 分析</li><li>websec-mod-bot-management/custom-rules： 高级 Bot 管理-自定义规则</li><li>websec-mod-bot-management/browser-impersonation-detection： 高级 Bot 管理-主动特征识别</li><li>websec-mod-bot-management/client-attestation-rules： 高级 Bot 管理-客户端认证</li><li>websec-mod-bot-management-lite/ai-crawler-detection： 基础 Bot 管理-AI 爬虫处置</li><li>websec-mod-bot-management-lite/captcha-page-challenge： 基础 Bot 管理-人机校验页</li></ul>
         /// </summary>
         [JsonProperty("WebSecuritySubmodulesForException")]
         public string[] WebSecuritySubmodulesForException{ get; set; }
 
         /// <summary>
-        /// 指定例外规则的具体托管规则，仅当 SkipScope 为 ManagedRules 时有效。
+        /// <p>指定例外规则的具体托管规则，仅当 SkipScope 为 ManagedRules 时有效。</p>
         /// </summary>
         [JsonProperty("ManagedRulesForException")]
         public string[] ManagedRulesForException{ get; set; }
 
         /// <summary>
-        /// 指定例外规则的托管规则组，仅当 SkipScope 为 ManagedRuleGroups 时有效。
+        /// <p>指定例外规则的托管规则组，仅当 SkipScope 为 ManagedRuleGroups 时有效。</p>
         /// </summary>
         [JsonProperty("ManagedRuleGroupsForException")]
         public string[] ManagedRuleGroupsForException{ get; set; }
 
         /// <summary>
-        /// 指定例外规则跳过指定请求字段的具体配置，仅当 SkipScope 为 ManagedRules 或 ManagedRuleGroups 并且 SkipOption 为 SkipOnSpecifiedRequestFields 时有效。
+        /// <p>指定例外规则跳过指定请求字段的具体配置，仅当 SkipScope 为 ManagedRules 或 ManagedRuleGroups 并且 SkipOption 为 SkipOnSpecifiedRequestFields 时有效。</p>
         /// </summary>
         [JsonProperty("RequestFieldsForException")]
         public RequestFieldsForException[] RequestFieldsForException{ get; set; }
 
         /// <summary>
-        /// 例外规则是否开启。取值有：<li>on：开启</li><li>off：关闭</li>
+        /// <p>例外规则是否开启。取值有：<li>on：开启</li><li>off：关闭</li></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }

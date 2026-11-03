@@ -25,32 +25,46 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 解说视频路径。
+        /// <p>解说视频路径。</p>
         /// </summary>
         [JsonProperty("VideoPath")]
         public string VideoPath{ get; set; }
 
         /// <summary>
-        /// 解说视频路径列表。
-        /// 
-        /// **注意**：
-        /// 1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-        /// 2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+        /// <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
         /// </summary>
         [JsonProperty("VideoPaths")]
         public string[] VideoPaths{ get; set; }
 
         /// <summary>
-        /// 脚本文件路径
+        /// <p>脚本文件路径</p>
         /// </summary>
         [JsonProperty("ScriptPath")]
         public string ScriptPath{ get; set; }
 
         /// <summary>
-        /// 解说视频存储位置。
+        /// <p>多个脚本文件路径</p>
+        /// </summary>
+        [JsonProperty("ScriptPaths")]
+        public string[] ScriptPaths{ get; set; }
+
+        /// <summary>
+        /// <p>解说视频存储位置。</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
+
+        /// <summary>
+        /// <p>输出视频字幕文件</p>
+        /// </summary>
+        [JsonProperty("OutputSubtitlePath")]
+        public string OutputSubtitlePath{ get; set; }
+
+        /// <summary>
+        /// <p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
+        /// </summary>
+        [JsonProperty("OutputSubtitlePaths")]
+        public string[] OutputSubtitlePaths{ get; set; }
 
 
         /// <summary>
@@ -61,7 +75,10 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "VideoPath", this.VideoPath);
             this.SetParamArraySimple(map, prefix + "VideoPaths.", this.VideoPaths);
             this.SetParamSimple(map, prefix + "ScriptPath", this.ScriptPath);
+            this.SetParamArraySimple(map, prefix + "ScriptPaths.", this.ScriptPaths);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "OutputSubtitlePath", this.OutputSubtitlePath);
+            this.SetParamArraySimple(map, prefix + "OutputSubtitlePaths.", this.OutputSubtitlePaths);
         }
     }
 }

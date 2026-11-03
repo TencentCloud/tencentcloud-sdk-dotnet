@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{38CD7696-3B38-3CEA-932D-D1E86BA7D17A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1532</VersionPrefix>
+    <VersionPrefix>3.0.1533</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,8 @@
     <Compile Include="V20260709\Models\DeleteAgentResponse.cs" />
     <Compile Include="V20260709\Models\DeleteScheduledTaskRequest.cs" />
     <Compile Include="V20260709\Models\DeleteScheduledTaskResponse.cs" />
+    <Compile Include="V20260709\Models\DeleteSessionArtifactListRequest.cs" />
+    <Compile Include="V20260709\Models\DeleteSessionArtifactListResponse.cs" />
     <Compile Include="V20260709\Models\DeliveryTarget.cs" />
     <Compile Include="V20260709\Models\DescribeAgentListRequest.cs" />
     <Compile Include="V20260709\Models\DescribeAgentListResponse.cs" />
@@ -107,6 +109,10 @@
     <Compile Include="V20260709\Models\DescribeScheduledTaskLogResponse.cs" />
     <Compile Include="V20260709\Models\DescribeScheduledTaskRequest.cs" />
     <Compile Include="V20260709\Models\DescribeScheduledTaskResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeSessionArtifactDownloadUrlRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeSessionArtifactDownloadUrlResponse.cs" />
+    <Compile Include="V20260709\Models\DescribeSessionArtifactListRequest.cs" />
+    <Compile Include="V20260709\Models\DescribeSessionArtifactListResponse.cs" />
     <Compile Include="V20260709\Models\DescribeSkillListRequest.cs" />
     <Compile Include="V20260709\Models\DescribeSkillListResponse.cs" />
     <Compile Include="V20260709\Models\DescribeUserAccessTokenRequest.cs" />

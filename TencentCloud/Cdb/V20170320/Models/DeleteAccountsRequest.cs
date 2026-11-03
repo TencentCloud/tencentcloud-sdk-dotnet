@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
 
+        /// <summary>
+        /// <p>待删除账号的完整信息。</p>
+        /// </summary>
+        [JsonProperty("DeleteAccounts")]
+        public DeleteDBAccount[] DeleteAccounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+            this.SetParamArrayObj(map, prefix + "DeleteAccounts.", this.DeleteAccounts);
         }
     }
 }
