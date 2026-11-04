@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1512";
+       private const string sdkVersion = "SDK_NET_3.0.1534";
 
         /// <summary>
         /// Client constructor.
@@ -289,6 +289,27 @@ namespace TencentCloud.Gs.V20191118
         public CreateAndroidInstanceLabelResponse CreateAndroidInstanceLabelSync(CreateAndroidInstanceLabelRequest req)
         {
             return InternalRequestAsync<CreateAndroidInstanceLabelResponse>(req, "CreateAndroidInstanceLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安卓实例MCP token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceMCPTokenRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceMCPTokenResponse"/></returns>
+        public Task<CreateAndroidInstanceMCPTokenResponse> CreateAndroidInstanceMCPToken(CreateAndroidInstanceMCPTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceMCPTokenResponse>(req, "CreateAndroidInstanceMCPToken");
+        }
+
+        /// <summary>
+        /// 创建安卓实例MCP token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndroidInstanceMCPTokenRequest"/></param>
+        /// <returns><see cref="CreateAndroidInstanceMCPTokenResponse"/></returns>
+        public CreateAndroidInstanceMCPTokenResponse CreateAndroidInstanceMCPTokenSync(CreateAndroidInstanceMCPTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAndroidInstanceMCPTokenResponse>(req, "CreateAndroidInstanceMCPToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -566,6 +587,27 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 删除安卓实例 MCP token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceMCPTokenRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceMCPTokenResponse"/></returns>
+        public Task<DeleteAndroidInstanceMCPTokenResponse> DeleteAndroidInstanceMCPToken(DeleteAndroidInstanceMCPTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceMCPTokenResponse>(req, "DeleteAndroidInstanceMCPToken");
+        }
+
+        /// <summary>
+        /// 删除安卓实例 MCP token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAndroidInstanceMCPTokenRequest"/></param>
+        /// <returns><see cref="DeleteAndroidInstanceMCPTokenResponse"/></returns>
+        public DeleteAndroidInstanceMCPTokenResponse DeleteAndroidInstanceMCPTokenSync(DeleteAndroidInstanceMCPTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteAndroidInstanceMCPTokenResponse>(req, "DeleteAndroidInstanceMCPToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询安卓应用信息
         /// </summary>
         /// <param name="req"><see cref="DescribeAndroidAppsRequest"/></param>
@@ -667,6 +709,27 @@ namespace TencentCloud.Gs.V20191118
         public DescribeAndroidInstanceLabelsResponse DescribeAndroidInstanceLabelsSync(DescribeAndroidInstanceLabelsRequest req)
         {
             return InternalRequestAsync<DescribeAndroidInstanceLabelsResponse>(req, "DescribeAndroidInstanceLabels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询安卓实例MCP Token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceMCPTokensRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceMCPTokensResponse"/></returns>
+        public Task<DescribeAndroidInstanceMCPTokensResponse> DescribeAndroidInstanceMCPTokens(DescribeAndroidInstanceMCPTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceMCPTokensResponse>(req, "DescribeAndroidInstanceMCPTokens");
+        }
+
+        /// <summary>
+        /// 查询安卓实例MCP Token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAndroidInstanceMCPTokensRequest"/></param>
+        /// <returns><see cref="DescribeAndroidInstanceMCPTokensResponse"/></returns>
+        public DescribeAndroidInstanceMCPTokensResponse DescribeAndroidInstanceMCPTokensSync(DescribeAndroidInstanceMCPTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeAndroidInstanceMCPTokensResponse>(req, "DescribeAndroidInstanceMCPTokens")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1324,6 +1387,27 @@ namespace TencentCloud.Gs.V20191118
         public RebootAndroidInstancesResponse RebootAndroidInstancesSync(RebootAndroidInstancesRequest req)
         {
             return InternalRequestAsync<RebootAndroidInstancesResponse>(req, "RebootAndroidInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 续期安卓实例 MCP token
+        /// </summary>
+        /// <param name="req"><see cref="RenewAndroidInstanceMCPTokenRequest"/></param>
+        /// <returns><see cref="RenewAndroidInstanceMCPTokenResponse"/></returns>
+        public Task<RenewAndroidInstanceMCPTokenResponse> RenewAndroidInstanceMCPToken(RenewAndroidInstanceMCPTokenRequest req)
+        {
+            return InternalRequestAsync<RenewAndroidInstanceMCPTokenResponse>(req, "RenewAndroidInstanceMCPToken");
+        }
+
+        /// <summary>
+        /// 续期安卓实例 MCP token
+        /// </summary>
+        /// <param name="req"><see cref="RenewAndroidInstanceMCPTokenRequest"/></param>
+        /// <returns><see cref="RenewAndroidInstanceMCPTokenResponse"/></returns>
+        public RenewAndroidInstanceMCPTokenResponse RenewAndroidInstanceMCPTokenSync(RenewAndroidInstanceMCPTokenRequest req)
+        {
+            return InternalRequestAsync<RenewAndroidInstanceMCPTokenResponse>(req, "RenewAndroidInstanceMCPToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

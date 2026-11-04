@@ -25,13 +25,13 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 符合条件的备份点总数量
+        /// <p>符合条件的备份点总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 符合条件的备份点详情
+        /// <p>符合条件的备份点详情</p>
         /// </summary>
         [JsonProperty("BackupSet")]
         public BackupInfo[] BackupSet{ get; set; }

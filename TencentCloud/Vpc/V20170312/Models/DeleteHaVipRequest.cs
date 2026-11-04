@@ -25,10 +25,16 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+        /// <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
         /// </summary>
         [JsonProperty("HaVipId")]
         public string HaVipId{ get; set; }
+
+        /// <summary>
+        /// <p>忽略删除保护。</p>
+        /// </summary>
+        [JsonProperty("SkipTerminationProtection")]
+        public bool? SkipTerminationProtection{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "HaVipId", this.HaVipId);
+            this.SetParamSimple(map, prefix + "SkipTerminationProtection", this.SkipTerminationProtection);
         }
     }
 }

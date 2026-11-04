@@ -25,71 +25,85 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 客户端ID
+        /// <p>客户端ID</p>
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 客户端版本
+        /// <p>客户端版本</p>
         /// </summary>
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
 
         /// <summary>
-        /// 客户端状态
+        /// <p>客户端状态</p>
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
         /// <summary>
-        /// 最后心跳时间
+        /// <p>最后心跳时间</p>
         /// </summary>
         [JsonProperty("LastHeartbeatTime")]
         public string LastHeartbeatTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 最新备份点中记录的 CVM 基础信息
+        /// <p>最新备份点中记录的 CVM 基础信息</p>
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public string ExtraInfo{ get; set; }
 
         /// <summary>
-        /// 该实例可用备份点数量
+        /// <p>该实例可用备份点数量</p>
         /// </summary>
         [JsonProperty("BackupCount")]
         public ulong? BackupCount{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 最近一次备份时间
+        /// <p>最近一次备份时间</p>
         /// </summary>
         [JsonProperty("LatestBackupTime")]
         public string LatestBackupTime{ get; set; }
 
         /// <summary>
-        /// 离线原因
+        /// <p>离线原因</p>
         /// </summary>
         [JsonProperty("OfflineReason")]
         public string OfflineReason{ get; set; }
+
+        /// <summary>
+        /// <p>备份数据量，单位为字节</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupSize")]
+        public long? BackupSize{ get; set; }
+
+        /// <summary>
+        /// <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public string ProductType{ get; set; }
 
 
         /// <summary>
@@ -108,6 +122,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "LatestBackupTime", this.LatestBackupTime);
             this.SetParamSimple(map, prefix + "OfflineReason", this.OfflineReason);
+            this.SetParamSimple(map, prefix + "BackupSize", this.BackupSize);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
         }
     }
 }

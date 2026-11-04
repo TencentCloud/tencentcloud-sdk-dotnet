@@ -43,7 +43,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public string PlanName{ get; set; }
 
         /// <summary>
-        /// <p>实例配置列表，[1,20]</p>
+        /// <p>实例配置列表，1~20 项，此参数必填。</p>
         /// </summary>
         [JsonProperty("Resources")]
         public ResourcePlan[] Resources{ get; set; }

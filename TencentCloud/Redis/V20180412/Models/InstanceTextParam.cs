@@ -25,56 +25,82 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 参数名称。
+        /// <p>参数名称。</p>
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// 参数类型。例如：text。
+        /// <p>参数类型。例如：text。</p>
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// 参数修改后是否需要重启。
-        /// - true：需要。
-        /// - false：不需要。
+        /// <p>参数修改后是否需要重启。</p><ul><li>true：需要。</li><li>false：不需要。</li></ul>
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// 参数默认值。
+        /// <p>参数默认值。</p>
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 参数当前运行值。
+        /// <p>参数当前运行值。</p>
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 参数说明。
+        /// <p>参数说明。</p>
         /// </summary>
         [JsonProperty("Tips")]
         public string Tips{ get; set; }
 
         /// <summary>
-        /// 参数可取值。
+        /// <p>参数可取值。</p>
         /// </summary>
         [JsonProperty("TextValue")]
         public string[] TextValue{ get; set; }
 
         /// <summary>
-        /// 参数修改状态。
-        /// - 1: 修改中。
-        /// - 2：修改完成。
+        /// <p>参数修改状态。</p><ul><li>1: 修改中。</li><li>2：修改完成。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis： tendis支持的参数</li></ul>
+        /// </summary>
+        [JsonProperty("ParamType")]
+        public string ParamType{ get; set; }
+
+        /// <summary>
+        /// <p>当前实例是否支持该特性</p>
+        /// </summary>
+        [JsonProperty("FeatureSupported")]
+        public bool? FeatureSupported{ get; set; }
+
+        /// <summary>
+        /// <p>新特性上线日期</p><p>参数格式：时间格式YYYY-MM-DD</p>
+        /// </summary>
+        [JsonProperty("NewFeatureOnlineTime")]
+        public string NewFeatureOnlineTime{ get; set; }
+
+        /// <summary>
+        /// <p>正则校验规则</p>
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// <p>输入格式描述</p>
+        /// </summary>
+        [JsonProperty("InputDescription")]
+        public string InputDescription{ get; set; }
 
 
         /// <summary>
@@ -90,6 +116,11 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Tips", this.Tips);
             this.SetParamArraySimple(map, prefix + "TextValue.", this.TextValue);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
+            this.SetParamSimple(map, prefix + "FeatureSupported", this.FeatureSupported);
+            this.SetParamSimple(map, prefix + "NewFeatureOnlineTime", this.NewFeatureOnlineTime);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "InputDescription", this.InputDescription);
         }
     }
 }

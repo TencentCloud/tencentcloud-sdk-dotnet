@@ -24,12 +24,26 @@ namespace TencentCloud.Bdrc.V20260330.Models
     public class BindAutoBackupPolicyRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>备份策略ID</p>
+        /// </summary>
+        [JsonProperty("AutoBackupPolicyId")]
+        public string AutoBackupPolicyId{ get; set; }
+
+        /// <summary>
+        /// <p>实例ID列表</p>
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AutoBackupPolicyId", this.AutoBackupPolicyId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

@@ -25,28 +25,42 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 受保护资源总数
+        /// <p>受保护资源总数</p>
         /// </summary>
         [JsonProperty("TotalProtectedCount")]
         public long? TotalProtectedCount{ get; set; }
 
         /// <summary>
-        /// 总资源数
+        /// <p>总资源数</p>
         /// </summary>
         [JsonProperty("TotalResourceCount")]
         public long? TotalResourceCount{ get; set; }
 
         /// <summary>
-        /// CVM 受保护统计
+        /// <p>CVM整机备份受保护统计</p>
         /// </summary>
         [JsonProperty("Cvm")]
         public ResourceProtectStat Cvm{ get; set; }
 
         /// <summary>
-        /// CFS 受保护统计
+        /// <p>CVM文件备份受保护统计</p>
         /// </summary>
         [JsonProperty("CFS")]
         public ResourceProtectStat CFS{ get; set; }
+
+        /// <summary>
+        /// <p>CFS文件备份受保护统计</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CFSAgent")]
+        public ResourceProtectStat CFSAgent{ get; set; }
+
+        /// <summary>
+        /// <p>COS备份受保护统计</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("COSAgent")]
+        public ResourceProtectStat COSAgent{ get; set; }
 
 
         /// <summary>
@@ -58,6 +72,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "TotalResourceCount", this.TotalResourceCount);
             this.SetParamObj(map, prefix + "Cvm.", this.Cvm);
             this.SetParamObj(map, prefix + "CFS.", this.CFS);
+            this.SetParamObj(map, prefix + "CFSAgent.", this.CFSAgent);
+            this.SetParamObj(map, prefix + "COSAgent.", this.COSAgent);
         }
     }
 }

@@ -101,6 +101,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("AdvancedConfig")]
         public WorkflowTriggerAdvancedConfiguration AdvancedConfig{ get; set; }
 
+        /// <summary>
+        /// <p>工作流调度文件到达方式配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileArrivalConfig")]
+        public FileArrivalConfig FileArrivalConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "CrontabExpression", this.CrontabExpression);
             this.SetParamSimple(map, prefix + "ExtraInfo", this.ExtraInfo);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+            this.SetParamObj(map, prefix + "FileArrivalConfig.", this.FileArrivalConfig);
         }
     }
 }

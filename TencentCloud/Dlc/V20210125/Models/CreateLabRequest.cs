@@ -145,6 +145,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public bool? EnableToken{ get; set; }
 
         /// <summary>
+        /// <p>弹性伸缩配置（JSON）</p>
+        /// </summary>
+        [JsonProperty("AutoscalerOptions")]
+        public string AutoscalerOptions{ get; set; }
+
+        /// <summary>
         /// <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
         /// </summary>
         [JsonProperty("ImagePullType")]
@@ -188,6 +194,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
             this.SetParamSimple(map, prefix + "EnableToken", this.EnableToken);
+            this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
             this.SetParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
             this.SetParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
             this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);

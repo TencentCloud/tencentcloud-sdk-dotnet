@@ -25,7 +25,7 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// <p>Version 对象数组。</p>
+        /// <p>筛选和分页后的版本数组。普通模式指定 RecordId 时按 Revision 降序，普通跨 Record 查询与市场查询均按 CreateTime 降序、VersionId 升序。</p><p>市场模式只返回公开字段。支持此版本契约的后端返回 SupportedHarnessVersions 和 Metadata 数组，未设置时返回空数组。Metadata 的每项由字符串 Name 和 Value 组成。无匹配时返回空数组。</p>
         /// </summary>
         [JsonProperty("VersionSet")]
         public CloudRecordVersion[] VersionSet{ get; set; }

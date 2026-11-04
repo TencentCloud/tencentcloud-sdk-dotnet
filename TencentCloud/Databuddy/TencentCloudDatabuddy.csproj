@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1533</VersionPrefix>
+    <VersionPrefix>3.0.1534</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -159,6 +159,7 @@
     <Compile Include="V20260715\Models\FetchOption.cs" />
     <Compile Include="V20260715\Models\FieldInfo.cs" />
     <Compile Include="V20260715\Models\FieldTagInfo.cs" />
+    <Compile Include="V20260715\Models\FileArrivalConfig.cs" />
     <Compile Include="V20260715\Models\FileConfig.cs" />
     <Compile Include="V20260715\Models\FileInfo.cs" />
     <Compile Include="V20260715\Models\FileMeta.cs" />

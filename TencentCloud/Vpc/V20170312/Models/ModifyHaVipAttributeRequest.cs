@@ -25,16 +25,28 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+        /// <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
         /// </summary>
         [JsonProperty("HaVipId")]
         public string HaVipId{ get; set; }
 
         /// <summary>
-        /// `HAVIP`名称，可任意命名，但不得超过60个字符。
+        /// <p><code>HAVIP</code>名称，可任意命名，但不得超过60个字符。</p>
         /// </summary>
         [JsonProperty("HaVipName")]
         public string HaVipName{ get; set; }
+
+        /// <summary>
+        /// <p>删除保护。</p>
+        /// </summary>
+        [JsonProperty("TerminationProtection")]
+        public bool? TerminationProtection{ get; set; }
+
+        /// <summary>
+        /// <p>流量保护。</p>
+        /// </summary>
+        [JsonProperty("TrafficProtection")]
+        public bool? TrafficProtection{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "HaVipId", this.HaVipId);
             this.SetParamSimple(map, prefix + "HaVipName", this.HaVipName);
+            this.SetParamSimple(map, prefix + "TerminationProtection", this.TerminationProtection);
+            this.SetParamSimple(map, prefix + "TrafficProtection", this.TrafficProtection);
         }
     }
 }

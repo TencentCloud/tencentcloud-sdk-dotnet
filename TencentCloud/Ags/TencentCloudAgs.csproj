@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1529</VersionPrefix>
+    <VersionPrefix>3.0.1534</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -170,12 +170,14 @@
     <Compile Include="V20250920\Models\GetSkillPackageDownloadURLResponse.cs" />
     <Compile Include="V20250920\Models\GetSkillPackageUploadURLRequest.cs" />
     <Compile Include="V20250920\Models\GetSkillPackageUploadURLResponse.cs" />
+    <Compile Include="V20250920\Models\HarnessVersionReference.cs" />
     <Compile Include="V20250920\Models\HttpGetAction.cs" />
     <Compile Include="V20250920\Models\ImageStorageSource.cs" />
     <Compile Include="V20250920\Models\InlineDataInfo.cs" />
     <Compile Include="V20250920\Models\LifecycleConfiguration.cs" />
     <Compile Include="V20250920\Models\LogConfiguration.cs" />
     <Compile Include="V20250920\Models\LogSources.cs" />
+    <Compile Include="V20250920\Models\MetadataEntry.cs" />
     <Compile Include="V20250920\Models\MetadataVar.cs" />
     <Compile Include="V20250920\Models\ModifyDeploymentRequest.cs" />
     <Compile Include="V20250920\Models\ModifyDeploymentResponse.cs" />

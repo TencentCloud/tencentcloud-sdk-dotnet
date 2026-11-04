@@ -25,43 +25,43 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 整机备份点总数
+        /// <p>备份点总数</p>
         /// </summary>
         [JsonProperty("BackupCount")]
         public long? BackupCount{ get; set; }
 
         /// <summary>
-        /// 创建中数量
+        /// <p>创建中数量</p>
         /// </summary>
         [JsonProperty("CreatingBackupCount")]
         public long? CreatingBackupCount{ get; set; }
 
         /// <summary>
-        /// 失败数量
+        /// <p>失败数量</p>
         /// </summary>
         [JsonProperty("FailedBackupCount")]
         public long? FailedBackupCount{ get; set; }
 
         /// <summary>
-        /// 已完成数量
+        /// <p>已完成数量</p>
         /// </summary>
         [JsonProperty("SuccessBackupCount")]
         public long? SuccessBackupCount{ get; set; }
 
         /// <summary>
-        /// 恢复中的总数量
+        /// <p>恢复中的总数量</p>
         /// </summary>
         [JsonProperty("RestoringBackupCount")]
         public long? RestoringBackupCount{ get; set; }
 
         /// <summary>
-        /// 整机备份总容量
+        /// <p>备份总容量</p>
         /// </summary>
         [JsonProperty("BackupSizeMb")]
         public long? BackupSizeMb{ get; set; }
 
         /// <summary>
-        /// 受保护 CVM 资源数
+        /// <p>受保护资源数</p>
         /// </summary>
         [JsonProperty("BackupResourceCount")]
         public long? BackupResourceCount{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 过滤器名
+        /// 过滤器名，此参数必填。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 过滤器值
+        /// 过滤器值，此参数必填。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

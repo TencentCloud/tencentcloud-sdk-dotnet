@@ -25,7 +25,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 定期备份策略ID。
+        /// <p>定期备份策略ID。</p>
         /// </summary>
         [JsonProperty("AutoBackupPolicyId")]
         public string AutoBackupPolicyId{ get; set; }

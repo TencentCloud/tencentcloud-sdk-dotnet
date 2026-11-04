@@ -37,7 +37,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public string[] CopyPairIds{ get; set; }
 
         /// <summary>
-        /// <p>过滤条件，详见过滤条件表。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
+        /// <p>过滤条件。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
         /// </summary>
         [JsonProperty("Filters")]
         public FilterModel[] Filters{ get; set; }

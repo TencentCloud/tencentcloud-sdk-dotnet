@@ -36,6 +36,37 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("AddressType")]
         public long? AddressType{ get; set; }
 
+        /// <summary>
+        /// <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("CertSource")]
+        public long? CertSource{ get; set; }
+
+        /// <summary>
+        /// <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+        /// </summary>
+        [JsonProperty("SwitchOption")]
+        [System.Obsolete]
+        public long? SwitchOption{ get; set; }
+
+        /// <summary>
+        /// <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+        /// </summary>
+        [JsonProperty("SSLMinVersion")]
+        public string SSLMinVersion{ get; set; }
+
+        /// <summary>
+        /// <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
+        /// </summary>
+        [JsonProperty("EncryptionMode")]
+        public string EncryptionMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +75,11 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
+            this.SetParamSimple(map, prefix + "CertSource", this.CertSource);
+            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "SSLMinVersion", this.SSLMinVersion);
+            this.SetParamSimple(map, prefix + "EncryptionMode", this.EncryptionMode);
         }
     }
 }

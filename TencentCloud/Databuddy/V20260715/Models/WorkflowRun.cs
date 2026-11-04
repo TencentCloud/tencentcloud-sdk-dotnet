@@ -255,6 +255,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("ScheduledTime")]
         public string ScheduledTime{ get; set; }
 
+        /// <summary>
+        /// <p>工作流调度文件到达方式配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileArrivalConfig")]
+        public FileArrivalConfig FileArrivalConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +301,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
             this.SetParamArrayObj(map, prefix + "AdvancedParameters.", this.AdvancedParameters);
             this.SetParamSimple(map, prefix + "ScheduledTime", this.ScheduledTime);
+            this.SetParamObj(map, prefix + "FileArrivalConfig.", this.FileArrivalConfig);
         }
     }
 }

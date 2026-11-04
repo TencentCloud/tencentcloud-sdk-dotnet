@@ -43,13 +43,13 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序方式
+        /// <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段。目前支持CREATE_TIME。
+        /// <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }

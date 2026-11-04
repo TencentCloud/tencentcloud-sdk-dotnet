@@ -25,39 +25,38 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 印章状态，目前支持传入以下类型：
-        /// <ul><li>DISABLE-停用印章</li></ul>
+        /// <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 印章ID
+        /// <p>印章ID</p>
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 更新印章状态原因说明
+        /// <p>更新印章状态原因说明</p>
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
+        /// <p>操作者的信息</p>
         /// </summary>
         [JsonProperty("Operator")]
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 个性化配置字段，默认不传。
+        /// <p>个性化配置字段，默认不传。</p>
         /// </summary>
         [JsonProperty("Options")]
         public Option[] Options{ get; set; }

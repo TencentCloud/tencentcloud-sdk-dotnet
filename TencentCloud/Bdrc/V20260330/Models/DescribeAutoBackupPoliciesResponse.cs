@@ -25,13 +25,13 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 符合条件的总数量。
+        /// <p>符合条件的总数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 备份策略列表详情。
+        /// <p>备份策略列表详情。</p>
         /// </summary>
         [JsonProperty("AutoBackupPolicySet")]
         public AutoBackupPolicy[] AutoBackupPolicySet{ get; set; }

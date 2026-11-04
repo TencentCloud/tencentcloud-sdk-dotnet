@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1532</VersionPrefix>
+    <VersionPrefix>3.0.1534</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,7 @@
     <Compile Include="V20191022\Models\UpdateNotebookInstanceResponse.cs" />
     <Compile Include="V20191022\Models\VpcConfig.cs" />
     <Compile Include="V20211111\TioneClient.cs" />
+    <Compile Include="V20211111\Models\AccessRule.cs" />
     <Compile Include="V20211111\Models\AggregatePublicAlgoVersion.cs" />
     <Compile Include="V20211111\Models\AnnotationTaskInfo.cs" />
     <Compile Include="V20211111\Models\Attribute.cs" />
@@ -149,6 +150,8 @@
     <Compile Include="V20211111\Models\CreateNotebookResponse.cs" />
     <Compile Include="V20211111\Models\CreatePresignedNotebookUrlRequest.cs" />
     <Compile Include="V20211111\Models\CreatePresignedNotebookUrlResponse.cs" />
+    <Compile Include="V20211111\Models\CreateRoleRequest.cs" />
+    <Compile Include="V20211111\Models\CreateRoleResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelRequest.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingTaskRequest.cs" />
@@ -158,6 +161,7 @@
     <Compile Include="V20211111\Models\DataConfig.cs" />
     <Compile Include="V20211111\Models\DataPoint.cs" />
     <Compile Include="V20211111\Models\DataSetConfig.cs" />
+    <Compile Include="V20211111\Models\DataSourceBrief.cs" />
     <Compile Include="V20211111\Models\DataSourceInfo.cs" />
     <Compile Include="V20211111\Models\DatasetGroup.cs" />
     <Compile Include="V20211111\Models\DatasetInfo.cs" />
@@ -179,12 +183,16 @@
     <Compile Include="V20211111\Models\DeleteMountLimitResponse.cs" />
     <Compile Include="V20211111\Models\DeleteNotebookRequest.cs" />
     <Compile Include="V20211111\Models\DeleteNotebookResponse.cs" />
+    <Compile Include="V20211111\Models\DeleteRoleRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteRoleResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelRequest.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelVersionRequest.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelVersionResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingTaskResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeAccessRulesRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeAccessRulesResponse.cs" />
     <Compile Include="V20211111\Models\DescribeAnnotatedTaskListRequest.cs" />
     <Compile Include="V20211111\Models\DescribeAnnotatedTaskListResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupAttachedWorkspacesRequest.cs" />
@@ -245,6 +253,12 @@
     <Compile Include="V20211111\Models\DescribePresetImageListResponse.cs" />
     <Compile Include="V20211111\Models\DescribePublicAlgoVersionListRequest.cs" />
     <Compile Include="V20211111\Models\DescribePublicAlgoVersionListResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeRoleRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeRoleResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeRoleUsersRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeRoleUsersResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeRolesRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeRolesResponse.cs" />
     <Compile Include="V20211111\Models\DescribeSubAccountLinuxUserInfosRequest.cs" />
     <Compile Include="V20211111\Models\DescribeSubAccountLinuxUserInfosResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingModelVersionRequest.cs" />
@@ -259,6 +273,14 @@
     <Compile Include="V20211111\Models\DescribeTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksRequest.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceMembersRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceMembersResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceQuotaUsageRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceQuotaUsageResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceQuotasRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceQuotasResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeWorkspaceResponse.cs" />
     <Compile Include="V20211111\Models\DescribeWorkspacesRequest.cs" />
     <Compile Include="V20211111\Models\DescribeWorkspacesResponse.cs" />
     <Compile Include="V20211111\Models\DeviceImageInfo.cs" />
@@ -299,6 +321,7 @@
     <Compile Include="V20211111\Models\LogConfig.cs" />
     <Compile Include="V20211111\Models\LogIdentity.cs" />
     <Compile Include="V20211111\Models\MaterialInfo.cs" />
+    <Compile Include="V20211111\Models\MemberInfo.cs" />
     <Compile Include="V20211111\Models\Message.cs" />
     <Compile Include="V20211111\Models\MetricData.cs" />
     <Compile Include="V20211111\Models\ModelAccelerateTask.cs" />
@@ -316,8 +339,18 @@
     <Compile Include="V20211111\Models\ModifyNotebookResponse.cs" />
     <Compile Include="V20211111\Models\ModifyNotebookTagsRequest.cs" />
     <Compile Include="V20211111\Models\ModifyNotebookTagsResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyRoleAccessRulesRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyRoleAccessRulesResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyRoleRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyRoleResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyRoleUserGrantRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyRoleUserGrantResponse.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsRequest.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyUserGrantRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyUserGrantResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyWorkspaceMembersRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyWorkspaceMembersResponse.cs" />
     <Compile Include="V20211111\Models\MountConfigureInfo.cs" />
     <Compile Include="V20211111\Models\MountInstanceInfo.cs" />
     <Compile Include="V20211111\Models\MountLimitInfo.cs" />
@@ -348,8 +381,11 @@
     <Compile Include="V20211111\Models\ResourceGroupInfo.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />
     <Compile Include="V20211111\Models\ResourceInstanceRunningJobInfo.cs" />
+    <Compile Include="V20211111\Models\ResourcePermission.cs" />
     <Compile Include="V20211111\Models\ResourceSpec.cs" />
     <Compile Include="V20211111\Models\ResourceSupplyAttribute.cs" />
+    <Compile Include="V20211111\Models\RoleBriefInfo.cs" />
+    <Compile Include="V20211111\Models\RoleInfo.cs" />
     <Compile Include="V20211111\Models\RollingUpdate.cs" />
     <Compile Include="V20211111\Models\RuntimeLib.cs" />
     <Compile Include="V20211111\Models\SSHConfig.cs" />
@@ -402,9 +438,12 @@
     <Compile Include="V20211111\Models\UpdateSubAccountLinuxUserInfoRequest.cs" />
     <Compile Include="V20211111\Models\UpdateSubAccountLinuxUserInfoResponse.cs" />
     <Compile Include="V20211111\Models\Usage.cs" />
+    <Compile Include="V20211111\Models\UserBriefInfo.cs" />
+    <Compile Include="V20211111\Models\UserRoleInfo.cs" />
     <Compile Include="V20211111\Models\VolumeMount.cs" />
     <Compile Include="V20211111\Models\WeightEntry.cs" />
     <Compile Include="V20211111\Models\WorkloadStatus.cs" />
     <Compile Include="V20211111\Models\Workspace.cs" />
+    <Compile Include="V20211111\Models\WorkspaceTaskInfo.cs" />
   </ItemGroup>
 </Project>

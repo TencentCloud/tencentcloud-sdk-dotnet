@@ -67,6 +67,54 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EncryptAddress{ get; set; }
 
         /// <summary>
+        /// <p>密钥来源</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 自定义证书</li></ul>
+        /// </summary>
+        [JsonProperty("CertSource")]
+        public ulong? CertSource{ get; set; }
+
+        /// <summary>
+        /// <p>证书有效性</p><p>枚举值：</p><ul><li>0： 有效</li><li>1： 即将过期（30天内）</li><li>2： 已过期</li><li>404： 证书已被删除</li><li>500： 查询异常</li></ul>
+        /// </summary>
+        [JsonProperty("CertStatus")]
+        public ulong? CertStatus{ get; set; }
+
+        /// <summary>
+        /// <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// <p>证书别名</p>
+        /// </summary>
+        [JsonProperty("CertAlias")]
+        public string CertAlias{ get; set; }
+
+        /// <summary>
+        /// <p>证书到期时间</p><p>参数格式：时间格式YYYY-MM-DD hh:mm:ss</p>
+        /// </summary>
+        [JsonProperty("CertExpireTime")]
+        public string CertExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>证书关联域名（SAN）</p><p>包括了IP</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// <p>最低 TLS 版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+        /// </summary>
+        [JsonProperty("SSLMinVersion")]
+        public string SSLMinVersion{ get; set; }
+
+        /// <summary>
+        /// <p>当前加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul>
+        /// </summary>
+        [JsonProperty("EncryptionMode")]
+        public string EncryptionMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +133,14 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "EncryptAddress", this.EncryptAddress);
+            this.SetParamSimple(map, prefix + "CertSource", this.CertSource);
+            this.SetParamSimple(map, prefix + "CertStatus", this.CertStatus);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "CertAlias", this.CertAlias);
+            this.SetParamSimple(map, prefix + "CertExpireTime", this.CertExpireTime);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "SSLMinVersion", this.SSLMinVersion);
+            this.SetParamSimple(map, prefix + "EncryptionMode", this.EncryptionMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

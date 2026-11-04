@@ -37,7 +37,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public string[] DrillPairIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件，详见定期快照过滤条件表。
+        /// 过滤条件。
         /// </summary>
         [JsonProperty("Filters")]
         public FilterModel[] Filters{ get; set; }

@@ -25,115 +25,136 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 备份计划ID
+        /// <p>备份计划ID</p>
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// 计划关联的实例ID
+        /// <p>计划关联的实例ID</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 计划名称
+        /// <p>计划名称</p>
         /// </summary>
         [JsonProperty("PlanName")]
         public string PlanName{ get; set; }
 
         /// <summary>
-        /// 备份路径列表，1~20 个
+        /// <p>备份路径列表，1~20 个</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupPaths")]
         public string[] BackupPaths{ get; set; }
 
         /// <summary>
-        /// 包含文件类型，0~20 个
+        /// <p>包含文件类型，0~20 个</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncludeFileTypes")]
         public string[] IncludeFileTypes{ get; set; }
 
         /// <summary>
-        /// 排除文件路径列表，0~20 个
+        /// <p>排除文件路径列表，0~20 个</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludePatterns")]
         public string[] ExcludePatterns{ get; set; }
 
         /// <summary>
-        /// 是否排除系统目录
+        /// <p>是否排除系统目录</p>
         /// </summary>
         [JsonProperty("ExcludeSystemDirectories")]
         public bool? ExcludeSystemDirectories{ get; set; }
 
         /// <summary>
-        /// 备份库ID
+        /// <p>备份库ID</p>
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// 备份计划状态
+        /// <p>备份计划状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 策略ID
+        /// <p>策略ID</p>
         /// </summary>
         [JsonProperty("AspId")]
         public string AspId{ get; set; }
 
         /// <summary>
-        /// 策略名称
+        /// <p>策略名称</p>
         /// </summary>
         [JsonProperty("AspName")]
         public string AspName{ get; set; }
 
         /// <summary>
-        /// 策略详情
+        /// <p>策略详情</p>
         /// </summary>
         [JsonProperty("AspPolicy")]
         public AspInfo AspPolicy{ get; set; }
 
         /// <summary>
-        /// 最近一次执行时间
+        /// <p>最近一次执行时间</p>
         /// </summary>
         [JsonProperty("LastExecuteTime")]
         public string LastExecuteTime{ get; set; }
 
         /// <summary>
-        /// 下次触发时间
+        /// <p>下次触发时间</p>
         /// </summary>
         [JsonProperty("NextTriggerTime")]
         public string NextTriggerTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 最近一次执行错误信息
+        /// <p>最近一次执行错误信息</p>
         /// </summary>
         [JsonProperty("LastTriggerError")]
         public string LastTriggerError{ get; set; }
 
         /// <summary>
-        /// 备份数量
+        /// <p>备份数量</p>
         /// </summary>
         [JsonProperty("BackupCount")]
         public long? BackupCount{ get; set; }
 
         /// <summary>
-        /// 流控信息
+        /// <p>流控信息</p>
         /// </summary>
         [JsonProperty("FlowControlSettings")]
         public FlowControlRule[] FlowControlSettings{ get; set; }
+
+        /// <summary>
+        /// <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableObjectAcl")]
+        public bool? EnableObjectAcl{ get; set; }
+
+        /// <summary>
+        /// <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableObjectTags")]
+        public bool? EnableObjectTags{ get; set; }
+
+        /// <summary>
+        /// <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public string ProductType{ get; set; }
 
 
         /// <summary>
@@ -159,6 +180,9 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "LastTriggerError", this.LastTriggerError);
             this.SetParamSimple(map, prefix + "BackupCount", this.BackupCount);
             this.SetParamArrayObj(map, prefix + "FlowControlSettings.", this.FlowControlSettings);
+            this.SetParamSimple(map, prefix + "EnableObjectAcl", this.EnableObjectAcl);
+            this.SetParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
         }
     }
 }

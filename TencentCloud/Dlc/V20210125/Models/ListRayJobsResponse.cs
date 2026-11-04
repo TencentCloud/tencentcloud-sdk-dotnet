@@ -25,25 +25,31 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 当前页码（从1开始）
+        /// <p>总记录数</p>
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
+
+        /// <summary>
+        /// <p>当前页码（从1开始）</p>
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 页数
+        /// <p>页数</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 总页数
+        /// <p>总页数</p>
         /// </summary>
         [JsonProperty("TotalPages")]
         public long? TotalPages{ get; set; }
 
         /// <summary>
-        /// ray作业列表
+        /// <p>ray作业列表</p>
         /// </summary>
         [JsonProperty("Items")]
         public RayJobSubmitEntity[] Items{ get; set; }
@@ -60,6 +66,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "TotalPages", this.TotalPages);

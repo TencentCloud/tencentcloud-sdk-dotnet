@@ -25,40 +25,52 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 云服务器实例 ID
+        /// <p>云服务器实例 ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 备份路径，[0,20]
+        /// <p>备份路径，[0,20]</p>
         /// </summary>
         [JsonProperty("BackupPaths")]
         public string[] BackupPaths{ get; set; }
 
         /// <summary>
-        /// 包含文件类型，[0,20]
+        /// <p>包含文件类型，[0,20]</p>
         /// </summary>
         [JsonProperty("IncludeFileTypes")]
         public string[] IncludeFileTypes{ get; set; }
 
         /// <summary>
-        /// 排除路径，[0,20]
+        /// <p>排除路径，[0,20]</p>
         /// </summary>
         [JsonProperty("ExcludePatterns")]
         public string[] ExcludePatterns{ get; set; }
 
         /// <summary>
-        /// 是否排除系统目录
+        /// <p>是否排除系统目录</p>
         /// </summary>
         [JsonProperty("ExcludeSystemDirectories")]
         public bool? ExcludeSystemDirectories{ get; set; }
 
         /// <summary>
-        /// 是否立即触发全量备份
+        /// <p>是否立即触发全量备份</p>
         /// </summary>
         [JsonProperty("ExecuteImmediately")]
         public bool? ExecuteImmediately{ get; set; }
+
+        /// <summary>
+        /// <p>cos备份是否备份ACL</p>
+        /// </summary>
+        [JsonProperty("EnableObjectAcl")]
+        public bool? EnableObjectAcl{ get; set; }
+
+        /// <summary>
+        /// <p>cos备份是否备份tag</p>
+        /// </summary>
+        [JsonProperty("EnableObjectTags")]
+        public bool? EnableObjectTags{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamArraySimple(map, prefix + "ExcludePatterns.", this.ExcludePatterns);
             this.SetParamSimple(map, prefix + "ExcludeSystemDirectories", this.ExcludeSystemDirectories);
             this.SetParamSimple(map, prefix + "ExecuteImmediately", this.ExecuteImmediately);
+            this.SetParamSimple(map, prefix + "EnableObjectAcl", this.EnableObjectAcl);
+            this.SetParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
         }
     }
 }

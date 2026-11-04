@@ -25,7 +25,19 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 当前路径下包含的目录及文件总数
+        /// <p>当前路径下包含的目录信息</p>
+        /// </summary>
+        [JsonProperty("DirList")]
+        public FileInfo[] DirList{ get; set; }
+
+        /// <summary>
+        /// <p>当前路径下包含的文件信息</p>
+        /// </summary>
+        [JsonProperty("FileList")]
+        public FileInfo[] FileList{ get; set; }
+
+        /// <summary>
+        /// <p>当前路径下包含的目录及文件总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
@@ -42,6 +54,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "DirList.", this.DirList);
+            this.SetParamArrayObj(map, prefix + "FileList.", this.FileList);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+        /// <p>人脸验证操作人链接，用法可以参考&quot;<a href="https://qian.tencent.com/developers/company/openwxminiprogram/">跳转电子签小程序配置</a>&quot;，默认为空。</p>
         /// </summary>
         [JsonProperty("SealOperatorVerifyPath")]
         public string SealOperatorVerifyPath{ get; set; }
 
         /// <summary>
-        /// 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+        /// <p>人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。</p>
         /// </summary>
         [JsonProperty("SealOperatorVerifyQrcodeUrl")]
         public string SealOperatorVerifyQrcodeUrl{ get; set; }

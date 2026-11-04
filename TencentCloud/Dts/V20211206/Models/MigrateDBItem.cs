@@ -25,40 +25,46 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例Vip
+        /// <p>实例Vip</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 实例Vport
+        /// <p>实例Vport</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 是否可以作为迁移对象，1-可以，0-不可以
+        /// <p>是否可以作为迁移对象，1-可以，0-不可以</p>
         /// </summary>
         [JsonProperty("Usable")]
         public long? Usable{ get; set; }
 
         /// <summary>
-        /// 不可以作为迁移对象的原因
+        /// <p>不可以作为迁移对象的原因</p>
         /// </summary>
         [JsonProperty("Hint")]
         public string Hint{ get; set; }
+
+        /// <summary>
+        /// <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "Usable", this.Usable);
             this.SetParamSimple(map, prefix + "Hint", this.Hint);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

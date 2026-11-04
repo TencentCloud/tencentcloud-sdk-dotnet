@@ -31,6 +31,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string ExampleId{ get; set; }
 
         /// <summary>
+        /// <p>代码包/工程归档地址</p>
+        /// </summary>
+        [JsonProperty("CodeArchiveUrl")]
+        public string CodeArchiveUrl{ get; set; }
+
+        /// <summary>
         /// <p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
         /// </summary>
         [JsonProperty("Services")]
@@ -41,6 +47,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("LabImage")]
         public string LabImage{ get; set; }
+
+        /// <summary>
+        /// <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+        /// </summary>
+        [JsonProperty("LabImagePullPolicy")]
+        public string LabImagePullPolicy{ get; set; }
 
         /// <summary>
         /// <p>集群ID</p>
@@ -59,6 +71,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>集群描述</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
         /// <p>所属资源分区ID</p>
@@ -103,16 +121,46 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// <p>状态详情/错误信息</p>
+        /// </summary>
+        [JsonProperty("StatusMessage")]
+        public string StatusMessage{ get; set; }
+
+        /// <summary>
         /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
+        /// <p>更新时间</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public ulong? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>所属集群组名称</p>
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// <p>计算组 ID</p>
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
         /// <p>资源配置(JSON)</p>
         /// </summary>
         [JsonProperty("ResourceConfig")]
         public string ResourceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>资源配置ID</p>
+        /// </summary>
+        [JsonProperty("ResourceConfigId")]
+        public string ResourceConfigId{ get; set; }
 
         /// <summary>
         /// <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
@@ -133,6 +181,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string HistoryUrl{ get; set; }
 
         /// <summary>
+        /// <p>镜像拉取策略</p>
+        /// </summary>
+        [JsonProperty("ImagePullPolicy")]
+        public string ImagePullPolicy{ get; set; }
+
+        /// <summary>
         /// <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
         /// </summary>
         [JsonProperty("AdvancedOptions")]
@@ -149,6 +203,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
+
+        /// <summary>
+        /// <p>停止时间（最近一次停止/休眠）</p>
+        /// </summary>
+        [JsonProperty("StopTime")]
+        public ulong? StopTime{ get; set; }
+
+        /// <summary>
+        /// <p>删除时间</p>
+        /// </summary>
+        [JsonProperty("DeleteTime")]
+        public ulong? DeleteTime{ get; set; }
 
         /// <summary>
         /// <p>标签列表（TagKey-TagValue）</p>
@@ -173,6 +239,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
+
+        /// <summary>
+        /// <p>弹性伸缩配置（JSON）</p>
+        /// </summary>
+        [JsonProperty("AutoscalerOptions")]
+        public string AutoscalerOptions{ get; set; }
 
         /// <summary>
         /// <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -211,11 +283,14 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ExampleId", this.ExampleId);
+            this.SetParamSimple(map, prefix + "CodeArchiveUrl", this.CodeArchiveUrl);
             this.SetParamArrayObj(map, prefix + "Services.", this.Services);
             this.SetParamSimple(map, prefix + "LabImage", this.LabImage);
+            this.SetParamSimple(map, prefix + "LabImagePullPolicy", this.LabImagePullPolicy);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
@@ -223,18 +298,27 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StatusMessage", this.StatusMessage);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
+            this.SetParamSimple(map, prefix + "ResourceConfigId", this.ResourceConfigId);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
             this.SetParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
+            this.SetParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "StopTime", this.StopTime);
+            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
             this.SetParamSimple(map, prefix + "EnableToken", this.EnableToken);
             this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
             this.SetParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
             this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "ImagePullType", this.ImagePullType);

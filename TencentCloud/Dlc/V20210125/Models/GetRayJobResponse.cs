@@ -31,6 +31,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Id{ get; set; }
 
         /// <summary>
+        /// <p>所属集群ID</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// <p>所属资源分区ID</p>
         /// </summary>
         [JsonProperty("ResourcePartitionId")]
@@ -53,6 +59,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("QueueAlias")]
         public string QueueAlias{ get; set; }
+
+        /// <summary>
+        /// <p>Ray Submission ID</p>
+        /// </summary>
+        [JsonProperty("SubmissionId")]
+        public string SubmissionId{ get; set; }
 
         /// <summary>
         /// <p>任务状态</p>
@@ -89,6 +101,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
 
         /// <summary>
         /// <p>历史记录链接</p>
@@ -211,16 +229,19 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
             this.SetParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
+            this.SetParamSimple(map, prefix + "SubmissionId", this.SubmissionId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
             this.SetParamSimple(map, prefix + "RunningTime", this.RunningTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);

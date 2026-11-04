@@ -141,6 +141,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string DispatchStrategy{ get; set; }
 
         /// <summary>
+        /// <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
+        /// </summary>
+        [JsonProperty("SubmissionTarget")]
+        public string SubmissionTarget{ get; set; }
+
+        /// <summary>
         /// <p>作业包URL</p>
         /// </summary>
         [JsonProperty("JobPackage")]
@@ -214,10 +220,28 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
+        /// <p>计算组名称</p>
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// <p>集群名称</p>
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
         /// <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
         /// </summary>
         [JsonProperty("JobPackageSource")]
         public string JobPackageSource{ get; set; }
+
+        /// <summary>
+        /// <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -250,6 +274,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "DispatchStrategy", this.DispatchStrategy);
+            this.SetParamSimple(map, prefix + "SubmissionTarget", this.SubmissionTarget);
             this.SetParamSimple(map, prefix + "JobPackage", this.JobPackage);
             this.SetParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
@@ -262,7 +287,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "HasRunningJobs", this.HasRunningJobs);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "JobPackageSource", this.JobPackageSource);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,16 +31,34 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Id{ get; set; }
 
         /// <summary>
+        /// <p>所属集群ID</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// <p>所属资源分区ID</p>
         /// </summary>
         [JsonProperty("ResourcePartitionId")]
         public string ResourcePartitionId{ get; set; }
 
         /// <summary>
+        /// <p>默认资源分区名称</p>
+        /// </summary>
+        [JsonProperty("ResourcePartitionName")]
+        public string ResourcePartitionName{ get; set; }
+
+        /// <summary>
         /// <p>所属队列名称</p>
         /// </summary>
         [JsonProperty("Queue")]
         public string Queue{ get; set; }
+
+        /// <summary>
+        /// <p>Ray Submission ID</p>
+        /// </summary>
+        [JsonProperty("SubmissionId")]
+        public string SubmissionId{ get; set; }
 
         /// <summary>
         /// <p>任务状态</p>
@@ -79,16 +97,40 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SubAccountUin{ get; set; }
 
         /// <summary>
+        /// <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
+
+        /// <summary>
+        /// <p>历史记录链接</p>
+        /// </summary>
+        [JsonProperty("HistoryUrl")]
+        public string HistoryUrl{ get; set; }
+
+        /// <summary>
         /// <p>运行时间(ms)</p>
         /// </summary>
         [JsonProperty("RunningTime")]
         public long? RunningTime{ get; set; }
 
         /// <summary>
+        /// <p>完成时间</p>
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public ulong? FinishTime{ get; set; }
+
+        /// <summary>
         /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>失败原因/错误信息</p>
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
 
         /// <summary>
         /// <p>运行时环境配置(JSON)</p>
@@ -125,6 +167,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("AutoscalerOptions")]
         public string AutoscalerOptions{ get; set; }
+
+        /// <summary>
+        /// <p>来源配置ID</p>
+        /// </summary>
+        [JsonProperty("SpecId")]
+        public string SpecId{ get; set; }
+
+        /// <summary>
+        /// <p>来源配置名称</p>
+        /// </summary>
+        [JsonProperty("SpecName")]
+        public string SpecName{ get; set; }
 
         /// <summary>
         /// <p>高级参数，JSON 字符串（透传到 Neutrino）</p>
@@ -169,22 +223,31 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
+            this.SetParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
+            this.SetParamSimple(map, prefix + "SubmissionId", this.SubmissionId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
+            this.SetParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
             this.SetParamSimple(map, prefix + "RunningTime", this.RunningTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
             this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
             this.SetParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
             this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
+            this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
+            this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

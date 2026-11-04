@@ -31,6 +31,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Entrypoint{ get; set; }
 
         /// <summary>
+        /// <p>集群ID</p>
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// <p>资源分区ID</p>
         /// </summary>
         [JsonProperty("ResourcePartitionId")]
@@ -103,6 +109,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string GroupId{ get; set; }
 
         /// <summary>
+        /// <p>集群分派策略，本期仅支持 RANDOM；大小写不敏感</p>
+        /// </summary>
+        [JsonProperty("DispatchStrategy")]
+        public string DispatchStrategy{ get; set; }
+
+        /// <summary>
         /// <p>作业优先级（1-9，数字越大优先级越高）</p>
         /// </summary>
         [JsonProperty("Priority")]
@@ -113,6 +125,42 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>作业包 URL</p>
+        /// </summary>
+        [JsonProperty("JobPackage")]
+        public string JobPackage{ get; set; }
+
+        /// <summary>
+        /// <p>作业包名称</p>
+        /// </summary>
+        [JsonProperty("JobPackageName")]
+        public string JobPackageName{ get; set; }
+
+        /// <summary>
+        /// <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+        /// </summary>
+        [JsonProperty("JobPackageSource")]
+        public string JobPackageSource{ get; set; }
+
+        /// <summary>
+        /// <p>业务来源标识，只为调用上下文，不落盘 JobSpec</p>
+        /// </summary>
+        [JsonProperty("JobSource")]
+        public string JobSource{ get; set; }
+
+        /// <summary>
+        /// <p>外部工作流引擎业务键 flowId</p>
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
+
+        /// <summary>
+        /// <p>外部工作流引擎业务键 executionId</p>
+        /// </summary>
+        [JsonProperty("ExecutionId")]
+        public string ExecutionId{ get; set; }
 
         /// <summary>
         /// <p>用户网络配置 JSON 字符串</p>
@@ -127,6 +175,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
@@ -139,8 +188,15 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "DispatchStrategy", this.DispatchStrategy);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "JobPackage", this.JobPackage);
+            this.SetParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
+            this.SetParamSimple(map, prefix + "JobPackageSource", this.JobPackageSource);
+            this.SetParamSimple(map, prefix + "JobSource", this.JobSource);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "ExecutionId", this.ExecutionId);
             this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         }
     }

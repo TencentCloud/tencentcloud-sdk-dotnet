@@ -150,6 +150,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("Explain")]
         public Explain[] Explain{ get; set; }
 
+        /// <summary>
+        /// <p>执行计划树</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExplainTree")]
+        public string ExplainTree{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "TDStoreLockTime", this.TDStoreLockTime);
             this.SetParamSimple(map, prefix + "TraceId", this.TraceId);
             this.SetParamArrayObj(map, prefix + "Explain.", this.Explain);
+            this.SetParamSimple(map, prefix + "ExplainTree", this.ExplainTree);
         }
     }
 }

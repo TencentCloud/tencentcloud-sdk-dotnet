@@ -78,6 +78,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
+        /// <summary>
+        /// <p>proxy的节点ID</p>
+        /// </summary>
+        [JsonProperty("Node")]
+        public string Node{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "CacheCode", this.CacheCode);
             this.SetParamSimple(map, prefix + "CommandDetail", this.CommandDetail);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "Node", this.Node);
         }
     }
 }

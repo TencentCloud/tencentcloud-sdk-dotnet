@@ -25,107 +25,113 @@ namespace TencentCloud.Vcube.V20220410.Models
     {
         
         /// <summary>
-        /// 应用名称
+        /// <p>应用名称</p>
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Ios应用的唯一标识
+        /// <p>Ios应用的唯一标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// 应用类型，formal： 正式应用，test：测试应用
+        /// <p>应用类型，formal： 正式应用，test：测试应用</p>
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
         /// <summary>
-        /// license数组
+        /// <p>license数组</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Licenses")]
         public License[] Licenses{ get; set; }
 
         /// <summary>
-        /// license 秘钥
+        /// <p>license 秘钥</p>
         /// </summary>
         [JsonProperty("LicenseKey")]
         public string LicenseKey{ get; set; }
 
         /// <summary>
-        /// 安卓应用的唯一标识
+        /// <p>安卓应用的唯一标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 用户应用Id
+        /// <p>用户应用Id</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public ulong? ApplicationId{ get; set; }
 
         /// <summary>
-        /// 视立方下载license的url
+        /// <p>视立方下载license的url</p>
         /// </summary>
         [JsonProperty("LicenseUrl")]
         public string LicenseUrl{ get; set; }
 
         /// <summary>
-        /// 优图美视信息列表
+        /// <p>优图美视信息列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("XMagics")]
         public XMagicInfo[] XMagics{ get; set; }
 
         /// <summary>
-        /// Mac  进程名
+        /// <p>Mac  进程名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MacBundleId")]
         public string MacBundleId{ get; set; }
 
         /// <summary>
-        /// windows 进程名
+        /// <p>windows 进程名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WinProcessName")]
         public string WinProcessName{ get; set; }
 
         /// <summary>
-        /// web端Domain列表
+        /// <p>web端Domain列表</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainList")]
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// 账号AppId
+        /// <p>账号AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 扩展包名数量上限
+        /// <p>扩展包名数量上限</p>
         /// </summary>
         [JsonProperty("NameLimit")]
         public ulong? NameLimit{ get; set; }
+
+        /// <summary>
+        /// <p>linux 进程名</p>
+        /// </summary>
+        [JsonProperty("LinuxProcessName")]
+        public string LinuxProcessName{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Vcube.V20220410.Models
             this.SetParamArraySimple(map, prefix + "DomainList.", this.DomainList);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "NameLimit", this.NameLimit);
+            this.SetParamSimple(map, prefix + "LinuxProcessName", this.LinuxProcessName);
         }
     }
 }

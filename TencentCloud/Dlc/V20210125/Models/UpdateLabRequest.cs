@@ -25,6 +25,12 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
+        /// <p>数据实验室ID</p>
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// <p>数据实验室名称</p>
         /// </summary>
         [JsonProperty("Name")]
@@ -55,10 +61,22 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string ImagePullPolicy{ get; set; }
 
         /// <summary>
+        /// <p>资源配置</p>
+        /// </summary>
+        [JsonProperty("ResourceConfig")]
+        public string ResourceConfig{ get; set; }
+
+        /// <summary>
         /// <p>资源配置ID</p>
         /// </summary>
         [JsonProperty("ResourceConfigId")]
         public string ResourceConfigId{ get; set; }
+
+        /// <summary>
+        /// <p>存储卷和挂载卷配置</p>
+        /// </summary>
+        [JsonProperty("Catalog")]
+        public string Catalog{ get; set; }
 
         /// <summary>
         /// <p>计算组 ID</p>
@@ -79,6 +97,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Queue{ get; set; }
 
         /// <summary>
+        /// <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
+        /// </summary>
+        [JsonProperty("ServiceTypes")]
+        public string[] ServiceTypes{ get; set; }
+
+        /// <summary>
         /// <p>案例ID，当 startMode=EXAMPLE 时必填</p>
         /// </summary>
         [JsonProperty("ExampleId")]
@@ -95,6 +119,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("LabImagePullPolicy")]
         public string LabImagePullPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+        /// </summary>
+        [JsonProperty("AdvancedOptions")]
+        public string AdvancedOptions{ get; set; }
 
         /// <summary>
         /// <p>优先级（1-9，数字越大优先级越高）</p>
@@ -121,6 +151,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public PersistentWorkDir PersistentWorkDir{ get; set; }
 
         /// <summary>
+        /// <p>弹性伸缩配置（JSON）</p>
+        /// </summary>
+        [JsonProperty("AutoscalerOptions")]
+        public string AutoscalerOptions{ get; set; }
+
+        /// <summary>
         /// <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
         /// </summary>
         [JsonProperty("ImagePullType")]
@@ -144,22 +180,28 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "LabImage", this.LabImage);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
+            this.SetParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
             this.SetParamSimple(map, prefix + "ResourceConfigId", this.ResourceConfigId);
+            this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
+            this.SetParamArraySimple(map, prefix + "ServiceTypes.", this.ServiceTypes);
             this.SetParamSimple(map, prefix + "ExampleId", this.ExampleId);
             this.SetParamSimple(map, prefix + "CodeArchiveUrl", this.CodeArchiveUrl);
             this.SetParamSimple(map, prefix + "LabImagePullPolicy", this.LabImagePullPolicy);
+            this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "EnableToken", this.EnableToken);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
+            this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
             this.SetParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
             this.SetParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
             this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);

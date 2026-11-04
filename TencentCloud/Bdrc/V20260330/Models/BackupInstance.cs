@@ -25,54 +25,61 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 实例绑定的定期备份策略列表。
+        /// <p>实例绑定的定期备份策略列表。</p>
         /// </summary>
         [JsonProperty("AutoBackupPolicyIdSet")]
         public string[] AutoBackupPolicyIdSet{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// <p>实例ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户AppId。
+        /// <p>用户AppId。</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 实例最新备份时间。
+        /// <p>实例最新备份时间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestBackupTime")]
         public string LatestBackupTime{ get; set; }
 
         /// <summary>
-        /// 实例的备份组ID列表。
+        /// <p>实例的备份组ID列表。</p>
         /// </summary>
         [JsonProperty("BackupGroupIdSet")]
         public string[] BackupGroupIdSet{ get; set; }
 
         /// <summary>
-        /// 修改时间。
+        /// <p>修改时间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// <p>实例名称</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// <p>备份数据量</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupSizeMb")]
+        public long? BackupSizeMb{ get; set; }
 
 
         /// <summary>
@@ -88,6 +95,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "BackupSizeMb", this.BackupSizeMb);
         }
     }
 }

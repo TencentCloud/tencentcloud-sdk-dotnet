@@ -25,13 +25,13 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 有效的容灾策略数量。
+        /// <p>有效的容灾策略数量。</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 容灾策略列表。
+        /// <p>容灾策略列表。</p>
         /// </summary>
         [JsonProperty("SitePairSet")]
         public SitePair[] SitePairSet{ get; set; }

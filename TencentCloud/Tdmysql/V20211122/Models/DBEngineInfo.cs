@@ -76,6 +76,18 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("IsSupportServerless")]
         public bool? IsSupportServerless{ get; set; }
 
+        /// <summary>
+        /// <p>是否支持透明加密</p>
+        /// </summary>
+        [JsonProperty("IsSupportTDE")]
+        public bool? IsSupportTDE{ get; set; }
+
+        /// <summary>
+        /// <p>是否支持密码复杂度</p>
+        /// </summary>
+        [JsonProperty("IsSupportPasswordComplexity")]
+        public bool? IsSupportPasswordComplexity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +102,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamArraySimple(map, prefix + "SQLMode.", this.SQLMode);
             this.SetParamSimple(map, prefix + "IsSupportParamTemplate", this.IsSupportParamTemplate);
             this.SetParamSimple(map, prefix + "IsSupportServerless", this.IsSupportServerless);
+            this.SetParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
+            this.SetParamSimple(map, prefix + "IsSupportPasswordComplexity", this.IsSupportPasswordComplexity);
         }
     }
 }

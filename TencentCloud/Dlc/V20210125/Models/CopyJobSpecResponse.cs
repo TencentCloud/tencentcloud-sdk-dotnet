@@ -139,6 +139,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string JobPackageName{ get; set; }
 
         /// <summary>
+        /// <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+        /// </summary>
+        [JsonProperty("JobPackageSource")]
+        public string JobPackageSource{ get; set; }
+
+        /// <summary>
         /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("AppId")]
@@ -149,6 +155,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
+
+        /// <summary>
+        /// <p>子用户UIN</p>
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
 
         /// <summary>
         /// <p>创建时间</p>
@@ -262,8 +280,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
             this.SetParamSimple(map, prefix + "JobPackage", this.JobPackage);
             this.SetParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
+            this.SetParamSimple(map, prefix + "JobPackageSource", this.JobPackageSource);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "JobInstanceCount", this.JobInstanceCount);

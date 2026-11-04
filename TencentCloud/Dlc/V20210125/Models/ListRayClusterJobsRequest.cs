@@ -25,43 +25,43 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 集群ID（必填）
+        /// <p>集群ID（必填）</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 当前页码（从1开始）
+        /// <p>当前页码（从1开始）</p>
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// <p>每页数量</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）
+        /// <p>额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 提交时间起始过滤-时间戳（毫秒，可选）
+        /// <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 提交时间截止过滤-时间戳（毫秒，可选）
+        /// <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 排序字段列表
+        /// <p>排序字段列表</p>
         /// </summary>
         [JsonProperty("SortFields")]
         public SortField[] SortFields{ get; set; }

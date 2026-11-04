@@ -25,123 +25,130 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 定期备份策略是否激活。
+        /// <p>定期备份策略是否激活。</p>
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }
 
         /// <summary>
-        /// 使用该定期备份策略创建出来的备份是否永久保留。
+        /// <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
 
         /// <summary>
-        /// 使用该定期备份策略创建出来的备份是否永久保留。
+        /// <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
         /// </summary>
         [JsonProperty("NextTriggerTime")]
         public string NextTriggerTime{ get; set; }
 
         /// <summary>
-        /// NORMAL
+        /// <p>NORMAL</p>
         /// </summary>
         [JsonProperty("AutoBackupPolicyState")]
         public string AutoBackupPolicyState{ get; set; }
 
         /// <summary>
-        /// 备份策略的名称。
+        /// <p>备份策略的名称。</p>
         /// </summary>
         [JsonProperty("AutoBackupPolicyName")]
         public string AutoBackupPolicyName{ get; set; }
 
         /// <summary>
-        /// 定期备份的执行策略。
+        /// <p>定期备份的执行策略。</p>
         /// </summary>
         [JsonProperty("Policy")]
         public Policy[] Policy{ get; set; }
 
         /// <summary>
-        /// 备份策略ID。
+        /// <p>备份策略ID。</p>
         /// </summary>
         [JsonProperty("AutoBackupPolicyId")]
         public string AutoBackupPolicyId{ get; set; }
 
         /// <summary>
-        /// 备份策略的创建时间。
+        /// <p>备份策略的创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 使用该定期备份策略创建出来的备份保留天数。
+        /// <p>使用该定期备份策略创建出来的备份保留天数。</p>
         /// </summary>
         [JsonProperty("RetentionDays")]
         public ulong? RetentionDays{ get; set; }
 
         /// <summary>
-        /// 用户AppId。
+        /// <p>用户AppId。</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 定期备份策略绑定的实例ID列表。
+        /// <p>定期备份策略绑定的实例ID列表。</p>
         /// </summary>
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
-        /// 该定期快照创建的快照最大保留月数
+        /// <p>使用该定期备份策略创建的备份最大保留月数</p>
         /// </summary>
         [JsonProperty("RetentionMonths")]
         public ulong? RetentionMonths{ get; set; }
 
         /// <summary>
-        /// 该定期快照创建的快照最大保留数量
+        /// <p>使用该定期备份策略创建的备份最大保留数量</p>
         /// </summary>
         [JsonProperty("RetentionAmount")]
         public ulong? RetentionAmount{ get; set; }
 
         /// <summary>
-        /// 创建人。
+        /// <p>创建人。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 主账号uin。
+        /// <p>主账号uin。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountUin")]
         public string AccountUin{ get; set; }
 
         /// <summary>
-        /// 子账号uin。
+        /// <p>子账号uin。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
-        /// 策略存储类型
+        /// <p>策略存储类型</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 备份库ID
+        /// <p>备份库ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// 高级保留策略
+        /// <p>高级保留策略</p>
         /// </summary>
         [JsonProperty("AdvancedRetentionPolicy")]
         public AdvancedRetentionPolicy AdvancedRetentionPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>备份资源信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupResourceInfos")]
+        public BackupResourceInfo[] BackupResourceInfos{ get; set; }
 
 
         /// <summary>
@@ -168,6 +175,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
             this.SetParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
+            this.SetParamArrayObj(map, prefix + "BackupResourceInfos.", this.BackupResourceInfos);
         }
     }
 }

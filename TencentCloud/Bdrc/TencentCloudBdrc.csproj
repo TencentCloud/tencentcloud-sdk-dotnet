@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{50082A07-4E5E-30DC-A824-787273FE6B94}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1508</VersionPrefix>
+    <VersionPrefix>3.0.1534</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,7 @@
     <Compile Include="V20260330\Models\BackupInstance.cs" />
     <Compile Include="V20260330\Models\BackupPlan.cs" />
     <Compile Include="V20260330\Models\BackupPolicyOverview.cs" />
+    <Compile Include="V20260330\Models\BackupResourceInfo.cs" />
     <Compile Include="V20260330\Models\BackupVault.cs" />
     <Compile Include="V20260330\Models\BackupVaultOverview.cs" />
     <Compile Include="V20260330\Models\BasicServicesSettings.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="V20260330\Models\DrilledResourceStatus.cs" />
     <Compile Include="V20260330\Models\EnhancedService.cs" />
     <Compile Include="V20260330\Models\FileBackupOverview.cs" />
+    <Compile Include="V20260330\Models\FileInfo.cs" />
     <Compile Include="V20260330\Models\FilterModel.cs" />
     <Compile Include="V20260330\Models\FinishFailoverCopyPairsRequest.cs" />
     <Compile Include="V20260330\Models\FinishFailoverCopyPairsResponse.cs" />

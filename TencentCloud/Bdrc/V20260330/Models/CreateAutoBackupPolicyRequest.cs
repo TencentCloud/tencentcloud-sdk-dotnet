@@ -25,61 +25,61 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 定期备份的执行策略。
+        /// <p>定期备份的执行策略。</p>
         /// </summary>
         [JsonProperty("Policy")]
         public Policy[] Policy{ get; set; }
 
         /// <summary>
-        /// 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
+        /// <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
 
         /// <summary>
-        /// 定期备份策略的名称。
+        /// <p>定期备份策略的名称。</p>
         /// </summary>
         [JsonProperty("AutoBackupPolicyName")]
         public string AutoBackupPolicyName{ get; set; }
 
         /// <summary>
-        /// 是否激活定期备份策略。
+        /// <p>是否激活定期备份策略。</p>
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }
 
         /// <summary>
-        /// 通过定期备份策略创建出的备份保留时间。
+        /// <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
         /// </summary>
         [JsonProperty("RetentionDays")]
         public ulong? RetentionDays{ get; set; }
 
         /// <summary>
-        /// 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
+        /// <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
         /// </summary>
         [JsonProperty("RetentionMonths")]
         public ulong? RetentionMonths{ get; set; }
 
         /// <summary>
-        /// 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
+        /// <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
         /// </summary>
         [JsonProperty("RetentionAmount")]
         public ulong? RetentionAmount{ get; set; }
 
         /// <summary>
-        /// 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
+        /// <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
+        /// <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
+        /// <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
         /// </summary>
         [JsonProperty("AdvancedRetentionPolicy")]
         public AdvancedRetentionPolicy AdvancedRetentionPolicy{ get; set; }

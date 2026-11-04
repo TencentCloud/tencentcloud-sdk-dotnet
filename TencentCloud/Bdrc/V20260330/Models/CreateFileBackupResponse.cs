@@ -25,7 +25,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 备份Id
+        /// <p>备份Id</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }

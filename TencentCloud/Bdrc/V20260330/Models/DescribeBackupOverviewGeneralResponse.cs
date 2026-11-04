@@ -31,7 +31,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public InstanceBackupOverview InstanceBackupOverview{ get; set; }
 
         /// <summary>
-        /// <p>文件备份概览数据</p>
+        /// <p>CVM文件备份概览数据</p>
         /// </summary>
         [JsonProperty("FileBackupOverview")]
         public FileBackupOverview FileBackupOverview{ get; set; }
@@ -55,6 +55,18 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public ProtectedResourceOverview ProtectedResourceOverview{ get; set; }
 
         /// <summary>
+        /// <p>CFS文件备份概览数据</p>
+        /// </summary>
+        [JsonProperty("CFSAgentBackupOverview")]
+        public FileBackupOverview CFSAgentBackupOverview{ get; set; }
+
+        /// <summary>
+        /// <p>COS备份概览数据</p>
+        /// </summary>
+        [JsonProperty("COSAgentBackupOverview")]
+        public FileBackupOverview COSAgentBackupOverview{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +83,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamObj(map, prefix + "BackupPolicyOverview.", this.BackupPolicyOverview);
             this.SetParamObj(map, prefix + "BackupVaultOverview.", this.BackupVaultOverview);
             this.SetParamObj(map, prefix + "ProtectedResourceOverview.", this.ProtectedResourceOverview);
+            this.SetParamObj(map, prefix + "CFSAgentBackupOverview.", this.CFSAgentBackupOverview);
+            this.SetParamObj(map, prefix + "COSAgentBackupOverview.", this.COSAgentBackupOverview);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

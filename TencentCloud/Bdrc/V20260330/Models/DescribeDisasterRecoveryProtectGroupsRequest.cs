@@ -25,43 +25,43 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。
+        /// <p>要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。</p>
         /// </summary>
         [JsonProperty("ProtectGroupType")]
         public string ProtectGroupType{ get; set; }
 
         /// <summary>
-        /// 要查询的容灾保护组ID列表。
+        /// <p>要查询的容灾保护组ID列表。</p>
         /// </summary>
         [JsonProperty("ProtectGroupIds")]
         public string[] ProtectGroupIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。
+        /// <p>过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public FilterModel[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+        /// <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+        /// <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 输出结果按升序还是降序
+        /// <p>输出结果按升序还是降序</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 输出结果的排序字段
+        /// <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }

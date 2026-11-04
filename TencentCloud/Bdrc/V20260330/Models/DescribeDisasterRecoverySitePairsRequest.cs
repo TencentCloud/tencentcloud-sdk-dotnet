@@ -25,43 +25,43 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 要查询的容灾策略产品类型。取值范围：DISK / INSTANCE / CFS。
+        /// <p>要查询的容灾策略产品类型。取值范围：INSTANCE 。</p><p>枚举值：</p><ul><li>INSTANCE： CVM站点对</li></ul>
         /// </summary>
         [JsonProperty("SitePairType")]
         public string SitePairType{ get; set; }
 
         /// <summary>
-        /// 要查询的容灾策略ID列表。
+        /// <p>要查询的容灾策略ID列表。</p>
         /// </summary>
         [JsonProperty("SitePairIds")]
         public string[] SitePairIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件，详见定期快照过滤条件表。
+        /// <p>过滤条件，详见定期快照过滤条件表。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public FilterModel[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+        /// <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+        /// <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 输出结果按升序还是降序，DESC表示降序，ASC表示升序
+        /// <p>输出结果按升序还是降序，DESC表示降序，ASC表示升序</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 输出结果的排序字段
+        /// <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }

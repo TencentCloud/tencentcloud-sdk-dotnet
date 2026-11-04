@@ -31,7 +31,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public string SitePairId{ get; set; }
 
         /// <summary>
-        /// 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
+        /// 过滤条件。支持的Name：src-security-group-id、target-security-group-id
         /// </summary>
         [JsonProperty("Filters")]
         public FilterModel[] Filters{ get; set; }

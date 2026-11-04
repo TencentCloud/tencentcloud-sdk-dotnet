@@ -25,91 +25,85 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 电子印章编号
+        /// <p>电子印章编号</p>
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 电子印章名称
+        /// <p>电子印章名称</p>
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }
 
         /// <summary>
-        /// 电子印章授权时间戳，单位秒
+        /// <p>电子印章授权时间戳，单位秒</p>
         /// </summary>
         [JsonProperty("CreateOn")]
         public long? CreateOn{ get; set; }
 
         /// <summary>
-        /// 电子印章授权人，电子签的UserId
+        /// <p>电子印章授权人，电子签的UserId</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 电子印章策略Id
+        /// <p>电子印章策略Id</p>
         /// </summary>
         [JsonProperty("SealPolicyId")]
         public string SealPolicyId{ get; set; }
 
         /// <summary>
-        /// 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
+        /// <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
         /// </summary>
         [JsonProperty("SealStatus")]
         public string SealStatus{ get; set; }
 
         /// <summary>
-        /// 审核失败原因
+        /// <p>审核失败原因</p>
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
         /// <summary>
-        /// 印章图片url，5分钟内有效
+        /// <p>印章图片url，5分钟内有效</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 电子印章类型 , 可选类型如下: 
-        /// <ul><li>**OFFICIAL**: (默认)公章</li>
-        /// <li>**CONTRACT**: 合同专用章;</li>
-        /// <li>**FINANCE**: 财务专用章;</li>
-        /// <li>**PERSONNEL**: 人事专用章</li>
-        /// <li>**INVOICE**: 发票专用章</li>
-        /// </ul>
+        /// <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }
 
         /// <summary>
-        /// 用印申请是否为永久授权
+        /// <p>用印申请是否为永久授权</p>
         /// </summary>
         [JsonProperty("IsAllTime")]
         public bool? IsAllTime{ get; set; }
 
         /// <summary>
-        /// 授权人列表
+        /// <p>授权人列表</p>
         /// </summary>
         [JsonProperty("AuthorizedUsers")]
         public AuthorizedUser[] AuthorizedUsers{ get; set; }
 
         /// <summary>
-        /// 印章的真实宽度，单位毫米	
+        /// <p>印章的真实宽度，单位毫米</p>
         /// </summary>
         [JsonProperty("RealWidth")]
         public long? RealWidth{ get; set; }
 
         /// <summary>
-        /// 印章的真实高度，单位毫米	
+        /// <p>印章的真实高度，单位毫米</p>
         /// </summary>
         [JsonProperty("RealHeight")]
         public long? RealHeight{ get; set; }
 
         /// <summary>
-        /// 印章描述
+        /// <p>印章描述</p>
         /// </summary>
         [JsonProperty("SealDescription")]
         public string SealDescription{ get; set; }

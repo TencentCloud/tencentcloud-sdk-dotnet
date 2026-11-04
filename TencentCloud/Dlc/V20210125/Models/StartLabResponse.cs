@@ -121,6 +121,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
+        /// <p>更新时间</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public ulong? UpdateTime{ get; set; }
+
+        /// <summary>
         /// <p>所属集群组名称</p>
         /// </summary>
         [JsonProperty("GroupName")]
@@ -187,6 +193,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ulong? StartTime{ get; set; }
 
         /// <summary>
+        /// <p>停止时间（最近一次停止/休眠）</p>
+        /// </summary>
+        [JsonProperty("StopTime")]
+        public ulong? StopTime{ get; set; }
+
+        /// <summary>
+        /// <p>删除时间</p>
+        /// </summary>
+        [JsonProperty("DeleteTime")]
+        public ulong? DeleteTime{ get; set; }
+
+        /// <summary>
         /// <p>标签列表（TagKey-TagValue）</p>
         /// </summary>
         [JsonProperty("Tags")]
@@ -203,6 +221,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("EnableToken")]
         public bool? EnableToken{ get; set; }
+
+        /// <summary>
+        /// <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
+        /// <summary>
+        /// <p>弹性伸缩配置（JSON）</p>
+        /// </summary>
+        [JsonProperty("AutoscalerOptions")]
+        public string AutoscalerOptions{ get; set; }
 
         /// <summary>
         /// <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -256,6 +286,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
@@ -267,9 +298,13 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "StopTime", this.StopTime);
+            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
             this.SetParamSimple(map, prefix + "EnableToken", this.EnableToken);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
             this.SetParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
             this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
