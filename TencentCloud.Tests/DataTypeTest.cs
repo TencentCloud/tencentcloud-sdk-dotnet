@@ -168,7 +168,7 @@ namespace TencentCloud.Tests
             var req = new MobileStatusRequest
             {
                 Mobile = "null",
-                Encryption = new Encryption
+                Encryption = new TencentCloud.Faceid.V20180301.Models.Encryption
                 {
                     CiphertextBlob = "null",
                     EncryptList = new[] { "null", "null" },
