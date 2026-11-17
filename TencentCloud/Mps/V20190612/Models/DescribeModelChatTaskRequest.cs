@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SeriesInfo : AbstractModel
+    public class DescribeModelChatTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 数据列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>任务ID</p>
         /// </summary>
-        [JsonProperty("Columns")]
-        public string[] Columns{ get; set; }
-
-        /// <summary>
-        /// 数据值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Values")]
-        public long?[] Values{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Columns.", this.Columns);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3D80EA95-07CB-3BD7-AB22-6D1BCDBA6B91}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1534</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,7 @@
     <Compile Include="V20211122\Models\BreakStandbyDBInstanceRelationResponse.cs" />
     <Compile Include="V20211122\Models\CancelIsolateDBInstancesRequest.cs" />
     <Compile Include="V20211122\Models\CancelIsolateDBInstancesResponse.cs" />
+    <Compile Include="V20211122\Models\CharsetCollationItem.cs" />
     <Compile Include="V20211122\Models\CloneInstanceModel.cs" />
     <Compile Include="V20211122\Models\ConstraintRange.cs" />
     <Compile Include="V20211122\Models\CreateCloneInstanceRequest.cs" />
@@ -163,6 +164,8 @@
     <Compile Include="V20211122\Models\MaintenanceWindowInfo.cs" />
     <Compile Include="V20211122\Models\ModifyAutoRenewFlagRequest.cs" />
     <Compile Include="V20211122\Models\ModifyAutoRenewFlagResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyDBInstanceRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyDBInstanceResponse.cs" />
     <Compile Include="V20211122\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20211122\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20211122\Models\ModifyDBInstanceVPortRequest.cs" />
@@ -188,6 +191,7 @@
     <Compile Include="V20211122\Models\NodeInfo.cs" />
     <Compile Include="V20211122\Models\ParamConstraint.cs" />
     <Compile Include="V20211122\Models\ParamDesc.cs" />
+    <Compile Include="V20211122\Models\PasswordComplexity.cs" />
     <Compile Include="V20211122\Models\ResetDbaAdminPrivilegesRequest.cs" />
     <Compile Include="V20211122\Models\ResetDbaAdminPrivilegesResponse.cs" />
     <Compile Include="V20211122\Models\ResetUserPasswordInfo.cs" />

@@ -25,149 +25,156 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 错误率
+        /// <p>错误率</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrRate")]
         public float? ErrRate{ get; set; }
 
         /// <summary>
-        /// 节点类型
+        /// <p>节点类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
-        /// 节点名
+        /// <p>节点名</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 节点权重
+        /// <p>节点权重</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public float? Weight{ get; set; }
 
         /// <summary>
-        /// 节点颜色
+        /// <p>节点颜色</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }
 
         /// <summary>
-        /// 响应时间
+        /// <p>响应时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 吞吐量
+        /// <p>吞吐量</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qps")]
         public float? Qps{ get; set; }
 
         /// <summary>
-        /// 节点类型
+        /// <p>节点类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 节点ID
+        /// <p>节点ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 节点大小
+        /// <p>节点大小</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public string Size{ get; set; }
 
         /// <summary>
-        /// 节点是否为组件类型
+        /// <p>节点是否为组件类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsModule")]
         public bool? IsModule{ get; set; }
 
         /// <summary>
-        /// 节点位置信息
+        /// <p>节点位置信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Position")]
         public Position Position{ get; set; }
 
         /// <summary>
-        /// 节点标签
+        /// <p>节点标签</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 节点是否可以下钻
+        /// <p>节点是否可以下钻</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanDrillDown")]
         public bool? CanDrillDown{ get; set; }
 
         /// <summary>
-        /// 资源层信息
+        /// <p>资源层信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public Resource Resource{ get; set; }
 
         /// <summary>
-        /// 拓扑节点视图名字
+        /// <p>拓扑节点视图名字</p>
         /// </summary>
         [JsonProperty("NodeView")]
         public string NodeView{ get; set; }
 
         /// <summary>
-        /// MQ 消费者视角的响应时间 ms
+        /// <p>MQ 消费者视角的响应时间 ms</p>
         /// </summary>
         [JsonProperty("ConsumerDuration")]
         public float? ConsumerDuration{ get; set; }
 
         /// <summary>
-        /// MQ 消费者视角的错误率 %
+        /// <p>MQ 消费者视角的错误率 %</p>
         /// </summary>
         [JsonProperty("ConsumerErrRate")]
         public float? ConsumerErrRate{ get; set; }
 
         /// <summary>
-        /// MQ 消费者视角的吞吐量
+        /// <p>MQ 消费者视角的吞吐量</p>
         /// </summary>
         [JsonProperty("ConsumerQps")]
         public float? ConsumerQps{ get; set; }
 
         /// <summary>
-        /// 应用 ID
+        /// <p>应用 ID</p>
         /// </summary>
         [JsonProperty("ServiceId")]
+        [System.Obsolete]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 调用次数
+        /// <p>调用次数</p>
         /// </summary>
         [JsonProperty("ReqCnt")]
         public long? ReqCnt{ get; set; }
 
         /// <summary>
-        /// 消息队列消费者视角的调用次数
+        /// <p>消息队列消费者视角的调用次数</p>
         /// </summary>
         [JsonProperty("ConsumerReqCnt")]
         public long? ConsumerReqCnt{ get; set; }
+
+        /// <summary>
+        /// <p>应用 ID</p>
+        /// </summary>
+        [JsonProperty("ServiceID")]
+        public string ServiceID{ get; set; }
 
 
         /// <summary>
@@ -197,6 +204,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "ReqCnt", this.ReqCnt);
             this.SetParamSimple(map, prefix + "ConsumerReqCnt", this.ConsumerReqCnt);
+            this.SetParamSimple(map, prefix + "ServiceID", this.ServiceID);
         }
     }
 }

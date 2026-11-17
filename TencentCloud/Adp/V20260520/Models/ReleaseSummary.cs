@@ -81,6 +81,13 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("PortalShareConfig")]
         public PortalShareConfig PortalShareConfig{ get; set; }
 
+        /// <summary>
+        /// <p>A2A配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("A2AConfig")]
+        public A2AConfig A2AConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArraySimple(map, prefix + "ChannelIdList.", this.ChannelIdList);
             this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
             this.SetParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
+            this.SetParamObj(map, prefix + "A2AConfig.", this.A2AConfig);
         }
     }
 }

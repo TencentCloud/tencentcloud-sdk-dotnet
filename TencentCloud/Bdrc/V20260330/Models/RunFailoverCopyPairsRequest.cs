@@ -25,22 +25,28 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 复制对ID列表
+        /// <p>复制对ID列表</p>
         /// </summary>
         [JsonProperty("CopyPairIds")]
         public string[] CopyPairIds{ get; set; }
 
         /// <summary>
-        /// 复制对类型，枚举值：DISK / INSTANCE / CFS。
+        /// <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
         /// </summary>
         [JsonProperty("CopyPairType")]
         public string CopyPairType{ get; set; }
 
         /// <summary>
-        /// 切换类型，支持WAIT和NOW
+        /// <p>切换类型，支持WAIT和NOW</p>
         /// </summary>
         [JsonProperty("FailoverType")]
         public string FailoverType{ get; set; }
+
+        /// <summary>
+        /// <p>故障切换成功后是否自动关机生产端实例，默认为true</p>
+        /// </summary>
+        [JsonProperty("StopSourceInstance")]
+        public bool? StopSourceInstance{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamArraySimple(map, prefix + "CopyPairIds.", this.CopyPairIds);
             this.SetParamSimple(map, prefix + "CopyPairType", this.CopyPairType);
             this.SetParamSimple(map, prefix + "FailoverType", this.FailoverType);
+            this.SetParamSimple(map, prefix + "StopSourceInstance", this.StopSourceInstance);
         }
     }
 }

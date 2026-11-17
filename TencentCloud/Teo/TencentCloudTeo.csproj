@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1533</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20220901\Models\AccelerationDomain.cs" />
     <Compile Include="V20220901\Models\AccelerationDomainCertificate.cs" />
     <Compile Include="V20220901\Models\AccessURLRedirectParameters.cs" />
+    <Compile Include="V20220901\Models\AccessURLRedirectPort.cs" />
     <Compile Include="V20220901\Models\AccessURLRedirectQueryString.cs" />
     <Compile Include="V20220901\Models\AccountProtectionSettings.cs" />
     <Compile Include="V20220901\Models\AclCondition.cs" />
@@ -481,6 +482,8 @@
     <Compile Include="V20220901\Models\DescribeSecurityTemplateBindingsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeSharedCNAMERequest.cs" />
     <Compile Include="V20220901\Models\DescribeSharedCNAMEResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeTimingFunctionAnalysisDataRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeTimingFunctionAnalysisDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL4DataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL7AnalysisDataRequest.cs" />
@@ -489,6 +492,8 @@
     <Compile Include="V20220901\Models\DescribeTimingL7CacheDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL7OriginPullDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTimingL7OriginPullDataResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeTopFunctionAnalysisDataRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeTopFunctionAnalysisDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTopL7AnalysisDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTopL7AnalysisDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTopL7CacheDataRequest.cs" />

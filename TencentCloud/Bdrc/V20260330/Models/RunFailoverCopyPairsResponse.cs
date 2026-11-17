@@ -25,7 +25,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 故障切换任务ID
+        /// <p>故障切换任务ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

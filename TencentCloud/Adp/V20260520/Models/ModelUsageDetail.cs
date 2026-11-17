@@ -25,10 +25,28 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
+        /// <p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+        /// </summary>
+        [JsonProperty("ApiKeyDisplay")]
+        public string ApiKeyDisplay{ get; set; }
+
+        /// <summary>
+        /// <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
+        /// </summary>
+        [JsonProperty("BillingType")]
+        public long? BillingType{ get; set; }
+
+        /// <summary>
         /// <p>调用类型，来源于计费 scene_billing（与 filter.call_type 对应）</p>
         /// </summary>
         [JsonProperty("CallType")]
         public string CallType{ get; set; }
+
+        /// <summary>
+        /// <p>本次调用消耗 PU 量</p>
+        /// </summary>
+        [JsonProperty("ConsumptionPU")]
+        public float? ConsumptionPU{ get; set; }
 
         /// <summary>
         /// <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
@@ -48,23 +66,19 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("ResourceConsumptionList")]
         public ResourceConsumption[] ResourceConsumptionList{ get; set; }
 
-        /// <summary>
-        /// <p>本次调用消耗 PU 量</p>
-        /// </summary>
-        [JsonProperty("ConsumptionPU")]
-        public float? ConsumptionPU{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApiKeyDisplay", this.ApiKeyDisplay);
+            this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
             this.SetParamSimple(map, prefix + "CallType", this.CallType);
+            this.SetParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
             this.SetParamSimple(map, prefix + "IsDefaultKB", this.IsDefaultKB);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamArrayObj(map, prefix + "ResourceConsumptionList.", this.ResourceConsumptionList);
-            this.SetParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
         }
     }
 }

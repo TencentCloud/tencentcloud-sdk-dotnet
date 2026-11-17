@@ -97,6 +97,30 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ExceptionMessage{ get; set; }
 
         /// <summary>
+        /// <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+        /// </summary>
+        [JsonProperty("ErrorCode")]
+        public string ErrorCode{ get; set; }
+
+        /// <summary>
+        /// <p>结构化失败原因</p>
+        /// </summary>
+        [JsonProperty("ErrorReason")]
+        public string ErrorReason{ get; set; }
+
+        /// <summary>
+        /// <p>结构化解决方案</p>
+        /// </summary>
+        [JsonProperty("ErrorSolution")]
+        public string ErrorSolution{ get; set; }
+
+        /// <summary>
+        /// <p>原始错误信息（不做翻译）</p>
+        /// </summary>
+        [JsonProperty("RawErrorMessage")]
+        public string RawErrorMessage{ get; set; }
+
+        /// <summary>
         /// <p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
         /// </summary>
         [JsonProperty("StartTime")]
@@ -126,6 +150,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("SnapshotFailReason")]
         public string SnapshotFailReason{ get; set; }
 
+        /// <summary>
+        /// <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
+        /// <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+        /// </summary>
+        [JsonProperty("SnapshotReused")]
+        public bool? SnapshotReused{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,11 +180,17 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "FixStatus", this.FixStatus);
             this.SetParamSimple(map, prefix + "SnapshotStatus", this.SnapshotStatus);
             this.SetParamSimple(map, prefix + "ExceptionMessage", this.ExceptionMessage);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+            this.SetParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
+            this.SetParamSimple(map, prefix + "ErrorSolution", this.ErrorSolution);
+            this.SetParamSimple(map, prefix + "RawErrorMessage", this.RawErrorMessage);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SnapshotCreateTime", this.SnapshotCreateTime);
             this.SetParamSimple(map, prefix + "SnapshotExpireTime", this.SnapshotExpireTime);
             this.SetParamSimple(map, prefix + "SnapshotFailReason", this.SnapshotFailReason);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "SnapshotReused", this.SnapshotReused);
         }
     }
 }

@@ -97,6 +97,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string StorageMode{ get; set; }
 
         /// <summary>
+        /// <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+        /// </summary>
+        [JsonProperty("ServerArgs")]
+        public string ServerArgs{ get; set; }
+
+        /// <summary>
+        /// <p>描述信息（纯文本；null = 未填写）</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
         /// <p>应用 ID</p>
         /// </summary>
         [JsonProperty("AppId")]
@@ -107,6 +119,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
+
+        /// <summary>
+        /// <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
 
         /// <summary>
         /// <p>创建时间（epoch 毫秒）</p><p>单位：毫秒</p>
@@ -133,6 +157,36 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+        /// </summary>
+        [JsonProperty("LastProbeSuccessTime")]
+        public long? LastProbeSuccessTime{ get; set; }
+
+        /// <summary>
+        /// <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+        /// </summary>
+        [JsonProperty("ConsecutiveProbeFailures")]
+        public long? ConsecutiveProbeFailures{ get; set; }
+
+        /// <summary>
+        /// <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+        /// </summary>
+        [JsonProperty("LastProbeError")]
+        public string LastProbeError{ get; set; }
+
+        /// <summary>
+        /// <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+        /// </summary>
+        [JsonProperty("TotalInstanceCount")]
+        public long? TotalInstanceCount{ get; set; }
+
+        /// <summary>
+        /// <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
+        /// </summary>
+        [JsonProperty("RunningInstanceCount")]
+        public long? RunningInstanceCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,12 +205,21 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "StorageConfig", this.StorageConfig);
             this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
+            this.SetParamSimple(map, prefix + "ServerArgs", this.ServerArgs);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "LastProbeSuccessTime", this.LastProbeSuccessTime);
+            this.SetParamSimple(map, prefix + "ConsecutiveProbeFailures", this.ConsecutiveProbeFailures);
+            this.SetParamSimple(map, prefix + "LastProbeError", this.LastProbeError);
+            this.SetParamSimple(map, prefix + "TotalInstanceCount", this.TotalInstanceCount);
+            this.SetParamSimple(map, prefix + "RunningInstanceCount", this.RunningInstanceCount);
         }
     }
 }

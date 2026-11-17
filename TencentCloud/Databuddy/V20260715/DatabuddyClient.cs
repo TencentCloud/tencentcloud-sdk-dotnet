@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1534";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -885,6 +885,27 @@ namespace TencentCloud.Databuddy.V20260715
         }
 
         /// <summary>
+        /// 查询会话任务运行状态（支持批量）
+        /// </summary>
+        /// <param name="req"><see cref="GetSessionStatusRequest"/></param>
+        /// <returns><see cref="GetSessionStatusResponse"/></returns>
+        public Task<GetSessionStatusResponse> GetSessionStatus(GetSessionStatusRequest req)
+        {
+            return InternalRequestAsync<GetSessionStatusResponse>(req, "GetSessionStatus");
+        }
+
+        /// <summary>
+        /// 查询会话任务运行状态（支持批量）
+        /// </summary>
+        /// <param name="req"><see cref="GetSessionStatusRequest"/></param>
+        /// <returns><see cref="GetSessionStatusResponse"/></returns>
+        public GetSessionStatusResponse GetSessionStatusSync(GetSessionStatusRequest req)
+        {
+            return InternalRequestAsync<GetSessionStatusResponse>(req, "GetSessionStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询table详情
         /// </summary>
         /// <param name="req"><see cref="GetTableRequest"/></param>
@@ -1597,6 +1618,27 @@ namespace TencentCloud.Databuddy.V20260715
         public ListWorkspacesResponse ListWorkspacesSync(ListWorkspacesRequest req)
         {
             return InternalRequestAsync<ListWorkspacesResponse>(req, "ListWorkspaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// databuddy 产物获取接口
+        /// </summary>
+        /// <param name="req"><see cref="ReadProductJsonRequest"/></param>
+        /// <returns><see cref="ReadProductJsonResponse"/></returns>
+        public Task<ReadProductJsonResponse> ReadProductJson(ReadProductJsonRequest req)
+        {
+            return InternalRequestAsync<ReadProductJsonResponse>(req, "ReadProductJson");
+        }
+
+        /// <summary>
+        /// databuddy 产物获取接口
+        /// </summary>
+        /// <param name="req"><see cref="ReadProductJsonRequest"/></param>
+        /// <returns><see cref="ReadProductJsonResponse"/></returns>
+        public ReadProductJsonResponse ReadProductJsonSync(ReadProductJsonRequest req)
+        {
+            return InternalRequestAsync<ReadProductJsonResponse>(req, "ReadProductJson")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

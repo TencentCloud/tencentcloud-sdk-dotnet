@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SubAppId{ get; set; }
 
         /// <summary>
+        /// <p>模型名，不填默认为MiniMax模型。</p>枚举值：<ul><li><p>MiniMax</p></li><li><p>ElevenLabs</p></li></ul>
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
+        /// <summary>
         /// <p>音色ID</p>
         /// </summary>
         [JsonProperty("VoiceId")]
@@ -97,6 +103,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
             this.SetParamSimple(map, prefix + "VoiceName", this.VoiceName);

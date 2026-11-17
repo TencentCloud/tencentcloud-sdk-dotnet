@@ -190,6 +190,48 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+        /// </summary>
+        [JsonProperty("ModelSource")]
+        public string ModelSource{ get; set; }
+
+        /// <summary>
+        /// <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+        /// </summary>
+        [JsonProperty("ModelCategory")]
+        public string ModelCategory{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+        /// </summary>
+        [JsonProperty("BaseModelUid")]
+        public string BaseModelUid{ get; set; }
+
+        /// <summary>
+        /// <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+        /// </summary>
+        [JsonProperty("LatestVersionUid")]
+        public string LatestVersionUid{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+        /// </summary>
+        [JsonProperty("BaseModelVersionUid")]
+        public string BaseModelVersionUid{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+        /// </summary>
+        [JsonProperty("BaseModelName")]
+        public string BaseModelName{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+        /// </summary>
+        [JsonProperty("BaseModelVersion")]
+        public string BaseModelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -220,6 +262,13 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "ModelSource", this.ModelSource);
+            this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
+            this.SetParamSimple(map, prefix + "BaseModelUid", this.BaseModelUid);
+            this.SetParamSimple(map, prefix + "LatestVersionUid", this.LatestVersionUid);
+            this.SetParamSimple(map, prefix + "BaseModelVersionUid", this.BaseModelVersionUid);
+            this.SetParamSimple(map, prefix + "BaseModelName", this.BaseModelName);
+            this.SetParamSimple(map, prefix + "BaseModelVersion", this.BaseModelVersion);
         }
     }
 }

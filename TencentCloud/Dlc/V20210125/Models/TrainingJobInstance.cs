@@ -85,6 +85,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Creator{ get; set; }
 
         /// <summary>
+        /// <p>子账号 UIN</p>
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>子账号名称</p>
+        /// </summary>
+        [JsonProperty("SubAccountName")]
+        public string SubAccountName{ get; set; }
+
+        /// <summary>
         /// <p>创建时间（毫秒时间戳）</p>
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -222,6 +234,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResumeTraining")]
         public bool? ResumeTraining{ get; set; }
 
+        /// <summary>
+        /// <p>自定义网络配置</p>
+        /// </summary>
+        [JsonProperty("NetworkConfig")]
+        public string NetworkConfig{ get; set; }
+
+        /// <summary>
+        /// <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
+        /// </summary>
+        [JsonProperty("ResumeSourceInstanceId")]
+        public string ResumeSourceInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +262,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "JobRunningTime", this.JobRunningTime);
             this.SetParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
@@ -261,6 +287,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "Checkpoint.", this.Checkpoint);
             this.SetParamObj(map, prefix + "TuningParams.", this.TuningParams);
             this.SetParamSimple(map, prefix + "ResumeTraining", this.ResumeTraining);
+            this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
+            this.SetParamSimple(map, prefix + "ResumeSourceInstanceId", this.ResumeSourceInstanceId);
         }
     }
 }

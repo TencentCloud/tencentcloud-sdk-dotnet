@@ -25,6 +25,24 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
+        /// <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+        /// </summary>
+        [JsonProperty("DeploymentUuid")]
+        public string DeploymentUuid{ get; set; }
+
+        /// <summary>
+        /// <p>空间 ID</p>
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
+        /// <summary>
+        /// <p>空间名称；空间不存在或查询失败时为空</p>
+        /// </summary>
+        [JsonProperty("SpaceName")]
+        public string SpaceName{ get; set; }
+
+        /// <summary>
         /// <p>调用主体 ID，含义由 subject_type 决定（如 app_id、kb_id 等）</p>
         /// </summary>
         [JsonProperty("SubjectId")]
@@ -48,6 +66,9 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DeploymentUuid", this.DeploymentUuid);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "SpaceName", this.SpaceName);
             this.SetParamSimple(map, prefix + "SubjectId", this.SubjectId);
             this.SetParamSimple(map, prefix + "SubjectName", this.SubjectName);
             this.SetParamSimple(map, prefix + "SubjectType", this.SubjectType);

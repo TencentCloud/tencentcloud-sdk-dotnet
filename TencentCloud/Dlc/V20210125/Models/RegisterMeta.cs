@@ -15,27 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTRTCMarketScaleMetricDataResponse : AbstractModel
+    public class RegisterMeta : AbstractModel
     {
         
         /// <summary>
-        /// TRTC监控数据出参
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>Checkpoint 子路径不能为空</p>
         /// </summary>
-        [JsonProperty("Data")]
-        public TRTCDataResp Data{ get; set; }
+        [JsonProperty("CheckpointSubPath")]
+        public string CheckpointSubPath{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>来源训练实例标识（接入方自定义语义，可选）</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>接入方扩展键值列表（原样落库，平台不解释）</p>
+        /// </summary>
+        [JsonProperty("Extras")]
+        public KVPair[] Extras{ get; set; }
 
 
         /// <summary>
@@ -43,8 +48,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "CheckpointSubPath", this.CheckpointSubPath);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Extras.", this.Extras);
         }
     }
 }

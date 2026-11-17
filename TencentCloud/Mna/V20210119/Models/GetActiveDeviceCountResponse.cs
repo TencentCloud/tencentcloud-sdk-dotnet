@@ -25,43 +25,43 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 激活设备统计
+        /// <p>激活设备统计</p>
         /// </summary>
         [JsonProperty("ActiveDeviceList")]
         public ActiveDeviceList[] ActiveDeviceList{ get; set; }
 
         /// <summary>
-        /// 查询粒度，0:day, 1:week, 2:month, 不传默认为day
+        /// <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// <p>开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// <p>结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 设备组
+        /// <p>设备组</p>
         /// </summary>
         [JsonProperty("DevGroup")]
         public string DevGroup{ get; set; }
 
         /// <summary>
-        /// license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+        /// <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
         /// </summary>
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
         /// <summary>
-        /// 租户ID
+        /// <p>租户ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

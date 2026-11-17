@@ -114,6 +114,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EventScope")]
         public ulong? EventScope{ get; set; }
 
+        /// <summary>
+        /// <p>展开详情</p>
+        /// </summary>
+        [JsonProperty("ExpandDetail")]
+        public string ExpandDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SubEventType", this.SubEventType);
             this.SetParamSimple(map, prefix + "SubEventName", this.SubEventName);
             this.SetParamSimple(map, prefix + "EventScope", this.EventScope);
+            this.SetParamSimple(map, prefix + "ExpandDetail", this.ExpandDetail);
         }
     }
 }

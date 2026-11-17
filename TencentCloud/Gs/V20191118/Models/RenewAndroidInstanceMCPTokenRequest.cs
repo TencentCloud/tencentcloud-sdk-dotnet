@@ -24,12 +24,26 @@ namespace TencentCloud.Gs.V20191118.Models
     public class RenewAndroidInstanceMCPTokenRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>内部 ID，格式 k_ + 16 位 hex</p>
+        /// </summary>
+        [JsonProperty("TokenId")]
+        public string TokenId{ get; set; }
+
+        /// <summary>
+        /// <p>有效期（秒），必须大于 0</p><p>单位：秒</p>
+        /// </summary>
+        [JsonProperty("ExpireSeconds")]
+        public long? ExpireSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TokenId", this.TokenId);
+            this.SetParamSimple(map, prefix + "ExpireSeconds", this.ExpireSeconds);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1524";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -1738,6 +1738,27 @@ namespace TencentCloud.Iss.V20230517
         public ListTasksResponse ListTasksSync(ListTasksRequest req)
         {
             return InternalRequestAsync<ListTasksResponse>(req, "ListTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取视觉理解计划结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVLPlanResultsRequest"/></param>
+        /// <returns><see cref="ListVLPlanResultsResponse"/></returns>
+        public Task<ListVLPlanResultsResponse> ListVLPlanResults(ListVLPlanResultsRequest req)
+        {
+            return InternalRequestAsync<ListVLPlanResultsResponse>(req, "ListVLPlanResults");
+        }
+
+        /// <summary>
+        /// 获取视觉理解计划结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVLPlanResultsRequest"/></param>
+        /// <returns><see cref="ListVLPlanResultsResponse"/></returns>
+        public ListVLPlanResultsResponse ListVLPlanResultsSync(ListVLPlanResultsRequest req)
+        {
+            return InternalRequestAsync<ListVLPlanResultsResponse>(req, "ListVLPlanResults")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

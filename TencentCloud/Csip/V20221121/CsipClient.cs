@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1533";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateAllAssetsExportJobResponse CreateAllAssetsExportJobSync(CreateAllAssetsExportJobRequest req)
         {
             return InternalRequestAsync<CreateAllAssetsExportJobResponse>(req, "CreateAllAssetsExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资产基线风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetBaselineRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetBaselineRiskExportJobResponse"/></returns>
+        public Task<CreateAssetBaselineRiskExportJobResponse> CreateAssetBaselineRiskExportJob(CreateAssetBaselineRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetBaselineRiskExportJobResponse>(req, "CreateAssetBaselineRiskExportJob");
+        }
+
+        /// <summary>
+        /// 创建资产基线风险导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetBaselineRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetBaselineRiskExportJobResponse"/></returns>
+        public CreateAssetBaselineRiskExportJobResponse CreateAssetBaselineRiskExportJobSync(CreateAssetBaselineRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetBaselineRiskExportJobResponse>(req, "CreateAssetBaselineRiskExportJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2540,6 +2561,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 删除基线忽略策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="DeleteBaselineIgnorePolicyResponse"/></returns>
+        public Task<DeleteBaselineIgnorePolicyResponse> DeleteBaselineIgnorePolicy(DeleteBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineIgnorePolicyResponse>(req, "DeleteBaselineIgnorePolicy");
+        }
+
+        /// <summary>
+        /// 删除基线忽略策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="DeleteBaselineIgnorePolicyResponse"/></returns>
+        public DeleteBaselineIgnorePolicyResponse DeleteBaselineIgnorePolicySync(DeleteBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineIgnorePolicyResponse>(req, "DeleteBaselineIgnorePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量删除自定义基线策略。仅支持删除 PolicyType=SELF 的策略；删除后历史风险记录保留，但不再产生新结果。
         /// </summary>
         /// <param name="req"><see cref="DeleteBaselineSelfDefinedPolicyListRequest"/></param>
@@ -4181,6 +4223,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取资产风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetBaselineRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetBaselineRiskListResponse"/></returns>
+        public Task<DescribeAssetBaselineRiskListResponse> DescribeAssetBaselineRiskList(DescribeAssetBaselineRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetBaselineRiskListResponse>(req, "DescribeAssetBaselineRiskList");
+        }
+
+        /// <summary>
+        /// 获取资产风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetBaselineRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetBaselineRiskListResponse"/></returns>
+        public DescribeAssetBaselineRiskListResponse DescribeAssetBaselineRiskListSync(DescribeAssetBaselineRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetBaselineRiskListResponse>(req, "DescribeAssetBaselineRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询资产中组件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetComponentListRequest"/></param>
@@ -4702,6 +4765,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeBaselineFixRecordListResponse DescribeBaselineFixRecordListSync(DescribeBaselineFixRecordListRequest req)
         {
             return InternalRequestAsync<DescribeBaselineFixRecordListResponse>(req, "DescribeBaselineFixRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取基线忽略策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineIgnorePolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineIgnorePolicyListResponse"/></returns>
+        public Task<DescribeBaselineIgnorePolicyListResponse> DescribeBaselineIgnorePolicyList(DescribeBaselineIgnorePolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineIgnorePolicyListResponse>(req, "DescribeBaselineIgnorePolicyList");
+        }
+
+        /// <summary>
+        /// 获取基线忽略策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineIgnorePolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineIgnorePolicyListResponse"/></returns>
+        public DescribeBaselineIgnorePolicyListResponse DescribeBaselineIgnorePolicyListSync(DescribeBaselineIgnorePolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineIgnorePolicyListResponse>(req, "DescribeBaselineIgnorePolicyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5720,6 +5804,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeClusterAssetsResponse DescribeClusterAssetsSync(DescribeClusterAssetsRequest req)
         {
             return InternalRequestAsync<DescribeClusterAssetsResponse>(req, "DescribeClusterAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集群风险策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaselineRiskPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaselineRiskPolicyListResponse"/></returns>
+        public Task<DescribeClusterBaselineRiskPolicyListResponse> DescribeClusterBaselineRiskPolicyList(DescribeClusterBaselineRiskPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaselineRiskPolicyListResponse>(req, "DescribeClusterBaselineRiskPolicyList");
+        }
+
+        /// <summary>
+        /// 获取集群风险策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaselineRiskPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaselineRiskPolicyListResponse"/></returns>
+        public DescribeClusterBaselineRiskPolicyListResponse DescribeClusterBaselineRiskPolicyListSync(DescribeClusterBaselineRiskPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaselineRiskPolicyListResponse>(req, "DescribeClusterBaselineRiskPolicyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7022,6 +7127,29 @@ namespace TencentCloud.Csip.V20221121
         public DescribeDspmAccessTopologyIpsResponse DescribeDspmAccessTopologyIpsSync(DescribeDspmAccessTopologyIpsRequest req)
         {
             return InternalRequestAsync<DescribeDspmAccessTopologyIpsResponse>(req, "DescribeDspmAccessTopologyIps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据库访问拓扑（库级/表级）的概览卡片数据，包含来源IP数、访问账号数、被访问库数/表数、近7天与近30天访问次数。
+        /// 数据由后台预聚合产生，查询侧无聚合开销；出参 LastCalcTime 为数据最后计算时间，可据此判断数据新鲜度。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologySummaryRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologySummaryResponse"/></returns>
+        public Task<DescribeDspmAccessTopologySummaryResponse> DescribeDspmAccessTopologySummary(DescribeDspmAccessTopologySummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologySummaryResponse>(req, "DescribeDspmAccessTopologySummary");
+        }
+
+        /// <summary>
+        /// 查询数据库访问拓扑（库级/表级）的概览卡片数据，包含来源IP数、访问账号数、被访问库数/表数、近7天与近30天访问次数。
+        /// 数据由后台预聚合产生，查询侧无聚合开销；出参 LastCalcTime 为数据最后计算时间，可据此判断数据新鲜度。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDspmAccessTopologySummaryRequest"/></param>
+        /// <returns><see cref="DescribeDspmAccessTopologySummaryResponse"/></returns>
+        public DescribeDspmAccessTopologySummaryResponse DescribeDspmAccessTopologySummarySync(DescribeDspmAccessTopologySummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeDspmAccessTopologySummaryResponse>(req, "DescribeDspmAccessTopologySummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8916,6 +9044,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询主机漏洞风险事件列表，按风险记录维度返回漏洞基础信息、实例信息、风险状态和最近扫描时间。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskEventListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskEventListResponse"/></returns>
+        public Task<DescribeHostVulRiskEventListResponse> DescribeHostVulRiskEventList(DescribeHostVulRiskEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskEventListResponse>(req, "DescribeHostVulRiskEventList");
+        }
+
+        /// <summary>
+        /// 查询主机漏洞风险事件列表，按风险记录维度返回漏洞基础信息、实例信息、风险状态和最近扫描时间。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskEventListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskEventListResponse"/></returns>
+        public DescribeHostVulRiskEventListResponse DescribeHostVulRiskEventListSync(DescribeHostVulRiskEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskEventListResponse>(req, "DescribeHostVulRiskEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取主机漏洞风险列表
         /// </summary>
         /// <param name="req"><see cref="DescribeHostVulRiskListRequest"/></param>
@@ -8933,6 +9082,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeHostVulRiskListResponse DescribeHostVulRiskListSync(DescribeHostVulRiskListRequest req)
         {
             return InternalRequestAsync<DescribeHostVulRiskListResponse>(req, "DescribeHostVulRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询主机漏洞扫描状态，用于判断是否扫描过漏洞、首次漏洞扫描是否失败，以及首次扫描完成后的可修复漏洞状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulScanStatusRequest"/></param>
+        /// <returns><see cref="DescribeHostVulScanStatusResponse"/></returns>
+        public Task<DescribeHostVulScanStatusResponse> DescribeHostVulScanStatus(DescribeHostVulScanStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulScanStatusResponse>(req, "DescribeHostVulScanStatus");
+        }
+
+        /// <summary>
+        /// 查询主机漏洞扫描状态，用于判断是否扫描过漏洞、首次漏洞扫描是否失败，以及首次扫描完成后的可修复漏洞状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulScanStatusRequest"/></param>
+        /// <returns><see cref="DescribeHostVulScanStatusResponse"/></returns>
+        public DescribeHostVulScanStatusResponse DescribeHostVulScanStatusSync(DescribeHostVulScanStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulScanStatusResponse>(req, "DescribeHostVulScanStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -12993,6 +13163,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改基线忽略策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="ModifyBaselineIgnorePolicyResponse"/></returns>
+        public Task<ModifyBaselineIgnorePolicyResponse> ModifyBaselineIgnorePolicy(ModifyBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineIgnorePolicyResponse>(req, "ModifyBaselineIgnorePolicy");
+        }
+
+        /// <summary>
+        /// 修改基线忽略策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="ModifyBaselineIgnorePolicyResponse"/></returns>
+        public ModifyBaselineIgnorePolicyResponse ModifyBaselineIgnorePolicySync(ModifyBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineIgnorePolicyResponse>(req, "ModifyBaselineIgnorePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新建或编辑一条基线策略。Policy.ID 为 0 视为新建，非 0 视为编辑；新建/编辑时 Name 必填，CheckAssetType 与 Type 需符合 CheckAssetType / PolicyType 枚举。
         /// </summary>
         /// <param name="req"><see cref="ModifyBaselinePolicyRequest"/></param>
@@ -13220,6 +13411,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyCSIPRaspLicenseUnBindsResponse ModifyCSIPRaspLicenseUnBindsSync(ModifyCSIPRaspLicenseUnBindsRequest req)
         {
             return InternalRequestAsync<ModifyCSIPRaspLicenseUnBindsResponse>(req, "ModifyCSIPRaspLicenseUnBinds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群审计日志状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAuditLogStatusRequest"/></param>
+        /// <returns><see cref="ModifyClusterAuditLogStatusResponse"/></returns>
+        public Task<ModifyClusterAuditLogStatusResponse> ModifyClusterAuditLogStatus(ModifyClusterAuditLogStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterAuditLogStatusResponse>(req, "ModifyClusterAuditLogStatus");
+        }
+
+        /// <summary>
+        /// 修改集群审计日志状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAuditLogStatusRequest"/></param>
+        /// <returns><see cref="ModifyClusterAuditLogStatusResponse"/></returns>
+        public ModifyClusterAuditLogStatusResponse ModifyClusterAuditLogStatusSync(ModifyClusterAuditLogStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterAuditLogStatusResponse>(req, "ModifyClusterAuditLogStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

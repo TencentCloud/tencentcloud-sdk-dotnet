@@ -25,18 +25,26 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>业务系统ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceID")]
+        [System.Obsolete]
         public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// <p>业务系统ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -46,6 +54,7 @@ namespace TencentCloud.Apm.V20210622.Models
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

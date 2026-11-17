@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? EffectHostCount{ get; set; }
 
         /// <summary>
-        /// <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
+        /// <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
         /// </summary>
         [JsonProperty("LatestScanTime")]
         public string LatestScanTime{ get; set; }
@@ -60,6 +60,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("RiskStatus")]
         public string RiskStatus{ get; set; }
 
+        /// <summary>
+        /// <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+        /// </summary>
+        [JsonProperty("IsNew")]
+        public bool? IsNew{ get; set; }
+
+        /// <summary>
+        /// <p>修复任务id</p>
+        /// </summary>
+        [JsonProperty("FixTaskId")]
+        public string FixTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "LatestScanTime", this.LatestScanTime);
             this.SetParamArrayObj(map, prefix + "Account.", this.Account);
             this.SetParamSimple(map, prefix + "RiskStatus", this.RiskStatus);
+            this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
+            this.SetParamSimple(map, prefix + "FixTaskId", this.FixTaskId);
         }
     }
 }

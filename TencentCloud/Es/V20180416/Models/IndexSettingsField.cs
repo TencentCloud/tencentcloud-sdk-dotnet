@@ -25,25 +25,37 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 索引主分片数
+        /// <p>索引主分片数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumberOfShards")]
         public string NumberOfShards{ get; set; }
 
         /// <summary>
-        /// 索引副本分片数
+        /// <p>索引副本分片数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumberOfReplicas")]
         public string NumberOfReplicas{ get; set; }
 
         /// <summary>
-        /// 索引刷新频率
+        /// <p>索引刷新频率</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RefreshInterval")]
         public string RefreshInterval{ get; set; }
+
+        /// <summary>
+        /// <p>动态字段识别开关</p>
+        /// </summary>
+        [JsonProperty("Dynamic")]
+        public string Dynamic{ get; set; }
+
+        /// <summary>
+        /// <p>索引字段数上限</p>
+        /// </summary>
+        [JsonProperty("TotalFieldsLimit")]
+        public string TotalFieldsLimit{ get; set; }
 
 
         /// <summary>
@@ -54,6 +66,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "NumberOfShards", this.NumberOfShards);
             this.SetParamSimple(map, prefix + "NumberOfReplicas", this.NumberOfReplicas);
             this.SetParamSimple(map, prefix + "RefreshInterval", this.RefreshInterval);
+            this.SetParamSimple(map, prefix + "Dynamic", this.Dynamic);
+            this.SetParamSimple(map, prefix + "TotalFieldsLimit", this.TotalFieldsLimit);
         }
     }
 }

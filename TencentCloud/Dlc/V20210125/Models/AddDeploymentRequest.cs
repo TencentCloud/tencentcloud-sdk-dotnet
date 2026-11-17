@@ -102,6 +102,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("NetworkConfig")]
         public string NetworkConfig{ get; set; }
 
+        /// <summary>
+        /// <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+        /// </summary>
+        [JsonProperty("LoraBindings")]
+        public LoraAdapterBinding[] LoraBindings{ get; set; }
+
+        /// <summary>
+        /// <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+        /// </summary>
+        [JsonProperty("CodePackageOriginalName")]
+        public string CodePackageOriginalName{ get; set; }
+
+        /// <summary>
+        /// <p>代码包 URI（Git URL / COS URI）</p>
+        /// </summary>
+        [JsonProperty("CodePackageUri")]
+        public string CodePackageUri{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +139,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
             this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
+            this.SetParamArrayObj(map, prefix + "LoraBindings.", this.LoraBindings);
+            this.SetParamSimple(map, prefix + "CodePackageOriginalName", this.CodePackageOriginalName);
+            this.SetParamSimple(map, prefix + "CodePackageUri", this.CodePackageUri);
         }
     }
 }

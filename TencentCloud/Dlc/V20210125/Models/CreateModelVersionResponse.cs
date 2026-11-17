@@ -86,6 +86,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         public bool? UseCustomStorage{ get; set; }
 
         /// <summary>
+        /// <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+        /// </summary>
+        [JsonProperty("RegisterMeta")]
+        public RegisterMeta RegisterMeta{ get; set; }
+
+        /// <summary>
+        /// <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+        /// </summary>
+        [JsonProperty("VersionUid")]
+        public string VersionUid{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+        /// </summary>
+        [JsonProperty("LoraMeta")]
+        public LoraVersionMeta LoraMeta{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
+        /// </summary>
+        [JsonProperty("PoolImportStatus")]
+        public string PoolImportStatus{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +130,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "LinkedServices.", this.LinkedServices);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
+            this.SetParamObj(map, prefix + "RegisterMeta.", this.RegisterMeta);
+            this.SetParamSimple(map, prefix + "VersionUid", this.VersionUid);
+            this.SetParamObj(map, prefix + "LoraMeta.", this.LoraMeta);
+            this.SetParamSimple(map, prefix + "PoolImportStatus", this.PoolImportStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
+        /// <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 媒体处理的文件输入信息。
+        /// <p>媒体处理的文件输入信息。</p>
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 任务的事件通知信息，不填代表不获取事件通知。
+        /// <p>任务的事件通知信息，不填代表不获取事件通知。</p>
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }
 
         /// <summary>
-        /// 提取数字水印任务配置
+        /// <p>提取数字水印任务配置</p>
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkConfig")]
         public ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+        /// <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public bool? NeedReboot{ get; set; }
 
         /// <summary>
-        /// <p>是否支持一键修复true-支持 false-不支持</p>
+        /// <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
         /// </summary>
         [JsonProperty("FixSwitch")]
         public bool? FixSwitch{ get; set; }

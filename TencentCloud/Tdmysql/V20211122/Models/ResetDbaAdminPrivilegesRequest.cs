@@ -30,6 +30,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// <p>DbaAdmin的host</p>
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
         }
     }
 }

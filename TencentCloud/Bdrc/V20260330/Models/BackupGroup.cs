@@ -25,109 +25,123 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 备份组ID。
+        /// <p>备份组ID。</p>
         /// </summary>
         [JsonProperty("BackupGroupId")]
         public string BackupGroupId{ get; set; }
 
         /// <summary>
-        /// 备份组创建进度。
+        /// <p>备份组创建进度。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
 
         /// <summary>
-        /// 备份和云盘绑定关系
+        /// <p>备份和云盘绑定关系</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupBindDisk")]
         public ApplyDisk[] BackupBindDisk{ get; set; }
 
         /// <summary>
-        /// 备份组名称。
+        /// <p>备份组名称。</p>
         /// </summary>
         [JsonProperty("BackupGroupName")]
         public string BackupGroupName{ get; set; }
 
         /// <summary>
-        /// 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
+        /// <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
         /// </summary>
         [JsonProperty("BackupGroupState")]
         public string BackupGroupState{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// <p>修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 用户AppId。
+        /// <p>用户AppId。</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 是否为永久备份组。
+        /// <p>是否为永久备份组。</p>
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
 
         /// <summary>
-        /// 备份组的到期时间。如果为永久备份组，则取值为null。
+        /// <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// 创建备份组的实例ID。
+        /// <p>创建备份组的实例ID。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 创建备份组时刻实例的详情。
+        /// <p>创建备份组时刻实例的详情。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceDetails")]
         public string InstanceDetails{ get; set; }
 
         /// <summary>
-        /// 创建人名称。
+        /// <p>创建人名称。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 主账号uin。
+        /// <p>主账号uin。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountUin")]
         public string AccountUin{ get; set; }
 
         /// <summary>
-        /// 创建备份的子账号uin。
+        /// <p>创建备份的子账号uin。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
-        /// 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+        /// <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoBackupPolicyId")]
         public string AutoBackupPolicyId{ get; set; }
+
+        /// <summary>
+        /// <p>开始时间</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// <p>结束时间</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -151,6 +165,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "AccountUin", this.AccountUin);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamSimple(map, prefix + "AutoBackupPolicyId", this.AutoBackupPolicyId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 识别结果。
+        /// <p>识别结果。</p>
         /// </summary>
         [JsonProperty("Results")]
         public Result[] Results{ get; set; }
 
         /// <summary>
-        /// 搜索的人员库中包含的人脸数。
+        /// <p>搜索的人员库中包含的人脸数。</p>
         /// </summary>
         [JsonProperty("FaceNum")]
         public ulong? FaceNum{ get; set; }
 
         /// <summary>
-        /// 人脸识别所用的算法模型版本。
+        /// <p>人脸识别所用的算法模型版本。</p>
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }

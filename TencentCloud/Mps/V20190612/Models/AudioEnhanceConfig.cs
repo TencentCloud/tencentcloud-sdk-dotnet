@@ -59,6 +59,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioEnhanceEdit")]
         public AudioEnhanceEditConfig AudioEnhanceEdit{ get; set; }
 
+        /// <summary>
+        /// <p>音频超分配置。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioSR")]
+        public AudioSRConfig AudioSR{ get; set; }
+
+        /// <summary>
+        /// <p>空间音频配置。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpatialAudio")]
+        public SpatialAudioConfig SpatialAudio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "VolumeBalance.", this.VolumeBalance);
             this.SetParamObj(map, prefix + "Beautify.", this.Beautify);
             this.SetParamObj(map, prefix + "AudioEnhanceEdit.", this.AudioEnhanceEdit);
+            this.SetParamObj(map, prefix + "AudioSR.", this.AudioSR);
+            this.SetParamObj(map, prefix + "SpatialAudio.", this.SpatialAudio);
         }
     }
 }

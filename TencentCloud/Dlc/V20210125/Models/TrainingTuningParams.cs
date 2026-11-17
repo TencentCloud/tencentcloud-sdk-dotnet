@@ -204,6 +204,54 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("GpuMemoryUtilization")]
         public float? GpuMemoryUtilization{ get; set; }
 
+        /// <summary>
+        /// <p>Actor Token 上限 / GPU</p>
+        /// </summary>
+        [JsonProperty("PPOMaxTokenLenPerGpu")]
+        public long? PPOMaxTokenLenPerGpu{ get; set; }
+
+        /// <summary>
+        /// <p>LogProb Token 上限 / GPU</p>
+        /// </summary>
+        [JsonProperty("LogProbMaxTokenLenPerGpu")]
+        public long? LogProbMaxTokenLenPerGpu{ get; set; }
+
+        /// <summary>
+        /// <p>Actor 参数 Offload</p>
+        /// </summary>
+        [JsonProperty("ActorParamOffload")]
+        public bool? ActorParamOffload{ get; set; }
+
+        /// <summary>
+        /// <p>优化器 Offload</p>
+        /// </summary>
+        [JsonProperty("ActorOptimizerOffload")]
+        public bool? ActorOptimizerOffload{ get; set; }
+
+        /// <summary>
+        /// <p>Ref 参数 Offload</p>
+        /// </summary>
+        [JsonProperty("RefParamOffload")]
+        public bool? RefParamOffload{ get; set; }
+
+        /// <summary>
+        /// <p>Actor Micro Batch / GPU</p>
+        /// </summary>
+        [JsonProperty("PPOMicroBatchSizePerGpu")]
+        public long? PPOMicroBatchSizePerGpu{ get; set; }
+
+        /// <summary>
+        /// <p>LogProb Micro Batch / GPU</p>
+        /// </summary>
+        [JsonProperty("RollOutLogProbMicroBatchSizePerGpu")]
+        public long? RollOutLogProbMicroBatchSizePerGpu{ get; set; }
+
+        /// <summary>
+        /// <p>直接追加为命令行 override，优先级最高</p>
+        /// </summary>
+        [JsonProperty("GRPORawOverrides")]
+        public string GRPORawOverrides{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +288,14 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "TrainBatchSize", this.TrainBatchSize);
             this.SetParamSimple(map, prefix + "TensorModelParallelSize", this.TensorModelParallelSize);
             this.SetParamSimple(map, prefix + "GpuMemoryUtilization", this.GpuMemoryUtilization);
+            this.SetParamSimple(map, prefix + "PPOMaxTokenLenPerGpu", this.PPOMaxTokenLenPerGpu);
+            this.SetParamSimple(map, prefix + "LogProbMaxTokenLenPerGpu", this.LogProbMaxTokenLenPerGpu);
+            this.SetParamSimple(map, prefix + "ActorParamOffload", this.ActorParamOffload);
+            this.SetParamSimple(map, prefix + "ActorOptimizerOffload", this.ActorOptimizerOffload);
+            this.SetParamSimple(map, prefix + "RefParamOffload", this.RefParamOffload);
+            this.SetParamSimple(map, prefix + "PPOMicroBatchSizePerGpu", this.PPOMicroBatchSizePerGpu);
+            this.SetParamSimple(map, prefix + "RollOutLogProbMicroBatchSizePerGpu", this.RollOutLogProbMicroBatchSizePerGpu);
+            this.SetParamSimple(map, prefix + "GRPORawOverrides", this.GRPORawOverrides);
         }
     }
 }

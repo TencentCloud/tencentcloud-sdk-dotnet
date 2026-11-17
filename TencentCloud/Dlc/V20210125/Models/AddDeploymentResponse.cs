@@ -108,6 +108,27 @@ namespace TencentCloud.Dlc.V20210125.Models
         public bool? AutoscalingEnabled{ get; set; }
 
         /// <summary>
+        /// <p>最小副本数（自动伸缩时使用）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinReplicas")]
+        public long? MinReplicas{ get; set; }
+
+        /// <summary>
+        /// <p>最大副本数（自动伸缩时使用）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxReplicas")]
+        public long? MaxReplicas{ get; set; }
+
+        /// <summary>
+        /// <p>弹性伸缩配置（JSON 字符串）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoscalerOptions")]
+        public string AutoscalerOptions{ get; set; }
+
+        /// <summary>
         /// <p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -150,6 +171,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string NeutrinoServeId{ get; set; }
 
         /// <summary>
+        /// <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RayDashboardUrl")]
+        public string RayDashboardUrl{ get; set; }
+
+        /// <summary>
         /// <p>资源分区 ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -188,6 +216,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AdvancedOptions{ get; set; }
 
         /// <summary>
+        /// <p>用户代码包 URL</p>
+        /// </summary>
+        [JsonProperty("CodePackageUri")]
+        public string CodePackageUri{ get; set; }
+
+        /// <summary>
+        /// <p>用户上传代码包的原始文件名</p>
+        /// </summary>
+        [JsonProperty("CodePackageOriginalName")]
+        public string CodePackageOriginalName{ get; set; }
+
+        /// <summary>
+        /// <p>部署当前挂载的 LoRA 模型版本列表。</p>
+        /// </summary>
+        [JsonProperty("LoraBindings")]
+        public LoraItem[] LoraBindings{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -211,18 +257,25 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "HeadHighAvailabilityEnabled", this.HeadHighAvailabilityEnabled);
             this.SetParamSimple(map, prefix + "AdvancedParams", this.AdvancedParams);
             this.SetParamSimple(map, prefix + "AutoscalingEnabled", this.AutoscalingEnabled);
+            this.SetParamSimple(map, prefix + "MinReplicas", this.MinReplicas);
+            this.SetParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
+            this.SetParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
             this.SetParamSimple(map, prefix + "ModelStorageConfig", this.ModelStorageConfig);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "NeutrinoServeId", this.NeutrinoServeId);
+            this.SetParamSimple(map, prefix + "RayDashboardUrl", this.RayDashboardUrl);
             this.SetParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
             this.SetParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+            this.SetParamSimple(map, prefix + "CodePackageUri", this.CodePackageUri);
+            this.SetParamSimple(map, prefix + "CodePackageOriginalName", this.CodePackageOriginalName);
+            this.SetParamArrayObj(map, prefix + "LoraBindings.", this.LoraBindings);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

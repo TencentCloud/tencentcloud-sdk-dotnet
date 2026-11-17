@@ -25,88 +25,106 @@ namespace TencentCloud.Omics.V20221128.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// <p>描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 调度器
+        /// <p>调度器</p>
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("VPCId")]
         public string VPCId{ get; set; }
 
         /// <summary>
-        /// 节点数量
+        /// <p>节点数量</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// <p>标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// <p>集群类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 系统名称
+        /// <p>系统名称</p>
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
-        /// 调度器版本
+        /// <p>调度器版本</p>
         /// </summary>
         [JsonProperty("SchedulerVersion")]
         public string SchedulerVersion{ get; set; }
 
         /// <summary>
-        /// 集群VPC CIDR
+        /// <p>集群VPC CIDR</p>
         /// </summary>
         [JsonProperty("VPCCIDRBlock")]
         public string VPCCIDRBlock{ get; set; }
 
         /// <summary>
-        /// 集群确认交付截止日期
+        /// <p>集群确认交付截止日期</p>
         /// </summary>
         [JsonProperty("ConfirmDeadline")]
         public string ConfirmDeadline{ get; set; }
+
+        /// <summary>
+        /// <p>状态原因</p>
+        /// </summary>
+        [JsonProperty("StatusReason")]
+        public string StatusReason{ get; set; }
+
+        /// <summary>
+        /// <p>隔离时间</p>
+        /// </summary>
+        [JsonProperty("IsolateTime")]
+        public string IsolateTime{ get; set; }
+
+        /// <summary>
+        /// <p>消息</p>
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -128,6 +146,9 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "SchedulerVersion", this.SchedulerVersion);
             this.SetParamSimple(map, prefix + "VPCCIDRBlock", this.VPCCIDRBlock);
             this.SetParamSimple(map, prefix + "ConfirmDeadline", this.ConfirmDeadline);
+            this.SetParamSimple(map, prefix + "StatusReason", this.StatusReason);
+            this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

@@ -24,12 +24,40 @@ namespace TencentCloud.Gs.V20191118.Models
     public class CreateAndroidInstanceMCPTokenRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>ROOT / USER（大小写敏感），默认 USER。ROOT 可访问该 AppId 下全部实例</p><p>枚举值：</p><ul><li>ROOT： 可访问该 AppId 下全部实例</li><li>USER： 可访问本角色实例白名单内的实例</li></ul><p>默认值：USER</p>
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
+        /// <p>有效期（秒）；0 或不传表示永不过期（负值等同不过期）</p>
+        /// </summary>
+        [JsonProperty("ExpireSeconds")]
+        public long? ExpireSeconds{ get; set; }
+
+        /// <summary>
+        /// <p>备注名</p>
+        /// </summary>
+        [JsonProperty("TokenName")]
+        public string TokenName{ get; set; }
+
+        /// <summary>
+        /// <p>USER 角色可访问的实例白名单</p>
+        /// </summary>
+        [JsonProperty("AllowedInstanceIds")]
+        public string[] AllowedInstanceIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "ExpireSeconds", this.ExpireSeconds);
+            this.SetParamSimple(map, prefix + "TokenName", this.TokenName);
+            this.SetParamArraySimple(map, prefix + "AllowedInstanceIds.", this.AllowedInstanceIds);
         }
     }
 }

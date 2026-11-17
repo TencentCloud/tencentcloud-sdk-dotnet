@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1533";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -5698,7 +5698,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 发起语音合成任务，将文本合成为语音，面向长文本场景（最大 200000 字符），支持指定音色及语速、音量、音调、采样率、输出格式等合成参数。语音合成为异步任务，完成后产出音频结果。
+        /// 发起语音合成任务，将文本合成为语音，面向长文本场景（最大 200000 字符），支持指定音色及语速、音量、音调、采样率、输出格式等合成参数。语音合成为异步任务，完成后产出音频结果，可通过 DescribeTaskDetail 查询。
         /// </summary>
         /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
         /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
@@ -5708,7 +5708,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 发起语音合成任务，将文本合成为语音，面向长文本场景（最大 200000 字符），支持指定音色及语速、音量、音调、采样率、输出格式等合成参数。语音合成为异步任务，完成后产出音频结果。
+        /// 发起语音合成任务，将文本合成为语音，面向长文本场景（最大 200000 字符），支持指定音色及语速、音量、音调、采样率、输出格式等合成参数。语音合成为异步任务，完成后产出音频结果，可通过 DescribeTaskDetail 查询。
         /// </summary>
         /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
         /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
@@ -5740,7 +5740,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// 更新 AIGC 调用 API 的 Token。更新后数据同步有延时，需要约30秒。
         /// </summary>
         /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
         /// <returns><see cref="UpdateAigcApiTokenResponse"/></returns>
@@ -5750,7 +5750,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+        /// 更新 AIGC 调用 API 的 Token。更新后数据同步有延时，需要约30秒。
         /// </summary>
         /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
         /// <returns><see cref="UpdateAigcApiTokenResponse"/></returns>

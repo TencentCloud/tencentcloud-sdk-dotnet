@@ -43,6 +43,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("Storage")]
         public string Storage{ get; set; }
 
+        /// <summary>
+        /// <p>关联的GPU资源组ID</p>
+        /// </summary>
+        [JsonProperty("GPUResourceGroupId")]
+        public string GPUResourceGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "GPUResourceGroupId", this.GPUResourceGroupId);
         }
     }
 }

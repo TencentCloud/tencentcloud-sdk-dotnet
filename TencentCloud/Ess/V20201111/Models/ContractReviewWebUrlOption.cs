@@ -25,28 +25,40 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
+        /// <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
         /// </summary>
         [JsonProperty("DisableTemporaryStore")]
         public bool? DisableTemporaryStore{ get; set; }
 
         /// <summary>
-        /// 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
+        /// <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
         /// </summary>
         [JsonProperty("DisableExport")]
         public bool? DisableExport{ get; set; }
 
         /// <summary>
-        /// 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
+        /// <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
         /// </summary>
         [JsonProperty("DisableReviewAgain")]
         public bool? DisableReviewAgain{ get; set; }
 
         /// <summary>
-        /// 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
+        /// <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
         /// </summary>
         [JsonProperty("DisableWxQrcode")]
         public bool? DisableWxQrcode{ get; set; }
+
+        /// <summary>
+        /// <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+        /// </summary>
+        [JsonProperty("DisableIgnoreRisk")]
+        public bool? DisableIgnoreRisk{ get; set; }
+
+        /// <summary>
+        /// <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
+        /// </summary>
+        [JsonProperty("DisableRevisedRisk")]
+        public bool? DisableRevisedRisk{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "DisableExport", this.DisableExport);
             this.SetParamSimple(map, prefix + "DisableReviewAgain", this.DisableReviewAgain);
             this.SetParamSimple(map, prefix + "DisableWxQrcode", this.DisableWxQrcode);
+            this.SetParamSimple(map, prefix + "DisableIgnoreRisk", this.DisableIgnoreRisk);
+            this.SetParamSimple(map, prefix + "DisableRevisedRisk", this.DisableRevisedRisk);
         }
     }
 }

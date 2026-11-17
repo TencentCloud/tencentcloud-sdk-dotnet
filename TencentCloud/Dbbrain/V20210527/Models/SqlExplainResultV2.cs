@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TRTCDataResp : AbstractModel
+    public class SqlExplainResultV2 : AbstractModel
     {
         
         /// <summary>
-        /// StatementID值，监控仪表盘下固定为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>EXPLAIN 列名顺序，与 Data 中每一行的字段一一对应。</p>
         /// </summary>
-        [JsonProperty("StatementID")]
-        public long? StatementID{ get; set; }
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
 
         /// <summary>
-        /// 查询结果数据，以Columns-Values形式返回。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// <p>执行计划行列表。</p>
         /// </summary>
-        [JsonProperty("Series")]
-        public SeriesInfo[] Series{ get; set; }
-
-        /// <summary>
-        /// Total值，监控仪表盘功能下固定为1。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
+        [JsonProperty("Data")]
+        public SqlExplainRowV2[] Data{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StatementID", this.StatementID);
-            this.SetParamArrayObj(map, prefix + "Series.", this.Series);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
         }
     }
 }

@@ -25,31 +25,37 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 查询粒度。0:day, 1:week, 2:month, 不传默认为day
+        /// <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 开始时间。单位秒
+        /// <p>开始时间。单位秒</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间。单位秒
+        /// <p>结束时间。单位秒</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 设备组, 不传查询全部
+        /// <p>设备组, 不传查询全部</p>
         /// </summary>
         [JsonProperty("DevGroup")]
         public string DevGroup{ get; set; }
 
         /// <summary>
-        /// license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+        /// <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }
@@ -64,6 +70,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "DevGroup", this.DevGroup);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }
     }

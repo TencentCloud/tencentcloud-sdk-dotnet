@@ -25,30 +25,25 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 数据库唯一标识
+        /// <p>数据库唯一标识</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 状态。包含以下取值：
-        /// <li>INITIALIZING：资源初始化中</li>
-        /// <li>RUNNING：运行中，可正常使用的状态</li>
-        /// <li>UNUSABLE：禁用，不可用</li>
-        /// <li>OVERDUE：资源过期</li>
+        /// <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 所属地域。
-        /// 当前支持ap-shanghai
+        /// <p>所属地域。<br>当前支持ap-shanghai</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// <p>更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

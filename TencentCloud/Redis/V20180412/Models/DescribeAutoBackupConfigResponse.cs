@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 该参数因兼容性问题暂时保留，请忽略。
+        /// <p>该参数因兼容性问题暂时保留，请忽略。</p>
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
 
         /// <summary>
-        /// 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+        /// <p>备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }
 
         /// <summary>
-        /// 备份任务发起时间段。
+        /// <p>备份任务发起时间段。</p>
         /// </summary>
         [JsonProperty("TimePeriod")]
         public string TimePeriod{ get; set; }
 
         /// <summary>
-        /// 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+        /// <p>全量备份文件保存天数。默认为7天。如需保存更多天数，请<a href="https://console.cloud.tencent.com/workorder/category">提交工单</a>申请。</p>
         /// </summary>
         [JsonProperty("BackupStorageDays")]
         public long? BackupStorageDays{ get; set; }
 
         /// <summary>
-        /// 该参数不再使用，请忽略。
+        /// <p>该参数不再使用，请忽略。</p>
         /// </summary>
         [JsonProperty("BinlogStorageDays")]
         public long? BinlogStorageDays{ get; set; }

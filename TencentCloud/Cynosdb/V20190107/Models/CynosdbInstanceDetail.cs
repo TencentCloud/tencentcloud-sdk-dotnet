@@ -258,6 +258,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StorageVersion")]
         public string StorageVersion{ get; set; }
 
+        /// <summary>
+        /// <p>实例Serverless弹性信息</p>
+        /// </summary>
+        [JsonProperty("ServerlessQuotaInfo")]
+        public InstanceServerlessQuotaInfo ServerlessQuotaInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -303,6 +309,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
             this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
+            this.SetParamObj(map, prefix + "ServerlessQuotaInfo.", this.ServerlessQuotaInfo);
         }
     }
 }

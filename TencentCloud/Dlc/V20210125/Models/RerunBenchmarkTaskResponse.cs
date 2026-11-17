@@ -151,6 +151,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public DeploymentResourceInfo[] DeploymentResources{ get; set; }
 
         /// <summary>
+        /// <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+        /// </summary>
+        [JsonProperty("ModelIdentifier")]
+        public string ModelIdentifier{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -183,6 +189,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
             this.SetParamObj(map, prefix + "Resources.", this.Resources);
             this.SetParamArrayObj(map, prefix + "DeploymentResources.", this.DeploymentResources);
+            this.SetParamSimple(map, prefix + "ModelIdentifier", this.ModelIdentifier);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

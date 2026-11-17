@@ -43,6 +43,7 @@ namespace TencentCloud.Apm.V20210622.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]
+        [System.Obsolete]
         public long? AppID{ get; set; }
 
         /// <summary>
@@ -50,6 +51,7 @@ namespace TencentCloud.Apm.V20210622.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUIN")]
+        [System.Obsolete]
         public string CreateUIN{ get; set; }
 
         /// <summary>
@@ -107,6 +109,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
 
+        /// <summary>
+        /// <p>用户appid</p>
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
+        /// <summary>
+        /// <p>主账号uin</p>
+        /// </summary>
+        [JsonProperty("CreateUin")]
+        public string CreateUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +139,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
             this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
         }
     }
 }

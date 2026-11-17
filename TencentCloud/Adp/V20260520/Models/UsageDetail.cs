@@ -31,6 +31,12 @@ namespace TencentCloud.Adp.V20260520.Models
         public CallSource CallSource{ get; set; }
 
         /// <summary>
+        /// <p>MODEL 类型的文档解析明细</p>
+        /// </summary>
+        [JsonProperty("DocumentParse")]
+        public DocumentParseUsageDetail DocumentParse{ get; set; }
+
+        /// <summary>
         /// <p>计量 ID，用于对账/回溯</p>
         /// </summary>
         [JsonProperty("DosageId")]
@@ -73,6 +79,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "CallSource.", this.CallSource);
+            this.SetParamObj(map, prefix + "DocumentParse.", this.DocumentParse);
             this.SetParamSimple(map, prefix + "DosageId", this.DosageId);
             this.SetParamSimple(map, prefix + "EventTime", this.EventTime);
             this.SetParamObj(map, prefix + "Model.", this.Model);

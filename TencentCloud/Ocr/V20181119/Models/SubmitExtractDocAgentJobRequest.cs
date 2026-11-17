@@ -73,6 +73,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ModelConfig")]
         public string ModelConfig{ get; set; }
 
+        /// <summary>
+        /// <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
+        /// </summary>
+        [JsonProperty("AgentType")]
+        public long? AgentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);
             this.SetParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
             this.SetParamSimple(map, prefix + "ModelConfig", this.ModelConfig);
+            this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
         }
     }
 }

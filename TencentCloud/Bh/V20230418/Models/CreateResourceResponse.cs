@@ -25,7 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

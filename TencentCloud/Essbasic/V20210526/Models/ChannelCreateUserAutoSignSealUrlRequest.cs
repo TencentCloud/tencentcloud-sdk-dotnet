@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
+        /// <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景<strong>（需要联系客户经理添加白名单才能使用）</strong></li><li>OTHER：  通用场景</li></ul>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }

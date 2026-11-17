@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1533</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -194,6 +194,8 @@
     <Compile Include="V20180608\Models\DescribeDatabaseACLResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvAccountCircleRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvAccountCircleResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvInfoRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvInfoResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvLimitRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvLimitResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvPlansRequest.cs" />

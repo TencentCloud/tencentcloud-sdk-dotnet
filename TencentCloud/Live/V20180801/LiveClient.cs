@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1527";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -432,6 +432,27 @@ namespace TencentCloud.Live.V20180801
         public CreateAuditTemplateResponse CreateAuditTemplateSync(CreateAuditTemplateRequest req)
         {
             return InternalRequestAsync<CreateAuditTemplateResponse>(req, "CreateAuditTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAvatarEditingLiveRequest"/></param>
+        /// <returns><see cref="CreateAvatarEditingLiveResponse"/></returns>
+        public Task<CreateAvatarEditingLiveResponse> CreateAvatarEditingLive(CreateAvatarEditingLiveRequest req)
+        {
+            return InternalRequestAsync<CreateAvatarEditingLiveResponse>(req, "CreateAvatarEditingLive");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于创建数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAvatarEditingLiveRequest"/></param>
+        /// <returns><see cref="CreateAvatarEditingLiveResponse"/></returns>
+        public CreateAvatarEditingLiveResponse CreateAvatarEditingLiveSync(CreateAvatarEditingLiveRequest req)
+        {
+            return InternalRequestAsync<CreateAvatarEditingLiveResponse>(req, "CreateAvatarEditingLive")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2242,6 +2263,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeAuditTemplatesResponse DescribeAuditTemplatesSync(DescribeAuditTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAuditTemplatesResponse>(req, "DescribeAuditTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，查询数字人直播间信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvatarEditingLiveRequest"/></param>
+        /// <returns><see cref="DescribeAvatarEditingLiveResponse"/></returns>
+        public Task<DescribeAvatarEditingLiveResponse> DescribeAvatarEditingLive(DescribeAvatarEditingLiveRequest req)
+        {
+            return InternalRequestAsync<DescribeAvatarEditingLiveResponse>(req, "DescribeAvatarEditingLive");
+        }
+
+        /// <summary>
+        /// 调用该接口，查询数字人直播间信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvatarEditingLiveRequest"/></param>
+        /// <returns><see cref="DescribeAvatarEditingLiveResponse"/></returns>
+        public DescribeAvatarEditingLiveResponse DescribeAvatarEditingLiveSync(DescribeAvatarEditingLiveRequest req)
+        {
+            return InternalRequestAsync<DescribeAvatarEditingLiveResponse>(req, "DescribeAvatarEditingLive")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5559,6 +5601,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 调用该接口，用于停止数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="StopAvatarEditingLiveRequest"/></param>
+        /// <returns><see cref="StopAvatarEditingLiveResponse"/></returns>
+        public Task<StopAvatarEditingLiveResponse> StopAvatarEditingLive(StopAvatarEditingLiveRequest req)
+        {
+            return InternalRequestAsync<StopAvatarEditingLiveResponse>(req, "StopAvatarEditingLive");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于停止数字人直播间。
+        /// </summary>
+        /// <param name="req"><see cref="StopAvatarEditingLiveRequest"/></param>
+        /// <returns><see cref="StopAvatarEditingLiveResponse"/></returns>
+        public StopAvatarEditingLiveResponse StopAvatarEditingLiveSync(StopAvatarEditingLiveRequest req)
+        {
+            return InternalRequestAsync<StopAvatarEditingLiveResponse>(req, "StopAvatarEditingLive")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来停止导播台的主监输出。
         /// 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
         /// </summary>
@@ -5725,6 +5788,27 @@ namespace TencentCloud.Live.V20180801
         public StopScreenshotTaskResponse StopScreenshotTaskSync(StopScreenshotTaskRequest req)
         {
             return InternalRequestAsync<StopScreenshotTaskResponse>(req, "StopScreenshotTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调用该接口，用于临时驱动数字人播报。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchAvatarEditingSceneRequest"/></param>
+        /// <returns><see cref="SwitchAvatarEditingSceneResponse"/></returns>
+        public Task<SwitchAvatarEditingSceneResponse> SwitchAvatarEditingScene(SwitchAvatarEditingSceneRequest req)
+        {
+            return InternalRequestAsync<SwitchAvatarEditingSceneResponse>(req, "SwitchAvatarEditingScene");
+        }
+
+        /// <summary>
+        /// 调用该接口，用于临时驱动数字人播报。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchAvatarEditingSceneRequest"/></param>
+        /// <returns><see cref="SwitchAvatarEditingSceneResponse"/></returns>
+        public SwitchAvatarEditingSceneResponse SwitchAvatarEditingSceneSync(SwitchAvatarEditingSceneRequest req)
+        {
+            return InternalRequestAsync<SwitchAvatarEditingSceneResponse>(req, "SwitchAvatarEditingScene")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,37 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 接口说明：
+        /// 批量软删除声纹，单次最多 50 个 VoiceprintId，请求内自动去重。
+        /// 
+        /// • 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，跨租户 ID 会被当作 VoiceprintNotFound 失败项返回。
+        /// • 成功项返回 VoiceprintId，失败项返回 VoiceprintId + ErrorCode + ErrorMessage。
+        /// • 已删除的声纹再次批量删除会计入 FailCount（错误码 FailedOperation.VoiceprintNotFound）。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="BatchDeleteTRTCVoicePrintResponse"/></returns>
+        public Task<BatchDeleteTRTCVoicePrintResponse> BatchDeleteTRTCVoicePrint(BatchDeleteTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteTRTCVoicePrintResponse>(req, "BatchDeleteTRTCVoicePrint");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 批量软删除声纹，单次最多 50 个 VoiceprintId，请求内自动去重。
+        /// 
+        /// • 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，跨租户 ID 会被当作 VoiceprintNotFound 失败项返回。
+        /// • 成功项返回 VoiceprintId，失败项返回 VoiceprintId + ErrorCode + ErrorMessage。
+        /// • 已删除的声纹再次批量删除会计入 FailCount（错误码 FailedOperation.VoiceprintNotFound）。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="BatchDeleteTRTCVoicePrintResponse"/></returns>
+        public BatchDeleteTRTCVoicePrintResponse BatchDeleteTRTCVoicePrintSync(BatchDeleteTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteTRTCVoicePrintResponse>(req, "BatchDeleteTRTCVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 提供服务端控制机器人的功能
         /// </summary>
         /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
@@ -92,6 +123,27 @@ namespace TencentCloud.Trtc.V20190722
         public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
         {
             return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来控制任务。
+        /// </summary>
+        /// <param name="req"><see cref="ControlVoiceConversationRequest"/></param>
+        /// <returns><see cref="ControlVoiceConversationResponse"/></returns>
+        public Task<ControlVoiceConversationResponse> ControlVoiceConversation(ControlVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ControlVoiceConversationResponse>(req, "ControlVoiceConversation");
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来控制任务。
+        /// </summary>
+        /// <param name="req"><see cref="ControlVoiceConversationRequest"/></param>
+        /// <returns><see cref="ControlVoiceConversationResponse"/></returns>
+        public ControlVoiceConversationResponse ControlVoiceConversationSync(ControlVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ControlVoiceConversationResponse>(req, "ControlVoiceConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -324,6 +376,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 创建AI对话任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVoiceConversationRequest"/></param>
+        /// <returns><see cref="CreateVoiceConversationResponse"/></returns>
+        public Task<CreateVoiceConversationResponse> CreateVoiceConversation(CreateVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<CreateVoiceConversationResponse>(req, "CreateVoiceConversation");
+        }
+
+        /// <summary>
+        /// 创建AI对话任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVoiceConversationRequest"/></param>
+        /// <returns><see cref="CreateVoiceConversationResponse"/></returns>
+        public CreateVoiceConversationResponse CreateVoiceConversationSync(CreateVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<CreateVoiceConversationResponse>(req, "CreateVoiceConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 成功开启AI 内容理解任务后，可以使用此接口来停止进行内容识别。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudModerationRequest"/></param>
@@ -469,6 +542,58 @@ namespace TencentCloud.Trtc.V20190722
         public DeleteRecognizeVocabV3Response DeleteRecognizeVocabV3Sync(DeleteRecognizeVocabV3Request req)
         {
             return InternalRequestAsync<DeleteRecognizeVocabV3Response>(req, "DeleteRecognizeVocabV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 按 VoiceprintId 软删除声纹。
+        /// 
+        /// • 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，跨租户 ID 返回 VoiceprintNotFound。
+        /// • 重复删除幂等：对已删除的声纹再次调用仍返回成功。
+        /// • 底层 COS 音频由后台异步清理，删除接口不等待其完成。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="DeleteTRTCVoicePrintResponse"/></returns>
+        public Task<DeleteTRTCVoicePrintResponse> DeleteTRTCVoicePrint(DeleteTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DeleteTRTCVoicePrintResponse>(req, "DeleteTRTCVoicePrint");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 按 VoiceprintId 软删除声纹。
+        /// 
+        /// • 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，跨租户 ID 返回 VoiceprintNotFound。
+        /// • 重复删除幂等：对已删除的声纹再次调用仍返回成功。
+        /// • 底层 COS 音频由后台异步清理，删除接口不等待其完成。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="DeleteTRTCVoicePrintResponse"/></returns>
+        public DeleteTRTCVoicePrintResponse DeleteTRTCVoicePrintSync(DeleteTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DeleteTRTCVoicePrintResponse>(req, "DeleteTRTCVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来停止对话任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceConversationRequest"/></param>
+        /// <returns><see cref="DeleteVoiceConversationResponse"/></returns>
+        public Task<DeleteVoiceConversationResponse> DeleteVoiceConversation(DeleteVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceConversationResponse>(req, "DeleteVoiceConversation");
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来停止对话任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceConversationRequest"/></param>
+        /// <returns><see cref="DeleteVoiceConversationResponse"/></returns>
+        public DeleteVoiceConversationResponse DeleteVoiceConversationSync(DeleteVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceConversationResponse>(req, "DeleteVoiceConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1039,45 +1164,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 云监控monitor接口已下线，trtc同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
-        /// userCount：通话人数，
-        /// roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
-        /// peakCurrentChannels：峰值同时在线频道数。
-        /// peakCurrentUsers：峰值同时在线人数。
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCMarketScaleMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCMarketScaleMetricDataResponse"/></returns>
-        public Task<DescribeTRTCMarketScaleMetricDataResponse> DescribeTRTCMarketScaleMetricData(DescribeTRTCMarketScaleMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCMarketScaleMetricDataResponse>(req, "DescribeTRTCMarketScaleMetricData");
-        }
-
-        /// <summary>
-        /// 云监控monitor接口已下线，trtc同步下线接口
-        /// 
-        /// 查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
-        /// userCount：通话人数，
-        /// roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
-        /// peakCurrentChannels：峰值同时在线频道数。
-        /// peakCurrentUsers：峰值同时在线人数。
-        /// 注意：
-        /// 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-        /// 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTRTCMarketScaleMetricDataRequest"/></param>
-        /// <returns><see cref="DescribeTRTCMarketScaleMetricDataResponse"/></returns>
-        public DescribeTRTCMarketScaleMetricDataResponse DescribeTRTCMarketScaleMetricDataSync(DescribeTRTCMarketScaleMetricDataRequest req)
-        {
-            return InternalRequestAsync<DescribeTRTCMarketScaleMetricDataResponse>(req, "DescribeTRTCMarketScaleMetricData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
         /// -视频卡顿率
         /// -音频卡顿率
@@ -1163,6 +1249,37 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeTRTCSegmentModerationUsageResponse DescribeTRTCSegmentModerationUsageSync(DescribeTRTCSegmentModerationUsageRequest req)
         {
             return InternalRequestAsync<DescribeTRTCSegmentModerationUsageResponse>(req, "DescribeTRTCSegmentModerationUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 分页查询当前 (AppId, SdkAppId) 下的声纹列表。
+        /// 
+        /// • Offset/Limit 可选，默认从 0 起取 20 条，Limit 最大 100。
+        /// • TotalCount 为活跃状态声纹总数，用于分页控件计算总页数。
+        /// • 仅返回业务可见字段（VoiceprintId / SpeakerId / CreateTime / UpdateTime），不暴露内部 COS 路径。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="DescribeTRTCVoicePrintResponse"/></returns>
+        public Task<DescribeTRTCVoicePrintResponse> DescribeTRTCVoicePrint(DescribeTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCVoicePrintResponse>(req, "DescribeTRTCVoicePrint");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 分页查询当前 (AppId, SdkAppId) 下的声纹列表。
+        /// 
+        /// • Offset/Limit 可选，默认从 0 起取 20 条，Limit 最大 100。
+        /// • TotalCount 为活跃状态声纹总数，用于分页控件计算总页数。
+        /// • 仅返回业务可见字段（VoiceprintId / SpeakerId / CreateTime / UpdateTime），不暴露内部 COS 路径。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="DescribeTRTCVoicePrintResponse"/></returns>
+        public DescribeTRTCVoicePrintResponse DescribeTRTCVoicePrintSync(DescribeTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCVoicePrintResponse>(req, "DescribeTRTCVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1327,6 +1444,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeUserInfoResponse DescribeUserInfoSync(DescribeUserInfoRequest req)
         {
             return InternalRequestAsync<DescribeUserInfoResponse>(req, "DescribeUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来查询对话状态。仅在对话任务进行时有效，对话退出后查询将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoiceConversationRequest"/></param>
+        /// <returns><see cref="DescribeVoiceConversationResponse"/></returns>
+        public Task<DescribeVoiceConversationResponse> DescribeVoiceConversation(DescribeVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeVoiceConversationResponse>(req, "DescribeVoiceConversation");
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来查询对话状态。仅在对话任务进行时有效，对话退出后查询将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoiceConversationRequest"/></param>
+        /// <returns><see cref="DescribeVoiceConversationResponse"/></returns>
+        public DescribeVoiceConversationResponse DescribeVoiceConversationSync(DescribeVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeVoiceConversationResponse>(req, "DescribeVoiceConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1547,6 +1685,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 成功开启转录后，可以使用此接口来更新转录任务。仅在转录任务进行时有效，转录退出后更新将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="ModifyCloudTranscriptionResponse"/></returns>
+        public Task<ModifyCloudTranscriptionResponse> ModifyCloudTranscription(ModifyCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudTranscriptionResponse>(req, "ModifyCloudTranscription");
+        }
+
+        /// <summary>
+        /// 成功开启转录后，可以使用此接口来更新转录任务。仅在转录任务进行时有效，转录退出后更新将会返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="ModifyCloudTranscriptionResponse"/></returns>
+        public ModifyCloudTranscriptionResponse ModifyCloudTranscriptionSync(ModifyCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudTranscriptionResponse>(req, "ModifyCloudTranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁修改自定义背景图或水印素材，可通过此接口修改已上传的图片。无需频繁修改图片素材的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
         /// </summary>
         /// <param name="req"><see cref="ModifyPictureRequest"/></param>
@@ -1564,6 +1723,58 @@ namespace TencentCloud.Trtc.V20190722
         public ModifyPictureResponse ModifyPictureSync(ModifyPictureRequest req)
         {
             return InternalRequestAsync<ModifyPictureResponse>(req, "ModifyPicture")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来修改对话任务配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVoiceConversationRequest"/></param>
+        /// <returns><see cref="ModifyVoiceConversationResponse"/></returns>
+        public Task<ModifyVoiceConversationResponse> ModifyVoiceConversation(ModifyVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ModifyVoiceConversationResponse>(req, "ModifyVoiceConversation");
+        }
+
+        /// <summary>
+        /// 成功开启对话后，可以使用此接口来修改对话任务配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVoiceConversationRequest"/></param>
+        /// <returns><see cref="ModifyVoiceConversationResponse"/></returns>
+        public ModifyVoiceConversationResponse ModifyVoiceConversationSync(ModifyVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ModifyVoiceConversationResponse>(req, "ModifyVoiceConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口注册一条声纹，后续可用于声纹 1:1 验证。
+        /// 
+        /// • 音频要求：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+        /// • 同一 (AppId, SdkAppId, SpeakerId) 重复注册时走 Upsert 语义：旧记录软删 + 新建一行，返回新的 VoiceprintId。业务方需以本次返回的 VoiceprintId 为准更新自己的映射。
+        /// • 单账号声纹数量有上限（由七彩石配置，默认每 (AppId, SdkAppId) 维度限量），达到上限时返回 LimitExceeded.VoiceprintFull；覆盖场景净增为 0，不受上限影响。
+        /// </summary>
+        /// <param name="req"><see cref="RegisterTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="RegisterTRTCVoicePrintResponse"/></returns>
+        public Task<RegisterTRTCVoicePrintResponse> RegisterTRTCVoicePrint(RegisterTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<RegisterTRTCVoicePrintResponse>(req, "RegisterTRTCVoicePrint");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 用户通过本接口注册一条声纹，后续可用于声纹 1:1 验证。
+        /// 
+        /// • 音频要求：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+        /// • 同一 (AppId, SdkAppId, SpeakerId) 重复注册时走 Upsert 语义：旧记录软删 + 新建一行，返回新的 VoiceprintId。业务方需以本次返回的 VoiceprintId 为准更新自己的映射。
+        /// • 单账号声纹数量有上限（由七彩石配置，默认每 (AppId, SdkAppId) 维度限量），达到上限时返回 LimitExceeded.VoiceprintFull；覆盖场景净增为 0，不受上限影响。
+        /// </summary>
+        /// <param name="req"><see cref="RegisterTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="RegisterTRTCVoicePrintResponse"/></returns>
+        public RegisterTRTCVoicePrintResponse RegisterTRTCVoicePrintSync(RegisterTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<RegisterTRTCVoicePrintResponse>(req, "RegisterTRTCVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1902,6 +2113,9 @@ namespace TencentCloud.Trtc.V20190722
         /// <summary>
         /// 通过此接口可以发起 WEB 页面录制任务，在接口参数中指定录制 URL，录制分辨率，录制结果存储等参数。
         /// 因为参数或API逻辑问题会立即返回结果。而因为页面问题，如页面无法访问，会在回调中返回结果，请关注。
+        /// 
+        /// > ⚠️注意：
+        /// 页面录制服务当前为受限功能，使用前需进行加白申请。请 [提交工单](https://console.cloud.tencent.com/workorder/category?source=1)，审批通过后即可正常使用。
         /// </summary>
         /// <param name="req"><see cref="StartWebRecordRequest"/></param>
         /// <returns><see cref="StartWebRecordResponse"/></returns>
@@ -1913,6 +2127,9 @@ namespace TencentCloud.Trtc.V20190722
         /// <summary>
         /// 通过此接口可以发起 WEB 页面录制任务，在接口参数中指定录制 URL，录制分辨率，录制结果存储等参数。
         /// 因为参数或API逻辑问题会立即返回结果。而因为页面问题，如页面无法访问，会在回调中返回结果，请关注。
+        /// 
+        /// > ⚠️注意：
+        /// 页面录制服务当前为受限功能，使用前需进行加白申请。请 [提交工单](https://console.cloud.tencent.com/workorder/category?source=1)，审批通过后即可正常使用。
         /// </summary>
         /// <param name="req"><see cref="StartWebRecordRequest"/></param>
         /// <returns><see cref="StartWebRecordResponse"/></returns>
@@ -2204,6 +2421,35 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 接口说明：
+        /// 按 VoicePrintId 覆盖式更新声纹音频，VoicePrintId 保持不变，只替换底层音频与声纹向量。
+        /// 
+        /// • 音频要求同 RegisterTRTCVoicePrint：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+        /// • 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，仅允许更新自己账号下的声纹。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="UpdateTRTCVoicePrintResponse"/></returns>
+        public Task<UpdateTRTCVoicePrintResponse> UpdateTRTCVoicePrint(UpdateTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<UpdateTRTCVoicePrintResponse>(req, "UpdateTRTCVoicePrint");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 按 VoicePrintId 覆盖式更新声纹音频，VoicePrintId 保持不变，只替换底层音频与声纹向量。
+        /// 
+        /// • 音频要求同 RegisterTRTCVoicePrint：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+        /// • 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，仅允许更新自己账号下的声纹。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="UpdateTRTCVoicePrintResponse"/></returns>
+        public UpdateTRTCVoicePrintResponse UpdateTRTCVoicePrintSync(UpdateTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<UpdateTRTCVoicePrintResponse>(req, "UpdateTRTCVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 传入声纹ID以及对应音频信息，更新对应声纹信息
         /// </summary>
         /// <param name="req"><see cref="UpdateVoicePrintRequest"/></param>
@@ -2221,6 +2467,37 @@ namespace TencentCloud.Trtc.V20190722
         public UpdateVoicePrintResponse UpdateVoicePrintSync(UpdateVoicePrintRequest req)
         {
             return InternalRequestAsync<UpdateVoicePrintResponse>(req, "UpdateVoicePrint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 对给定 VoiceprintId 做 1:1 声纹验证，返回相似度分值与服务端判决结果。
+        /// 
+        /// • 音频要求同 VoiceprintEnroll：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+        /// • 阈值判决完全由服务端裁定（默认 60 分），Score 为字符串保留两位小数，Decision 为 0/1。
+        /// • 不消费声纹配额、不改动底库，仅做比对。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="VerifyTRTCVoicePrintResponse"/></returns>
+        public Task<VerifyTRTCVoicePrintResponse> VerifyTRTCVoicePrint(VerifyTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<VerifyTRTCVoicePrintResponse>(req, "VerifyTRTCVoicePrint");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 对给定 VoiceprintId 做 1:1 声纹验证，返回相似度分值与服务端判决结果。
+        /// 
+        /// • 音频要求同 VoiceprintEnroll：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+        /// • 阈值判决完全由服务端裁定（默认 60 分），Score 为字符串保留两位小数，Decision 为 0/1。
+        /// • 不消费声纹配额、不改动底库，仅做比对。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyTRTCVoicePrintRequest"/></param>
+        /// <returns><see cref="VerifyTRTCVoicePrintResponse"/></returns>
+        public VerifyTRTCVoicePrintResponse VerifyTRTCVoicePrintSync(VerifyTRTCVoicePrintRequest req)
+        {
+            return InternalRequestAsync<VerifyTRTCVoicePrintResponse>(req, "VerifyTRTCVoicePrint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

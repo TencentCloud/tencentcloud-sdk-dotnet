@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1533";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -606,6 +606,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateMediaEvaluationResponse CreateMediaEvaluationSync(CreateMediaEvaluationRequest req)
         {
             return InternalRequestAsync<CreateMediaEvaluationResponse>(req, "CreateMediaEvaluation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提交异步多模态理解任务，返回 TaskId
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelChatTaskRequest"/></param>
+        /// <returns><see cref="CreateModelChatTaskResponse"/></returns>
+        public Task<CreateModelChatTaskResponse> CreateModelChatTask(CreateModelChatTaskRequest req)
+        {
+            return InternalRequestAsync<CreateModelChatTaskResponse>(req, "CreateModelChatTask");
+        }
+
+        /// <summary>
+        /// 提交异步多模态理解任务，返回 TaskId
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelChatTaskRequest"/></param>
+        /// <returns><see cref="CreateModelChatTaskResponse"/></returns>
+        public CreateModelChatTaskResponse CreateModelChatTaskSync(CreateModelChatTaskRequest req)
+        {
+            return InternalRequestAsync<CreateModelChatTaskResponse>(req, "CreateModelChatTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2489,6 +2510,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeMediaMetaDataResponse DescribeMediaMetaDataSync(DescribeMediaMetaDataRequest req)
         {
             return InternalRequestAsync<DescribeMediaMetaDataResponse>(req, "DescribeMediaMetaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 按 TaskId 查询多模态理解任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelChatTaskRequest"/></param>
+        /// <returns><see cref="DescribeModelChatTaskResponse"/></returns>
+        public Task<DescribeModelChatTaskResponse> DescribeModelChatTask(DescribeModelChatTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeModelChatTaskResponse>(req, "DescribeModelChatTask");
+        }
+
+        /// <summary>
+        /// 按 TaskId 查询多模态理解任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelChatTaskRequest"/></param>
+        /// <returns><see cref="DescribeModelChatTaskResponse"/></returns>
+        public DescribeModelChatTaskResponse DescribeModelChatTaskSync(DescribeModelChatTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeModelChatTaskResponse>(req, "DescribeModelChatTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

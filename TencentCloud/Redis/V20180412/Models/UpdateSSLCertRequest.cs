@@ -1,0 +1,102 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Redis.V20180412.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class UpdateSSLCertRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>指定实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义KMS</li></ul>
+        /// </summary>
+        [JsonProperty("CertSource")]
+        public long? CertSource{ get; set; }
+
+        /// <summary>
+        /// <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+        /// </summary>
+        [JsonProperty("SwitchOption")]
+        [System.Obsolete]
+        public long? SwitchOption{ get; set; }
+
+        /// <summary>
+        /// <p>SSL地址类型。</p><p>枚举值：</p><ul><li>0： 不限。</li><li>1： 内网IPv4。</li><li>2： 内网IPv6。</li><li>3： 外网。</li><li>-1： 未指定。</li></ul>
+        /// </summary>
+        [JsonProperty("AddressType")]
+        public long? AddressType{ get; set; }
+
+        /// <summary>
+        /// <p>KMS的密钥ID。（该参数废弃，不再生效）</p><p>参数格式：xxxxxxx-xxxx-xxxx-xxxx-xxxxxxx</p>
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        [System.Obsolete]
+        public string KmsKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>KMS地域信息。（该参数废弃，不再生效）</p><p>参数格式：ap-xxxx</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/573/34406#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">KMS支持的地域列表</a></p>
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        [System.Obsolete]
+        public string KmsRegion{ get; set; }
+
+        /// <summary>
+        /// <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// <p>最低 TLS 版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+        /// </summary>
+        [JsonProperty("SSLMinVersion")]
+        public string SSLMinVersion{ get; set; }
+
+        /// <summary>
+        /// <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul>
+        /// </summary>
+        [JsonProperty("EncryptionMode")]
+        public string EncryptionMode{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "CertSource", this.CertSource);
+            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
+            this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "SSLMinVersion", this.SSLMinVersion);
+            this.SetParamSimple(map, prefix + "EncryptionMode", this.EncryptionMode);
+        }
+    }
+}
+

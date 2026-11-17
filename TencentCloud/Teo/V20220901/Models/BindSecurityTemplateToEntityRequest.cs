@@ -25,38 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 需要绑定或解绑的策略模板所属站点 ID。
+        /// <p>需要绑定或解绑的域名所属站点 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 绑定至策略模板（或者从策略模板解绑）的域名列表。
+        /// <p>绑定至策略模板（或者从策略模板解绑）的域名列表。</p>
         /// </summary>
         [JsonProperty("Entities")]
         public string[] Entities{ get; set; }
 
         /// <summary>
-        /// 绑定或解绑操作选项，取值有：
-        /// <li>bind：绑定域名至策略模板。</li>
-        /// <li>unbind-keep-policy：将域名从策略模板解绑，解绑时保留当前策略。</li>
-        /// <li>unbind-use-default：将域名从策略模板解绑，并使用默认空白策略。</li>注意：解绑操作当前仅支持单个域名解绑。即：当 Operate 参数取值为 unbind-keep-policy 或 unbind-use-default 时，Entities 参数列表仅支持填写一个域名。
+        /// <p>绑定或解绑操作选项。</p><p>枚举值：</p><ul><li>bind： 绑定域名至策略模板。</li><li>unbind-keep-policy： 将域名从策略模板解绑，解绑时保留当前策略。</li><li>unbind-use-default： 将域名从策略模板解绑，并使用默认空白策略。</li></ul>
         /// </summary>
         [JsonProperty("Operate")]
         public string Operate{ get; set; }
 
         /// <summary>
-        /// 指定绑定或解绑的策略模板 ID 或站点全局策略
-        /// <li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID。</li>
-        /// <li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li>
-        /// 
-        /// 注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。
+        /// <p>指定绑定或解绑的策略模板 ID 或站点全局策略。<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID；</li><li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li></p><p>注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板，默认值为 true。支持下列取值：<li>true： 替换域名当前绑定的模板。</li><li>false：不替换域名当前绑定的模板。</li>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。
+        /// <p>传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板。</p><p>枚举值：</p><ul><li>true： 替换域名当前绑定的模板。</li><li>false： 不替换域名当前绑定的模板。</li></ul><p>默认值：true</p><p>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。</p>
         /// </summary>
         [JsonProperty("OverWrite")]
         public bool? OverWrite{ get; set; }

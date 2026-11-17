@@ -42,6 +42,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "FullReplications", this.FullReplications);
             this.SetParamSimple(map, prefix + "IsExclusiveInstance", this.IsExclusiveInstance);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

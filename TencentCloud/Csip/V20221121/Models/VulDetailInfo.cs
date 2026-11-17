@@ -232,6 +232,24 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AffectVendorProduct")]
         public VulVendorProduct[] AffectVendorProduct{ get; set; }
 
+        /// <summary>
+        /// <p>VPR暴露面信息</p>
+        /// </summary>
+        [JsonProperty("VPRExplainInfo")]
+        public VPRExplainInfo VPRExplainInfo{ get; set; }
+
+        /// <summary>
+        /// <p>最近扫描任务id(应急漏洞)</p>
+        /// </summary>
+        [JsonProperty("ScanTaskId")]
+        public ulong? ScanTaskId{ get; set; }
+
+        /// <summary>
+        /// <p>影响资产数(应急漏洞)</p>
+        /// </summary>
+        [JsonProperty("AffectAsset")]
+        public ulong? AffectAsset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -268,6 +286,9 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "RefLink", this.RefLink);
             this.SetParamSimple(map, prefix + "HarmDescription", this.HarmDescription);
             this.SetParamArrayObj(map, prefix + "AffectVendorProduct.", this.AffectVendorProduct);
+            this.SetParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
+            this.SetParamSimple(map, prefix + "ScanTaskId", this.ScanTaskId);
+            this.SetParamSimple(map, prefix + "AffectAsset", this.AffectAsset);
         }
     }
 }

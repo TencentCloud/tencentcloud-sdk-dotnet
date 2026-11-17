@@ -57,6 +57,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("QueryString")]
         public AccessURLRedirectQueryString QueryString{ get; set; }
 
+        /// <summary>
+        /// <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Port")]
+        public AccessURLRedirectPort Port{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +75,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "HostName.", this.HostName);
             this.SetParamObj(map, prefix + "URLPath.", this.URLPath);
             this.SetParamObj(map, prefix + "QueryString.", this.QueryString);
+            this.SetParamObj(map, prefix + "Port.", this.Port);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Dataagent.V20250513.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// <p>上下文</p>
+        /// </summary>
+        [JsonProperty("SurfaceContext")]
+        public SurfaceContext SurfaceContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "SurfaceContext.", this.SurfaceContext);
         }
     }
 }

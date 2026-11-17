@@ -204,6 +204,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
+        /// <p>实例Serverless弹性配置信息</p>
+        /// </summary>
+        [JsonProperty("ServerlessQuotaInfo")]
+        public InstanceServerlessQuotaInfo ServerlessQuotaInfo{ get; set; }
+
+        /// <summary>
         /// <p>AI优化器状态</p>
         /// </summary>
         [JsonProperty("AIOptimizerStatus")]
@@ -443,6 +449,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamObj(map, prefix + "ServerlessQuotaInfo.", this.ServerlessQuotaInfo);
             this.SetParamObj(map, prefix + "AIOptimizerStatus.", this.AIOptimizerStatus);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Region", this.Region);

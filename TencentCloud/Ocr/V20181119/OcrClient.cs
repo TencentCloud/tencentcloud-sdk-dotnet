@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1534";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -302,7 +302,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
+        /// 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】。
         /// </summary>
         /// <param name="req"><see cref="DescribeExtractDocAgentJobRequest"/></param>
         /// <returns><see cref="DescribeExtractDocAgentJobResponse"/></returns>
@@ -312,7 +312,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
+        /// 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】。
         /// </summary>
         /// <param name="req"><see cref="DescribeExtractDocAgentJobRequest"/></param>
         /// <returns><see cref="DescribeExtractDocAgentJobResponse"/></returns>
@@ -1554,6 +1554,29 @@ namespace TencentCloud.Ocr.V20181119
         public QrcodeOCRResponse QrcodeOCRSync(QrcodeOCRRequest req)
         {
             return InternalRequestAsync<QrcodeOCRResponse>(req, "QrcodeOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 提供查询企业基本信息的能力。输入企业名称或统一社会信用代码，返回企业名称、统一社会信用代码、法定代表人、登记机关、经营期限、经营状态、经营范围、注册地址、主体类型、成立日期、核准日期、行政区划等企业登记信息。部分出参可能为空或无法查得，具体以实际查询结果为准。
+        /// 重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请联系商务或在线客服登记信息、开通服务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryEnterpriseBasicInfoRequest"/></param>
+        /// <returns><see cref="QueryEnterpriseBasicInfoResponse"/></returns>
+        public Task<QueryEnterpriseBasicInfoResponse> QueryEnterpriseBasicInfo(QueryEnterpriseBasicInfoRequest req)
+        {
+            return InternalRequestAsync<QueryEnterpriseBasicInfoResponse>(req, "QueryEnterpriseBasicInfo");
+        }
+
+        /// <summary>
+        /// 提供查询企业基本信息的能力。输入企业名称或统一社会信用代码，返回企业名称、统一社会信用代码、法定代表人、登记机关、经营期限、经营状态、经营范围、注册地址、主体类型、成立日期、核准日期、行政区划等企业登记信息。部分出参可能为空或无法查得，具体以实际查询结果为准。
+        /// 重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请联系商务或在线客服登记信息、开通服务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryEnterpriseBasicInfoRequest"/></param>
+        /// <returns><see cref="QueryEnterpriseBasicInfoResponse"/></returns>
+        public QueryEnterpriseBasicInfoResponse QueryEnterpriseBasicInfoSync(QueryEnterpriseBasicInfoRequest req)
+        {
+            return InternalRequestAsync<QueryEnterpriseBasicInfoResponse>(req, "QueryEnterpriseBasicInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

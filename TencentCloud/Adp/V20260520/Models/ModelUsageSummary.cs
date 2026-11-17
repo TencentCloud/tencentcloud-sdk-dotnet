@@ -31,6 +31,12 @@ namespace TencentCloud.Adp.V20260520.Models
         public float? CallCount{ get; set; }
 
         /// <summary>
+        /// <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
+        /// </summary>
+        [JsonProperty("ConsumptionPU")]
+        public float? ConsumptionPU{ get; set; }
+
+        /// <summary>
         /// <p>是否默认知识库</p>
         /// </summary>
         [JsonProperty("IsDefaultKB")]
@@ -48,12 +54,6 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("ResourceConsumptionList")]
         public ResourceConsumption[] ResourceConsumptionList{ get; set; }
 
-        /// <summary>
-        /// <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
-        /// </summary>
-        [JsonProperty("ConsumptionPU")]
-        public float? ConsumptionPU{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +61,10 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CallCount", this.CallCount);
+            this.SetParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
             this.SetParamSimple(map, prefix + "IsDefaultKB", this.IsDefaultKB);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamArrayObj(map, prefix + "ResourceConsumptionList.", this.ResourceConsumptionList);
-            this.SetParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
         }
     }
 }

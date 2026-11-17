@@ -25,14 +25,14 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 索引元数据字段
+        /// <p>索引元数据字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexMetaFields")]
         public IndexMetaField[] IndexMetaFields{ get; set; }
 
         /// <summary>
-        /// 查询总数
+        /// <p>查询总数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

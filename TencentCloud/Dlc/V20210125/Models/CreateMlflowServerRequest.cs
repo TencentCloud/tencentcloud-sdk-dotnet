@@ -67,10 +67,22 @@ namespace TencentCloud.Dlc.V20210125.Models
         public MlFlowResourceConfig ResourceConfig{ get; set; }
 
         /// <summary>
+        /// <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
+        /// </summary>
+        [JsonProperty("ServerArgs")]
+        public string ServerArgs{ get; set; }
+
+        /// <summary>
         /// <p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -85,7 +97,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "StorageConfig", this.StorageConfig);
             this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamSimple(map, prefix + "ServerArgs", this.ServerArgs);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

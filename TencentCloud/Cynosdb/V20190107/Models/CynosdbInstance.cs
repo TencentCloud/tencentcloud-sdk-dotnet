@@ -387,6 +387,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RealZone")]
         public string RealZone{ get; set; }
 
+        /// <summary>
+        /// <p>实例Serverless弹性信息</p>
+        /// </summary>
+        [JsonProperty("ServerlessQuotaInfo")]
+        public InstanceServerlessQuotaInfo ServerlessQuotaInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -453,6 +459,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
             this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
             this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
+            this.SetParamObj(map, prefix + "ServerlessQuotaInfo.", this.ServerlessQuotaInfo);
         }
     }
 }

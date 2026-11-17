@@ -25,13 +25,13 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 删除的会话ID
+        /// <p>删除的会话ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 删除的会话ID列表
+        /// <p>删除的会话ID列表</p>
         /// </summary>
         [JsonProperty("SessionIds")]
         public string[] SessionIds{ get; set; }

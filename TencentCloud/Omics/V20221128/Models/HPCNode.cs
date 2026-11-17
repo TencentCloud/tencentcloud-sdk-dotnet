@@ -96,6 +96,12 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// <p>是否存量节点</p>
+        /// </summary>
+        [JsonProperty("IsExistingNode")]
+        public bool? IsExistingNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsExistingNode", this.IsExistingNode);
         }
     }
 }

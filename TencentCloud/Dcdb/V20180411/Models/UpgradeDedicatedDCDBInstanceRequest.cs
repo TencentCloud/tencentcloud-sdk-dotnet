@@ -78,6 +78,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("SwitchInterval")]
         public long? SwitchInterval{ get; set; }
 
+        /// <summary>
+        /// <p>主节点所在机器，类似svr-xxx</p>
+        /// </summary>
+        [JsonProperty("MasterHostId")]
+        public string MasterHostId{ get; set; }
+
+        /// <summary>
+        /// <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
+        /// </summary>
+        [JsonProperty("SlaveHostIds")]
+        public string[] SlaveHostIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
             this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
             this.SetParamSimple(map, prefix + "SwitchInterval", this.SwitchInterval);
+            this.SetParamSimple(map, prefix + "MasterHostId", this.MasterHostId);
+            this.SetParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
         }
     }
 }

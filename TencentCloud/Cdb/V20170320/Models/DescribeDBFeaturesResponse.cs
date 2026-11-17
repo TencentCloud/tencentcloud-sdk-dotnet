@@ -25,56 +25,55 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 是否支持数据库审计功能。
+        /// <p>是否支持数据库审计功能。</p>
         /// </summary>
         [JsonProperty("IsSupportAudit")]
         public bool? IsSupportAudit{ get; set; }
 
         /// <summary>
-        /// 开启审计是否需要升级内核版本。
+        /// <p>开启审计是否需要升级内核版本。</p>
         /// </summary>
         [JsonProperty("AuditNeedUpgrade")]
         public bool? AuditNeedUpgrade{ get; set; }
 
         /// <summary>
-        /// 是否支持数据库加密功能。
+        /// <p>是否支持数据库加密功能。</p>
         /// </summary>
         [JsonProperty("IsSupportEncryption")]
         public bool? IsSupportEncryption{ get; set; }
 
         /// <summary>
-        /// 开启加密是否需要升级内核版本。
+        /// <p>开启加密是否需要升级内核版本。</p>
         /// </summary>
         [JsonProperty("EncryptionNeedUpgrade")]
         public bool? EncryptionNeedUpgrade{ get; set; }
 
         /// <summary>
-        /// 是否为异地只读实例。
+        /// <p>是否为异地只读实例。</p>
         /// </summary>
         [JsonProperty("IsRemoteRo")]
         public bool? IsRemoteRo{ get; set; }
 
         /// <summary>
-        /// 主实例所在地域。
-        /// 说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
+        /// <p>主实例所在地域。<br>说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 <a href="https://cloud.tencent.com/document/product/236/15872">查询实例列表</a> 接口查询。</p>
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }
 
         /// <summary>
-        /// 是否支持小版本升级。
+        /// <p>是否支持小版本升级。</p>
         /// </summary>
         [JsonProperty("IsSupportUpdateSubVersion")]
         public bool? IsSupportUpdateSubVersion{ get; set; }
 
         /// <summary>
-        /// 当前内核版本。
+        /// <p>当前内核版本。</p>
         /// </summary>
         [JsonProperty("CurrentSubVersion")]
         public string CurrentSubVersion{ get; set; }
 
         /// <summary>
-        /// 可供升级的内核版本。
+        /// <p>可供升级的内核版本。</p>
         /// </summary>
         [JsonProperty("TargetSubVersion")]
         public string TargetSubVersion{ get; set; }

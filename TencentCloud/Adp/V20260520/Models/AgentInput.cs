@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>输入来源类型：0 用户输入，3 自定义变量（API参数）</p>
+        /// <p>输入来源类型</p><p>枚举值：</p><ul><li>1： 用户输入</li><li>2： 系统变量</li><li>3： 自定义变量（API参数）</li><li>4： 环境变量</li><li>5： 应用变量</li><li>6： 工具参数</li></ul>
         /// </summary>
         [JsonProperty("InputType")]
         public long? InputType{ get; set; }

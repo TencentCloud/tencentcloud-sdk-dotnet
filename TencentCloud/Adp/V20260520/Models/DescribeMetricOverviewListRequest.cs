@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>看板域，必填，决定返回哪个域的 KPI 数据</p><table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>RESOURCE_TYPE_MODEL</td><td>1</td><td>模型用量</td></tr><tr><td>RESOURCE_TYPE_PLUGIN</td><td>2</td><td>插件用量</td></tr><tr><td>RESOURCE_TYPE_PLATFORM</td><td>3</td><td>平台功能用量</td></tr><tr><td>RESOURCE_TYPE_MODEL_CONCURRENCY</td><td>4</td><td>模型并发超限</td></tr><tr><td>RESOURCE_TYPE_KB_CAPACITY</td><td>5</td><td>知识库容量</td></tr><tr><td>RESOURCE_TYPE_USAGE_SUMMARY</td><td>6</td><td>用量汇总</td></tr><tr><td>RESOURCE_TYPE_RESOURCE_CONSUME</td><td>7</td><td>资源消耗（计费明细）</td></tr></tbody></table>
+        /// <p>看板域，必填，决定返回哪个域的 KPI 数据</p><table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>RESOURCE_TYPE_MODEL</td><td>1</td><td>模型用量</td></tr><tr><td>RESOURCE_TYPE_PLUGIN</td><td>2</td><td>插件用量（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_PLATFORM</td><td>3</td><td>平台功能用量（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_MODEL_CONCURRENCY</td><td>4</td><td>模型并发超限（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_KB_CAPACITY</td><td>5</td><td>知识库容量（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_USAGE_SUMMARY</td><td>6</td><td>用量汇总（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_RESOURCE_CONSUME</td><td>7</td><td>资源消耗（计费明细）（预留，暂不支持）</td></tr></tbody></table>
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("FilterList")]
         public Filter[] FilterList{ get; set; }
 
+        /// <summary>
+        /// <p>空间 ID，用于服务端校验当前用户的空间权限；空间或应用视图需传入，企业视图可不传。VIEW_TYPE_SPACE 时应与 ViewScope.ScopeId 一致，VIEW_TYPE_APP 时须校验应用归属该空间；与 FilterList 的 space_id 同传须一致。服务端不得仅凭请求中的 SpaceId 授权</p>
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "TimeRange.", this.TimeRange);
             this.SetParamObj(map, prefix + "ViewScope.", this.ViewScope);
             this.SetParamArrayObj(map, prefix + "FilterList.", this.FilterList);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
         }
     }
 }

@@ -25,27 +25,26 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人脸图片唯一标识。
+        /// <p>人脸图片唯一标识。</p>
         /// </summary>
         [JsonProperty("FaceId")]
         public string FaceId{ get; set; }
 
         /// <summary>
-        /// 检测出的人脸框的位置。
+        /// <p>检测出的人脸框的位置。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaceRect")]
         public FaceRect FaceRect{ get; set; }
 
         /// <summary>
-        /// 疑似同一人的PersonId。 
-        /// - 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+        /// <p>疑似同一人的PersonId。 </p><ul><li>当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。</li></ul>
         /// </summary>
         [JsonProperty("SimilarPersonId")]
         public string SimilarPersonId{ get; set; }
 
         /// <summary>
-        /// 人脸识别所用的算法模型版本。
+        /// <p>人脸识别所用的算法模型版本。</p>
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }

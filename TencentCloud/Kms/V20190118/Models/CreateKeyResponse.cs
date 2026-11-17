@@ -25,55 +25,55 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// CMK的全局唯一标识符
+        /// <p>CMK的全局唯一标识符</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 作为密钥更容易辨识，更容易被人看懂的别名
+        /// <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 密钥创建时间，unix时间戳
+        /// <p>密钥创建时间，unix时间戳</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// CMK的描述
+        /// <p>CMK的描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK的状态
+        /// <p>CMK的状态</p>
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }
 
         /// <summary>
-        /// CMK的用途
+        /// <p>CMK的用途</p>
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }
 
         /// <summary>
-        /// 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+        /// <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
         /// </summary>
         [JsonProperty("TagCode")]
         public ulong? TagCode{ get; set; }
 
         /// <summary>
-        /// 标签操作的返回信息
+        /// <p>标签操作的返回信息</p>
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }
 
         /// <summary>
-        /// HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+        /// <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }

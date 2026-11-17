@@ -67,6 +67,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ResourceSupplyAttribute")]
         public ResourceSupplyAttribute ResourceSupplyAttribute{ get; set; }
 
+        /// <summary>
+        /// <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
+        /// </summary>
+        [JsonProperty("ResourceGroupSWType")]
+        public string ResourceGroupSWType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "QueueId", this.QueueId);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
+            this.SetParamSimple(map, prefix + "ResourceGroupSWType", this.ResourceGroupSWType);
         }
     }
 }

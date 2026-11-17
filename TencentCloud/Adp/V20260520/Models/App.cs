@@ -94,6 +94,13 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("FileVolumeMountList")]
         public FileVolumeMount[] FileVolumeMountList{ get; set; }
 
+        /// <summary>
+        /// <p>A2A配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("A2AConfig")]
+        public A2AConfig A2AConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
             this.SetParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
             this.SetParamArrayObj(map, prefix + "FileVolumeMountList.", this.FileVolumeMountList);
+            this.SetParamObj(map, prefix + "A2AConfig.", this.A2AConfig);
         }
     }
 }

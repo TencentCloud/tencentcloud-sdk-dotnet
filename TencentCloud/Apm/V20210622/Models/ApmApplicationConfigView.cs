@@ -226,12 +226,14 @@ namespace TencentCloud.Apm.V20210622.Models
         /// <p>是否开启JNDI注入检测</p>
         /// </summary>
         [JsonProperty("IsJndiInjectionAnalysis")]
+        [System.Obsolete]
         public long? IsJndiInjectionAnalysis{ get; set; }
 
         /// <summary>
         /// <p>是否开启JNI注入检测</p>
         /// </summary>
         [JsonProperty("IsJniInjectionAnalysis")]
+        [System.Obsolete]
         public long? IsJniInjectionAnalysis{ get; set; }
 
         /// <summary>
@@ -330,6 +332,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("UseDefaultFuseConfig")]
         public bool? UseDefaultFuseConfig{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启JNDI注入检测</p>
+        /// </summary>
+        [JsonProperty("IsJNDIInjectionAnalysis")]
+        public string IsJNDIInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启JNI注入检测</p>
+        /// </summary>
+        [JsonProperty("IsJNIInjectionAnalysis")]
+        public string IsJNIInjectionAnalysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -387,6 +401,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
             this.SetParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
+            this.SetParamSimple(map, prefix + "IsJNDIInjectionAnalysis", this.IsJNDIInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
         }
     }
 }

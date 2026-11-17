@@ -25,46 +25,37 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 加入成功的人脸数量。
+        /// <p>加入成功的人脸数量。</p>
         /// </summary>
         [JsonProperty("SucFaceNum")]
         public ulong? SucFaceNum{ get; set; }
 
         /// <summary>
-        /// 加入成功的人脸ID列表。
+        /// <p>加入成功的人脸ID列表。</p>
         /// </summary>
         [JsonProperty("SucFaceIds")]
         public string[] SucFaceIds{ get; set; }
 
         /// <summary>
-        /// 每张人脸图片添加结果。
-        /// - 其他非 0 值代表算法服务异常，取值范围：
-        /// -1101 代表未检测到人脸。
-        /// -1102 代表图片解码失败。
-        /// -1109 代表图片尺寸过大或者过小。
-        /// -1601代表不符合图片质量控制要求。
-        /// -1604 代表人脸相似度没有超过FaceMatchThreshold。 
-        /// - RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
+        /// <p>每张人脸图片添加结果。</p><ul><li>其他非 0 值代表算法服务异常，取值范围：<br>-1101 代表未检测到人脸。<br>-1102 代表图片解码失败。<br>-1109 代表图片尺寸过大或者过小。<br>-1601代表不符合图片质量控制要求。<br>-1604 代表人脸相似度没有超过FaceMatchThreshold。 </li><li>RetCode的顺序和入参中 Images 或 Urls 的顺序一致。</li></ul>
         /// </summary>
         [JsonProperty("RetCode")]
         public long?[] RetCode{ get; set; }
 
         /// <summary>
-        /// 加入成功的人脸索引。
-        /// - 索引顺序和入参中 Images 或 Urls 的顺序一致。 
-        /// - 例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+        /// <p>加入成功的人脸索引。</p><ul><li>索引顺序和入参中 Images 或 Urls 的顺序一致。 </li><li>例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。</li></ul>
         /// </summary>
         [JsonProperty("SucIndexes")]
         public ulong?[] SucIndexes{ get; set; }
 
         /// <summary>
-        /// 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
+        /// <p>加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。</p>
         /// </summary>
         [JsonProperty("SucFaceRects")]
         public FaceRect[] SucFaceRects{ get; set; }
 
         /// <summary>
-        /// 人脸识别所用的算法模型版本。
+        /// <p>人脸识别所用的算法模型版本。</p>
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }

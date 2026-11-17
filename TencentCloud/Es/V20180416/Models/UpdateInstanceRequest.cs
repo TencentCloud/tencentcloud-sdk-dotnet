@@ -25,306 +25,292 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+        /// <p>实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 已废弃请使用NodeInfoList
-        /// 节点个数（2-50个）
+        /// <p>已废弃请使用NodeInfoList<br>节点个数（2-50个）</p>
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// ES配置项（JSON格式字符串）
+        /// <p>ES配置项（JSON格式字符串）</p>
         /// </summary>
         [JsonProperty("EsConfig")]
         public string EsConfig{ get; set; }
 
         /// <summary>
-        /// 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+        /// <p>默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&amp;^*+=_:;,.?]的特殊符号）</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 可视化组件（Kibana、Cerebro）的公网访问策略
+        /// <p>可视化组件（Kibana、Cerebro）的公网访问策略</p>
         /// </summary>
         [JsonProperty("EsAcl")]
         public EsAcl EsAcl{ get; set; }
 
         /// <summary>
-        /// 已废弃请使用NodeInfoList
-        /// 磁盘大小（单位GB）
+        /// <p>已废弃请使用NodeInfoList<br>磁盘大小（单位GB）</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 已废弃请使用NodeInfoList
-        /// 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// <p>已废弃请使用NodeInfoList<br>节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 已废弃请使用NodeInfoList
-        /// 专用主节点个数（只支持3个或5个）
+        /// <p>已废弃请使用NodeInfoList<br>专用主节点个数（只支持3个或5个）</p>
         /// </summary>
         [JsonProperty("MasterNodeNum")]
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
-        /// 已废弃请使用NodeInfoList
-        /// 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// <p>已废弃请使用NodeInfoList<br>专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li></p>
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
-        /// 已废弃请使用NodeInfoList
-        /// 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+        /// <p>已废弃请使用NodeInfoList<br>专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）</p>
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }
 
         /// <summary>
-        /// 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
+        /// <p>更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false</p>
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
         /// <summary>
-        /// COS自动备份信息
+        /// <p>COS自动备份信息</p>
         /// </summary>
         [JsonProperty("CosBackup")]
         public CosBackup CosBackup{ get; set; }
 
         /// <summary>
-        /// 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+        /// <p>节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改</p>
         /// </summary>
         [JsonProperty("NodeInfoList")]
         public NodeInfo[] NodeInfoList{ get; set; }
 
         /// <summary>
-        /// ES集群公网访问状态
-        /// OPEN 开启
-        /// CLOSE 关闭
+        /// <p>ES集群公网访问状态<br>OPEN 开启<br>CLOSE 关闭</p>
         /// </summary>
         [JsonProperty("PublicAccess")]
         public string PublicAccess{ get; set; }
 
         /// <summary>
-        /// 公网访问控制列表
+        /// <p>公网访问控制列表</p>
         /// </summary>
         [JsonProperty("EsPublicAcl")]
         public EsPublicAcl EsPublicAcl{ get; set; }
 
         /// <summary>
-        /// Kibana公网访问状态
-        /// OPEN 开启
-        /// CLOSE 关闭
+        /// <p>Kibana公网访问状态<br>OPEN 开启<br>CLOSE 关闭</p>
         /// </summary>
         [JsonProperty("KibanaPublicAccess")]
         public string KibanaPublicAccess{ get; set; }
 
         /// <summary>
-        /// Kibana内网访问状态
-        /// OPEN 开启
-        /// CLOSE 关闭
+        /// <p>Kibana内网访问状态<br>OPEN 开启<br>CLOSE 关闭</p>
         /// </summary>
         [JsonProperty("KibanaPrivateAccess")]
         public string KibanaPrivateAccess{ get; set; }
 
         /// <summary>
-        /// ES 6.8及以上版本基础版开启或关闭用户认证
+        /// <p>ES 6.8及以上版本基础版开启或关闭用户认证</p>
         /// </summary>
         [JsonProperty("BasicSecurityType")]
         public long? BasicSecurityType{ get; set; }
 
         /// <summary>
-        /// Kibana内网端口
+        /// <p>Kibana内网端口</p>
         /// </summary>
         [JsonProperty("KibanaPrivatePort")]
         public ulong? KibanaPrivatePort{ get; set; }
 
         /// <summary>
-        /// 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+        /// <p>0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启</p>
         /// </summary>
         [JsonProperty("ScaleType")]
         public long? ScaleType{ get; set; }
 
         /// <summary>
-        /// 多可用区部署
+        /// <p>多可用区部署</p>
         /// </summary>
         [JsonProperty("MultiZoneInfo")]
         public ZoneDetail[] MultiZoneInfo{ get; set; }
 
         /// <summary>
-        /// 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+        /// <p>场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索</p>
         /// </summary>
         [JsonProperty("SceneType")]
         public long? SceneType{ get; set; }
 
         /// <summary>
-        /// Kibana配置项（JSON格式字符串）
+        /// <p>Kibana配置项（JSON格式字符串）</p>
         /// </summary>
         [JsonProperty("KibanaConfig")]
         public string KibanaConfig{ get; set; }
 
         /// <summary>
-        /// 可视化节点配置
+        /// <p>可视化节点配置</p>
         /// </summary>
         [JsonProperty("WebNodeTypeInfo")]
         public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
 
         /// <summary>
-        /// 切换到新网络架构
+        /// <p>切换到新网络架构</p>
         /// </summary>
         [JsonProperty("SwitchPrivateLink")]
         public string SwitchPrivateLink{ get; set; }
 
         /// <summary>
-        /// 启用Cerebro
+        /// <p>启用Cerebro</p>
         /// </summary>
         [JsonProperty("EnableCerebro")]
         public bool? EnableCerebro{ get; set; }
 
         /// <summary>
-        /// Cerebro公网访问状态
-        /// OPEN 开启
-        /// CLOSE 关闭
+        /// <p>Cerebro公网访问状态<br>OPEN 开启<br>CLOSE 关闭</p>
         /// </summary>
         [JsonProperty("CerebroPublicAccess")]
         public string CerebroPublicAccess{ get; set; }
 
         /// <summary>
-        /// Cerebro内网访问状态
-        /// OPEN 开启
-        /// CLOSE 关闭
+        /// <p>Cerebro内网访问状态<br>OPEN 开启<br>CLOSE 关闭</p>
         /// </summary>
         [JsonProperty("CerebroPrivateAccess")]
         public string CerebroPrivateAccess{ get; set; }
 
         /// <summary>
-        /// 新增或修改的配置组信息
+        /// <p>新增或修改的配置组信息</p>
         /// </summary>
         [JsonProperty("EsConfigSet")]
         public EsConfigSetInfo EsConfigSet{ get; set; }
 
         /// <summary>
-        /// 可维护时间段
+        /// <p>可维护时间段</p>
         /// </summary>
         [JsonProperty("OperationDuration")]
         public OperationDurationUpdated OperationDuration{ get; set; }
 
         /// <summary>
-        /// 是否开启Alerting 外网告警输出：
-        /// OPEN 开启
-        /// CLOSE 关闭
+        /// <p>是否开启Alerting 外网告警输出：<br>OPEN 开启<br>CLOSE 关闭</p>
         /// </summary>
         [JsonProperty("KibanaAlteringPublicAccess")]
         public string KibanaAlteringPublicAccess{ get; set; }
 
         /// <summary>
-        /// kibana内网自定义域名
+        /// <p>kibana内网自定义域名</p>
         /// </summary>
         [JsonProperty("KibanaPrivateDomain")]
         public string KibanaPrivateDomain{ get; set; }
 
         /// <summary>
-        /// cerebro内网自定义域名
+        /// <p>cerebro内网自定义域名</p>
         /// </summary>
         [JsonProperty("CerebroPrivateDomain")]
         public string CerebroPrivateDomain{ get; set; }
 
         /// <summary>
-        /// 变更为https集群，默认是http
+        /// <p>变更为https集群，默认是http</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 节点出站访问详细信息
+        /// <p>节点出站访问详细信息</p>
         /// </summary>
         [JsonProperty("OutboundPublicAcls")]
         public OutboundPublicAcl[] OutboundPublicAcls{ get; set; }
 
         /// <summary>
-        /// 节点出站访问操作
-        /// OPEN 开启
-        /// CLOSE 关闭
+        /// <p>节点出站访问操作<br>OPEN 开启<br>CLOSE 关闭</p>
         /// </summary>
         [JsonProperty("OutboundPublicAccess")]
         public string OutboundPublicAccess{ get; set; }
 
         /// <summary>
-        /// cvm延迟上架参数
+        /// <p>cvm延迟上架参数</p>
         /// </summary>
         [JsonProperty("CvmDelayOnlineTime")]
         public ulong? CvmDelayOnlineTime{ get; set; }
 
         /// <summary>
-        /// 分片迁移并发数
+        /// <p>分片迁移并发数</p>
         /// </summary>
         [JsonProperty("ShardAllocationConcurrents")]
         public ulong? ShardAllocationConcurrents{ get; set; }
 
         /// <summary>
-        /// 分片迁移并发速度
+        /// <p>分片迁移并发速度</p>
         /// </summary>
         [JsonProperty("ShardAllocationBytes")]
         public ulong? ShardAllocationBytes{ get; set; }
 
         /// <summary>
-        /// 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+        /// <p>读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离</p>
         /// </summary>
         [JsonProperty("ReadWriteMode")]
         public long? ReadWriteMode{ get; set; }
 
         /// <summary>
-        /// 是否开启置放群组异步任务
+        /// <p>是否开启置放群组异步任务</p>
         /// </summary>
         [JsonProperty("EnableScheduleRecoverGroup")]
         public bool? EnableScheduleRecoverGroup{ get; set; }
 
         /// <summary>
-        /// 置放群组异步任务可维护时间段
+        /// <p>置放群组异步任务可维护时间段</p>
         /// </summary>
         [JsonProperty("EnableScheduleOperationDuration")]
         public EnableScheduleOperationDuration EnableScheduleOperationDuration{ get; set; }
 
         /// <summary>
-        /// 开启集群保护：OPEN-开启，CLOSE-关闭
+        /// <p>开启集群保护：OPEN-开启，CLOSE-关闭</p>
         /// </summary>
         [JsonProperty("EnableDestroyProtection")]
         public string EnableDestroyProtection{ get; set; }
 
         /// <summary>
-        /// 自动扩盘参数
+        /// <p>自动扩盘参数</p>
         /// </summary>
         [JsonProperty("AutoScaleDiskInfoList")]
         public AutoScaleDiskInfo[] AutoScaleDiskInfoList{ get; set; }
 
         /// <summary>
-        /// 自动扩盘删除参数
+        /// <p>自动扩盘删除参数</p>
         /// </summary>
         [JsonProperty("AutoScaleDiskDeleteNodeTypeList")]
         public string[] AutoScaleDiskDeleteNodeTypeList{ get; set; }
 
         /// <summary>
-        /// 其他附加配置，jvm或者yml
+        /// <p>其他附加配置，jvm或者yml</p>
         /// </summary>
         [JsonProperty("OtherConfig")]
         public OtherConfig OtherConfig{ get; set; }
+
+        /// <summary>
+        /// <p>滚动升降配时是否等待集群恢复Green再滚动下一个节点</p>
+        /// </summary>
+        [JsonProperty("WaitGreen")]
+        public string WaitGreen{ get; set; }
 
 
         /// <summary>
@@ -379,6 +365,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
             this.SetParamArraySimple(map, prefix + "AutoScaleDiskDeleteNodeTypeList.", this.AutoScaleDiskDeleteNodeTypeList);
             this.SetParamObj(map, prefix + "OtherConfig.", this.OtherConfig);
+            this.SetParamSimple(map, prefix + "WaitGreen", this.WaitGreen);
         }
     }
 }

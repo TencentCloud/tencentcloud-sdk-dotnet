@@ -25,53 +25,71 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 需要开通服务的资源ID
+        /// <p>需要开通服务的资源ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>状态</p>
         /// </summary>
         [JsonProperty("Status")]
         [System.Obsolete]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 实例版本
+        /// <p>实例版本</p>
         /// </summary>
         [JsonProperty("ResourceEdition")]
         public string ResourceEdition{ get; set; }
 
         /// <summary>
-        /// 资源节点数
+        /// <p>资源节点数</p>
         /// </summary>
         [JsonProperty("ResourceNode")]
         public long? ResourceNode{ get; set; }
 
         /// <summary>
-        /// 自动续费
+        /// <p>自动续费</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 带宽扩展包个数(4M)
+        /// <p>带宽扩展包个数(4M)</p>
         /// </summary>
         [JsonProperty("PackageBandwidth")]
         public long? PackageBandwidth{ get; set; }
 
         /// <summary>
-        /// 授权点数扩展包个数(50点)
+        /// <p>授权点数扩展包个数(50点)</p>
         /// </summary>
         [JsonProperty("PackageNode")]
         public long? PackageNode{ get; set; }
 
         /// <summary>
-        /// 日志投递
+        /// <p>日志投递</p>
         /// </summary>
         [JsonProperty("LogDelivery")]
         public long? LogDelivery{ get; set; }
+
+        /// <summary>
+        /// <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("IOAResource")]
+        public ulong? IOAResource{ get; set; }
+
+        /// <summary>
+        /// <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+        /// </summary>
+        [JsonProperty("PackageIOAUserCount")]
+        public ulong? PackageIOAUserCount{ get; set; }
+
+        /// <summary>
+        /// <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+        /// </summary>
+        [JsonProperty("PackageIOABandwidth")]
+        public ulong? PackageIOABandwidth{ get; set; }
 
 
         /// <summary>
@@ -87,6 +105,9 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "PackageBandwidth", this.PackageBandwidth);
             this.SetParamSimple(map, prefix + "PackageNode", this.PackageNode);
             this.SetParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
+            this.SetParamSimple(map, prefix + "IOAResource", this.IOAResource);
+            this.SetParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
+            this.SetParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
         }
     }
 }

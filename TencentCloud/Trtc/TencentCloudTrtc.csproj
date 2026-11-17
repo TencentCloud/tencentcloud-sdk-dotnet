@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1508</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,12 +63,16 @@
     <Compile Include="V20190722\Models\AudioFormat.cs" />
     <Compile Include="V20190722\Models\AudioParams.cs" />
     <Compile Include="V20190722\Models\AudioSegments.cs" />
+    <Compile Include="V20190722\Models\BatchDeleteTRTCVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\BatchDeleteTRTCVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\CloudModerationStorage.cs" />
     <Compile Include="V20190722\Models\CloudSliceStorage.cs" />
     <Compile Include="V20190722\Models\CloudStorage.cs" />
     <Compile Include="V20190722\Models\CloudVod.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationResponse.cs" />
+    <Compile Include="V20190722\Models\ControlVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\ControlVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\CreateAudioModerationSyncRequest.cs" />
     <Compile Include="V20190722\Models\CreateAudioModerationSyncResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudModerationRequest.cs" />
@@ -85,6 +89,8 @@
     <Compile Include="V20190722\Models\CreatePictureResponse.cs" />
     <Compile Include="V20190722\Models\CreateRecognizeVocabV3Request.cs" />
     <Compile Include="V20190722\Models\CreateRecognizeVocabV3Response.cs" />
+    <Compile Include="V20190722\Models\CreateVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\CreateVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />
@@ -99,6 +105,10 @@
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="V20190722\Models\DeleteRecognizeVocabV3Request.cs" />
     <Compile Include="V20190722\Models\DeleteRecognizeVocabV3Response.cs" />
+    <Compile Include="V20190722\Models\DeleteTRTCVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteTRTCVoicePrintResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteVoicePrintRequest.cs" />
     <Compile Include="V20190722\Models\DeleteVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAIConversationRequest.cs" />
@@ -143,14 +153,14 @@
     <Compile Include="V20190722\Models\DescribeTRTCMarketQualityDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCMarketScaleDataRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCMarketScaleDataResponse.cs" />
-    <Compile Include="V20190722\Models\DescribeTRTCMarketScaleMetricDataRequest.cs" />
-    <Compile Include="V20190722\Models\DescribeTRTCMarketScaleMetricDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCRealTimeQualityDataRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCRealTimeQualityDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleDataRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCRealTimeScaleDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCSegmentModerationUsageRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTRTCSegmentModerationUsageResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeTRTCVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcRoomUsageRequest.cs" />
@@ -163,6 +173,8 @@
     <Compile Include="V20190722\Models\DescribeUserEventResponse.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeVoicePrintRequest.cs" />
     <Compile Include="V20190722\Models\DescribeVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\DescribeWebRecordRequest.cs" />
@@ -185,6 +197,7 @@
     <Compile Include="V20190722\Models\ImageLocation.cs" />
     <Compile Include="V20190722\Models\Input.cs" />
     <Compile Include="V20190722\Models\InvokeLLM.cs" />
+    <Compile Include="V20190722\Models\KeyValueItem.cs" />
     <Compile Include="V20190722\Models\LayoutParams.cs" />
     <Compile Include="V20190722\Models\LiveModerationParams.cs" />
     <Compile Include="V20190722\Models\LiveModerationStorageParams.cs" />
@@ -222,8 +235,12 @@
     <Compile Include="V20190722\Models\ModifyCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\ModifyCloudSliceTaskRequest.cs" />
     <Compile Include="V20190722\Models\ModifyCloudSliceTaskResponse.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudTranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudTranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\ModifyPictureRequest.cs" />
     <Compile Include="V20190722\Models\ModifyPictureResponse.cs" />
+    <Compile Include="V20190722\Models\ModifyVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
     <Compile Include="V20190722\Models\OutputParams.cs" />
     <Compile Include="V20190722\Models\PictureInfo.cs" />
@@ -234,6 +251,8 @@
     <Compile Include="V20190722\Models\RecognizeConfig.cs" />
     <Compile Include="V20190722\Models\RecordParams.cs" />
     <Compile Include="V20190722\Models\RecordUsage.cs" />
+    <Compile Include="V20190722\Models\RegisterTRTCVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\RegisterTRTCVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\RegisterVoicePrintRequest.cs" />
     <Compile Include="V20190722\Models\RegisterVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
@@ -246,7 +265,6 @@
     <Compile Include="V20190722\Models\ScaleInfomation.cs" />
     <Compile Include="V20190722\Models\SdkAppIdRecordUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
-    <Compile Include="V20190722\Models\SeriesInfo.cs" />
     <Compile Include="V20190722\Models\SeriesInfos.cs" />
     <Compile Include="V20190722\Models\ServerPushText.cs" />
     <Compile Include="V20190722\Models\SetVocabStateV3Request.cs" />
@@ -288,8 +306,8 @@
     <Compile Include="V20190722\Models\StorageParams.cs" />
     <Compile Include="V20190722\Models\SubscribeModerationUserIds.cs" />
     <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
-    <Compile Include="V20190722\Models\TRTCDataResp.cs" />
     <Compile Include="V20190722\Models\TRTCDataResult.cs" />
+    <Compile Include="V20190722\Models\TRTCVoicePrintItem.cs" />
     <Compile Include="V20190722\Models\TTSConfig.cs" />
     <Compile Include="V20190722\Models\TTSParam.cs" />
     <Compile Include="V20190722\Models\TTSVoice.cs" />
@@ -304,6 +322,7 @@
     <Compile Include="V20190722\Models\TimeValue.cs" />
     <Compile Include="V20190722\Models\TranscriptionParam.cs" />
     <Compile Include="V20190722\Models\TranscriptionParams.cs" />
+    <Compile Include="V20190722\Models\TranscriptionSubscribeParam.cs" />
     <Compile Include="V20190722\Models\TranscriptionUserInfoParams.cs" />
     <Compile Include="V20190722\Models\TranslationConfig.cs" />
     <Compile Include="V20190722\Models\TranslationParam.cs" />
@@ -318,11 +337,15 @@
     <Compile Include="V20190722\Models\UpdateRecognizeVocabV3Response.cs" />
     <Compile Include="V20190722\Models\UpdateStreamIngestRequest.cs" />
     <Compile Include="V20190722\Models\UpdateStreamIngestResponse.cs" />
+    <Compile Include="V20190722\Models\UpdateTRTCVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\UpdateTRTCVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\UpdateVoicePrintRequest.cs" />
     <Compile Include="V20190722\Models\UpdateVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\UsageList.cs" />
     <Compile Include="V20190722\Models\UserInformation.cs" />
     <Compile Include="V20190722\Models\UserMediaStream.cs" />
+    <Compile Include="V20190722\Models\VerifyTRTCVoicePrintRequest.cs" />
+    <Compile Include="V20190722\Models\VerifyTRTCVoicePrintResponse.cs" />
     <Compile Include="V20190722\Models\VideoEncode.cs" />
     <Compile Include="V20190722\Models\VideoEncodeParams.cs" />
     <Compile Include="V20190722\Models\VideoParams.cs" />
@@ -330,7 +353,20 @@
     <Compile Include="V20190722\Models\Voice.cs" />
     <Compile Include="V20190722\Models\VoiceCloneRequest.cs" />
     <Compile Include="V20190722\Models\VoiceCloneResponse.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationDialogConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationHistoryContent.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationHistoryMessage.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationInvokeLLM.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationInvokeTTS.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationLLMConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationMcpServer.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationS2SConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationSTTConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationTTSConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationVisionConfig.cs" />
     <Compile Include="V20190722\Models\VoicePrint.cs" />
+    <Compile Include="V20190722\Models\VoicePrintBatchDeleteResult.cs" />
     <Compile Include="V20190722\Models\VoicePrintInfo.cs" />
     <Compile Include="V20190722\Models\WaterMark.cs" />
     <Compile Include="V20190722\Models\WaterMarkChar.cs" />

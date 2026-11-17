@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1533</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -241,6 +241,7 @@
     <Compile Include="V20190612\Models\AudioDenoiseConfig.cs" />
     <Compile Include="V20190612\Models\AudioEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\AudioEnhanceEditConfig.cs" />
+    <Compile Include="V20190612\Models\AudioSRConfig.cs" />
     <Compile Include="V20190612\Models\AudioSeparateConfig.cs" />
     <Compile Include="V20190612\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20190612\Models\AudioTemplateInfoForUpdate.cs" />
@@ -352,6 +353,8 @@
     <Compile Include="V20190612\Models\CreateLiveRecordTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateMediaEvaluationRequest.cs" />
     <Compile Include="V20190612\Models\CreateMediaEvaluationResponse.cs" />
+    <Compile Include="V20190612\Models\CreateModelChatTaskRequest.cs" />
+    <Compile Include="V20190612\Models\CreateModelChatTaskResponse.cs" />
     <Compile Include="V20190612\Models\CreateOutputInfo.cs" />
     <Compile Include="V20190612\Models\CreateOutputInfoRTPSettings.cs" />
     <Compile Include="V20190612\Models\CreateOutputRTMPSettings.cs" />
@@ -549,6 +552,8 @@
     <Compile Include="V20190612\Models\DescribeMDPMPSUserInfoResponse.cs" />
     <Compile Include="V20190612\Models\DescribeMediaMetaDataRequest.cs" />
     <Compile Include="V20190612\Models\DescribeMediaMetaDataResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeModelChatTaskRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeModelChatTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeOutput.cs" />
     <Compile Include="V20190612\Models\DescribeOutputHLSPullServerUrl.cs" />
     <Compile Include="V20190612\Models\DescribeOutputHLSPullSettings.cs" />
@@ -851,6 +856,19 @@
     <Compile Include="V20190612\Models\MediaUsageItem.cs" />
     <Compile Include="V20190612\Models\MediaVideoStreamItem.cs" />
     <Compile Include="V20190612\Models\Metadata.cs" />
+    <Compile Include="V20190612\Models\ModelChatCompletionChoice.cs" />
+    <Compile Include="V20190612\Models\ModelChatCompletionUsage.cs" />
+    <Compile Include="V20190612\Models\ModelChatContentPart.cs" />
+    <Compile Include="V20190612\Models\ModelChatDataInputInfo.cs" />
+    <Compile Include="V20190612\Models\ModelChatInputAudio.cs" />
+    <Compile Include="V20190612\Models\ModelChatInputFile.cs" />
+    <Compile Include="V20190612\Models\ModelChatInputImage.cs" />
+    <Compile Include="V20190612\Models\ModelChatInputVideo.cs" />
+    <Compile Include="V20190612\Models\ModelChatMediaInputInfo.cs" />
+    <Compile Include="V20190612\Models\ModelChatMessageItem.cs" />
+    <Compile Include="V20190612\Models\ModelChatResponseMessage.cs" />
+    <Compile Include="V20190612\Models\ModelChatTaskNotifyConfig.cs" />
+    <Compile Include="V20190612\Models\ModelChatUrlInputInfo.cs" />
     <Compile Include="V20190612\Models\ModifyAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyAIAnalysisTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyAIRecognitionTemplateRequest.cs" />
@@ -1068,6 +1086,7 @@
     <Compile Include="V20190612\Models\SourceLocationInfo.cs" />
     <Compile Include="V20190612\Models\SourcePackageConf.cs" />
     <Compile Include="V20190612\Models\SourceTag.cs" />
+    <Compile Include="V20190612\Models\SpatialAudioConfig.cs" />
     <Compile Include="V20190612\Models\Speakers.cs" />
     <Compile Include="V20190612\Models\SpecificationDataItem.cs" />
     <Compile Include="V20190612\Models\SpekeDrm.cs" />

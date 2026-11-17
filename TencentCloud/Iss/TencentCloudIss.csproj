@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1524</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -254,6 +254,8 @@
     <Compile Include="V20230517\Models\ListTasksData.cs" />
     <Compile Include="V20230517\Models\ListTasksRequest.cs" />
     <Compile Include="V20230517\Models\ListTasksResponse.cs" />
+    <Compile Include="V20230517\Models\ListVLPlanResultsRequest.cs" />
+    <Compile Include="V20230517\Models\ListVLPlanResultsResponse.cs" />
     <Compile Include="V20230517\Models\ListVLPlansRequest.cs" />
     <Compile Include="V20230517\Models\ListVLPlansResponse.cs" />
     <Compile Include="V20230517\Models\ListVLTemplatesRequest.cs" />
@@ -322,6 +324,7 @@
     <Compile Include="V20230517\Models\UpdateUserDeviceResponse.cs" />
     <Compile Include="V20230517\Models\VLPlanInfo.cs" />
     <Compile Include="V20230517\Models\VLPlanResultDetailInfo.cs" />
+    <Compile Include="V20230517\Models\VLPlanResultInfo.cs" />
     <Compile Include="V20230517\Models\VLPlanResultSnapshotImageUrlInfo.cs" />
     <Compile Include="V20230517\Models\VLTemplateInfo.cs" />
     <Compile Include="V20230517\Models\VideoDownloadTask.cs" />

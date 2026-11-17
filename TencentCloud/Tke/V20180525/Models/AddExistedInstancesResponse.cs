@@ -25,28 +25,28 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 失败的节点ID
+        /// <p>失败的节点ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedInstanceIds")]
         public string[] FailedInstanceIds{ get; set; }
 
         /// <summary>
-        /// 成功的节点ID
+        /// <p>成功的节点ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccInstanceIds")]
         public string[] SuccInstanceIds{ get; set; }
 
         /// <summary>
-        /// 超时未返回出来节点的ID(可能失败，也可能成功)
+        /// <p>超时未返回出来节点的ID(可能失败，也可能成功)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeoutInstanceIds")]
         public string[] TimeoutInstanceIds{ get; set; }
 
         /// <summary>
-        /// 失败的节点的失败原因
+        /// <p>失败的节点的失败原因</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedReasons")]

@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string PrivateIP{ get; set; }
 
         /// <summary>
-        /// <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
+        /// <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
         /// </summary>
         [JsonProperty("DefendVersion")]
         public string DefendVersion{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public AccountBriefInfo Account{ get; set; }
 
         /// <summary>
-        /// <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
+        /// <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CloudTag")]
         public Tag[] CloudTag{ get; set; }
 
+        /// <summary>
+        /// <p>VPR评级解释卡片</p>
+        /// </summary>
+        [JsonProperty("VPRExplainInfo")]
+        public VPRExplainInfo VPRExplainInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
             this.SetParamArrayObj(map, prefix + "TagItem.", this.TagItem);
             this.SetParamArrayObj(map, prefix + "CloudTag.", this.CloudTag);
+            this.SetParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
         }
     }
 }

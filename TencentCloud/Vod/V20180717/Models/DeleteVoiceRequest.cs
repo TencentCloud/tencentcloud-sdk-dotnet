@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string VoiceId{ get; set; }
 
         /// <summary>
+        /// <p>模型名，不填默认为MiniMax模型。</p> 枚举值：<ul><li><p>MiniMax </p></li><li><p>ElevenLabs</p></li></ul>
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
+        /// <summary>
         /// <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

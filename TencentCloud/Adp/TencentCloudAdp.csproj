@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1531</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20260520\AdpClient.cs" />
+    <Compile Include="V20260520\Models\A2AConfig.cs" />
     <Compile Include="V20260520\Models\AICallConfig.cs" />
     <Compile Include="V20260520\Models\AIOptimizeModel.cs" />
     <Compile Include="V20260520\Models\AccessKeyAuthConfig.cs" />
@@ -392,6 +393,7 @@
     <Compile Include="V20260520\Models\DocSwitch.cs" />
     <Compile Include="V20260520\Models\DocTaskStatus.cs" />
     <Compile Include="V20260520\Models\DocUpdatePeriod.cs" />
+    <Compile Include="V20260520\Models\DocumentParseUsageDetail.cs" />
     <Compile Include="V20260520\Models\DuplexBilling.cs" />
     <Compile Include="V20260520\Models\ESConfig.cs" />
     <Compile Include="V20260520\Models\EffectivePeriod.cs" />

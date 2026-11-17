@@ -108,6 +108,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Spec")]
         public long? Spec{ get; set; }
 
+        /// <summary>
+        /// <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+        /// </summary>
+        [JsonProperty("ModelIdentifier")]
+        public string ModelIdentifier{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Queue", this.Queue);
             this.SetParamSimple(map, prefix + "BillingItem", this.BillingItem);
             this.SetParamSimple(map, prefix + "Spec", this.Spec);
+            this.SetParamSimple(map, prefix + "ModelIdentifier", this.ModelIdentifier);
         }
     }
 }

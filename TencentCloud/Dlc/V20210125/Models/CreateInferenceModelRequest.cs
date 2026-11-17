@@ -108,6 +108,42 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
+        /// <summary>
+        /// <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+        /// </summary>
+        [JsonProperty("ModelSource")]
+        public string ModelSource{ get; set; }
+
+        /// <summary>
+        /// <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+        /// </summary>
+        [JsonProperty("RegisterMeta")]
+        public RegisterMeta RegisterMeta{ get; set; }
+
+        /// <summary>
+        /// <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+        /// </summary>
+        [JsonProperty("FileList")]
+        public FileNode[] FileList{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+        /// </summary>
+        [JsonProperty("BaseModelUid")]
+        public string BaseModelUid{ get; set; }
+
+        /// <summary>
+        /// <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+        /// </summary>
+        [JsonProperty("BaseModelVersionUid")]
+        public string BaseModelVersionUid{ get; set; }
+
+        /// <summary>
+        /// <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+        /// </summary>
+        [JsonProperty("ModelCategory")]
+        public string ModelCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +164,12 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "ModelSource", this.ModelSource);
+            this.SetParamObj(map, prefix + "RegisterMeta.", this.RegisterMeta);
+            this.SetParamArrayObj(map, prefix + "FileList.", this.FileList);
+            this.SetParamSimple(map, prefix + "BaseModelUid", this.BaseModelUid);
+            this.SetParamSimple(map, prefix + "BaseModelVersionUid", this.BaseModelVersionUid);
+            this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
         }
     }
 }

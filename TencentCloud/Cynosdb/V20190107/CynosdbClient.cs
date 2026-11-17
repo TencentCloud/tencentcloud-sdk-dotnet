@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1532";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -2024,6 +2024,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群设置的serverless弹性配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceServerlessQuotaRequest"/></param>
+        /// <returns><see cref="DescribeInstanceServerlessQuotaResponse"/></returns>
+        public Task<DescribeInstanceServerlessQuotaResponse> DescribeInstanceServerlessQuota(DescribeInstanceServerlessQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceServerlessQuotaResponse>(req, "DescribeInstanceServerlessQuota");
+        }
+
+        /// <summary>
+        /// 查询集群设置的serverless弹性配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceServerlessQuotaRequest"/></param>
+        /// <returns><see cref="DescribeInstanceServerlessQuotaResponse"/></returns>
+        public DescribeInstanceServerlessQuotaResponse DescribeInstanceServerlessQuotaSync(DescribeInstanceServerlessQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceServerlessQuotaResponse>(req, "DescribeInstanceServerlessQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4859,6 +4880,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public SearchClusterTablesResponse SearchClusterTablesSync(SearchClusterTablesRequest req)
         {
             return InternalRequestAsync<SearchClusterTablesResponse>(req, "SearchClusterTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将普通集群转换为Serverless集群
+        /// </summary>
+        /// <param name="req"><see cref="SetInstanceServerlessQuotaRequest"/></param>
+        /// <returns><see cref="SetInstanceServerlessQuotaResponse"/></returns>
+        public Task<SetInstanceServerlessQuotaResponse> SetInstanceServerlessQuota(SetInstanceServerlessQuotaRequest req)
+        {
+            return InternalRequestAsync<SetInstanceServerlessQuotaResponse>(req, "SetInstanceServerlessQuota");
+        }
+
+        /// <summary>
+        /// 将普通集群转换为Serverless集群
+        /// </summary>
+        /// <param name="req"><see cref="SetInstanceServerlessQuotaRequest"/></param>
+        /// <returns><see cref="SetInstanceServerlessQuotaResponse"/></returns>
+        public SetInstanceServerlessQuotaResponse SetInstanceServerlessQuotaSync(SetInstanceServerlessQuotaRequest req)
+        {
+            return InternalRequestAsync<SetInstanceServerlessQuotaResponse>(req, "SetInstanceServerlessQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

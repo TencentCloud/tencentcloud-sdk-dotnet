@@ -25,70 +25,70 @@ namespace TencentCloud.Databuddy.V20260715.Models
     {
         
         /// <summary>
-        /// 任务参数
+        /// <p>任务参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamInfo[] ParamList{ get; set; }
 
         /// <summary>
-        /// 任务依赖
+        /// <p>任务依赖</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DependOnList")]
         public DependOnBrief[] DependOnList{ get; set; }
 
         /// <summary>
-        /// 任务ID，创建时无需传入，由服务端生成
+        /// <p>任务ID，创建时无需传入，由服务端生成</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>任务名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <p>任务类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public TaskType TaskType{ get; set; }
 
         /// <summary>
-        /// 资源组ID，可通过资源组相关接口获取
+        /// <p>计算资源组ID，计算资源取值通过 ListComputeResourceOptions 接口获取，入参 ResourceTypes 需按任务类型传值：DATA_INTEGRATION 传 [1]（平台集群），PYTHON/NOTEBOOK/RAY_JOB/DATA_QUALITY/IF_ELSE 传 [2]（作业集群），SQL 传 [2,3]（交互式+作业集群），其余任务类型无需填写本字段。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroupId")]
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// 任务描述
+        /// <p>任务描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 任务告警
+        /// <p>任务告警</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alarm")]
         public AlarmBrief Alarm{ get; set; }
 
         /// <summary>
-        /// 监控指标
+        /// <p>监控指标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorMetric")]
         public MonitorMetricBrief MonitorMetric{ get; set; }
 
         /// <summary>
-        /// 任务重试策略
+        /// <p>任务重试策略</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskRetryStrategy")]
@@ -102,14 +102,14 @@ namespace TencentCloud.Databuddy.V20260715.Models
         public string DependOnRunCondition{ get; set; }
 
         /// <summary>
-        /// 任务X坐标
+        /// <p>任务X坐标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LeftCoordinate")]
         public float? LeftCoordinate{ get; set; }
 
         /// <summary>
-        /// 任务Y坐标
+        /// <p>任务Y坐标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopCoordinate")]

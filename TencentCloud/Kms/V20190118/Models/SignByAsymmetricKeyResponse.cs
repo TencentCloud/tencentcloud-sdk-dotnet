@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 签名，Base64编码
+        /// <p>签名，Base64编码</p>
         /// </summary>
         [JsonProperty("Signature")]
         public string Signature{ get; set; }

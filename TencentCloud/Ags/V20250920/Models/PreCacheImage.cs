@@ -73,6 +73,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public long? CachedImageSizeBytes{ get; set; }
 
         /// <summary>
+        /// <p>镜像预热完成时间</p>
+        /// </summary>
+        [JsonProperty("ReadyTime")]
+        public string ReadyTime{ get; set; }
+
+        /// <summary>
         /// <p>该预热镜像最近一次被沙箱实例使用时间</p>
         /// </summary>
         [JsonProperty("LastUsedTime")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "CachedImageSizeBytes", this.CachedImageSizeBytes);
+            this.SetParamSimple(map, prefix + "ReadyTime", this.ReadyTime);
             this.SetParamSimple(map, prefix + "LastUsedTime", this.LastUsedTime);
         }
     }

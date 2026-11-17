@@ -66,6 +66,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("VulDetail")]
         public VulDetailInfo VulDetail{ get; set; }
 
+        /// <summary>
+        /// <p>修复任务ID</p>
+        /// </summary>
+        [JsonProperty("FixTaskId")]
+        public string FixTaskId{ get; set; }
+
+        /// <summary>
+        /// <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
+        /// </summary>
+        [JsonProperty("SupportAutoFix")]
+        public ulong? SupportAutoFix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
             this.SetParamSimple(map, prefix + "RiskStatus", this.RiskStatus);
             this.SetParamObj(map, prefix + "VulDetail.", this.VulDetail);
+            this.SetParamSimple(map, prefix + "FixTaskId", this.FixTaskId);
+            this.SetParamSimple(map, prefix + "SupportAutoFix", this.SupportAutoFix);
         }
     }
 }

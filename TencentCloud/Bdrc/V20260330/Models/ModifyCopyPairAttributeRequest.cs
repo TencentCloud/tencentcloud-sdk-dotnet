@@ -25,13 +25,13 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// <p>要修改属性的复制对id</p>
+        /// <p>要修改属性的复制对ID</p>
         /// </summary>
         [JsonProperty("CopyPairId")]
         public string CopyPairId{ get; set; }
 
         /// <summary>
-        /// <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+        /// <p>要修改的复制对类型，可选值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
         /// </summary>
         [JsonProperty("CopyPairType")]
         public string CopyPairType{ get; set; }
@@ -48,6 +48,30 @@ namespace TencentCloud.Bdrc.V20260330.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// <p>容灾端实例VPC IP（仅容灾端CVM未创建时可修改）</p>
+        /// </summary>
+        [JsonProperty("PrivateIpAddress")]
+        public string PrivateIpAddress{ get; set; }
+
+        /// <summary>
+        /// <p>是否使用默认IP，与PrivateIpAddress互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+        /// </summary>
+        [JsonProperty("UseDefaultPrivateIp")]
+        public bool? UseDefaultPrivateIp{ get; set; }
+
+        /// <summary>
+        /// <p>实例登录设置，需要修改的时候才传（仅容灾端CVM未创建时可修改）</p>
+        /// </summary>
+        [JsonProperty("LoginSettings")]
+        public LoginSettings LoginSettings{ get; set; }
+
+        /// <summary>
+        /// <p>是否自动生成密码，与LoginSettings互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+        /// </summary>
+        [JsonProperty("UseDefaultPassword")]
+        public bool? UseDefaultPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "CopyPairType", this.CopyPairType);
             this.SetParamSimple(map, prefix + "CopyPairName", this.CopyPairName);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
+            this.SetParamSimple(map, prefix + "UseDefaultPrivateIp", this.UseDefaultPrivateIp);
+            this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+            this.SetParamSimple(map, prefix + "UseDefaultPassword", this.UseDefaultPassword);
         }
     }
 }

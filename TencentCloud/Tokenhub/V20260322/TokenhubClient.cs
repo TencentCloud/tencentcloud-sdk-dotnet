@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -714,6 +714,31 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeUsageRankListResponse DescribeUsageRankListSync(DescribeUsageRankListRequest req)
         {
             return InternalRequestAsync<DescribeUsageRankListResponse>(req, "DescribeUsageRankList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新 API 密钥绑定。
+        /// 
+        /// 更新 API 密钥的绑定关系和绑定类型。BindType 为 all 时 Bindings 必须为空，BindType含 custom 时 Bindings 为绑定列表。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyBindingsRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyBindingsResponse"/></returns>
+        public Task<ModifyApiKeyBindingsResponse> ModifyApiKeyBindings(ModifyApiKeyBindingsRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyBindingsResponse>(req, "ModifyApiKeyBindings");
+        }
+
+        /// <summary>
+        /// 更新 API 密钥绑定。
+        /// 
+        /// 更新 API 密钥的绑定关系和绑定类型。BindType 为 all 时 Bindings 必须为空，BindType含 custom 时 Bindings 为绑定列表。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyBindingsRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyBindingsResponse"/></returns>
+        public ModifyApiKeyBindingsResponse ModifyApiKeyBindingsSync(ModifyApiKeyBindingsRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyBindingsResponse>(req, "ModifyApiKeyBindings")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

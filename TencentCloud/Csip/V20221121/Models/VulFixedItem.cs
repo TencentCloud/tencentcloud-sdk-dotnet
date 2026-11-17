@@ -96,6 +96,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("VPRExplainInfo")]
         public VPRExplainInfo VPRExplainInfo{ get; set; }
 
+        /// <summary>
+        /// <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
+        /// </summary>
+        [JsonProperty("RepairMethod")]
+        public string RepairMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "Components.", this.Components);
             this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
             this.SetParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
+            this.SetParamSimple(map, prefix + "RepairMethod", this.RepairMethod);
         }
     }
 }

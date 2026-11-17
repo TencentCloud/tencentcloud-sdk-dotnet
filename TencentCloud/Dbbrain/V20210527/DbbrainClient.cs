@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1531";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -1709,6 +1709,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeSlowLogsResponse DescribeSlowLogsSync(DescribeSlowLogsRequest req)
         {
             return InternalRequestAsync<DescribeSlowLogsResponse>(req, "DescribeSlowLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSqlExplainV2Request"/></param>
+        /// <returns><see cref="DescribeSqlExplainV2Response"/></returns>
+        public Task<DescribeSqlExplainV2Response> DescribeSqlExplainV2(DescribeSqlExplainV2Request req)
+        {
+            return InternalRequestAsync<DescribeSqlExplainV2Response>(req, "DescribeSqlExplainV2");
+        }
+
+        /// <summary>
+        /// 查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSqlExplainV2Request"/></param>
+        /// <returns><see cref="DescribeSqlExplainV2Response"/></returns>
+        public DescribeSqlExplainV2Response DescribeSqlExplainV2Sync(DescribeSqlExplainV2Request req)
+        {
+            return InternalRequestAsync<DescribeSqlExplainV2Response>(req, "DescribeSqlExplainV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

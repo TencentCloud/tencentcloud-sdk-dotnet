@@ -72,6 +72,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }
 
+        /// <summary>
+        /// <p>账号维度的禁用命令配置。</p><ul><li>默认值：[]（空数组，即不禁用任何命令）</li><li>入参限制：仅支持配置以下指定的数据库命令（支持多选）<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd。</li></ul><p>默认值：&quot;&quot;</p>
+        /// </summary>
+        [JsonProperty("DisableCommands")]
+        public string[] DisableCommands{ get; set; }
+
+        /// <summary>
+        /// <p>是否修改账号维度的禁用命令配置。仅在需要更新禁用命令列表时传入。</p><ul><li>true：修改（将根据传入的新命令列表进行覆盖更新）。</li><li>false：不修改（默认值）。</li></ul>
+        /// </summary>
+        [JsonProperty("ModifyDisableCommands")]
+        public bool? ModifyDisableCommands{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
             this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+            this.SetParamArraySimple(map, prefix + "DisableCommands.", this.DisableCommands);
+            this.SetParamSimple(map, prefix + "ModifyDisableCommands", this.ModifyDisableCommands);
         }
     }
 }

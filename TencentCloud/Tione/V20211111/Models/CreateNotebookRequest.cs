@@ -180,6 +180,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// <p>资源供应属性</p>
+        /// </summary>
+        [JsonProperty("ResourceSupplyAttribute")]
+        public ResourceSupplyAttribute ResourceSupplyAttribute{ get; set; }
+
+        /// <summary>
+        /// <p>队列ID</p>
+        /// </summary>
+        [JsonProperty("Queues")]
+        public string[] Queues{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
             this.SetParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
+            this.SetParamArraySimple(map, prefix + "Queues.", this.Queues);
         }
     }
 }

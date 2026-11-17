@@ -25,19 +25,19 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>插件名称</p>
+        /// <p>连接器与工具名称</p>
         /// </summary>
         [JsonProperty("PluginName")]
         public string PluginName{ get; set; }
 
         /// <summary>
-        /// <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
+        /// <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
         /// </summary>
         [JsonProperty("ResourceConsumptionList")]
         public ResourceConsumption[] ResourceConsumptionList{ get; set; }
 
         /// <summary>
-        /// <p>插件工具名（tool_name）</p>
+        /// <p>工具名称</p>
         /// </summary>
         [JsonProperty("ToolName")]
         public string ToolName{ get; set; }

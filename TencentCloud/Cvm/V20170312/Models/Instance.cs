@@ -321,6 +321,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("PartitionNumber")]
         public long? PartitionNumber{ get; set; }
 
+        /// <summary>
+        /// <p>逻辑超节点标识</p>
+        /// </summary>
+        [JsonProperty("SuperNodeId")]
+        public string SuperNodeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -375,6 +381,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
             this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+            this.SetParamSimple(map, prefix + "SuperNodeId", this.SuperNodeId);
         }
     }
 }

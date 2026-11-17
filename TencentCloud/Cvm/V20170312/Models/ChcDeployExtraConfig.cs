@@ -25,25 +25,25 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// minos类型。是使用腾讯云的minios，还是客户自己的minios。
+        /// <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
         /// </summary>
         [JsonProperty("MiniOsType")]
         public string MiniOsType{ get; set; }
 
         /// <summary>
-        /// 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
+        /// <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
         /// </summary>
         [JsonProperty("BootType")]
         public string BootType{ get; set; }
 
         /// <summary>
-        /// PXE使用的引导文件。默认为pxelinux.0。
+        /// <p>PXE使用的引导文件。默认为pxelinux.0。</p>
         /// </summary>
         [JsonProperty("BootFile")]
         public string BootFile{ get; set; }
 
         /// <summary>
-        /// tftp服务器的ip地址。
+        /// <p>TFTP服务器的IP地址。</p>
         /// </summary>
         [JsonProperty("NextServerAddress")]
         public string NextServerAddress{ get; set; }

@@ -55,6 +55,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string StoragePath{ get; set; }
 
         /// <summary>
+        /// <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
+        /// </summary>
+        [JsonProperty("ArtifactRootUri")]
+        public string ArtifactRootUri{ get; set; }
+
+        /// <summary>
         /// <p>错误或提示信息（仅在请求异常时有值）</p>
         /// </summary>
         [JsonProperty("Message")]
@@ -83,6 +89,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SubPath", this.SubPath);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "StoragePath", this.StoragePath);
+            this.SetParamSimple(map, prefix + "ArtifactRootUri", this.ArtifactRootUri);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "SnapshotTimestamp", this.SnapshotTimestamp);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

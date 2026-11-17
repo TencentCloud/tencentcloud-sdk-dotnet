@@ -25,116 +25,164 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 索引类型
+        /// <p>索引类型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
-        /// 索引名
+        /// <p>索引名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// 索引元数据JSON
+        /// <p>索引元数据JSON</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexMetaJson")]
         public string IndexMetaJson{ get; set; }
 
         /// <summary>
-        /// 索引状态
+        /// <p>索引状态</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
 
         /// <summary>
-        /// 索引存储大小，单位Byte
+        /// <p>索引存储大小，单位Byte</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexStorage")]
         public long? IndexStorage{ get; set; }
 
         /// <summary>
-        /// 索引创建时间
+        /// <p>索引创建时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexCreateTime")]
         public string IndexCreateTime{ get; set; }
 
         /// <summary>
-        /// 后备索引
+        /// <p>后备索引</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackingIndices")]
         public BackingIndexMetaField[] BackingIndices{ get; set; }
 
         /// <summary>
-        /// 索引所属集群ID
+        /// <p>索引所属集群ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 索引所属集群名
+        /// <p>索引所属集群名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 索引所属集群版本
+        /// <p>索引所属集群版本</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// 索引生命周期字段
+        /// <p>索引生命周期字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexPolicyField")]
         public IndexPolicyField IndexPolicyField{ get; set; }
 
         /// <summary>
-        /// 索引自治字段
+        /// <p>索引自治字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexOptionsField")]
         public IndexOptionsField IndexOptionsField{ get; set; }
 
         /// <summary>
-        /// 索引配置字段
+        /// <p>索引配置字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexSettingsField")]
         public IndexSettingsField IndexSettingsField{ get; set; }
 
         /// <summary>
-        /// 索引别名字段
+        /// <p>索引别名字段</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexAliasesField")]
         public string[] IndexAliasesField{ get; set; }
 
         /// <summary>
-        /// 索引所属集群APP ID
+        /// <p>索引所属集群APP ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 索引文档数
+        /// <p>索引文档数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexDocs")]
         public ulong? IndexDocs{ get; set; }
+
+        /// <summary>
+        /// <p>当前字段数</p>
+        /// </summary>
+        [JsonProperty("FieldCount")]
+        public long? FieldCount{ get; set; }
+
+        /// <summary>
+        /// <p>当前上限</p>
+        /// </summary>
+        [JsonProperty("FieldLimit")]
+        public long? FieldLimit{ get; set; }
+
+        /// <summary>
+        /// <p>使用率</p>
+        /// </summary>
+        [JsonProperty("FieldUsageRatio")]
+        public string FieldUsageRatio{ get; set; }
+
+        /// <summary>
+        /// <p>占用分片数</p>
+        /// </summary>
+        [JsonProperty("OccupiedShards")]
+        public long? OccupiedShards{ get; set; }
+
+        /// <summary>
+        /// <p>索引开启状态</p>
+        /// </summary>
+        [JsonProperty("IndexOpenStatus")]
+        public string IndexOpenStatus{ get; set; }
+
+        /// <summary>
+        /// <p>索引字段数硬上限</p>
+        /// </summary>
+        [JsonProperty("FieldLimitHardCap")]
+        public long? FieldLimitHardCap{ get; set; }
+
+        /// <summary>
+        /// <p>上限可调整最小值</p>
+        /// </summary>
+        [JsonProperty("FieldLimitMin")]
+        public long? FieldLimitMin{ get; set; }
+
+        /// <summary>
+        /// <p>剩余调整次数</p>
+        /// </summary>
+        [JsonProperty("FieldAutoAdjustRemaining")]
+        public long? FieldAutoAdjustRemaining{ get; set; }
 
 
         /// <summary>
@@ -158,6 +206,14 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArraySimple(map, prefix + "IndexAliasesField.", this.IndexAliasesField);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
+            this.SetParamSimple(map, prefix + "FieldCount", this.FieldCount);
+            this.SetParamSimple(map, prefix + "FieldLimit", this.FieldLimit);
+            this.SetParamSimple(map, prefix + "FieldUsageRatio", this.FieldUsageRatio);
+            this.SetParamSimple(map, prefix + "OccupiedShards", this.OccupiedShards);
+            this.SetParamSimple(map, prefix + "IndexOpenStatus", this.IndexOpenStatus);
+            this.SetParamSimple(map, prefix + "FieldLimitHardCap", this.FieldLimitHardCap);
+            this.SetParamSimple(map, prefix + "FieldLimitMin", this.FieldLimitMin);
+            this.SetParamSimple(map, prefix + "FieldAutoAdjustRemaining", this.FieldAutoAdjustRemaining);
         }
     }
 }

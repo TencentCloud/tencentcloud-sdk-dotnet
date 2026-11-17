@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1534";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -1272,6 +1272,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口（DescribeModules）用于查询实例的扩展模块信息，包括模块的支持状态（是否支持）、启用状态（是否已启用）等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModulesRequest"/></param>
+        /// <returns><see cref="DescribeModulesResponse"/></returns>
+        public Task<DescribeModulesResponse> DescribeModules(DescribeModulesRequest req)
+        {
+            return InternalRequestAsync<DescribeModulesResponse>(req, "DescribeModules");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeModules）用于查询实例的扩展模块信息，包括模块的支持状态（是否支持）、启用状态（是否已启用）等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModulesRequest"/></param>
+        /// <returns><see cref="DescribeModulesResponse"/></returns>
+        public DescribeModulesResponse DescribeModulesSync(DescribeModulesRequest req)
+        {
+            return InternalRequestAsync<DescribeModulesResponse>(req, "DescribeModules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeParamTemplateInfo）用于查询参数模板详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
@@ -2221,6 +2242,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口（ModifyModule）用于修改实例扩展模块的启用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleRequest"/></param>
+        /// <returns><see cref="ModifyModuleResponse"/></returns>
+        public Task<ModifyModuleResponse> ModifyModule(ModifyModuleRequest req)
+        {
+            return InternalRequestAsync<ModifyModuleResponse>(req, "ModifyModule");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyModule）用于修改实例扩展模块的启用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleRequest"/></param>
+        /// <returns><see cref="ModifyModuleResponse"/></returns>
+        public ModifyModuleResponse ModifyModuleSync(ModifyModuleRequest req)
+        {
+            return InternalRequestAsync<ModifyModuleResponse>(req, "ModifyModule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyNetworkConfig）用于修改实例网络配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkConfigRequest"/></param>
@@ -2280,6 +2322,48 @@ namespace TencentCloud.Redis.V20180412
         public ModifyReplicationGroupResponse ModifyReplicationGroupSync(ModifyReplicationGroupRequest req)
         {
             return InternalRequestAsync<ModifyReplicationGroupResponse>(req, "ModifyReplicationGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifySSLEncryptionMode）用于更改SSL加密模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifySSLEncryptionModeRequest"/></param>
+        /// <returns><see cref="ModifySSLEncryptionModeResponse"/></returns>
+        public Task<ModifySSLEncryptionModeResponse> ModifySSLEncryptionMode(ModifySSLEncryptionModeRequest req)
+        {
+            return InternalRequestAsync<ModifySSLEncryptionModeResponse>(req, "ModifySSLEncryptionMode");
+        }
+
+        /// <summary>
+        /// 本接口（ModifySSLEncryptionMode）用于更改SSL加密模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifySSLEncryptionModeRequest"/></param>
+        /// <returns><see cref="ModifySSLEncryptionModeResponse"/></returns>
+        public ModifySSLEncryptionModeResponse ModifySSLEncryptionModeSync(ModifySSLEncryptionModeRequest req)
+        {
+            return InternalRequestAsync<ModifySSLEncryptionModeResponse>(req, "ModifySSLEncryptionMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyValkeyModule）用于修改Valkey实例扩展模块的启用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyValkeyModuleRequest"/></param>
+        /// <returns><see cref="ModifyValkeyModuleResponse"/></returns>
+        public Task<ModifyValkeyModuleResponse> ModifyValkeyModule(ModifyValkeyModuleRequest req)
+        {
+            return InternalRequestAsync<ModifyValkeyModuleResponse>(req, "ModifyValkeyModule");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyValkeyModule）用于修改Valkey实例扩展模块的启用状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyValkeyModuleRequest"/></param>
+        /// <returns><see cref="ModifyValkeyModuleResponse"/></returns>
+        public ModifyValkeyModuleResponse ModifyValkeyModuleSync(ModifyValkeyModuleRequest req)
+        {
+            return InternalRequestAsync<ModifyValkeyModuleResponse>(req, "ModifyValkeyModule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2532,6 +2616,27 @@ namespace TencentCloud.Redis.V20180412
         public SwitchProxyResponse SwitchProxySync(SwitchProxyRequest req)
         {
             return InternalRequestAsync<SwitchProxyResponse>(req, "SwitchProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpdateSSLCert）用于更新SSL密钥信息。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSLCertRequest"/></param>
+        /// <returns><see cref="UpdateSSLCertResponse"/></returns>
+        public Task<UpdateSSLCertResponse> UpdateSSLCert(UpdateSSLCertRequest req)
+        {
+            return InternalRequestAsync<UpdateSSLCertResponse>(req, "UpdateSSLCert");
+        }
+
+        /// <summary>
+        /// 本接口（UpdateSSLCert）用于更新SSL密钥信息。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSLCertRequest"/></param>
+        /// <returns><see cref="UpdateSSLCertResponse"/></returns>
+        public UpdateSSLCertResponse UpdateSSLCertSync(UpdateSSLCertRequest req)
+        {
+            return InternalRequestAsync<UpdateSSLCertResponse>(req, "UpdateSSLCert")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

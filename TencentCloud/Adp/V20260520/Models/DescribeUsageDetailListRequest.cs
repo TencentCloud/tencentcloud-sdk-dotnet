@@ -60,6 +60,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
+        /// <summary>
+        /// <p>空间 ID；空间或应用视图必传，由服务端校验空间权限</p>
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArrayObj(map, prefix + "FilterList.", this.FilterList);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
         }
     }
 }

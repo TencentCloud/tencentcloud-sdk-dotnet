@@ -73,6 +73,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MachineStatus{ get; set; }
 
         /// <summary>
+        /// <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+        /// </summary>
+        [JsonProperty("HostStatus")]
+        public string HostStatus{ get; set; }
+
+        /// <summary>
         /// <p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p>
         /// </summary>
         [JsonProperty("SupportAutoFix")]
@@ -95,6 +101,18 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         [JsonProperty("NotFixableReason")]
         public string NotFixableReason{ get; set; }
+
+        /// <summary>
+        /// <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+        /// </summary>
+        [JsonProperty("NotFixableReasonCode")]
+        public string NotFixableReasonCode{ get; set; }
+
+        /// <summary>
+        /// <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
+        /// </summary>
+        [JsonProperty("NotFixableAction")]
+        public VulFixableMachineAction NotFixableAction{ get; set; }
 
         /// <summary>
         /// <p>修复命令列表，SupportAutoFix为1时返回</p>
@@ -140,10 +158,13 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "OsType", this.OsType);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+            this.SetParamSimple(map, prefix + "HostStatus", this.HostStatus);
             this.SetParamSimple(map, prefix + "SupportAutoFix", this.SupportAutoFix);
             this.SetParamSimple(map, prefix + "FixStatus", this.FixStatus);
             this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
             this.SetParamSimple(map, prefix + "NotFixableReason", this.NotFixableReason);
+            this.SetParamSimple(map, prefix + "NotFixableReasonCode", this.NotFixableReasonCode);
+            this.SetParamObj(map, prefix + "NotFixableAction.", this.NotFixableAction);
             this.SetParamArraySimple(map, prefix + "FixCommands.", this.FixCommands);
             this.SetParamArraySimple(map, prefix + "Components.", this.Components);
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);

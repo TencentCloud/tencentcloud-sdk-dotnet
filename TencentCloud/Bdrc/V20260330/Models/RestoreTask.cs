@@ -25,124 +25,145 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 恢复任务 ID
+        /// <p>恢复任务 ID</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 关联备份点 ID
+        /// <p>关联备份点 ID</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// 源实例 ID
+        /// <p>源实例 ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 目标实例 ID
+        /// <p>目标实例 ID</p>
         /// </summary>
         [JsonProperty("TargetResourceId")]
         public string TargetResourceId{ get; set; }
 
         /// <summary>
-        /// 恢复路径列表
+        /// <p>恢复路径列表</p>
         /// </summary>
         [JsonProperty("RestorePaths")]
         public string[] RestorePaths{ get; set; }
 
         /// <summary>
-        /// 目标恢复位置
+        /// <p>目标恢复位置</p>
         /// </summary>
         [JsonProperty("TargetLocation")]
         public string TargetLocation{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// <p>任务状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 需恢复文件总数
+        /// <p>需恢复文件总数</p>
         /// </summary>
         [JsonProperty("TotalFileCount")]
         public long? TotalFileCount{ get; set; }
 
         /// <summary>
-        /// 需恢复数据总量（字节）
+        /// <p>需恢复数据总量（字节）</p>
         /// </summary>
         [JsonProperty("TotalSize")]
         public long? TotalSize{ get; set; }
 
         /// <summary>
-        /// 需恢复数据总量（格式化，如 "1.5 GB"）
+        /// <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
         /// </summary>
         [JsonProperty("TotalSizeFormatted")]
         public string TotalSizeFormatted{ get; set; }
 
         /// <summary>
-        /// 已恢复文件数
+        /// <p>已恢复文件数</p>
         /// </summary>
         [JsonProperty("RestoreFileCount")]
         public long? RestoreFileCount{ get; set; }
 
         /// <summary>
-        /// 已恢复数据量（字节）
+        /// <p>已恢复数据量（字节）</p>
         /// </summary>
         [JsonProperty("RestoreSize")]
         public long? RestoreSize{ get; set; }
 
         /// <summary>
-        /// 已恢复数据量（格式化）
+        /// <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
         /// </summary>
         [JsonProperty("RestoreSizeFormatted")]
         public string RestoreSizeFormatted{ get; set; }
 
         /// <summary>
-        /// 恢复进度（0-100）
+        /// <p>恢复进度（0-100）</p>
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// 关联 Job ID
+        /// <p>关联 Job ID</p>
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 任务开始时间（ISO 格式）
+        /// <p>任务开始时间（ISO 格式）</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 任务结束时间
+        /// <p>任务结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 任务创建时间
+        /// <p>任务创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 恢复任务失败原因
+        /// <p>恢复任务失败原因</p>
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
         /// <summary>
-        /// 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
+        /// <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
         /// </summary>
         [JsonProperty("ConflictStrategy")]
         public string ConflictStrategy{ get; set; }
+
+        /// <summary>
+        /// <p>是否为原路径恢复</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsOriginalPath")]
+        public bool? IsOriginalPath{ get; set; }
+
+        /// <summary>
+        /// <p>源端腾讯云资源ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudResourceId")]
+        public string CloudResourceId{ get; set; }
+
+        /// <summary>
+        /// <p>目标端腾讯云资源ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetCloudResourceId")]
+        public string TargetCloudResourceId{ get; set; }
 
 
         /// <summary>
@@ -170,6 +191,9 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
             this.SetParamSimple(map, prefix + "ConflictStrategy", this.ConflictStrategy);
+            this.SetParamSimple(map, prefix + "IsOriginalPath", this.IsOriginalPath);
+            this.SetParamSimple(map, prefix + "CloudResourceId", this.CloudResourceId);
+            this.SetParamSimple(map, prefix + "TargetCloudResourceId", this.TargetCloudResourceId);
         }
     }
 }

@@ -84,6 +84,12 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("AgentCredentialVO")]
         public DescribeAgentCredentialResp AgentCredentialVO{ get; set; }
 
+        /// <summary>
+        /// <p>应用</p>
+        /// </summary>
+        [JsonProperty("AgentAppVO")]
+        public DescribeAgentAppResp AgentAppVO{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "NeedAuth", this.NeedAuth);
             this.SetParamSimple(map, prefix + "AgentCredentialID", this.AgentCredentialID);
             this.SetParamObj(map, prefix + "AgentCredentialVO.", this.AgentCredentialVO);
+            this.SetParamObj(map, prefix + "AgentAppVO.", this.AgentAppVO);
         }
     }
 }

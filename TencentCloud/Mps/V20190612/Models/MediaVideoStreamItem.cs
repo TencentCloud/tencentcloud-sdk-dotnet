@@ -25,79 +25,86 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频流的码率，单位：bps。
+        /// <p>视频流的码率，单位：bps。</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// 视频流的高度，单位：px。
+        /// <p>视频流的高度，单位：px。</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 视频流的宽度，单位：px。
+        /// <p>视频流的宽度，单位：px。</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 视频流的编码格式，例如 h264。
+        /// <p>视频流的编码格式，例如 h264。</p>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 帧率，单位：hz。
+        /// <p>帧率，单位：hz。</p>
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 色彩空间。
+        /// <p>色彩空间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColorPrimaries")]
         public string ColorPrimaries{ get; set; }
 
         /// <summary>
-        /// 色彩空间。
+        /// <p>色彩空间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColorSpace")]
         public string ColorSpace{ get; set; }
 
         /// <summary>
-        /// 色彩空间。
+        /// <p>色彩空间。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColorTransfer")]
         public string ColorTransfer{ get; set; }
 
         /// <summary>
-        /// HDR类型。
+        /// <p>HDR类型。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HdrType")]
         public string HdrType{ get; set; }
 
         /// <summary>
-        /// 视频Codecs。
+        /// <p>视频Codecs。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// 帧率分子部分
+        /// <p>视频时长。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public float? Duration{ get; set; }
+
+        /// <summary>
+        /// <p>帧率分子部分</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FpsNumerator")]
         public long? FpsNumerator{ get; set; }
 
         /// <summary>
-        /// 帧率分母部分
+        /// <p>帧率分母部分</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FpsDenominator")]
@@ -119,6 +126,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
             this.SetParamSimple(map, prefix + "HdrType", this.HdrType);
             this.SetParamSimple(map, prefix + "Codecs", this.Codecs);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "FpsNumerator", this.FpsNumerator);
             this.SetParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
         }

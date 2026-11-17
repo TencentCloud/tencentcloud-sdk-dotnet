@@ -25,39 +25,37 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// RO 组名称。
+        /// <p>RO 组名称。</p>
         /// </summary>
         [JsonProperty("RoGroupName")]
         public string RoGroupName{ get; set; }
 
         /// <summary>
-        /// RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
-        /// 注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+        /// <p>RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。<br>注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。</p>
         /// </summary>
         [JsonProperty("RoMaxDelayTime")]
         public long? RoMaxDelayTime{ get; set; }
 
         /// <summary>
-        /// 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
+        /// <p>是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。</p>
         /// </summary>
         [JsonProperty("RoOfflineDelay")]
         public long? RoOfflineDelay{ get; set; }
 
         /// <summary>
-        /// 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
-        /// 注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+        /// <p>最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。<br>注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。</p>
         /// </summary>
         [JsonProperty("MinRoInGroup")]
         public long? MinRoInGroup{ get; set; }
 
         /// <summary>
-        /// 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
+        /// <p>权重模式。支持值包括：&quot;system&quot; - 系统自动分配； &quot;custom&quot; - 用户自定义设置。注意，若设置 &quot;custom&quot; 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
+        /// <p>延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。</p>
         /// </summary>
         [JsonProperty("ReplicationDelayTime")]
         public long? ReplicationDelayTime{ get; set; }

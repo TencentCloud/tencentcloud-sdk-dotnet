@@ -25,6 +25,30 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
+        /// <p>索引数量</p>
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>成功数量</p>
+        /// </summary>
+        [JsonProperty("SuccessCount")]
+        public long? SuccessCount{ get; set; }
+
+        /// <summary>
+        /// <p>失败数量</p>
+        /// </summary>
+        [JsonProperty("FailedCount")]
+        public long? FailedCount{ get; set; }
+
+        /// <summary>
+        /// <p>无</p>
+        /// </summary>
+        [JsonProperty("Results")]
+        public BatchIndexResult[] Results{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+            this.SetParamSimple(map, prefix + "FailedCount", this.FailedCount);
+            this.SetParamArrayObj(map, prefix + "Results.", this.Results);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -72,6 +72,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("ResourceExpiredHour")]
         public ulong? ResourceExpiredHour{ get; set; }
 
+        /// <summary>
+        /// <p>客户自定义扩展字段，服务端完全不解析，只做透传，在事件回调中原样返回</p><p>入参限制：总字符数≤4KB</p>
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "ModerationStorageParams.", this.ModerationStorageParams);
             this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
             this.SetParamSimple(map, prefix + "ResourceExpiredHour", this.ResourceExpiredHour);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
         }
     }
 }

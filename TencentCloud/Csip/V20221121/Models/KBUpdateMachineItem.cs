@@ -25,85 +25,119 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>KB补丁ID</p>
+        /// KB补丁ID
         /// </summary>
         [JsonProperty("KBId")]
         public long? KBId{ get; set; }
 
         /// <summary>
-        /// <p>主机实例ID</p>
+        /// 主机实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>主机名称</p>
+        /// 主机名称
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// <p>主机IP</p>
+        /// 主机IP
         /// </summary>
         [JsonProperty("MachineIp")]
         public string MachineIp{ get; set; }
 
         /// <summary>
-        /// <p>公网IP</p>
+        /// 公网IP
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// <p>操作系统名称</p>
+        /// 操作系统名称
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
-        /// <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
+        /// 主机在线状态
+        /// 枚举值：
+        /// ONLINE：在线
+        /// OFFLINE：离线
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
 
         /// <summary>
-        /// <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
+        /// 主机运行状态
+        /// 枚举值：
+        /// RUNNING：运行中
+        /// STOPPED：已停止
+        /// EXPIRED：待回收
+        /// </summary>
+        [JsonProperty("HostStatus")]
+        public string HostStatus{ get; set; }
+
+        /// <summary>
+        /// 是否支持自动更新补丁
+        /// 枚举值：
+        /// 0：不支持
+        /// 1：支持
         /// </summary>
         [JsonProperty("SupportAutoFix")]
         public long? SupportAutoFix{ get; set; }
 
         /// <summary>
-        /// <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
+        /// 当前修复状态
+        /// 枚举值：
+        /// 0：未修复
+        /// 1：修复中
+        /// 2：修复失败
+        /// 3：修复成功
+        /// 4：修复超时
         /// </summary>
         [JsonProperty("FixStatus")]
         public long? FixStatus{ get; set; }
 
         /// <summary>
-        /// <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+        /// 最近一次修复时间
+        /// 参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
         /// </summary>
         [JsonProperty("LatestFixTime")]
         public string LatestFixTime{ get; set; }
 
         /// <summary>
-        /// <p>不可修复原因，SupportAutoFix为0时返回</p>
+        /// 不可修复原因，SupportAutoFix为0时返回
         /// </summary>
         [JsonProperty("NotFixableReason")]
         public string NotFixableReason{ get; set; }
 
         /// <summary>
-        /// <p>资产标签列表</p>
+        /// 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+        /// </summary>
+        [JsonProperty("NotFixableAction")]
+        public VulFixableMachineAction NotFixableAction{ get; set; }
+
+        /// <summary>
+        /// 资产标签列表
         /// </summary>
         [JsonProperty("TagItems")]
         public MiniTagItem[] TagItems{ get; set; }
 
         /// <summary>
-        /// <p>所属账号AppId</p>
+        /// 所属账号AppId
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
+        /// 付费版本信息
+        /// 枚举值：
+        /// BASIC：基础版
+        /// PRO：专业版
+        /// ULTIMATE：旗舰版
+        /// PRO_LH：轻量版
         /// </summary>
         [JsonProperty("PayVersion")]
         public string PayVersion{ get; set; }
@@ -121,10 +155,12 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+            this.SetParamSimple(map, prefix + "HostStatus", this.HostStatus);
             this.SetParamSimple(map, prefix + "SupportAutoFix", this.SupportAutoFix);
             this.SetParamSimple(map, prefix + "FixStatus", this.FixStatus);
             this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
             this.SetParamSimple(map, prefix + "NotFixableReason", this.NotFixableReason);
+            this.SetParamObj(map, prefix + "NotFixableAction.", this.NotFixableAction);
             this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "PayVersion", this.PayVersion);

@@ -25,22 +25,28 @@ namespace TencentCloud.Dataagent.V20250513.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 会话ID
+        /// <p>会话ID</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 批量删除 会话id 列表
+        /// <p>批量删除 会话id 列表</p>
         /// </summary>
         [JsonProperty("SessionIds")]
         public string[] SessionIds{ get; set; }
+
+        /// <summary>
+        /// <p>上下文</p>
+        /// </summary>
+        [JsonProperty("SurfaceContext")]
+        public SurfaceContext SurfaceContext{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
+            this.SetParamObj(map, prefix + "SurfaceContext.", this.SurfaceContext);
         }
     }
 }

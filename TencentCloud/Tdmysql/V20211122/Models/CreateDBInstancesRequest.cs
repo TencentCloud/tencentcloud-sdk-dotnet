@@ -25,12 +25,6 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// <p>创建实例区域</p>
-        /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
-
-        /// <summary>
         /// <p>字符型vpcid</p>
         /// </summary>
         [JsonProperty("VpcId")]
@@ -71,6 +65,12 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
+
+        /// <summary>
+        /// <p>创建实例区域</p>
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
         /// <p>全能型副本数量</p>
@@ -234,13 +234,18 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("AutoScaleConfigs")]
         public AutoScalingConfig[] AutoScaleConfigs{ get; set; }
 
+        /// <summary>
+        /// <p>密码复杂度</p>
+        /// </summary>
+        [JsonProperty("PasswordComplexity")]
+        public PasswordComplexity PasswordComplexity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "SpecCode", this.SpecCode);
@@ -248,6 +253,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "StorageNodeNum", this.StorageNodeNum);
             this.SetParamSimple(map, prefix + "Replications", this.Replications);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "FullReplications", this.FullReplications);
             this.SetParamSimple(map, prefix + "CreateVersion", this.CreateVersion);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
@@ -275,6 +281,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
             this.SetParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
+            this.SetParamObj(map, prefix + "PasswordComplexity.", this.PasswordComplexity);
         }
     }
 }

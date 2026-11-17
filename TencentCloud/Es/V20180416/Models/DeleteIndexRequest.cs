@@ -66,6 +66,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("IndexPhrase")]
         public string IndexPhrase{ get; set; }
 
+        /// <summary>
+        /// <p>索引列表</p>
+        /// </summary>
+        [JsonProperty("IndexNames")]
+        public string[] IndexNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
             this.SetParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
+            this.SetParamArraySimple(map, prefix + "IndexNames.", this.IndexNames);
         }
     }
 }

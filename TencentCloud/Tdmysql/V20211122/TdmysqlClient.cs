@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1534";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -869,6 +869,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyAutoRenewFlagResponse ModifyAutoRenewFlagSync(ModifyAutoRenewFlagRequest req)
         {
             return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstance）提供通用变配实例功能，合并纵向变配（UpgradeInstance）和横向变配（ExpandInstance）的能力，支持CPU/内存/磁盘/节点数/可用区/存储类型的复合变更。支持DryRun预检查模式，可在不实际执行变配的情况下获取变配计划。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceResponse"/></returns>
+        public Task<ModifyDBInstanceResponse> ModifyDBInstance(ModifyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceResponse>(req, "ModifyDBInstance");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstance）提供通用变配实例功能，合并纵向变配（UpgradeInstance）和横向变配（ExpandInstance）的能力，支持CPU/内存/磁盘/节点数/可用区/存储类型的复合变更。支持DryRun预检查模式，可在不实际执行变配的情况下获取变配计划。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceResponse"/></returns>
+        public ModifyDBInstanceResponse ModifyDBInstanceSync(ModifyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceResponse>(req, "ModifyDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

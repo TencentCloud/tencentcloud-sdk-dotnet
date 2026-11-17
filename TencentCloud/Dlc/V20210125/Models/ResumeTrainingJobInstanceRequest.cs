@@ -30,6 +30,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
+        /// </summary>
+        [JsonProperty("ResumeCheckpointSubDir")]
+        public string ResumeCheckpointSubDir{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ResumeCheckpointSubDir", this.ResumeCheckpointSubDir);
         }
     }
 }

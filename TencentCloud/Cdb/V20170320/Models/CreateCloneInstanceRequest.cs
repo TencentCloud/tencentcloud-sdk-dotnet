@@ -199,6 +199,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("FourthZone")]
         public string FourthZone{ get; set; }
 
+        /// <summary>
+        /// <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
+        /// </summary>
+        [JsonProperty("UseLatestMinorVersion")]
+        public long? UseLatestMinorVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +240,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "FourthZone", this.FourthZone);
+            this.SetParamSimple(map, prefix + "UseLatestMinorVersion", this.UseLatestMinorVersion);
         }
     }
 }

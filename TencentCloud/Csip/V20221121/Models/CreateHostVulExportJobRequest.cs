@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>KbID：KB风险关联主机情况下需要额外加入KB风险ID<br>VulID：漏洞风险关联主机情况下需要额外加入vul风险ID</p>
+        /// <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>KbID：KB风险关联主机情况下需要额外加入KB风险ID<br>VulID：漏洞风险关联主机情况下需要额外加入vul风险ID<br> ClusterId：集群id（仅支持单集群id筛选）</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

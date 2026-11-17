@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1534</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -124,6 +124,8 @@
     <Compile Include="V20250920\Models\DescribeDeploymentListResponse.cs" />
     <Compile Include="V20250920\Models\DescribeDeploymentRequest.cs" />
     <Compile Include="V20250920\Models\DescribeDeploymentResponse.cs" />
+    <Compile Include="V20250920\Models\DescribeEventCenterEventsRequest.cs" />
+    <Compile Include="V20250920\Models\DescribeEventCenterEventsResponse.cs" />
     <Compile Include="V20250920\Models\DescribeEventsRequest.cs" />
     <Compile Include="V20250920\Models\DescribeEventsResponse.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageListRequest.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="V20250920\Models\EventActionsInfo.cs" />
     <Compile Include="V20250920\Models\EventContentInfo.cs" />
     <Compile Include="V20250920\Models\EventInfo.cs" />
+    <Compile Include="V20250920\Models\EventItem.cs" />
     <Compile Include="V20250920\Models\EventPartInfo.cs" />
     <Compile Include="V20250920\Models\Filter.cs" />
     <Compile Include="V20250920\Models\GetSkillPackageDownloadURLRequest.cs" />

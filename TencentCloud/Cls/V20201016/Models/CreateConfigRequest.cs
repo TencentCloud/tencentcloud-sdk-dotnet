@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <p>采集配置名称</p><ul><li>名称种不得包含特殊字符｜</li><li>名称最长255字符，超过截断</li></ul>
+        /// <p>采集配置名称- 名称中不得包含特殊字符&quot;|&quot;</p><p>名称最长255字符，超过截断</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

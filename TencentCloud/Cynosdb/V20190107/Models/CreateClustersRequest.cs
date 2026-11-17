@@ -318,6 +318,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SemiSyncTimeout")]
         public long? SemiSyncTimeout{ get; set; }
 
+        /// <summary>
+        /// <p>集群实例Serverless弹性配置</p>
+        /// </summary>
+        [JsonProperty("ServerlessQuotaConfigs")]
+        public ServerlessQuotaConfig[] ServerlessQuotaConfigs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -373,6 +379,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
             this.SetParamSimple(map, prefix + "SyncWay", this.SyncWay);
             this.SetParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
+            this.SetParamArrayObj(map, prefix + "ServerlessQuotaConfigs.", this.ServerlessQuotaConfigs);
         }
     }
 }

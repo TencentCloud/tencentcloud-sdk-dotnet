@@ -28,7 +28,7 @@ namespace TencentCloud.Ags.V20250920
 
        private const string endpoint = "ags.tencentcloudapi.com";
        private const string version = "2025-09-20";
-       private const string sdkVersion = "SDK_NET_3.0.1534";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -614,6 +614,27 @@ namespace TencentCloud.Ags.V20250920
         public DescribeDeploymentListResponse DescribeDeploymentListSync(DescribeDeploymentListRequest req)
         {
             return InternalRequestAsync<DescribeDeploymentListResponse>(req, "DescribeDeploymentList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询当前账号在指定地域的事件列表，支持按事件来源、资源对象、事件类型、事件级别及时间范围等条件筛选，并支持分页和时间排序。默认查询最近 1 小时的事件，支持查询最近 7 天内的事件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventCenterEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventCenterEventsResponse"/></returns>
+        public Task<DescribeEventCenterEventsResponse> DescribeEventCenterEvents(DescribeEventCenterEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeEventCenterEventsResponse>(req, "DescribeEventCenterEvents");
+        }
+
+        /// <summary>
+        /// 本接口用于查询当前账号在指定地域的事件列表，支持按事件来源、资源对象、事件类型、事件级别及时间范围等条件筛选，并支持分页和时间排序。默认查询最近 1 小时的事件，支持查询最近 7 天内的事件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventCenterEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventCenterEventsResponse"/></returns>
+        public DescribeEventCenterEventsResponse DescribeEventCenterEventsSync(DescribeEventCenterEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeEventCenterEventsResponse>(req, "DescribeEventCenterEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

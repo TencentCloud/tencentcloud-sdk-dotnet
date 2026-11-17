@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>视频时长</p><p>取值范围：[4, 15]</p>
+        /// <p>视频时长</p><p>取值范围：[4, 30]</p><p>指定时取值范围随档位不同：flash 为 2-15, pro 为 4-30。</p>
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
+        /// <p>宽高比。可选 9:16、16:9、3:4、4:3、1:1、21:9、adaptive（自适应参考视频，flash 档不支持）。</p>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// <p>分辨率。支持720p（默认）/1080p/2k/4k</p>
+        /// <p>分辨率。支持720p（默认）/1080p</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+        /// <p>模式。可选 pro（专业版）、 flash（高级版，默认）</p>
         /// </summary>
         [JsonProperty("ModelTier")]
         public string ModelTier{ get; set; }

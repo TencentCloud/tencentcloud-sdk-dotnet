@@ -25,10 +25,16 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 键值索引自动配置开关
+        /// <p>键值索引自动配置开关</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
+
+        /// <summary>
+        /// <p>索引的分词符，其中的每个字符代表一个分词符；<br>仅支持英文符号、\n\t\r及转义符\；<br>注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义</p>
+        /// </summary>
+        [JsonProperty("Tokenizer")]
+        public string Tokenizer{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
         }
     }
 }

@@ -66,6 +66,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
+        /// <summary>
+        /// <p>模型来源标识（可选；有 RegisterMeta 时必填；须与模型现有来源一致）</p>
+        /// </summary>
+        [JsonProperty("ModelSource")]
+        public string ModelSource{ get; set; }
+
+        /// <summary>
+        /// <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+        /// </summary>
+        [JsonProperty("RegisterMeta")]
+        public RegisterMeta RegisterMeta{ get; set; }
+
+        /// <summary>
+        /// <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+        /// </summary>
+        [JsonProperty("FileList")]
+        public FileNode[] FileList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
             this.SetParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "ModelSource", this.ModelSource);
+            this.SetParamObj(map, prefix + "RegisterMeta.", this.RegisterMeta);
+            this.SetParamArrayObj(map, prefix + "FileList.", this.FileList);
         }
     }
 }

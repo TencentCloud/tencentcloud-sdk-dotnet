@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1534</VersionPrefix>
+    <VersionPrefix>3.0.1535</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -190,6 +190,9 @@
     <Compile Include="V20260715\Models\GetSchemaRequest.cs" />
     <Compile Include="V20260715\Models\GetSchemaResponse.cs" />
     <Compile Include="V20260715\Models\GetSchemaRsp.cs" />
+    <Compile Include="V20260715\Models\GetSessionStatusRequest.cs" />
+    <Compile Include="V20260715\Models\GetSessionStatusResponse.cs" />
+    <Compile Include="V20260715\Models\GetSessionStatusRsp.cs" />
     <Compile Include="V20260715\Models\GetTableRequest.cs" />
     <Compile Include="V20260715\Models\GetTableResponse.cs" />
     <Compile Include="V20260715\Models\GetTableRsp.cs" />
@@ -323,6 +326,9 @@
     <Compile Include="V20260715\Models\PlatformStatusRsp.cs" />
     <Compile Include="V20260715\Models\RangePartition.cs" />
     <Compile Include="V20260715\Models\RangePartitioning.cs" />
+    <Compile Include="V20260715\Models\ReadProductJsonRequest.cs" />
+    <Compile Include="V20260715\Models\ReadProductJsonResponse.cs" />
+    <Compile Include="V20260715\Models\ReadProductJsonRsp.cs" />
     <Compile Include="V20260715\Models\RemoveConsoleUsersRequest.cs" />
     <Compile Include="V20260715\Models\RemoveConsoleUsersResponse.cs" />
     <Compile Include="V20260715\Models\RemoveConsoleUsersRsp.cs" />
@@ -348,6 +354,8 @@
     <Compile Include="V20260715\Models\SearchAssetResponse.cs" />
     <Compile Include="V20260715\Models\SearchAssetRsp.cs" />
     <Compile Include="V20260715\Models\SearchResult.cs" />
+    <Compile Include="V20260715\Models\SessionStatusItem.cs" />
+    <Compile Include="V20260715\Models\SessionStatusQueryItem.cs" />
     <Compile Include="V20260715\Models\SingleFieldPartitioning.cs" />
     <Compile Include="V20260715\Models\SparseCheckoutConfig.cs" />
     <Compile Include="V20260715\Models\StandardUserInfo.cs" />

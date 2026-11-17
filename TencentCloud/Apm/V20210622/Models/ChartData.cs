@@ -34,6 +34,7 @@ namespace TencentCloud.Apm.V20210622.Models
         /// <p>接口参数列表</p>
         /// </summary>
         [JsonProperty("YAxis")]
+        [System.Obsolete]
         public YAxis[] YAxis{ get; set; }
 
 

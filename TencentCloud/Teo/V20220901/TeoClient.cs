@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1533";
+       private const string sdkVersion = "SDK_NET_3.0.1535";
 
         /// <summary>
         /// Client constructor.
@@ -3415,6 +3415,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口查询边缘函数分析的时序数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingFunctionAnalysisDataResponse"/></returns>
+        public Task<DescribeTimingFunctionAnalysisDataResponse> DescribeTimingFunctionAnalysisData(DescribeTimingFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingFunctionAnalysisDataResponse>(req, "DescribeTimingFunctionAnalysisData");
+        }
+
+        /// <summary>
+        /// 本接口查询边缘函数分析的时序数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingFunctionAnalysisDataResponse"/></returns>
+        public DescribeTimingFunctionAnalysisDataResponse DescribeTimingFunctionAnalysisDataSync(DescribeTimingFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingFunctionAnalysisDataResponse>(req, "DescribeTimingFunctionAnalysisData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// <p>本接口（<code>DescribeTimingL4Data</code>）用于查询四层时序数据列表。</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
@@ -3503,6 +3524,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullDataSync(DescribeTimingL7OriginPullDataRequest req)
         {
             return InternalRequestAsync<DescribeTimingL7OriginPullDataResponse>(req, "DescribeTimingL7OriginPullData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询边缘函数按照指定维度的 topN 数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTopFunctionAnalysisDataResponse"/></returns>
+        public Task<DescribeTopFunctionAnalysisDataResponse> DescribeTopFunctionAnalysisData(DescribeTopFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTopFunctionAnalysisDataResponse>(req, "DescribeTopFunctionAnalysisData");
+        }
+
+        /// <summary>
+        /// 本接口用于查询边缘函数按照指定维度的 topN 数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTopFunctionAnalysisDataResponse"/></returns>
+        public DescribeTopFunctionAnalysisDataResponse DescribeTopFunctionAnalysisDataSync(DescribeTopFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTopFunctionAnalysisDataResponse>(req, "DescribeTopFunctionAnalysisData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

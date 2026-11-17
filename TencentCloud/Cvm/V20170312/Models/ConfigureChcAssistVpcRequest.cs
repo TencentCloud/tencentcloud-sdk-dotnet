@@ -25,40 +25,46 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// CHC物理服务器的实例Id。
+        /// <p>CHC物理服务器ID。</p>
         /// </summary>
         [JsonProperty("ChcIds")]
         public string[] ChcIds{ get; set; }
 
         /// <summary>
-        /// 带外网络信息。
+        /// <p>带外网络信息。</p>
         /// </summary>
         [JsonProperty("BmcVirtualPrivateCloud")]
         public VirtualPrivateCloud BmcVirtualPrivateCloud{ get; set; }
 
         /// <summary>
-        /// 带外网络的安全组列表
+        /// <p>带外网络的安全组列表。</p>
         /// </summary>
         [JsonProperty("BmcSecurityGroupIds")]
         public string[] BmcSecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 部署网络信息。
+        /// <p>部署网络信息。</p>
         /// </summary>
         [JsonProperty("DeployVirtualPrivateCloud")]
         public VirtualPrivateCloud DeployVirtualPrivateCloud{ get; set; }
 
         /// <summary>
-        /// 部署网络的安全组列表
+        /// <p>部署网络的安全组列表。</p>
         /// </summary>
         [JsonProperty("DeploySecurityGroupIds")]
         public string[] DeploySecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 部署网络的附加参数，用于指定minios类型、bios引导模式等
+        /// <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
         /// </summary>
         [JsonProperty("ChcDeployExtraConfig")]
         public ChcDeployExtraConfig ChcDeployExtraConfig{ get; set; }
+
+        /// <summary>
+        /// <p>是否跳过带外检查。</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("SkipBmcCheck")]
+        public bool? SkipBmcCheck{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "DeployVirtualPrivateCloud.", this.DeployVirtualPrivateCloud);
             this.SetParamArraySimple(map, prefix + "DeploySecurityGroupIds.", this.DeploySecurityGroupIds);
             this.SetParamObj(map, prefix + "ChcDeployExtraConfig.", this.ChcDeployExtraConfig);
+            this.SetParamSimple(map, prefix + "SkipBmcCheck", this.SkipBmcCheck);
         }
     }
 }

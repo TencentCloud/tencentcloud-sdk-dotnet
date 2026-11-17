@@ -25,7 +25,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// 文件名称
+        /// 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }

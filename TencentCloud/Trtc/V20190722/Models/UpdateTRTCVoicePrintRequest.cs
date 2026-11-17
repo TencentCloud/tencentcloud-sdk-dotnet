@@ -21,34 +21,32 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTRTCMarketScaleMetricDataRequest : AbstractModel
+    public class UpdateTRTCVoicePrintRequest : AbstractModel
     {
         
         /// <summary>
-        /// 用户SdkAppId
+        /// 待更新的声纹 ID（由 RegisterTRTCVoicePrint 返回）。更新采用覆盖模式——只保留一条最新音频，VoicePrintId 保持不变。
+        /// </summary>
+        [JsonProperty("VoicePrintId")]
+        public string VoicePrintId{ get; set; }
+
+        /// <summary>
+        /// 新的音频数据的 Base64 字符串。要求与 RegisterTRTCVoicePrint一致：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+        /// </summary>
+        [JsonProperty("Data")]
+        public string Data{ get; set; }
+
+        /// <summary>
+        /// SdkAppId
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，格式为YYYY-MM-DD。（查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天）
+        /// 音频格式，可选 pcm 或 wav，大小写不敏感，不传默认为 pcm
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// 查询结束时间，格式为YYYY-MM-DD。
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 返回数据的粒度，支持设为以下值：
-        /// d：按天。此时返回查询时间范围内 UTC 时间为零点的数据。
-        /// h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数据。
-        /// </summary>
-        [JsonProperty("Period")]
-        public string Period{ get; set; }
+        [JsonProperty("AudioFormat")]
+        public string AudioFormat{ get; set; }
 
 
         /// <summary>
@@ -56,10 +54,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VoicePrintId", this.VoicePrintId);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "AudioFormat", this.AudioFormat);
         }
     }
 }

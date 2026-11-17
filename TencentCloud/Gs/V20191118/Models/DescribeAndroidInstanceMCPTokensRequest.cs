@@ -24,12 +24,26 @@ namespace TencentCloud.Gs.V20191118.Models
     public class DescribeAndroidInstanceMCPTokensRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>偏移量，默认为 0</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>本次请求单次返回数据条数，用于分页控制</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }
