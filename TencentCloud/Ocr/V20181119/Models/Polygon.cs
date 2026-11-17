@@ -25,25 +25,25 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 左上顶点坐标
+        /// <p>左上顶点坐标</p>
         /// </summary>
         [JsonProperty("LeftTop")]
         public Coord LeftTop{ get; set; }
 
         /// <summary>
-        /// 右上顶点坐标
+        /// <p>右上顶点坐标</p>
         /// </summary>
         [JsonProperty("RightTop")]
         public Coord RightTop{ get; set; }
 
         /// <summary>
-        /// 右下顶点坐标
+        /// <p>右下顶点坐标</p>
         /// </summary>
         [JsonProperty("RightBottom")]
         public Coord RightBottom{ get; set; }
 
         /// <summary>
-        /// 左下顶点坐标
+        /// <p>左下顶点坐标</p>
         /// </summary>
         [JsonProperty("LeftBottom")]
         public Coord LeftBottom{ get; set; }

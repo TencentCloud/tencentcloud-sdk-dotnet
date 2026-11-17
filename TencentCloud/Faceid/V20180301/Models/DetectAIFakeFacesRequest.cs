@@ -48,6 +48,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("EncryptedBody")]
         public string EncryptedBody{ get; set; }
 
+        /// <summary>
+        /// <p>一次性携带本次请求的风控上下文，即“是谁、在哪、从哪个 IP 发起”</p>
+        /// </summary>
+        [JsonProperty("ExtraRiskInfo")]
+        public ExtraRiskInfo ExtraRiskInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "FaceInputType", this.FaceInputType);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
             this.SetParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
+            this.SetParamObj(map, prefix + "ExtraRiskInfo.", this.ExtraRiskInfo);
         }
     }
 }

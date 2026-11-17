@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 训练任务详情
+        /// <p>训练任务详情</p>
         /// </summary>
         [JsonProperty("TrainingTaskDetail")]
         public TrainingTaskDetail TrainingTaskDetail{ get; set; }

@@ -55,6 +55,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string JobStatus{ get; set; }
 
         /// <summary>
+        /// <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+        /// </summary>
+        [JsonProperty("QuestionInfo")]
+        public QuestionInfo[] QuestionInfo{ get; set; }
+
+        /// <summary>
+        /// <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+        /// </summary>
+        [JsonProperty("AgentResultJson")]
+        public string AgentResultJson{ get; set; }
+
+        /// <summary>
+        /// <p>扩展字段</p>
+        /// </summary>
+        [JsonProperty("ThoughtContent")]
+        public string ThoughtContent{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +89,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
+            this.SetParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
+            this.SetParamSimple(map, prefix + "AgentResultJson", this.AgentResultJson);
+            this.SetParamSimple(map, prefix + "ThoughtContent", this.ThoughtContent);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

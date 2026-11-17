@@ -72,6 +72,24 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("ExternalToolList")]
         public AgentExternalToolConfig[] ExternalToolList{ get; set; }
 
+        /// <summary>
+        /// <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+        /// </summary>
+        [JsonProperty("ProviderType")]
+        public long? ProviderType{ get; set; }
+
+        /// <summary>
+        /// <p>引用应用的Id</p>
+        /// </summary>
+        [JsonProperty("ReferenceAppId")]
+        public string ReferenceAppId{ get; set; }
+
+        /// <summary>
+        /// <p>内置工具信息</p>
+        /// </summary>
+        [JsonProperty("BuiltinToolList")]
+        public AgentBuiltinToolConfig[] BuiltinToolList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArrayObj(map, prefix + "SkillList.", this.SkillList);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
             this.SetParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
+            this.SetParamSimple(map, prefix + "ProviderType", this.ProviderType);
+            this.SetParamSimple(map, prefix + "ReferenceAppId", this.ReferenceAppId);
+            this.SetParamArrayObj(map, prefix + "BuiltinToolList.", this.BuiltinToolList);
         }
     }
 }

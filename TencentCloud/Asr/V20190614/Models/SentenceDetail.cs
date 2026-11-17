@@ -127,6 +127,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("SpeakerRoleName")]
         public string SpeakerRoleName{ get; set; }
 
+        /// <summary>
+        /// <p>说话人的声纹 ID</p>
+        /// </summary>
+        [JsonProperty("SpeakerVoicePrintId")]
+        public string SpeakerVoicePrintId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +154,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamArrayObj(map, prefix + "KeyWordResults.", this.KeyWordResults);
             this.SetParamSimple(map, prefix + "LangType", this.LangType);
             this.SetParamSimple(map, prefix + "SpeakerRoleName", this.SpeakerRoleName);
+            this.SetParamSimple(map, prefix + "SpeakerVoicePrintId", this.SpeakerVoicePrintId);
         }
     }
 }

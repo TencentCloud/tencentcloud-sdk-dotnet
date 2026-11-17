@@ -63,6 +63,13 @@ namespace TencentCloud.Adp.V20260520.Models
         public string EnterpriseCharts{ get; set; }
 
         /// <summary>
+        /// <p>文件信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("File")]
+        public ConversationFileInfo File{ get; set; }
+
+        /// <summary>
         /// <p>选项卡列表</p>
         /// </summary>
         [JsonProperty("OptionCardList")]
@@ -80,6 +87,13 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         [JsonProperty("OptionMode")]
         public long? OptionMode{ get; set; }
+
+        /// <summary>
+        /// <p>问卷信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Questionnaire")]
+        public ConversationQuestionnaire Questionnaire{ get; set; }
 
         /// <summary>
         /// <p>引用角标信息列表</p>
@@ -125,6 +139,20 @@ namespace TencentCloud.Adp.V20260520.Models
         public ConversationAgentTask[] Tasks{ get; set; }
 
         /// <summary>
+        /// <p>Widget 信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Widget")]
+        public ConversationWidget Widget{ get; set; }
+
+        /// <summary>
+        /// <p>Widget 动作信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WidgetAction")]
+        public ConversationWidgetAction WidgetAction{ get; set; }
+
+        /// <summary>
         /// <p>工作流输入参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -150,9 +178,11 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArraySimple(map, prefix + "CustomParams.", this.CustomParams);
             this.SetParamSimple(map, prefix + "CustomVariablesData", this.CustomVariablesData);
             this.SetParamSimple(map, prefix + "EnterpriseCharts", this.EnterpriseCharts);
+            this.SetParamObj(map, prefix + "File.", this.File);
             this.SetParamArraySimple(map, prefix + "OptionCardList.", this.OptionCardList);
             this.SetParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
             this.SetParamSimple(map, prefix + "OptionMode", this.OptionMode);
+            this.SetParamObj(map, prefix + "Questionnaire.", this.Questionnaire);
             this.SetParamArrayObj(map, prefix + "QuoteInfoList.", this.QuoteInfoList);
             this.SetParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
             this.SetParamArrayObj(map, prefix + "ReferenceList.", this.ReferenceList);
@@ -160,6 +190,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "RelatedRecordId", this.RelatedRecordId);
             this.SetParamArrayObj(map, prefix + "TaskList.", this.TaskList);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamObj(map, prefix + "Widget.", this.Widget);
+            this.SetParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
             this.SetParamSimple(map, prefix + "WorkflowInput", this.WorkflowInput);
             this.SetParamObj(map, prefix + "McpApp.", this.McpApp);
         }

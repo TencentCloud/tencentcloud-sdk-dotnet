@@ -211,6 +211,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ForceHTTPSRedirect")]
         public bool? ForceHTTPSRedirect{ get; set; }
 
+        /// <summary>
+        /// <p>内网IP地址列表</p>
+        /// </summary>
+        [JsonProperty("PrivateIpAddresses")]
+        public string[] PrivateIpAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +254,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
             this.SetParamSimple(map, prefix + "AvailableRollbackVersion", this.AvailableRollbackVersion);
             this.SetParamSimple(map, prefix + "ForceHTTPSRedirect", this.ForceHTTPSRedirect);
+            this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         }
     }
 }

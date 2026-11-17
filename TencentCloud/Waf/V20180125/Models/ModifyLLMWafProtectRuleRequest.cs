@@ -25,16 +25,16 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// <p>服务ID</p>
-        /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
-
-        /// <summary>
         /// <p>要修改的规则id列表</p>
         /// </summary>
         [JsonProperty("RuleIds")]
         public string[] RuleIds{ get; set; }
+
+        /// <summary>
+        /// <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
         /// <p>规则动作</p>
@@ -60,18 +60,25 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
+        /// <summary>
+        /// <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "RuleAction", this.RuleAction);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

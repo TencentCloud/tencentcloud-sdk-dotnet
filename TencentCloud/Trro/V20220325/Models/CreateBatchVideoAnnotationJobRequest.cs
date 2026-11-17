@@ -60,6 +60,12 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("CallbackInfo")]
         public CallbackInfo CallbackInfo{ get; set; }
 
+        /// <summary>
+        /// <p>伴生输入文件列表，全批共用一份。与主视频同桶同凭证，Path 相对每个处理项各自的主视频目录解析，支持 ${FileName} 占位符。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+        /// </summary>
+        [JsonProperty("ExtraSources")]
+        public ExtraSourceInfo[] ExtraSources{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamObj(map, prefix + "ProcessParams.", this.ProcessParams);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
+            this.SetParamArrayObj(map, prefix + "ExtraSources.", this.ExtraSources);
         }
     }
 }

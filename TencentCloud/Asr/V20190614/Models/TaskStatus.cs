@@ -25,54 +25,60 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 任务标识。注意：TaskId数据类型为uint64。
+        /// <p>任务标识。注意：TaskId数据类型为uint64。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+        /// <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+        /// <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
         /// </summary>
         [JsonProperty("StatusStr")]
         public string StatusStr{ get; set; }
 
         /// <summary>
-        /// 识别结果。
+        /// <p>识别结果。</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 失败原因说明。
+        /// <p>失败原因说明。</p>
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+        /// <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultDetail")]
         public SentenceDetail[] ResultDetail{ get; set; }
 
         /// <summary>
-        /// 音频时长(秒)。
+        /// <p>音频时长(秒)。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }
 
         /// <summary>
-        /// 大模型后处理结果
+        /// <p>大模型后处理结果</p>
         /// </summary>
         [JsonProperty("LlmResults")]
         public LlmResult[] LlmResults{ get; set; }
+
+        /// <summary>
+        /// <p>说话人上下文 ID</p>
+        /// </summary>
+        [JsonProperty("SpeakerContextId")]
+        public string SpeakerContextId{ get; set; }
 
 
         /// <summary>
@@ -88,6 +94,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
             this.SetParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
             this.SetParamArrayObj(map, prefix + "LlmResults.", this.LlmResults);
+            this.SetParamSimple(map, prefix + "SpeakerContextId", this.SpeakerContextId);
         }
     }
 }

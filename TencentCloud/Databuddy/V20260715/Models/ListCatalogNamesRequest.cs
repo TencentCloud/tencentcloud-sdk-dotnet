@@ -54,6 +54,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("CatalogSources")]
         public string[] CatalogSources{ get; set; }
 
+        /// <summary>
+        /// 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+        /// </summary>
+        [JsonProperty("ConnectionId")]
+        public string ConnectionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "PageToken", this.PageToken);
             this.SetParamArraySimple(map, prefix + "Types.", this.Types);
             this.SetParamArraySimple(map, prefix + "CatalogSources.", this.CatalogSources);
+            this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
         }
     }
 }

@@ -84,6 +84,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
+        /// <summary>
+        /// <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+        /// </summary>
+        [JsonProperty("TagIds")]
+        public long?[] TagIds{ get; set; }
+
+        /// <summary>
+        /// <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagKVFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GrayRoutesFirst", this.GrayRoutesFirst);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamArraySimple(map, prefix + "TagIds.", this.TagIds);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

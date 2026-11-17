@@ -1,0 +1,105 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{1AEFB0D3-6703-37E6-BC4F-5313F4E8E46F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1536</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Makers</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20261113\MakersClient.cs" />
+    <Compile Include="V20261113\Models\CosCredentials.cs" />
+    <Compile Include="V20261113\Models\CreateDeploymentRequest.cs" />
+    <Compile Include="V20261113\Models\CreateDeploymentResponse.cs" />
+    <Compile Include="V20261113\Models\CreateProjectRequest.cs" />
+    <Compile Include="V20261113\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20261113\Models\CreateZoneCustomDomainRequest.cs" />
+    <Compile Include="V20261113\Models\CreateZoneCustomDomainResponse.cs" />
+    <Compile Include="V20261113\Models\CustomDomainInput.cs" />
+    <Compile Include="V20261113\Models\CustomDomainItem.cs" />
+    <Compile Include="V20261113\Models\DeleteProjectCustomDomainsRequest.cs" />
+    <Compile Include="V20261113\Models\DeleteProjectCustomDomainsResponse.cs" />
+    <Compile Include="V20261113\Models\DeleteProjectEnvsRequest.cs" />
+    <Compile Include="V20261113\Models\DeleteProjectEnvsResponse.cs" />
+    <Compile Include="V20261113\Models\DeleteProjectRequest.cs" />
+    <Compile Include="V20261113\Models\DeleteProjectResponse.cs" />
+    <Compile Include="V20261113\Models\Deployment.cs" />
+    <Compile Include="V20261113\Models\DeploymentFilter.cs" />
+    <Compile Include="V20261113\Models\DescribeCosTempTokenRequest.cs" />
+    <Compile Include="V20261113\Models\DescribeCosTempTokenResponse.cs" />
+    <Compile Include="V20261113\Models\DescribeDeploymentLogRequest.cs" />
+    <Compile Include="V20261113\Models\DescribeDeploymentLogResponse.cs" />
+    <Compile Include="V20261113\Models\DescribeDeploymentsRequest.cs" />
+    <Compile Include="V20261113\Models\DescribeDeploymentsResponse.cs" />
+    <Compile Include="V20261113\Models\DescribeEnvironmentsRequest.cs" />
+    <Compile Include="V20261113\Models\DescribeEnvironmentsResponse.cs" />
+    <Compile Include="V20261113\Models\DescribeProjectEnvsRequest.cs" />
+    <Compile Include="V20261113\Models\DescribeProjectEnvsResponse.cs" />
+    <Compile Include="V20261113\Models\DescribeProjectsRequest.cs" />
+    <Compile Include="V20261113\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="V20261113\Models\DescribeZoneCustomDomainsRequest.cs" />
+    <Compile Include="V20261113\Models\DescribeZoneCustomDomainsResponse.cs" />
+    <Compile Include="V20261113\Models\DnsVerification.cs" />
+    <Compile Include="V20261113\Models\EnvVar.cs" />
+    <Compile Include="V20261113\Models\Environment.cs" />
+    <Compile Include="V20261113\Models\EnvironmentEnvVar.cs" />
+    <Compile Include="V20261113\Models\FileVerification.cs" />
+    <Compile Include="V20261113\Models\ForceRedirectConfig.cs" />
+    <Compile Include="V20261113\Models\HstsConfig.cs" />
+    <Compile Include="V20261113\Models\ModifyProjectEnvsRequest.cs" />
+    <Compile Include="V20261113\Models\ModifyProjectEnvsResponse.cs" />
+    <Compile Include="V20261113\Models\ModifyProjectRequest.cs" />
+    <Compile Include="V20261113\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20261113\Models\ModifyZoneCustomDomainEnvRequest.cs" />
+    <Compile Include="V20261113\Models\ModifyZoneCustomDomainEnvResponse.cs" />
+    <Compile Include="V20261113\Models\NsVerification.cs" />
+    <Compile Include="V20261113\Models\OwnershipVerification.cs" />
+    <Compile Include="V20261113\Models\Project.cs" />
+    <Compile Include="V20261113\Models\ProjectDeployment.cs" />
+    <Compile Include="V20261113\Models\ProjectEnvVar.cs" />
+    <Compile Include="V20261113\Models\ProjectFilter.cs" />
+    <Compile Include="V20261113\Models\Regions.cs" />
+    <Compile Include="V20261113\Models\SwitchConfig.cs" />
+    <Compile Include="V20261113\Models\ZoneDomain.cs" />
+  </ItemGroup>
+</Project>

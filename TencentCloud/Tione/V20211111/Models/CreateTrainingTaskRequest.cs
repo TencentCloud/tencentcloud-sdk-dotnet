@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+        /// <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TrainingMode{ get; set; }
 
         /// <summary>
-        /// <p>数据配置，依赖DataSource字段，数量不超过10个</p>
+        /// <p>数据配置，数量不超过10个</p>
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }

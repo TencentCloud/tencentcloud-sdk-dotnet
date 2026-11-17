@@ -244,6 +244,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("LatestOperatorInfo")]
         public OperatorInfo LatestOperatorInfo{ get; set; }
 
+        /// <summary>
+        /// <p>预付费专用资源组</p>
+        /// </summary>
+        [JsonProperty("ResourceGroupInstanceId")]
+        public string ResourceGroupInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +289,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ExposePortConfig.", this.ExposePortConfig);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "LatestOperatorInfo.", this.LatestOperatorInfo);
+            this.SetParamSimple(map, prefix + "ResourceGroupInstanceId", this.ResourceGroupInstanceId);
         }
     }
 }

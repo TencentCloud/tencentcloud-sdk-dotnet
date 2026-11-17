@@ -67,27 +67,6 @@ namespace TencentCloud.Ags.V20250920.Models
         public string LifecycleStatus{ get; set; }
 
         /// <summary>
-        /// <p>所属租户 AppId。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AppId")]
-        public long? AppId{ get; set; }
-
-        /// <summary>
-        /// <p>创建者主账号 UIN。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CreatorUin")]
-        public string CreatorUin{ get; set; }
-
-        /// <summary>
-        /// <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CreatorSubAccountUin")]
-        public string CreatorSubAccountUin{ get; set; }
-
-        /// <summary>
         /// <p>创建时间，ISO 8601 UTC。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -102,14 +81,35 @@ namespace TencentCloud.Ags.V20250920.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// <p>Record 下未删除 Version 数量。</p>
+        /// <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
+        /// <summary>
+        /// <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatorUin")]
+        public string CreatorUin{ get; set; }
+
+        /// <summary>
+        /// <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatorSubAccountUin")]
+        public string CreatorSubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionCount")]
         public long? VersionCount{ get; set; }
 
         /// <summary>
-        /// <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+        /// <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelSet")]
@@ -127,11 +127,11 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "DescriptorType", this.DescriptorType);
             this.SetParamSimple(map, prefix + "LifecycleStatus", this.LifecycleStatus);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
             this.SetParamSimple(map, prefix + "CreatorSubAccountUin", this.CreatorSubAccountUin);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "VersionCount", this.VersionCount);
             this.SetParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
         }

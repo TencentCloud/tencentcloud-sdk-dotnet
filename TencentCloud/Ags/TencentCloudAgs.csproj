@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1535</VersionPrefix>
+    <VersionPrefix>3.0.1536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,7 @@
     <Compile Include="V20250920\Models\CfsStorageSource.cs" />
     <Compile Include="V20250920\Models\CloudAgentSourceInput.cs" />
     <Compile Include="V20250920\Models\CloudAuditLog.cs" />
+    <Compile Include="V20250920\Models\CloudFileSourceInput.cs" />
     <Compile Include="V20250920\Models\CloudFilter.cs" />
     <Compile Include="V20250920\Models\CloudMCPSourceInput.cs" />
     <Compile Include="V20250920\Models\CloudRecord.cs" />
@@ -103,6 +104,8 @@
     <Compile Include="V20250920\Models\DeleteAPIKeyResponse.cs" />
     <Compile Include="V20250920\Models\DeleteDeploymentRequest.cs" />
     <Compile Include="V20250920\Models\DeleteDeploymentResponse.cs" />
+    <Compile Include="V20250920\Models\DeleteGPUResourceGroupRequest.cs" />
+    <Compile Include="V20250920\Models\DeleteGPUResourceGroupResponse.cs" />
     <Compile Include="V20250920\Models\DeletePreCacheImageRequest.cs" />
     <Compile Include="V20250920\Models\DeletePreCacheImageResponse.cs" />
     <Compile Include="V20250920\Models\DeleteRegistryRecordRequest.cs" />
@@ -128,6 +131,12 @@
     <Compile Include="V20250920\Models\DescribeEventCenterEventsResponse.cs" />
     <Compile Include="V20250920\Models\DescribeEventsRequest.cs" />
     <Compile Include="V20250920\Models\DescribeEventsResponse.cs" />
+    <Compile Include="V20250920\Models\DescribeGPUResourceGroupsRequest.cs" />
+    <Compile Include="V20250920\Models\DescribeGPUResourceGroupsResponse.cs" />
+    <Compile Include="V20250920\Models\DescribeGPUResourceSpecsRequest.cs" />
+    <Compile Include="V20250920\Models\DescribeGPUResourceSpecsResponse.cs" />
+    <Compile Include="V20250920\Models\DescribeGPUResourcesRequest.cs" />
+    <Compile Include="V20250920\Models\DescribeGPUResourcesResponse.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageListRequest.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageListResponse.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageTaskRequest.cs" />
@@ -169,6 +178,12 @@
     <Compile Include="V20250920\Models\EventItem.cs" />
     <Compile Include="V20250920\Models\EventPartInfo.cs" />
     <Compile Include="V20250920\Models\Filter.cs" />
+    <Compile Include="V20250920\Models\GPUResource.cs" />
+    <Compile Include="V20250920\Models\GPUResourceGroup.cs" />
+    <Compile Include="V20250920\Models\GPUResourceGroupSpec.cs" />
+    <Compile Include="V20250920\Models\GPUResourceGroupStatistics.cs" />
+    <Compile Include="V20250920\Models\GPUResourceSpec.cs" />
+    <Compile Include="V20250920\Models\GPUResourceStateCount.cs" />
     <Compile Include="V20250920\Models\GetSkillPackageDownloadURLRequest.cs" />
     <Compile Include="V20250920\Models\GetSkillPackageDownloadURLResponse.cs" />
     <Compile Include="V20250920\Models\GetSkillPackageUploadURLRequest.cs" />
@@ -184,6 +199,8 @@
     <Compile Include="V20250920\Models\MetadataVar.cs" />
     <Compile Include="V20250920\Models\ModifyDeploymentRequest.cs" />
     <Compile Include="V20250920\Models\ModifyDeploymentResponse.cs" />
+    <Compile Include="V20250920\Models\ModifyGPUResourceGroupRequest.cs" />
+    <Compile Include="V20250920\Models\ModifyGPUResourceGroupResponse.cs" />
     <Compile Include="V20250920\Models\ModifySessionRequest.cs" />
     <Compile Include="V20250920\Models\ModifySessionResponse.cs" />
     <Compile Include="V20250920\Models\ModifySessionSpaceRequest.cs" />

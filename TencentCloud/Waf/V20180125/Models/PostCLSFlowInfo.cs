@@ -25,55 +25,55 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 投递流唯一ID
+        /// <p>投递流唯一ID</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 1-访问日志 2-攻击日志
+        /// <p>1-访问日志 2-攻击日志</p>
         /// </summary>
         [JsonProperty("LogType")]
         public long? LogType{ get; set; }
 
         /// <summary>
-        /// 状态 0-为关闭 1-为启用
+        /// <p>状态 0-为关闭 1-为启用</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// CLS所在区域
+        /// <p>CLS所在区域</p>
         /// </summary>
         [JsonProperty("CLSRegion")]
         public string CLSRegion{ get; set; }
 
         /// <summary>
-        /// CLS日志集合名称
+        /// <p>CLS日志集合名称</p>
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
-        /// CLS日志集合ID
+        /// <p>CLS日志集合ID</p>
         /// </summary>
         [JsonProperty("LogsetID")]
         public string LogsetID{ get; set; }
 
         /// <summary>
-        /// CLS日志主题名称
+        /// <p>CLS日志主题名称</p>
         /// </summary>
         [JsonProperty("LogTopicName")]
         public string LogTopicName{ get; set; }
 
         /// <summary>
-        /// CLS日志集合ID
+        /// <p>CLS日志集合ID</p>
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
-        /// 写配置
+        /// <p>写配置</p>
         /// </summary>
         [JsonProperty("WriteConfig")]
         public FieldWriteConfig WriteConfig{ get; set; }

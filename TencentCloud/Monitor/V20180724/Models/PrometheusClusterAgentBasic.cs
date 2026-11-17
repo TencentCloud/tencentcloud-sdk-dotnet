@@ -85,6 +85,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         public bool? CollectAll{ get; set; }
 
         /// <summary>
+        /// <p>私有连接的 IP</p>
+        /// </summary>
+        [JsonProperty("PrivateLinkIP")]
+        public string PrivateLinkIP{ get; set; }
+
+        /// <summary>
         /// <p>是否开启默认预聚合规则</p>
         /// </summary>
         [JsonProperty("OpenDefaultRecord")]
@@ -106,6 +112,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NotScrape", this.NotScrape);
             this.SetParamSimple(map, prefix + "DropAll", this.DropAll);
             this.SetParamSimple(map, prefix + "CollectAll", this.CollectAll);
+            this.SetParamSimple(map, prefix + "PrivateLinkIP", this.PrivateLinkIP);
             this.SetParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
         }
     }

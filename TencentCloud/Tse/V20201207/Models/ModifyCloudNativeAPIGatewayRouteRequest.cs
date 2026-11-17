@@ -133,6 +133,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("QueryStringParameters")]
         public KVMapping[] QueryStringParameters{ get; set; }
 
+        /// <summary>
+        /// <p>路由级超时时间，单位ms</p>
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public long? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +163,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
             this.SetParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
             this.SetParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

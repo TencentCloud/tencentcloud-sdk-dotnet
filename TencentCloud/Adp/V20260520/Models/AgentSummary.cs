@@ -42,6 +42,18 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("AdvancedConfig")]
         public AgentAdvancedConfig AdvancedConfig{ get; set; }
 
+        /// <summary>
+        /// <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+        /// </summary>
+        [JsonProperty("ProviderType")]
+        public long? ProviderType{ get; set; }
+
+        /// <summary>
+        /// <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+        /// </summary>
+        [JsonProperty("ReferenceAppStatus")]
+        public long? ReferenceAppStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
             this.SetParamObj(map, prefix + "Profile.", this.Profile);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+            this.SetParamSimple(map, prefix + "ProviderType", this.ProviderType);
+            this.SetParamSimple(map, prefix + "ReferenceAppStatus", this.ReferenceAppStatus);
         }
     }
 }

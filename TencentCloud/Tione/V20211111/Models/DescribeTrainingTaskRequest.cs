@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 训练任务ID
+        /// <p>训练任务ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TiProjectId{ get; set; }
 
         /// <summary>
-        /// 训练任务实例ID
+        /// <p>训练任务实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

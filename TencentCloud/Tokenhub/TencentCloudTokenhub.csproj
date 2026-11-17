@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FA551E64-85D1-306D-B95B-F495ED79A242}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1535</VersionPrefix>
+    <VersionPrefix>3.0.1536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,6 +101,8 @@
     <Compile Include="V20260322\Models\DescribeTokenPlanApiKeyUsageDetailResponse.cs" />
     <Compile Include="V20260322\Models\DescribeTokenPlanListRequest.cs" />
     <Compile Include="V20260322\Models\DescribeTokenPlanListResponse.cs" />
+    <Compile Include="V20260322\Models\DescribeTokenPlanPersonalPackageRequest.cs" />
+    <Compile Include="V20260322\Models\DescribeTokenPlanPersonalPackageResponse.cs" />
     <Compile Include="V20260322\Models\DescribeTokenPlanRequest.cs" />
     <Compile Include="V20260322\Models\DescribeTokenPlanResponse.cs" />
     <Compile Include="V20260322\Models\DescribeUsageRankListRequest.cs" />

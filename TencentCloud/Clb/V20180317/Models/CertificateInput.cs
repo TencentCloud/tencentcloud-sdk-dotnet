@@ -25,56 +25,55 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
-        /// 默认为 UNIDIRECTIONAL。
+        /// <p>认证类型，取值：<code>UNIDIRECTIONAL</code>：单向认证；<code>MUTUAL</code>：双向认证。 此参数是否必填取决于调用场景： - 创建监听器或转发规则：需要通过 Certificate 配置证书时，此参数必填；复用已有域名证书的转发规则无需传入。 - 修改监听器或域名属性：通过 Certificate 更新证书时，此参数必填；不修改证书时，无需传入整个 Certificate。 - 批量替换证书（ReplaceCertForLoadBalancers）：此参数无需传入，接口仅替换证书，不修改认证类型。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向认证</li><li>MUTUAL： 双向认证</li></ul>
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }
 
         /// <summary>
-        /// 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+        /// <p>双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。</p>
         /// </summary>
         [JsonProperty("SSLVerifyClient")]
         public string SSLVerifyClient{ get; set; }
 
         /// <summary>
-        /// 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
+        /// <p>服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。</p>
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+        /// <p>客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。</p>
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
         /// <summary>
-        /// 上传服务端证书的名称，如果没有 CertId，则此项必传。
+        /// <p>上传服务端证书的名称，如果没有 CertId，则此项必传。</p>
         /// </summary>
         [JsonProperty("CertName")]
         public string CertName{ get; set; }
 
         /// <summary>
-        /// 上传服务端证书的 key，如果没有 CertId，则此项必传。
+        /// <p>上传服务端证书的 key，如果没有 CertId，则此项必传。</p>
         /// </summary>
         [JsonProperty("CertKey")]
         public string CertKey{ get; set; }
 
         /// <summary>
-        /// 上传服务端证书的内容，如果没有 CertId，则此项必传。
+        /// <p>上传服务端证书的内容，如果没有 CertId，则此项必传。</p>
         /// </summary>
         [JsonProperty("CertContent")]
         public string CertContent{ get; set; }
 
         /// <summary>
-        /// 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+        /// <p>上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
         /// </summary>
         [JsonProperty("CertCaName")]
         public string CertCaName{ get; set; }
 
         /// <summary>
-        /// 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+        /// <p>上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
         /// </summary>
         [JsonProperty("CertCaContent")]
         public string CertCaContent{ get; set; }

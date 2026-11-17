@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Keewidb.V20220308.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ModifyInstanceAccountRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>实例ID。</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>指定需修改的账号。</p><ul><li>root：指在创建 KeeWiDB 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。</li><li>自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。</li></ul>
+        /// </summary>
+        [JsonProperty("AccountName")]
+        public string AccountName{ get; set; }
+
+        /// <summary>
+        /// <p>指定所修改账号访问的密码。</p>
+        /// </summary>
+        [JsonProperty("AccountPassword")]
+        public string AccountPassword{ get; set; }
+
+        /// <summary>
+        /// <p>账号描述信息</p>
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// <p>指定所修改账号读写请求路由的策略。</p><p>枚举值：</p><ul><li>master： 表示读写请求路由至主节点。</li><li>replication： 表示读写请求路由至从节点。</li></ul>
+        /// </summary>
+        [JsonProperty("ReadonlyPolicy")]
+        public string[] ReadonlyPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>指定所修改账号的读写权限。</p><p>枚举值：</p><ul><li>rw： 读写。</li><li>r： 只读。</li></ul>
+        /// </summary>
+        [JsonProperty("Privilege")]
+        public string Privilege{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
+            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
+            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+        }
+    }
+}
+

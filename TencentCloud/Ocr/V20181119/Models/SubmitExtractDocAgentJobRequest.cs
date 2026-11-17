@@ -79,6 +79,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("AgentType")]
         public long? AgentType{ get; set; }
 
+        /// <summary>
+        /// <p>输出配置扩展，当key对应为1表示开启配置开关。</p>
+        /// </summary>
+        [JsonProperty("QuestionConfigMap")]
+        public string QuestionConfigMap{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
             this.SetParamSimple(map, prefix + "ModelConfig", this.ModelConfig);
             this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
+            this.SetParamSimple(map, prefix + "QuestionConfigMap", this.QuestionConfigMap);
         }
     }
 }

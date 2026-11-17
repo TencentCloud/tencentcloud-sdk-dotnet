@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 要查询状态的域名
+        /// <p>要查询状态的域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

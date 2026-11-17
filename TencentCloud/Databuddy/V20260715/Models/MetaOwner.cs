@@ -59,6 +59,13 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("CatalogSource")]
         public string CatalogSource{ get; set; }
 
+        /// <summary>
+        /// 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConnectionId")]
+        public string ConnectionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
             this.SetParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
+            this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
         }
     }
 }

@@ -73,13 +73,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Polygon[] Coord{ get; set; }
 
         /// <summary>
-        /// <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+        /// <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
         /// </summary>
         [JsonProperty("CoordPageIndex")]
         public long?[] CoordPageIndex{ get; set; }
 
         /// <summary>
-        /// <p>返回正确答案内容</p>
+        /// <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
         /// </summary>
         [JsonProperty("RightAnswer")]
         public string RightAnswer{ get; set; }
@@ -95,6 +95,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("KnowledgePoints")]
         public string[] KnowledgePoints{ get; set; }
+
+        /// <summary>
+        /// <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+        /// </summary>
+        [JsonProperty("AnswerAnalysis")]
+        public string AnswerAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>年级：小学/初中/高中</p>
+        /// </summary>
+        [JsonProperty("Grade")]
+        public string Grade{ get; set; }
 
 
         /// <summary>
@@ -113,6 +125,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "RightAnswer", this.RightAnswer);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
             this.SetParamArraySimple(map, prefix + "KnowledgePoints.", this.KnowledgePoints);
+            this.SetParamSimple(map, prefix + "AnswerAnalysis", this.AnswerAnalysis);
+            this.SetParamSimple(map, prefix + "Grade", this.Grade);
         }
     }
 }

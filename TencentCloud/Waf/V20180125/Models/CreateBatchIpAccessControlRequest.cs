@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public JobDateTime JobDateTime{ get; set; }
 
         /// <summary>
-        /// 42为黑名单，40为白名单
+        /// IP黑白名单类型，40表示白名单，42表示黑名单
         /// </summary>
         [JsonProperty("ActionType")]
         public long? ActionType{ get; set; }

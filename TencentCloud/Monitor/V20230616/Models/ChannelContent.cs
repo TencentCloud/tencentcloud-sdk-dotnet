@@ -38,6 +38,24 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// <p>短信：SUCCESS / FAIL。电话：ANSWERED / UNANSWERED / ABNORMAL</p><p>枚举值：</p><ul><li>SUCCESS： 短信已送达</li><li>FAIL： 短信送达失败</li><li>ANSWERED： 电话已接听</li><li>UNANSWERED： 电话未接听</li><li>ABNORMAL： 电话拨打异常</li></ul>
+        /// </summary>
+        [JsonProperty("DeliverStatus")]
+        public string DeliverStatus{ get; set; }
+
+        /// <summary>
+        /// <p>原始时间字符串，不做时区转换。短信是收到时间；电话只在接听时有值</p><p>参数格式：短信为 YYYY-MM-DD hh:mm:ss，例如 2026-08-05 18:04:46。电话为 Unix 秒级时间戳的数字字符串，仅接听时有值，例如 1717824258。空字符串表示没有时间。</p>
+        /// </summary>
+        [JsonProperty("DeliverTime")]
+        public string DeliverTime{ get; set; }
+
+        /// <summary>
+        /// <p>短信回执的运营商错误码，原样透传。成功为 DELIVRD。失败为运营商原始码，如 EXPIRED、UNDELIV、MK:0001、MK:0012、24、29。电话为空。</p>
+        /// </summary>
+        [JsonProperty("DeliverErrMsg")]
+        public string DeliverErrMsg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +64,9 @@ namespace TencentCloud.Monitor.V20230616.Models
         {
             this.SetParamSimple(map, prefix + "SubChannel", this.SubChannel);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
+            this.SetParamSimple(map, prefix + "DeliverTime", this.DeliverTime);
+            this.SetParamSimple(map, prefix + "DeliverErrMsg", this.DeliverErrMsg);
         }
     }
 }

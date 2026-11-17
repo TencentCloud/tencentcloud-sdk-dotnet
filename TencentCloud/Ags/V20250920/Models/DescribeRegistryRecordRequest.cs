@@ -25,7 +25,7 @@ namespace TencentCloud.Ags.V20250920.Models
     {
         
         /// <summary>
-        /// <p>父 Registry ID。</p>
+        /// <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }

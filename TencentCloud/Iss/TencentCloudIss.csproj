@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1535</VersionPrefix>
+    <VersionPrefix>3.0.1536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -263,6 +263,9 @@
     <Compile Include="V20230517\Models\ListVideoDownloadTaskData.cs" />
     <Compile Include="V20230517\Models\ListVideoDownloadTaskRequest.cs" />
     <Compile Include="V20230517\Models\ListVideoDownloadTaskResponse.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotResultData.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotResultRequest.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotResultResponse.cs" />
     <Compile Include="V20230517\Models\ListVideoSnapshotTemplateData.cs" />
     <Compile Include="V20230517\Models\ListVideoSnapshotTemplateRequest.cs" />
     <Compile Include="V20230517\Models\ListVideoSnapshotTemplateResponse.cs" />
@@ -331,6 +334,7 @@
     <Compile Include="V20230517\Models\VideoDownloadTaskData.cs" />
     <Compile Include="V20230517\Models\VideoSceneInfo.cs" />
     <Compile Include="V20230517\Models\VideoSnapshotConfigInfo.cs" />
+    <Compile Include="V20230517\Models\VideoSnapshotInfo.cs" />
     <Compile Include="V20230517\Models\VideoSnapshotTemplateInfo.cs" />
   </ItemGroup>
 </Project>

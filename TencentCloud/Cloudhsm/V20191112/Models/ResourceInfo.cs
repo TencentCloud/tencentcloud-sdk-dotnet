@@ -198,6 +198,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("ClusterRole")]
         public long? ClusterRole{ get; set; }
 
+        /// <summary>
+        /// <p>同步状态</p>
+        /// </summary>
+        [JsonProperty("SyncStatus")]
+        public string SyncStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterRole", this.ClusterRole);
+            this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
         }
     }
 }

@@ -36,6 +36,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("ReportVolume")]
         public long? ReportVolume{ get; set; }
 
+        /// <summary>
+        /// <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+        /// </summary>
+        [JsonProperty("Datetime")]
+        public string Datetime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Rum.V20210622.Models
         {
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "ReportVolume", this.ReportVolume);
+            this.SetParamSimple(map, prefix + "Datetime", this.Datetime);
         }
     }
 }

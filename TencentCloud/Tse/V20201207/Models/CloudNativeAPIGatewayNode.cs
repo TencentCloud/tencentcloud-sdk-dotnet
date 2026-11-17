@@ -78,6 +78,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("IsDefaultWeight")]
         public bool? IsDefaultWeight{ get; set; }
 
+        /// <summary>
+        /// 节点类型
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "IsDefaultWeight", this.IsDefaultWeight);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
         }
     }
 }

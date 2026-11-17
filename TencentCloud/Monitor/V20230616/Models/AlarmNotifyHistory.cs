@@ -134,6 +134,30 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("ReceiverGroups")]
         public ReceiverGroup[] ReceiverGroups{ get; set; }
 
+        /// <summary>
+        /// <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+        /// </summary>
+        [JsonProperty("AlarmId")]
+        public string AlarmId{ get; set; }
+
+        /// <summary>
+        /// <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+        /// </summary>
+        [JsonProperty("AlarmName")]
+        public string AlarmName{ get; set; }
+
+        /// <summary>
+        /// <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+        /// </summary>
+        [JsonProperty("AlarmStatus")]
+        public string AlarmStatus{ get; set; }
+
+        /// <summary>
+        /// <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +182,10 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamSimple(map, prefix + "PromeConsoleURL", this.PromeConsoleURL);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "ReceiverGroups.", this.ReceiverGroups);
+            this.SetParamSimple(map, prefix + "AlarmId", this.AlarmId);
+            this.SetParamSimple(map, prefix + "AlarmName", this.AlarmName);
+            this.SetParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
         }
     }
 }

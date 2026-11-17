@@ -25,101 +25,100 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 云原生API网关名字, 最多支持60个字符。
+        /// <p>云原生API网关名字, 最多支持60个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 云原生API网关类型, 目前只支持kong。
+        /// <p>云原生API网关类型, 目前只支持kong。</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 云原生API网关版本。参考值：
-        /// - 2.4.1
-        /// - 2.5.1
+        /// <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
         /// </summary>
         [JsonProperty("GatewayVersion")]
         public string GatewayVersion{ get; set; }
 
         /// <summary>
-        /// 云原生API网关节点配置。
+        /// <p>云原生API网关节点配置。</p>
         /// </summary>
         [JsonProperty("NodeConfig")]
         public CloudNativeAPIGatewayNodeConfig NodeConfig{ get; set; }
 
         /// <summary>
-        /// 云原生API网关vpc配置。
+        /// <p>云原生API网关vpc配置。</p>
         /// </summary>
         [JsonProperty("VpcConfig")]
         public CloudNativeAPIGatewayVpcConfig VpcConfig{ get; set; }
 
         /// <summary>
-        /// 云原生API网关描述信息, 最多支持120个字符。
+        /// <p>云原生API网关描述信息, 最多支持120个字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("Tags")]
         public InstanceTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否开启 CLS 日志。默认值：fasle
+        /// <p>是否开启 CLS 日志。默认值：fasle</p>
         /// </summary>
         [JsonProperty("EnableCls")]
         public bool? EnableCls{ get; set; }
 
         /// <summary>
-        /// 产品版本。参考值：
-        /// - TRIAL：开发版
-        /// - STANDARD：标准版 （默认值）
-        /// - PROFESSIONAL：专业版
+        /// <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
         /// </summary>
         [JsonProperty("FeatureVersion")]
         public string FeatureVersion{ get; set; }
 
         /// <summary>
-        /// 公网出流量带宽，[1,2048]Mbps
+        /// <p>公网出流量带宽，[1,2048]Mbps</p>
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 实例实际的地域信息，默认值：ap-guangzhou
+        /// <p>实例实际的地域信息，默认值：ap-guangzhou</p>
         /// </summary>
         [JsonProperty("EngineRegion")]
         public string EngineRegion{ get; set; }
 
         /// <summary>
-        /// ingress Class名称
+        /// <p>ingress Class名称</p>
         /// </summary>
         [JsonProperty("IngressClassName")]
         public string IngressClassName{ get; set; }
 
         /// <summary>
-        /// 付费类型。参考值：
-        /// 0：后付费（默认值）
-        /// 1：预付费（接口暂不支持创建预付费实例）
+        /// <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
         /// </summary>
         [JsonProperty("TradeType")]
         public long? TradeType{ get; set; }
 
         /// <summary>
-        /// 公网相关配置
+        /// <p>公网相关配置</p>
         /// </summary>
         [JsonProperty("InternetConfig")]
         public InternetConfig InternetConfig{ get; set; }
 
         /// <summary>
-        /// 关联的prometheus ID
+        /// <p>关联的prometheus ID</p>
         /// </summary>
         [JsonProperty("PromId")]
         public string PromId{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启HTTP 80 端口的访问</p>
+        /// </summary>
+        [JsonProperty("EnableHttpPort")]
+        public bool? EnableHttpPort{ get; set; }
 
 
         /// <summary>
@@ -142,6 +141,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "TradeType", this.TradeType);
             this.SetParamObj(map, prefix + "InternetConfig.", this.InternetConfig);
             this.SetParamSimple(map, prefix + "PromId", this.PromId);
+            this.SetParamSimple(map, prefix + "EnableHttpPort", this.EnableHttpPort);
         }
     }
 }

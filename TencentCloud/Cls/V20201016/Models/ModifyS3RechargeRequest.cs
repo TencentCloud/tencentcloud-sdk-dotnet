@@ -108,6 +108,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ExtractRuleInfo")]
         public ExtractRuleInfo ExtractRuleInfo{ get; set; }
 
+        /// <summary>
+        /// <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+        /// </summary>
+        [JsonProperty("SQSEnabled")]
+        public bool? SQSEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>SQS队列URL。开启开关后仅对增量数据生效。</p>
+        /// </summary>
+        [JsonProperty("SQSUrl")]
+        public string SQSUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Prefix", this.Prefix);
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
             this.SetParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
+            this.SetParamSimple(map, prefix + "SQSEnabled", this.SQSEnabled);
+            this.SetParamSimple(map, prefix + "SQSUrl", this.SQSUrl);
         }
     }
 }

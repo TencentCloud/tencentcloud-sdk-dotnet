@@ -36,6 +36,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("ImageRegistryType")]
         public string ImageRegistryType{ get; set; }
 
+        /// <summary>
+        /// <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+        /// </summary>
+        [JsonProperty("PreCacheType")]
+        public string PreCacheType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ags.V20250920.Models
         {
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+            this.SetParamSimple(map, prefix + "PreCacheType", this.PreCacheType);
         }
     }
 }

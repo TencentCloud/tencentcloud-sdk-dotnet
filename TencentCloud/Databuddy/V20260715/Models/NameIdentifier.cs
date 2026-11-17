@@ -51,6 +51,20 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 数据源连接ID（仅 CONNECTION 来源时返回）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConnectionId")]
+        public string ConnectionId{ get; set; }
+
+        /// <summary>
+        /// 数据源连接名称（仅CatalogSource=CONNECTION）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConnectionName")]
+        public string ConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +75,8 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
             this.SetParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
+            this.SetParamSimple(map, prefix + "ConnectionName", this.ConnectionName);
         }
     }
 }

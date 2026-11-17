@@ -58,6 +58,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("MountOptions")]
         public string MountOptions{ get; set; }
 
+        /// <summary>
+        /// <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
+        /// </summary>
+        [JsonProperty("FuseOptions")]
+        public string FuseOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "NameSpace", this.NameSpace);
             this.SetParamSimple(map, prefix + "MountOptions", this.MountOptions);
+            this.SetParamSimple(map, prefix + "FuseOptions", this.FuseOptions);
         }
     }
 }

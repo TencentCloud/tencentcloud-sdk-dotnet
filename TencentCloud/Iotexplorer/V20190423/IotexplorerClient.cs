@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1529";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -2205,6 +2205,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeDeviceBindGatewayResponse DescribeDeviceBindGatewaySync(DescribeDeviceBindGatewayRequest req)
         {
             return InternalRequestAsync<DescribeDeviceBindGatewayResponse>(req, "DescribeDeviceBindGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询设备云存套餐
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCloudStoragePackagesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCloudStoragePackagesResponse"/></returns>
+        public Task<DescribeDeviceCloudStoragePackagesResponse> DescribeDeviceCloudStoragePackages(DescribeDeviceCloudStoragePackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCloudStoragePackagesResponse>(req, "DescribeDeviceCloudStoragePackages");
+        }
+
+        /// <summary>
+        /// 查询设备云存套餐
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCloudStoragePackagesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCloudStoragePackagesResponse"/></returns>
+        public DescribeDeviceCloudStoragePackagesResponse DescribeDeviceCloudStoragePackagesSync(DescribeDeviceCloudStoragePackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCloudStoragePackagesResponse>(req, "DescribeDeviceCloudStoragePackages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

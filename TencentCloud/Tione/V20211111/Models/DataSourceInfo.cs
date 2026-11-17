@@ -109,6 +109,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ExtraConf")]
         public StorageExtraConf ExtraConf{ get; set; }
 
+        /// <summary>
+        /// <p>挂载数据源时默认填充的容器内路径</p>
+        /// </summary>
+        [JsonProperty("ContainerPath")]
+        public string ContainerPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "LimitMount", this.LimitMount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ExtraConf.", this.ExtraConf);
+            this.SetParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
         }
     }
 }

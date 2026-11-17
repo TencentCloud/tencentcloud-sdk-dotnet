@@ -25,49 +25,49 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// pod名
+        /// <p>pod名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// pod的IP
+        /// <p>pod的IP</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+        /// <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// pod启动时间
+        /// <p>pod启动时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// pod结束时间
+        /// <p>pod结束时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// pod资源配置
+        /// <p>pod资源配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceConfigInfo")]
         public ResourceConfigInfo ResourceConfigInfo{ get; set; }
 
         /// <summary>
-        /// Pod所属任务的SubUin信息
+        /// <p>Pod所属任务的SubUin信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubUin")]

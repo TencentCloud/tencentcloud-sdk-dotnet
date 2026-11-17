@@ -117,7 +117,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// 开关状态，小程序风控规则的时候传该值
+        /// 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -144,6 +144,17 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ActionRatio")]
         public ulong? ActionRatio{ get; set; }
 
+        /// <summary>
+        /// 自定义规则预览开关
+        /// 枚举值：
+        /// 0：关闭预览
+        /// 1：开启预览
+        /// 默认值：0
+        /// 开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+        /// </summary>
+        [JsonProperty("Preview")]
+        public long? Preview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +179,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
             this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
             this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+            this.SetParamSimple(map, prefix + "Preview", this.Preview);
         }
     }
 }

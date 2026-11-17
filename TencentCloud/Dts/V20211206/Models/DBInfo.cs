@@ -156,6 +156,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("SetId")]
         public string SetId{ get; set; }
 
+        /// <summary>
+        /// <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
+        /// </summary>
+        [JsonProperty("Shard")]
+        public string Shard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
             this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
             this.SetParamSimple(map, prefix + "SetId", this.SetId);
+            this.SetParamSimple(map, prefix + "Shard", this.Shard);
         }
     }
 }

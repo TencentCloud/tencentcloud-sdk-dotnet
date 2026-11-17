@@ -25,34 +25,46 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 暴露周期趋势数量统计信息
+        /// <p>暴露周期趋势数量统计信息</p>
         /// </summary>
         [JsonProperty("ExposeTrendList")]
         public ExposeTrendItem[] ExposeTrendList{ get; set; }
 
         /// <summary>
-        /// 暴露周期新增数量统计
+        /// <p>暴露周期新增数量统计</p>
         /// </summary>
         [JsonProperty("ExposeIncrement")]
         public ulong? ExposeIncrement{ get; set; }
 
         /// <summary>
-        /// 近1天（24h）完全开放数量
+        /// <p>近1天（24h）完全开放数量</p>
         /// </summary>
         [JsonProperty("OpenCount")]
         public ulong? OpenCount{ get; set; }
 
         /// <summary>
-        /// 近1天（24h）受限访问数量
+        /// <p>近1天（24h）受限访问数量</p>
         /// </summary>
         [JsonProperty("AclCount")]
         public ulong? AclCount{ get; set; }
 
         /// <summary>
-        /// 近1天（24h）无法访问数量
+        /// <p>近1天（24h）无法访问数量</p>
         /// </summary>
         [JsonProperty("CloseCount")]
         public ulong? CloseCount{ get; set; }
+
+        /// <summary>
+        /// <p>互联网边界总数</p>
+        /// </summary>
+        [JsonProperty("ExposeTotalCount")]
+        public ulong? ExposeTotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>待处理边界数量</p>
+        /// </summary>
+        [JsonProperty("ToGovernRiskCount")]
+        public ulong? ToGovernRiskCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +83,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "OpenCount", this.OpenCount);
             this.SetParamSimple(map, prefix + "AclCount", this.AclCount);
             this.SetParamSimple(map, prefix + "CloseCount", this.CloseCount);
+            this.SetParamSimple(map, prefix + "ExposeTotalCount", this.ExposeTotalCount);
+            this.SetParamSimple(map, prefix + "ToGovernRiskCount", this.ToGovernRiskCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

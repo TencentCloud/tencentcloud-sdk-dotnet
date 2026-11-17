@@ -25,33 +25,31 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
+        /// <p>CA证书内容</p>
         /// </summary>
         [JsonProperty("CaCertificate")]
         public string CaCertificate{ get; set; }
 
         /// <summary>
-        /// 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
+        /// <p>验证证书内容</p>
         /// </summary>
         [JsonProperty("VerificationCertificate")]
         public string VerificationCertificate{ get; set; }
 
         /// <summary>
-        /// 证书格式，不传默认PEM格式，当前仅支持PEM格式
+        /// <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 证书状态，不传默认ACTIVE状态
-        ///     ACTIVE：激活
-        ///     INACTIVE：未激活
+        /// <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

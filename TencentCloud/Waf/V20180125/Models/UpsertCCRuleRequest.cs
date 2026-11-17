@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// CC规则开关，0表示关闭，1表示开启
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 动作有效时间
+        /// 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
         /// </summary>
         [JsonProperty("ValidTime")]
         public long? ValidTime{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 操作类型
+        /// CC规则类型，0表示基础规则，1表示高级规则
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

@@ -133,7 +133,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// <p>clb或saas</p>
+        /// <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }

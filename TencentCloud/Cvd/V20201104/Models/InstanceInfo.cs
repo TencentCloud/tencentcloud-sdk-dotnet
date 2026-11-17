@@ -294,6 +294,12 @@ namespace TencentCloud.Cvd.V20201104.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// <p>包销到期时间</p>
+        /// </summary>
+        [JsonProperty("UnderwriteDeadline")]
+        public string UnderwriteDeadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -340,6 +346,7 @@ namespace TencentCloud.Cvd.V20201104.Models
             this.SetParamSimple(map, prefix + "InstallControlPolicy", this.InstallControlPolicy);
             this.SetParamSimple(map, prefix + "AnonymousAccess", this.AnonymousAccess);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "UnderwriteDeadline", this.UnderwriteDeadline);
         }
     }
 }

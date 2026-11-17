@@ -67,6 +67,20 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public FileBackupOverview COSAgentBackupOverview{ get; set; }
 
         /// <summary>
+        /// <p>非腾讯云虚拟机备份概览数据</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalCVMAgentBackupOverview")]
+        public FileBackupOverview LocalCVMAgentBackupOverview{ get; set; }
+
+        /// <summary>
+        /// <p>非腾讯云文件存储备份概览数据</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalCFSAgentBackupOverview")]
+        public FileBackupOverview LocalCFSAgentBackupOverview{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +99,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamObj(map, prefix + "ProtectedResourceOverview.", this.ProtectedResourceOverview);
             this.SetParamObj(map, prefix + "CFSAgentBackupOverview.", this.CFSAgentBackupOverview);
             this.SetParamObj(map, prefix + "COSAgentBackupOverview.", this.COSAgentBackupOverview);
+            this.SetParamObj(map, prefix + "LocalCVMAgentBackupOverview.", this.LocalCVMAgentBackupOverview);
+            this.SetParamObj(map, prefix + "LocalCFSAgentBackupOverview.", this.LocalCFSAgentBackupOverview);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

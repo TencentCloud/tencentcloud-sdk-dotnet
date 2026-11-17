@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 流量来源
+        /// 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1535</VersionPrefix>
+    <VersionPrefix>3.0.1536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20260520\Models\AccountInfo.cs" />
     <Compile Include="V20260520\Models\AddOnPackageInfo.cs" />
     <Compile Include="V20260520\Models\AgentAdvancedConfig.cs" />
+    <Compile Include="V20260520\Models\AgentBuiltinTool.cs" />
+    <Compile Include="V20260520\Models\AgentBuiltinToolConfig.cs" />
     <Compile Include="V20260520\Models\AgentCollaborationConfig.cs" />
     <Compile Include="V20260520\Models\AgentDetail.cs" />
     <Compile Include="V20260520\Models\AgentExternalToolConfig.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="V20260520\Models\BasicBilling.cs" />
     <Compile Include="V20260520\Models\BatchRunSummary.cs" />
     <Compile Include="V20260520\Models\BillingAttribute.cs" />
+    <Compile Include="V20260520\Models\ByteCapacity.cs" />
     <Compile Include="V20260520\Models\CallMCPToolRequest.cs" />
     <Compile Include="V20260520\Models\CallMCPToolResponse.cs" />
     <Compile Include="V20260520\Models\CallSource.cs" />
@@ -144,6 +147,7 @@
     <Compile Include="V20260520\Models\CategoryPermission.cs" />
     <Compile Include="V20260520\Models\Channel.cs" />
     <Compile Include="V20260520\Models\ChannelSpec.cs" />
+    <Compile Include="V20260520\Models\CharacterSize.cs" />
     <Compile Include="V20260520\Models\CheckLabelRequest.cs" />
     <Compile Include="V20260520\Models\CheckLabelResponse.cs" />
     <Compile Include="V20260520\Models\CheckResult.cs" />
@@ -169,6 +173,11 @@
     <Compile Include="V20260520\Models\ConversationFileInfo.cs" />
     <Compile Include="V20260520\Models\ConversationMcpApp.cs" />
     <Compile Include="V20260520\Models\ConversationMessage.cs" />
+    <Compile Include="V20260520\Models\ConversationMessageExtraInfo.cs" />
+    <Compile Include="V20260520\Models\ConversationQuestion.cs" />
+    <Compile Include="V20260520\Models\ConversationQuestionAnswer.cs" />
+    <Compile Include="V20260520\Models\ConversationQuestionOption.cs" />
+    <Compile Include="V20260520\Models\ConversationQuestionnaire.cs" />
     <Compile Include="V20260520\Models\ConversationQuoteInfo.cs" />
     <Compile Include="V20260520\Models\ConversationRecordErrorInfo.cs" />
     <Compile Include="V20260520\Models\ConversationRecordSummary.cs" />
@@ -177,6 +186,7 @@
     <Compile Include="V20260520\Models\ConversationReference.cs" />
     <Compile Include="V20260520\Models\ConversationResetInfo.cs" />
     <Compile Include="V20260520\Models\ConversationWidget.cs" />
+    <Compile Include="V20260520\Models\ConversationWidgetAction.cs" />
     <Compile Include="V20260520\Models\ConversationWorkspace.cs" />
     <Compile Include="V20260520\Models\CopyAgentFromAppRequest.cs" />
     <Compile Include="V20260520\Models\CopyAgentFromAppResponse.cs" />
@@ -487,6 +497,8 @@
     <Compile Include="V20260520\Models\ModifyKBResponse.cs" />
     <Compile Include="V20260520\Models\ModifyLabelRequest.cs" />
     <Compile Include="V20260520\Models\ModifyLabelResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyMessageRecordFeedbackRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyMessageRecordFeedbackResponse.cs" />
     <Compile Include="V20260520\Models\ModifyMsgRecordCategoryRequest.cs" />
     <Compile Include="V20260520\Models\ModifyMsgRecordCategoryResponse.cs" />
     <Compile Include="V20260520\Models\ModifyPluginRequest.cs" />
@@ -545,6 +557,7 @@
     <Compile Include="V20260520\Models\QASummary.cs" />
     <Compile Include="V20260520\Models\ReadMCPResourceRequest.cs" />
     <Compile Include="V20260520\Models\ReadMCPResourceResponse.cs" />
+    <Compile Include="V20260520\Models\ReferenceAppDetail.cs" />
     <Compile Include="V20260520\Models\ReleaseRecord.cs" />
     <Compile Include="V20260520\Models\ReleaseSkillRequest.cs" />
     <Compile Include="V20260520\Models\ReleaseSkillResponse.cs" />

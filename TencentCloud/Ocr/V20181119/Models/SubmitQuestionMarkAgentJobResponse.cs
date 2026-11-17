@@ -31,21 +31,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+        /// <p>【废弃字段】</p>
         /// </summary>
         [JsonProperty("QuestionInfo")]
+        [System.Obsolete]
         public QuestionInfo[] QuestionInfo{ get; set; }
 
         /// <summary>
-        /// <p>题目切题数量，作为计费题目数总量</p>
+        /// <p>【废弃字段】</p>
         /// </summary>
         [JsonProperty("QuestionCount")]
+        [System.Obsolete]
         public string QuestionCount{ get; set; }
 
         /// <summary>
         /// <p>【废弃字段】</p>
         /// </summary>
         [JsonProperty("OriginalImageUrl")]
+        [System.Obsolete]
         public string OriginalImageUrl{ get; set; }
 
         /// <summary>

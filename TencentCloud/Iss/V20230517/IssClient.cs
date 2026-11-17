@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -1822,6 +1822,27 @@ namespace TencentCloud.Iss.V20230517
         public ListVideoDownloadTaskResponse ListVideoDownloadTaskSync(ListVideoDownloadTaskRequest req)
         {
             return InternalRequestAsync<ListVideoDownloadTaskResponse>(req, "ListVideoDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取截图结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVideoSnapshotResultRequest"/></param>
+        /// <returns><see cref="ListVideoSnapshotResultResponse"/></returns>
+        public Task<ListVideoSnapshotResultResponse> ListVideoSnapshotResult(ListVideoSnapshotResultRequest req)
+        {
+            return InternalRequestAsync<ListVideoSnapshotResultResponse>(req, "ListVideoSnapshotResult");
+        }
+
+        /// <summary>
+        /// 获取截图结果列表
+        /// </summary>
+        /// <param name="req"><see cref="ListVideoSnapshotResultRequest"/></param>
+        /// <returns><see cref="ListVideoSnapshotResultResponse"/></returns>
+        public ListVideoSnapshotResultResponse ListVideoSnapshotResultSync(ListVideoSnapshotResultRequest req)
+        {
+            return InternalRequestAsync<ListVideoSnapshotResultResponse>(req, "ListVideoSnapshotResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

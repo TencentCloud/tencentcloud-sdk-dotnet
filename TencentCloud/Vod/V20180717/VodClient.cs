@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -2302,6 +2302,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAigcUsageDataResponse DescribeAigcUsageDataSync(DescribeAigcUsageDataRequest req)
         {
             return InternalRequestAsync<DescribeAigcUsageDataResponse>(req, "DescribeAigcUsageData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AIGC白名单配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeAigcWhitelistResponse"/></returns>
+        public Task<DescribeAigcWhitelistResponse> DescribeAigcWhitelist(DescribeAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcWhitelistResponse>(req, "DescribeAigcWhitelist");
+        }
+
+        /// <summary>
+        /// 查询AIGC白名单配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeAigcWhitelistResponse"/></returns>
+        public DescribeAigcWhitelistResponse DescribeAigcWhitelistSync(DescribeAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcWhitelistResponse>(req, "DescribeAigcWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5545,6 +5566,27 @@ namespace TencentCloud.Vod.V20180717
         public SearchMediaBySemanticsResponse SearchMediaBySemanticsSync(SearchMediaBySemanticsRequest req)
         {
             return InternalRequestAsync<SearchMediaBySemanticsResponse>(req, "SearchMediaBySemantics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改AIGC白名单设置
+        /// </summary>
+        /// <param name="req"><see cref="SetAigcWhitelistRequest"/></param>
+        /// <returns><see cref="SetAigcWhitelistResponse"/></returns>
+        public Task<SetAigcWhitelistResponse> SetAigcWhitelist(SetAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<SetAigcWhitelistResponse>(req, "SetAigcWhitelist");
+        }
+
+        /// <summary>
+        /// 修改AIGC白名单设置
+        /// </summary>
+        /// <param name="req"><see cref="SetAigcWhitelistRequest"/></param>
+        /// <returns><see cref="SetAigcWhitelistResponse"/></returns>
+        public SetAigcWhitelistResponse SetAigcWhitelistSync(SetAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<SetAigcWhitelistResponse>(req, "SetAigcWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

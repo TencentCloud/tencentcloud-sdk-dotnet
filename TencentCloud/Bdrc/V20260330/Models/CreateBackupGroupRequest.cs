@@ -37,7 +37,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public string BackupGroupName{ get; set; }
 
         /// <summary>
-        /// 指定备份组到期时间，如果未传入该参数，默认为永久保留。
+        /// 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
         /// </summary>
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }

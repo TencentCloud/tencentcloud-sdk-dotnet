@@ -25,55 +25,61 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 需要设置的domain
+        /// <p>需要设置的domain</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Web 安全模块开关，0或1
+        /// <p>Web 安全模块开关，0或1</p>
         /// </summary>
         [JsonProperty("WebSecurity")]
         public ulong? WebSecurity{ get; set; }
 
         /// <summary>
-        /// 访问控制模块开关，0或者1
+        /// <p>访问控制模块开关，0或者1</p>
         /// </summary>
         [JsonProperty("AccessControl")]
         public ulong? AccessControl{ get; set; }
 
         /// <summary>
-        /// CC模块开关，0或者1
+        /// <p>CC模块开关，0或者1</p>
         /// </summary>
         [JsonProperty("CcProtection")]
         public ulong? CcProtection{ get; set; }
 
         /// <summary>
-        /// API安全模块开关，0或者1
+        /// <p>API安全模块开关，0或者1</p>
         /// </summary>
         [JsonProperty("ApiProtection")]
         public ulong? ApiProtection{ get; set; }
 
         /// <summary>
-        /// 防篡改模块开关，0或者1
+        /// <p>API安全检测开关，0关闭1开启</p>
+        /// </summary>
+        [JsonProperty("ApiDetect")]
+        public ulong? ApiDetect{ get; set; }
+
+        /// <summary>
+        /// <p>防篡改模块开关，0或者1</p>
         /// </summary>
         [JsonProperty("AntiTamper")]
         public ulong? AntiTamper{ get; set; }
 
         /// <summary>
-        /// 防泄漏模块开关，0或者1
+        /// <p>防泄漏模块开关，0或者1</p>
         /// </summary>
         [JsonProperty("AntiLeakage")]
         public ulong? AntiLeakage{ get; set; }
 
         /// <summary>
-        /// 限流模块开关，0或1
+        /// <p>限流模块开关，0或1</p>
         /// </summary>
         [JsonProperty("RateLimit")]
         public ulong? RateLimit{ get; set; }
 
         /// <summary>
-        /// gzip 开关
+        /// <p>gzip 开关</p>
         /// </summary>
         [JsonProperty("GzipAnalysis")]
         public ulong? GzipAnalysis{ get; set; }
@@ -89,6 +95,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AccessControl", this.AccessControl);
             this.SetParamSimple(map, prefix + "CcProtection", this.CcProtection);
             this.SetParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
+            this.SetParamSimple(map, prefix + "ApiDetect", this.ApiDetect);
             this.SetParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
             this.SetParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
             this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);

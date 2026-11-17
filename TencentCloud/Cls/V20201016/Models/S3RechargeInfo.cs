@@ -138,6 +138,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
+        /// <summary>
+        /// <p>是否启用SQS。</p>
+        /// </summary>
+        [JsonProperty("SQSEnabled")]
+        public bool? SQSEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>SQS队列URL。</p>
+        /// </summary>
+        [JsonProperty("SQSUrl")]
+        public string SQSUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "SQSEnabled", this.SQSEnabled);
+            this.SetParamSimple(map, prefix + "SQSUrl", this.SQSUrl);
         }
     }
 }

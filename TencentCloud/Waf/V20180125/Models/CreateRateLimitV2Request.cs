@@ -156,6 +156,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
+        /// <summary>
+        /// 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+        /// </summary>
+        [JsonProperty("MatchConditions")]
+        public Strategy[] MatchConditions{ get; set; }
+
+        /// <summary>
+        /// 条件间逻辑：and(默认)/or
+        /// </summary>
+        [JsonProperty("ConditionLogic")]
+        public string ConditionLogic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "QuotaShare", this.QuotaShare);
             this.SetParamArrayObj(map, prefix + "PathsOption.", this.PathsOption);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArrayObj(map, prefix + "MatchConditions.", this.MatchConditions);
+            this.SetParamSimple(map, prefix + "ConditionLogic", this.ConditionLogic);
         }
     }
 }

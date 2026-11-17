@@ -28,7 +28,7 @@ namespace TencentCloud.Keewidb.V20220308
 
        private const string endpoint = "keewidb.tencentcloudapi.com";
        private const string version = "2022-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1521";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -161,6 +161,27 @@ namespace TencentCloud.Keewidb.V20220308
         }
 
         /// <summary>
+        /// 本接口（CreateInstanceAccount）用于自定义访问实例的账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
+        /// <returns><see cref="CreateInstanceAccountResponse"/></returns>
+        public Task<CreateInstanceAccountResponse> CreateInstanceAccount(CreateInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceAccountResponse>(req, "CreateInstanceAccount");
+        }
+
+        /// <summary>
+        /// 本接口（CreateInstanceAccount）用于自定义访问实例的账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
+        /// <returns><see cref="CreateInstanceAccountResponse"/></returns>
+        public CreateInstanceAccountResponse CreateInstanceAccountSync(CreateInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceAccountResponse>(req, "CreateInstanceAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建数据库实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
@@ -178,6 +199,27 @@ namespace TencentCloud.Keewidb.V20220308
         public CreateInstancesResponse CreateInstancesSync(CreateInstancesRequest req)
         {
             return InternalRequestAsync<CreateInstancesResponse>(req, "CreateInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeleteInstanceAccount）用于删除实例自定义账号。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
+        /// <returns><see cref="DeleteInstanceAccountResponse"/></returns>
+        public Task<DeleteInstanceAccountResponse> DeleteInstanceAccount(DeleteInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceAccountResponse>(req, "DeleteInstanceAccount");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteInstanceAccount）用于删除实例自定义账号。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
+        /// <returns><see cref="DeleteInstanceAccountResponse"/></returns>
+        public DeleteInstanceAccountResponse DeleteInstanceAccountSync(DeleteInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceAccountResponse>(req, "DeleteInstanceAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -241,6 +283,27 @@ namespace TencentCloud.Keewidb.V20220308
         public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroupsSync(DescribeDBSecurityGroupsRequest req)
         {
             return InternalRequestAsync<DescribeDBSecurityGroupsResponse>(req, "DescribeDBSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceAccount）用于查看实例账号信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
+        /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
+        public Task<DescribeInstanceAccountResponse> DescribeInstanceAccount(DescribeInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceAccountResponse>(req, "DescribeInstanceAccount");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceAccount）用于查看实例账号信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
+        /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
+        public DescribeInstanceAccountResponse DescribeInstanceAccountSync(DescribeInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceAccountResponse>(req, "DescribeInstanceAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -703,6 +766,27 @@ namespace TencentCloud.Keewidb.V20220308
         public ModifyInstanceResponse ModifyInstanceSync(ModifyInstanceRequest req)
         {
             return InternalRequestAsync<ModifyInstanceResponse>(req, "ModifyInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceAccount）用于修改实例账号。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>
+        public Task<ModifyInstanceAccountResponse> ModifyInstanceAccount(ModifyInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAccountResponse>(req, "ModifyInstanceAccount");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceAccount）用于修改实例账号。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>
+        public ModifyInstanceAccountResponse ModifyInstanceAccountSync(ModifyInstanceAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAccountResponse>(req, "ModifyInstanceAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

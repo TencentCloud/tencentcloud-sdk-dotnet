@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Makers.V20261113.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class EnvVar : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>变量名，最长 255</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
+        /// <summary>
+        /// <p>变量值，最长 1000</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
+
+        /// <summary>
+        /// <p>变量 ID。创建时不传</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
+
+        /// <summary>
+        /// <p>备注，最长 255</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// <p>生效环境 slug，例如 Production、Preview。同 Key 的多行环境不能重叠</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Env")]
+        public string[] Env{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamArraySimple(map, prefix + "Env.", this.Env);
+        }
+    }
+}
+

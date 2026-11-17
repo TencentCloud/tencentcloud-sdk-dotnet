@@ -43,6 +43,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? DumpRps{ get; set; }
 
         /// <summary>
+        /// <p>全量导出Bps，单位MB/s，MongoDB专用，上限80</p>
+        /// </summary>
+        [JsonProperty("DumpBps")]
+        public long? DumpBps{ get; set; }
+
+        /// <summary>
         /// <p>迁移任务全量导入线程数、有效值为 1-16</p>
         /// </summary>
         [JsonProperty("LoadThread")]
@@ -60,6 +66,30 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("LoadRps")]
         public long? LoadRps{ get; set; }
 
+        /// <summary>
+        /// <p>导入BPS，单位MB/s。目前仅对redis生效，表示目标库单分片流量限制大小</p>
+        /// </summary>
+        [JsonProperty("LoadBps")]
+        public long? LoadBps{ get; set; }
+
+        /// <summary>
+        /// <p>目标库分片数，目前仅对redis生效</p>
+        /// </summary>
+        [JsonProperty("DstShardCount")]
+        public long? DstShardCount{ get; set; }
+
+        /// <summary>
+        /// <p>增量导入Rps，MongoDB专用，上限30000</p>
+        /// </summary>
+        [JsonProperty("SinkerRps")]
+        public long? SinkerRps{ get; set; }
+
+        /// <summary>
+        /// <p>增量导入Bps，单位MB/s，MongoDB专用，上限120</p>
+        /// </summary>
+        [JsonProperty("SinkerBps")]
+        public long? SinkerBps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,9 +99,14 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "DumpThread", this.DumpThread);
             this.SetParamSimple(map, prefix + "DumpRps", this.DumpRps);
+            this.SetParamSimple(map, prefix + "DumpBps", this.DumpBps);
             this.SetParamSimple(map, prefix + "LoadThread", this.LoadThread);
             this.SetParamSimple(map, prefix + "SinkerThread", this.SinkerThread);
             this.SetParamSimple(map, prefix + "LoadRps", this.LoadRps);
+            this.SetParamSimple(map, prefix + "LoadBps", this.LoadBps);
+            this.SetParamSimple(map, prefix + "DstShardCount", this.DstShardCount);
+            this.SetParamSimple(map, prefix + "SinkerRps", this.SinkerRps);
+            this.SetParamSimple(map, prefix + "SinkerBps", this.SinkerBps);
         }
     }
 }

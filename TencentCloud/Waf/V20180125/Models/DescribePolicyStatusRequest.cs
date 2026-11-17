@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// clb-waf或者saas-waf
+        /// clb-waf或者sparta-waf
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }

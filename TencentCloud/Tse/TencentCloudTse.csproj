@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1532</VersionPrefix>
+    <VersionPrefix>3.0.1536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -510,6 +510,7 @@
     <Compile Include="V20201207\Models\KongUpstreamInfo.cs" />
     <Compile Include="V20201207\Models\KongUpstreamList.cs" />
     <Compile Include="V20201207\Models\KongUpstreamPreview.cs" />
+    <Compile Include="V20201207\Models\KongUserTagKV.cs" />
     <Compile Include="V20201207\Models\Label.cs" />
     <Compile Include="V20201207\Models\LaneTrafficEntry.cs" />
     <Compile Include="V20201207\Models\LimitRule.cs" />
@@ -614,6 +615,7 @@
     <Compile Include="V20201207\Models\SourceInstanceVpcInfo.cs" />
     <Compile Include="V20201207\Models\StorageOption.cs" />
     <Compile Include="V20201207\Models\TSEGatewaySelector.cs" />
+    <Compile Include="V20201207\Models\TagKVFilter.cs" />
     <Compile Include="V20201207\Models\TrafficGray.cs" />
     <Compile Include="V20201207\Models\UnbindAutoScalerResourceStrategyFromGroupsRequest.cs" />
     <Compile Include="V20201207\Models\UnbindAutoScalerResourceStrategyFromGroupsResponse.cs" />

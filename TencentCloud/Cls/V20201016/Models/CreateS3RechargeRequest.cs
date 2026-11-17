@@ -96,6 +96,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
+        /// <summary>
+        /// <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+        /// </summary>
+        [JsonProperty("SQSEnabled")]
+        public bool? SQSEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
+        /// </summary>
+        [JsonProperty("SQSUrl")]
+        public string SQSUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
             this.SetParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "SQSEnabled", this.SQSEnabled);
+            this.SetParamSimple(map, prefix + "SQSUrl", this.SQSUrl);
         }
     }
 }

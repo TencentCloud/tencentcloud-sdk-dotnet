@@ -54,6 +54,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("RegisterToImageCenter")]
         public bool? RegisterToImageCenter{ get; set; }
 
+        /// <summary>
+        /// <p>是否忽略无法被冻结的进程</p>
+        /// </summary>
+        [JsonProperty("IgnoreUnfreezableProcesses")]
+        public bool? IgnoreUnfreezableProcesses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
             this.SetParamArraySimple(map, prefix + "Kernels.", this.Kernels);
             this.SetParamSimple(map, prefix + "RegisterToImageCenter", this.RegisterToImageCenter);
+            this.SetParamSimple(map, prefix + "IgnoreUnfreezableProcesses", this.IgnoreUnfreezableProcesses);
         }
     }
 }

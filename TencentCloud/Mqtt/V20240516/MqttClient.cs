@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1527";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -1653,7 +1653,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 注册CA证书（仅一机一证场景支持），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817)
+        /// 注册CA证书（仅一机一证场景支持）
         /// </summary>
         /// <param name="req"><see cref="RegisterCaCertificateRequest"/></param>
         /// <returns><see cref="RegisterCaCertificateResponse"/></returns>
@@ -1663,7 +1663,7 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
-        /// 注册CA证书（仅一机一证场景支持），可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817)
+        /// 注册CA证书（仅一机一证场景支持）
         /// </summary>
         /// <param name="req"><see cref="RegisterCaCertificateRequest"/></param>
         /// <returns><see cref="RegisterCaCertificateResponse"/></returns>

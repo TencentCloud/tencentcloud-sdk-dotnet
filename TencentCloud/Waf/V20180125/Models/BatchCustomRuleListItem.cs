@@ -162,6 +162,15 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("GroupIds")]
         public ulong?[] GroupIds{ get; set; }
 
+        /// <summary>
+        /// 自定义规则预览开关
+        /// 枚举值：
+        /// 0：关闭预览
+        /// 1：开启预览
+        /// </summary>
+        [JsonProperty("Preview")]
+        public long? Preview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +200,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
             this.SetParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
             this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamSimple(map, prefix + "Preview", this.Preview);
         }
     }
 }

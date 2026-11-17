@@ -25,6 +25,24 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
     {
         
         /// <summary>
+        /// <p>OneID 颁发的用户级访问凭证</p>
+        /// </summary>
+        [JsonProperty("AccessToken")]
+        public string AccessToken{ get; set; }
+
+        /// <summary>
+        /// <p>凭证类型，目前固定 Bearer</p>
+        /// </summary>
+        [JsonProperty("TokenType")]
+        public string TokenType{ get; set; }
+
+        /// <summary>
+        /// <p>凭证有效期，单位：秒</p>
+        /// </summary>
+        [JsonProperty("ExpiresIn")]
+        public long? ExpiresIn{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AccessToken", this.AccessToken);
+            this.SetParamSimple(map, prefix + "TokenType", this.TokenType);
+            this.SetParamSimple(map, prefix + "ExpiresIn", this.ExpiresIn);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

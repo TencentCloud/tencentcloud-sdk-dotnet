@@ -60,6 +60,18 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("ResourceStatus")]
         public ulong? ResourceStatus{ get; set; }
 
+        /// <summary>
+        /// <p>云盘容量</p><p>单位：GB</p>
+        /// </summary>
+        [JsonProperty("CloudDiskCapacity")]
+        public float? CloudDiskCapacity{ get; set; }
+
+        /// <summary>
+        /// <p>云盘用量</p><p>单位：GB</p>
+        /// </summary>
+        [JsonProperty("CloudDiskUsage")]
+        public float? CloudDiskUsage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "KnowledgeCapacity", this.KnowledgeCapacity);
             this.SetParamSimple(map, prefix + "KnowledgeUsage", this.KnowledgeUsage);
             this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+            this.SetParamSimple(map, prefix + "CloudDiskCapacity", this.CloudDiskCapacity);
+            this.SetParamSimple(map, prefix + "CloudDiskUsage", this.CloudDiskUsage);
         }
     }
 }

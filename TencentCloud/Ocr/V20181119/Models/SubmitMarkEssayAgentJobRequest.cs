@@ -40,6 +40,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。 示例值：1</p>
         /// </summary>
         [JsonProperty("PdfPageNumber")]
+        [System.Obsolete]
         public long? PdfPageNumber{ get; set; }
 
         /// <summary>
@@ -47,6 +48,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("QuestionConfigMap")]
         public string QuestionConfigMap{ get; set; }
+
+        /// <summary>
+        /// <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示中英文作文批改Agent</p><p>1:表示教辅试卷题库拆录Agent(支持拆录含解析与答案的教辅（解析、答案可与正文分置首尾，或与试题混排）、多页成套标准答案试卷及带有手写批注痕迹的试题)</p>
+        /// </summary>
+        [JsonProperty("AgentType")]
+        public long? AgentType{ get; set; }
+
+        /// <summary>
+        /// <p>需要识别的页码范围（目前只有AgentType=1支持），单次调用最多支持100页。  参数格式：1-10   示例值：1-2</p>
+        /// </summary>
+        [JsonProperty("PageRange")]
+        public string PageRange{ get; set; }
 
 
         /// <summary>
@@ -58,6 +71,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamSimple(map, prefix + "QuestionConfigMap", this.QuestionConfigMap);
+            this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
+            this.SetParamSimple(map, prefix + "PageRange", this.PageRange);
         }
     }
 }

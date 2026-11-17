@@ -90,6 +90,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ShareFromUser")]
         public string ShareFromUser{ get; set; }
 
+        /// <summary>
+        /// <p>是否试用订单</p>
+        /// </summary>
+        [JsonProperty("IsTrialOrder")]
+        public ulong? IsTrialOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "QuotaSource", this.QuotaSource);
             this.SetParamSimple(map, prefix + "ShareFromAppID", this.ShareFromAppID);
             this.SetParamSimple(map, prefix + "ShareFromUser", this.ShareFromUser);
+            this.SetParamSimple(map, prefix + "IsTrialOrder", this.IsTrialOrder);
         }
     }
 }

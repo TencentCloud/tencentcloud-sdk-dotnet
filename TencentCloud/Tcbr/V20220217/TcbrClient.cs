@@ -28,7 +28,7 @@ namespace TencentCloud.Tcbr.V20220217
 
        private const string endpoint = "tcbr.tencentcloudapi.com";
        private const string version = "2022-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1533";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -365,6 +365,27 @@ namespace TencentCloud.Tcbr.V20220217
         public InitializeCloudRunResourceResponse InitializeCloudRunResourceSync(InitializeCloudRunResourceRequest req)
         {
             return InternalRequestAsync<InitializeCloudRunResourceResponse>(req, "InitializeCloudRunResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 ModifyStableIPStatus 用于修改固定 IP 状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStableIPStatusRequest"/></param>
+        /// <returns><see cref="ModifyStableIPStatusResponse"/></returns>
+        public Task<ModifyStableIPStatusResponse> ModifyStableIPStatus(ModifyStableIPStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyStableIPStatusResponse>(req, "ModifyStableIPStatus");
+        }
+
+        /// <summary>
+        /// 本接口 ModifyStableIPStatus 用于修改固定 IP 状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStableIPStatusRequest"/></param>
+        /// <returns><see cref="ModifyStableIPStatusResponse"/></returns>
+        public ModifyStableIPStatusResponse ModifyStableIPStatusSync(ModifyStableIPStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyStableIPStatusResponse>(req, "ModifyStableIPStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

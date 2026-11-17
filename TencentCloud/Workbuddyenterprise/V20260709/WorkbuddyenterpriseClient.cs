@@ -28,7 +28,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709
 
        private const string endpoint = "workbuddyenterprise.tencentcloudapi.com";
        private const string version = "2026-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1533";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.

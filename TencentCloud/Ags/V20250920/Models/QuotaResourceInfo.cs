@@ -54,6 +54,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("MemoryGiB")]
         public float? MemoryGiB{ get; set; }
 
+        /// <summary>
+        /// <p>最大镜像预热并发处理数量</p><p>单位：个</p>
+        /// </summary>
+        [JsonProperty("PreCacheImageConcurrency")]
+        public long? PreCacheImageConcurrency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "PausedInstances", this.PausedInstances);
             this.SetParamSimple(map, prefix + "CPUCores", this.CPUCores);
             this.SetParamSimple(map, prefix + "MemoryGiB", this.MemoryGiB);
+            this.SetParamSimple(map, prefix + "PreCacheImageConcurrency", this.PreCacheImageConcurrency);
         }
     }
 }

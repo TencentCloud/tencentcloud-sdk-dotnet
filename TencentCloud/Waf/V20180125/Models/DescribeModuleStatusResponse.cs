@@ -25,49 +25,55 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// WEB安全规则是否开启
+        /// <p>WEB安全规则是否开启</p>
         /// </summary>
         [JsonProperty("WebSecurity")]
         public ulong? WebSecurity{ get; set; }
 
         /// <summary>
-        /// 访问控制规则是否开启
+        /// <p>访问控制规则是否开启</p>
         /// </summary>
         [JsonProperty("AccessControl")]
         public long? AccessControl{ get; set; }
 
         /// <summary>
-        /// CC防护是否开启
+        /// <p>CC防护是否开启</p>
         /// </summary>
         [JsonProperty("CcProtection")]
         public ulong? CcProtection{ get; set; }
 
         /// <summary>
-        /// 网页防篡改是否开启
+        /// <p>网页防篡改是否开启</p>
         /// </summary>
         [JsonProperty("AntiTamper")]
         public ulong? AntiTamper{ get; set; }
 
         /// <summary>
-        /// 信息防泄漏是否开启
+        /// <p>信息防泄漏是否开启</p>
         /// </summary>
         [JsonProperty("AntiLeakage")]
         public ulong? AntiLeakage{ get; set; }
 
         /// <summary>
-        /// API安全是否开启
+        /// <p>API安全是否开启</p>
         /// </summary>
         [JsonProperty("ApiProtection")]
         public ulong? ApiProtection{ get; set; }
 
         /// <summary>
-        /// 限流模块开关
+        /// <p>API安全检测开关是否开启</p>
+        /// </summary>
+        [JsonProperty("ApiDetect")]
+        public ulong? ApiDetect{ get; set; }
+
+        /// <summary>
+        /// <p>限流模块开关，0表示关闭，1表示开启</p>
         /// </summary>
         [JsonProperty("RateLimit")]
         public ulong? RateLimit{ get; set; }
 
         /// <summary>
-        /// gzip 开关
+        /// <p>gzip 开关</p>
         /// </summary>
         [JsonProperty("GzipAnalysis")]
         public ulong? GzipAnalysis{ get; set; }
@@ -90,6 +96,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
             this.SetParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
             this.SetParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
+            this.SetParamSimple(map, prefix + "ApiDetect", this.ApiDetect);
             this.SetParamSimple(map, prefix + "RateLimit", this.RateLimit);
             this.SetParamSimple(map, prefix + "GzipAnalysis", this.GzipAnalysis);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

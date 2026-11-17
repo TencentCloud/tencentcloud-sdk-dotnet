@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Databuddy.V20260715
         public CreateConsoleGroupResponse CreateConsoleGroupSync(CreateConsoleGroupRequest req)
         {
             return InternalRequestAsync<CreateConsoleGroupResponse>(req, "CreateConsoleGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建实验。实验是 MLflow 训练跟踪的容器，用于承载训练运行记录与已记录模型。支持 MACHINE_LEARNING/CLASSIFICATION/REGRESSION/FORECASTING/AGENT 五种类型；AutoML 类型（分类/回归/时序预测）需同时传入 AutoMlConf 与 TrainingData。
+        /// </summary>
+        /// <param name="req"><see cref="CreateExperimentRequest"/></param>
+        /// <returns><see cref="CreateExperimentResponse"/></returns>
+        public Task<CreateExperimentResponse> CreateExperiment(CreateExperimentRequest req)
+        {
+            return InternalRequestAsync<CreateExperimentResponse>(req, "CreateExperiment");
+        }
+
+        /// <summary>
+        /// 创建实验。实验是 MLflow 训练跟踪的容器，用于承载训练运行记录与已记录模型。支持 MACHINE_LEARNING/CLASSIFICATION/REGRESSION/FORECASTING/AGENT 五种类型；AutoML 类型（分类/回归/时序预测）需同时传入 AutoMlConf 与 TrainingData。
+        /// </summary>
+        /// <param name="req"><see cref="CreateExperimentRequest"/></param>
+        /// <returns><see cref="CreateExperimentResponse"/></returns>
+        public CreateExperimentResponse CreateExperimentSync(CreateExperimentRequest req)
+        {
+            return InternalRequestAsync<CreateExperimentResponse>(req, "CreateExperiment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -770,6 +791,27 @@ namespace TencentCloud.Databuddy.V20260715
         public GetFileResponse GetFileSync(GetFileRequest req)
         {
             return InternalRequestAsync<GetFileResponse>(req, "GetFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取文件内容。第一期：支持 FileId 定位
+        /// </summary>
+        /// <param name="req"><see cref="GetFileContentRequest"/></param>
+        /// <returns><see cref="GetFileContentResponse"/></returns>
+        public Task<GetFileContentResponse> GetFileContent(GetFileContentRequest req)
+        {
+            return InternalRequestAsync<GetFileContentResponse>(req, "GetFileContent");
+        }
+
+        /// <summary>
+        /// 获取文件内容。第一期：支持 FileId 定位
+        /// </summary>
+        /// <param name="req"><see cref="GetFileContentRequest"/></param>
+        /// <returns><see cref="GetFileContentResponse"/></returns>
+        public GetFileContentResponse GetFileContentSync(GetFileContentRequest req)
+        {
+            return InternalRequestAsync<GetFileContentResponse>(req, "GetFileContent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

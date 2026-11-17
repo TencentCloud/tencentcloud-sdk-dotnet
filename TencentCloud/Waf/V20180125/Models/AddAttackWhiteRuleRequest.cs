@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 规则状态
+        /// 规则状态，0表示关闭，1表示开启
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

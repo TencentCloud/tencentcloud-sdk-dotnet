@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -665,6 +665,31 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeTokenPlanListResponse DescribeTokenPlanListSync(DescribeTokenPlanListRequest req)
         {
             return InternalRequestAsync<DescribeTokenPlanListResponse>(req, "DescribeTokenPlanList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询个人版套餐详情。
+        /// 
+        /// 查询指定产品类型的个人版 Token Plan 套餐状态、额度及续费信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenPlanPersonalPackageRequest"/></param>
+        /// <returns><see cref="DescribeTokenPlanPersonalPackageResponse"/></returns>
+        public Task<DescribeTokenPlanPersonalPackageResponse> DescribeTokenPlanPersonalPackage(DescribeTokenPlanPersonalPackageRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenPlanPersonalPackageResponse>(req, "DescribeTokenPlanPersonalPackage");
+        }
+
+        /// <summary>
+        /// 查询个人版套餐详情。
+        /// 
+        /// 查询指定产品类型的个人版 Token Plan 套餐状态、额度及续费信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenPlanPersonalPackageRequest"/></param>
+        /// <returns><see cref="DescribeTokenPlanPersonalPackageResponse"/></returns>
+        public DescribeTokenPlanPersonalPackageResponse DescribeTokenPlanPersonalPackageSync(DescribeTokenPlanPersonalPackageRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenPlanPersonalPackageResponse>(req, "DescribeTokenPlanPersonalPackage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

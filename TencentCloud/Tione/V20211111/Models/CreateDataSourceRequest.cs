@@ -31,40 +31,46 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TiProjectId{ get; set; }
 
         /// <summary>
-        /// 数据源名称
+        /// <p>数据源名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数据源类型英文名
+        /// <p>数据源类型英文名</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 数据源权限，取值有RW RO
+        /// <p>数据源权限，取值有RW RO</p>
         /// </summary>
         [JsonProperty("Permission")]
         public string Permission{ get; set; }
 
         /// <summary>
-        /// 存储实例ID
+        /// <p>存储实例ID</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// 数据源挂载配置
+        /// <p>数据源挂载配置</p>
         /// </summary>
         [JsonProperty("MountConfigure")]
         public MountConfigureInfo MountConfigure{ get; set; }
 
         /// <summary>
-        /// 标签配置
+        /// <p>标签配置</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>挂载数据源时默认填充的容器内路径</p>
+        /// </summary>
+        [JsonProperty("ContainerPath")]
+        public string ContainerPath{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
             this.SetParamObj(map, prefix + "MountConfigure.", this.MountConfigure);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
         }
     }
 }

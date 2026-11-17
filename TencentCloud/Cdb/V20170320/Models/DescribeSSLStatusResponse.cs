@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
+        /// <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 证书下载链接。
+        /// <p>证书下载链接。</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

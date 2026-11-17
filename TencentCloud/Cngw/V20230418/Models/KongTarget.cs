@@ -25,55 +25,61 @@ namespace TencentCloud.Cngw.V20230418.Models
     {
         
         /// <summary>
-        /// 目标主机地址
+        /// <p>目标主机地址</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 端口
+        /// <p>端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 权重
+        /// <p>权重</p>
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// CVM实例ID
+        /// <p>CVM实例ID</p>
         /// </summary>
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }
 
         /// <summary>
-        /// CVM实例名称
+        /// <p>CVM实例名称</p>
         /// </summary>
         [JsonProperty("CvmInstanceName")]
         public string CvmInstanceName{ get; set; }
 
         /// <summary>
-        /// 健康状态
+        /// <p>健康状态</p>
         /// </summary>
         [JsonProperty("Health")]
         public string Health{ get; set; }
 
         /// <summary>
-        /// Target的来源
+        /// <p>Target ID</p>
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// <p>Target的来源</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// target标签
+        /// <p>target标签</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
@@ -91,6 +97,7 @@ namespace TencentCloud.Cngw.V20230418.Models
             this.SetParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
             this.SetParamSimple(map, prefix + "CvmInstanceName", this.CvmInstanceName);
             this.SetParamSimple(map, prefix + "Health", this.Health);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
         }

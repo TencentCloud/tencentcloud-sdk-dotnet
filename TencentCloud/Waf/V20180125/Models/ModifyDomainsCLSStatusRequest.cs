@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public DomainURI[] Domains{ get; set; }
 
         /// <summary>
-        /// 修改域名的访问日志开关为Status
+        /// CLS访问日志开关，0表示关闭，1表示开启
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

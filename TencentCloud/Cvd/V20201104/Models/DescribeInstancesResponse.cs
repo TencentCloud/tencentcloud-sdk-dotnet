@@ -25,14 +25,14 @@ namespace TencentCloud.Cvd.V20201104.Models
     {
         
         /// <summary>
-        /// 返回查询到的所有实例信息
+        /// <p>返回查询到的所有实例信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public InstanceInfo[] InstanceList{ get; set; }
 
         /// <summary>
-        /// 返回当前查询到的实例总数
+        /// <p>返回当前查询到的实例总数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]

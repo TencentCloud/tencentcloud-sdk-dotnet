@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>国家ID，当前仅支持国内：1</p>
+        /// <p>国家ID，当前仅支持境内：1</p>
         /// </summary>
         [JsonProperty("CountryId")]
         public long? CountryId{ get; set; }

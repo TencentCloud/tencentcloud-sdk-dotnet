@@ -149,6 +149,25 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("RouteSource")]
         public string RouteSource{ get; set; }
 
+        /// <summary>
+        /// <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public KongUserTagKV[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>超时时间</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public long? Timeout{ get; set; }
+
+        /// <summary>
+        /// <p>路由超时配置的来源。</p>
+        /// </summary>
+        [JsonProperty("TimeoutSource")]
+        public string TimeoutSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +194,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
             this.SetParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
             this.SetParamSimple(map, prefix + "RouteSource", this.RouteSource);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "TimeoutSource", this.TimeoutSource);
         }
     }
 }

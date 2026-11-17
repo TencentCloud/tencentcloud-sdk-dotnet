@@ -31,6 +31,13 @@ namespace TencentCloud.Adp.V20260520.Models
         public string ConversationId{ get; set; }
 
         /// <summary>
+        /// <p>额外信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtraInfo")]
+        public ConversationMessageExtraInfo ExtraInfo{ get; set; }
+
+        /// <summary>
         /// <p>消息图标</p>
         /// </summary>
         [JsonProperty("Icon")]
@@ -103,6 +110,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ConversationId", this.ConversationId);
+            this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
             this.SetParamSimple(map, prefix + "Icon", this.Icon);
             this.SetParamSimple(map, prefix + "MessageId", this.MessageId);
             this.SetParamSimple(map, prefix + "Name", this.Name);

@@ -62,6 +62,20 @@ namespace TencentCloud.Bdrc.V20260330.Models
         [JsonProperty("COSAgent")]
         public ResourceProtectStat COSAgent{ get; set; }
 
+        /// <summary>
+        /// <p>非腾讯云虚拟机备份受保护统计</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalCVMAgent")]
+        public ResourceProtectStat LocalCVMAgent{ get; set; }
+
+        /// <summary>
+        /// <p>非腾讯云文件存储备份受保护统计</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalCFSAgent")]
+        public ResourceProtectStat LocalCFSAgent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +88,8 @@ namespace TencentCloud.Bdrc.V20260330.Models
             this.SetParamObj(map, prefix + "CFS.", this.CFS);
             this.SetParamObj(map, prefix + "CFSAgent.", this.CFSAgent);
             this.SetParamObj(map, prefix + "COSAgent.", this.COSAgent);
+            this.SetParamObj(map, prefix + "LocalCVMAgent.", this.LocalCVMAgent);
+            this.SetParamObj(map, prefix + "LocalCFSAgent.", this.LocalCFSAgent);
         }
     }
 }

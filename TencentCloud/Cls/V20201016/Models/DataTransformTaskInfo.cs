@@ -168,6 +168,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("EnvInfos")]
         public EnvInfo[] EnvInfos{ get; set; }
 
+        /// <summary>
+        /// <p>前置加工任务源主题、目标主题说明</p>
+        /// </summary>
+        [JsonProperty("Describe")]
+        public string Describe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ProcessToTimestamp", this.ProcessToTimestamp);
             this.SetParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
             this.SetParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
+            this.SetParamSimple(map, prefix + "Describe", this.Describe);
         }
     }
 }

@@ -42,6 +42,27 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("UsedCharSize")]
         public string UsedCharSize{ get; set; }
 
+        /// <summary>
+        /// <p>字符数</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CharacterSize")]
+        public CharacterSize CharacterSize{ get; set; }
+
+        /// <summary>
+        /// <p>容量</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ByteCapacity")]
+        public ByteCapacity ByteCapacity{ get; set; }
+
+        /// <summary>
+        /// <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CapacityStatus")]
+        public long? CapacityStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +72,9 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "MaxCharSize", this.MaxCharSize);
             this.SetParamSimple(map, prefix + "OverCharSize", this.OverCharSize);
             this.SetParamSimple(map, prefix + "UsedCharSize", this.UsedCharSize);
+            this.SetParamObj(map, prefix + "CharacterSize.", this.CharacterSize);
+            this.SetParamObj(map, prefix + "ByteCapacity.", this.ByteCapacity);
+            this.SetParamSimple(map, prefix + "CapacityStatus", this.CapacityStatus);
         }
     }
 }

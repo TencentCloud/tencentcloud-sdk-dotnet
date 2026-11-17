@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -2404,6 +2404,27 @@ namespace TencentCloud.Adp.V20260520
         public ModifyLabelResponse ModifyLabelSync(ModifyLabelRequest req)
         {
             return InternalRequestAsync<ModifyLabelResponse>(req, "ModifyLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改消息记录反馈
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMessageRecordFeedbackRequest"/></param>
+        /// <returns><see cref="ModifyMessageRecordFeedbackResponse"/></returns>
+        public Task<ModifyMessageRecordFeedbackResponse> ModifyMessageRecordFeedback(ModifyMessageRecordFeedbackRequest req)
+        {
+            return InternalRequestAsync<ModifyMessageRecordFeedbackResponse>(req, "ModifyMessageRecordFeedback");
+        }
+
+        /// <summary>
+        /// 修改消息记录反馈
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMessageRecordFeedbackRequest"/></param>
+        /// <returns><see cref="ModifyMessageRecordFeedbackResponse"/></returns>
+        public ModifyMessageRecordFeedbackResponse ModifyMessageRecordFeedbackSync(ModifyMessageRecordFeedbackRequest req)
+        {
+            return InternalRequestAsync<ModifyMessageRecordFeedbackResponse>(req, "ModifyMessageRecordFeedback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

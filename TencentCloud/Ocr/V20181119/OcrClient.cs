@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -100,6 +100,27 @@ namespace TencentCloud.Ocr.V20181119
         public ArithmeticOCRResponse ArithmeticOCRSync(ArithmeticOCRRequest req)
         {
             return InternalRequestAsync<ArithmeticOCRResponse>(req, "ArithmeticOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 针对业务流程中的卡证图片、场景图片等资料，提供分类、识别、比对、鉴伪等综合审核能力，可应用于商户审核、信贷审核等业务流程。一期先实现商户照片审核Agent，未来支持更多类型。
+        /// </summary>
+        /// <param name="req"><see cref="AuditMaterialAgentRequest"/></param>
+        /// <returns><see cref="AuditMaterialAgentResponse"/></returns>
+        public Task<AuditMaterialAgentResponse> AuditMaterialAgent(AuditMaterialAgentRequest req)
+        {
+            return InternalRequestAsync<AuditMaterialAgentResponse>(req, "AuditMaterialAgent");
+        }
+
+        /// <summary>
+        /// 针对业务流程中的卡证图片、场景图片等资料，提供分类、识别、比对、鉴伪等综合审核能力，可应用于商户审核、信贷审核等业务流程。一期先实现商户照片审核Agent，未来支持更多类型。
+        /// </summary>
+        /// <param name="req"><see cref="AuditMaterialAgentRequest"/></param>
+        /// <returns><see cref="AuditMaterialAgentResponse"/></returns>
+        public AuditMaterialAgentResponse AuditMaterialAgentSync(AuditMaterialAgentRequest req)
+        {
+            return InternalRequestAsync<AuditMaterialAgentResponse>(req, "AuditMaterialAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -323,7 +344,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 用于智能教育SuperAgent查询任务。基于业界领先的千亿参数多模态大模型，本智能教育SuperAgent提供全场景端到端的精准服务。系统内置涵盖**中文/英文作文批改**、**教辅试卷题库拆录**等核心Agent，并支持快速定制专属教育场景Agent，全面赋能教学与测评环节。
         /// 
         /// 默认接口请求并发限制：2次/分钟。
         /// </summary>
@@ -335,7 +356,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 用于智能教育SuperAgent查询任务。基于业界领先的千亿参数多模态大模型，本智能教育SuperAgent提供全场景端到端的精准服务。系统内置涵盖**中文/英文作文批改**、**教辅试卷题库拆录**等核心Agent，并支持快速定制专属教育场景Agent，全面赋能教学与测评环节。
         /// 
         /// 默认接口请求并发限制：2次/分钟。
         /// </summary>
@@ -348,7 +369,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用。
         /// 
         /// 创建任务接口文档地址[：https://cloud.tencent.com/document/product/866/139312](https://cloud.tencent.com/document/product/866/139312)
         /// 
@@ -362,7 +383,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用。
         /// 
         /// 创建任务接口文档地址[：https://cloud.tencent.com/document/product/866/139312](https://cloud.tencent.com/document/product/866/139312)
         /// 
@@ -1559,7 +1580,7 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 提供查询企业基本信息的能力。输入企业名称或统一社会信用代码，返回企业名称、统一社会信用代码、法定代表人、登记机关、经营期限、经营状态、经营范围、注册地址、主体类型、成立日期、核准日期、行政区划等企业登记信息。部分出参可能为空或无法查得，具体以实际查询结果为准。
-        /// 重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请联系商务或在线客服登记信息、开通服务。
+        /// 重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请[填写登记表申请开通服务](https://cloud.tencent.com/apply/p/du5vwoxm3fw)。
         /// </summary>
         /// <param name="req"><see cref="QueryEnterpriseBasicInfoRequest"/></param>
         /// <returns><see cref="QueryEnterpriseBasicInfoResponse"/></returns>
@@ -1570,7 +1591,7 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 提供查询企业基本信息的能力。输入企业名称或统一社会信用代码，返回企业名称、统一社会信用代码、法定代表人、登记机关、经营期限、经营状态、经营范围、注册地址、主体类型、成立日期、核准日期、行政区划等企业登记信息。部分出参可能为空或无法查得，具体以实际查询结果为准。
-        /// 重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请联系商务或在线客服登记信息、开通服务。
+        /// 重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请[填写登记表申请开通服务](https://cloud.tencent.com/apply/p/du5vwoxm3fw)。
         /// </summary>
         /// <param name="req"><see cref="QueryEnterpriseBasicInfoRequest"/></param>
         /// <returns><see cref="QueryEnterpriseBasicInfoResponse"/></returns>
@@ -2618,7 +2639,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 用于作文批改Agent提交任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 用于智能教育SuperAgent提交任务。基于业界领先的千亿参数多模态大模型，本智能教育SuperAgent提供全场景端到端的精准服务。系统内置涵盖**中文/英文作文批改**、**教辅试卷题库拆录**等核心Agent，并支持快速定制专属教育场景Agent，全面赋能教学与测评环节。
         /// 
         /// 默认接口请求并发限制：2次/分钟。
         /// </summary>
@@ -2630,7 +2651,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 用于作文批改Agent提交任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+        /// 用于智能教育SuperAgent提交任务。基于业界领先的千亿参数多模态大模型，本智能教育SuperAgent提供全场景端到端的精准服务。系统内置涵盖**中文/英文作文批改**、**教辅试卷题库拆录**等核心Agent，并支持快速定制专属教育场景Agent，全面赋能教学与测评环节。
         /// 
         /// 默认接口请求并发限制：2次/分钟。
         /// </summary>
@@ -2643,7 +2664,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用。
         /// 
         /// 查询任务接口文档地址[：https://cloud.tencent.com/document/product/866/139313](https://cloud.tencent.com/document/product/866/139313)
         /// 
@@ -2657,7 +2678,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+        /// 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用。
         /// 
         /// 查询任务接口文档地址[：https://cloud.tencent.com/document/product/866/139313](https://cloud.tencent.com/document/product/866/139313)
         /// 

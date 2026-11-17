@@ -84,6 +84,12 @@ namespace TencentCloud.Cvd.V20201104.Models
         [JsonProperty("BindStatus")]
         public bool? BindStatus{ get; set; }
 
+        /// <summary>
+        /// <p>用户登录锁定剩余时间</p>
+        /// </summary>
+        [JsonProperty("LockRemainMs")]
+        public long? LockRemainMs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Cvd.V20201104.Models
             this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "StrategyName", this.StrategyName);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
+            this.SetParamSimple(map, prefix + "LockRemainMs", this.LockRemainMs);
         }
     }
 }

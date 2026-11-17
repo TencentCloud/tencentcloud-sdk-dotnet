@@ -116,6 +116,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
 
+        /// <summary>
+        /// <p>快照完成时间</p>
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +143,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
             this.SetParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

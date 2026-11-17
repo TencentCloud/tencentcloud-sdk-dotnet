@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Category{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// BOT模块开关状态，传入'0'表示关闭，'1'表示开启
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

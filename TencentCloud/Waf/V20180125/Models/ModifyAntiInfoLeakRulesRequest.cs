@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Action 值
+        /// 防信息泄露动作类型，取值0~4
         /// </summary>
         [JsonProperty("ActionType")]
         public ulong? ActionType{ get; set; }

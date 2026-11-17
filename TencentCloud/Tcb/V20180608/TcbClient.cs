@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -1325,6 +1325,31 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询云开发域名访问限制配置，返回指定环境下公网、VPC、办公网三种来源的当前访问策略
+        /// （1）可以通过控制台调用查询域名访问控制。响应  Current 返回各来源（PUBLIC/VPC/WOA）当前生效的配置
+        /// （2）不产生写副作用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeEnvAccessControlResponse"/></returns>
+        public Task<DescribeEnvAccessControlResponse> DescribeEnvAccessControl(DescribeEnvAccessControlRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvAccessControlResponse>(req, "DescribeEnvAccessControl");
+        }
+
+        /// <summary>
+        /// 查询云开发域名访问限制配置，返回指定环境下公网、VPC、办公网三种来源的当前访问策略
+        /// （1）可以通过控制台调用查询域名访问控制。响应  Current 返回各来源（PUBLIC/VPC/WOA）当前生效的配置
+        /// （2）不产生写副作用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeEnvAccessControlResponse"/></returns>
+        public DescribeEnvAccessControlResponse DescribeEnvAccessControlSync(DescribeEnvAccessControlRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvAccessControlResponse>(req, "DescribeEnvAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询环境计费周期。
         /// 云开发环境的资源点都是按月结算的，每个月都有一定的抵扣额度。
         /// 
@@ -2410,6 +2435,35 @@ namespace TencentCloud.Tcb.V20180608
         public ModifyEnvResponse ModifyEnvSync(ModifyEnvRequest req)
         {
             return InternalRequestAsync<ModifyEnvResponse>(req, "ModifyEnv")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云开发域名访问限制配置
+        /// （1）影响指定环境下域名来源访问策略，包含公网与 VPC 白名单
+        /// （2）关闭公网访问后，云开发提供的默认域名在公网访问场景下返回403
+        /// （3）可以通过配置 VPC 白名单指定放通特定 VPC 来源的请求
+        /// （4）可以通过云开发控制台调用修改访问配置，修改后可通过查询接口核对生效配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnvAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyEnvAccessControlResponse"/></returns>
+        public Task<ModifyEnvAccessControlResponse> ModifyEnvAccessControl(ModifyEnvAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyEnvAccessControlResponse>(req, "ModifyEnvAccessControl");
+        }
+
+        /// <summary>
+        /// 云开发域名访问限制配置
+        /// （1）影响指定环境下域名来源访问策略，包含公网与 VPC 白名单
+        /// （2）关闭公网访问后，云开发提供的默认域名在公网访问场景下返回403
+        /// （3）可以通过配置 VPC 白名单指定放通特定 VPC 来源的请求
+        /// （4）可以通过云开发控制台调用修改访问配置，修改后可通过查询接口核对生效配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnvAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyEnvAccessControlResponse"/></returns>
+        public ModifyEnvAccessControlResponse ModifyEnvAccessControlSync(ModifyEnvAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyEnvAccessControlResponse>(req, "ModifyEnvAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

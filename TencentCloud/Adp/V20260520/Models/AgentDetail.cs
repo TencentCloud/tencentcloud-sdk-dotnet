@@ -78,6 +78,37 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("ExternalToolList")]
         public AgentExternalToolConfig[] ExternalToolList{ get; set; }
 
+        /// <summary>
+        /// <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+        /// </summary>
+        [JsonProperty("ProviderType")]
+        public long? ProviderType{ get; set; }
+
+        /// <summary>
+        /// <p>引用应用的ID</p>
+        /// </summary>
+        [JsonProperty("ReferenceAppId")]
+        public string ReferenceAppId{ get; set; }
+
+        /// <summary>
+        /// <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+        /// </summary>
+        [JsonProperty("ReferenceAppStatus")]
+        public long? ReferenceAppStatus{ get; set; }
+
+        /// <summary>
+        /// <p>引用应用详情，ProviderType=1 时返回</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReferenceApp")]
+        public ReferenceAppDetail ReferenceApp{ get; set; }
+
+        /// <summary>
+        /// <p>内置工具列表</p>
+        /// </summary>
+        [JsonProperty("BuiltinToolList")]
+        public AgentBuiltinTool[] BuiltinToolList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +124,11 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArrayObj(map, prefix + "SkillList.", this.SkillList);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
             this.SetParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
+            this.SetParamSimple(map, prefix + "ProviderType", this.ProviderType);
+            this.SetParamSimple(map, prefix + "ReferenceAppId", this.ReferenceAppId);
+            this.SetParamSimple(map, prefix + "ReferenceAppStatus", this.ReferenceAppStatus);
+            this.SetParamObj(map, prefix + "ReferenceApp.", this.ReferenceApp);
+            this.SetParamArrayObj(map, prefix + "BuiltinToolList.", this.BuiltinToolList);
         }
     }
 }

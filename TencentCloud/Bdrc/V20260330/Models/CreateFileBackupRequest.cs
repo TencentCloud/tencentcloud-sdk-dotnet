@@ -25,7 +25,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
     {
         
         /// <summary>
-        /// <p>资源ID列表</p>
+        /// <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// <p>备份路径列表，1~20 个</p>
+        /// <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
         /// </summary>
         [JsonProperty("BackupPaths")]
         public string[] BackupPaths{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Bdrc.V20260330.Models
         public string Deadline{ get; set; }
 
         /// <summary>
-        /// <p>备份名称</p>
+        /// <p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }

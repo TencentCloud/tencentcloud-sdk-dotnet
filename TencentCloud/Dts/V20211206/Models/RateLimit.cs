@@ -31,7 +31,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? DumpThread{ get; set; }
 
         /// <summary>
-        /// <p>全量导出Rps，如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
+        /// <p>全量导出Rps，如果不设置或设置为0则表示保持当前值，最大值为50000000。支持mysql系相关链路、mongodb链路。</p>
         /// </summary>
         [JsonProperty("DumpRps")]
         public long? DumpRps{ get; set; }
@@ -54,6 +54,36 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("SinkerThread")]
         public long? SinkerThread{ get; set; }
 
+        /// <summary>
+        /// <p>全量导入Bps（暂时只有redis产品生效），单位MB/s</p>
+        /// </summary>
+        [JsonProperty("LoadBps")]
+        public long? LoadBps{ get; set; }
+
+        /// <summary>
+        /// <p>目标库分片数，目前暂时只有redis用</p>
+        /// </summary>
+        [JsonProperty("DstShardCount")]
+        public long? DstShardCount{ get; set; }
+
+        /// <summary>
+        /// <p>全量导出Bps（pg链路及MongoDB链路使用。MongoDB上限80），单位MB/s</p>
+        /// </summary>
+        [JsonProperty("DumpBps")]
+        public long? DumpBps{ get; set; }
+
+        /// <summary>
+        /// <p>增量导入RPS限制，MongoDB专用。上限30000</p>
+        /// </summary>
+        [JsonProperty("SinkerRps")]
+        public long? SinkerRps{ get; set; }
+
+        /// <summary>
+        /// <p>增量导入BPS限制，单位MB/s，MongoDB专用。上限120</p>
+        /// </summary>
+        [JsonProperty("SinkerBps")]
+        public long? SinkerBps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "LoadThread", this.LoadThread);
             this.SetParamSimple(map, prefix + "LoadRps", this.LoadRps);
             this.SetParamSimple(map, prefix + "SinkerThread", this.SinkerThread);
+            this.SetParamSimple(map, prefix + "LoadBps", this.LoadBps);
+            this.SetParamSimple(map, prefix + "DstShardCount", this.DstShardCount);
+            this.SetParamSimple(map, prefix + "DumpBps", this.DumpBps);
+            this.SetParamSimple(map, prefix + "SinkerRps", this.SinkerRps);
+            this.SetParamSimple(map, prefix + "SinkerBps", this.SinkerBps);
         }
     }
 }

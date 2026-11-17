@@ -57,7 +57,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableDeepThink{ get; set; }
 
         /// <summary>
-        /// <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p>
+        /// <p>题目信息输出配置（默认快速模式只输出题目外层题目边框坐标、批改答案、手写答案坐标、答案分析、正确答案）</p><p>当key为QuickGradingEnabled value为false表示关闭快速模式（速度会变慢），新增输出手写作答、题干、插图坐标<br>当key为StepCorrection value为true表示启用步骤级批改（速度会变慢）；</p>
         /// </summary>
         [JsonProperty("QuestionConfigMap")]
         public string QuestionConfigMap{ get; set; }
@@ -66,6 +66,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <p>【废弃字段】</p>
         /// </summary>
         [JsonProperty("ReferenceAnswer")]
+        [System.Obsolete]
         public string ReferenceAnswer{ get; set; }
 
         /// <summary>
@@ -98,6 +99,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableImageCrop")]
         public bool? EnableImageCrop{ get; set; }
 
+        /// <summary>
+        /// <p>批改模型选择</p><p>枚举值：</p><ul><li>yuanbao_correction_model： 快速批改模型平均耗时8s。针对单题跨栏、多栏（≥2栏）排版及子题数超过 30 道的复杂算式场景，耗时约为快速批改模式的 2 倍+。</li><li>youtu_correction_model： 深度批改模型平均耗时12-30s。全场景支持,精度更高。</li></ul><p>默认值：yuanbao_correction_model</p>
+        /// </summary>
+        [JsonProperty("ModelType")]
+        public string ModelType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "AssistMarkType", this.AssistMarkType);
             this.SetParamSimple(map, prefix + "AnswerAssistMap", this.AnswerAssistMap);
             this.SetParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
+            this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
         }
     }
 }

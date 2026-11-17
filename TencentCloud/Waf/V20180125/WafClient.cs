@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1529";
+       private const string sdkVersion = "SDK_NET_3.0.1536";
 
         /// <summary>
         /// Client constructor.
@@ -2300,6 +2300,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询单实例、单日的按小时账单明细，包含账单预估总额、分项费用、分时趋势和分时明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMHourBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeLLMHourBillDetailResponse"/></returns>
+        public Task<DescribeLLMHourBillDetailResponse> DescribeLLMHourBillDetail(DescribeLLMHourBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMHourBillDetailResponse>(req, "DescribeLLMHourBillDetail");
+        }
+
+        /// <summary>
+        /// 查询单实例、单日的按小时账单明细，包含账单预估总额、分项费用、分时趋势和分时明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMHourBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeLLMHourBillDetailResponse"/></returns>
+        public DescribeLLMHourBillDetailResponse DescribeLLMHourBillDetailSync(DescribeLLMHourBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMHourBillDetailResponse>(req, "DescribeLLMHourBillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询关键词列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLLMKeywordLibraryRequest"/></param>
@@ -2380,6 +2401,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRulesSync(DescribeLLMWafProtectRulesRequest req)
         {
             return InternalRequestAsync<DescribeLLMWafProtectRulesResponse>(req, "DescribeLLMWafProtectRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 Tool Call 规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafToolCallRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafToolCallRulesResponse"/></returns>
+        public Task<DescribeLLMWafToolCallRulesResponse> DescribeLLMWafToolCallRules(DescribeLLMWafToolCallRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafToolCallRulesResponse>(req, "DescribeLLMWafToolCallRules");
+        }
+
+        /// <summary>
+        /// 查询 Tool Call 规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafToolCallRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafToolCallRulesResponse"/></returns>
+        public DescribeLLMWafToolCallRulesResponse DescribeLLMWafToolCallRulesSync(DescribeLLMWafToolCallRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafToolCallRulesResponse>(req, "DescribeLLMWafToolCallRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4326,6 +4368,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// llmwaf-sdk边界接入配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="ModifyLLMSdkAccessResponse"/></returns>
+        public Task<ModifyLLMSdkAccessResponse> ModifyLLMSdkAccess(ModifyLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMSdkAccessResponse>(req, "ModifyLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// llmwaf-sdk边界接入配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="ModifyLLMSdkAccessResponse"/></returns>
+        public ModifyLLMSdkAccessResponse ModifyLLMSdkAccessSync(ModifyLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMSdkAccessResponse>(req, "ModifyLLMSdkAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改大模型防护的模块开关状态，支持总开关及各子模块独立开关的开启/关闭操作。开启前需确保实例已购买大模型防护能力，未购买时开启操作会返回 AuthFailure.ErrCodeNoPurchased 错误。
         /// </summary>
         /// <param name="req"><see cref="ModifyLLMStatusRequest"/></param>
@@ -4385,6 +4448,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRuleSync(ModifyLLMWafProtectRuleRequest req)
         {
             return InternalRequestAsync<ModifyLLMWafProtectRuleResponse>(req, "ModifyLLMWafProtectRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 Tool Call 规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafToolCallRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafToolCallRuleResponse"/></returns>
+        public Task<ModifyLLMWafToolCallRuleResponse> ModifyLLMWafToolCallRule(ModifyLLMWafToolCallRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafToolCallRuleResponse>(req, "ModifyLLMWafToolCallRule");
+        }
+
+        /// <summary>
+        /// 修改 Tool Call 规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafToolCallRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafToolCallRuleResponse"/></returns>
+        public ModifyLLMWafToolCallRuleResponse ModifyLLMWafToolCallRuleSync(ModifyLLMWafToolCallRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafToolCallRuleResponse>(req, "ModifyLLMWafToolCallRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

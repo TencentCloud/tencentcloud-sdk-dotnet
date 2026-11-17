@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1535</VersionPrefix>
+    <VersionPrefix>3.0.1536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,7 @@
     <Compile Include="V20260715\Models\AsyncActionRsp.cs" />
     <Compile Include="V20260715\Models\AsyncOperation.cs" />
     <Compile Include="V20260715\Models\Audit.cs" />
+    <Compile Include="V20260715\Models\AutoMlConf.cs" />
     <Compile Include="V20260715\Models\BucketPartitioning.cs" />
     <Compile Include="V20260715\Models\Catalog.cs" />
     <Compile Include="V20260715\Models\ColumnBrief.cs" />
@@ -81,6 +82,9 @@
     <Compile Include="V20260715\Models\CreateConsoleGroupRequest.cs" />
     <Compile Include="V20260715\Models\CreateConsoleGroupResponse.cs" />
     <Compile Include="V20260715\Models\CreateConsoleGroupRsp.cs" />
+    <Compile Include="V20260715\Models\CreateExperimentRequest.cs" />
+    <Compile Include="V20260715\Models\CreateExperimentResponse.cs" />
+    <Compile Include="V20260715\Models\CreateExperimentRsp.cs" />
     <Compile Include="V20260715\Models\CreateFileRequest.cs" />
     <Compile Include="V20260715\Models\CreateFileResponse.cs" />
     <Compile Include="V20260715\Models\CreateFolderRequest.cs" />
@@ -154,6 +158,8 @@
     <Compile Include="V20260715\Models\DependOnBrief.cs" />
     <Compile Include="V20260715\Models\DictDimensionInfo.cs" />
     <Compile Include="V20260715\Models\DictItem.cs" />
+    <Compile Include="V20260715\Models\ExperimentTag.cs" />
+    <Compile Include="V20260715\Models\FeatureLookup.cs" />
     <Compile Include="V20260715\Models\FeatureTable.cs" />
     <Compile Include="V20260715\Models\FeatureTableDetail.cs" />
     <Compile Include="V20260715\Models\FetchOption.cs" />
@@ -173,6 +179,9 @@
     <Compile Include="V20260715\Models\GetCatalogRequest.cs" />
     <Compile Include="V20260715\Models\GetCatalogResponse.cs" />
     <Compile Include="V20260715\Models\GetCatalogRsp.cs" />
+    <Compile Include="V20260715\Models\GetFileContentRequest.cs" />
+    <Compile Include="V20260715\Models\GetFileContentResponse.cs" />
+    <Compile Include="V20260715\Models\GetFileContentRsp.cs" />
     <Compile Include="V20260715\Models\GetFileRequest.cs" />
     <Compile Include="V20260715\Models\GetFileResponse.cs" />
     <Compile Include="V20260715\Models\GetFolderRequest.cs" />
@@ -230,6 +239,7 @@
     <Compile Include="V20260715\Models\KVPair.cs" />
     <Compile Include="V20260715\Models\KillWorkflowRunRequest.cs" />
     <Compile Include="V20260715\Models\KillWorkflowRunResponse.cs" />
+    <Compile Include="V20260715\Models\Label.cs" />
     <Compile Include="V20260715\Models\LabelBrief.cs" />
     <Compile Include="V20260715\Models\ListCatalogNamesRequest.cs" />
     <Compile Include="V20260715\Models\ListCatalogNamesResponse.cs" />
@@ -375,6 +385,7 @@
     <Compile Include="V20260715\Models\TaskType.cs" />
     <Compile Include="V20260715\Models\TaskTypeNotebookExt.cs" />
     <Compile Include="V20260715\Models\TaskTypeProperty.cs" />
+    <Compile Include="V20260715\Models\TrainingData.cs" />
     <Compile Include="V20260715\Models\TruncatePartitioning.cs" />
     <Compile Include="V20260715\Models\UnbindWorkflowBundleRequest.cs" />
     <Compile Include="V20260715\Models\UnbindWorkflowBundleResponse.cs" />

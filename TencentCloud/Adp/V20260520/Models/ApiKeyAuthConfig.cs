@@ -25,28 +25,28 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 密钥位置 HEADER/QUERY
-        /// 
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | Header鉴权 |
-        /// | 1 | Query鉴权 |
+        /// <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
         /// </summary>
         [JsonProperty("KeyLocation")]
         public long? KeyLocation{ get; set; }
 
         /// <summary>
-        /// 密钥参数名
+        /// <p>密钥参数名</p>
         /// </summary>
         [JsonProperty("KeyParamName")]
         public string KeyParamName{ get; set; }
 
         /// <summary>
-        /// 密钥参数值
+        /// <p>密钥参数值</p>
         /// </summary>
         [JsonProperty("KeyParamValue")]
         public string KeyParamValue{ get; set; }
+
+        /// <summary>
+        /// <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
+        /// </summary>
+        [JsonProperty("KeyValueUsage")]
+        public long? KeyValueUsage{ get; set; }
 
 
         /// <summary>
@@ -57,6 +57,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "KeyLocation", this.KeyLocation);
             this.SetParamSimple(map, prefix + "KeyParamName", this.KeyParamName);
             this.SetParamSimple(map, prefix + "KeyParamValue", this.KeyParamValue);
+            this.SetParamSimple(map, prefix + "KeyValueUsage", this.KeyValueUsage);
         }
     }
 }

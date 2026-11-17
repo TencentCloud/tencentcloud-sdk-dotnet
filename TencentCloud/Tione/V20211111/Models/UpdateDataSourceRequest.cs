@@ -31,28 +31,34 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TiProjectId{ get; set; }
 
         /// <summary>
-        /// 数据源ID
+        /// <p>数据源ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 数据源名称
+        /// <p>数据源名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数据源权限，取值有RW RO
+        /// <p>数据源权限，取值有RW RO</p>
         /// </summary>
         [JsonProperty("Permission")]
         public string Permission{ get; set; }
 
         /// <summary>
-        /// 数据源挂载配置
+        /// <p>数据源挂载配置</p>
         /// </summary>
         [JsonProperty("MountConfigure")]
         public MountConfigureInfo MountConfigure{ get; set; }
+
+        /// <summary>
+        /// <p>挂载数据源时默认填充的容器内路径</p>
+        /// </summary>
+        [JsonProperty("ContainerPath")]
+        public string ContainerPath{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
             this.SetParamObj(map, prefix + "MountConfigure.", this.MountConfigure);
+            this.SetParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
         }
     }
 }

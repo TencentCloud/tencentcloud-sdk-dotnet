@@ -25,36 +25,46 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 云原生API网关实例ID。
+        /// <p>云原生API网关实例ID。</p>
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 分组id
+        /// <p>分组id</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 网络类型： 
-        /// - Open 公网
-        /// - Internal 内网	（暂不支持）
+        /// <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// ip地址
+        /// <p>ip地址</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 访问控制策略
+        /// <p>访问控制策略</p>
         /// </summary>
         [JsonProperty("AccessControl")]
         public NetworkAccessControl AccessControl{ get; set; }
+
+        /// <summary>
+        /// <p>GlobalConfig / Custom；不传默认 Custom</p>
+        /// </summary>
+        [JsonProperty("AccessControlSource")]
+        public string AccessControlSource{ get; set; }
+
+        /// <summary>
+        /// <p>全局配置ID</p>
+        /// </summary>
+        [JsonProperty("GlobalConfigId")]
+        public string GlobalConfigId{ get; set; }
 
 
         /// <summary>
@@ -67,6 +77,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamObj(map, prefix + "AccessControl.", this.AccessControl);
+            this.SetParamSimple(map, prefix + "AccessControlSource", this.AccessControlSource);
+            this.SetParamSimple(map, prefix + "GlobalConfigId", this.GlobalConfigId);
         }
     }
 }

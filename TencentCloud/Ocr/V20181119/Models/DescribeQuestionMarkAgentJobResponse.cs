@@ -52,6 +52,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
         /// </summary>
         [JsonProperty("MarkInfos")]
+        [System.Obsolete]
         public MarkInfo[] MarkInfos{ get; set; }
 
         /// <summary>
