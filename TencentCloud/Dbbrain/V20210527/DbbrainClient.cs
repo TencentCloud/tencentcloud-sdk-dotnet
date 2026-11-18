@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1537";
 
         /// <summary>
         /// Client constructor.
@@ -1184,6 +1184,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeIndexRecommendInfoResponse DescribeIndexRecommendInfoSync(DescribeIndexRecommendInfoRequest req)
         {
             return InternalRequestAsync<DescribeIndexRecommendInfoResponse>(req, "DescribeIndexRecommendInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询接口加密 RSA 公钥，前端用于加密敏感数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInterfaceEncryptKeyV2Request"/></param>
+        /// <returns><see cref="DescribeInterfaceEncryptKeyV2Response"/></returns>
+        public Task<DescribeInterfaceEncryptKeyV2Response> DescribeInterfaceEncryptKeyV2(DescribeInterfaceEncryptKeyV2Request req)
+        {
+            return InternalRequestAsync<DescribeInterfaceEncryptKeyV2Response>(req, "DescribeInterfaceEncryptKeyV2");
+        }
+
+        /// <summary>
+        /// 查询接口加密 RSA 公钥，前端用于加密敏感数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInterfaceEncryptKeyV2Request"/></param>
+        /// <returns><see cref="DescribeInterfaceEncryptKeyV2Response"/></returns>
+        public DescribeInterfaceEncryptKeyV2Response DescribeInterfaceEncryptKeyV2Sync(DescribeInterfaceEncryptKeyV2Request req)
+        {
+            return InternalRequestAsync<DescribeInterfaceEncryptKeyV2Response>(req, "DescribeInterfaceEncryptKeyV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

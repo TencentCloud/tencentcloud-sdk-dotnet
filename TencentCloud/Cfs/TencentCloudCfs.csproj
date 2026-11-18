@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BC6405B5-6B40-3410-9D43-1965C0DAEE4C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1536</VersionPrefix>
+    <VersionPrefix>3.0.1537</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20190719\CfsClient.cs" />
     <Compile Include="V20190719\Models\ApplyPathLifecyclePolicyRequest.cs" />
     <Compile Include="V20190719\Models\ApplyPathLifecyclePolicyResponse.cs" />
+    <Compile Include="V20190719\Models\AutoDeletePolicy.cs" />
     <Compile Include="V20190719\Models\AutoScaleUpRule.cs" />
     <Compile Include="V20190719\Models\AutoSnapshotPolicyInfo.cs" />
     <Compile Include="V20190719\Models\AvailableProtoStatus.cs" />
@@ -62,6 +63,8 @@
     <Compile Include="V20190719\Models\CheckResult.cs" />
     <Compile Include="V20190719\Models\CreateAccessCertRequest.cs" />
     <Compile Include="V20190719\Models\CreateAccessCertResponse.cs" />
+    <Compile Include="V20190719\Models\CreateAutoDeletePolicyRequest.cs" />
+    <Compile Include="V20190719\Models\CreateAutoDeletePolicyResponse.cs" />
     <Compile Include="V20190719\Models\CreateAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20190719\Models\CreateAutoSnapshotPolicyResponse.cs" />
     <Compile Include="V20190719\Models\CreateCfsFileSystemRequest.cs" />
@@ -87,6 +90,8 @@
     <Compile Include="V20190719\Models\DataFlowInfo.cs" />
     <Compile Include="V20190719\Models\DataRetrievalInfo.cs" />
     <Compile Include="V20190719\Models\DataRetrievalTaskInfo.cs" />
+    <Compile Include="V20190719\Models\DeleteAutoDeletePolicyRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteAutoDeletePolicyResponse.cs" />
     <Compile Include="V20190719\Models\DeleteAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20190719\Models\DeleteAutoSnapshotPolicyResponse.cs" />
     <Compile Include="V20190719\Models\DeleteCfsFileSystemRequest.cs" />
@@ -107,6 +112,8 @@
     <Compile Include="V20190719\Models\DeleteMigrationTaskResponse.cs" />
     <Compile Include="V20190719\Models\DeleteUserQuotaRequest.cs" />
     <Compile Include="V20190719\Models\DeleteUserQuotaResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeAutoDeletePoliciesRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeAutoDeletePoliciesResponse.cs" />
     <Compile Include="V20190719\Models\DescribeAutoSnapshotPoliciesRequest.cs" />
     <Compile Include="V20190719\Models\DescribeAutoSnapshotPoliciesResponse.cs" />
     <Compile Include="V20190719\Models\DescribeAvailableZoneInfoRequest.cs" />
@@ -157,6 +164,8 @@
     <Compile Include="V20190719\Models\LifecyclePolicy.cs" />
     <Compile Include="V20190719\Models\LifecycleRule.cs" />
     <Compile Include="V20190719\Models\MigrationTaskInfo.cs" />
+    <Compile Include="V20190719\Models\ModifyAutoDeletePolicyRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyAutoDeletePolicyResponse.cs" />
     <Compile Include="V20190719\Models\ModifyDataFlowRequest.cs" />
     <Compile Include="V20190719\Models\ModifyDataFlowResponse.cs" />
     <Compile Include="V20190719\Models\ModifyDataRetrievalRequest.cs" />

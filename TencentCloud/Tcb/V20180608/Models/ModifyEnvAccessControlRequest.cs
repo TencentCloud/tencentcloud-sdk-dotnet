@@ -24,12 +24,26 @@ namespace TencentCloud.Tcb.V20180608.Models
     public class ModifyEnvAccessControlRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>环境id</p>
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
+        /// <p>本次要设置的来源集合</p><p>入参限制：SourceType = PUBLIC 时，标识操作公网开关<br>SourceType = VPC 时，通过配置 VPCWhiteList，开启/关闭 VPC 白名单<br>SourceType = WOA 时，通过配置 WOAAuth，开启/关闭鉴权校验，开启鉴权时，AuthToken 字段为填</p>
+        /// </summary>
+        [JsonProperty("Sources")]
+        public AccessSourceSetting[] Sources{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamArrayObj(map, prefix + "Sources.", this.Sources);
         }
     }
 }

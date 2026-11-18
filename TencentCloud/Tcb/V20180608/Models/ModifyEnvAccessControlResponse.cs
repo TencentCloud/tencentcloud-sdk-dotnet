@@ -25,6 +25,18 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
+        /// <p>本次请求影响的权限数量</p>
+        /// </summary>
+        [JsonProperty("AffectedRows")]
+        public long? AffectedRows{ get; set; }
+
+        /// <summary>
+        /// <p>修改之后，当前的生效的配置</p><p>SourceType = PUBLIC 表示公网链路访问配置<br>SourceType = VPC 表示 VPC 链路访问配置<br>SourceType = WOA 表示办公网链路访问配置</p>
+        /// </summary>
+        [JsonProperty("Current")]
+        public AccessSourceSetting[] Current{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AffectedRows", this.AffectedRows);
+            this.SetParamArrayObj(map, prefix + "Current.", this.Current);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

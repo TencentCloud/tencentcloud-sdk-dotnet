@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1537";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Cfs.V20190719
         public CreateAccessCertResponse CreateAccessCertSync(CreateAccessCertRequest req)
         {
             return InternalRequestAsync<CreateAccessCertResponse>(req, "CreateAccessCert")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为指定 CFS 文件系统创建一条数据自动删除策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="CreateAutoDeletePolicyResponse"/></returns>
+        public Task<CreateAutoDeletePolicyResponse> CreateAutoDeletePolicy(CreateAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoDeletePolicyResponse>(req, "CreateAutoDeletePolicy");
+        }
+
+        /// <summary>
+        /// 为指定 CFS 文件系统创建一条数据自动删除策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="CreateAutoDeletePolicyResponse"/></returns>
+        public CreateAutoDeletePolicyResponse CreateAutoDeletePolicySync(CreateAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoDeletePolicyResponse>(req, "CreateAutoDeletePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +369,27 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 删除指定自动删除策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="DeleteAutoDeletePolicyResponse"/></returns>
+        public Task<DeleteAutoDeletePolicyResponse> DeleteAutoDeletePolicy(DeleteAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoDeletePolicyResponse>(req, "DeleteAutoDeletePolicy");
+        }
+
+        /// <summary>
+        /// 删除指定自动删除策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="DeleteAutoDeletePolicyResponse"/></returns>
+        public DeleteAutoDeletePolicyResponse DeleteAutoDeletePolicySync(DeleteAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoDeletePolicyResponse>(req, "DeleteAutoDeletePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除快照定期策略
         /// </summary>
         /// <param name="req"><see cref="DeleteAutoSnapshotPolicyRequest"/></param>
@@ -558,6 +600,27 @@ namespace TencentCloud.Cfs.V20190719
         public DeleteUserQuotaResponse DeleteUserQuotaSync(DeleteUserQuotaRequest req)
         {
             return InternalRequestAsync<DeleteUserQuotaResponse>(req, "DeleteUserQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据自动删除策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoDeletePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAutoDeletePoliciesResponse"/></returns>
+        public Task<DescribeAutoDeletePoliciesResponse> DescribeAutoDeletePolicies(DescribeAutoDeletePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoDeletePoliciesResponse>(req, "DescribeAutoDeletePolicies");
+        }
+
+        /// <summary>
+        /// 查询数据自动删除策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoDeletePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAutoDeletePoliciesResponse"/></returns>
+        public DescribeAutoDeletePoliciesResponse DescribeAutoDeletePoliciesSync(DescribeAutoDeletePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoDeletePoliciesResponse>(req, "DescribeAutoDeletePolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -984,6 +1047,27 @@ namespace TencentCloud.Cfs.V20190719
         public DoDirectoryOperationResponse DoDirectoryOperationSync(DoDirectoryOperationRequest req)
         {
             return InternalRequestAsync<DoDirectoryOperationResponse>(req, "DoDirectoryOperation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改自动删除策略名称或清理路径
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="ModifyAutoDeletePolicyResponse"/></returns>
+        public Task<ModifyAutoDeletePolicyResponse> ModifyAutoDeletePolicy(ModifyAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoDeletePolicyResponse>(req, "ModifyAutoDeletePolicy");
+        }
+
+        /// <summary>
+        /// 修改自动删除策略名称或清理路径
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="ModifyAutoDeletePolicyResponse"/></returns>
+        public ModifyAutoDeletePolicyResponse ModifyAutoDeletePolicySync(ModifyAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoDeletePolicyResponse>(req, "ModifyAutoDeletePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

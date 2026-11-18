@@ -390,6 +390,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StorageAutoExpand")]
         public string StorageAutoExpand{ get; set; }
 
+        /// <summary>
+        /// <p>是否在秒级回档链路中</p>
+        /// </summary>
+        [JsonProperty("IsInInstantRollbackChain")]
+        public bool? IsInInstantRollbackChain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -457,6 +463,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
             this.SetParamSimple(map, prefix + "StorageOverUse", this.StorageOverUse);
             this.SetParamSimple(map, prefix + "StorageAutoExpand", this.StorageAutoExpand);
+            this.SetParamSimple(map, prefix + "IsInInstantRollbackChain", this.IsInInstantRollbackChain);
         }
     }
 }

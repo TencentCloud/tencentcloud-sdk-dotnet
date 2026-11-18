@@ -28,7 +28,7 @@ namespace TencentCloud.Car.V20220110
 
        private const string endpoint = "car.tencentcloudapi.com";
        private const string version = "2022-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1537";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// 创建 MCP Token（签发令牌）
+        /// </summary>
+        /// <param name="req"><see cref="CreateMCPTokenRequest"/></param>
+        /// <returns><see cref="CreateMCPTokenResponse"/></returns>
+        public Task<CreateMCPTokenResponse> CreateMCPToken(CreateMCPTokenRequest req)
+        {
+            return InternalRequestAsync<CreateMCPTokenResponse>(req, "CreateMCPToken");
+        }
+
+        /// <summary>
+        /// 创建 MCP Token（签发令牌）
+        /// </summary>
+        /// <param name="req"><see cref="CreateMCPTokenRequest"/></param>
+        /// <returns><see cref="CreateMCPTokenResponse"/></returns>
+        public CreateMCPTokenResponse CreateMCPTokenSync(CreateMCPTokenRequest req)
+        {
+            return InternalRequestAsync<CreateMCPTokenResponse>(req, "CreateMCPToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于创建会话。接口超时时间：5秒。
         /// </summary>
         /// <param name="req"><see cref="CreateSessionRequest"/></param>
@@ -117,6 +138,27 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// 查询 MCP Token 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTokensRequest"/></param>
+        /// <returns><see cref="DescribeMCPTokensResponse"/></returns>
+        public Task<DescribeMCPTokensResponse> DescribeMCPTokens(DescribeMCPTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTokensResponse>(req, "DescribeMCPTokens");
+        }
+
+        /// <summary>
+        /// 查询 MCP Token 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTokensRequest"/></param>
+        /// <returns><see cref="DescribeMCPTokensResponse"/></returns>
+        public DescribeMCPTokensResponse DescribeMCPTokensSync(DescribeMCPTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTokensResponse>(req, "DescribeMCPTokens")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 销毁会话。如果该会话开启了云端推流，那么销毁会话时会结束云端推流。
         /// </summary>
         /// <param name="req"><see cref="DestroySessionRequest"/></param>
@@ -134,6 +176,27 @@ namespace TencentCloud.Car.V20220110
         public DestroySessionResponse DestroySessionSync(DestroySessionRequest req)
         {
             return InternalRequestAsync<DestroySessionResponse>(req, "DestroySession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 续期 MCP Token（续期令牌）
+        /// </summary>
+        /// <param name="req"><see cref="RenewMCPTokenRequest"/></param>
+        /// <returns><see cref="RenewMCPTokenResponse"/></returns>
+        public Task<RenewMCPTokenResponse> RenewMCPToken(RenewMCPTokenRequest req)
+        {
+            return InternalRequestAsync<RenewMCPTokenResponse>(req, "RenewMCPToken");
+        }
+
+        /// <summary>
+        /// 续期 MCP Token（续期令牌）
+        /// </summary>
+        /// <param name="req"><see cref="RenewMCPTokenRequest"/></param>
+        /// <returns><see cref="RenewMCPTokenResponse"/></returns>
+        public RenewMCPTokenResponse RenewMCPTokenSync(RenewMCPTokenRequest req)
+        {
+            return InternalRequestAsync<RenewMCPTokenResponse>(req, "RenewMCPToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

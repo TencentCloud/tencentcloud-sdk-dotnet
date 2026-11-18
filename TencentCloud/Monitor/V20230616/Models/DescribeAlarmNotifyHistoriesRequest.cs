@@ -72,6 +72,24 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("NotifyId")]
         public string NotifyId{ get; set; }
 
+        /// <summary>
+        /// <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+        /// </summary>
+        [JsonProperty("ChannelNames")]
+        public string[] ChannelNames{ get; set; }
+
+        /// <summary>
+        /// <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+        /// </summary>
+        [JsonProperty("PolicyIds")]
+        public string[] PolicyIds{ get; set; }
+
+        /// <summary>
+        /// <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
+        /// </summary>
+        [JsonProperty("NoticeIds")]
+        public string[] NoticeIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Monitor.V20230616.Models
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "NotifyId", this.NotifyId);
+            this.SetParamArraySimple(map, prefix + "ChannelNames.", this.ChannelNames);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         }
     }
 }

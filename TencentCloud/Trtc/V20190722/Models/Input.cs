@@ -42,6 +42,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("AgoraParam")]
         public AgoraParam AgoraParam{ get; set; }
 
+        /// <summary>
+        /// <p>网易云信(NERTC)频道拉流参数</p>
+        /// </summary>
+        [JsonProperty("NeteaseParam")]
+        public NeteaseParam NeteaseParam{ get; set; }
+
+        /// <summary>
+        /// <p>火山(Volc)房间拉流参数</p>
+        /// </summary>
+        [JsonProperty("VolcParam")]
+        public VolcParam VolcParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamObj(map, prefix + "AgoraParam.", this.AgoraParam);
+            this.SetParamObj(map, prefix + "NeteaseParam.", this.NeteaseParam);
+            this.SetParamObj(map, prefix + "VolcParam.", this.VolcParam);
         }
     }
 }

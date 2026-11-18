@@ -28,7 +28,7 @@ namespace TencentCloud.Captcha.V20190722
 
        private const string endpoint = "captcha.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1508";
+       private const string sdkVersion = "SDK_NET_3.0.1537";
 
         /// <summary>
         /// Client constructor.
@@ -180,7 +180,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码票据结果(小程序插件)
+        /// 核查验证码票据结果(小程序插件），包含微信小程序和支付宝小程序。
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码票据结果(小程序插件)
+        /// 核查验证码票据结果(小程序插件），包含微信小程序和支付宝小程序。
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>

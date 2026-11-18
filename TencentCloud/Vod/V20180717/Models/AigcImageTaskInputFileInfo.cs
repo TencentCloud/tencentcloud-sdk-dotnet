@@ -60,6 +60,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }
 
+        /// <summary>
+        /// <p>自定义 Id，一般用于在 Prompt 中引用参考图片。</p>
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Base64", this.Base64);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

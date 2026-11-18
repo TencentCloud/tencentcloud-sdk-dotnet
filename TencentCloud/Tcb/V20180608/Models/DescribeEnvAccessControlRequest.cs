@@ -24,12 +24,19 @@ namespace TencentCloud.Tcb.V20180608.Models
     public class DescribeEnvAccessControlRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>环境id</p>
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
         }
     }
 }
