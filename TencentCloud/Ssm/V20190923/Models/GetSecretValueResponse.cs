@@ -25,27 +25,25 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 凭据的名称。
+        /// <p>凭据的名称。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 该凭据对应的版本号。
+        /// <p>该凭据对应的版本号。</p>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
-        /// SecretBinary和SecretString只有一个不为空。
+        /// <p>在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。<br>SecretBinary和SecretString只有一个不为空。</p>
         /// </summary>
         [JsonProperty("SecretBinary")]
         public string SecretBinary{ get; set; }
 
         /// <summary>
-        /// 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
-        /// SecretBinary和SecretString只有一个不为空。
+        /// <p>在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。<br>SecretBinary和SecretString只有一个不为空。</p>
         /// </summary>
         [JsonProperty("SecretString")]
         public string SecretString{ get; set; }

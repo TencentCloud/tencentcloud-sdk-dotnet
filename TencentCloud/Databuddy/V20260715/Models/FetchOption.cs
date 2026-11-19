@@ -72,6 +72,12 @@ namespace TencentCloud.Databuddy.V20260715.Models
         [JsonProperty("FetchDimensions")]
         public bool? FetchDimensions{ get; set; }
 
+        /// <summary>
+        /// <p>是否获取tclake表的snapshots文件信息（文件大小、文件数量、最后修改时间）<br>各接口默认行为不同：</p><ul><li>GetTable：不传或未设置时默认获取（true），显式传 false 时跳过</li><li>GetTables：不传或未设置时默认不获取（false），显式传 true 时获取；获取会显著增加接口耗时</li></ul>
+        /// </summary>
+        [JsonProperty("FetchTableFilesInfo")]
+        public bool? FetchTableFilesInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Databuddy.V20260715.Models
             this.SetParamSimple(map, prefix + "FetchMask", this.FetchMask);
             this.SetParamSimple(map, prefix + "FetchTags", this.FetchTags);
             this.SetParamSimple(map, prefix + "FetchDimensions", this.FetchDimensions);
+            this.SetParamSimple(map, prefix + "FetchTableFilesInfo", this.FetchTableFilesInfo);
         }
     }
 }

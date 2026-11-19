@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1537";
+       private const string sdkVersion = "SDK_NET_3.0.1538";
 
         /// <summary>
         /// Client constructor.
@@ -806,6 +806,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CreateProxyEndPointResponse CreateProxyEndPointSync(CreateProxyEndPointRequest req)
         {
             return InternalRequestAsync<CreateProxyEndPointResponse>(req, "CreateProxyEndPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateProxyEndPoints）用于批量创建数据库代理连接点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateProxyEndPointsRequest"/></param>
+        /// <returns><see cref="CreateProxyEndPointsResponse"/></returns>
+        public Task<CreateProxyEndPointsResponse> CreateProxyEndPoints(CreateProxyEndPointsRequest req)
+        {
+            return InternalRequestAsync<CreateProxyEndPointsResponse>(req, "CreateProxyEndPoints");
+        }
+
+        /// <summary>
+        /// 本接口（CreateProxyEndPoints）用于批量创建数据库代理连接点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateProxyEndPointsRequest"/></param>
+        /// <returns><see cref="CreateProxyEndPointsResponse"/></returns>
+        public CreateProxyEndPointsResponse CreateProxyEndPointsSync(CreateProxyEndPointsRequest req)
+        {
+            return InternalRequestAsync<CreateProxyEndPointsResponse>(req, "CreateProxyEndPoints")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

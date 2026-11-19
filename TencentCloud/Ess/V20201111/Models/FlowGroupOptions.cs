@@ -96,6 +96,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("PreviewAfterStart")]
         public bool? PreviewAfterStart{ get; set; }
 
+        /// <summary>
+        /// <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+        /// </summary>
+        [JsonProperty("SignComponentLimits")]
+        public EmbedSignComponentLimit[] SignComponentLimits{ get; set; }
+
+        /// <summary>
+        /// <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+        /// </summary>
+        [JsonProperty("HideOperationSteps")]
+        public ulong?[] HideOperationSteps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
             this.SetParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
             this.SetParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
+            this.SetParamArrayObj(map, prefix + "SignComponentLimits.", this.SignComponentLimits);
+            this.SetParamArraySimple(map, prefix + "HideOperationSteps.", this.HideOperationSteps);
         }
     }
 }

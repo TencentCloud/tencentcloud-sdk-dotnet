@@ -72,6 +72,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
+        /// <summary>
+        /// <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+        /// </summary>
+        [JsonProperty("EnableTableCellCoord")]
+        public bool? EnableTableCellCoord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);
             this.SetParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "EnableTableCellCoord", this.EnableTableCellCoord);
         }
     }
 }

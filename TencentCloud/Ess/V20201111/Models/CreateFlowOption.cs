@@ -175,6 +175,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CcInfoVisibility")]
         public long? CcInfoVisibility{ get; set; }
 
+        /// <summary>
+        /// <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+        /// </summary>
+        [JsonProperty("SignComponentLimits")]
+        public EmbedSignComponentLimit[] SignComponentLimits{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +212,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
             this.SetParamSimple(map, prefix + "NeedFlowDraft", this.NeedFlowDraft);
             this.SetParamSimple(map, prefix + "CcInfoVisibility", this.CcInfoVisibility);
+            this.SetParamArrayObj(map, prefix + "SignComponentLimits.", this.SignComponentLimits);
         }
     }
 }

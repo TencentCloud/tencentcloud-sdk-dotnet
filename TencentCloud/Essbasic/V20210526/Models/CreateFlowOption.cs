@@ -103,7 +103,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? SignAfterStart{ get; set; }
 
         /// <summary>
-        /// <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+        /// <p>隐藏操作步骤: 具体类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
         /// </summary>
         [JsonProperty("HideOperationSteps")]
         public ulong?[] HideOperationSteps{ get; set; }
@@ -162,6 +162,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CcInfoVisibility")]
         public long? CcInfoVisibility{ get; set; }
 
+        /// <summary>
+        /// <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+        /// </summary>
+        [JsonProperty("SignComponentLimits")]
+        public EmbedSignComponentLimit[] SignComponentLimits{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ForbidEditFlowProperties", this.ForbidEditFlowProperties);
             this.SetParamObj(map, prefix + "ResultPageConfig.", this.ResultPageConfig);
             this.SetParamSimple(map, prefix + "CcInfoVisibility", this.CcInfoVisibility);
+            this.SetParamArrayObj(map, prefix + "SignComponentLimits.", this.SignComponentLimits);
         }
     }
 }

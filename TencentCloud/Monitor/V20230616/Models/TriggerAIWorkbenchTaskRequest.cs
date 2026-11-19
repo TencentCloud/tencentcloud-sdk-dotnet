@@ -30,6 +30,24 @@ namespace TencentCloud.Monitor.V20230616.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// <p>session会话ID</p>
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// <p>输入内容</p>
+        /// </summary>
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
+
+        /// <summary>
+        /// <p>幂等键，调用方保证同一事件重试时携带同一 key</p>
+        /// </summary>
+        [JsonProperty("IdempotencyKey")]
+        public string IdempotencyKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Monitor.V20230616.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "IdempotencyKey", this.IdempotencyKey);
         }
     }
 }

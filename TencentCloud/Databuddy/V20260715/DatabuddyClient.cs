@@ -28,7 +28,7 @@ namespace TencentCloud.Databuddy.V20260715
 
        private const string endpoint = "databuddy.tencentcloudapi.com";
        private const string version = "2026-07-15";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1538";
 
         /// <summary>
         /// Client constructor.
@@ -1345,6 +1345,27 @@ namespace TencentCloud.Databuddy.V20260715
         public ListModelsResponse ListModelsSync(ListModelsRequest req)
         {
             return InternalRequestAsync<ListModelsResponse>(req, "ListModels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询工作空间下的定时任务列表；支持按 SessionType、AnalysisSpaceId、TaskName 过滤。返回内容包含任务的完整详情，含 SkillIds 与 MCPIds。
+        /// </summary>
+        /// <param name="req"><see cref="ListScheduledTasksRequest"/></param>
+        /// <returns><see cref="ListScheduledTasksResponse"/></returns>
+        public Task<ListScheduledTasksResponse> ListScheduledTasks(ListScheduledTasksRequest req)
+        {
+            return InternalRequestAsync<ListScheduledTasksResponse>(req, "ListScheduledTasks");
+        }
+
+        /// <summary>
+        /// 分页查询工作空间下的定时任务列表；支持按 SessionType、AnalysisSpaceId、TaskName 过滤。返回内容包含任务的完整详情，含 SkillIds 与 MCPIds。
+        /// </summary>
+        /// <param name="req"><see cref="ListScheduledTasksRequest"/></param>
+        /// <returns><see cref="ListScheduledTasksResponse"/></returns>
+        public ListScheduledTasksResponse ListScheduledTasksSync(ListScheduledTasksRequest req)
+        {
+            return InternalRequestAsync<ListScheduledTasksResponse>(req, "ListScheduledTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

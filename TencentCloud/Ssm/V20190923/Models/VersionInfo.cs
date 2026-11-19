@@ -25,16 +25,22 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 版本号
+        /// <p>版本号</p>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// 创建时间，unix时间戳。
+        /// <p>创建时间，unix时间戳。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
+        /// </summary>
+        [JsonProperty("VersionStages")]
+        public string[] VersionStages{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArraySimple(map, prefix + "VersionStages.", this.VersionStages);
         }
     }
 }

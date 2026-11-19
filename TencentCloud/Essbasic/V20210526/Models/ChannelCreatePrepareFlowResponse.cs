@@ -25,25 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
+        /// <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
         /// </summary>
         [JsonProperty("PrepareFlowUrl")]
         public string PrepareFlowUrl{ get; set; }
 
         /// <summary>
-        /// 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
+        /// <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
         /// </summary>
         [JsonProperty("PreviewFlowUrl")]
         public string PreviewFlowUrl{ get; set; }
 
         /// <summary>
-        /// 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+        /// <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+        /// <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
         /// </summary>
         [JsonProperty("DraftId")]
         public string DraftId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1536</VersionPrefix>
+    <VersionPrefix>3.0.1538</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -274,6 +274,9 @@
     <Compile Include="V20260715\Models\ListModelsRsp.cs" />
     <Compile Include="V20260715\Models\ListPartition.cs" />
     <Compile Include="V20260715\Models\ListPartitioning.cs" />
+    <Compile Include="V20260715\Models\ListScheduledTasksRequest.cs" />
+    <Compile Include="V20260715\Models\ListScheduledTasksResponse.cs" />
+    <Compile Include="V20260715\Models\ListScheduledTasksRsp.cs" />
     <Compile Include="V20260715\Models\ListSchemaNamesRequest.cs" />
     <Compile Include="V20260715\Models\ListSchemaNamesResponse.cs" />
     <Compile Include="V20260715\Models\ListSchemaNamesRsp.cs" />
@@ -358,6 +361,7 @@
     <Compile Include="V20260715\Models\RunWorkflowRequest.cs" />
     <Compile Include="V20260715\Models\RunWorkflowResponse.cs" />
     <Compile Include="V20260715\Models\ScheduleBizEnumBrief.cs" />
+    <Compile Include="V20260715\Models\ScheduledTaskDetail.cs" />
     <Compile Include="V20260715\Models\ScheduledTimeConfig.cs" />
     <Compile Include="V20260715\Models\Schema.cs" />
     <Compile Include="V20260715\Models\SearchAssetRequest.cs" />

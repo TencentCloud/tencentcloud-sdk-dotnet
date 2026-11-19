@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1537";
+       private const string sdkVersion = "SDK_NET_3.0.1538";
 
         /// <summary>
         /// Client constructor.
@@ -795,6 +795,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeCloudTranscriptionResponse DescribeCloudTranscriptionSync(DescribeCloudTranscriptionRequest req)
         {
             return InternalRequestAsync<DescribeCloudTranscriptionResponse>(req, "DescribeCloudTranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFinanceCloudRoomUsage）用于查询金融云 TRTC 房间维度用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFinanceCloudRoomUsageRequest"/></param>
+        /// <returns><see cref="DescribeFinanceCloudRoomUsageResponse"/></returns>
+        public Task<DescribeFinanceCloudRoomUsageResponse> DescribeFinanceCloudRoomUsage(DescribeFinanceCloudRoomUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeFinanceCloudRoomUsageResponse>(req, "DescribeFinanceCloudRoomUsage");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFinanceCloudRoomUsage）用于查询金融云 TRTC 房间维度用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFinanceCloudRoomUsageRequest"/></param>
+        /// <returns><see cref="DescribeFinanceCloudRoomUsageResponse"/></returns>
+        public DescribeFinanceCloudRoomUsageResponse DescribeFinanceCloudRoomUsageSync(DescribeFinanceCloudRoomUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeFinanceCloudRoomUsageResponse>(req, "DescribeFinanceCloudRoomUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,33 +25,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-        /// 
-        /// 此接口下面信息必填。
-        /// <ul>
-        /// <li>渠道应用标识:  Agent.AppId</li>
-        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-        /// </ul>
-        /// 第三方平台子客企业和员工必须已经经过实名认证
+        /// <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 要进行激活或者续期的子客企业OrganizationOpenId列表，请确保所有列出的子客企业均已完成认证。
+        /// <p>要进行激活或者续期的子客企业OrganizationOpenId列表，请确保所有列出的子客企业均已完成认证。</p>
         /// </summary>
         [JsonProperty("SubOrganizationOpenIds")]
         public string[] SubOrganizationOpenIds{ get; set; }
 
         /// <summary>
-        /// 操作类型，可以选择如下：
-        /// 
-        /// **false**：（默认）激活子客企业
-        /// **true**：续期子客企业
+        /// <p>操作类型，可以选择如下：</p><p><strong>false</strong>：（默认）激活子客企业<br><strong>true</strong>：续期子客企业</p>
         /// </summary>
         [JsonProperty("Renew")]
         public bool? Renew{ get; set; }
+
+        /// <summary>
+        /// <p>是否解绑子企业</p><p>枚举值：</p><ul><li>false： 否</li><li>true： 是：解绑后，份额将会返还，但是该子企业无法再次被激活</li></ul><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("Unbind")]
+        public bool? Unbind{ get; set; }
 
 
         /// <summary>
@@ -62,6 +57,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "SubOrganizationOpenIds.", this.SubOrganizationOpenIds);
             this.SetParamSimple(map, prefix + "Renew", this.Renew);
+            this.SetParamSimple(map, prefix + "Unbind", this.Unbind);
         }
     }
 }

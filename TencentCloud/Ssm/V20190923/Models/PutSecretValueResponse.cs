@@ -25,13 +25,13 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 凭据名称。
+        /// <p>凭据名称。</p>
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 新增加的版本号。
+        /// <p>新增加的版本号。</p>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }

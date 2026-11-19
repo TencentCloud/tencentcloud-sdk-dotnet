@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1537</VersionPrefix>
+    <VersionPrefix>3.0.1538</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -161,6 +161,8 @@
     <Compile Include="V20190107\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="V20190107\Models\CreateProxyEndPointRequest.cs" />
     <Compile Include="V20190107\Models\CreateProxyEndPointResponse.cs" />
+    <Compile Include="V20190107\Models\CreateProxyEndPointsRequest.cs" />
+    <Compile Include="V20190107\Models\CreateProxyEndPointsResponse.cs" />
     <Compile Include="V20190107\Models\CreateProxyRequest.cs" />
     <Compile Include="V20190107\Models\CreateProxyResponse.cs" />
     <Compile Include="V20190107\Models\CreateResourcePackageRequest.cs" />
@@ -605,6 +607,7 @@
     <Compile Include="V20190107\Models\ProxyConfigInfo.cs" />
     <Compile Include="V20190107\Models\ProxyConnectionPoolInfo.cs" />
     <Compile Include="V20190107\Models\ProxyEndPointConfigInfo.cs" />
+    <Compile Include="V20190107\Models\ProxyEndPointItem.cs" />
     <Compile Include="V20190107\Models\ProxyGroup.cs" />
     <Compile Include="V20190107\Models\ProxyGroupInfo.cs" />
     <Compile Include="V20190107\Models\ProxyGroupRwInfo.cs" />
