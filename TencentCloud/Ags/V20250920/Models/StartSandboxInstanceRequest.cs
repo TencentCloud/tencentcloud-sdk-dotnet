@@ -85,6 +85,12 @@ namespace TencentCloud.Ags.V20250920.Models
         public MetadataVar[] Metadata{ get; set; }
 
         /// <summary>
+        /// <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
+        /// </summary>
+        [JsonProperty("StorageMounts")]
+        public StorageMount[] StorageMounts{ get; set; }
+
+        /// <summary>
         /// <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p>
         /// </summary>
         [JsonProperty("StartMode")]
@@ -106,6 +112,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
             this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
             this.SetParamArrayObj(map, prefix + "Metadata.", this.Metadata);
+            this.SetParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
             this.SetParamSimple(map, prefix + "StartMode", this.StartMode);
         }
     }

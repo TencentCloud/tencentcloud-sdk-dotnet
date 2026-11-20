@@ -28,7 +28,7 @@ namespace TencentCloud.Ags.V20250920
 
        private const string endpoint = "ags.tencentcloudapi.com";
        private const string version = "2025-09-20";
-       private const string sdkVersion = "SDK_NET_3.0.1539";
+       private const string sdkVersion = "SDK_NET_3.0.1540";
 
         /// <summary>
         /// Client constructor.
@@ -203,6 +203,27 @@ namespace TencentCloud.Ags.V20250920
         public CreateDeploymentResponse CreateDeploymentSync(CreateDeploymentRequest req)
         {
             return InternalRequestAsync<CreateDeploymentResponse>(req, "CreateDeployment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建镜像预热自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="CreatePreCacheImageCleanupPolicyRequest"/></param>
+        /// <returns><see cref="CreatePreCacheImageCleanupPolicyResponse"/></returns>
+        public Task<CreatePreCacheImageCleanupPolicyResponse> CreatePreCacheImageCleanupPolicy(CreatePreCacheImageCleanupPolicyRequest req)
+        {
+            return InternalRequestAsync<CreatePreCacheImageCleanupPolicyResponse>(req, "CreatePreCacheImageCleanupPolicy");
+        }
+
+        /// <summary>
+        /// 创建镜像预热自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="CreatePreCacheImageCleanupPolicyRequest"/></param>
+        /// <returns><see cref="CreatePreCacheImageCleanupPolicyResponse"/></returns>
+        public CreatePreCacheImageCleanupPolicyResponse CreatePreCacheImageCleanupPolicySync(CreatePreCacheImageCleanupPolicyRequest req)
+        {
+            return InternalRequestAsync<CreatePreCacheImageCleanupPolicyResponse>(req, "CreatePreCacheImageCleanupPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -442,6 +463,27 @@ namespace TencentCloud.Ags.V20250920
         public DeletePreCacheImageResponse DeletePreCacheImageSync(DeletePreCacheImageRequest req)
         {
             return InternalRequestAsync<DeletePreCacheImageResponse>(req, "DeletePreCacheImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除镜像预热自动卸载策略
+        /// </summary>
+        /// <param name="req"><see cref="DeletePreCacheImageCleanupPolicyRequest"/></param>
+        /// <returns><see cref="DeletePreCacheImageCleanupPolicyResponse"/></returns>
+        public Task<DeletePreCacheImageCleanupPolicyResponse> DeletePreCacheImageCleanupPolicy(DeletePreCacheImageCleanupPolicyRequest req)
+        {
+            return InternalRequestAsync<DeletePreCacheImageCleanupPolicyResponse>(req, "DeletePreCacheImageCleanupPolicy");
+        }
+
+        /// <summary>
+        /// 删除镜像预热自动卸载策略
+        /// </summary>
+        /// <param name="req"><see cref="DeletePreCacheImageCleanupPolicyRequest"/></param>
+        /// <returns><see cref="DeletePreCacheImageCleanupPolicyResponse"/></returns>
+        public DeletePreCacheImageCleanupPolicyResponse DeletePreCacheImageCleanupPolicySync(DeletePreCacheImageCleanupPolicyRequest req)
+        {
+            return InternalRequestAsync<DeletePreCacheImageCleanupPolicyResponse>(req, "DeletePreCacheImageCleanupPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -744,6 +786,27 @@ namespace TencentCloud.Ags.V20250920
         public DescribeGPUResourcesResponse DescribeGPUResourcesSync(DescribeGPUResourcesRequest req)
         {
             return InternalRequestAsync<DescribeGPUResourcesResponse>(req, "DescribeGPUResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询镜像预热自动卸载策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreCacheImageCleanupPolicyListRequest"/></param>
+        /// <returns><see cref="DescribePreCacheImageCleanupPolicyListResponse"/></returns>
+        public Task<DescribePreCacheImageCleanupPolicyListResponse> DescribePreCacheImageCleanupPolicyList(DescribePreCacheImageCleanupPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribePreCacheImageCleanupPolicyListResponse>(req, "DescribePreCacheImageCleanupPolicyList");
+        }
+
+        /// <summary>
+        /// 查询镜像预热自动卸载策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreCacheImageCleanupPolicyListRequest"/></param>
+        /// <returns><see cref="DescribePreCacheImageCleanupPolicyListResponse"/></returns>
+        public DescribePreCacheImageCleanupPolicyListResponse DescribePreCacheImageCleanupPolicyListSync(DescribePreCacheImageCleanupPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribePreCacheImageCleanupPolicyListResponse>(req, "DescribePreCacheImageCleanupPolicyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1384,6 +1447,27 @@ namespace TencentCloud.Ags.V20250920
         public SyncRegistryRecordResponse SyncRegistryRecordSync(SyncRegistryRecordRequest req)
         {
             return InternalRequestAsync<SyncRegistryRecordResponse>(req, "SyncRegistryRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新镜像预热自动卸载策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePreCacheImageCleanupPolicyRequest"/></param>
+        /// <returns><see cref="UpdatePreCacheImageCleanupPolicyResponse"/></returns>
+        public Task<UpdatePreCacheImageCleanupPolicyResponse> UpdatePreCacheImageCleanupPolicy(UpdatePreCacheImageCleanupPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdatePreCacheImageCleanupPolicyResponse>(req, "UpdatePreCacheImageCleanupPolicy");
+        }
+
+        /// <summary>
+        /// 更新镜像预热自动卸载策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePreCacheImageCleanupPolicyRequest"/></param>
+        /// <returns><see cref="UpdatePreCacheImageCleanupPolicyResponse"/></returns>
+        public UpdatePreCacheImageCleanupPolicyResponse UpdatePreCacheImageCleanupPolicySync(UpdatePreCacheImageCleanupPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdatePreCacheImageCleanupPolicyResponse>(req, "UpdatePreCacheImageCleanupPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

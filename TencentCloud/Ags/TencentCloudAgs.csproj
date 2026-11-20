@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{47A61FC9-E9D0-3AAD-8FAF-66A21019BE5C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1539</VersionPrefix>
+    <VersionPrefix>3.0.1540</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,8 @@
     <Compile Include="V20250920\Models\CreateAPIKeyResponse.cs" />
     <Compile Include="V20250920\Models\CreateDeploymentRequest.cs" />
     <Compile Include="V20250920\Models\CreateDeploymentResponse.cs" />
+    <Compile Include="V20250920\Models\CreatePreCacheImageCleanupPolicyRequest.cs" />
+    <Compile Include="V20250920\Models\CreatePreCacheImageCleanupPolicyResponse.cs" />
     <Compile Include="V20250920\Models\CreatePreCacheImageTaskRequest.cs" />
     <Compile Include="V20250920\Models\CreatePreCacheImageTaskResponse.cs" />
     <Compile Include="V20250920\Models\CreateRegistryRecordRequest.cs" />
@@ -106,6 +108,8 @@
     <Compile Include="V20250920\Models\DeleteDeploymentResponse.cs" />
     <Compile Include="V20250920\Models\DeleteGPUResourceGroupRequest.cs" />
     <Compile Include="V20250920\Models\DeleteGPUResourceGroupResponse.cs" />
+    <Compile Include="V20250920\Models\DeletePreCacheImageCleanupPolicyRequest.cs" />
+    <Compile Include="V20250920\Models\DeletePreCacheImageCleanupPolicyResponse.cs" />
     <Compile Include="V20250920\Models\DeletePreCacheImageRequest.cs" />
     <Compile Include="V20250920\Models\DeletePreCacheImageResponse.cs" />
     <Compile Include="V20250920\Models\DeleteRegistryRecordRequest.cs" />
@@ -137,6 +141,8 @@
     <Compile Include="V20250920\Models\DescribeGPUResourceSpecsResponse.cs" />
     <Compile Include="V20250920\Models\DescribeGPUResourcesRequest.cs" />
     <Compile Include="V20250920\Models\DescribeGPUResourcesResponse.cs" />
+    <Compile Include="V20250920\Models\DescribePreCacheImageCleanupPolicyListRequest.cs" />
+    <Compile Include="V20250920\Models\DescribePreCacheImageCleanupPolicyListResponse.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageListRequest.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageListResponse.cs" />
     <Compile Include="V20250920\Models\DescribePreCacheImageTaskRequest.cs" />
@@ -212,6 +218,7 @@
     <Compile Include="V20250920\Models\PauseSandboxInstanceResponse.cs" />
     <Compile Include="V20250920\Models\PortConfiguration.cs" />
     <Compile Include="V20250920\Models\PreCacheImage.cs" />
+    <Compile Include="V20250920\Models\PreCacheImageCleanupPolicy.cs" />
     <Compile Include="V20250920\Models\PreviewRegistryRecordRequest.cs" />
     <Compile Include="V20250920\Models\PreviewRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\ProbeConfiguration.cs" />
@@ -239,6 +246,8 @@
     <Compile Include="V20250920\Models\SyncRegistryRecordRequest.cs" />
     <Compile Include="V20250920\Models\SyncRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\Tag.cs" />
+    <Compile Include="V20250920\Models\UpdatePreCacheImageCleanupPolicyRequest.cs" />
+    <Compile Include="V20250920\Models\UpdatePreCacheImageCleanupPolicyResponse.cs" />
     <Compile Include="V20250920\Models\UpdateRegistryRecordRequest.cs" />
     <Compile Include="V20250920\Models\UpdateRegistryRecordResponse.cs" />
     <Compile Include="V20250920\Models\UpdateRegistryRequest.cs" />
