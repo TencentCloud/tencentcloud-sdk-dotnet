@@ -208,9 +208,19 @@ namespace TencentCloud.Common
 
             if (response.StatusCode != HttpStatusCode.OK)
             {
-                response.Dispose();
+                // Read the body before disposing: a disposed response throws
+                // ObjectDisposedException instead of reporting the status.
+                string body;
+                try
+                {
+                    body = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                }
+                finally
+                {
+                    response.Dispose();
+                }
                 throw new TencentCloudSDKException(
-                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
+                    $"invalid http status: {response.StatusCode}, body: {body}");
             }
 
             if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
