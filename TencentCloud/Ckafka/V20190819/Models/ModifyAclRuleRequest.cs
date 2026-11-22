@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>ACL规则名</p>
+        /// <p>ACL规则名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/89217">DescribeAclRule</a></p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

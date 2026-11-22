@@ -25,67 +25,85 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例名称。
-        /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
-
-        /// <summary>
-        /// 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
-        /// </summary>
-        [JsonProperty("PayMode")]
-        public long? PayMode{ get; set; }
-
-        /// <summary>
-        /// 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
-        /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
-
-        /// <summary>
-        /// 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
+        /// <p>实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。
+        /// <p>实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。</p>
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
+        /// <summary>
+        /// <p>实例名称。</p>
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// <p>实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。</p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。
+        /// <p>实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。</p>
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// <p>实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。</p>
         /// </summary>
         [JsonProperty("ZoneSettings")]
         public ZoneSetting[] ZoneSettings{ get; set; }
 
         /// <summary>
-        /// 实例要绑定的标签列表。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
-
-        /// <summary>
-        /// 预付费参数
-        /// </summary>
-        [JsonProperty("PrePaySetting")]
-        public PrePaySetting PrePaySetting{ get; set; }
-
-        /// <summary>
-        /// 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+        /// <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 部署模式
+        /// <p>部署模式</p>
         /// </summary>
         [JsonProperty("DeploymentMode")]
         public string DeploymentMode{ get; set; }
 
         /// <summary>
-        /// 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+        /// <p>是否开启公网 IP 访问，默认 false。TCBase 开启后会创建并绑定 EIP；内网 CLB 绑定 EIP 后，CLB 安全组对来自 EIP 的流量不生效，对来自内网 CLB 的流量生效。</p>
+        /// </summary>
+        [JsonProperty("EnablePublicIP")]
+        public bool? EnablePublicIP{ get; set; }
+
+        /// <summary>
+        /// <p>预付费参数</p>
+        /// </summary>
+        [JsonProperty("PrePaySetting")]
+        public PrePaySetting PrePaySetting{ get; set; }
+
+        /// <summary>
+        /// <p>TCBase 实例 CLB 绑定的安全组 ID 列表，形如 sg-xxxxxxxx，可通过 DescribeSecurityGroups 获取。绑定后管控侧会尝试补充 TCP 80、5432、5433 入站放通规则。</p>
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// <p>实例要绑定的标签列表。</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启实例销毁保护，默认 false；true 表示开启，开启后不允许销毁实例。</p>
+        /// </summary>
+        [JsonProperty("TerminateProtection")]
+        public bool? TerminateProtection{ get; set; }
+
+        /// <summary>
+        /// <p>服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -96,16 +114,19 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamArrayObj(map, prefix + "ZoneSettings.", this.ZoneSettings);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+            this.SetParamSimple(map, prefix + "EnablePublicIP", this.EnablePublicIP);
+            this.SetParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TerminateProtection", this.TerminateProtection);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
         }
     }

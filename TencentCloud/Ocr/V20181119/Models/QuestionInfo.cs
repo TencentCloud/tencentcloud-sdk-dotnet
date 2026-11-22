@@ -74,7 +74,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ReturnImageUrl{ get; set; }
 
         /// <summary>
-        /// <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+        /// <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 且快速模式下生效。其他模型类型不支持该能力。</p>
         /// </summary>
         [JsonProperty("ClassName")]
         public string ClassName{ get; set; }

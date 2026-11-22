@@ -25,10 +25,10 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 可用区名称
+        /// 可用区节点数量
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("NodeNum")]
+        public long? NodeNum{ get; set; }
 
         /// <summary>
         /// 可用区VPC和子网
@@ -37,10 +37,10 @@ namespace TencentCloud.Emr.V20190103.Models
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// 可用区节点数量
+        /// 可用区名称
         /// </summary>
-        [JsonProperty("NodeNum")]
-        public long? NodeNum{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
+            this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

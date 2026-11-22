@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1541";
 
         /// <summary>
         /// Client constructor.
@@ -2137,27 +2137,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 创建日志导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRumLogExportV2Request"/></param>
-        /// <returns><see cref="DescribeRumLogExportV2Response"/></returns>
-        public Task<DescribeRumLogExportV2Response> DescribeRumLogExportV2(DescribeRumLogExportV2Request req)
-        {
-            return InternalRequestAsync<DescribeRumLogExportV2Response>(req, "DescribeRumLogExportV2");
-        }
-
-        /// <summary>
-        /// 创建日志导出
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRumLogExportV2Request"/></param>
-        /// <returns><see cref="DescribeRumLogExportV2Response"/></returns>
-        public DescribeRumLogExportV2Response DescribeRumLogExportV2Sync(DescribeRumLogExportV2Request req)
-        {
-            return InternalRequestAsync<DescribeRumLogExportV2Response>(req, "DescribeRumLogExportV2")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取项目下的日志导出列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRumLogExportsRequest"/></param>
@@ -2175,27 +2154,6 @@ namespace TencentCloud.Rum.V20210622
         public DescribeRumLogExportsResponse DescribeRumLogExportsSync(DescribeRumLogExportsRequest req)
         {
             return InternalRequestAsync<DescribeRumLogExportsResponse>(req, "DescribeRumLogExports")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取日志导出列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRumLogExportsV2Request"/></param>
-        /// <returns><see cref="DescribeRumLogExportsV2Response"/></returns>
-        public Task<DescribeRumLogExportsV2Response> DescribeRumLogExportsV2(DescribeRumLogExportsV2Request req)
-        {
-            return InternalRequestAsync<DescribeRumLogExportsV2Response>(req, "DescribeRumLogExportsV2");
-        }
-
-        /// <summary>
-        /// 获取日志导出列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRumLogExportsV2Request"/></param>
-        /// <returns><see cref="DescribeRumLogExportsV2Response"/></returns>
-        public DescribeRumLogExportsV2Response DescribeRumLogExportsV2Sync(DescribeRumLogExportsV2Request req)
-        {
-            return InternalRequestAsync<DescribeRumLogExportsV2Response>(req, "DescribeRumLogExportsV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

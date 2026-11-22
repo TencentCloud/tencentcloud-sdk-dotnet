@@ -46,7 +46,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? NumRetries{ get; set; }
 
         /// <summary>
-        /// <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
+        /// <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
         /// </summary>
         [JsonProperty("WaitSeconds")]
         public ulong? WaitSeconds{ get; set; }

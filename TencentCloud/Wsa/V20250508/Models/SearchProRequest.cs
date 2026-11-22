@@ -55,6 +55,12 @@ namespace TencentCloud.Wsa.V20250508.Models
         public string Industry{ get; set; }
 
         /// <summary>
+        /// <p>取值为open_summary 时，passage摘要字段升级为模型友好摘要，提供经过模型提炼的与query更加相关的内容片段（当前仅旗舰版支持该参数）</p>
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
         /// <p>搜索时效范围，以下五种入参形态不支持混合使用。</p><ul><li><p>d[N]：最近N天，N取值1-30整数，N值为空时默认N=1。</p></li><li><p>m[N]：最近N月，N取值1-12整数，N值为空时默认N=1。</p></li><li><p>y[N]：最近N年，N取值1-5整数，N值为空时默认N=1。</p></li><li><p>yyyy-mm-dd：指定某一日。（不得早于1970-01-01，不得晚于请求当天日期）</p></li><li><p>yyyy-mm-dd,yyyy-mm-dd：从日期A至日期B，包含AB。（日期B不得晚于日期A；二者均不得早于1970-01-01，不得晚于请求当天日期）</p></li></ul><p>示例：2026.6.15分别传参d2/m2/y2进行搜索，则搜索结果的时间范围分别为“2026.6.15、2026.6.14”/“2026.6、2026.5”/“2026、2025”，以此类推。</p><p>枚举值：</p><ul><li>d7： 最近七天</li><li>m3： 最近三月</li><li>y2： 最近两年</li><li>2026-08-20： 2026-08-20当天</li><li>2026-08-20,2026-08-30： 2026-08-20至2026-08-30</li></ul>
         /// </summary>
         [JsonProperty("Freshness")]
@@ -77,6 +83,7 @@ namespace TencentCloud.Wsa.V20250508.Models
             this.SetParamSimple(map, prefix + "Site", this.Site);
             this.SetParamSimple(map, prefix + "Cnt", this.Cnt);
             this.SetParamSimple(map, prefix + "Industry", this.Industry);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "Freshness", this.Freshness);
             this.SetParamSimple(map, prefix + "Deeplinks", this.Deeplinks);
         }

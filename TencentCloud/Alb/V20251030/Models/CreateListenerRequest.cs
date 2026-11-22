@@ -37,7 +37,7 @@ namespace TencentCloud.Alb.V20251030.Models
         public ulong? ListenerPort{ get; set; }
 
         /// <summary>
-        /// <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+        /// <p>监听协议。  取值：HTTP、HTTPS。</p>
         /// </summary>
         [JsonProperty("ListenerProtocol")]
         public string ListenerProtocol{ get; set; }

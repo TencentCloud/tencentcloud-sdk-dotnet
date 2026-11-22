@@ -37,6 +37,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// <p>是否需要重建</p>
+        /// </summary>
+        [JsonProperty("NeedPodRebuild")]
+        public bool? NeedPodRebuild{ get; set; }
+
+        /// <summary>
         /// <p>错误信息</p>
         /// </summary>
         [JsonProperty("ErrorMsg")]
@@ -62,6 +68,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamArrayObj(map, prefix + "WorkloadGroups.", this.WorkloadGroups);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "NeedPodRebuild", this.NeedPodRebuild);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

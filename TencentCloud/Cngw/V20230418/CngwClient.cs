@@ -28,7 +28,7 @@ namespace TencentCloud.Cngw.V20230418
 
        private const string endpoint = "cngw.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1541";
 
         /// <summary>
         /// Client constructor.
@@ -810,6 +810,27 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 查询指定模型 API 的 IP 黑白名单配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIGWLLMModelAPIIPRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeAIGWLLMModelAPIIPRestrictionResponse"/></returns>
+        public Task<DescribeAIGWLLMModelAPIIPRestrictionResponse> DescribeAIGWLLMModelAPIIPRestriction(DescribeAIGWLLMModelAPIIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeAIGWLLMModelAPIIPRestrictionResponse>(req, "DescribeAIGWLLMModelAPIIPRestriction");
+        }
+
+        /// <summary>
+        /// 查询指定模型 API 的 IP 黑白名单配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIGWLLMModelAPIIPRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeAIGWLLMModelAPIIPRestrictionResponse"/></returns>
+        public DescribeAIGWLLMModelAPIIPRestrictionResponse DescribeAIGWLLMModelAPIIPRestrictionSync(DescribeAIGWLLMModelAPIIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeAIGWLLMModelAPIIPRestrictionResponse>(req, "DescribeAIGWLLMModelAPIIPRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询云原生网关服务和路由列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCNGWServicesWithRoutesRequest"/></param>
@@ -1472,6 +1493,27 @@ namespace TencentCloud.Cngw.V20230418
         public ModifyAIGWCustomGuardrailPolicyResponse ModifyAIGWCustomGuardrailPolicySync(ModifyAIGWCustomGuardrailPolicyRequest req)
         {
             return InternalRequestAsync<ModifyAIGWCustomGuardrailPolicyResponse>(req, "ModifyAIGWCustomGuardrailPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建或整体覆盖指定模型 API 的 IP 黑白名单配置。PUT 覆盖语义（每次以请求值为最终态）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIGWLLMModelAPIIPRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyAIGWLLMModelAPIIPRestrictionResponse"/></returns>
+        public Task<ModifyAIGWLLMModelAPIIPRestrictionResponse> ModifyAIGWLLMModelAPIIPRestriction(ModifyAIGWLLMModelAPIIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyAIGWLLMModelAPIIPRestrictionResponse>(req, "ModifyAIGWLLMModelAPIIPRestriction");
+        }
+
+        /// <summary>
+        /// 创建或整体覆盖指定模型 API 的 IP 黑白名单配置。PUT 覆盖语义（每次以请求值为最终态）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIGWLLMModelAPIIPRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyAIGWLLMModelAPIIPRestrictionResponse"/></returns>
+        public ModifyAIGWLLMModelAPIIPRestrictionResponse ModifyAIGWLLMModelAPIIPRestrictionSync(ModifyAIGWLLMModelAPIIPRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyAIGWLLMModelAPIIPRestrictionResponse>(req, "ModifyAIGWLLMModelAPIIPRestriction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

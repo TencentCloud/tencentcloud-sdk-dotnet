@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// <p>日志总量</p>
+        /// <p>日志总量JSON字符串，内部Total结构不变。总量与明细为独立查询，不保证同一快照；window迁移期间总量仍走旧后端，带新分页参数的明细可走CLS。旧游标继续忽略。</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

@@ -25,16 +25,22 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 需要删除的资源组名称
+        /// <p>需要删除的资源组名称</p>
         /// </summary>
         [JsonProperty("WorkloadGroupName")]
         public string WorkloadGroupName{ get; set; }
+
+        /// <summary>
+        /// <p>资源组归属的计算组ID</p>
+        /// </summary>
+        [JsonProperty("ComputeGroup")]
+        public string ComputeGroup{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "WorkloadGroupName", this.WorkloadGroupName);
+            this.SetParamSimple(map, prefix + "ComputeGroup", this.ComputeGroup);
         }
     }
 }

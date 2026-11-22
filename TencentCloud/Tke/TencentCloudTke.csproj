@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1540</VersionPrefix>
+    <VersionPrefix>3.0.1541</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -122,6 +122,8 @@
     <Compile Include="V20220501\Models\NodePool.cs" />
     <Compile Include="V20220501\Models\RebootMachinesRequest.cs" />
     <Compile Include="V20220501\Models\RebootMachinesResponse.cs" />
+    <Compile Include="V20220501\Models\RegistryConfig.cs" />
+    <Compile Include="V20220501\Models\RegistryMirror.cs" />
     <Compile Include="V20220501\Models\RegularNodeInfo.cs" />
     <Compile Include="V20220501\Models\RegularNodePoolInfo.cs" />
     <Compile Include="V20220501\Models\RuntimeConfig.cs" />

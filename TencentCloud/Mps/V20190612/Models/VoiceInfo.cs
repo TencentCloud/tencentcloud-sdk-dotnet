@@ -90,6 +90,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
+        /// <summary>
+        /// <p>音色创建时间</p>
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
+        /// <summary>
+        /// <p>音色信息更新时间</p>
+        /// </summary>
+        [JsonProperty("UpdatedAt")]
+        public string UpdatedAt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
             this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
             this.SetParamSimple(map, prefix + "Engine", this.Engine);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+            this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         }
     }
 }

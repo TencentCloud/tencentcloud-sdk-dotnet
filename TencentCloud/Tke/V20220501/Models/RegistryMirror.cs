@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Tke.V20220501.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRumLogExportsV2Request : AbstractModel
+    public class RegistryMirror : AbstractModel
     {
         
         /// <summary>
-        /// <p>每页返回任务数</p>
+        /// <p>源仓库，例如 docker.io / registry.k8s.io</p>
         /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
+        [JsonProperty("Registry")]
+        public string Registry{ get; set; }
 
         /// <summary>
-        /// <p>当前页码</p>
+        /// <p>镜像加速地址列表，按顺序写入 hosts.toml</p>
         /// </summary>
-        [JsonProperty("PageNum")]
-        public long? PageNum{ get; set; }
+        [JsonProperty("Endpoints")]
+        public string[] Endpoints{ get; set; }
 
         /// <summary>
-        /// <p>项目ID</p>
+        /// <p>是否在 hosts.toml 中写入 override_path，为 true 时镜像 endpoints 路径不再追加 namespace 后缀</p>
         /// </summary>
-        [JsonProperty("ID")]
-        public long? ID{ get; set; }
+        [JsonProperty("OverridePath")]
+        public bool? OverridePath{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
-            this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "Registry", this.Registry);
+            this.SetParamArraySimple(map, prefix + "Endpoints.", this.Endpoints);
+            this.SetParamSimple(map, prefix + "OverridePath", this.OverridePath);
         }
     }
 }

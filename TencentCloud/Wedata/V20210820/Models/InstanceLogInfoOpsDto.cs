@@ -25,79 +25,87 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 实例运行日志
+        /// <p>实例运行日志</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogInfo")]
         public string LogInfo{ get; set; }
 
         /// <summary>
-        /// 实例运行提交的yarn日志地址
+        /// <p>实例运行提交的yarn日志地址</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("YarnLogInfo")]
         public string[] YarnLogInfo{ get; set; }
 
         /// <summary>
-        /// 实例运行产生的datax日志
+        /// <p>实例运行产生的datax日志</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataLogInfo")]
         public string DataLogInfo{ get; set; }
 
         /// <summary>
-        /// 第三方任务运行日志
+        /// <p>第三方任务运行日志</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ThirdTaskRunLogInfo")]
         public string ThirdTaskRunLogInfo{ get; set; }
 
         /// <summary>
-        /// 第三方任务日志链接描述
+        /// <p>第三方任务日志链接描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ThirdTaskLogUrlDesc")]
         public string ThirdTaskLogUrlDesc{ get; set; }
 
         /// <summary>
-        /// 日志行数
+        /// <p>日志行数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LineCount")]
         public long? LineCount{ get; set; }
 
         /// <summary>
-        /// 统一执行平台日志分页查询参数
+        /// <p>统一执行平台日志分页查询参数</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
         /// <summary>
-        /// 日志分页查询，是否最后一页
+        /// <p>日志分页查询，是否最后一页</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsEnd")]
         public bool? IsEnd{ get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// <p>文件大小</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
         public string FileSize{ get; set; }
 
         /// <summary>
-        /// 日志匹配节点信息
+        /// <p>日志匹配节点信息</p>
         /// </summary>
         [JsonProperty("MatchedBrokerIp")]
         public string MatchedBrokerIp{ get; set; }
 
         /// <summary>
-        /// 执行平台通用协议
+        /// <p>执行平台通用协议</p>
         /// </summary>
         [JsonProperty("ExecutionExtendedProps")]
         public PairDto[] ExecutionExtendedProps{ get; set; }
+
+        /// <summary>
+        /// <p>日志诊断规则</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogDiagnosisRules")]
+        [System.Obsolete]
+        public LogDiagnosisRules LogDiagnosisRules{ get; set; }
 
 
         /// <summary>
@@ -116,6 +124,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamSimple(map, prefix + "MatchedBrokerIp", this.MatchedBrokerIp);
             this.SetParamArrayObj(map, prefix + "ExecutionExtendedProps.", this.ExecutionExtendedProps);
+            this.SetParamObj(map, prefix + "LogDiagnosisRules.", this.LogDiagnosisRules);
         }
     }
 }

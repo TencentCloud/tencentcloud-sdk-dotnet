@@ -25,99 +25,94 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
+        /// <p>授权策略ID，从 <a href="https://cloud.tencent.com/document/product/1778/111074">查询授权策略</a> 接口获取</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+        /// <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 策略版本,默认为1，当前仅支持1
+        /// <p>策略版本,默认为1，当前仅支持1</p>
         /// </summary>
         [JsonProperty("PolicyVersion")]
         public long? PolicyVersion{ get; set; }
 
         /// <summary>
-        /// 策略优先级，越小越优先，不能重复
+        /// <p>策略优先级，越小越优先，不能重复</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// 决策：
-        /// allow 允许
-        /// deny 拒绝
+        /// <p>决策：<br>allow 允许<br>deny 拒绝</p>
         /// </summary>
         [JsonProperty("Effect")]
         public string Effect{ get; set; }
 
         /// <summary>
-        /// 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-        /// connect：连接
-        /// pub：发布
-        /// sub：订阅
+        /// <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
         /// </summary>
         [JsonProperty("Actions")]
         public string Actions{ get; set; }
 
         /// <summary>
-        /// 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+        /// <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
         /// </summary>
         [JsonProperty("Resources")]
         public string Resources{ get; set; }
 
         /// <summary>
-        /// 条件-用户名
+        /// <p>条件-用户名</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 条件-保留消息
-        /// 1,匹配保留消息；
-        /// 2,匹配非保留消息，
-        /// 3.匹配保留和非保留消息
+        /// <p>条件-保留消息<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
         /// </summary>
         [JsonProperty("Retain")]
         public long? Retain{ get; set; }
 
         /// <summary>
-        /// 条件：客户端ID，支持正则
+        /// <p>条件：客户端ID，支持正则</p>
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 条件：客户端IP地址，支持IP或者CIDR
+        /// <p>条件：客户端IP地址，支持IP或者CIDR</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 条件：服务质量
-        /// 0：最多一次
-        /// 1：最少一次
-        /// 2：精确一次
+        /// <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次</p>
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }
 
         /// <summary>
-        /// 备注信息，最长 128 字符
+        /// <p>备注信息，最长 128 字符</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// <p>授权资源列表，支持函数表达式</p>
+        /// </summary>
+        [JsonProperty("ResourceItems")]
+        public string[] ResourceItems{ get; set; }
 
 
         /// <summary>
@@ -139,6 +134,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Qos", this.Qos);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArraySimple(map, prefix + "ResourceItems.", this.ResourceItems);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+        /// <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+        /// <p>CLS路径单次返回1～1000条；旧路径保留原行为。短页不表示结束，以ListOver为准。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Filter{ get; set; }
 
         /// <summary>
-        /// <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+        /// <p>Unix纳秒结束时间，不包含该时刻。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
@@ -61,16 +61,28 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// <p>上次查询的最后一个日志的时间戳</p>
+        /// <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
         /// </summary>
         [JsonProperty("LastTime")]
         public long? LastTime{ get; set; }
 
         /// <summary>
-        /// <p>上次查询的最后一个日志的rowId</p>
+        /// <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
         /// </summary>
         [JsonProperty("LastRowId")]
         public long? LastRowId{ get; set; }
+
+        /// <summary>
+        /// <p>从0开始的非负偏移量；保留缺省与显式0的差别。不能与非空Context同时使用，Context续页时删除Offset。</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>原样回传上次非空Context，续页时删除Offset，其余有效查询条件保持不变；空串视为缺省。不保证快照或重放同一页。</p>
+        /// </summary>
+        [JsonProperty("Context")]
+        public string Context{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "LastTime", this.LastTime);
             this.SetParamSimple(map, prefix + "LastRowId", this.LastRowId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Context", this.Context);
         }
     }
 }

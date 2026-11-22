@@ -25,37 +25,37 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 导出标识name
+        /// <p>导出标识name</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 开始时间（必填）
+        /// <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+        /// <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 结束时间（必填）
+        /// <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 项目ID（必填）
+        /// <p>项目ID（必填）</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// field条件
+        /// <p>field条件</p>
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }

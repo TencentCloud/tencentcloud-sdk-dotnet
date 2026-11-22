@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Cngw.V20230418.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRumLogExportV2Response : AbstractModel
+    public class DescribeAIGWLLMModelAPIIPRestrictionRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>日志导出任务TaskId</p>
+        /// <p>网关实例id</p>
         /// </summary>
-        [JsonProperty("Result")]
-        public string Result{ get; set; }
+        [JsonProperty("GatewayId")]
+        public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// <p>模型API ID</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ModelAPIId")]
+        public string ModelAPIId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
+            this.SetParamSimple(map, prefix + "ModelAPIId", this.ModelAPIId);
         }
     }
 }

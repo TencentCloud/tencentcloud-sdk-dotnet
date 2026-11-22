@@ -25,16 +25,22 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// <p>集群id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否开启资源组：open-开启、close-关闭
+        /// <p>是否开启资源组：open-开启、close-关闭</p>
         /// </summary>
         [JsonProperty("OperationType")]
         public string OperationType{ get; set; }
+
+        /// <summary>
+        /// <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
+        /// </summary>
+        [JsonProperty("RestartType")]
+        public string RestartType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
+            this.SetParamSimple(map, prefix + "RestartType", this.RestartType);
         }
     }
 }

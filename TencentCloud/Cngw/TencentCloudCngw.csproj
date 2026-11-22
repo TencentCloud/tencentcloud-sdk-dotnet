@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5926007E-BC61-30BC-96D2-7B18B8113F0A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1536</VersionPrefix>
+    <VersionPrefix>3.0.1541</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,7 @@
     <Compile Include="V20230418\Models\AIGWJWTCredentialConfig.cs" />
     <Compile Include="V20230418\Models\AIGWKVMatch.cs" />
     <Compile Include="V20230418\Models\AIGWLLMHealthCheckSetting.cs" />
+    <Compile Include="V20230418\Models\AIGWLLMIPRestrictionResult.cs" />
     <Compile Include="V20230418\Models\AIGWLLMModelServiceSubRoute.cs" />
     <Compile Include="V20230418\Models\AIGWLLMQuotaFallbackTrigger.cs" />
     <Compile Include="V20230418\Models\AIGWLLMQuotaLimit.cs" />
@@ -259,6 +260,8 @@
     <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyRequest.cs" />
     <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyResponse.cs" />
     <Compile Include="V20230418\Models\DescribeAIGWCustomGuardrailPolicyResult.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWLLMModelAPIIPRestrictionRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAIGWLLMModelAPIIPRestrictionResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCNGWServicesWithRoutesRequest.cs" />
     <Compile Include="V20230418\Models\DescribeCNGWServicesWithRoutesResponse.cs" />
     <Compile Include="V20230418\Models\DescribeCloudNativeAPIGatewayAIQuotaListRequest.cs" />
@@ -335,6 +338,8 @@
     <Compile Include="V20230418\Models\ModifyAIGWCustomGuardrailPolicyRequest.cs" />
     <Compile Include="V20230418\Models\ModifyAIGWCustomGuardrailPolicyResponse.cs" />
     <Compile Include="V20230418\Models\ModifyAIGWCustomGuardrailPolicyResult.cs" />
+    <Compile Include="V20230418\Models\ModifyAIGWLLMModelAPIIPRestrictionRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAIGWLLMModelAPIIPRestrictionResponse.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayAIServiceSourceRequest.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayAIServiceSourceResponse.cs" />
     <Compile Include="V20230418\Models\ModifyCloudNativeAPIGatewayConsumerGroupRequest.cs" />

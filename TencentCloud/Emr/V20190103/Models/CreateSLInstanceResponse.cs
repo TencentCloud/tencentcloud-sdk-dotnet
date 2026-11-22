@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例唯一标识符（字符串表示）
+        /// <p>实例唯一标识符（字符串表示）</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

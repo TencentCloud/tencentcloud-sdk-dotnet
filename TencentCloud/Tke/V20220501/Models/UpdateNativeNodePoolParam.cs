@@ -175,6 +175,12 @@ namespace TencentCloud.Tke.V20220501.Models
         public string Password{ get; set; }
 
         /// <summary>
+        /// <p>节点的 containerd 镜像仓库定制（仅 containerd 运行时生效）</p>
+        /// </summary>
+        [JsonProperty("Registry")]
+        public RegistryConfig Registry{ get; set; }
+
+        /// <summary>
         /// <p>自定义镜像 ID</p>
         /// </summary>
         [JsonProperty("CustomImage")]
@@ -211,6 +217,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
             this.SetParamSimple(map, prefix + "AutomationService", this.AutomationService);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamObj(map, prefix + "Registry.", this.Registry);
             this.SetParamSimple(map, prefix + "CustomImage", this.CustomImage);
         }
     }

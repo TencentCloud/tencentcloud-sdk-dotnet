@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] ProcedureTaskIds{ get; set; }
 
         /// <summary>
+        /// <p>输入视频时长。</p>
+        /// </summary>
+        [JsonProperty("TotalInputVideoDuration")]
+        public ulong? TotalInputVideoDuration{ get; set; }
+
+        /// <summary>
         /// <p>AIGC 生视频任务的用量信息。</p>
         /// </summary>
         [JsonProperty("Usage")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamArraySimple(map, prefix + "ProcedureTaskIds.", this.ProcedureTaskIds);
+            this.SetParamSimple(map, prefix + "TotalInputVideoDuration", this.TotalInputVideoDuration);
             this.SetParamObj(map, prefix + "Usage.", this.Usage);
         }
     }

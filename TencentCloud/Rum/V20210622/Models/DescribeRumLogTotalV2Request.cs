@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+        /// <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Filter{ get; set; }
 
         /// <summary>
-        /// <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+        /// <p>Unix纳秒结束时间，不包含该时刻。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

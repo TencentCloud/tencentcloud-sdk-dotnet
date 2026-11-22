@@ -25,16 +25,16 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// VPC ID
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
         /// Subnet ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// VPC ID
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

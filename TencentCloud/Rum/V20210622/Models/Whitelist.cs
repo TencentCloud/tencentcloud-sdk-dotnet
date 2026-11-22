@@ -25,52 +25,58 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 截止时间
+        /// <p>截止时间</p>
         /// </summary>
         [JsonProperty("Ttl")]
         public string Ttl{ get; set; }
 
         /// <summary>
-        /// 白名单自增ID
+        /// <p>白名单自增ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// 业务唯一标识
+        /// <p>业务唯一标识</p>
         /// </summary>
         [JsonProperty("WhitelistUin")]
         public string WhitelistUin{ get; set; }
 
         /// <summary>
-        /// 创建者ID
+        /// <p>创建者ID</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// aid标识
+        /// <p>aid标识</p>
         /// </summary>
         [JsonProperty("Aid")]
         public string Aid{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
+        /// </summary>
+        [JsonProperty("CreateDatetime")]
+        public string CreateDatetime{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "CreateUser", this.CreateUser);
             this.SetParamSimple(map, prefix + "Aid", this.Aid);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "CreateDatetime", this.CreateDatetime);
         }
     }
 }

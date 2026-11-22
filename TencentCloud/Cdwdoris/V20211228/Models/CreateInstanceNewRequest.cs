@@ -147,6 +147,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? CacheDataDiskSize{ get; set; }
 
         /// <summary>
+        /// <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
+        /// </summary>
+        [JsonProperty("CacheDiskType")]
+        public string CacheDiskType{ get; set; }
+
+        /// <summary>
         /// <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
         /// </summary>
         [JsonProperty("DiskEncrypt")]
@@ -178,6 +184,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "SSCCU", this.SSCCU);
             this.SetParamSimple(map, prefix + "CacheDiskSize", this.CacheDiskSize);
             this.SetParamSimple(map, prefix + "CacheDataDiskSize", this.CacheDataDiskSize);
+            this.SetParamSimple(map, prefix + "CacheDiskType", this.CacheDiskType);
             this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
         }
     }

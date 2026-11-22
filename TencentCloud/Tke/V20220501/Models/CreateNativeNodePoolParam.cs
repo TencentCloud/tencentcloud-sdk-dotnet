@@ -175,13 +175,19 @@ namespace TencentCloud.Tke.V20220501.Models
         public string Password{ get; set; }
 
         /// <summary>
+        /// <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
+        /// </summary>
+        [JsonProperty("Registry")]
+        public RegistryConfig Registry{ get; set; }
+
+        /// <summary>
         /// <p>自定义镜像 ID</p>
         /// </summary>
         [JsonProperty("CustomImage")]
         public string CustomImage{ get; set; }
 
         /// <summary>
-        /// 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+        /// <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
         /// </summary>
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
@@ -217,6 +223,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "AutomationService", this.AutomationService);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamObj(map, prefix + "Registry.", this.Registry);
             this.SetParamSimple(map, prefix + "CustomImage", this.CustomImage);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         }

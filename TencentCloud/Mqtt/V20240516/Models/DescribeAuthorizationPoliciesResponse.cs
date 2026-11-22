@@ -25,7 +25,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 规则
+        /// <p>规则</p>
         /// </summary>
         [JsonProperty("Data")]
         public AuthorizationPolicyItem[] Data{ get; set; }

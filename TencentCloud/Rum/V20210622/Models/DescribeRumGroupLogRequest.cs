@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// <p>开始时间（必填）</p>
+        /// <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// <p>结束时间（必填）</p>
+        /// <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

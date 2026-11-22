@@ -55,6 +55,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string CpuHardLimit{ get; set; }
 
         /// <summary>
+        /// <p>资源组归属的计算组ID</p>
+        /// </summary>
+        [JsonProperty("ComputeGroup")]
+        public string ComputeGroup{ get; set; }
+
+        /// <summary>
         /// <p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
         /// </summary>
         [JsonProperty("MinCpuPercent")]
@@ -95,6 +101,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
             this.SetParamSimple(map, prefix + "EnableMemoryOverCommit", this.EnableMemoryOverCommit);
             this.SetParamSimple(map, prefix + "CpuHardLimit", this.CpuHardLimit);
+            this.SetParamSimple(map, prefix + "ComputeGroup", this.ComputeGroup);
             this.SetParamSimple(map, prefix + "MinCpuPercent", this.MinCpuPercent);
             this.SetParamSimple(map, prefix + "MinMemoryPercent", this.MinMemoryPercent);
             this.SetParamSimple(map, prefix + "MaxConcurrencyNum", this.MaxConcurrencyNum);

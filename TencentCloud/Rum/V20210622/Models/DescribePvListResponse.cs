@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// pv列表
+        /// <p>pv列表</p>
         /// </summary>
         [JsonProperty("ProjectPvSet")]
         public RumPvInfo[] ProjectPvSet{ get; set; }
