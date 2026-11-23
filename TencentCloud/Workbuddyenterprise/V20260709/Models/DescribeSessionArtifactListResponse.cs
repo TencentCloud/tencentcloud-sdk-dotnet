@@ -25,6 +25,18 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
     {
         
         /// <summary>
+        /// <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// <p>返回的物料集合</p>
+        /// </summary>
+        [JsonProperty("ArtifactSet")]
+        public SessionArtifactDetail[] ArtifactSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "ArtifactSet.", this.ArtifactSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -105,6 +105,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UseGpu{ get; set; }
 
         /// <summary>
+        /// <p>环境变量</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Environment")]
+        public EnvironmentOut Environment{ get; set; }
+
+        /// <summary>
         /// <p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p>
         /// </summary>
         [JsonProperty("CodeResult")]
@@ -141,6 +148,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// <p>CLS 日志集 ID</p>
+        /// </summary>
+        [JsonProperty("ClsLogsetId")]
+        public string ClsLogsetId{ get; set; }
+
+        /// <summary>
+        /// <p>CLS Topic ID</p>
+        /// </summary>
+        [JsonProperty("ClsTopicId")]
+        public string ClsTopicId{ get; set; }
+
+        /// <summary>
         /// <p>函数 ID</p>
         /// </summary>
         [JsonProperty("FunctionId")]
@@ -152,6 +171,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>EIP 配置</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EipConfig")]
+        public EipOutConfig EipConfig{ get; set; }
 
         /// <summary>
         /// <p>函数类型 (&quot;HTTP&quot; 或 &quot;Event&quot;)</p>
@@ -239,14 +265,18 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
             this.SetParamSimple(map, prefix + "UseGpu", this.UseGpu);
+            this.SetParamObj(map, prefix + "Environment.", this.Environment);
             this.SetParamSimple(map, prefix + "CodeResult", this.CodeResult);
             this.SetParamSimple(map, prefix + "ErrNo", this.ErrNo);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+            this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "EipConfig.", this.EipConfig);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "L5Enable", this.L5Enable);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);

@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 安全组名称，可任意命名，但不得超过60个字符。
+        /// <p>安全组名称，可任意命名，但不得超过60个字符。</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 安全组备注，最多100个字符。
+        /// <p>安全组备注，最多100个字符。</p>
         /// </summary>
         [JsonProperty("GroupDescription")]
         public string GroupDescription{ get; set; }
 
         /// <summary>
-        /// 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
+        /// <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+        /// <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

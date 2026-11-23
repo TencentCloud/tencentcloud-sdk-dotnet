@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1540</VersionPrefix>
+    <VersionPrefix>3.0.1542</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -197,6 +197,8 @@
     <Compile Include="V20220901\Models\CreateConfigGroupVersionResponse.cs" />
     <Compile Include="V20220901\Models\CreateContentIdentifierRequest.cs" />
     <Compile Include="V20220901\Models\CreateContentIdentifierResponse.cs" />
+    <Compile Include="V20220901\Models\CreateCustomGroupRequest.cs" />
+    <Compile Include="V20220901\Models\CreateCustomGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreateCustomizeErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\CreateCustomizeErrorPageResponse.cs" />
     <Compile Include="V20220901\Models\CreateDnsRecordRequest.cs" />
@@ -271,6 +273,9 @@
     <Compile Include="V20220901\Models\CustomErrorPage.cs" />
     <Compile Include="V20220901\Models\CustomExpressionField.cs" />
     <Compile Include="V20220901\Models\CustomField.cs" />
+    <Compile Include="V20220901\Models\CustomGroup.cs" />
+    <Compile Include="V20220901\Models\CustomGroupItem.cs" />
+    <Compile Include="V20220901\Models\CustomGroupReference.cs" />
     <Compile Include="V20220901\Models\CustomRule.cs" />
     <Compile Include="V20220901\Models\CustomRules.cs" />
     <Compile Include="V20220901\Models\CustomTime.cs" />
@@ -300,6 +305,8 @@
     <Compile Include="V20220901\Models\DeleteContentIdentifierResponse.cs" />
     <Compile Include="V20220901\Models\DeleteCustomErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\DeleteCustomErrorPageResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteCustomGroupRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteCustomGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteDnsRecordsRequest.cs" />
     <Compile Include="V20220901\Models\DeleteDnsRecordsResponse.cs" />
     <Compile Include="V20220901\Models\DeleteEdgeKVNamespaceRequest.cs" />
@@ -377,6 +384,12 @@
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
     <Compile Include="V20220901\Models\DescribeCustomErrorPagesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeCustomErrorPagesResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomGroupReferencesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomGroupReferencesResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomGroupRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomGroupResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomGroupsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomGroupsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackEventRequest.cs" />
@@ -705,6 +718,8 @@
     <Compile Include="V20220901\Models\ModifyContentIdentifierResponse.cs" />
     <Compile Include="V20220901\Models\ModifyCustomErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\ModifyCustomErrorPageResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyCustomGroupRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyCustomGroupResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDDoSProtectionRequest.cs" />
     <Compile Include="V20220901\Models\ModifyDDoSProtectionResponse.cs" />
     <Compile Include="V20220901\Models\ModifyDnsRecordsRequest.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1535";
+       private const string sdkVersion = "SDK_NET_3.0.1542";
 
         /// <summary>
         /// Client constructor.
@@ -5601,6 +5601,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 使用该接口启动直播字幕。
+        /// </summary>
+        /// <param name="req"><see cref="StartLiveSubtitleRequest"/></param>
+        /// <returns><see cref="StartLiveSubtitleResponse"/></returns>
+        public Task<StartLiveSubtitleResponse> StartLiveSubtitle(StartLiveSubtitleRequest req)
+        {
+            return InternalRequestAsync<StartLiveSubtitleResponse>(req, "StartLiveSubtitle");
+        }
+
+        /// <summary>
+        /// 使用该接口启动直播字幕。
+        /// </summary>
+        /// <param name="req"><see cref="StartLiveSubtitleRequest"/></param>
+        /// <returns><see cref="StartLiveSubtitleResponse"/></returns>
+        public StartLiveSubtitleResponse StartLiveSubtitleSync(StartLiveSubtitleRequest req)
+        {
+            return InternalRequestAsync<StartLiveSubtitleResponse>(req, "StartLiveSubtitle")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 调用该接口，用于停止数字人直播间。
         /// </summary>
         /// <param name="req"><see cref="StopAvatarEditingLiveRequest"/></param>
@@ -5746,6 +5767,27 @@ namespace TencentCloud.Live.V20180801
         public StopLiveStreamMonitorResponse StopLiveStreamMonitorSync(StopLiveStreamMonitorRequest req)
         {
             return InternalRequestAsync<StopLiveStreamMonitorResponse>(req, "StopLiveStreamMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用该接口将停止直播字幕。
+        /// </summary>
+        /// <param name="req"><see cref="StopLiveSubtitleRequest"/></param>
+        /// <returns><see cref="StopLiveSubtitleResponse"/></returns>
+        public Task<StopLiveSubtitleResponse> StopLiveSubtitle(StopLiveSubtitleRequest req)
+        {
+            return InternalRequestAsync<StopLiveSubtitleResponse>(req, "StopLiveSubtitle");
+        }
+
+        /// <summary>
+        /// 使用该接口将停止直播字幕。
+        /// </summary>
+        /// <param name="req"><see cref="StopLiveSubtitleRequest"/></param>
+        /// <returns><see cref="StopLiveSubtitleResponse"/></returns>
+        public StopLiveSubtitleResponse StopLiveSubtitleSync(StopLiveSubtitleRequest req)
+        {
+            return InternalRequestAsync<StopLiveSubtitleResponse>(req, "StopLiveSubtitle")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

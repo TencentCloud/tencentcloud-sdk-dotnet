@@ -25,124 +25,130 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 是否开启LDAP认证，false-不开启，true-开启
+        /// <p>是否开启LDAP认证，false-不开启，true-开启</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 服务器地址
+        /// <p>服务器地址</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 备用服务器地址
+        /// <p>备用服务器地址</p>
         /// </summary>
         [JsonProperty("IpBackup")]
         public string IpBackup{ get; set; }
 
         /// <summary>
-        /// 服务端口
+        /// <p>服务端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 是否开启SSL，false-不开启，true-开启
+        /// <p>是否开启SSL，false-不开启，true-开启</p>
         /// </summary>
         [JsonProperty("EnableSSL")]
         public bool? EnableSSL{ get; set; }
 
         /// <summary>
-        /// Base DN
+        /// <p>Base DN</p>
         /// </summary>
         [JsonProperty("BaseDN")]
         public string BaseDN{ get; set; }
 
         /// <summary>
-        /// 管理员账号
+        /// <p>管理员账号</p>
         /// </summary>
         [JsonProperty("AdminAccount")]
         public string AdminAccount{ get; set; }
 
         /// <summary>
-        /// 管理员密码
+        /// <p>管理员密码</p>
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
 
         /// <summary>
-        /// 用户属性
+        /// <p>用户属性</p>
         /// </summary>
         [JsonProperty("AttributeUser")]
         public string AttributeUser{ get; set; }
 
         /// <summary>
-        /// 用户名属性
+        /// <p>用户名属性</p>
         /// </summary>
         [JsonProperty("AttributeUserName")]
         public string AttributeUserName{ get; set; }
 
         /// <summary>
-        /// 自动同步，false-不开启，true-开启
+        /// <p>自动同步，false-不开启，true-开启</p>
         /// </summary>
         [JsonProperty("AutoSync")]
         public bool? AutoSync{ get; set; }
 
         /// <summary>
-        /// 覆盖用户信息，false-不开启，true-开启
+        /// <p>覆盖用户信息，false-不开启，true-开启</p>
         /// </summary>
         [JsonProperty("Overwrite")]
         public bool? Overwrite{ get; set; }
 
         /// <summary>
-        /// 同步周期，30～60000之间的整数
+        /// <p>同步周期，30～60000之间的整数</p>
         /// </summary>
         [JsonProperty("SyncPeriod")]
         public ulong? SyncPeriod{ get; set; }
 
         /// <summary>
-        /// 是否同步全部，false-不开启，true-开启
+        /// <p>是否同步全部，false-不开启，true-开启</p>
         /// </summary>
         [JsonProperty("SyncAll")]
         public bool? SyncAll{ get; set; }
 
         /// <summary>
-        /// 同步OU列表，SyncAll为false时必传
+        /// <p>同步OU列表，SyncAll为false时必传</p>
         /// </summary>
         [JsonProperty("SyncUnitSet")]
         public string[] SyncUnitSet{ get; set; }
 
         /// <summary>
-        /// 组织单元属性
+        /// <p>组织单元属性</p>
         /// </summary>
         [JsonProperty("AttributeUnit")]
         public string AttributeUnit{ get; set; }
 
         /// <summary>
-        /// 用户姓名属性
+        /// <p>用户姓名属性</p>
         /// </summary>
         [JsonProperty("AttributeRealName")]
         public string AttributeRealName{ get; set; }
 
         /// <summary>
-        /// 手机号属性
+        /// <p>手机号属性</p>
         /// </summary>
         [JsonProperty("AttributePhone")]
         public string AttributePhone{ get; set; }
 
         /// <summary>
-        /// 邮箱属性
+        /// <p>邮箱属性</p>
         /// </summary>
         [JsonProperty("AttributeEmail")]
         public string AttributeEmail{ get; set; }
 
         /// <summary>
-        /// 网络域Id
+        /// <p>网络域Id</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
+
+        /// <summary>
+        /// <p>堡垒机实例ID</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -170,6 +176,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "AttributePhone", this.AttributePhone);
             this.SetParamSimple(map, prefix + "AttributeEmail", this.AttributeEmail);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

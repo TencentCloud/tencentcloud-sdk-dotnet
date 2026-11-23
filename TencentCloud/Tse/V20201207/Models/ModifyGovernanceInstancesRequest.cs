@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// tse实例id。
+        /// <p>tse实例id。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 服务实例信息。
+        /// <p>服务实例信息。</p>
         /// </summary>
         [JsonProperty("GovernanceInstances")]
         public GovernanceInstanceUpdate[] GovernanceInstances{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 组ID
+        /// <p>组ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 组名称
+        /// <p>组名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 所属部门信息
+        /// <p>所属部门信息</p>
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
         /// <summary>
-        /// 个数
+        /// <p>个数</p>
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

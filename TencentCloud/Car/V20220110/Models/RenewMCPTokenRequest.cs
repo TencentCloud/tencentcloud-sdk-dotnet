@@ -24,12 +24,26 @@ namespace TencentCloud.Car.V20220110.Models
     public class RenewMCPTokenRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>TokenId</p>
+        /// </summary>
+        [JsonProperty("TokenId")]
+        public string TokenId{ get; set; }
+
+        /// <summary>
+        /// <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
+        /// </summary>
+        [JsonProperty("ExpireSeconds")]
+        public long? ExpireSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TokenId", this.TokenId);
+            this.SetParamSimple(map, prefix + "ExpireSeconds", this.ExpireSeconds);
         }
     }
 }

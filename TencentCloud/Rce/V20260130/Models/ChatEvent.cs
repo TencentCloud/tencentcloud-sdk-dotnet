@@ -48,6 +48,12 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("Receiver")]
         public Receiver Receiver{ get; set; }
 
+        /// <summary>
+        /// <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+        /// </summary>
+        [JsonProperty("Cust")]
+        public Cust[] Cust{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Rce.V20260130.Models
             this.SetParamSimple(map, prefix + "ServerId", this.ServerId);
             this.SetParamObj(map, prefix + "Sender.", this.Sender);
             this.SetParamObj(map, prefix + "Receiver.", this.Receiver);
+            this.SetParamArrayObj(map, prefix + "Cust.", this.Cust);
         }
     }
 }

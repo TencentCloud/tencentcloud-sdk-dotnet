@@ -25,7 +25,7 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// ou 列表
+        /// <p>ou 列表</p>
         /// </summary>
         [JsonProperty("UnitSet")]
         public string[] UnitSet{ get; set; }

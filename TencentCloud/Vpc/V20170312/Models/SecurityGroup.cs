@@ -25,52 +25,58 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 安全组实例ID，例如：sg-ohuuioma。
+        /// <p>安全组实例ID，例如：sg-ohuuioma。</p>
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 安全组名称，可任意命名，但不得超过60个字符。
+        /// <p>安全组名称，可任意命名，但不得超过60个字符。</p>
         /// </summary>
         [JsonProperty("SecurityGroupName")]
         public string SecurityGroupName{ get; set; }
 
         /// <summary>
-        /// 安全组备注，最多100个字符。
+        /// <p>安全组备注，最多100个字符。</p>
         /// </summary>
         [JsonProperty("SecurityGroupDesc")]
         public string SecurityGroupDesc{ get; set; }
 
         /// <summary>
-        /// 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+        /// <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 是否是默认安全组，默认安全组不支持删除。
+        /// <p>是否是默认安全组，默认安全组不支持删除。</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
-        /// 安全组创建时间。
+        /// <p>安全组创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 标签键值对。
+        /// <p>标签键值对。</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 安全组更新时间。
+        /// <p>安全组更新时间。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>是否为托管安全组</p>
+        /// </summary>
+        [JsonProperty("ServiceManaged")]
+        public bool? ServiceManaged{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ServiceManaged", this.ServiceManaged);
         }
     }
 }

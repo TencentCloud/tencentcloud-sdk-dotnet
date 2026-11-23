@@ -731,6 +731,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("NeedOfflineOldNodesNotify")]
         public bool? NeedOfflineOldNodesNotify{ get; set; }
 
+        /// <summary>
+        /// <p>0 未开启 / 1 已开启 / 2 切换中</p>
+        /// </summary>
+        [JsonProperty("LvmStatus")]
+        public long? LvmStatus{ get; set; }
+
+        /// <summary>
+        /// <p>仅 LvmStatus=2 时返回，值为流程id</p>
+        /// </summary>
+        [JsonProperty("LvmSwitchFlowId")]
+        public long? LvmSwitchFlowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -845,6 +857,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "OldEsVip", this.OldEsVip);
             this.SetParamSimple(map, prefix + "OldEsPrivateTcpUrl", this.OldEsPrivateTcpUrl);
             this.SetParamSimple(map, prefix + "NeedOfflineOldNodesNotify", this.NeedOfflineOldNodesNotify);
+            this.SetParamSimple(map, prefix + "LvmStatus", this.LvmStatus);
+            this.SetParamSimple(map, prefix + "LvmSwitchFlowId", this.LvmSwitchFlowId);
         }
     }
 }

@@ -25,97 +25,97 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 命名空间名称。
+        /// <p>命名空间名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 命名空间描述信息。
+        /// <p>命名空间描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间。
+        /// <p>修改时间。</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 命名空间下总服务数据量
+        /// <p>命名空间下总服务数据量</p>
         /// </summary>
         [JsonProperty("TotalServiceCount")]
         public long? TotalServiceCount{ get; set; }
 
         /// <summary>
-        /// 命名空间下总健康实例数量
+        /// <p>命名空间下总健康实例数量</p>
         /// </summary>
         [JsonProperty("TotalHealthInstanceCount")]
         public long? TotalHealthInstanceCount{ get; set; }
 
         /// <summary>
-        /// 命名空间下总实例数量
+        /// <p>命名空间下总实例数量</p>
         /// </summary>
         [JsonProperty("TotalInstanceCount")]
         public long? TotalInstanceCount{ get; set; }
 
         /// <summary>
-        /// 命名空间ID
+        /// <p>命名空间ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 是否可以编辑
+        /// <p>是否可以编辑</p>
         /// </summary>
         [JsonProperty("Editable")]
         public bool? Editable{ get; set; }
 
         /// <summary>
-        /// 可以操作此命名空间的用户ID列表
+        /// <p>可以操作此命名空间的用户ID列表</p>
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 可以操作此命名空间的用户组ID列表
+        /// <p>可以操作此命名空间的用户组ID列表</p>
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 移除可以操作此命名空间的用户ID列表
+        /// <p>移除可以操作此命名空间的用户ID列表</p>
         /// </summary>
         [JsonProperty("RemoveUserIds")]
         public string[] RemoveUserIds{ get; set; }
 
         /// <summary>
-        /// 移除可以操作此命名空间的用户组ID列表
+        /// <p>移除可以操作此命名空间的用户组ID列表</p>
         /// </summary>
         [JsonProperty("RemoveGroupIds")]
         public string[] RemoveGroupIds{ get; set; }
 
         /// <summary>
-        /// 该命名空间下的服务对哪些命名空间可见
+        /// <p>该命名空间下的服务对哪些命名空间可见</p>
         /// </summary>
         [JsonProperty("ServiceExportTo")]
         public string[] ServiceExportTo{ get; set; }
 
         /// <summary>
-        /// 是否开启同步到全局注册中心	
+        /// <p>是否开启同步到全局注册中心</p>
         /// </summary>
         [JsonProperty("SyncToGlobalRegistry")]
         public bool? SyncToGlobalRegistry{ get; set; }
 
         /// <summary>
-        /// 元数据
+        /// <p>元数据</p>
         /// </summary>
         [JsonProperty("Metadatas")]
         public Metadata[] Metadatas{ get; set; }

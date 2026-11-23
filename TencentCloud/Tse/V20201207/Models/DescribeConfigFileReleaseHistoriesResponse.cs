@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 数据总数量
+        /// <p>数据总数量</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史列表
+        /// <p>配置文件发布历史列表</p>
         /// </summary>
         [JsonProperty("ConfigFileReleaseHistories")]
         public ConfigFileReleaseHistory[] ConfigFileReleaseHistories{ get; set; }

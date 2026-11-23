@@ -25,6 +25,18 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
+        /// <p>TokenId</p>
+        /// </summary>
+        [JsonProperty("TokenId")]
+        public string TokenId{ get; set; }
+
+        /// <summary>
+        /// <p>MCP Token </p><p>当前值请妥善保存，后续需要使用该 Token 和 MCP Server 进行通信操作，丢失后无法再查看</p>
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Car.V20220110.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TokenId", this.TokenId);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

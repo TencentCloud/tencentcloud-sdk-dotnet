@@ -25,52 +25,49 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 命名空间名。
+        /// <p>命名空间名。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 描述信息。
+        /// <p>描述信息。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 新增的可以操作此命名空间的用户ID列表
+        /// <p>新增的可以操作此命名空间的用户ID列表</p>
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }
 
         /// <summary>
-        /// 新增的可以操作此命名空间的用户组ID列表
+        /// <p>新增的可以操作此命名空间的用户组ID列表</p>
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }
 
         /// <summary>
-        /// 移除可以操作此命名空间的用户ID列表
+        /// <p>移除可以操作此命名空间的用户ID列表</p>
         /// </summary>
         [JsonProperty("RemoveUserIds")]
         public string[] RemoveUserIds{ get; set; }
 
         /// <summary>
-        /// 移除可以操作此命名空间的用户组ID列表
+        /// <p>移除可以操作此命名空间的用户组ID列表</p>
         /// </summary>
         [JsonProperty("RemoveGroupIds")]
         public string[] RemoveGroupIds{ get; set; }
 
         /// <summary>
-        /// 该命名空间下的服务对哪些命名空间下可见，
-        /// 1、为空或者不填写，表示仅当前命名空间可见
-        /// 2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-        /// 3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+        /// <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
         /// </summary>
         [JsonProperty("ServiceExportTo")]
         public string[] ServiceExportTo{ get; set; }
 
         /// <summary>
-        /// 是否开启同步到全局注册中心
+        /// <p>是否开启同步到全局注册中心</p>
         /// </summary>
         [JsonProperty("SyncToGlobalRegistry")]
         public bool? SyncToGlobalRegistry{ get; set; }

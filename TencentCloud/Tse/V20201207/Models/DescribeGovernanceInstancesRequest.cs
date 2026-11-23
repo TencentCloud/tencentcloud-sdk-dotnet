@@ -25,73 +25,73 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 实例所在的服务名。
+        /// <p>实例所在的服务名。</p>
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// 实例所在命名空间名。
+        /// <p>实例所在命名空间名。</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// tse实例id。
+        /// <p>tse实例id。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 根据实例ip过滤，多个ip使用英文逗号分隔。
+        /// <p>根据实例ip过滤，多个ip使用英文逗号分隔。</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 根据实例版本过滤。
+        /// <p>根据实例版本过滤。</p>
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
 
         /// <summary>
-        /// 根据实例协议过滤。
+        /// <p>根据实例协议过滤。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 根据实例健康状态过滤。false：表示不健康，true：表示健康。
+        /// <p>根据实例健康状态过滤。false：表示不健康，true：表示健康。</p>
         /// </summary>
         [JsonProperty("HealthStatus")]
         public bool? HealthStatus{ get; set; }
 
         /// <summary>
-        /// 根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。
+        /// <p>根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。</p>
         /// </summary>
         [JsonProperty("Isolate")]
         public bool? Isolate{ get; set; }
 
         /// <summary>
-        /// 根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。
+        /// <p>根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。</p>
         /// </summary>
         [JsonProperty("Metadatas")]
         public Metadata[] Metadatas{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// <p>地域</p>
         /// </summary>
         [JsonProperty("Location")]
         public Location Location{ get; set; }

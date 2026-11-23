@@ -28,7 +28,7 @@ namespace TencentCloud.Tcbr.V20220217
 
        private const string endpoint = "tcbr.tencentcloudapi.com";
        private const string version = "2022-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1542";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Tcbr.V20220217
         public DescribeServerManageTaskResponse DescribeServerManageTaskSync(DescribeServerManageTaskRequest req)
         {
             return InternalRequestAsync<DescribeServerManageTaskResponse>(req, "DescribeServerManageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 DescribeStableIPTask 用于修改固定 IP 任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStableIPTaskRequest"/></param>
+        /// <returns><see cref="DescribeStableIPTaskResponse"/></returns>
+        public Task<DescribeStableIPTaskResponse> DescribeStableIPTask(DescribeStableIPTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeStableIPTaskResponse>(req, "DescribeStableIPTask");
+        }
+
+        /// <summary>
+        /// 本接口 DescribeStableIPTask 用于修改固定 IP 任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStableIPTaskRequest"/></param>
+        /// <returns><see cref="DescribeStableIPTaskResponse"/></returns>
+        public DescribeStableIPTaskResponse DescribeStableIPTaskSync(DescribeStableIPTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeStableIPTaskResponse>(req, "DescribeStableIPTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

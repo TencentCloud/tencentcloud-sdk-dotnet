@@ -71,6 +71,13 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("AppendResourceAttributes")]
         public bool? AppendResourceAttributes{ get; set; }
 
+        /// <summary>
+        /// 实际生效的关联记录 ID（存量 0 解析为默认关联）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssociationId")]
+        public long? AssociationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +91,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
             this.SetParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
             this.SetParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
+            this.SetParamSimple(map, prefix + "AssociationId", this.AssociationId);
         }
     }
 }

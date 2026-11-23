@@ -72,6 +72,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
+        /// <summary>
+        /// <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
+        /// </summary>
+        [JsonProperty("CpuCores")]
+        public float? CpuCores{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
             this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "CpuCores", this.CpuCores);
         }
     }
 }

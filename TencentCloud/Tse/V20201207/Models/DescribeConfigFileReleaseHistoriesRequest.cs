@@ -25,49 +25,49 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// TSE实例id
+        /// <p>TSE实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 命名空间
+        /// <p>命名空间</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 组
+        /// <p>组</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
+        /// <p>发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续</p>
         /// </summary>
         [JsonProperty("EndId")]
         public ulong? EndId{ get; set; }
 
         /// <summary>
-        /// 配置文件ID
+        /// <p>配置文件ID</p>
         /// </summary>
         [JsonProperty("ConfigFileId")]
         public string ConfigFileId{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100。	
+        /// <p>返回数量，默认为20，最大值为100。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。	
+        /// <p>偏移量，默认为0。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

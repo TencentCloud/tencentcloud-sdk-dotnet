@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 创建是否成功。
+        /// <p>创建是否成功。</p>
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

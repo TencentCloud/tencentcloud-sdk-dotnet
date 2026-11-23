@@ -25,121 +25,121 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 配置文件发布历史记录id
+        /// <p>配置文件发布历史记录id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史名称
+        /// <p>配置文件发布历史名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史命名空间
+        /// <p>配置文件发布历史命名空间</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史组
+        /// <p>配置文件发布历史组</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史名称
+        /// <p>配置文件发布历史名称</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史内容
+        /// <p>配置文件发布历史内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史格式
+        /// <p>配置文件发布历史格式</p>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史注释
+        /// <p>配置文件发布历史注释</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史Md5
+        /// <p>配置文件发布历史Md5</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史类型
+        /// <p>配置文件发布历史类型</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史状态
+        /// <p>配置文件发布历史状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 配置文件发布历史标签组
+        /// <p>配置文件发布历史标签组</p>
         /// </summary>
         [JsonProperty("Tags")]
         public ConfigFileTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 配置文件发布创建时间
+        /// <p>配置文件发布创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 配置文件发布创建者
+        /// <p>配置文件发布创建者</p>
         /// </summary>
         [JsonProperty("CreateBy")]
         public string CreateBy{ get; set; }
 
         /// <summary>
-        /// 配置文件发布修改时间
+        /// <p>配置文件发布修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 配置文件发布修改者
+        /// <p>配置文件发布修改者</p>
         /// </summary>
         [JsonProperty("ModifyBy")]
         public string ModifyBy{ get; set; }
 
         /// <summary>
-        /// 发布描述
+        /// <p>发布描述</p>
         /// </summary>
         [JsonProperty("ReleaseDescription")]
         public string ReleaseDescription{ get; set; }
 
         /// <summary>
-        /// 原因，用于失败时原因展示
+        /// <p>原因，用于失败时原因展示</p>
         /// </summary>
         [JsonProperty("ReleaseReason")]
         public string ReleaseReason{ get; set; }
 
         /// <summary>
-        /// 配置文件类型
+        /// <p>配置文件类型</p>
         /// </summary>
         [JsonProperty("ConfigFileSupportedClient")]
         public long? ConfigFileSupportedClient{ get; set; }
 
         /// <summary>
-        /// 配置文件持久化
+        /// <p>配置文件持久化</p>
         /// </summary>
         [JsonProperty("ConfigFilePersistent")]
         public ConfigFilePersistent ConfigFilePersistent{ get; set; }

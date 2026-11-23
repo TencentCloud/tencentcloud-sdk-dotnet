@@ -24,12 +24,26 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
     public class DeleteSessionArtifactListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>会话ID</p>
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// <p>需要删除的物料ID集合</p>
+        /// </summary>
+        [JsonProperty("ArtifactIds")]
+        public string[] ArtifactIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamArraySimple(map, prefix + "ArtifactIds.", this.ArtifactIds);
         }
     }
 }

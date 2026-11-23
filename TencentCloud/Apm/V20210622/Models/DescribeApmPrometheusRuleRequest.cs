@@ -30,6 +30,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 按有效关联过滤，0 或不传表示不过滤
+        /// </summary>
+        [JsonProperty("AssociationId")]
+        public long? AssociationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AssociationId", this.AssociationId);
         }
     }
 }

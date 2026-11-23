@@ -25,55 +25,55 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 配置文件模板id
+        /// <p>配置文件模板id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 配置文件模板名称
+        /// <p>配置文件模板名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 配置文件模板内容
+        /// <p>配置文件模板内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 配置文件模板格式
+        /// <p>配置文件模板格式</p>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 配置文件模板注释
+        /// <p>配置文件模板注释</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 配置文件模板创建时间
+        /// <p>配置文件模板创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 配置文件模板创建者
+        /// <p>配置文件模板创建者</p>
         /// </summary>
         [JsonProperty("CreateBy")]
         public string CreateBy{ get; set; }
 
         /// <summary>
-        /// 配置文件模板修改时间
+        /// <p>配置文件模板修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 配置文件模板修改者
+        /// <p>配置文件模板修改者</p>
         /// </summary>
         [JsonProperty("ModifyBy")]
         public string ModifyBy{ get; set; }

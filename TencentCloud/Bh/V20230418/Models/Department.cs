@@ -25,25 +25,25 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 部门ID
+        /// <p>部门ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 部门名称，1 - 256个字符
+        /// <p>部门名称，1 - 256个字符</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 部门管理员账号ID
+        /// <p>部门管理员账号ID</p>
         /// </summary>
         [JsonProperty("Managers")]
         public string[] Managers{ get; set; }
 
         /// <summary>
-        /// 管理员用户
+        /// <p>管理员用户</p>
         /// </summary>
         [JsonProperty("ManagerUsers")]
         public DepartmentManagerUser[] ManagerUsers{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
+        /// <summary>
+        /// <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
+        /// </summary>
+        [JsonProperty("MetricEntry")]
+        public string MetricEntry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         {
             this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "MetricEntry", this.MetricEntry);
         }
     }
 }

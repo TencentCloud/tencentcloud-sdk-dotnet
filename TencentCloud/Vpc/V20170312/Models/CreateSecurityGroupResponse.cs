@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 安全组对象。
+        /// <p>安全组对象。</p>
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public SecurityGroup SecurityGroup{ get; set; }

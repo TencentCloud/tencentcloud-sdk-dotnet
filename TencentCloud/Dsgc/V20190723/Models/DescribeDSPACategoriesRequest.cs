@@ -34,12 +34,14 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 数据分类ID
         /// </summary>
         [JsonProperty("CategoryId")]
+        [System.Obsolete]
         public long? CategoryId{ get; set; }
 
         /// <summary>
         /// 敏感数据分类名称
         /// </summary>
         [JsonProperty("Name")]
+        [System.Obsolete]
         public string Name{ get; set; }
 
         /// <summary>
@@ -54,6 +56,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 过滤条件（Id:分类id,Name:分类名称）
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 关键字
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +79,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }

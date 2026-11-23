@@ -25,115 +25,115 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 配置文件id
+        /// <p>配置文件id</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 配置文件名称
+        /// <p>配置文件名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 配置文件命名空间
+        /// <p>配置文件命名空间</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 配置文件组
+        /// <p>配置文件组</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 配置文件内容
+        /// <p>配置文件内容</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 配置文件格式
+        /// <p>配置文件格式</p>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 配置文件注释
+        /// <p>配置文件注释</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 配置文件状态
+        /// <p>配置文件状态</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 配置文件标签数组
+        /// <p>配置文件标签数组</p>
         /// </summary>
         [JsonProperty("Tags")]
         public ConfigFileTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 配置文件创建时间
+        /// <p>配置文件创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 配置文件创建者
+        /// <p>配置文件创建者</p>
         /// </summary>
         [JsonProperty("CreateBy")]
         public string CreateBy{ get; set; }
 
         /// <summary>
-        /// 配置文件修改时间
+        /// <p>配置文件修改时间</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 配置文件修改者
+        /// <p>配置文件修改者</p>
         /// </summary>
         [JsonProperty("ModifyBy")]
         public string ModifyBy{ get; set; }
 
         /// <summary>
-        /// 配置文件发布时间
+        /// <p>配置文件发布时间</p>
         /// </summary>
         [JsonProperty("ReleaseTime")]
         public string ReleaseTime{ get; set; }
 
         /// <summary>
-        /// 配置文件发布者
+        /// <p>配置文件发布者</p>
         /// </summary>
         [JsonProperty("ReleaseBy")]
         public string ReleaseBy{ get; set; }
 
         /// <summary>
-        /// 配置文件类型
+        /// <p>配置文件类型</p>
         /// </summary>
         [JsonProperty("ConfigFileSupportedClient")]
         public long? ConfigFileSupportedClient{ get; set; }
 
         /// <summary>
-        /// 配置文件持久化
+        /// <p>配置文件持久化</p>
         /// </summary>
         [JsonProperty("ConfigFilePersistent")]
         public ConfigFilePersistent ConfigFilePersistent{ get; set; }
 
         /// <summary>
-        /// 是否开启加密算法
+        /// <p>是否开启加密算法</p>
         /// </summary>
         [JsonProperty("Encrypted")]
         public bool? Encrypted{ get; set; }
 
         /// <summary>
-        /// 加密算法
+        /// <p>加密算法</p>
         /// </summary>
         [JsonProperty("EncryptAlgo")]
         public string EncryptAlgo{ get; set; }

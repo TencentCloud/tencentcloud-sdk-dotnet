@@ -288,6 +288,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("AlarmPolicyIds")]
         public string[] AlarmPolicyIds{ get; set; }
 
+        /// <summary>
+        /// <p>LVM 控制台开关，0/不开，1/显式开启</p>
+        /// </summary>
+        [JsonProperty("EnableLvm")]
+        public long? EnableLvm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -338,6 +344,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
             this.SetParamSimple(map, prefix + "EnableKibanaPublicAccess", this.EnableKibanaPublicAccess);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
+            this.SetParamSimple(map, prefix + "EnableLvm", this.EnableLvm);
         }
     }
 }

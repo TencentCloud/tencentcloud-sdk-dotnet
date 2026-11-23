@@ -54,6 +54,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("EnableSingleLogin")]
         public ulong? EnableSingleLogin{ get; set; }
 
+        /// <summary>
+        /// <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+        /// </summary>
+        [JsonProperty("EnableDeviceFingerprintVerify")]
+        public ulong? EnableDeviceFingerprintVerify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "LockTime", this.LockTime);
             this.SetParamSimple(map, prefix + "InactiveUserLock", this.InactiveUserLock);
             this.SetParamSimple(map, prefix + "EnableSingleLogin", this.EnableSingleLogin);
+            this.SetParamSimple(map, prefix + "EnableDeviceFingerprintVerify", this.EnableDeviceFingerprintVerify);
         }
     }
 }

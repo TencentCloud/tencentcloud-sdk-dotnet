@@ -25,64 +25,70 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 是否开启LDAP认证，必须为true
+        /// <p>是否开启LDAP认证，必须为true</p>
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 服务器地址
+        /// <p>服务器地址</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 服务端口
+        /// <p>服务端口</p>
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 是否开启SSL，false-不开启，true-开启
+        /// <p>是否开启SSL，false-不开启，true-开启</p>
         /// </summary>
         [JsonProperty("EnableSSL")]
         public bool? EnableSSL{ get; set; }
 
         /// <summary>
-        /// Base DN
+        /// <p>Base DN</p>
         /// </summary>
         [JsonProperty("BaseDN")]
         public string BaseDN{ get; set; }
 
         /// <summary>
-        /// 管理员账号
+        /// <p>管理员账号</p>
         /// </summary>
         [JsonProperty("AdminAccount")]
         public string AdminAccount{ get; set; }
 
         /// <summary>
-        /// 管理员密码
+        /// <p>管理员密码</p>
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
 
         /// <summary>
-        /// 备用服务器地址
+        /// <p>备用服务器地址</p>
         /// </summary>
         [JsonProperty("IpBackup")]
         public string IpBackup{ get; set; }
 
         /// <summary>
-        /// 网络域id
+        /// <p>网络域id</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 用户名称映射属性
+        /// <p>用户名称映射属性</p>
         /// </summary>
         [JsonProperty("AttributeUserName")]
         public string AttributeUserName{ get; set; }
+
+        /// <summary>
+        /// <p>堡垒机实例ID</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "IpBackup", this.IpBackup);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
             this.SetParamSimple(map, prefix + "AttributeUserName", this.AttributeUserName);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

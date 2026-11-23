@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1537</VersionPrefix>
+    <VersionPrefix>3.0.1542</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -265,6 +265,7 @@
     <Compile Include="V20180608\Models\DownloadFunctionRequest.cs" />
     <Compile Include="V20180608\Models\DownloadFunctionResponse.cs" />
     <Compile Include="V20180608\Models\DropIndex.cs" />
+    <Compile Include="V20180608\Models\EipOutConfig.cs" />
     <Compile Include="V20180608\Models\EmailProviderConfig.cs" />
     <Compile Include="V20180608\Models\EmailSmtpConfig.cs" />
     <Compile Include="V20180608\Models\EmailTemplateConfig.cs" />
@@ -273,6 +274,7 @@
     <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="V20180608\Models\EnvInfo.cs" />
     <Compile Include="V20180608\Models\EnvPkgCreditsUsage.cs" />
+    <Compile Include="V20180608\Models\EnvironmentOut.cs" />
     <Compile Include="V20180608\Models\ExecutePGSqlRequest.cs" />
     <Compile Include="V20180608\Models\ExecutePGSqlResponse.cs" />
     <Compile Include="V20180608\Models\ExternalStorage.cs" />

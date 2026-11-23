@@ -25,6 +25,36 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
     {
         
         /// <summary>
+        /// <p>产物下载地址</p>
+        /// </summary>
+        [JsonProperty("DownloadUrl")]
+        public string DownloadUrl{ get; set; }
+
+        /// <summary>
+        /// <p>产物过期时间</p>
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public string ExpiredTime{ get; set; }
+
+        /// <summary>
+        /// <p>产物对应文件名</p>
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// <p>产物文件大小</p>
+        /// </summary>
+        [JsonProperty("FileSizeBytes")]
+        public long? FileSizeBytes{ get; set; }
+
+        /// <summary>
+        /// <p>文件摘要</p>
+        /// </summary>
+        [JsonProperty("FileSha256")]
+        public string FileSha256{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +66,11 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "FileSizeBytes", this.FileSizeBytes);
+            this.SetParamSimple(map, prefix + "FileSha256", this.FileSha256);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

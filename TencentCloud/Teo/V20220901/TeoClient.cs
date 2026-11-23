@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1540";
+       private const string sdkVersion = "SDK_NET_3.0.1542";
 
         /// <summary>
         /// Client constructor.
@@ -397,6 +397,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateContentIdentifierResponse CreateContentIdentifierSync(CreateContentIdentifierRequest req)
         {
             return InternalRequestAsync<CreateContentIdentifierResponse>(req, "CreateContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建自定义组。自定义组用于集中管理一组可复用的匹配条目，例如可以将多个 JA3/JA4 TLS 指纹保存为一个 TLS 指纹组，并在安全规则中直接引用该组，从而避免在多条规则中重复维护相同的指纹列表。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomGroupRequest"/></param>
+        /// <returns><see cref="CreateCustomGroupResponse"/></returns>
+        public Task<CreateCustomGroupResponse> CreateCustomGroup(CreateCustomGroupRequest req)
+        {
+            return InternalRequestAsync<CreateCustomGroupResponse>(req, "CreateCustomGroup");
+        }
+
+        /// <summary>
+        /// 创建自定义组。自定义组用于集中管理一组可复用的匹配条目，例如可以将多个 JA3/JA4 TLS 指纹保存为一个 TLS 指纹组，并在安全规则中直接引用该组，从而避免在多条规则中重复维护相同的指纹列表。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomGroupRequest"/></param>
+        /// <returns><see cref="CreateCustomGroupResponse"/></returns>
+        public CreateCustomGroupResponse CreateCustomGroupSync(CreateCustomGroupRequest req)
+        {
+            return InternalRequestAsync<CreateCustomGroupResponse>(req, "CreateCustomGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1286,6 +1307,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 删除指定自定义组。若该组已被规则引用，则不允许删除，请先解除引用关系。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomGroupRequest"/></param>
+        /// <returns><see cref="DeleteCustomGroupResponse"/></returns>
+        public Task<DeleteCustomGroupResponse> DeleteCustomGroup(DeleteCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomGroupResponse>(req, "DeleteCustomGroup");
+        }
+
+        /// <summary>
+        /// 删除指定自定义组。若该组已被规则引用，则不允许删除，请先解除引用关系。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomGroupRequest"/></param>
+        /// <returns><see cref="DeleteCustomGroupResponse"/></returns>
+        public DeleteCustomGroupResponse DeleteCustomGroupSync(DeleteCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomGroupResponse>(req, "DeleteCustomGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 您可以用本接口批量删除 DNS 记录。
         /// </summary>
         /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
@@ -2095,6 +2137,69 @@ namespace TencentCloud.Teo.V20220901
         public DescribeCustomErrorPagesResponse DescribeCustomErrorPagesSync(DescribeCustomErrorPagesRequest req)
         {
             return InternalRequestAsync<DescribeCustomErrorPagesResponse>(req, "DescribeCustomErrorPages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询单个自定义组的详细信息，包含组内全量条目（通过 Limit/Offset 分页返回）。DescribeCustomGroups 列表接口每组最多返回前 500 个条目，如需获取全量条目，请使用本接口。GroupId 可通过 CreateCustomGroup 创建时返回或 DescribeCustomGroups 查询获取。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupResponse"/></returns>
+        public Task<DescribeCustomGroupResponse> DescribeCustomGroup(DescribeCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupResponse>(req, "DescribeCustomGroup");
+        }
+
+        /// <summary>
+        /// 查询单个自定义组的详细信息，包含组内全量条目（通过 Limit/Offset 分页返回）。DescribeCustomGroups 列表接口每组最多返回前 500 个条目，如需获取全量条目，请使用本接口。GroupId 可通过 CreateCustomGroup 创建时返回或 DescribeCustomGroups 查询获取。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupResponse"/></returns>
+        public DescribeCustomGroupResponse DescribeCustomGroupSync(DescribeCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupResponse>(req, "DescribeCustomGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取使用自定义组的安全策略配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupReferencesResponse"/></returns>
+        public Task<DescribeCustomGroupReferencesResponse> DescribeCustomGroupReferences(DescribeCustomGroupReferencesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupReferencesResponse>(req, "DescribeCustomGroupReferences");
+        }
+
+        /// <summary>
+        /// 获取使用自定义组的安全策略配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupReferencesResponse"/></returns>
+        public DescribeCustomGroupReferencesResponse DescribeCustomGroupReferencesSync(DescribeCustomGroupReferencesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupReferencesResponse>(req, "DescribeCustomGroupReferences")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定站点下的自定义组列表。本接口只返回每个自定义组前 500 个条目，如需查询组内完整条目请使用 DescribeSecurityCustomGroup 接口查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupsRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupsResponse"/></returns>
+        public Task<DescribeCustomGroupsResponse> DescribeCustomGroups(DescribeCustomGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupsResponse>(req, "DescribeCustomGroups");
+        }
+
+        /// <summary>
+        /// 查询指定站点下的自定义组列表。本接口只返回每个自定义组前 500 个条目，如需查询组内完整条目请使用 DescribeSecurityCustomGroup 接口查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupsRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupsResponse"/></returns>
+        public DescribeCustomGroupsResponse DescribeCustomGroupsSync(DescribeCustomGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupsResponse>(req, "DescribeCustomGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4288,6 +4393,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改自定义组内容。GroupType 创建后不可修改，修改组内条目时，可通过 GroupItemOperation 指定替换、追加或移除操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomGroupRequest"/></param>
+        /// <returns><see cref="ModifyCustomGroupResponse"/></returns>
+        public Task<ModifyCustomGroupResponse> ModifyCustomGroup(ModifyCustomGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomGroupResponse>(req, "ModifyCustomGroup");
+        }
+
+        /// <summary>
+        /// 修改自定义组内容。GroupType 创建后不可修改，修改组内条目时，可通过 GroupItemOperation 指定替换、追加或移除操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomGroupRequest"/></param>
+        /// <returns><see cref="ModifyCustomGroupResponse"/></returns>
+        public ModifyCustomGroupResponse ModifyCustomGroupSync(ModifyCustomGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomGroupResponse>(req, "ModifyCustomGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

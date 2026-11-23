@@ -24,12 +24,26 @@ namespace TencentCloud.Workbuddyenterprise.V20260709.Models
     public class DescribeSessionArtifactDownloadUrlRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>物料ID</p>
+        /// </summary>
+        [JsonProperty("ArtifactId")]
+        public string ArtifactId{ get; set; }
+
+        /// <summary>
+        /// <p>产物过期时间</p><p>单位：s</p>
+        /// </summary>
+        [JsonProperty("ExpiredSeconds")]
+        public long? ExpiredSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ArtifactId", this.ArtifactId);
+            this.SetParamSimple(map, prefix + "ExpiredSeconds", this.ExpiredSeconds);
         }
     }
 }
