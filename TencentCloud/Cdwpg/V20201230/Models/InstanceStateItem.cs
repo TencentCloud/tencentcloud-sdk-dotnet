@@ -25,6 +25,42 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
+        /// <p>集群备份任务开启状态2</p>
+        /// </summary>
+        [JsonProperty("BackupOpenStatus")]
+        public long? BackupOpenStatus{ get; set; }
+
+        /// <summary>
+        /// <p>集群备份任务开启状态</p>
+        /// </summary>
+        [JsonProperty("BackupStatus")]
+        public long? BackupStatus{ get; set; }
+
+        /// <summary>
+        /// <p>集群操作创建时间</p>
+        /// </summary>
+        [JsonProperty("FlowCreateTime")]
+        public string FlowCreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>集群流程错误信息</p>
+        /// </summary>
+        [JsonProperty("FlowMsg")]
+        public string FlowMsg{ get; set; }
+
+        /// <summary>
+        /// <p>集群操作名称</p>
+        /// </summary>
+        [JsonProperty("FlowName")]
+        public string FlowName{ get; set; }
+
+        /// <summary>
+        /// <p>集群操作进度</p>
+        /// </summary>
+        [JsonProperty("FlowProgress")]
+        public float? FlowProgress{ get; set; }
+
+        /// <summary>
         /// <p>集群实例名称</p>
         /// </summary>
         [JsonProperty("InstanceId")]
@@ -43,46 +79,16 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public string InstanceStateDesc{ get; set; }
 
         /// <summary>
-        /// <p>集群备份任务开启状态</p>
-        /// </summary>
-        [JsonProperty("BackupStatus")]
-        public long? BackupStatus{ get; set; }
-
-        /// <summary>
-        /// <p>集群备份任务开启状态2</p>
-        /// </summary>
-        [JsonProperty("BackupOpenStatus")]
-        public long? BackupOpenStatus{ get; set; }
-
-        /// <summary>
-        /// <p>集群操作创建时间</p>
-        /// </summary>
-        [JsonProperty("FlowCreateTime")]
-        public string FlowCreateTime{ get; set; }
-
-        /// <summary>
-        /// <p>集群操作名称</p>
-        /// </summary>
-        [JsonProperty("FlowName")]
-        public string FlowName{ get; set; }
-
-        /// <summary>
-        /// <p>集群操作进度</p>
-        /// </summary>
-        [JsonProperty("FlowProgress")]
-        public float? FlowProgress{ get; set; }
-
-        /// <summary>
-        /// <p>集群流程错误信息</p>
-        /// </summary>
-        [JsonProperty("FlowMsg")]
-        public string FlowMsg{ get; set; }
-
-        /// <summary>
         /// <p>当前步骤的名称</p>
         /// </summary>
         [JsonProperty("ProcessName")]
         public string ProcessName{ get; set; }
+
+        /// <summary>
+        /// <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中</p>
+        /// </summary>
+        [JsonProperty("RecoveryState")]
+        public string RecoveryState{ get; set; }
 
 
         /// <summary>
@@ -90,16 +96,17 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BackupOpenStatus", this.BackupOpenStatus);
+            this.SetParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
+            this.SetParamSimple(map, prefix + "FlowCreateTime", this.FlowCreateTime);
+            this.SetParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
+            this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
+            this.SetParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
             this.SetParamSimple(map, prefix + "InstanceStateDesc", this.InstanceStateDesc);
-            this.SetParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
-            this.SetParamSimple(map, prefix + "BackupOpenStatus", this.BackupOpenStatus);
-            this.SetParamSimple(map, prefix + "FlowCreateTime", this.FlowCreateTime);
-            this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
-            this.SetParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
-            this.SetParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
             this.SetParamSimple(map, prefix + "ProcessName", this.ProcessName);
+            this.SetParamSimple(map, prefix + "RecoveryState", this.RecoveryState);
         }
     }
 }

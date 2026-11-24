@@ -25,16 +25,16 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// qps阈值控制维度,包含:second、minute、hour、day、month、year
-        /// </summary>
-        [JsonProperty("Unit")]
-        public string Unit{ get; set; }
-
-        /// <summary>
         /// 阈值
         /// </summary>
         [JsonProperty("Max")]
         public long? Max{ get; set; }
+
+        /// <summary>
+        /// qps阈值控制维度,包含:second、minute、hour、day、month、year
+        /// </summary>
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tse.V20201207.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "Max", this.Max);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
         }
     }
 }

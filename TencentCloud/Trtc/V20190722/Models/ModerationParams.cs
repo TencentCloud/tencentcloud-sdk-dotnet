@@ -67,9 +67,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SaveModerationFile{ get; set; }
 
         /// <summary>
-        /// <p>是否回调所有内容理解结果:
-        /// 0 默认回调所有结果 
-        /// 1 仅回调命中结果</p>
+        /// <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
         /// </summary>
         [JsonProperty("CallbackAllResults")]
         public ulong? CallbackAllResults{ get; set; }

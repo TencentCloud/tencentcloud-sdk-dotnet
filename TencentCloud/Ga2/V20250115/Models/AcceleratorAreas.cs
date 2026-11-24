@@ -31,6 +31,12 @@ namespace TencentCloud.Ga2.V20250115.Models
         public string AccelerateRegion{ get; set; }
 
         /// <summary>
+        /// <p>加速地域名称。</p>
+        /// </summary>
+        [JsonProperty("AccelerateRegionName")]
+        public string AccelerateRegionName{ get; set; }
+
+        /// <summary>
         /// <p>带宽。</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
@@ -74,6 +80,7 @@ namespace TencentCloud.Ga2.V20250115.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccelerateRegion", this.AccelerateRegion);
+            this.SetParamSimple(map, prefix + "AccelerateRegionName", this.AccelerateRegionName);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "IspType", this.IspType);
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);

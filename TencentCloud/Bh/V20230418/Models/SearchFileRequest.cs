@@ -25,79 +25,79 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 查询开始时间
+        /// <p>查询开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// <p>查询结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// <p>姓名</p>
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 资产ID
+        /// <p>资产ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 资产名称
+        /// <p>资产名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 资产公网IP
+        /// <p>资产公网IP</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 资产内网IP
+        /// <p>资产内网IP</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+        /// <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
         /// </summary>
         [JsonProperty("Method")]
         public ulong?[] Method{ get; set; }
 
         /// <summary>
-        /// 可填写路径名或文件（夹）名
+        /// <p>可填写路径名或文件（夹）名</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 1-已执行，  2-被阻断
+        /// <p>1-已放行，  2-已阻断</p>
         /// </summary>
         [JsonProperty("AuditAction")]
         public ulong?[] AuditAction{ get; set; }
 
         /// <summary>
-        /// 分页的页内记录数，默认为20，最大200
+        /// <p>分页的页内记录数，默认为20，最大200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移位置，默认值为0
+        /// <p>分页偏移位置，默认值为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

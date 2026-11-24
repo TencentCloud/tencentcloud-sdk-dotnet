@@ -90,6 +90,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("EnableSandbox")]
         public bool? EnableSandbox{ get; set; }
 
+        /// <summary>
+        /// <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
+        /// </summary>
+        [JsonProperty("ValueScope")]
+        public long? ValueScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamArraySimple(map, prefix + "EndpointList.", this.EndpointList);
             this.SetParamSimple(map, prefix + "IsBuiltin", this.IsBuiltin);
             this.SetParamSimple(map, prefix + "EnableSandbox", this.EnableSandbox);
+            this.SetParamSimple(map, prefix + "ValueScope", this.ValueScope);
         }
     }
 }

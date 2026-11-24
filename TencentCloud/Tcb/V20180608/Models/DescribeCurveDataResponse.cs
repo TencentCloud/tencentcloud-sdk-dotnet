@@ -55,7 +55,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public long?[] Values{ get; set; }
 
         /// <summary>
-        /// <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+        /// <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
         /// </summary>
         [JsonProperty("Time")]
         public long?[] Time{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public float?[] NewValues{ get; set; }
 
         /// <summary>
-        /// <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+        /// <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
         /// </summary>
         [JsonProperty("Statistics")]
         public string Statistics{ get; set; }

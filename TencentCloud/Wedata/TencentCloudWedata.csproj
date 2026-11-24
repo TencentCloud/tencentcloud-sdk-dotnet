@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1541</VersionPrefix>
+    <VersionPrefix>3.0.1543</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1052,6 +1052,7 @@
     <Compile Include="V20210820\Models\WorkflowDsDTO.cs" />
     <Compile Include="V20210820\Models\WorkflowExtOpsDto.cs" />
     <Compile Include="V20210820\Models\WorkflowExtOpsDtoPage.cs" />
+    <Compile Include="V20210820\Models\WorkflowLabel.cs" />
     <Compile Include="V20210820\Models\WorkflowScheduleDtoDs.cs" />
     <Compile Include="V20210820\Models\WorkflowSchedulerOpsDto.cs" />
     <Compile Include="V20210820\Models\WorkflowTaskCountOpsDto.cs" />
@@ -1617,6 +1618,7 @@
     <Compile Include="V20250806\Models\TimeOutStrategyInfo.cs" />
     <Compile Include="V20250806\Models\TrendData.cs" />
     <Compile Include="V20250806\Models\TriggerDependencyConfigPage.cs" />
+    <Compile Include="V20250806\Models\TriggerTableUpdateRecord.cs" />
     <Compile Include="V20250806\Models\TriggerTask.cs" />
     <Compile Include="V20250806\Models\TriggerTaskBaseAttribute.cs" />
     <Compile Include="V20250806\Models\TriggerTaskBrief.cs" />
@@ -1699,6 +1701,7 @@
     <Compile Include="V20250806\Models\WorkflowFolderPage.cs" />
     <Compile Include="V20250806\Models\WorkflowGeneralTaskParam.cs" />
     <Compile Include="V20250806\Models\WorkflowInfo.cs" />
+    <Compile Include="V20250806\Models\WorkflowLabel.cs" />
     <Compile Include="V20250806\Models\WorkflowMaxPermission.cs" />
     <Compile Include="V20250806\Models\WorkflowPermission.cs" />
     <Compile Include="V20250806\Models\WorkflowPermissionPage.cs" />

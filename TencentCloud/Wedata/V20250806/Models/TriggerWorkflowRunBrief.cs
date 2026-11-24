@@ -283,6 +283,19 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
+        /// <summary>
+        /// <p>表更新触发的运行中，本次触发涉及的表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerTableUpdateRecords")]
+        public TriggerTableUpdateRecord[] TriggerTableUpdateRecords{ get; set; }
+
+        /// <summary>
+        /// <p>工作流标签列表，仅工作流调度模式返回</p>
+        /// </summary>
+        [JsonProperty("WorkflowLabels")]
+        public WorkflowLabel[] WorkflowLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +339,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ParentTaskExecutionId", this.ParentTaskExecutionId);
             this.SetParamSimple(map, prefix + "ParentTaskExecutionName", this.ParentTaskExecutionName);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+            this.SetParamArrayObj(map, prefix + "TriggerTableUpdateRecords.", this.TriggerTableUpdateRecords);
+            this.SetParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
         }
     }
 }

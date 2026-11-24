@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1538";
+       private const string sdkVersion = "SDK_NET_3.0.1543";
 
         /// <summary>
         /// Client constructor.
@@ -2263,6 +2263,27 @@ namespace TencentCloud.Tione.V20211111
         public ModifyServiceGroupWeightsResponse ModifyServiceGroupWeightsSync(ModifyServiceGroupWeightsRequest req)
         {
             return InternalRequestAsync<ModifyServiceGroupWeightsResponse>(req, "ModifyServiceGroupWeights")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新训练任务的调度策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrainingTaskSchedulingPolicyRequest"/></param>
+        /// <returns><see cref="ModifyTrainingTaskSchedulingPolicyResponse"/></returns>
+        public Task<ModifyTrainingTaskSchedulingPolicyResponse> ModifyTrainingTaskSchedulingPolicy(ModifyTrainingTaskSchedulingPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyTrainingTaskSchedulingPolicyResponse>(req, "ModifyTrainingTaskSchedulingPolicy");
+        }
+
+        /// <summary>
+        /// 更新训练任务的调度策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrainingTaskSchedulingPolicyRequest"/></param>
+        /// <returns><see cref="ModifyTrainingTaskSchedulingPolicyResponse"/></returns>
+        public ModifyTrainingTaskSchedulingPolicyResponse ModifyTrainingTaskSchedulingPolicySync(ModifyTrainingTaskSchedulingPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyTrainingTaskSchedulingPolicyResponse>(req, "ModifyTrainingTaskSchedulingPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

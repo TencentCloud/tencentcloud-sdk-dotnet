@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1538</VersionPrefix>
+    <VersionPrefix>3.0.1543</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -347,6 +347,8 @@
     <Compile Include="V20211111\Models\ModifyRoleUserGrantResponse.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsRequest.cs" />
     <Compile Include="V20211111\Models\ModifyServiceGroupWeightsResponse.cs" />
+    <Compile Include="V20211111\Models\ModifyTrainingTaskSchedulingPolicyRequest.cs" />
+    <Compile Include="V20211111\Models\ModifyTrainingTaskSchedulingPolicyResponse.cs" />
     <Compile Include="V20211111\Models\ModifyUserGrantRequest.cs" />
     <Compile Include="V20211111\Models\ModifyUserGrantResponse.cs" />
     <Compile Include="V20211111\Models\ModifyWorkspaceMembersRequest.cs" />
@@ -389,6 +391,7 @@
     <Compile Include="V20211111\Models\RollingUpdate.cs" />
     <Compile Include="V20211111\Models\RuntimeLib.cs" />
     <Compile Include="V20211111\Models\SSHConfig.cs" />
+    <Compile Include="V20211111\Models\SchedulePolicy.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
     <Compile Include="V20211111\Models\SchedulingPolicy.cs" />
     <Compile Include="V20211111\Models\SchemaInfo.cs" />

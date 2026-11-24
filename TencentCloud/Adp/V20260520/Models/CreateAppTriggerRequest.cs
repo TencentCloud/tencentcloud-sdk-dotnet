@@ -25,6 +25,12 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
+        /// <p>Agent ID，scope=USER 时可选。</p>
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
+
+        /// <summary>
         /// <p>应用ID</p>
         /// </summary>
         [JsonProperty("AppId")]
@@ -84,6 +90,7 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamObj(map, prefix + "ExecuteConfig.", this.ExecuteConfig);
             this.SetParamSimple(map, prefix + "ExecuteType", this.ExecuteType);

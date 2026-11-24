@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1536</VersionPrefix>
+    <VersionPrefix>3.0.1543</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,6 +111,7 @@
     <Compile Include="V20260520\Models\AppSummary.cs" />
     <Compile Include="V20260520\Models\AppToolConfig.cs" />
     <Compile Include="V20260520\Models\AppTrigger.cs" />
+    <Compile Include="V20260520\Models\AppTriggerGongfengWebhookConfig.cs" />
     <Compile Include="V20260520\Models\AppTriggerInstance.cs" />
     <Compile Include="V20260520\Models\AppTriggerParamBinding.cs" />
     <Compile Include="V20260520\Models\AppTriggerParamBindingConfig.cs" />
@@ -121,7 +122,10 @@
     <Compile Include="V20260520\Models\AppTriggerScheduleConfig.cs" />
     <Compile Include="V20260520\Models\AppTriggerScheduleStatus.cs" />
     <Compile Include="V20260520\Models\AppTriggerSummary.cs" />
+    <Compile Include="V20260520\Models\AppTriggerTAPDWebhookConfig.cs" />
     <Compile Include="V20260520\Models\AppTriggerWebhookConfig.cs" />
+    <Compile Include="V20260520\Models\AppTriggerWebhookConfigExt.cs" />
+    <Compile Include="V20260520\Models\AppTriggerWebhookCredential.cs" />
     <Compile Include="V20260520\Models\AppTriggerWebhookParamSchemaConfig.cs" />
     <Compile Include="V20260520\Models\AppTriggerWebhookStatus.cs" />
     <Compile Include="V20260520\Models\AppTriggerWorkflowExecuteConfig.cs" />
@@ -129,6 +133,7 @@
     <Compile Include="V20260520\Models\AppWebSearchConfig.cs" />
     <Compile Include="V20260520\Models\AppWorkflowConfig.cs" />
     <Compile Include="V20260520\Models\AppealingStatus.cs" />
+    <Compile Include="V20260520\Models\Audit.cs" />
     <Compile Include="V20260520\Models\AuditLog.cs" />
     <Compile Include="V20260520\Models\AuditLogMetaField.cs" />
     <Compile Include="V20260520\Models\AuthConfig.cs" />
@@ -213,6 +218,10 @@
     <Compile Include="V20260520\Models\CreateMsgRecordCategoryResponse.cs" />
     <Compile Include="V20260520\Models\CreatePluginRequest.cs" />
     <Compile Include="V20260520\Models\CreatePluginResponse.cs" />
+    <Compile Include="V20260520\Models\CreatePromptTemplateLabelRequest.cs" />
+    <Compile Include="V20260520\Models\CreatePromptTemplateLabelResponse.cs" />
+    <Compile Include="V20260520\Models\CreatePromptTemplateRequest.cs" />
+    <Compile Include="V20260520\Models\CreatePromptTemplateResponse.cs" />
     <Compile Include="V20260520\Models\CreateQAGenerationTaskRequest.cs" />
     <Compile Include="V20260520\Models\CreateQAGenerationTaskResponse.cs" />
     <Compile Include="V20260520\Models\CreateQAListRequest.cs" />
@@ -264,6 +273,10 @@
     <Compile Include="V20260520\Models\DeleteMsgRecordCategoryResponse.cs" />
     <Compile Include="V20260520\Models\DeletePluginRequest.cs" />
     <Compile Include="V20260520\Models\DeletePluginResponse.cs" />
+    <Compile Include="V20260520\Models\DeletePromptTemplateLabelRequest.cs" />
+    <Compile Include="V20260520\Models\DeletePromptTemplateLabelResponse.cs" />
+    <Compile Include="V20260520\Models\DeletePromptTemplateRequest.cs" />
+    <Compile Include="V20260520\Models\DeletePromptTemplateResponse.cs" />
     <Compile Include="V20260520\Models\DeleteQAListRequest.cs" />
     <Compile Include="V20260520\Models\DeleteQAListResponse.cs" />
     <Compile Include="V20260520\Models\DeleteSkillRequest.cs" />
@@ -350,6 +363,14 @@
     <Compile Include="V20260520\Models\DescribePluginResponse.cs" />
     <Compile Include="V20260520\Models\DescribePluginSummaryListRequest.cs" />
     <Compile Include="V20260520\Models\DescribePluginSummaryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateCategoryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateCategoryListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateLabelListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateLabelListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateRequest.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateResponse.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateSummaryListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribePromptTemplateSummaryListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeQARequest.cs" />
     <Compile Include="V20260520\Models\DescribeQAResponse.cs" />
     <Compile Include="V20260520\Models\DescribeQASummaryListRequest.cs" />
@@ -414,15 +435,19 @@
     <Compile Include="V20260520\Models\ExportQAResponse.cs" />
     <Compile Include="V20260520\Models\FavoritePluginRequest.cs" />
     <Compile Include="V20260520\Models\FavoritePluginResponse.cs" />
+    <Compile Include="V20260520\Models\FavoritePromptTemplateRequest.cs" />
+    <Compile Include="V20260520\Models\FavoritePromptTemplateResponse.cs" />
     <Compile Include="V20260520\Models\FavoriteSkillRequest.cs" />
     <Compile Include="V20260520\Models\FavoriteSkillResponse.cs" />
     <Compile Include="V20260520\Models\FieldMask.cs" />
     <Compile Include="V20260520\Models\FileParseModel.cs" />
+    <Compile Include="V20260520\Models\FileSplitModel.cs" />
     <Compile Include="V20260520\Models\FileVolumeMount.cs" />
     <Compile Include="V20260520\Models\Filter.cs" />
     <Compile Include="V20260520\Models\FinalRerankConfig.cs" />
     <Compile Include="V20260520\Models\GenerateModel.cs" />
     <Compile Include="V20260520\Models\GraphRAG.cs" />
+    <Compile Include="V20260520\Models\HeaderExtractModel.cs" />
     <Compile Include="V20260520\Models\Identity.cs" />
     <Compile Include="V20260520\Models\ImportDocListRequest.cs" />
     <Compile Include="V20260520\Models\ImportDocListResponse.cs" />
@@ -503,6 +528,8 @@
     <Compile Include="V20260520\Models\ModifyMsgRecordCategoryResponse.cs" />
     <Compile Include="V20260520\Models\ModifyPluginRequest.cs" />
     <Compile Include="V20260520\Models\ModifyPluginResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyPromptTemplateRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyPromptTemplateResponse.cs" />
     <Compile Include="V20260520\Models\ModifyQAListRequest.cs" />
     <Compile Include="V20260520\Models\ModifyQAListResponse.cs" />
     <Compile Include="V20260520\Models\ModifyQARequest.cs" />
@@ -544,6 +571,13 @@
     <Compile Include="V20260520\Models\PluginUserState.cs" />
     <Compile Include="V20260520\Models\PortalShareConfig.cs" />
     <Compile Include="V20260520\Models\PromptRewriteModel.cs" />
+    <Compile Include="V20260520\Models\PromptTemplate.cs" />
+    <Compile Include="V20260520\Models\PromptTemplateCategory.cs" />
+    <Compile Include="V20260520\Models\PromptTemplateCategoryGroup.cs" />
+    <Compile Include="V20260520\Models\PromptTemplateLabel.cs" />
+    <Compile Include="V20260520\Models\PromptTemplateProfile.cs" />
+    <Compile Include="V20260520\Models\PromptTemplateSpec.cs" />
+    <Compile Include="V20260520\Models\PromptTemplateSummary.cs" />
     <Compile Include="V20260520\Models\QACreateSpec.cs" />
     <Compile Include="V20260520\Models\QALifecycle.cs" />
     <Compile Include="V20260520\Models\QAMetadata.cs" />
@@ -639,6 +673,8 @@
     <Compile Include="V20260520\Models\TriggerStatus.cs" />
     <Compile Include="V20260520\Models\UnfavoritePluginRequest.cs" />
     <Compile Include="V20260520\Models\UnfavoritePluginResponse.cs" />
+    <Compile Include="V20260520\Models\UnfavoritePromptTemplateRequest.cs" />
+    <Compile Include="V20260520\Models\UnfavoritePromptTemplateResponse.cs" />
     <Compile Include="V20260520\Models\UnfavoriteSkillRequest.cs" />
     <Compile Include="V20260520\Models\UnfavoriteSkillResponse.cs" />
     <Compile Include="V20260520\Models\UsageDetail.cs" />

@@ -25,51 +25,46 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// API Key ID。
+        /// <p>API Key ID。</p>
         /// </summary>
         [JsonProperty("ApiKeyId")]
         public string ApiKeyId{ get; set; }
 
         /// <summary>
-        /// 可用模型列表。不传则不修改。
-        /// 
-        /// - 如果套餐类型为企业版专业套餐：
-        /// 1）传入“all“ ：使用套餐支持的所有模型
-        /// 2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-        /// 
-        /// - 如果套餐类型为企业版轻享套餐，不允许传该参数。
+        /// <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
         /// </summary>
         [JsonProperty("AllowedModels")]
         public string[] AllowedModels{ get; set; }
 
         /// <summary>
-        /// 独占额度，不传则不修改。单位说明：
-        /// 
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("ExclusiveQuota")]
         public long? ExclusiveQuota{ get; set; }
 
         /// <summary>
-        /// 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-        /// - 套餐类型为专业套餐，单位取值为积分；
-        /// - 套餐类型为轻享套餐，单位取值为 token。
+        /// <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
         /// </summary>
         [JsonProperty("TotalQuota")]
         public long? TotalQuota{ get; set; }
 
         /// <summary>
-        /// 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
+        /// <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
         /// </summary>
         [JsonProperty("UseStatus")]
         public string UseStatus{ get; set; }
 
         /// <summary>
-        /// TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
+        /// <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
         /// </summary>
         [JsonProperty("TPM")]
         public long? TPM{ get; set; }
+
+        /// <summary>
+        /// <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
+        /// </summary>
+        [JsonProperty("IpWhitelist")]
+        public string[] IpWhitelist{ get; set; }
 
 
         /// <summary>
@@ -83,6 +78,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "TotalQuota", this.TotalQuota);
             this.SetParamSimple(map, prefix + "UseStatus", this.UseStatus);
             this.SetParamSimple(map, prefix + "TPM", this.TPM);
+            this.SetParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
         }
     }
 }

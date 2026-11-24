@@ -25,34 +25,40 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/
+        /// <p>父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/</p>
         /// </summary>
         [JsonProperty("ParentFolderPath")]
         public string ParentFolderPath{ get; set; }
 
         /// <summary>
-        /// 文件夹名称/代码文件名称搜索
+        /// <p>文件夹名称/代码文件名称搜索</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 只查询文件夹
+        /// <p>只查询文件夹</p>
         /// </summary>
         [JsonProperty("OnlyFolderNode")]
         public bool? OnlyFolderNode{ get; set; }
 
         /// <summary>
-        /// 是否只查询用户自己创建的代码文件
+        /// <p>是否只查询用户自己创建的代码文件</p>
         /// </summary>
         [JsonProperty("OnlyUserSelfScript")]
         public bool? OnlyUserSelfScript{ get; set; }
+
+        /// <summary>
+        /// <p>是否只查询提交状态为提交成功的文件</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("SubmitStatusFilter")]
+        public bool? SubmitStatusFilter{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "OnlyFolderNode", this.OnlyFolderNode);
             this.SetParamSimple(map, prefix + "OnlyUserSelfScript", this.OnlyUserSelfScript);
+            this.SetParamSimple(map, prefix + "SubmitStatusFilter", this.SubmitStatusFilter);
         }
     }
 }

@@ -31,10 +31,10 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// 限流条件的Values
+        /// header或query对应的name
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
         /// 操作符
@@ -43,10 +43,10 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Operator{ get; set; }
 
         /// <summary>
-        /// header或query对应的name
+        /// 限流条件的Values
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace TencentCloud.Tse.V20201207.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+        /// <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>表更新：TABLE_UPDATE</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li><li>TABLE_UPDATE 模式下，TriggerMinimumIntervalSecond、TriggerWaitTimeSecond、tableQualifiers、triggerPolicy 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li><li>TABLE_UPDATE： 表更新</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMode")]
@@ -116,32 +116,46 @@ namespace TencentCloud.Wedata.V20250806.Models
         public long? Recursive{ get; set; }
 
         /// <summary>
-        /// <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+        /// <p>文件到达、表更新 模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p><p>默认值：5</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMinimumInterval")]
         public long? TriggerMinimumInterval{ get; set; }
 
         /// <summary>
-        /// <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+        /// <p>文件到达、表更新 模式下 批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p><p>默认值：2</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerWaitTime")]
         public long? TriggerWaitTime{ get; set; }
 
         /// <summary>
-        /// <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+        /// <p>文件到达、表更新 模式下，触发最短间隔时间</p><p>取值范围：[60, 86400]</p><p>单位：秒</p><p>默认值：300</p><p>只需填TriggerMinimumIntervalSecond，不用填TriggerMinimumInterval；两者都填取TriggerMinimumIntervalSecond；</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerMinimumIntervalSecond")]
         public long? TriggerMinimumIntervalSecond{ get; set; }
 
         /// <summary>
-        /// <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+        /// <p>文件到达、表更新 模式下，触发等待时间</p><p>取值范围：[60, 3600]</p><p>单位：秒</p><p>默认值：120</p><p>只需填TriggerWaitTimeSecond，不用填TriggerWaitTime；两者都填取TriggerWaitTimeSecond；</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerWaitTimeSecond")]
         public long? TriggerWaitTimeSecond{ get; set; }
+
+        /// <summary>
+        /// <p>表更新 模式下，触发表列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableQualifiers")]
+        public string[] TableQualifiers{ get; set; }
+
+        /// <summary>
+        /// <p>表更新模式下，触发条件</p><p>枚举值：</p><ul><li>ALL： 所有表更新</li><li>ANY： 任一表更新</li></ul><p>默认值：ANY</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerPolicy")]
+        public string TriggerPolicy{ get; set; }
 
 
         /// <summary>
@@ -166,6 +180,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "TriggerWaitTime", this.TriggerWaitTime);
             this.SetParamSimple(map, prefix + "TriggerMinimumIntervalSecond", this.TriggerMinimumIntervalSecond);
             this.SetParamSimple(map, prefix + "TriggerWaitTimeSecond", this.TriggerWaitTimeSecond);
+            this.SetParamArraySimple(map, prefix + "TableQualifiers.", this.TableQualifiers);
+            this.SetParamSimple(map, prefix + "TriggerPolicy", this.TriggerPolicy);
         }
     }
 }

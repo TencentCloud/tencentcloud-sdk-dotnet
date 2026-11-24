@@ -102,6 +102,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+        /// </summary>
+        [JsonProperty("WebhookProvider")]
+        public long? WebhookProvider{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "UnreadRunLogCount", this.UnreadRunLogCount);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "WebhookProvider", this.WebhookProvider);
         }
     }
 }

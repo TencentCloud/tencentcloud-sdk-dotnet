@@ -73,16 +73,22 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public string InstanceStateDesc{ get; set; }
 
         /// <summary>
+        /// <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+        /// </summary>
+        [JsonProperty("InstanceStates")]
+        public InstanceStateItem[] InstanceStates{ get; set; }
+
+        /// <summary>
         /// <p>当前步骤的名称，例如：”购买资源中“</p>
         /// </summary>
         [JsonProperty("ProcessName")]
         public string ProcessName{ get; set; }
 
         /// <summary>
-        /// <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+        /// <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
         /// </summary>
-        [JsonProperty("InstanceStates")]
-        public InstanceStateItem[] InstanceStates{ get; set; }
+        [JsonProperty("RecoveryState")]
+        public string RecoveryState{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -104,8 +110,9 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
             this.SetParamSimple(map, prefix + "InstanceStateDesc", this.InstanceStateDesc);
-            this.SetParamSimple(map, prefix + "ProcessName", this.ProcessName);
             this.SetParamArrayObj(map, prefix + "InstanceStates.", this.InstanceStates);
+            this.SetParamSimple(map, prefix + "ProcessName", this.ProcessName);
+            this.SetParamSimple(map, prefix + "RecoveryState", this.RecoveryState);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

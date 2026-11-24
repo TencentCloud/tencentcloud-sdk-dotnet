@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 国际站：en，国内站：zh
+        /// <p>国际站：en，国内站：zh</p>
         /// </summary>
         [JsonProperty("Lang")]
         public string Lang{ get; set; }
 
         /// <summary>
-        /// 可信服务产品简称。查询是否该可信服务管理员时必须指定
+        /// <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
+        /// <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
         /// </summary>
         [JsonProperty("Sid")]
         public string Sid{ get; set; }
 
         /// <summary>
-        /// 是否创建审计日志,通过查看按钮调用时为true,其他为false
+        /// <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
         /// </summary>
         [JsonProperty("AuditLog")]
         public bool? AuditLog{ get; set; }
 
         /// <summary>
-        /// 分页的页内记录数，默认为20，最大200
+        /// <p>分页的页内记录数，默认为20，最大200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 可填写路径名或文件名
+        /// <p>可填写路径名或文件名</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 分页用偏移量
+        /// <p>分页用偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 1-已执行，  2-被阻断
+        /// <p>1-已放行，  2-已阻断</p>
         /// </summary>
         [JsonProperty("AuditAction")]
         public long? AuditAction{ get; set; }
 
         /// <summary>
-        /// 1-已执行，  2-被阻断
+        /// <p>1-已放行，  2-已阻断</p>
         /// </summary>
         [JsonProperty("AuditActionSet")]
         public long?[] AuditActionSet{ get; set; }
 
         /// <summary>
-        /// 以Protocol和Method为条件查询
+        /// <p>以Protocol和Method为条件查询</p>
         /// </summary>
         [JsonProperty("TypeFilters")]
         public SearchFileTypeFilter[] TypeFilters{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdz.V20221123
 
        private const string endpoint = "cdz.tencentcloudapi.com";
        private const string version = "2022-11-23";
-       private const string sdkVersion = "SDK_NET_3.0.1528";
+       private const string sdkVersion = "SDK_NET_3.0.1543";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Cdz.V20221123
         public DescribeCloudDedicatedZoneResourceSummaryResponse DescribeCloudDedicatedZoneResourceSummarySync(DescribeCloudDedicatedZoneResourceSummaryRequest req)
         {
             return InternalRequestAsync<DescribeCloudDedicatedZoneResourceSummaryResponse>(req, "DescribeCloudDedicatedZoneResourceSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户可使用的专属可用区列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAvailableCloudDedicatedZonesRequest"/></param>
+        /// <returns><see cref="DescribeUserAvailableCloudDedicatedZonesResponse"/></returns>
+        public Task<DescribeUserAvailableCloudDedicatedZonesResponse> DescribeUserAvailableCloudDedicatedZones(DescribeUserAvailableCloudDedicatedZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAvailableCloudDedicatedZonesResponse>(req, "DescribeUserAvailableCloudDedicatedZones");
+        }
+
+        /// <summary>
+        /// 查询用户可使用的专属可用区列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserAvailableCloudDedicatedZonesRequest"/></param>
+        /// <returns><see cref="DescribeUserAvailableCloudDedicatedZonesResponse"/></returns>
+        public DescribeUserAvailableCloudDedicatedZonesResponse DescribeUserAvailableCloudDedicatedZonesSync(DescribeUserAvailableCloudDedicatedZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeUserAvailableCloudDedicatedZonesResponse>(req, "DescribeUserAvailableCloudDedicatedZones")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

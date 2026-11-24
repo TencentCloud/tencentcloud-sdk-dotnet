@@ -96,6 +96,12 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ExecuteUserUin")]
         public string ExecuteUserUin{ get; set; }
 
+        /// <summary>
+        /// <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
+        /// </summary>
+        [JsonProperty("WorkflowLabels")]
+        public WorkflowLabel[] WorkflowLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
             this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
             this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+            this.SetParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
         }
     }
 }

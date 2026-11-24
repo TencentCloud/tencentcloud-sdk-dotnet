@@ -227,6 +227,12 @@ namespace TencentCloud.Makers.V20261113.Models
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }
 
+        /// <summary>
+        /// <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
+        /// </summary>
+        [JsonProperty("BuildMachine")]
+        public string BuildMachine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +268,7 @@ namespace TencentCloud.Makers.V20261113.Models
             this.SetParamSimple(map, prefix + "IsTld", this.IsTld);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamSimple(map, prefix + "BuildMachine", this.BuildMachine);
         }
     }
 }

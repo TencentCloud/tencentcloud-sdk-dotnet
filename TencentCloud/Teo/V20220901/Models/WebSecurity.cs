@@ -25,22 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点级策略的配置详情。
+        /// <p>站点级策略的配置详情。</p>
         /// </summary>
         [JsonProperty("ZoneDefaultPolicy")]
         public SecurityPolicy ZoneDefaultPolicy{ get; set; }
 
         /// <summary>
-        /// 域名级策略的配置详情。
+        /// <p>域名级策略的配置详情。</p>
         /// </summary>
         [JsonProperty("HostPolicy")]
-        public HostPolicy HostPolicy{ get; set; }
+        public HostPolicy[] HostPolicy{ get; set; }
 
         /// <summary>
-        /// 策略模板的配置详情。
+        /// <p>策略模板的配置详情。</p>
         /// </summary>
         [JsonProperty("Templates")]
-        public WebSecurityTemplates Templates{ get; set; }
+        public WebSecurityTemplates[] Templates{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ZoneDefaultPolicy.", this.ZoneDefaultPolicy);
-            this.SetParamObj(map, prefix + "HostPolicy.", this.HostPolicy);
-            this.SetParamObj(map, prefix + "Templates.", this.Templates);
+            this.SetParamArrayObj(map, prefix + "HostPolicy.", this.HostPolicy);
+            this.SetParamArrayObj(map, prefix + "Templates.", this.Templates);
         }
     }
 }

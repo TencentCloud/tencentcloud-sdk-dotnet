@@ -25,106 +25,118 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// API Key ID。
+        /// <p>API Key ID。</p>
         /// </summary>
         [JsonProperty("ApiKeyId")]
         public string ApiKeyId{ get; set; }
 
         /// <summary>
-        /// API Key 密钥值（脱敏）。
+        /// <p>API Key 密钥值（脱敏）。</p>
         /// </summary>
         [JsonProperty("ApiKey")]
         public string ApiKey{ get; set; }
 
         /// <summary>
-        /// API Key 名称。
+        /// <p>API Key 名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 所属套餐 ID。
+        /// <p>所属套餐 ID。</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// 账号APP ID。
+        /// <p>账号APP ID。</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 主账号 UIN。最大 128 字符。
+        /// <p>主账号 UIN。最大 128 字符。</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// API Key 可用模型列表（JSON 数组字符串）。
+        /// <p>API Key 可用模型列表（JSON 数组字符串）。</p>
         /// </summary>
         [JsonProperty("AllowedModels")]
         public string AllowedModels{ get; set; }
 
         /// <summary>
-        /// API Key 是否可用。取值：enable（启用）、disable（停用）。
+        /// <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
+        /// <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
         /// </summary>
         [JsonProperty("StopReason")]
         public string StopReason{ get; set; }
 
         /// <summary>
-        /// 用户侧开关。取值：enable（启用）、disable（停用）。
+        /// <p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
         /// </summary>
         [JsonProperty("UseStatus")]
         public string UseStatus{ get; set; }
 
         /// <summary>
-        /// 密钥版本号。
+        /// <p>密钥版本号。</p>
         /// </summary>
         [JsonProperty("KeyVersion")]
         public long? KeyVersion{ get; set; }
 
         /// <summary>
-        /// 最近一次重置时间。（ISO 8601）
+        /// <p>最近一次重置时间。（ISO 8601）</p>
         /// </summary>
         [JsonProperty("LastRotatedAt")]
         public string LastRotatedAt{ get; set; }
 
         /// <summary>
-        /// 创建人，如果是子账号创建，则该值为子账号UIN。
+        /// <p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// <p>创建时间。</p>
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 更新时间。
+        /// <p>更新时间。</p>
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// API Key 额度用量信息
+        /// <p>API Key 额度用量信息</p>
         /// </summary>
         [JsonProperty("Balance")]
         public SubPackageBalance Balance{ get; set; }
 
         /// <summary>
-        /// 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+        /// <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
+
+        /// <summary>
+        /// <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+        /// </summary>
+        [JsonProperty("IpWhitelist")]
+        public string[] IpWhitelist{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
+        /// </summary>
+        [JsonProperty("OverageEnabled")]
+        public bool? OverageEnabled{ get; set; }
 
 
         /// <summary>
@@ -149,6 +161,8 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamObj(map, prefix + "Balance.", this.Balance);
             this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
+            this.SetParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
+            this.SetParamSimple(map, prefix + "OverageEnabled", this.OverageEnabled);
         }
     }
 }

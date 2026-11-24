@@ -171,6 +171,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
+        /// <summary>
+        /// <p>工作流标签列表，仅工作流调度模式返回</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowLabels")]
+        public WorkflowLabel[] WorkflowLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
             this.SetParamSimple(map, prefix + "ExecuteUserName", this.ExecuteUserName);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+            this.SetParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
         }
     }
 }

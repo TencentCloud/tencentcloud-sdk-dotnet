@@ -25,6 +25,12 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
+        /// 精确限流阈值
+        /// </summary>
+        [JsonProperty("AccurateQpsThresholds")]
+        public AccurateQpsThreshold[] AccurateQpsThresholds{ get; set; }
+
+        /// <summary>
         /// 请求匹配条件
         /// </summary>
         [JsonProperty("Filters")]
@@ -43,10 +49,10 @@ namespace TencentCloud.Tse.V20201207.Models
         public QpsThreshold[] QpsThresholds{ get; set; }
 
         /// <summary>
-        /// 精确限流阈值
+        /// 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
         /// </summary>
-        [JsonProperty("AccurateQpsThresholds")]
-        public AccurateQpsThreshold[] AccurateQpsThresholds{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Tse.V20201207.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "AccurateQpsThresholds.", this.AccurateQpsThresholds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "LimitBy.", this.LimitBy);
             this.SetParamArrayObj(map, prefix + "QpsThresholds.", this.QpsThresholds);
-            this.SetParamArrayObj(map, prefix + "AccurateQpsThresholds.", this.AccurateQpsThresholds);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

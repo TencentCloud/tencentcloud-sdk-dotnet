@@ -25,7 +25,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 预付费包 id
+        /// <p>预付费包 id</p>
         /// </summary>
         [JsonProperty("PreResourceId")]
         public string PreResourceId{ get; set; }

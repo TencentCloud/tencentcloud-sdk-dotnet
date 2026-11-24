@@ -31,6 +31,18 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string EndpointId{ get; set; }
 
         /// <summary>
+        /// <p>所属企业空间 ID。</p>
+        /// </summary>
+        [JsonProperty("WorkspaceId")]
+        public string WorkspaceId{ get; set; }
+
+        /// <summary>
+        /// <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
+        /// </summary>
+        [JsonProperty("OriginEndpointId")]
+        public string OriginEndpointId{ get; set; }
+
+        /// <summary>
         /// <p>服务名称。</p>
         /// </summary>
         [JsonProperty("EndpointName")]
@@ -108,6 +120,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("ModelStatus")]
         public string ModelStatus{ get; set; }
 
+        /// <summary>
+        /// <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+        /// </summary>
+        [JsonProperty("NightDiscountEnabled")]
+        public bool? NightDiscountEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +133,8 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EndpointId", this.EndpointId);
+            this.SetParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+            this.SetParamSimple(map, prefix + "OriginEndpointId", this.OriginEndpointId);
             this.SetParamSimple(map, prefix + "EndpointName", this.EndpointName);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
@@ -128,6 +148,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "AutoAdjustQuota", this.AutoAdjustQuota);
             this.SetParamSimple(map, prefix + "RPM", this.RPM);
             this.SetParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
+            this.SetParamSimple(map, prefix + "NightDiscountEnabled", this.NightDiscountEnabled);
         }
     }
 }

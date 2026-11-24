@@ -31,10 +31,23 @@ namespace TencentCloud.Adp.V20260520.Models
         public AppTriggerWebhookParamSchemaConfig ParamSchemaConfig{ get; set; }
 
         /// <summary>
+        /// Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebhookConfigExt")]
+        public AppTriggerWebhookConfigExt WebhookConfigExt{ get; set; }
+
+        /// <summary>
         /// <p>webhook的key</p>
         /// </summary>
         [JsonProperty("WebhookKey")]
         public string WebhookKey{ get; set; }
+
+        /// <summary>
+        /// Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+        /// </summary>
+        [JsonProperty("WebhookProvider")]
+        public long? WebhookProvider{ get; set; }
 
         /// <summary>
         /// <p>webhook的密钥</p>
@@ -55,7 +68,9 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ParamSchemaConfig.", this.ParamSchemaConfig);
+            this.SetParamObj(map, prefix + "WebhookConfigExt.", this.WebhookConfigExt);
             this.SetParamSimple(map, prefix + "WebhookKey", this.WebhookKey);
+            this.SetParamSimple(map, prefix + "WebhookProvider", this.WebhookProvider);
             this.SetParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
             this.SetParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
         }

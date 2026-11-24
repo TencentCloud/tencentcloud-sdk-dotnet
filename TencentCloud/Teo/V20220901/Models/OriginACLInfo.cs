@@ -25,42 +25,51 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
+        /// <p>七层加速域名源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有七层加速域名已纳入源站防护列表，包含后续新增的七层加速域名；</li><li>specific：指定加入防护模式，仅防护已绑定的七层加速域名。</li></p>
+        /// </summary>
+        [JsonProperty("L7EnableMode")]
+        public string L7EnableMode{ get; set; }
+
+        /// <summary>
+        /// <p>启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。</p>
         /// </summary>
         [JsonProperty("L7Hosts")]
         public string[] L7Hosts{ get; set; }
 
         /// <summary>
-        /// 启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。
+        /// <p>四层代理实例源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有四层代理实例已纳入源站防护列表，包含后续新增的四层代理实例；</li><li>specific：指定加入防护模式，仅防护已绑定的四层代理实例。</li></p>
+        /// </summary>
+        [JsonProperty("L4EnableMode")]
+        public string L4EnableMode{ get; set; }
+
+        /// <summary>
+        /// <p>启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。</p>
         /// </summary>
         [JsonProperty("L4ProxyIds")]
         public string[] L4ProxyIds{ get; set; }
 
         /// <summary>
-        /// 当前生效的回源 IP 网段。源站防护未开启时为空。
+        /// <p>当前生效的回源 IP 网段。源站防护未开启时为空。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentOriginACL")]
         public CurrentOriginACL CurrentOriginACL{ get; set; }
 
         /// <summary>
-        /// 当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。
+        /// <p>当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextOriginACL")]
         public NextOriginACL NextOriginACL{ get; set; }
 
         /// <summary>
-        /// 源站防护状态，取值有：
-        /// <li>online：已生效；</li>
-        /// <li>offline：已停用；</li>
-        /// <li>updating: 配置部署中。</li>
+        /// <p>源站防护状态，取值有：</p><li>online：已生效；</li><li>offline：已停用；</li><li>updating: 配置部署中。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 源站防护回源ACL控制域。
+        /// <p>源站防护回源ACL控制域。</p>
         /// </summary>
         [JsonProperty("OriginACLFamily")]
         public string OriginACLFamily{ get; set; }
@@ -71,7 +80,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "L7EnableMode", this.L7EnableMode);
             this.SetParamArraySimple(map, prefix + "L7Hosts.", this.L7Hosts);
+            this.SetParamSimple(map, prefix + "L4EnableMode", this.L4EnableMode);
             this.SetParamArraySimple(map, prefix + "L4ProxyIds.", this.L4ProxyIds);
             this.SetParamObj(map, prefix + "CurrentOriginACL.", this.CurrentOriginACL);
             this.SetParamObj(map, prefix + "NextOriginACL.", this.NextOriginACL);

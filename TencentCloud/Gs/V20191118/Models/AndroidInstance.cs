@@ -25,113 +25,121 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 实例 ID
+        /// <p>实例 ID</p>
         /// </summary>
         [JsonProperty("AndroidInstanceId")]
         public string AndroidInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例所在区域
+        /// <p>实例所在区域</p>
         /// </summary>
         [JsonProperty("AndroidInstanceRegion")]
         public string AndroidInstanceRegion{ get; set; }
 
         /// <summary>
-        /// 实例可用区
+        /// <p>实例可用区</p>
         /// </summary>
         [JsonProperty("AndroidInstanceZone")]
         public string AndroidInstanceZone{ get; set; }
 
         /// <summary>
-        /// 实例状态：INITIALIZING，NORMAL，PROCESSING
+        /// <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 实例规格
+        /// <p>实例规格</p>
         /// </summary>
         [JsonProperty("AndroidInstanceType")]
         public string AndroidInstanceType{ get; set; }
 
         /// <summary>
-        /// 实例镜像 ID
+        /// <p>实例镜像 ID</p>
         /// </summary>
         [JsonProperty("AndroidInstanceImageId")]
         public string AndroidInstanceImageId{ get; set; }
 
         /// <summary>
-        /// 分辨率宽度
+        /// <p>分辨率宽度</p>
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 分辨率高度
+        /// <p>分辨率高度</p>
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 宿主机 ID
+        /// <p>每英寸像素点。</p>
+        /// </summary>
+        [JsonProperty("DPI")]
+        public ulong? DPI{ get; set; }
+
+        /// <summary>
+        /// <p>帧率</p>
+        /// </summary>
+        [JsonProperty("FPS")]
+        public ulong? FPS{ get; set; }
+
+        /// <summary>
+        /// <p>宿主机 ID</p>
         /// </summary>
         [JsonProperty("HostSerialNumber")]
         public string HostSerialNumber{ get; set; }
 
         /// <summary>
-        /// 分组 ID
+        /// <p>分组 ID</p>
         /// </summary>
         [JsonProperty("AndroidInstanceGroupId")]
         public string AndroidInstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// <p>标签列表</p>
         /// </summary>
         [JsonProperty("AndroidInstanceLabels")]
         public AndroidInstanceLabel[] AndroidInstanceLabels{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 内网 IP
+        /// <p>内网 IP</p>
         /// </summary>
         [JsonProperty("PrivateIP")]
         public string PrivateIP{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 机箱 ID
+        /// <p>机箱 ID</p>
         /// </summary>
         [JsonProperty("HostServerSerialNumber")]
         public string HostServerSerialNumber{ get; set; }
 
         /// <summary>
-        /// 服务状态。
-        /// IDLE：未连接
-        /// ESTABLISHED：连接中
+        /// <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
         /// </summary>
         [JsonProperty("ServiceStatus")]
         public string ServiceStatus{ get; set; }
 
         /// <summary>
-        /// 安卓实例型号。
-        /// YS1：默认值，基础型云手机
-        /// GC0、GC1、GC2：三种性能型云手机
+        /// <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
         /// </summary>
         [JsonProperty("AndroidInstanceModel")]
         public string AndroidInstanceModel{ get; set; }
@@ -150,6 +158,8 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "AndroidInstanceImageId", this.AndroidInstanceImageId);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "DPI", this.DPI);
+            this.SetParamSimple(map, prefix + "FPS", this.FPS);
             this.SetParamSimple(map, prefix + "HostSerialNumber", this.HostSerialNumber);
             this.SetParamSimple(map, prefix + "AndroidInstanceGroupId", this.AndroidInstanceGroupId);
             this.SetParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);

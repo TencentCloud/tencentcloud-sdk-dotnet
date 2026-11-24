@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>服务及路由列表</p>
         /// </summary>
         [JsonProperty("ServiceList")]
         public KongServiceRoute[] ServiceList{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

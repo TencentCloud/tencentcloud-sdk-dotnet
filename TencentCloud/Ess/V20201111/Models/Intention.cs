@@ -25,33 +25,25 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 视频认证类型，支持以下类型
-        /// <ul><li>1 : 问答模式</li>
-        /// <li>2 : 点头模式</li></ul>
-        /// 
-        /// 注: `视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+        /// <p>视频认证类型，支持以下类型</p><ul><li>1 : 问答模式</li><li>2 : 点头模式</li></ul><p>注: <code>视频认证为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
         /// </summary>
         [JsonProperty("IntentionType")]
         public long? IntentionType{ get; set; }
 
         /// <summary>
-        /// 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。支持传入1～10轮问答，最多为10轮。
-        /// 
-        /// 注：`选择问答模式时，此字段可不传，不传则使用默认语音文本：请问，您是否同意签署本协议？可语音回复“同意”或“不同意”。`
+        /// <p>意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。支持传入1～9轮问答，最多为9轮。注：<code>选择问答模式时，此字段可不传，不传则使用默认语音文本：请问，您是否同意签署本协议？可语音回复“同意”或“不同意”。</code></p>
         /// </summary>
         [JsonProperty("IntentionQuestions")]
         public IntentionQuestion[] IntentionQuestions{ get; set; }
 
         /// <summary>
-        /// 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。支持传入1～10轮点头确认文本，最多支持10轮。
-        /// 
-        /// 注：`选择点头模式时，此字段可不传，不传则使用默认语音文本：请问，您是否同意签署本协议？可点头同意。`
+        /// <p>意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。支持传入1～9轮点头确认文本，最多支持9轮。注：<code>选择点头模式时，此字段可不传，不传则使用默认语音文本：请问，您是否同意签署本协议？可点头同意。</code></p>
         /// </summary>
         [JsonProperty("IntentionActions")]
         public IntentionAction[] IntentionActions{ get; set; }
 
         /// <summary>
-        /// 视频核身相关配置
+        /// <p>视频核身相关配置</p>
         /// </summary>
         [JsonProperty("RuleIdConfig")]
         public RuleIdConfig RuleIdConfig{ get; set; }

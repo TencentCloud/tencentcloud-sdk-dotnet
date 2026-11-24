@@ -122,6 +122,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ExecuteUserUin")]
         public string ExecuteUserUin{ get; set; }
 
+        /// <summary>
+        /// <p>工作流标签列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowLabels")]
+        public WorkflowLabel[] WorkflowLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
             this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
             this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+            this.SetParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
         }
     }
 }

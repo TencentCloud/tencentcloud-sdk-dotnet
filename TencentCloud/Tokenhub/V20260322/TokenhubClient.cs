@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1543";
 
         /// <summary>
         /// Client constructor.
@@ -79,9 +79,7 @@ namespace TencentCloud.Tokenhub.V20260322
         }
 
         /// <summary>
-        /// 创建推理服务。
-        /// 
-        /// 创建一个在线推理服务，创建成功后返回推理服务 ID。
+        /// 创建推理服务，并可指定所属企业空间。不传 WorkspaceId 时，推理服务会创建在账号默认空间。
         /// </summary>
         /// <param name="req"><see cref="CreateEndpointRequest"/></param>
         /// <returns><see cref="CreateEndpointResponse"/></returns>
@@ -91,9 +89,7 @@ namespace TencentCloud.Tokenhub.V20260322
         }
 
         /// <summary>
-        /// 创建推理服务。
-        /// 
-        /// 创建一个在线推理服务，创建成功后返回推理服务 ID。
+        /// 创建推理服务，并可指定所属企业空间。不传 WorkspaceId 时，推理服务会创建在账号默认空间。
         /// </summary>
         /// <param name="req"><see cref="CreateEndpointRequest"/></param>
         /// <returns><see cref="CreateEndpointResponse"/></returns>

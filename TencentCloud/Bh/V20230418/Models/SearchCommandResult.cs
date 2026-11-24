@@ -25,139 +25,139 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 命令输入的时间
+        /// <p>命令输入的时间</p>
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// <p>姓名</p>
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 资产ID
+        /// <p>资产ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 资产名称
+        /// <p>资产名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 资产公网IP
+        /// <p>资产公网IP</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 资产内网IP
+        /// <p>资产内网IP</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 命令
+        /// <p>命令</p>
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }
 
         /// <summary>
-        /// 命令执行情况，1--允许，2--拒绝
+        /// <p>命令执行情况，1--已放行，2--已阻断</p>
         /// </summary>
         [JsonProperty("Action")]
         public ulong? Action{ get; set; }
 
         /// <summary>
-        /// 命令所属的会话ID
+        /// <p>命令所属的会话ID</p>
         /// </summary>
         [JsonProperty("Sid")]
         public string Sid{ get; set; }
 
         /// <summary>
-        /// 命令执行时间相对于所属会话开始时间的偏移量，单位ms
+        /// <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
         /// </summary>
         [JsonProperty("TimeOffset")]
         public ulong? TimeOffset{ get; set; }
 
         /// <summary>
-        /// 账号
+        /// <p>账号</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// source ip
+        /// <p>source ip</p>
         /// </summary>
         [JsonProperty("FromIp")]
         public string FromIp{ get; set; }
 
         /// <summary>
-        /// 该命令所属会话的会话开始时间
+        /// <p>该命令所属会话的会话开始时间</p>
         /// </summary>
         [JsonProperty("SessionTime")]
         public string SessionTime{ get; set; }
 
         /// <summary>
-        /// 该命令所属会话的会话开始时间（使用SessionTime）
+        /// <p>该命令所属会话的会话开始时间（使用SessionTime）</p>
         /// </summary>
         [JsonProperty("SessTime")]
         public string SessTime{ get; set; }
 
         /// <summary>
-        /// 复核时间
+        /// <p>复核时间</p>
         /// </summary>
         [JsonProperty("ConfirmTime")]
         public string ConfirmTime{ get; set; }
 
         /// <summary>
-        /// 部门id
+        /// <p>部门id</p>
         /// </summary>
         [JsonProperty("UserDepartmentId")]
         public string UserDepartmentId{ get; set; }
 
         /// <summary>
-        /// 用户部门名称
+        /// <p>用户部门名称</p>
         /// </summary>
         [JsonProperty("UserDepartmentName")]
         public string UserDepartmentName{ get; set; }
 
         /// <summary>
-        /// 设备部门id
+        /// <p>设备部门id</p>
         /// </summary>
         [JsonProperty("DeviceDepartmentId")]
         public string DeviceDepartmentId{ get; set; }
 
         /// <summary>
-        /// 设备部门名称
+        /// <p>设备部门名称</p>
         /// </summary>
         [JsonProperty("DeviceDepartmentName")]
         public string DeviceDepartmentName{ get; set; }
 
         /// <summary>
-        /// 会话大小
+        /// <p>会话大小</p>
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// 签名值
+        /// <p>签名值</p>
         /// </summary>
         [JsonProperty("SignValue")]
         public string SignValue{ get; set; }
 
         /// <summary>
-        /// 资产类型
+        /// <p>资产类型</p>
         /// </summary>
         [JsonProperty("DeviceKind")]
         public string DeviceKind{ get; set; }

@@ -444,6 +444,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
+        /// <summary>
+        /// <p>所属工作流运行中本次触发涉及的表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerTableUpdateRecords")]
+        public TriggerTableUpdateRecord[] TriggerTableUpdateRecords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -510,6 +517,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "AssociatedEntityExist", this.AssociatedEntityExist);
             this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+            this.SetParamArrayObj(map, prefix + "TriggerTableUpdateRecords.", this.TriggerTableUpdateRecords);
         }
     }
 }

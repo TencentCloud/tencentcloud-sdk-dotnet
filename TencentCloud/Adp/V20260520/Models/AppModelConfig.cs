@@ -25,53 +25,67 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// AI一键优化模型
+        /// <p>AI一键优化模型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiOptimizeModel")]
         public AIOptimizeModel AiOptimizeModel{ get; set; }
 
         /// <summary>
-        /// 实时文件解析模型
+        /// <p>实时文件解析模型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileParseModel")]
         public FileParseModel FileParseModel{ get; set; }
 
         /// <summary>
-        /// 生成模型配置
+        /// <p>生成模型配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GenerateModel")]
         public GenerateModel GenerateModel{ get; set; }
 
         /// <summary>
-        /// 多模态问答模型
+        /// <p>多模态问答模型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiModalQaModel")]
         public MultiModalQAModel MultiModalQaModel{ get; set; }
 
         /// <summary>
-        /// 多模态理解模型
+        /// <p>多模态理解模型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiModalUnderstandingModel")]
         public MultiModalUnderstandingModel MultiModalUnderstandingModel{ get; set; }
 
         /// <summary>
-        /// Prompt改写模型
+        /// <p>Prompt改写模型</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PromptRewriteModel")]
         public PromptRewriteModel PromptRewriteModel{ get; set; }
 
         /// <summary>
-        /// 思考模型配置
+        /// <p>思考模型配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ThinkModel")]
         public ThinkModel ThinkModel{ get; set; }
+
+        /// <summary>
+        /// <p>实时文档切分模型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileSplitModel")]
+        public FileSplitModel FileSplitModel{ get; set; }
+
+        /// <summary>
+        /// <p>表头拆分模型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HeaderExtractModel")]
+        public HeaderExtractModel HeaderExtractModel{ get; set; }
 
 
         /// <summary>
@@ -86,6 +100,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "MultiModalUnderstandingModel.", this.MultiModalUnderstandingModel);
             this.SetParamObj(map, prefix + "PromptRewriteModel.", this.PromptRewriteModel);
             this.SetParamObj(map, prefix + "ThinkModel.", this.ThinkModel);
+            this.SetParamObj(map, prefix + "FileSplitModel.", this.FileSplitModel);
+            this.SetParamObj(map, prefix + "HeaderExtractModel.", this.HeaderExtractModel);
         }
     }
 }

@@ -25,80 +25,79 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 搜索区间的开始时间
+        /// <p>搜索区间的开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 搜索区间的结束时间，不填默认为开始时间到现在为止
+        /// <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// <p>姓名</p>
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 资产实例ID
+        /// <p>资产实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 资产名称
+        /// <p>资产名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 资产的公网IP
+        /// <p>资产的公网IP</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 资产的内网IP
+        /// <p>资产的内网IP</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 执行的命令
+        /// <p>执行的命令</p>
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }
 
         /// <summary>
-        /// Cmd字段是前端传值是否进行base64.
-        /// 0:否，1：是
+        /// <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
         /// </summary>
         [JsonProperty("Encoding")]
         public ulong? Encoding{ get; set; }
 
         /// <summary>
-        /// 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
+        /// <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
         /// </summary>
         [JsonProperty("AuditAction")]
         public ulong?[] AuditAction{ get; set; }
 
         /// <summary>
-        /// 每页容量，默认20，最大200
+        /// <p>每页容量，默认20，最大200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移位置，默认值为0
+        /// <p>分页偏移位置，默认值为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

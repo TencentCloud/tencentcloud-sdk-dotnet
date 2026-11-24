@@ -25,133 +25,133 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 文件传输的时间
+        /// <p>文件传输的时间</p>
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// <p>姓名</p>
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 资产ID
+        /// <p>资产ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 资产名称
+        /// <p>资产名称</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 资产公网IP
+        /// <p>资产公网IP</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 资产内网IP
+        /// <p>资产内网IP</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 操作结果：1 - 已执行，2 - 已阻断
+        /// <p>操作结果：1 - 已放行，2 - 已阻断</p>
         /// </summary>
         [JsonProperty("Action")]
         public ulong? Action{ get; set; }
 
         /// <summary>
-        /// 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+        /// <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
         /// </summary>
         [JsonProperty("Method")]
         public ulong? Method{ get; set; }
 
         /// <summary>
-        /// 下载的文件（夹）路径及名称
+        /// <p>下载的文件（夹）路径及名称</p>
         /// </summary>
         [JsonProperty("FileCurr")]
         public string FileCurr{ get; set; }
 
         /// <summary>
-        /// 上传或新建文件（夹）路径及名称
+        /// <p>上传或新建文件（夹）路径及名称</p>
         /// </summary>
         [JsonProperty("FileNew")]
         public string FileNew{ get; set; }
 
         /// <summary>
-        /// 会话id
+        /// <p>会话id</p>
         /// </summary>
         [JsonProperty("Sid")]
         public string Sid{ get; set; }
 
         /// <summary>
-        /// 账号
+        /// <p>账号</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// 来源id
+        /// <p>来源id</p>
         /// </summary>
         [JsonProperty("FromIp")]
         public string FromIp{ get; set; }
 
         /// <summary>
-        /// 协议
+        /// <p>协议</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// <p>文件大小</p>
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// 复核时间
+        /// <p>复核时间</p>
         /// </summary>
         [JsonProperty("ConfirmTime")]
         public string ConfirmTime{ get; set; }
 
         /// <summary>
-        /// 用户部门id
+        /// <p>用户部门id</p>
         /// </summary>
         [JsonProperty("UserDepartmentId")]
         public string UserDepartmentId{ get; set; }
 
         /// <summary>
-        /// 用户部门name
+        /// <p>用户部门name</p>
         /// </summary>
         [JsonProperty("UserDepartmentName")]
         public string UserDepartmentName{ get; set; }
 
         /// <summary>
-        /// 设备部门id
+        /// <p>设备部门id</p>
         /// </summary>
         [JsonProperty("DeviceDepartmentId")]
         public string DeviceDepartmentId{ get; set; }
 
         /// <summary>
-        /// 设备部门name	
+        /// <p>设备部门name</p>
         /// </summary>
         [JsonProperty("DeviceDepartmentName")]
         public string DeviceDepartmentName{ get; set; }
 
         /// <summary>
-        /// 签名值
+        /// <p>签名值</p>
         /// </summary>
         [JsonProperty("SignValue")]
         public string SignValue{ get; set; }

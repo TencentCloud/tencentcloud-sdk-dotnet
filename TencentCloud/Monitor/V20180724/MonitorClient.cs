@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1540";
+       private const string sdkVersion = "SDK_NET_3.0.1543";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Monitor.V20180724
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 添加子网到 Prometheus 的托管集群
+        /// </summary>
+        /// <param name="req"><see cref="AddSubnetToManagedClusterRequest"/></param>
+        /// <returns><see cref="AddSubnetToManagedClusterResponse"/></returns>
+        public Task<AddSubnetToManagedClusterResponse> AddSubnetToManagedCluster(AddSubnetToManagedClusterRequest req)
+        {
+            return InternalRequestAsync<AddSubnetToManagedClusterResponse>(req, "AddSubnetToManagedCluster");
+        }
+
+        /// <summary>
+        /// 添加子网到 Prometheus 的托管集群
+        /// </summary>
+        /// <param name="req"><see cref="AddSubnetToManagedClusterRequest"/></param>
+        /// <returns><see cref="AddSubnetToManagedClusterResponse"/></returns>
+        public AddSubnetToManagedClusterResponse AddSubnetToManagedClusterSync(AddSubnetToManagedClusterRequest req)
+        {
+            return InternalRequestAsync<AddSubnetToManagedClusterResponse>(req, "AddSubnetToManagedCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

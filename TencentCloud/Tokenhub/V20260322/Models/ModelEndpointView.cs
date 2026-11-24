@@ -67,6 +67,12 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         public string ModelStatus{ get; set; }
 
         /// <summary>
+        /// <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
+        /// </summary>
+        [JsonProperty("ModelChargeUnit")]
+        public string ModelChargeUnit{ get; set; }
+
+        /// <summary>
         /// <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
         /// </summary>
         [JsonProperty("ServiceType")]
@@ -108,6 +114,30 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("TPM")]
         public long? TPM{ get; set; }
 
+        /// <summary>
+        /// <p>模型图标。</p>
+        /// </summary>
+        [JsonProperty("ModelImage")]
+        public ModelImage ModelImage{ get; set; }
+
+        /// <summary>
+        /// <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+        /// </summary>
+        [JsonProperty("OfflineAt")]
+        public string OfflineAt{ get; set; }
+
+        /// <summary>
+        /// <p>停止新购时间</p>
+        /// </summary>
+        [JsonProperty("DiscontinuedAt")]
+        public string DiscontinuedAt{ get; set; }
+
+        /// <summary>
+        /// <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+        /// </summary>
+        [JsonProperty("NightDiscountEnabled")]
+        public bool? NightDiscountEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +151,7 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
+            this.SetParamSimple(map, prefix + "ModelChargeUnit", this.ModelChargeUnit);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "PaymentEnabled", this.PaymentEnabled);
@@ -128,6 +159,10 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "StopReason", this.StopReason);
             this.SetParamSimple(map, prefix + "RPM", this.RPM);
             this.SetParamSimple(map, prefix + "TPM", this.TPM);
+            this.SetParamObj(map, prefix + "ModelImage.", this.ModelImage);
+            this.SetParamSimple(map, prefix + "OfflineAt", this.OfflineAt);
+            this.SetParamSimple(map, prefix + "DiscontinuedAt", this.DiscontinuedAt);
+            this.SetParamSimple(map, prefix + "NightDiscountEnabled", this.NightDiscountEnabled);
         }
     }
 }

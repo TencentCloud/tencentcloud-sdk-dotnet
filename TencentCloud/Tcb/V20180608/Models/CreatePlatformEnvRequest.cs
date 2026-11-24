@@ -42,6 +42,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ReqKey")]
         public string ReqKey{ get; set; }
 
+        /// <summary>
+        /// <p>postgresql可选参数配置，不传默认发货1c2g独享pg</p>
+        /// </summary>
+        [JsonProperty("PGConfig")]
+        public PGConfig PGConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "ReqKey", this.ReqKey);
+            this.SetParamObj(map, prefix + "PGConfig.", this.PGConfig);
         }
     }
 }

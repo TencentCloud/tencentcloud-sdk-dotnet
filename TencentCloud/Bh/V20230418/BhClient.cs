@@ -28,7 +28,7 @@ namespace TencentCloud.Bh.V20230418
 
        private const string endpoint = "bh.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1542";
+       private const string sdkVersion = "SDK_NET_3.0.1543";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Bh.V20230418
         public AddUserGroupMembersResponse AddUserGroupMembersSync(AddUserGroupMembersRequest req)
         {
             return InternalRequestAsync<AddUserGroupMembersResponse>(req, "AddUserGroupMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 审批工单
+        /// </summary>
+        /// <param name="req"><see cref="ApproveTicketRequest"/></param>
+        /// <returns><see cref="ApproveTicketResponse"/></returns>
+        public Task<ApproveTicketResponse> ApproveTicket(ApproveTicketRequest req)
+        {
+            return InternalRequestAsync<ApproveTicketResponse>(req, "ApproveTicket");
+        }
+
+        /// <summary>
+        /// 审批工单
+        /// </summary>
+        /// <param name="req"><see cref="ApproveTicketRequest"/></param>
+        /// <returns><see cref="ApproveTicketResponse"/></returns>
+        public ApproveTicketResponse ApproveTicketSync(ApproveTicketRequest req)
+        {
+            return InternalRequestAsync<ApproveTicketResponse>(req, "ApproveTicket")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1268,6 +1289,27 @@ namespace TencentCloud.Bh.V20230418
         public DescribeSourceTypesResponse DescribeSourceTypesSync(DescribeSourceTypesRequest req)
         {
             return InternalRequestAsync<DescribeSourceTypesResponse>(req, "DescribeSourceTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询运维工单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTicketsRequest"/></param>
+        /// <returns><see cref="DescribeTicketsResponse"/></returns>
+        public Task<DescribeTicketsResponse> DescribeTickets(DescribeTicketsRequest req)
+        {
+            return InternalRequestAsync<DescribeTicketsResponse>(req, "DescribeTickets");
+        }
+
+        /// <summary>
+        /// 查询运维工单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTicketsRequest"/></param>
+        /// <returns><see cref="DescribeTicketsResponse"/></returns>
+        public DescribeTicketsResponse DescribeTicketsSync(DescribeTicketsRequest req)
+        {
+            return InternalRequestAsync<DescribeTicketsResponse>(req, "DescribeTickets")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

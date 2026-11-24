@@ -43,6 +43,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public long? Offset{ get; set; }
 
         /// <summary>
+        /// <p>按服务 ID 查询路由。</p>
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
+        /// <summary>
         /// <p>服务的名字，精确匹配</p>
         /// </summary>
         [JsonProperty("ServiceName")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "RouteName", this.RouteName);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);

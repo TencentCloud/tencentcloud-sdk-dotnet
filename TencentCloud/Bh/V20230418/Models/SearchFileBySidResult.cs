@@ -25,109 +25,109 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 会话Id
+        /// <p>会话Id</p>
         /// </summary>
         [JsonProperty("Sid")]
         public string Sid{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// <p>用户名</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 资产账号
+        /// <p>资产账号</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// 来源Ip
+        /// <p>来源Ip</p>
         /// </summary>
         [JsonProperty("FromIp")]
         public string FromIp{ get; set; }
 
         /// <summary>
-        /// 文件操作时间
+        /// <p>文件操作时间</p>
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
+        /// <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
         /// </summary>
         [JsonProperty("Method")]
         public long? Method{ get; set; }
 
         /// <summary>
-        /// 文件传输协议
+        /// <p>文件传输协议</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
+        /// <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
         /// </summary>
         [JsonProperty("FileCurr")]
         public string FileCurr{ get; set; }
 
         /// <summary>
-        /// method为重命名、移动文件时代表移动后的新位置.其他情况为null
+        /// <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
         /// </summary>
         [JsonProperty("FileNew")]
         public string FileNew{ get; set; }
 
         /// <summary>
-        /// method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
+        /// <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 堡垒机拦截情况, 1-已执行，  2-被阻断
+        /// <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
         /// </summary>
         [JsonProperty("Action")]
         public long? Action{ get; set; }
 
         /// <summary>
-        /// 复核时间，当Action是3时，需有复核时间
+        /// <p>复核时间，当Action是3时，需有复核时间</p>
         /// </summary>
         [JsonProperty("ConfirmTime")]
         public string ConfirmTime{ get; set; }
 
         /// <summary>
-        /// 用户部门Id
+        /// <p>用户部门Id</p>
         /// </summary>
         [JsonProperty("UserDepartmentId")]
         public string UserDepartmentId{ get; set; }
 
         /// <summary>
-        /// 用户部门name
+        /// <p>用户部门name</p>
         /// </summary>
         [JsonProperty("UserDepartmentName")]
         public string UserDepartmentName{ get; set; }
 
         /// <summary>
-        /// 设备部门id
+        /// <p>设备部门id</p>
         /// </summary>
         [JsonProperty("DeviceDepartmentId")]
         public string DeviceDepartmentId{ get; set; }
 
         /// <summary>
-        /// 设备部门name
+        /// <p>设备部门name</p>
         /// </summary>
         [JsonProperty("DeviceDepartmentName")]
         public string DeviceDepartmentName{ get; set; }
 
         /// <summary>
-        /// 签名值
+        /// <p>签名值</p>
         /// </summary>
         [JsonProperty("SignValue")]
         public string SignValue{ get; set; }

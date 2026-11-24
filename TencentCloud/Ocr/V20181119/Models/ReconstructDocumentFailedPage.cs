@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// <p>解析失败页数。</p>
+        /// <p>解析失败页码。</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }

@@ -25,38 +25,37 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 会话Id
+        /// <p>会话Id</p>
         /// </summary>
         [JsonProperty("Sid")]
         public string Sid{ get; set; }
 
         /// <summary>
-        /// 命令，可模糊搜索
+        /// <p>命令，可模糊搜索</p>
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }
 
         /// <summary>
-        /// Cmd字段是前端传值是否进行base64.
-        /// 0:否，1：是
+        /// <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
         /// </summary>
         [JsonProperty("Encoding")]
         public ulong? Encoding{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// <p>偏移量</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页容量，默认20，最大200
+        /// <p>每页容量，默认20，最大200</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 根据拦截状态进行过滤
+        /// <p>根据拦截状态进行过滤，1-已放行，2-已阻断，3-复核</p>
         /// </summary>
         [JsonProperty("AuditAction")]
         public ulong?[] AuditAction{ get; set; }

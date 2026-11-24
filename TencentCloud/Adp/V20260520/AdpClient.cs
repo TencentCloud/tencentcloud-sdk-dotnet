@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1543";
 
         /// <summary>
         /// Client constructor.
@@ -344,6 +344,48 @@ namespace TencentCloud.Adp.V20260520
         public CreatePluginResponse CreatePluginSync(CreatePluginRequest req)
         {
             return InternalRequestAsync<CreatePluginResponse>(req, "CreatePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="CreatePromptTemplateRequest"/></param>
+        /// <returns><see cref="CreatePromptTemplateResponse"/></returns>
+        public Task<CreatePromptTemplateResponse> CreatePromptTemplate(CreatePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<CreatePromptTemplateResponse>(req, "CreatePromptTemplate");
+        }
+
+        /// <summary>
+        /// 创建提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="CreatePromptTemplateRequest"/></param>
+        /// <returns><see cref="CreatePromptTemplateResponse"/></returns>
+        public CreatePromptTemplateResponse CreatePromptTemplateSync(CreatePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<CreatePromptTemplateResponse>(req, "CreatePromptTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建提示词模板标签
+        /// </summary>
+        /// <param name="req"><see cref="CreatePromptTemplateLabelRequest"/></param>
+        /// <returns><see cref="CreatePromptTemplateLabelResponse"/></returns>
+        public Task<CreatePromptTemplateLabelResponse> CreatePromptTemplateLabel(CreatePromptTemplateLabelRequest req)
+        {
+            return InternalRequestAsync<CreatePromptTemplateLabelResponse>(req, "CreatePromptTemplateLabel");
+        }
+
+        /// <summary>
+        /// 创建提示词模板标签
+        /// </summary>
+        /// <param name="req"><see cref="CreatePromptTemplateLabelRequest"/></param>
+        /// <returns><see cref="CreatePromptTemplateLabelResponse"/></returns>
+        public CreatePromptTemplateLabelResponse CreatePromptTemplateLabelSync(CreatePromptTemplateLabelRequest req)
+        {
+            return InternalRequestAsync<CreatePromptTemplateLabelResponse>(req, "CreatePromptTemplateLabel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -829,6 +871,48 @@ namespace TencentCloud.Adp.V20260520
         public DeletePluginResponse DeletePluginSync(DeletePluginRequest req)
         {
             return InternalRequestAsync<DeletePluginResponse>(req, "DeletePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="DeletePromptTemplateRequest"/></param>
+        /// <returns><see cref="DeletePromptTemplateResponse"/></returns>
+        public Task<DeletePromptTemplateResponse> DeletePromptTemplate(DeletePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<DeletePromptTemplateResponse>(req, "DeletePromptTemplate");
+        }
+
+        /// <summary>
+        /// 删除提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="DeletePromptTemplateRequest"/></param>
+        /// <returns><see cref="DeletePromptTemplateResponse"/></returns>
+        public DeletePromptTemplateResponse DeletePromptTemplateSync(DeletePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<DeletePromptTemplateResponse>(req, "DeletePromptTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除提示词模板标签
+        /// </summary>
+        /// <param name="req"><see cref="DeletePromptTemplateLabelRequest"/></param>
+        /// <returns><see cref="DeletePromptTemplateLabelResponse"/></returns>
+        public Task<DeletePromptTemplateLabelResponse> DeletePromptTemplateLabel(DeletePromptTemplateLabelRequest req)
+        {
+            return InternalRequestAsync<DeletePromptTemplateLabelResponse>(req, "DeletePromptTemplateLabel");
+        }
+
+        /// <summary>
+        /// 删除提示词模板标签
+        /// </summary>
+        /// <param name="req"><see cref="DeletePromptTemplateLabelRequest"/></param>
+        /// <returns><see cref="DeletePromptTemplateLabelResponse"/></returns>
+        public DeletePromptTemplateLabelResponse DeletePromptTemplateLabelSync(DeletePromptTemplateLabelRequest req)
+        {
+            return InternalRequestAsync<DeletePromptTemplateLabelResponse>(req, "DeletePromptTemplateLabel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1736,6 +1820,90 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 查询提示词模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateResponse"/></returns>
+        public Task<DescribePromptTemplateResponse> DescribePromptTemplate(DescribePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateResponse>(req, "DescribePromptTemplate");
+        }
+
+        /// <summary>
+        /// 查询提示词模板详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateResponse"/></returns>
+        public DescribePromptTemplateResponse DescribePromptTemplateSync(DescribePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateResponse>(req, "DescribePromptTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询提示词模板分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateCategoryListRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateCategoryListResponse"/></returns>
+        public Task<DescribePromptTemplateCategoryListResponse> DescribePromptTemplateCategoryList(DescribePromptTemplateCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateCategoryListResponse>(req, "DescribePromptTemplateCategoryList");
+        }
+
+        /// <summary>
+        /// 查询提示词模板分类列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateCategoryListRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateCategoryListResponse"/></returns>
+        public DescribePromptTemplateCategoryListResponse DescribePromptTemplateCategoryListSync(DescribePromptTemplateCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateCategoryListResponse>(req, "DescribePromptTemplateCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询提示词模板标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateLabelListRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateLabelListResponse"/></returns>
+        public Task<DescribePromptTemplateLabelListResponse> DescribePromptTemplateLabelList(DescribePromptTemplateLabelListRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateLabelListResponse>(req, "DescribePromptTemplateLabelList");
+        }
+
+        /// <summary>
+        /// 查询提示词模板标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateLabelListRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateLabelListResponse"/></returns>
+        public DescribePromptTemplateLabelListResponse DescribePromptTemplateLabelListSync(DescribePromptTemplateLabelListRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateLabelListResponse>(req, "DescribePromptTemplateLabelList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询提示词模板摘要列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateSummaryListRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateSummaryListResponse"/></returns>
+        public Task<DescribePromptTemplateSummaryListResponse> DescribePromptTemplateSummaryList(DescribePromptTemplateSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateSummaryListResponse>(req, "DescribePromptTemplateSummaryList");
+        }
+
+        /// <summary>
+        /// 查询提示词模板摘要列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePromptTemplateSummaryListRequest"/></param>
+        /// <returns><see cref="DescribePromptTemplateSummaryListResponse"/></returns>
+        public DescribePromptTemplateSummaryListResponse DescribePromptTemplateSummaryListSync(DescribePromptTemplateSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribePromptTemplateSummaryListResponse>(req, "DescribePromptTemplateSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 QA 详情
         /// </summary>
         /// <param name="req"><see cref="DescribeQARequest"/></param>
@@ -2135,6 +2303,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// 收藏提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="FavoritePromptTemplateRequest"/></param>
+        /// <returns><see cref="FavoritePromptTemplateResponse"/></returns>
+        public Task<FavoritePromptTemplateResponse> FavoritePromptTemplate(FavoritePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<FavoritePromptTemplateResponse>(req, "FavoritePromptTemplate");
+        }
+
+        /// <summary>
+        /// 收藏提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="FavoritePromptTemplateRequest"/></param>
+        /// <returns><see cref="FavoritePromptTemplateResponse"/></returns>
+        public FavoritePromptTemplateResponse FavoritePromptTemplateSync(FavoritePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<FavoritePromptTemplateResponse>(req, "FavoritePromptTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 收藏skill
         /// </summary>
         /// <param name="req"><see cref="FavoriteSkillRequest"/></param>
@@ -2467,6 +2656,27 @@ namespace TencentCloud.Adp.V20260520
         public ModifyPluginResponse ModifyPluginSync(ModifyPluginRequest req)
         {
             return InternalRequestAsync<ModifyPluginResponse>(req, "ModifyPlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPromptTemplateRequest"/></param>
+        /// <returns><see cref="ModifyPromptTemplateResponse"/></returns>
+        public Task<ModifyPromptTemplateResponse> ModifyPromptTemplate(ModifyPromptTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyPromptTemplateResponse>(req, "ModifyPromptTemplate");
+        }
+
+        /// <summary>
+        /// 修改提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPromptTemplateRequest"/></param>
+        /// <returns><see cref="ModifyPromptTemplateResponse"/></returns>
+        public ModifyPromptTemplateResponse ModifyPromptTemplateSync(ModifyPromptTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyPromptTemplateResponse>(req, "ModifyPromptTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2866,6 +3076,27 @@ namespace TencentCloud.Adp.V20260520
         public UnfavoritePluginResponse UnfavoritePluginSync(UnfavoritePluginRequest req)
         {
             return InternalRequestAsync<UnfavoritePluginResponse>(req, "UnfavoritePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消收藏提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoritePromptTemplateRequest"/></param>
+        /// <returns><see cref="UnfavoritePromptTemplateResponse"/></returns>
+        public Task<UnfavoritePromptTemplateResponse> UnfavoritePromptTemplate(UnfavoritePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<UnfavoritePromptTemplateResponse>(req, "UnfavoritePromptTemplate");
+        }
+
+        /// <summary>
+        /// 取消收藏提示词模板
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoritePromptTemplateRequest"/></param>
+        /// <returns><see cref="UnfavoritePromptTemplateResponse"/></returns>
+        public UnfavoritePromptTemplateResponse UnfavoritePromptTemplateSync(UnfavoritePromptTemplateRequest req)
+        {
+            return InternalRequestAsync<UnfavoritePromptTemplateResponse>(req, "UnfavoritePromptTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

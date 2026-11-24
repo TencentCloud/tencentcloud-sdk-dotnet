@@ -97,16 +97,22 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string SchedulerStatus{ get; set; }
 
         /// <summary>
-        /// <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+        /// <p>触发方式：定时触发：TIME_TRIGGER 、文件到达触发：FILE_ARRIVAL、表更新触发：TABLE_UPDATE。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件触发</li><li>TABLE_UPDATE： 表更新</li></ul>
         /// </summary>
         [JsonProperty("TriggerMode")]
         public string TriggerMode{ get; set; }
 
         /// <summary>
-        /// <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+        /// <p>运行账号ID</p>
         /// </summary>
         [JsonProperty("ExecuteUserUin")]
         public string ExecuteUserUin{ get; set; }
+
+        /// <summary>
+        /// <p>工作流标签列表。可按ID或名称传，标签需在数据资产中已存在；同一标签Key只能选一个Value。标签写入失败时工作流创建会回滚</p>
+        /// </summary>
+        [JsonProperty("WorkflowLabels")]
+        public WorkflowLabel[] WorkflowLabels{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
             this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
             this.SetParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+            this.SetParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
         }
     }
 }

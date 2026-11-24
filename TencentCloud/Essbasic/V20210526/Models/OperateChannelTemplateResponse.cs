@@ -25,50 +25,43 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 第三方应用平台的应用ID
+        /// <p>第三方应用平台的应用ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 合同模板ID
+        /// <p>合同模板ID</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 描述模板可见性更改的结果。
-        /// <ul>
-        /// <li>all-success: 全部成功</li>
-        /// <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
-        /// <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
-        /// </ul>
+        /// <p>描述模板可见性更改的结果。</p><ul><li>all-success: 全部成功</li><li>part-success: 部分成功,失败的会在FailMessageList中展示</li><li>fail:全部失败, 失败的会在FailMessageList中展示</li></ul>
         /// </summary>
         [JsonProperty("OperateResult")]
         public string OperateResult{ get; set; }
 
         /// <summary>
-        /// 模板可见范围:
-        /// **all**: 所有本第三方应用合作企业可见
-        /// **part**: 指定的本第三方应用合作企业
+        /// <p>模板可见范围:<br><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p>
         /// </summary>
         [JsonProperty("AuthTag")]
         public string AuthTag{ get; set; }
 
         /// <summary>
-        /// 第三方平台子客企业标识列表，仅在select 模式下返回
+        /// <p>第三方平台子客企业标识列表，仅在select 模式下返回</p>
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenIds")]
         public string[] ProxyOrganizationOpenIds{ get; set; }
 
         /// <summary>
-        /// 操作失败信息数组
+        /// <p>操作失败信息数组</p>
         /// </summary>
         [JsonProperty("FailMessageList")]
         public AuthFailMessage[] FailMessageList{ get; set; }
 
         /// <summary>
-        /// 授权的平台子企业数量，OperateType 为select 时返回。
+        /// <p>授权的平台子企业数量，OperateType 为select 时返回。</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

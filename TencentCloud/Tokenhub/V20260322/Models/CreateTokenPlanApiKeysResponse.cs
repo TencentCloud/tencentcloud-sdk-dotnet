@@ -25,13 +25,13 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// 成功创建的项列表。
+        /// <p>成功创建的项列表。</p>
         /// </summary>
         [JsonProperty("Items")]
         public CreateApiKeysResultItem[] Items{ get; set; }
 
         /// <summary>
-        /// 创建失败的项列表。
+        /// <p>创建失败的项列表。</p>
         /// </summary>
         [JsonProperty("FailedItems")]
         public BatchCreateFailedItem[] FailedItems{ get; set; }

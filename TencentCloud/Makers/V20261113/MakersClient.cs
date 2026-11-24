@@ -28,7 +28,7 @@ namespace TencentCloud.Makers.V20261113
 
        private const string endpoint = "makers.tencentcloudapi.com";
        private const string version = "2026-11-13";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1543";
 
         /// <summary>
         /// Client constructor.
