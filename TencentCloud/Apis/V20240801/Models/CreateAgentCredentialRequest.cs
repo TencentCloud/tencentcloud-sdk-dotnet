@@ -24,12 +24,40 @@ namespace TencentCloud.Apis.V20240801.Models
     public class CreateAgentCredentialRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// <p>名称</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>类型</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// <p>具体内容</p>
+        /// </summary>
+        [JsonProperty("Content")]
+        public AgentCredentialContentDTO Content{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "Content.", this.Content);
         }
     }
 }

@@ -122,7 +122,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Output{ get; set; }
 
         /// <summary>
-        /// <p>任务状态</p>
+        /// <p>任务状态</p><p>枚举值：</p><ul><li>waiting： 等待执行</li><li>processing： 执行中</li><li>success： 执行成功</li><li>fail： 任务失败</li><li>paused： 任务暂停（存量任务状态）</li><li>undoing： 回滚中</li><li>undoed： 任务已回滚</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

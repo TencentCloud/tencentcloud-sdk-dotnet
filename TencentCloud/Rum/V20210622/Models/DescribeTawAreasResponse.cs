@@ -25,13 +25,13 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 片区总数
+        /// <p>片区总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 片区列表
+        /// <p>片区列表</p>
         /// </summary>
         [JsonProperty("AreaSet")]
         public RumAreaInfo[] AreaSet{ get; set; }

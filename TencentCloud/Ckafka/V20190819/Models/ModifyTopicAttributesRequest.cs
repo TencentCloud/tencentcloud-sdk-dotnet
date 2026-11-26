@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+        /// <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// <p>消息删除策略，可以选择delete 或者compact</p>
+        /// <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
         /// </summary>
         [JsonProperty("CleanUpPolicy")]
         public string CleanUpPolicy{ get; set; }

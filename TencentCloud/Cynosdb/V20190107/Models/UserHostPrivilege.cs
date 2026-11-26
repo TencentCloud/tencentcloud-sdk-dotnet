@@ -25,22 +25,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 授权用户
+        /// <p>授权用户</p>
         /// </summary>
         [JsonProperty("DbUserName")]
         public string DbUserName{ get; set; }
 
         /// <summary>
-        /// 客户端ip
+        /// <p>客户端ip</p>
         /// </summary>
         [JsonProperty("DbHost")]
         public string DbHost{ get; set; }
 
         /// <summary>
-        /// 用户权限
+        /// <p>用户权限</p>
         /// </summary>
         [JsonProperty("DbPrivilege")]
         public string DbPrivilege{ get; set; }
+
+        /// <summary>
+        /// <p>权限明细列表</p>
+        /// </summary>
+        [JsonProperty("PrivilegeList")]
+        public string[] PrivilegeList{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DbUserName", this.DbUserName);
             this.SetParamSimple(map, prefix + "DbHost", this.DbHost);
             this.SetParamSimple(map, prefix + "DbPrivilege", this.DbPrivilege);
+            this.SetParamArraySimple(map, prefix + "PrivilegeList.", this.PrivilegeList);
         }
     }
 }

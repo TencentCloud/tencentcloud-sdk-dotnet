@@ -37,7 +37,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public long? TPMLimit{ get; set; }
 
         /// <summary>
-        /// <p>并发限流数</p>
+        /// <p>并发数限流</p>
         /// </summary>
         [JsonProperty("ConcurrentCountLimit")]
         public long? ConcurrentCountLimit{ get; set; }

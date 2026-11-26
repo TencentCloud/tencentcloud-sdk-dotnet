@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// <p>消费分组名称</p>
+        /// <p>消费分组名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Partitions[] Partitions{ get; set; }
 
         /// <summary>
-        /// <p>指定topic，默认所有topic</p>
+        /// <p>指定topic，默认所有topic</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string[] TopicName{ get; set; }

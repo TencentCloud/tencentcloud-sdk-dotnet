@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 自动创建 true 表示开启，false 表示不开启
+        /// <p>自动创建 true 表示开启，false 表示不开启</p>
         /// </summary>
         [JsonProperty("AutoCreateTopicEnable")]
         public bool? AutoCreateTopicEnable{ get; set; }
 
         /// <summary>
-        /// 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+        /// <p>新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3</p>
         /// </summary>
         [JsonProperty("DefaultNumPartitions")]
         public long? DefaultNumPartitions{ get; set; }
 
         /// <summary>
-        /// 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
+        /// <p>新创建主题的默认副本数</p><p>如果AutoCreateTopicEnable设置为true时，该值必须大于0</p>
         /// </summary>
         [JsonProperty("DefaultReplicationFactor")]
         public long? DefaultReplicationFactor{ get; set; }

@@ -25,29 +25,35 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 容器网络类型，支持：HostNetwork、CiliumBGP
+        /// <p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 集群CIDR，网络模式HostNetwork 时无需填写
+        /// <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterCIDR")]
         public string ClusterCIDR{ get; set; }
 
         /// <summary>
-        /// 【已废弃】是否开启专线连接能力
+        /// <p>【已废弃】是否开启专线连接能力</p>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
+
+        /// <summary>
+        /// <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
+        /// </summary>
+        [JsonProperty("ProxyCLBMode")]
+        public string ProxyCLBMode{ get; set; }
 
 
         /// <summary>
@@ -59,6 +65,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ClusterCIDR", this.ClusterCIDR);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "ProxyCLBMode", this.ProxyCLBMode);
         }
     }
 }

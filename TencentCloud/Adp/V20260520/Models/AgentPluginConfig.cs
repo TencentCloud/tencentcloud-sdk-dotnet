@@ -66,6 +66,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("CredentialConfig")]
         public AgentPluginCredentialConfig CredentialConfig{ get; set; }
 
+        /// <summary>
+        /// <p>连接器知识范围，目前仅支持腾讯乐享配置</p>
+        /// </summary>
+        [JsonProperty("KnowledgeScope")]
+        public ConnectorKnowledgeScope KnowledgeScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "OAuthConsent", this.OAuthConsent);
             this.SetParamObj(map, prefix + "CredentialConfig.", this.CredentialConfig);
+            this.SetParamObj(map, prefix + "KnowledgeScope.", this.KnowledgeScope);
         }
     }
 }

@@ -31,6 +31,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// <p>当前正在处理的任务数</p>
+        /// </summary>
+        [JsonProperty("CurrentTaskCount")]
+        public ulong? CurrentTaskCount{ get; set; }
+
+        /// <summary>
+        /// <p>最大允许提交的任务数，默认1000，有提额需求请提交工单</p>
+        /// </summary>
+        [JsonProperty("MaxTaskCount")]
+        public ulong? MaxTaskCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "CurrentTaskCount", this.CurrentTaskCount);
+            this.SetParamSimple(map, prefix + "MaxTaskCount", this.MaxTaskCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

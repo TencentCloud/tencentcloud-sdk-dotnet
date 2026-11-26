@@ -25,31 +25,31 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 片区Id
+        /// <p>片区Id</p>
         /// </summary>
         [JsonProperty("AreaIds")]
         public long?[] AreaIds{ get; set; }
 
         /// <summary>
-        /// 片区Key
+        /// <p>片区Key</p>
         /// </summary>
         [JsonProperty("AreaKeys")]
         public string[] AreaKeys{ get; set; }
 
         /// <summary>
-        /// 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
+        /// <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 片区状态(1=有效，2=无效)
+        /// <p>片区状态(1=有效，2=无效)</p>
         /// </summary>
         [JsonProperty("AreaStatuses")]
         public long?[] AreaStatuses{ get; set; }
 
         /// <summary>
-        /// 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+        /// <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

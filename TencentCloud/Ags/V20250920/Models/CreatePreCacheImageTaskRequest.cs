@@ -42,6 +42,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("PreCacheType")]
         public string PreCacheType{ get; set; }
 
+        /// <summary>
+        /// <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
+        /// </summary>
+        [JsonProperty("IdleTTL")]
+        public string IdleTTL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
             this.SetParamSimple(map, prefix + "PreCacheType", this.PreCacheType);
+            this.SetParamSimple(map, prefix + "IdleTTL", this.IdleTTL);
         }
     }
 }

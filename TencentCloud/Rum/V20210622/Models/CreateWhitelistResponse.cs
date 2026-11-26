@@ -25,13 +25,13 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 消息
+        /// <p>消息</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 白名单ID
+        /// <p>白名单ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }

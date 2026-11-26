@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 支持的数据库代理版本集合
+        /// <p>支持的数据库代理版本集合</p>
         /// </summary>
         [JsonProperty("SupportProxyVersions")]
         public string[] SupportProxyVersions{ get; set; }
 
         /// <summary>
-        /// 当前proxy版本号
+        /// <p>当前proxy版本号</p>
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
-        /// 代理版本详情
+        /// <p>代理版本详情</p>
         /// </summary>
         [JsonProperty("SupportProxyVersionDetail")]
         public ProxyVersionInfo[] SupportProxyVersionDetail{ get; set; }

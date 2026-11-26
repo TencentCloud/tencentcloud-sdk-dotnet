@@ -28,7 +28,7 @@ namespace TencentCloud.Makers.V20261113
 
        private const string endpoint = "makers.tencentcloudapi.com";
        private const string version = "2026-11-13";
-       private const string sdkVersion = "SDK_NET_3.0.1543";
+       private const string sdkVersion = "SDK_NET_3.0.1544";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Makers.V20261113
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 封禁或解封当前账号指定站点下的项目及域名。Status 支持 Ban或Normal。
+        /// </summary>
+        /// <param name="req"><see cref="BlockProjectRequest"/></param>
+        /// <returns><see cref="BlockProjectResponse"/></returns>
+        public Task<BlockProjectResponse> BlockProject(BlockProjectRequest req)
+        {
+            return InternalRequestAsync<BlockProjectResponse>(req, "BlockProject");
+        }
+
+        /// <summary>
+        /// 封禁或解封当前账号指定站点下的项目及域名。Status 支持 Ban或Normal。
+        /// </summary>
+        /// <param name="req"><see cref="BlockProjectRequest"/></param>
+        /// <returns><see cref="BlockProjectResponse"/></returns>
+        public BlockProjectResponse BlockProjectSync(BlockProjectRequest req)
+        {
+            return InternalRequestAsync<BlockProjectResponse>(req, "BlockProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

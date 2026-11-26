@@ -30,6 +30,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }
 
+        /// <summary>
+        /// <p>参考类型。</p>
+        /// </summary>
+        [JsonProperty("ReferenceType")]
+        public string ReferenceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+            this.SetParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
         }
     }
 }

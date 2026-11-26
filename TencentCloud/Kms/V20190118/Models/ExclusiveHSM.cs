@@ -25,16 +25,28 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 独享集群Id
+        /// <p>独享集群Id</p>
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
         /// <summary>
-        /// 独享集群名称
+        /// <p>独享集群名称</p>
         /// </summary>
         [JsonProperty("HsmClusterName")]
         public string HsmClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>根密钥的使用量</p><p>单位：个</p>
+        /// </summary>
+        [JsonProperty("CmkUserCount")]
+        public ulong? CmkUserCount{ get; set; }
+
+        /// <summary>
+        /// <p>根密钥的额度</p><p>单位：个</p>
+        /// </summary>
+        [JsonProperty("CmkLimit")]
+        public ulong? CmkLimit{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Kms.V20190118.Models
         {
             this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
             this.SetParamSimple(map, prefix + "HsmClusterName", this.HsmClusterName);
+            this.SetParamSimple(map, prefix + "CmkUserCount", this.CmkUserCount);
+            this.SetParamSimple(map, prefix + "CmkLimit", this.CmkLimit);
         }
     }
 }

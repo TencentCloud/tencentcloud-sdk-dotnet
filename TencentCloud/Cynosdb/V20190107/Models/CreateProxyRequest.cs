@@ -25,73 +25,79 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// cpu核数
+        /// <p>cpu核数</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// <p>内存</p>
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，默认与集群私有网络ID保持一致
+        /// <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+        /// </summary>
+        [JsonProperty("ProxyVersion")]
+        public string ProxyVersion{ get; set; }
+
+        /// <summary>
+        /// <p>私有网络ID，默认与集群私有网络ID保持一致</p>
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络子网ID，默认与集群子网ID保持一致
+        /// <p>私有网络子网ID，默认与集群子网ID保持一致</p>
         /// </summary>
         [JsonProperty("UniqueSubnetId")]
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+        /// <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// 连接池类型：SessionConnectionPool(会话级别连接池 )
+        /// <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// 是否开启连接池,yes-开启，no-不开启
+        /// <p>是否开启连接池,yes-开启，no-不开启</p>
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// 连接池阈值：单位（秒）
+        /// <p>连接池阈值：单位（秒）</p>
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// 安全组ID数组
+        /// <p>安全组ID数组</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 描述说明
+        /// <p>描述说明</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+        /// <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }
@@ -105,6 +111,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Mem", this.Mem);
+            this.SetParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
             this.SetParamSimple(map, prefix + "UniqueVpcId", this.UniqueVpcId);
             this.SetParamSimple(map, prefix + "UniqueSubnetId", this.UniqueSubnetId);
             this.SetParamSimple(map, prefix + "ProxyCount", this.ProxyCount);

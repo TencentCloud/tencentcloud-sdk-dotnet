@@ -25,19 +25,19 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>图片最小高度（像素），小于则过滤；&lt;=0 表示不启用</p>
+        /// 图片最小高度（像素），小于则过滤；<=0 表示不启用
         /// </summary>
         [JsonProperty("ImageMinHeight")]
         public long? ImageMinHeight{ get; set; }
 
         /// <summary>
-        /// <p>图片最小宽度（像素），小于则过滤；&lt;=0 表示不启用</p>
+        /// 图片最小宽度（像素），小于则过滤；<=0 表示不启用
         /// </summary>
         [JsonProperty("ImageMinWidth")]
         public long? ImageMinWidth{ get; set; }
 
         /// <summary>
-        /// <p>图片名称过滤规则（用分号 &#39;;&#39; 分隔的多条正则，如 &#39;icon;notice;warning;info.*&#39;）</p>
+        /// 图片名称过滤规则（用分号 ';' 分隔的多条正则，如 'icon;notice;warning;info.*'）
         /// </summary>
         [JsonProperty("ImageNamePatterns")]
         public string ImageNamePatterns{ get; set; }

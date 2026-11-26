@@ -79,7 +79,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+        /// <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }

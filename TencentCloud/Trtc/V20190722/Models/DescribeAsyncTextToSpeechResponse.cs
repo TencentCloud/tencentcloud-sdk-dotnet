@@ -25,32 +25,34 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 任务状态
-        /// - Processing，处理中
-        /// - Success，任务成功
-        /// - Failed，任务失败
-        /// - Expired，任务过期
+        /// <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 音频下载url
+        /// <p>音频下载url</p>
         /// </summary>
         [JsonProperty("AudioDownloadUrl")]
         public string AudioDownloadUrl{ get; set; }
 
         /// <summary>
-        /// 字幕下载url
+        /// <p>字幕下载url</p>
         /// </summary>
         [JsonProperty("SubtitleDownloadUrl")]
         public string SubtitleDownloadUrl{ get; set; }
 
         /// <summary>
-        /// 音频时长
+        /// <p>音频时长</p>
         /// </summary>
         [JsonProperty("TotalDurationMs")]
         public ulong? TotalDurationMs{ get; set; }
+
+        /// <summary>
+        /// <p>分段文本对应的结果</p>
+        /// </summary>
+        [JsonProperty("SegmentResults")]
+        public AsyncTTSSegmentResult[] SegmentResults{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -68,6 +70,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "AudioDownloadUrl", this.AudioDownloadUrl);
             this.SetParamSimple(map, prefix + "SubtitleDownloadUrl", this.SubtitleDownloadUrl);
             this.SetParamSimple(map, prefix + "TotalDurationMs", this.TotalDurationMs);
+            this.SetParamArrayObj(map, prefix + "SegmentResults.", this.SegmentResults);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

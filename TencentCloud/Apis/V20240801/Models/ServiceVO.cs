@@ -523,6 +523,18 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("RequestProtocolType")]
         public string RequestProtocolType{ get; set; }
 
+        /// <summary>
+        /// <p>安全规则</p>
+        /// </summary>
+        [JsonProperty("ServiceSecurityRules")]
+        public BindMcpSecurityRuleDTO[] ServiceSecurityRules{ get; set; }
+
+        /// <summary>
+        /// <p>安全规则</p>
+        /// </summary>
+        [JsonProperty("ServiceSecurityRulesVO")]
+        public McpSecurityRulesVO[] ServiceSecurityRulesVO{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -599,6 +611,8 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "CredentialID", this.CredentialID);
             this.SetParamSimple(map, prefix + "CredentialName", this.CredentialName);
             this.SetParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
+            this.SetParamArrayObj(map, prefix + "ServiceSecurityRules.", this.ServiceSecurityRules);
+            this.SetParamArrayObj(map, prefix + "ServiceSecurityRulesVO.", this.ServiceSecurityRulesVO);
         }
     }
 }

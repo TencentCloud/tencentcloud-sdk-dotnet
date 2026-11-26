@@ -25,19 +25,19 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 项目ID
+        /// <p>项目ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// uv访问量
+        /// <p>uv访问量</p>
         /// </summary>
         [JsonProperty("Uv")]
         public string Uv{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// <p>创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

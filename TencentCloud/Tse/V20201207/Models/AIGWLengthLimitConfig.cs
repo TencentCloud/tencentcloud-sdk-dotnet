@@ -25,13 +25,13 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// <p>是否开启输入限制</p>
+        /// <p>是否开启输入长度限制</p>
         /// </summary>
         [JsonProperty("EnableInputLimit")]
         public bool? EnableInputLimit{ get; set; }
 
         /// <summary>
-        /// <p>最大输入字符数</p>
+        /// <p>最大输入长度字符数</p>
         /// </summary>
         [JsonProperty("MaxInputChars")]
         public ulong? MaxInputChars{ get; set; }

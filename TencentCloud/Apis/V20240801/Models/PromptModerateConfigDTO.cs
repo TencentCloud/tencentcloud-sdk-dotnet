@@ -45,6 +45,12 @@ namespace TencentCloud.Apis.V20240801.Models
         [JsonProperty("ContextScope")]
         public string ContextScope{ get; set; }
 
+        /// <summary>
+        /// <p>检测内容类型</p>
+        /// </summary>
+        [JsonProperty("CheckTargets")]
+        public string[] CheckTargets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Apis.V20240801.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "InterceptMessage", this.InterceptMessage);
             this.SetParamSimple(map, prefix + "ContextScope", this.ContextScope);
+            this.SetParamArraySimple(map, prefix + "CheckTargets.", this.CheckTargets);
         }
     }
 }

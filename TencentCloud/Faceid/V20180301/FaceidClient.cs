@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1536";
+       private const string sdkVersion = "SDK_NET_3.0.1544";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,35 @@ namespace TencentCloud.Faceid.V20180301
         public GetActionSequenceResponse GetActionSequenceSync(GetActionSequenceRequest req)
         {
             return InternalRequestAsync<GetActionSequenceResponse>(req, "GetActionSequence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据 AI 人脸防护盾接口返回的 SeqId，查询本次检测命中的攻击区域坐标与攻击描述信息。常用于在 AttackRiskLevel 为 High 或 Mid 时，对原始图片/视频帧进行可视化标注与人工复核。
+        /// 
+        /// 检测结果默认保留 3 天，超过保留期后无法再查询。
+        /// 
+        /// 默认接口请求频率限制：10次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackDetailRequest"/></param>
+        /// <returns><see cref="GetAttackDetailResponse"/></returns>
+        public Task<GetAttackDetailResponse> GetAttackDetail(GetAttackDetailRequest req)
+        {
+            return InternalRequestAsync<GetAttackDetailResponse>(req, "GetAttackDetail");
+        }
+
+        /// <summary>
+        /// 根据 AI 人脸防护盾接口返回的 SeqId，查询本次检测命中的攻击区域坐标与攻击描述信息。常用于在 AttackRiskLevel 为 High 或 Mid 时，对原始图片/视频帧进行可视化标注与人工复核。
+        /// 
+        /// 检测结果默认保留 3 天，超过保留期后无法再查询。
+        /// 
+        /// 默认接口请求频率限制：10次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackDetailRequest"/></param>
+        /// <returns><see cref="GetAttackDetailResponse"/></returns>
+        public GetAttackDetailResponse GetAttackDetailSync(GetAttackDetailRequest req)
+        {
+            return InternalRequestAsync<GetAttackDetailResponse>(req, "GetAttackDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

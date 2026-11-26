@@ -42,6 +42,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// <p>是否按照地域进行过滤</p>
+        /// </summary>
+        [JsonProperty("EnableRegionFilter")]
+        public bool? EnableRegionFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "EnableRegionFilter", this.EnableRegionFilter);
         }
     }
 }

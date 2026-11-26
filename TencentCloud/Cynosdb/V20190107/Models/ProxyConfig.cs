@@ -73,6 +73,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }
 
+        /// <summary>
+        /// <p>proxy版本号</p>
+        /// </summary>
+        [JsonProperty("ProxyVersion")]
+        public string ProxyVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ConnectionPoolTimeOut", this.ConnectionPoolTimeOut);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "ProxyZones.", this.ProxyZones);
+            this.SetParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         }
     }
 }

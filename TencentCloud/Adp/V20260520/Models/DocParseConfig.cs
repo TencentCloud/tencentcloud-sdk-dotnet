@@ -32,6 +32,12 @@ namespace TencentCloud.Adp.V20260520.Models
         public ContentFilter ContentFilter{ get; set; }
 
         /// <summary>
+        /// <p>文档解析策略：1=OCR解析 2=智能解析 3=MLLM解析；不传默认智能解析<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>DOC_PARSE_STRATEGY_UNKNOWN</td><td>0</td><td>未指定，走服务端默认（智能解析）</td></tr><tr><td>DOC_PARSE_STRATEGY_OCR</td><td>1</td><td>OCR 解析</td></tr><tr><td>DOC_PARSE_STRATEGY_SMART</td><td>2</td><td>智能解析（按图片类型自动选择：数据图/思维导图/架构图/流程图用 MLLM，其他图片用 OCR）</td></tr><tr><td>DOC_PARSE_STRATEGY_MLLM</td><td>3</td><td>MLLM 解析</td></tr></tbody></table></p>
+        /// </summary>
+        [JsonProperty("ParseStrategy")]
+        public long? ParseStrategy{ get; set; }
+
+        /// <summary>
         /// <p>分割规则</p>
         /// </summary>
         [JsonProperty("SplitRule")]
@@ -44,6 +50,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ContentFilter.", this.ContentFilter);
+            this.SetParamSimple(map, prefix + "ParseStrategy", this.ParseStrategy);
             this.SetParamSimple(map, prefix + "SplitRule", this.SplitRule);
         }
     }

@@ -24,12 +24,26 @@ namespace TencentCloud.Apis.V20240801.Models
     public class DeleteAgentCredentialRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>实例ID</p>
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// <p>credential id</p>
+        /// </summary>
+        [JsonProperty("ID")]
+        public string ID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
         }
     }
 }

@@ -25,34 +25,40 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 该参数已废用
+        /// <p>该参数已废用</p>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 实例退还原因类型
+        /// <p>实例退还原因类型</p>
         /// </summary>
         [JsonProperty("IsolateReasonTypes")]
         public long?[] IsolateReasonTypes{ get; set; }
 
         /// <summary>
-        /// 实例退还原因补充
+        /// <p>实例退还原因补充</p>
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }
 
         /// <summary>
-        /// 保留备份,true-保留（会产生费用）
+        /// <p>保留备份,true-保留（会产生费用）</p>
         /// </summary>
         [JsonProperty("SaveBackup")]
         public bool? SaveBackup{ get; set; }
+
+        /// <summary>
+        /// <p>立即彻底删除RO实例</p>
+        /// </summary>
+        [JsonProperty("ImmediateRecycleRo")]
+        public bool? ImmediateRecycleRo{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "IsolateReasonTypes.", this.IsolateReasonTypes);
             this.SetParamSimple(map, prefix + "IsolateReason", this.IsolateReason);
             this.SetParamSimple(map, prefix + "SaveBackup", this.SaveBackup);
+            this.SetParamSimple(map, prefix + "ImmediateRecycleRo", this.ImmediateRecycleRo);
         }
     }
 }

@@ -25,25 +25,25 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 实例ID：taw-123
+        /// <p>实例ID：taw-123</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 备注（暂未作字节数限制）
+        /// <p>备注（暂未作字节数限制）</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// uin：业务方标识
+        /// <p>uin：业务方标识</p>
         /// </summary>
         [JsonProperty("WhitelistUin")]
         public string WhitelistUin{ get; set; }
 
         /// <summary>
-        /// 业务方标识
+        /// <p>业务方标识</p>
         /// </summary>
         [JsonProperty("Aid")]
         public string Aid{ get; set; }

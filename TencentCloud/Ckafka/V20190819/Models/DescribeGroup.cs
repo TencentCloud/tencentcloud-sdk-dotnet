@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 消费分组名称
+        /// <p>消费分组名称</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// 该 group 使用的协议。
+        /// <p>该 group 使用的协议。</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

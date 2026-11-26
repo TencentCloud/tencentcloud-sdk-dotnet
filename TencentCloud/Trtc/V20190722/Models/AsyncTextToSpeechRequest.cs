@@ -43,6 +43,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
+        /// <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
+        /// </summary>
+        [JsonProperty("TextSegments")]
+        public AsyncTTSTextSegment[] TextSegments{ get; set; }
+
+        /// <summary>
         /// <p>文本转语音的输出音频的格式</p>
         /// </summary>
         [JsonProperty("AudioFormat")]
@@ -81,6 +87,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamObj(map, prefix + "Voice.", this.Voice);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamArrayObj(map, prefix + "TextSegments.", this.TextSegments);
             this.SetParamObj(map, prefix + "AudioFormat.", this.AudioFormat);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArrayObj(map, prefix + "PronunciationDict.", this.PronunciationDict);
