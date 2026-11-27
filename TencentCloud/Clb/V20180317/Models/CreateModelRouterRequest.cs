@@ -156,6 +156,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ImageConfig")]
         public ImageConfig ImageConfig{ get; set; }
 
+        /// <summary>
+        /// <p>可选的 Realtime 路由配置，提供此参数时预置 realtime 能力的路由策略。</p><p>支持 SimpleShuffle、LeastBusy、CostBasedRouting；省略配置子字段时默认 RoutingStrategy=SimpleShuffle、NumRetries=2。配置及子字段不接受 null。</p>
+        /// </summary>
+        [JsonProperty("RealtimeConfig")]
+        public RealtimeConfig RealtimeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
             this.SetParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
             this.SetParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
+            this.SetParamObj(map, prefix + "RealtimeConfig.", this.RealtimeConfig);
         }
     }
 }

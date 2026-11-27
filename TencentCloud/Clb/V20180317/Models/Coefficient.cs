@@ -72,6 +72,36 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("OutputImageCoefficient")]
         public float? OutputImageCoefficient{ get; set; }
 
+        /// <summary>
+        /// <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+        /// </summary>
+        [JsonProperty("InputAudioTokenCoefficient")]
+        public float? InputAudioTokenCoefficient{ get; set; }
+
+        /// <summary>
+        /// <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+        /// </summary>
+        [JsonProperty("InputCachedAudioTokenCoefficient")]
+        public float? InputCachedAudioTokenCoefficient{ get; set; }
+
+        /// <summary>
+        /// <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+        /// </summary>
+        [JsonProperty("InputImageTokenCoefficient")]
+        public float? InputImageTokenCoefficient{ get; set; }
+
+        /// <summary>
+        /// <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+        /// </summary>
+        [JsonProperty("InputCachedImageTokenCoefficient")]
+        public float? InputCachedImageTokenCoefficient{ get; set; }
+
+        /// <summary>
+        /// <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+        /// </summary>
+        [JsonProperty("OutputAudioTokenCoefficient")]
+        public float? OutputAudioTokenCoefficient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +116,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "InputVideoSecondCoefficient", this.InputVideoSecondCoefficient);
             this.SetParamSimple(map, prefix + "OutputVideoSecondCoefficient", this.OutputVideoSecondCoefficient);
             this.SetParamSimple(map, prefix + "OutputImageCoefficient", this.OutputImageCoefficient);
+            this.SetParamSimple(map, prefix + "InputAudioTokenCoefficient", this.InputAudioTokenCoefficient);
+            this.SetParamSimple(map, prefix + "InputCachedAudioTokenCoefficient", this.InputCachedAudioTokenCoefficient);
+            this.SetParamSimple(map, prefix + "InputImageTokenCoefficient", this.InputImageTokenCoefficient);
+            this.SetParamSimple(map, prefix + "InputCachedImageTokenCoefficient", this.InputCachedImageTokenCoefficient);
+            this.SetParamSimple(map, prefix + "OutputAudioTokenCoefficient", this.OutputAudioTokenCoefficient);
         }
     }
 }

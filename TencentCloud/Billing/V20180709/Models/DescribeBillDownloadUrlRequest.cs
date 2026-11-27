@@ -25,26 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 账单类型，枚举值
-        /// billOverview=L0-PDF账单
-        /// billSummary=L1-汇总账单	
-        /// billResource=L2-资源账单	
-        /// billDetail=L3-明细账单	
-        /// billPack=账单包
+        /// <p>账单类型，枚举值<br>billOverview=L0-PDF账单<br>billSummary=L1-汇总账单<br>billResource=L2-资源账单<br>billDetail=L3-明细账单<br>billPack=账单包</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 账单月份
-        /// 支持的最早开始月份为2021-01
-        /// L0-PDF&账单包不支持当月下载，当月账单请在次月1号19:00出账后下载
+        /// <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// 下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN
+        /// <p>下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN</p>
         /// </summary>
         [JsonProperty("ChildUin")]
         public string[] ChildUin{ get; set; }

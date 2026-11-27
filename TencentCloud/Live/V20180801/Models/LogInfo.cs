@@ -25,26 +25,25 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 日志名称。
+        /// <p>日志名称。</p>
         /// </summary>
         [JsonProperty("LogName")]
         public string LogName{ get; set; }
 
         /// <summary>
-        /// 日志 URL。
+        /// <p>日志 URL。</p>
         /// </summary>
         [JsonProperty("LogUrl")]
         public string LogUrl{ get; set; }
 
         /// <summary>
-        /// 日志生成时间。
-        /// 注：此字段为北京时间（UTC+8时区）。
+        /// <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
         /// </summary>
         [JsonProperty("LogTime")]
         public string LogTime{ get; set; }
 
         /// <summary>
-        /// 文件大小。
+        /// <p>文件大小，单位字节。</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }

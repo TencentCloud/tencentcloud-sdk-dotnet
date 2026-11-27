@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+        /// <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Voice")]
         public TTSVoice Voice{ get; set; }
 
+        /// <summary>
+        /// <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
+        /// </summary>
+        [JsonProperty("ExtraParams")]
+        public string ExtraParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "TargetUser.", this.TargetUser);
             this.SetParamObj(map, prefix + "TTSRobotUser.", this.TTSRobotUser);
             this.SetParamObj(map, prefix + "Voice.", this.Voice);
+            this.SetParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
         }
     }
 }

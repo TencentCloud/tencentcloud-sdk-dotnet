@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 新增规则的摘要列表。
+        /// <p>添加成功的规则详情</p>
         /// </summary>
         [JsonProperty("Rules")]
         public SecurityGroupSimplifyRule[] Rules{ get; set; }
 
         /// <summary>
-        /// 处理状态：0 表示成功。
+        /// <p>状态值，0：添加成功，非0：添加失败</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

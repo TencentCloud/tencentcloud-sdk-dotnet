@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string MaterialUrl{ get; set; }
 
         /// <summary>
-        /// <p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNHNOWN： 不知道</li></ul>
+        /// <p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNKNOWN： 不知道</li></ul>
         /// </summary>
         [JsonProperty("Gender")]
         public string Gender{ get; set; }

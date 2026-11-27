@@ -25,60 +25,47 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 套餐包信息。
+        /// <p>套餐包信息。</p>
         /// </summary>
         [JsonProperty("LivePackageInfoList")]
         public LivePackageInfo[] LivePackageInfoList{ get; set; }
 
         /// <summary>
-        /// 套餐包当前计费方式:
-        /// -1: 无计费方式或获取失败
-        /// 0: 无计费方式
-        /// 201: 月结带宽
-        /// 202: 月结流量
-        /// 203: 日结带宽
-        /// 204: 日结流量
-        /// 205: 日结时长
-        /// 206: 月结时长
-        /// 304: 日结流量。
+        /// <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
         /// </summary>
         [JsonProperty("PackageBillMode")]
         public long? PackageBillMode{ get; set; }
 
         /// <summary>
-        /// 总页数。
+        /// <p>总页数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalPage")]
         public long? TotalPage{ get; set; }
 
         /// <summary>
-        /// 数据总条数。
+        /// <p>数据总条数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalNum")]
         public long? TotalNum{ get; set; }
 
         /// <summary>
-        /// 当前页数。
+        /// <p>当前页数。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// 当前每页数量。
+        /// <p>当前每页数量。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-        /// 标准直播，中国大陆（境内全地区）计费方式。
-        /// 标准直播，国际/港澳台（境外多地区）计费方式。
-        /// 快直播，中国大陆（境内全地区）计费方式。
-        /// 快直播，国际/港澳台（境外多地区）计费方式。
+        /// <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
         /// </summary>
         [JsonProperty("FluxPackageBillMode")]
         public string FluxPackageBillMode{ get; set; }

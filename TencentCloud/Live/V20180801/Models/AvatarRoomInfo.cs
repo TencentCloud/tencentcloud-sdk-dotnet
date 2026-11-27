@@ -25,104 +25,112 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数字人直播间 ID。
+        /// <p>数字人直播间 ID。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 数字人直播间名称。
+        /// <p>数字人直播间名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数字人直播间状态，
-        /// CLOSE - 未开播。
-        /// OPEN - 直播中。
+        /// <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 数字人形象 KEY。
+        /// <p>数字人形象 KEY。</p>
         /// </summary>
         [JsonProperty("AvatarKey")]
         public string AvatarKey{ get; set; }
 
         /// <summary>
-        /// 音色 KEy。
+        /// <p>音色 KEY。</p>
         /// </summary>
         [JsonProperty("TimbreKey")]
         public string TimbreKey{ get; set; }
 
         /// <summary>
-        /// 数字人形象图片 URL。
+        /// <p>数字人形象图片 URL。</p>
         /// </summary>
         [JsonProperty("AvatarImageUrl")]
         public string AvatarImageUrl{ get; set; }
 
         /// <summary>
-        /// 背景图片 URL。
+        /// <p>背景图片 URL。</p>
         /// </summary>
         [JsonProperty("BackgroundUrl")]
         public string BackgroundUrl{ get; set; }
 
         /// <summary>
-        /// 推流目标描述。
+        /// <p>推流目标描述。</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 目标推流地址。
+        /// <p>目标推流地址。</p>
         /// </summary>
         [JsonProperty("ToUrl")]
         public string ToUrl{ get; set; }
 
         /// <summary>
-        /// 主播大小，默认1.00。 取值范围(0, 15.00]。
+        /// <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
         /// </summary>
         [JsonProperty("AnchorScale")]
         public float? AnchorScale{ get; set; }
 
         /// <summary>
-        /// 主播纵向位置。默认-1贴底部。
+        /// <p>主播纵向位置。默认-1贴底部。</p>
         /// </summary>
         [JsonProperty("AnchorVerticalPos")]
         public long? AnchorVerticalPos{ get; set; }
 
         /// <summary>
-        /// 主播横向位置。默认-1居中。
+        /// <p>主播横向位置。默认-1居中。</p>
         /// </summary>
         [JsonProperty("AnchorHorizontalPos")]
         public long? AnchorHorizontalPos{ get; set; }
 
         /// <summary>
-        /// 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
+        /// <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
         /// </summary>
         [JsonProperty("SpeechSpeed")]
         public float? SpeechSpeed{ get; set; }
 
         /// <summary>
-        /// 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+        /// <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
         /// </summary>
         [JsonProperty("SpeechVolume")]
         public long? SpeechVolume{ get; set; }
 
         /// <summary>
-        /// 直播间创建时间，UTC时间。
-        /// 注意：UTC时间和北京时间相差八小时。
+        /// <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 直播间最后更新时间，UTC时间。
-        /// 注意：UTC时间和北京时间相差八小时。
+        /// <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public string RoomType{ get; set; }
+
+        /// <summary>
+        /// <p>通过AIGC生成的数字人形象图片 URL。</p>
+        /// </summary>
+        [JsonProperty("AvatarAigcImageUrl")]
+        public string AvatarAigcImageUrl{ get; set; }
 
 
         /// <summary>
@@ -146,6 +154,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "SpeechVolume", this.SpeechVolume);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
+            this.SetParamSimple(map, prefix + "AvatarAigcImageUrl", this.AvatarAigcImageUrl);
         }
     }
 }

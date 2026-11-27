@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1542</VersionPrefix>
+    <VersionPrefix>3.0.1545</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -324,6 +324,8 @@
     <Compile Include="V20180416\Models\RestoreClusterSnapshotResponse.cs" />
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineRequest.cs" />
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineResponse.cs" />
+    <Compile Include="V20180416\Models\SearchServerlessSpaceDataRequest.cs" />
+    <Compile Include="V20180416\Models\SearchServerlessSpaceDataResponse.cs" />
     <Compile Include="V20180416\Models\ServerlessDi.cs" />
     <Compile Include="V20180416\Models\ServerlessIndexMetaField.cs" />
     <Compile Include="V20180416\Models\ServerlessIndexNetworkField.cs" />

@@ -25,19 +25,22 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// <p>日期类型，默认为每天</p><p>枚举值：</p><ul><li>EveryDay： 每天</li><li>BusinessDay： 法定工作日</li><li>Holiday： 法定休息日</li><li>Custom： 自定义</li></ul>
+        /// <p>日期类型，默认为每天</p><p>枚举值：</p><ul><li>EveryDay： 每天</li><li>BusinessDay： 法定工作日（只支持中国大陆）</li><li>Holiday： 法定休息日（只支持中国大陆）</li><li>Custom： 自定义</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DayType")]
         public string DayType{ get; set; }
 
         /// <summary>
         /// <p>仅在 DayType 为 Custom 时生效，指定适用的星期几</p><p>枚举值：</p><ul><li>Monday： 星期一</li><li>Tuesday： 星期二</li><li>Wednesday： 星期三</li><li>Thursday： 星期四</li><li>Friday： 星期五</li><li>Saturday： 星期六</li><li>Sunday： 星期日</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DaysOfWeek")]
         public string[] DaysOfWeek{ get; set; }
 
         /// <summary>
         /// <p>该日期类型下的时间段列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeRanges")]
         public TimeRange[] TimeRanges{ get; set; }

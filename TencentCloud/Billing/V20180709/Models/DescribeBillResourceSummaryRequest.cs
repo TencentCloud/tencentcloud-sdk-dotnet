@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+        /// <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }

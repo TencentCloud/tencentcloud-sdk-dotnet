@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string FigureName{ get; set; }
 
         /// <summary>
-        /// <p>性别：男或者女</p>
+        /// <p>性别：男或者女或者UNKNOWN</p>
         /// </summary>
         [JsonProperty("Gender")]
         public string Gender{ get; set; }

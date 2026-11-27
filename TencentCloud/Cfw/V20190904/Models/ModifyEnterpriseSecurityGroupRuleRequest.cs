@@ -25,13 +25,13 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 修改类型，仅接受 0、1、2。0：用 Data 完整替换 RuleUuid 指定规则的可写内容；1：修改 RuleUuid 指定规则的启停状态；2：修改当前账号全部可操作规则的启停状态。
+        /// <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
         /// </summary>
         [JsonProperty("ModifyType")]
         public ulong? ModifyType{ get; set; }
 
         /// <summary>
-        /// 规则数值 ID。ModifyType=0 或 1 时，调用 DescribeCfwRules，传 RuleType=enterprise_sg、RuleId=<数值 RuleUuid>、ExpandNames=false，并使用返回的 rules[].uuid；ModifyType=2 时传 0。
+        /// <p>规则的uuid，可通过查询规则列表获取</p>
         /// </summary>
         [JsonProperty("RuleUuid")]
         public ulong? RuleUuid{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string CfwAiAgentOperationSource{ get; set; }
 
         /// <summary>
-        /// ModifyType=0 时必填的完整规则内容对象，不是局部更新。调用 DescribeCfwRules，传 RuleType=enterprise_sg、RuleId=<数值 RuleUuid>、ExpandNames=false 获取原规则：src_content、dst_content 分别写入 SourceContent、DestContent；src_type 和 dst_type 的 0、1/2/3/4/5/6/16/24/25、7、8、9/10、100 分别对应 net、instance、template、tag、region、resourcegroup，DestType 的 20 对应 dnsparse；未列出的数值类型不能转换。再调用 DescribeEnterpriseSecurityGroupRule，使用同一 RuleUuid 获取 OrderIndex、Protocol、Port、RuleAction、Description、Scope 和 ServiceTemplateId。缺失字段按空值处理，仅 Scope 省略时保留原值。ModifyType=1 或 2 时不传 Data。
+        /// <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
         /// </summary>
         [JsonProperty("Data")]
         public SecurityGroupRule Data{ get; set; }
 
         /// <summary>
-        /// 规则状态，JSON 整数：0 表示关闭，1 表示开启。ModifyType=1 时修改 RuleUuid 指定规则，ModifyType=2 时修改当前账号的全部可操作规则；这两种模式下应显式填写。ModifyType=0 时忽略该字段。
+        /// <p>0是关闭,1是开启</p>
         /// </summary>
         [JsonProperty("Enable")]
         public ulong? Enable{ get; set; }

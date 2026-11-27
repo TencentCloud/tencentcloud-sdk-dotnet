@@ -25,55 +25,43 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板名称。
-        /// 长度上限：255字节。
-        /// 仅支持中文、英文、数字、_、-。
+        /// <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
+        /// <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// 描述信息。
-        /// 仅支持中文、英文、数字、_、-。
+        /// <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 地域。
-        /// Mainland：中国大陆。
-        /// Overseas：海外及港澳台地区。
-        /// 默认值：Mainland。
+        /// <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 分片时长。
-        /// 可取3-10。
-        /// 单位：s。
-        /// 默认值：5。
+        /// <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
         /// </summary>
         [JsonProperty("ItemDuration")]
         public ulong? ItemDuration{ get; set; }
 
         /// <summary>
-        /// 是否去除水印。
-        /// 传true则将录制原始流。
-        /// 默认值：false。
+        /// <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
         /// </summary>
         [JsonProperty("RemoveWatermark")]
         public bool? RemoveWatermark{ get; set; }
 
         /// <summary>
-        /// 转码流id列表。
-        /// 此参数仅在 RemoveWatermark为false时生效。
+        /// <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
         /// </summary>
         [JsonProperty("TranscodeTemplateIds")]
         public long?[] TranscodeTemplateIds{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 要筛选的模板ID数组。
+        /// <p>要筛选的模板ID数组。</p>
         /// </summary>
         [JsonProperty("TemplateIds")]
         public long?[] TemplateIds{ get; set; }
 
         /// <summary>
-        /// 要筛选的域名数组。
+        /// <p>要筛选的域名数组。</p>
         /// </summary>
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }

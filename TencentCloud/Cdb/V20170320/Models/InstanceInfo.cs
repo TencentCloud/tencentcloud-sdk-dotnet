@@ -283,6 +283,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public TagInfoItem[] TagList{ get; set; }
 
         /// <summary>
+        /// <p>金融围拢 ID 。</p>
+        /// </summary>
+        [JsonProperty("CageId")]
+        public string CageId{ get; set; }
+
+        /// <summary>
         /// <p>引擎类型</p>
         /// </summary>
         [JsonProperty("EngineType")]
@@ -398,6 +404,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "CageId", this.CageId);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);

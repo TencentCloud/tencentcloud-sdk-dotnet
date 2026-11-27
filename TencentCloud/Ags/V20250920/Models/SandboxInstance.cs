@@ -120,6 +120,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("AuthMode")]
         public string AuthMode{ get; set; }
 
+        /// <summary>
+        /// <p>表示发起实例启动并取得该实例的账号 UIN</p>
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ags.V20250920.Models
             this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
             this.SetParamArrayObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "AuthMode", this.AuthMode);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         }
     }
 }

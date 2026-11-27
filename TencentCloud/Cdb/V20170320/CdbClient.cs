@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1537";
+       private const string sdkVersion = "SDK_NET_3.0.1545";
 
         /// <summary>
         /// Client constructor.
@@ -1379,6 +1379,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeCPUExpandStrategyInfoResponse DescribeCPUExpandStrategyInfoSync(DescribeCPUExpandStrategyInfoRequest req)
         {
             return InternalRequestAsync<DescribeCPUExpandStrategyInfoResponse>(req, "DescribeCPUExpandStrategyInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCageList）用于查询金融围拢、独享集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCageListRequest"/></param>
+        /// <returns><see cref="DescribeCageListResponse"/></returns>
+        public Task<DescribeCageListResponse> DescribeCageList(DescribeCageListRequest req)
+        {
+            return InternalRequestAsync<DescribeCageListResponse>(req, "DescribeCageList");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCageList）用于查询金融围拢、独享集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCageListRequest"/></param>
+        /// <returns><see cref="DescribeCageListResponse"/></returns>
+        public DescribeCageListResponse DescribeCageListSync(DescribeCageListRequest req)
+        {
+            return InternalRequestAsync<DescribeCageListResponse>(req, "DescribeCageList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

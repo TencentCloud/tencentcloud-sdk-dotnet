@@ -30,6 +30,18 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ResponseTimeout")]
         public long? ResponseTimeout{ get; set; }
 
+        /// <summary>
+        /// <p>回源 TCP 建连超时时间。</p><p>取值范围：[5, 120]</p><p>单位：秒</p><p>默认值：5</p><p>节点向源站发起 TCP 连接后，如果源站在设定时间内没有完成应答，判定本次建连超时。该值只约束 TCP 建连本身；连接建立后等待源站响应的时间由 ResponseTimeout 控制。<br>注意：该参数未设置时出参不返回。</p>
+        /// </summary>
+        [JsonProperty("TCPConnectTimeout")]
+        public long? TCPConnectTimeout{ get; set; }
+
+        /// <summary>
+        /// <p>回源长连接空闲超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>回源请求完成后，节点与源站之间的连接放回连接池进入空闲状态，如果在设定时间内没有新的回源请求复用这条连接，节点主动关闭连接。该参数只作用于直接连接源站的节点，EdgeOne 节点之间的内部连接不受影响；该参数只对 HTTP/1.x 连接生效，HTTP/2 与 HTTP/3（QUIC）连接不受影响。建议该值小于源站的长连接超时时间（例如 Nginx 的 keepalive_timeout 默认为 75 秒），否则节点可能复用一条已被源站关闭的连接，导致回源失败或重试。<br>注意：该参数未设置时出参不返回。</p>
+        /// </summary>
+        [JsonProperty("KeepaliveTimeout")]
+        public long? KeepaliveTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ResponseTimeout", this.ResponseTimeout);
+            this.SetParamSimple(map, prefix + "TCPConnectTimeout", this.TCPConnectTimeout);
+            this.SetParamSimple(map, prefix + "KeepaliveTimeout", this.KeepaliveTimeout);
         }
     }
 }

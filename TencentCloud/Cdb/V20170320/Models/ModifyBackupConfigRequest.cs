@@ -25,125 +25,121 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+        /// <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据备份文件的保留时间，单位为天。
-        /// 1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
-        /// 2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
+        /// <p>数据备份文件的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。</li><li>MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。</li></ol>
         /// </summary>
         [JsonProperty("ExpireDays")]
         public long? ExpireDays{ get; set; }
 
         /// <summary>
-        /// (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+        /// <p>(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 自动备份方式，仅支持：physical - 物理冷备
+        /// <p>自动备份方式，仅支持：physical - 物理冷备</p>
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// binlog 的保留时间，单位为天。
-        /// 1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
-        /// 2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
+        /// <p>binlog 的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。</li><li>MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。</li></ol>
         /// </summary>
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }
 
         /// <summary>
-        /// 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+        /// <p>备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{&quot;Monday&quot;: &quot;&quot;, &quot;Tuesday&quot;: &quot;10:00-14:00&quot;, &quot;Wednesday&quot;: &quot;&quot;, &quot;Thursday&quot;: &quot;&quot;, &quot;Friday&quot;: &quot;&quot;, &quot;Saturday&quot;: &quot;&quot;, &quot;Sunday&quot;: &quot;10:00-14:00&quot;}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）</p>
         /// </summary>
         [JsonProperty("BackupTimeWindow")]
         public CommonTimeWindow BackupTimeWindow{ get; set; }
 
         /// <summary>
-        /// 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
+        /// <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。</p>
         /// </summary>
         [JsonProperty("EnableBackupPeriodSave")]
         public string EnableBackupPeriodSave{ get; set; }
 
         /// <summary>
-        /// 长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
+        /// <p>长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效</p>
         /// </summary>
         [JsonProperty("EnableBackupPeriodLongTermSave")]
         public string EnableBackupPeriodLongTermSave{ get; set; }
 
         /// <summary>
-        /// 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
+        /// <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
         /// </summary>
         [JsonProperty("BackupPeriodSaveDays")]
         public long? BackupPeriodSaveDays{ get; set; }
 
         /// <summary>
-        /// 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
+        /// <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
         /// </summary>
         [JsonProperty("BackupPeriodSaveInterval")]
         public string BackupPeriodSaveInterval{ get; set; }
 
         /// <summary>
-        /// 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
+        /// <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
         /// </summary>
         [JsonProperty("BackupPeriodSaveCount")]
         public long? BackupPeriodSaveCount{ get; set; }
 
         /// <summary>
-        /// 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
+        /// <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
         /// </summary>
         [JsonProperty("StartBackupPeriodSaveDate")]
         public string StartBackupPeriodSaveDate{ get; set; }
 
         /// <summary>
-        /// 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+        /// <p>是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
         /// </summary>
         [JsonProperty("EnableBackupArchive")]
         public string EnableBackupArchive{ get; set; }
 
         /// <summary>
-        /// 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+        /// <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
         /// </summary>
         [JsonProperty("BackupArchiveDays")]
         public long? BackupArchiveDays{ get; set; }
 
         /// <summary>
-        /// 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+        /// <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
         /// </summary>
         [JsonProperty("BinlogArchiveDays")]
         public long? BinlogArchiveDays{ get; set; }
 
         /// <summary>
-        /// 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+        /// <p>是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
         /// </summary>
         [JsonProperty("EnableBinlogArchive")]
         public string EnableBinlogArchive{ get; set; }
 
         /// <summary>
-        /// 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+        /// <p>是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
         /// </summary>
         [JsonProperty("EnableBackupStandby")]
         public string EnableBackupStandby{ get; set; }
 
         /// <summary>
-        /// 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+        /// <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
         /// </summary>
         [JsonProperty("BackupStandbyDays")]
         public long? BackupStandbyDays{ get; set; }
 
         /// <summary>
-        /// 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+        /// <p>是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
         /// </summary>
         [JsonProperty("EnableBinlogStandby")]
         public string EnableBinlogStandby{ get; set; }
 
         /// <summary>
-        /// 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+        /// <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
         /// </summary>
         [JsonProperty("BinlogStandbyDays")]
         public long? BinlogStandbyDays{ get; set; }

@@ -25,14 +25,16 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 0：打开立即下发开关；
-        /// 
-        /// 1：关闭立即下发开关；
-        /// 
-        /// 2：关闭立即下发开关情况下，触发开始下发
+        /// <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
+        /// </summary>
+        [JsonProperty("BindFallbackOnce")]
+        public long? BindFallbackOnce{ get; set; }
 
 
         /// <summary>
@@ -41,6 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "BindFallbackOnce", this.BindFallbackOnce);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1504</VersionPrefix>
+    <VersionPrefix>3.0.1545</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,14 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20250903\AntiddosClient.cs" />
-    <Compile Include="V20250903\Models\DDoSBlockRecord.cs" />
-    <Compile Include="V20250903\Models\DDoSUnblockQuota.cs" />
-    <Compile Include="V20250903\Models\DescribeDDoSBlockRecordsRequest.cs" />
-    <Compile Include="V20250903\Models\DescribeDDoSBlockRecordsResponse.cs" />
-    <Compile Include="V20250903\Models\Filter.cs" />
-    <Compile Include="V20250903\Models\UnblockResourcesRequest.cs" />
-    <Compile Include="V20250903\Models\UnblockResourcesResponse.cs" />
     <Compile Include="V20200309\AntiddosClient.cs" />
     <Compile Include="V20200309\Models\AclConfig.cs" />
     <Compile Include="V20200309\Models\AclConfigRelation.cs" />
@@ -326,5 +318,56 @@
     <Compile Include="V20200309\Models\WaterPrintConfig.cs" />
     <Compile Include="V20200309\Models\WaterPrintKey.cs" />
     <Compile Include="V20200309\Models\WaterPrintRelation.cs" />
+    <Compile Include="V20250903\AntiddosClient.cs" />
+    <Compile Include="V20250903\Models\AbnormalConnectCondition.cs" />
+    <Compile Include="V20250903\Models\AbnormalConnectionLimit.cs" />
+    <Compile Include="V20250903\Models\ConnectionProtectionConfig.cs" />
+    <Compile Include="V20250903\Models\CreateProtectionRequest.cs" />
+    <Compile Include="V20250903\Models\CreateProtectionResponse.cs" />
+    <Compile Include="V20250903\Models\DDoSBlockRecord.cs" />
+    <Compile Include="V20250903\Models\DDoSUnblockQuota.cs" />
+    <Compile Include="V20250903\Models\DefaultProtectionConfig.cs" />
+    <Compile Include="V20250903\Models\DeleteProtectionRequest.cs" />
+    <Compile Include="V20250903\Models\DeleteProtectionResponse.cs" />
+    <Compile Include="V20250903\Models\DescribeDDoSBlockRecordsRequest.cs" />
+    <Compile Include="V20250903\Models\DescribeDDoSBlockRecordsResponse.cs" />
+    <Compile Include="V20250903\Models\DescribeDDoSProtectionPolicyRequest.cs" />
+    <Compile Include="V20250903\Models\DescribeDDoSProtectionPolicyResponse.cs" />
+    <Compile Include="V20250903\Models\DescribeProtectionResourcesRequest.cs" />
+    <Compile Include="V20250903\Models\DescribeProtectionResourcesResponse.cs" />
+    <Compile Include="V20250903\Models\DescribeProtectionsRequest.cs" />
+    <Compile Include="V20250903\Models\DescribeProtectionsResponse.cs" />
+    <Compile Include="V20250903\Models\DescribeResourceProtectionsRequest.cs" />
+    <Compile Include="V20250903\Models\DescribeResourceProtectionsResponse.cs" />
+    <Compile Include="V20250903\Models\Filter.cs" />
+    <Compile Include="V20250903\Models\GeoBlockingConfig.cs" />
+    <Compile Include="V20250903\Models\IPACLRule.cs" />
+    <Compile Include="V20250903\Models\IPACLRules.cs" />
+    <Compile Include="V20250903\Models\ModifyDDoSProtectionPolicyRequest.cs" />
+    <Compile Include="V20250903\Models\ModifyDDoSProtectionPolicyResponse.cs" />
+    <Compile Include="V20250903\Models\ModifyProtectionRequest.cs" />
+    <Compile Include="V20250903\Models\ModifyProtectionResourceRequest.cs" />
+    <Compile Include="V20250903\Models\ModifyProtectionResourceResponse.cs" />
+    <Compile Include="V20250903\Models\ModifyProtectionResponse.cs" />
+    <Compile Include="V20250903\Models\PacketFilterCondition.cs" />
+    <Compile Include="V20250903\Models\PacketFilterRule.cs" />
+    <Compile Include="V20250903\Models\PacketFilterRules.cs" />
+    <Compile Include="V20250903\Models\PacketMatchContent.cs" />
+    <Compile Include="V20250903\Models\PortACLRule.cs" />
+    <Compile Include="V20250903\Models\PortACLRules.cs" />
+    <Compile Include="V20250903\Models\PortRange.cs" />
+    <Compile Include="V20250903\Models\ProtectionFilter.cs" />
+    <Compile Include="V20250903\Models\ProtectionInfo.cs" />
+    <Compile Include="V20250903\Models\ProtectionPolicy.cs" />
+    <Compile Include="V20250903\Models\ProtocolBlockingConfig.cs" />
+    <Compile Include="V20250903\Models\ResourceInfo.cs" />
+    <Compile Include="V20250903\Models\ResourceProtection.cs" />
+    <Compile Include="V20250903\Models\SizeRange.cs" />
+    <Compile Include="V20250903\Models\SpeedLimitRule.cs" />
+    <Compile Include="V20250903\Models\SpeedLimitRules.cs" />
+    <Compile Include="V20250903\Models\TagInfo.cs" />
+    <Compile Include="V20250903\Models\TrafficSignatureConfig.cs" />
+    <Compile Include="V20250903\Models\UnblockResourcesRequest.cs" />
+    <Compile Include="V20250903\Models\UnblockResourcesResponse.cs" />
   </ItemGroup>
 </Project>

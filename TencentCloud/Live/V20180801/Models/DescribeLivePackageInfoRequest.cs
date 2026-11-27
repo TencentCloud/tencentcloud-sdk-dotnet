@@ -25,36 +25,25 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 包类型，可选值：
-        /// 0：流量包
-        /// 1：转码包
-        /// 2: 连麦包。
+        /// <p>包类型，可选值：<br>0：流量包<br>1：转码包<br>2: 连麦包。</p>
         /// </summary>
         [JsonProperty("PackageType")]
         public long? PackageType{ get; set; }
 
         /// <summary>
-        /// 排序规则:
-        /// 1. BuyTimeDesc： 最新购买的排在最前面
-        /// 2. BuyTimeAsc： 最老购买的排在最前面
-        /// 3. ExpireTimeDesc： 最后过期的排在最前面
-        /// 4. ExpireTimeAsc：最先过期的排在最前面。
-        /// 
-        /// 注意：
-        /// 1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
+        /// <p>排序规则:</p><ol><li>BuyTimeDesc： 最新购买的排在最前面</li><li>BuyTimeAsc： 最老购买的排在最前面</li><li>ExpireTimeDesc： 最后过期的排在最前面</li><li>ExpireTimeAsc：最先过期的排在最前面。</li></ol><p>注意：</p><ol><li>PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。</li></ol>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 取得第几页的数据，和 PageSize 同时传递才会生效。
+        /// <p>取得第几页的数据，和 PageSize 同时传递才会生效。</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// 分页大小，和 PageNum 同时传递才会生效。
-        /// 取值：10 ～ 100 之间的任意整数。
+        /// <p>分页大小，和 PageNum 同时传递才会生效。<br>取值：10 ～ 100 之间的任意整数。</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 转码规则列表。
+        /// <p>转码规则列表。</p>
         /// </summary>
         [JsonProperty("Rules")]
         public RuleInfo[] Rules{ get; set; }

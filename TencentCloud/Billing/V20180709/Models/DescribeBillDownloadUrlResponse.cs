@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 账单文件是否准备就绪，0文件生成中，1文件已生成
+        /// <p>账单文件是否准备就绪，0文件生成中，1文件已生成</p>
         /// </summary>
         [JsonProperty("Ready")]
         public long? Ready{ get; set; }
 
         /// <summary>
-        /// 账单文件下载链接，有效时长为一天
+        /// <p>账单文件下载链接，有效时长为一天</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadUrl")]

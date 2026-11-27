@@ -25,25 +25,25 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名
+        /// <p>域名</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+        /// <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
 
         /// <summary>
-        /// 记录开始的偏移，第一条记录为 0，依次类推，默认为0
+        /// <p>记录开始的偏移，第一条记录为 0，依次类推，默认为0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。
+        /// <p>共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 待创建的规则数组，不能为空。每条规则必须提供访问源、访问目的、动作、非空描述和字符串 OrderIndex。未使用 ServiceTemplateId 时必须提供 Protocol 和 Port；使用 ServiceTemplateId 时二者可同时省略或留空，如填写非空值则必须为 Protocol=ANY、Port=-1/-1。Scope 可省略，默认使用 SG。
+        /// <p>创建规则数据</p>
         /// </summary>
         [JsonProperty("Data")]
         public SecurityGroupRule[] Data{ get; set; }
@@ -37,31 +37,31 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string CfwAiAgentOperationSource{ get; set; }
 
         /// <summary>
-        /// 保留字段，不提供幂等保证；重复请求仍可能重复创建规则，建议省略。
+        /// <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 添加方式。batch_import 表示非覆盖批量导入；batch_import_cover 表示覆盖导入，会删除当前账号的全部可操作企业安全组规则后再添加 Data，添加失败时已删除的规则不会恢复，风险极高。两种批量导入都会使用 Data.Enable。其它值按普通新增处理。
+        /// <p>来源 默认空 覆盖导入是 batch_import_cover</p>
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// 延迟生效标记。1 表示将规则保留为待生效状态，0 表示按账号当前发布设置处理；省略等同于 0。账号停止自动发布时，规则仍保持待生效。
+        /// <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
         /// </summary>
         [JsonProperty("IsDelay")]
         public ulong? IsDelay{ get; set; }
 
         /// <summary>
-        /// 规则 ID 复用标记。1 表示使用每条规则的 Data.Id，此时 Data.Id 传十进制数字字符串；其它值由系统分配 ID。重复 ID 会导致创建失败。
+        /// <p>是否复用rule id，1为是，默认不需要</p>
         /// </summary>
         [JsonProperty("IsUseId")]
         public long? IsUseId{ get; set; }
 
         /// <summary>
-        /// 添加位置类型，可省略，默认为 0：0 添加到末尾，1 添加到最前，2 从指定顺序插入。Type=0 或 1 按 Data 数组顺序确定最终顺序；Type=2 使用首条 Data.OrderIndex 作为插入位置，超过当前最大顺序时添加到末尾。
+        /// <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

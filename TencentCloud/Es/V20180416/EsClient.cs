@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1542";
+       private const string sdkVersion = "SDK_NET_3.0.1545";
 
         /// <summary>
         /// Client constructor.
@@ -1585,6 +1585,27 @@ namespace TencentCloud.Es.V20180416
         public SaveAndDeployLogstashPipelineResponse SaveAndDeployLogstashPipelineSync(SaveAndDeployLogstashPipelineRequest req)
         {
             return InternalRequestAsync<SaveAndDeployLogstashPipelineResponse>(req, "SaveAndDeployLogstashPipeline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询serverless space中的数据
+        /// </summary>
+        /// <param name="req"><see cref="SearchServerlessSpaceDataRequest"/></param>
+        /// <returns><see cref="SearchServerlessSpaceDataResponse"/></returns>
+        public Task<SearchServerlessSpaceDataResponse> SearchServerlessSpaceData(SearchServerlessSpaceDataRequest req)
+        {
+            return InternalRequestAsync<SearchServerlessSpaceDataResponse>(req, "SearchServerlessSpaceData");
+        }
+
+        /// <summary>
+        /// 用于查询serverless space中的数据
+        /// </summary>
+        /// <param name="req"><see cref="SearchServerlessSpaceDataRequest"/></param>
+        /// <returns><see cref="SearchServerlessSpaceDataResponse"/></returns>
+        public SearchServerlessSpaceDataResponse SearchServerlessSpaceDataSync(SearchServerlessSpaceDataRequest req)
+        {
+            return InternalRequestAsync<SearchServerlessSpaceDataResponse>(req, "SearchServerlessSpaceData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

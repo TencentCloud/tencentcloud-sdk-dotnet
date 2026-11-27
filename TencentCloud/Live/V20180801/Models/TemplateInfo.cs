@@ -55,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+        /// <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

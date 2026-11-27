@@ -103,7 +103,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string PassThroughHttpHeader{ get; set; }
 
         /// <summary>
-        /// <p>是否透传相应，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
+        /// <p>是否透传响应，可取值：on、off。当原站播放协议为 hls 时，传递该字段才会生效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassThroughResponse")]

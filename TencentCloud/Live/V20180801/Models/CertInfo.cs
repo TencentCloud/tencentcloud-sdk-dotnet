@@ -25,53 +25,49 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 证书 ID。
+        /// <p>证书 ID。</p>
         /// </summary>
         [JsonProperty("CertId")]
         public long? CertId{ get; set; }
 
         /// <summary>
-        /// 证书名称。
+        /// <p>证书名称。</p>
         /// </summary>
         [JsonProperty("CertName")]
         public string CertName{ get; set; }
 
         /// <summary>
-        /// 描述信息。
+        /// <p>描述信息。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 创建时间，UTC 格式。
-        /// 注：此字段为北京时间（UTC+8时区）。
+        /// <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 证书内容。
+        /// <p>证书内容。</p>
         /// </summary>
         [JsonProperty("HttpsCrt")]
         public string HttpsCrt{ get; set; }
 
         /// <summary>
-        /// 证书类型。
-        /// 0：用户添加证书，
-        /// 1：腾讯云托管证书。
+        /// <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
 
         /// <summary>
-        /// 证书过期时间，UTC 格式。
-        /// 注：此字段为北京时间（UTC+8时区）。
+        /// <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
         /// </summary>
         [JsonProperty("CertExpireTime")]
         public string CertExpireTime{ get; set; }
 
         /// <summary>
-        /// 使用此证书的域名列表。
+        /// <p>使用此证书的域名列表。</p>
         /// </summary>
         [JsonProperty("DomainList")]
         public string[] DomainList{ get; set; }

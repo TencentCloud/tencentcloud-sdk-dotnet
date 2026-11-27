@@ -25,53 +25,38 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日志保留时长。支持值包括：
-        /// 7 - 一周；
-        /// 30 - 一个月；
-        /// 90 - 三个月；
-        /// 180 - 六个月；
-        /// 365 - 一年；
-        /// 1095 - 三年；
-        /// 1825 - 五年。
+        /// <p>审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90：  三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul>
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
-        /// 3 - 3天；
-        /// 7 - 一周；
-        /// 30 - 一个月；
-        /// 90 - 三个月；
-        /// 180 - 六个月；
-        /// 365 - 一年；
-        /// 1095 - 三年；
-        /// 1825 - 五年。
+        /// <p>高频审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90：  三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul><p>此项取值需小于等于 LogExpireDay。</p>
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
-        /// 修改实例审计规则为全审计。
+        /// <p>修改实例审计规则为全审计。</p>
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }
 
         /// <summary>
-        /// 废弃。
+        /// <p>废弃。</p>
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
         [System.Obsolete]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
+        /// <p>规则模板 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/101811">DescribeAuditRuleTemplates</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }

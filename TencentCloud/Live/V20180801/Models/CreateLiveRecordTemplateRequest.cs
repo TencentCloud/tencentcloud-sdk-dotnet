@@ -25,76 +25,73 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板名。仅支持中文、英文、数字、_、-。
+        /// <p>模板名。仅支持中文、英文、数字、_、-。</p>
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 描述信息。
+        /// <p>描述信息。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Flv录制参数，开启Flv录制时设置。
+        /// <p>Flv录制参数，开启Flv录制时设置。</p>
         /// </summary>
         [JsonProperty("FlvParam")]
         public RecordParam FlvParam{ get; set; }
 
         /// <summary>
-        /// Hls录制参数，开启hls录制时设置。
+        /// <p>Hls录制参数，开启hls录制时设置。</p>
         /// </summary>
         [JsonProperty("HlsParam")]
         public RecordParam HlsParam{ get; set; }
 
         /// <summary>
-        /// Mp4录制参数，开启Mp4录制时设置。
+        /// <p>Mp4录制参数，开启Mp4录制时设置。</p>
         /// </summary>
         [JsonProperty("Mp4Param")]
         public RecordParam Mp4Param{ get; set; }
 
         /// <summary>
-        /// Aac录制参数，开启Aac录制时设置。
+        /// <p>Aac录制参数，开启Aac录制时设置。</p>
         /// </summary>
         [JsonProperty("AacParam")]
         public RecordParam AacParam{ get; set; }
 
         /// <summary>
-        /// 直播类型，默认 0。
-        /// 0：普通直播，
-        /// 1：慢直播。
+        /// <p>直播类型，默认 0。<br>0：普通直播，<br>1：慢直播。</p>
         /// </summary>
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }
 
         /// <summary>
-        /// HLS专属录制参数。
+        /// <p>HLS专属录制参数。</p>
         /// </summary>
         [JsonProperty("HlsSpecialParam")]
         public HlsSpecialParam HlsSpecialParam{ get; set; }
 
         /// <summary>
-        /// Mp3录制参数，开启Mp3录制时设置。
+        /// <p>Mp3录制参数，开启Mp3录制时设置。</p>
         /// </summary>
         [JsonProperty("Mp3Param")]
         public RecordParam Mp3Param{ get; set; }
 
         /// <summary>
-        /// 是否存储至 cos，值为 1 时表示存储至 cos。
+        /// <p>是否存储至 cos，值为 1 时表示存储至 cos。</p>
         /// </summary>
         [JsonProperty("CosStore")]
         public long? CosStore{ get; set; }
 
         /// <summary>
-        /// 是否去除水印，类型为慢直播时此参数无效。
-        /// 如果为false，则录制水印流或转码流；如果为true，则录制原始流。
+        /// <p>是否去除水印，类型为慢直播时此参数无效。<br>如果为false，则录制水印流或转码流；如果为true，则录制原始流。</p>
         /// </summary>
         [JsonProperty("RemoveWatermark")]
         public bool? RemoveWatermark{ get; set; }
 
         /// <summary>
-        /// FLV 录制特殊参数。
+        /// <p>FLV 录制特殊参数。</p>
         /// </summary>
         [JsonProperty("FlvSpecialParam")]
         public FlvSpecialParam FlvSpecialParam{ get; set; }

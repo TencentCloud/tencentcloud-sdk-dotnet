@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
+        /// <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
         /// </summary>
         [JsonProperty("MismatchedDomainNames")]
         public string[] MismatchedDomainNames{ get; set; }
 
         /// <summary>
-        /// 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+        /// <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
         /// </summary>
         [JsonProperty("Errors")]
         public BatchDomainOperateErrors[] Errors{ get; set; }
